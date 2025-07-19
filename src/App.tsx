@@ -5,6 +5,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Tech from "./pages/Tech";
+import Sports from "./pages/Sports";
+import Incredibles from "./pages/Incredibles";
+import Kids from "./pages/Kids";
+import Beauty from "./pages/Beauty";
+import BestSellers from "./pages/BestSellers";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
 
@@ -15,8 +24,17 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Index />} />
+            <Route path="tech" element={<Tech />} />
+            <Route path="sports" element={<Sports />} />
+            <Route path="incredibles" element={<Incredibles />} />
+            <Route path="kids" element={<Kids />} />
+            <Route path="beauty" element={<Beauty />} />
+            <Route path="best-sellers" element={<BestSellers />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
