@@ -24,11 +24,10 @@ const Header = () => {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex flex-col items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Showcase" className="h-8 w-8" />
-            <span className="font-omne-medium text-xl text-foreground">SHOWCASE</span>
+          <Link to="/" className="flex items-center justify-center mb-4">
+            <img src={logo} alt="i.need" className="h-16" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,7 +49,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+            className="md:hidden absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

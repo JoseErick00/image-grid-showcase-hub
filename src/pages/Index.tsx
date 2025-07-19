@@ -25,9 +25,9 @@ const Index = () => {
 
   // Best sellers section (3 items)
   const bestSellers = [
-    { id: "bestseller-1", title: "Top Tech Product", image: techCategoryImage, link: "#" },
-    { id: "bestseller-2", title: "Bestselling Sports Gear", image: sportsCategoryImage, link: "#" },
-    { id: "bestseller-3", title: "Popular Beauty Item", image: beautyCategoryImage, link: "#" },
+    { id: "bestseller-1", title: "Home", image: homeCategoryImage, link: "#" },
+    { id: "bestseller-2", title: "Sports", image: sportsCategoryImage, link: "#" },
+    { id: "bestseller-3", title: "Just Cool", image: kidsCategoryImage, link: "#" },
   ];
 
   return (
