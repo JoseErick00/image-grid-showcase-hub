@@ -32,19 +32,49 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`font-omne-regular text-sm transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const getHoverColor = (name: string) => {
+                const colors: { [key: string]: string } = {
+                  "Home": "#bf0100",
+                  "Tech": "#03bfc0", 
+                  "Sports": "#ed5603",
+                  "Incredibles": "#5cc801",
+                  "Kids": "#8254d0",
+                  "Beauty": "#d8ad00",
+                  "Best Sellers": "#fbfbfb",
+                  "About Us": "#fbfbfb",
+                  "Contact": "#fbfbfb"
+                };
+                return colors[name] || "#fbfbfb";
+              };
+
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`font-omne-regular text-sm transition-colors duration-200 ${
+                    isActive(item.href)
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                  style={{
+                    "--hover-color": getHoverColor(item.name)
+                  } as React.CSSProperties}
+                  onMouseEnter={(e) => {
+                    if (!isActive(item.href)) {
+                      e.currentTarget.style.color = getHoverColor(item.name);
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive(item.href)) {
+                      e.currentTarget.style.color = "";
+                    }
+                  }}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Mobile menu button */}

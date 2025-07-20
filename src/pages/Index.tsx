@@ -1,5 +1,9 @@
 import CategoryGrid from "@/components/CategoryGrid";
-import homeCategoryImage from "@/assets/home-category.jpg";
+import image01 from "@/assets/01.jpg";
+import image02 from "@/assets/02.jpg";
+import image03 from "@/assets/03.jpg";
+import image04 from "@/assets/04.jpg";
+import image05 from "@/assets/05.jpg";
 import techCategoryImage from "@/assets/tech-category.jpg";
 import sportsCategoryImage from "@/assets/sports-category.jpg";
 import incrediblesCategoryImage from "@/assets/incredibles-category.jpg";
@@ -9,12 +13,12 @@ import beautyCategoryImage from "@/assets/beauty-category.jpg";
 const Index = () => {
   // Main category grid (3x4 layout with 1:1 aspect ratio)
   const mainCategories = [
-    { id: "home", title: "Home", image: homeCategoryImage, link: "/" },
-    { id: "tech", title: "Tech", image: techCategoryImage, link: "/tech" },
-    { id: "sports", title: "Sports", image: sportsCategoryImage, link: "/sports" },
-    { id: "incredibles", title: "Incredibles", image: incrediblesCategoryImage, link: "/incredibles" },
+    { id: "home", title: "Home", image: image01, link: "/" },
+    { id: "tech", title: "Tech", image: image05, link: "/tech" },
+    { id: "sports", title: "Sports", image: image02, link: "/sports" },
+    { id: "incredibles", title: "Incredibles", image: image03, link: "/incredibles" },
     { id: "kids", title: "Kids", image: kidsCategoryImage, link: "/kids" },
-    { id: "beauty", title: "Beauty", image: beautyCategoryImage, link: "/beauty" },
+    { id: "beauty", title: "Beauty", image: image04, link: "/beauty" },
     { id: "best-sellers-1", title: "Best Sellers", image: techCategoryImage, link: "/best-sellers" },
     { id: "featured-tech", title: "Featured Tech", image: techCategoryImage, link: "/tech" },
     { id: "featured-sports", title: "Featured Sports", image: sportsCategoryImage, link: "/sports" },
@@ -25,9 +29,9 @@ const Index = () => {
 
   // Best sellers section (3 items)
   const bestSellers = [
-    { id: "bestseller-1", title: "Home", image: homeCategoryImage, link: "#" },
-    { id: "bestseller-2", title: "Sports", image: sportsCategoryImage, link: "#" },
-    { id: "bestseller-3", title: "Just Cool", image: kidsCategoryImage, link: "#" },
+    { id: "bestseller-1", title: "Home", image: image01, link: "#" },
+    { id: "bestseller-2", title: "Sports", image: image02, link: "#" },
+    { id: "bestseller-3", title: "Beauty", image: image04, link: "#" },
   ];
 
   return (
