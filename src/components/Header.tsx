@@ -52,21 +52,20 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-omne-regular text-sm transition-colors duration-200 ${
+                  className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 ${
                     isActive(item.href)
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-white"
                   }`}
-                  style={{
-                    "--hover-color": getHoverColor(item.name)
-                  } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     if (!isActive(item.href)) {
-                      e.currentTarget.style.color = getHoverColor(item.name);
+                      e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                      e.currentTarget.style.color = "white";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!isActive(item.href)) {
+                      e.currentTarget.style.backgroundColor = "";
                       e.currentTarget.style.color = "";
                     }
                   }}
