@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Facebook, Instagram, Twitter } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.jpg";
 import ContactForm from "./ContactForm";
 
 const Footer = () => {
