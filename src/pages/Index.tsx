@@ -1,9 +1,9 @@
 import CategoryGrid from "@/components/CategoryGrid";
-import homeCategoryImage from "@/assets/01.jpg";
-import techCategoryImage from "@/assets/05.jpg";
-import sportsCategoryImage from "@/assets/02.jpg";
-import incrediblesCategoryImage from "@/assets/03.jpg";
-import beautyCategoryImage from "@/assets/04.jpg";
+import homeCategoryImage from "https://github.com/JoseErick00/image-grid-showcase-hub.git/src/assets/01.jpg";
+import techCategoryImage from "https://github.com/JoseErick00/image-grid-showcase-hub.git/src/assets/05.jpg";
+import sportsCategoryImage from "https://github.com/JoseErick00/image-grid-showcase-hub.git/src/assets/02.jpg";
+import incrediblesCategoryImage from "https://github.com/JoseErick00/image-grid-showcase-hub.git/src/assets/03.jpg";
+import beautyCategoryImage from "https://github.com/JoseErick00/image-grid-showcase-hub.git/src/assets/04.jpg";
 
 const Index = () => {
   // Main category grid (3x4 layout with 1:1 aspect ratio)
