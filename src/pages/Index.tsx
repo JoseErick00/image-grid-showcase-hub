@@ -16,7 +16,7 @@ const Index = () => {
     { id: "incredibles", title: "Incredibles", image: incrediblesCategoryImage, link: "/incredibles" },
     { id: "kids", title: "Kids", image: beautyCategoryImage, link: "/kids" },
     { id: "beauty", title: "Beauty", image: beautyCategoryImage, link: "/beauty" },
-    { id: "best-sellers-1", title: "Best Sellers", image: techCategoryImage, link: "/best-sellers" },
+    { id: "bestsellers", title: "Best Sellers", image: techCategoryImage, link: "/best-sellers" },
     { id: "featured-tech", title: "Featured Tech", image: techCategoryImage, link: "/tech" },
     { id: "featured-sports", title: "Featured Sports", image: sportsCategoryImage, link: "/sports" },
     { id: "featured-beauty", title: "Featured Beauty", image: beautyCategoryImage, link: "/beauty" },
