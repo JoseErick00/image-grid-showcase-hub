@@ -14,21 +14,21 @@ const Index = () => {
     { id: "tech", title: "Tech", image: techCategoryImage, link: "/tech" },
     { id: "sports", title: "Sports", image: sportsCategoryImage, link: "/sports" },
     { id: "incredibles", title: "Incredibles", image: incrediblesCategoryImage, link: "/incredibles" },
-    { id: "kids", title: "Kids", image: kidsCategoryImage, link: "/kids" },
+    { id: "kids", title: "Kids", image: beautyCategoryImage, link: "/kids" },
     { id: "beauty", title: "Beauty", image: beautyCategoryImage, link: "/beauty" },
     { id: "best-sellers-1", title: "Best Sellers", image: techCategoryImage, link: "/best-sellers" },
     { id: "featured-tech", title: "Featured Tech", image: techCategoryImage, link: "/tech" },
     { id: "featured-sports", title: "Featured Sports", image: sportsCategoryImage, link: "/sports" },
     { id: "featured-beauty", title: "Featured Beauty", image: beautyCategoryImage, link: "/beauty" },
-    { id: "trending-kids", title: "Trending Kids", image: kidsCategoryImage, link: "/kids" },
+    { id: "trending-kids", title: "Trending Kids", image: beautyCategoryImage, link: "/kids" },
     { id: "new-arrivals", title: "New Arrivals", image: incrediblesCategoryImage, link: "/incredibles" },
   ];
 
   // Best sellers section (3 items)
   const bestSellers = [
-    { id: "bestseller-1", title: "Best Sellers", image: bestsellersCategoryImage, link: "#" },
-    { id: "bestseller-2", title: "Best Sellers", image: bestsellersCategoryImage, link: "#" },
-    { id: "bestseller-3", title: "Best Sellers", image: bestsellersCategoryImage, link: "#" },
+    { id: "bestseller-1", title: "Home", image: homeCategoryImage, link: "#" },
+    { id: "bestseller-2", title: "Sports", image: sportsCategoryImage, link: "#" },
+    { id: "bestseller-3", title: "Beauty", image: beautyCategoryImage, link: "#" },
   ];
 
   return (
