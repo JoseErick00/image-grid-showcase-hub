@@ -1,10 +1,9 @@
 import CategoryGrid from "@/components/CategoryGrid";
-import homeCategoryImage from "@/assets/home-category.jpg";
-import techCategoryImage from "@/assets/tech-category.jpg";
-import sportsCategoryImage from "@/assets/sports-category.jpg";
-import incrediblesCategoryImage from "@/assets/incredibles-category.jpg";
-import kidsCategoryImage from "@/assets/kids-category.jpg";
-import beautyCategoryImage from "@/assets/beauty-category.jpg";
+import homeCategoryImage from "@/assets/01.jpg";
+import techCategoryImage from "@/assets/05.jpg";
+import sportsCategoryImage from "@/assets/02.jpg";
+import incrediblesCategoryImage from "@/assets/03.jpg";
+import beautyCategoryImage from "@/assets/04.jpg";
 
 const Index = () => {
   // Main category grid (3x4 layout with 1:1 aspect ratio)
@@ -13,13 +12,13 @@ const Index = () => {
     { id: "tech", title: "Tech", image: techCategoryImage, link: "/tech" },
     { id: "sports", title: "Sports", image: sportsCategoryImage, link: "/sports" },
     { id: "incredibles", title: "Incredibles", image: incrediblesCategoryImage, link: "/incredibles" },
-    { id: "kids", title: "Kids", image: kidsCategoryImage, link: "/kids" },
+    { id: "kids", title: "Kids", image: beautyCategoryImage, link: "/kids" },
     { id: "beauty", title: "Beauty", image: beautyCategoryImage, link: "/beauty" },
     { id: "best-sellers-1", title: "Best Sellers", image: techCategoryImage, link: "/best-sellers" },
     { id: "featured-tech", title: "Featured Tech", image: techCategoryImage, link: "/tech" },
     { id: "featured-sports", title: "Featured Sports", image: sportsCategoryImage, link: "/sports" },
     { id: "featured-beauty", title: "Featured Beauty", image: beautyCategoryImage, link: "/beauty" },
-    { id: "trending-kids", title: "Trending Kids", image: kidsCategoryImage, link: "/kids" },
+    { id: "trending-kids", title: "Trending Kids", image: beautyCategoryImage, link: "/kids" },
     { id: "new-arrivals", title: "New Arrivals", image: incrediblesCategoryImage, link: "/incredibles" },
   ];
 
