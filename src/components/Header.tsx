@@ -1,7 +1,7 @@
+
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex flex-col items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center mb-4">
-            <img src={logo} alt="i.need" className="w-[300px] h-[150px] object-contain" />
+            <img src="/lovable-uploads/0a7f253e-30ba-4b68-b256-2a00bf001d46.png" alt="i.need" className="w-[300px] h-[150px] object-contain" />
           </Link>
 
           {/* Desktop Navigation */}

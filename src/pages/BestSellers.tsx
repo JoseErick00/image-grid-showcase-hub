@@ -1,25 +1,23 @@
+
 import CategoryGrid from "@/components/CategoryGrid";
-import techCategoryImage from "@/assets/tech-category.jpg";
-import sportsCategoryImage from "@/assets/sports-category.jpg";
-import beautyCategoryImage from "@/assets/beauty-category.jpg";
 
 const BestSellers = () => {
   const bestSellersProducts = [
-    { id: "best-1", title: "Best Tech Product", image: techCategoryImage, link: "#" },
-    { id: "best-2", title: "Best Sports Item", image: sportsCategoryImage, link: "#" },
-    { id: "best-3", title: "Best Beauty Product", image: beautyCategoryImage, link: "#" },
-    { id: "best-4", title: "Top Tech Gadget", image: techCategoryImage, link: "#" },
-    { id: "best-5", title: "Popular Sports Gear", image: sportsCategoryImage, link: "#" },
-    { id: "best-6", title: "Favorite Beauty Item", image: beautyCategoryImage, link: "#" },
-    { id: "best-7", title: "Must-Have Tech", image: techCategoryImage, link: "#" },
-    { id: "best-8", title: "Elite Sports Equipment", image: sportsCategoryImage, link: "#" },
-    { id: "best-9", title: "Premium Beauty", image: beautyCategoryImage, link: "#" },
-    { id: "best-10", title: "Featured Tech", image: techCategoryImage, link: "#" },
-    { id: "best-11", title: "Championship Sports", image: sportsCategoryImage, link: "#" },
-    { id: "best-12", title: "Luxury Beauty", image: beautyCategoryImage, link: "#" },
-    { id: "best-13", title: "Innovation Tech", image: techCategoryImage, link: "#" },
-    { id: "best-14", title: "Pro Sports", image: sportsCategoryImage, link: "#" },
-    { id: "best-15", title: "Signature Beauty", image: beautyCategoryImage, link: "#" },
+    { id: "best-1", title: "Best Tech Product", image: "/lovable-uploads/cd71ffb8-492e-43e0-a257-1202bb659780.png", link: "#" },
+    { id: "best-2", title: "Best Sports Item", image: "/lovable-uploads/711cc60c-d3c4-4c92-9c87-80d29784d1d7.png", link: "#" },
+    { id: "best-3", title: "Best Beauty Product", image: "/lovable-uploads/47ae6751-b45a-46de-ac5f-f41927ac71fd.png", link: "#" },
+    { id: "best-4", title: "Top Tech Gadget", image: "/lovable-uploads/cd71ffb8-492e-43e0-a257-1202bb659780.png", link: "#" },
+    { id: "best-5", title: "Popular Sports Gear", image: "/lovable-uploads/711cc60c-d3c4-4c92-9c87-80d29784d1d7.png", link: "#" },
+    { id: "best-6", title: "Favorite Beauty Item", image: "/lovable-uploads/47ae6751-b45a-46de-ac5f-f41927ac71fd.png", link: "#" },
+    { id: "best-7", title: "Must-Have Tech", image: "/lovable-uploads/cd71ffb8-492e-43e0-a257-1202bb659780.png", link: "#" },
+    { id: "best-8", title: "Elite Sports Equipment", image: "/lovable-uploads/711cc60c-d3c4-4c92-9c87-80d29784d1d7.png", link: "#" },
+    { id: "best-9", title: "Premium Beauty", image: "/lovable-uploads/47ae6751-b45a-46de-ac5f-f41927ac71fd.png", link: "#" },
+    { id: "best-10", title: "Featured Tech", image: "/lovable-uploads/cd71ffb8-492e-43e0-a257-1202bb659780.png", link: "#" },
+    { id: "best-11", title: "Championship Sports", image: "/lovable-uploads/711cc60c-d3c4-4c92-9c87-80d29784d1d7.png", link: "#" },
+    { id: "best-12", title: "Luxury Beauty", image: "/lovable-uploads/47ae6751-b45a-46de-ac5f-f41927ac71fd.png", link: "#" },
+    { id: "best-13", title: "Innovation Tech", image: "/lovable-uploads/cd71ffb8-492e-43e0-a257-1202bb659780.png", link: "#" },
+    { id: "best-14", title: "Pro Sports", image: "/lovable-uploads/711cc60c-d3c4-4c92-9c87-80d29784d1d7.png", link: "#" },
+    { id: "best-15", title: "Signature Beauty", image: "/lovable-uploads/47ae6751-b45a-46de-ac5f-f41927ac71fd.png", link: "#" },
   ];
 
   return (

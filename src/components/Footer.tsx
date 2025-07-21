@@ -1,6 +1,6 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, Facebook, Instagram, Twitter } from "lucide-react";
-import logo from "@/assets/logo.png";
 import ContactForm from "./ContactForm";
 
 const Footer = () => {
@@ -30,8 +30,7 @@ const Footer = () => {
         {/* Logo and Contact Info */}
         <div className="text-center mb-12">
           <div className="flex justify-center items-center space-x-3 mb-6">
-            <img src={logo} alt="Showcase" className="h-12 w-12" />
-            <span className="font-omne-medium text-2xl text-foreground">SHOWCASE</span>
+            <img src="/lovable-uploads/0a7f253e-30ba-4b68-b256-2a00bf001d46.png" alt="i.need" className="h-16 w-auto" />
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 mb-6">
@@ -83,7 +82,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="font-omne-regular text-sm text-muted-foreground">
-              © {currentYear} Showcase. All rights reserved.
+              © {currentYear} i.need. All rights reserved.
             </p>
           </div>
         </div>
