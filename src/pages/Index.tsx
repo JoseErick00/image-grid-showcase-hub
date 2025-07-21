@@ -8,7 +8,7 @@ import beautyCategoryImage from "@/assets/04.jpg";
 const Index = () => {
   // Main category grid (3x4 layout with 1:1 aspect ratio)
   const mainCategories = [
-    { id: "home", title: "Home", image: homeCategoryImage, link: "/" },
+    { id: "all", title: "All", image: homeCategoryImage, link: "/" },
     { id: "tech", title: "Tech", image: techCategoryImage, link: "/tech" },
     { id: "sports", title: "Sports", image: sportsCategoryImage, link: "/sports" },
     { id: "incredibles", title: "Incredibles", image: incrediblesCategoryImage, link: "/incredibles" },
@@ -56,7 +56,7 @@ const Index = () => {
           title="Best Sellers"
           items={bestSellers}
           columns={3}
-          aspectRatio="square"
+          aspectRatio="portrait"
         />
       </div>
     </div>

@@ -10,6 +10,7 @@ import Sports from "./pages/Sports";
 import Incredibles from "./pages/Incredibles";
 import Kids from "./pages/Kids";
 import Beauty from "./pages/Beauty";
+import Home from "./pages/Home";
 import BestSellers from "./pages/BestSellers";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="incredibles" element={<Incredibles />} />
             <Route path="kids" element={<Kids />} />
             <Route path="beauty" element={<Beauty />} />
+            <Route path="home" element={<Home />} />
             <Route path="best-sellers" element={<BestSellers />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />

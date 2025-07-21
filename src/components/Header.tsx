@@ -8,12 +8,13 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Home", href: "/" },
+    { name: "All", href: "/" },
     { name: "Tech", href: "/tech" },
     { name: "Sports", href: "/sports" },
     { name: "Incredibles", href: "/incredibles" },
     { name: "Kids", href: "/kids" },
     { name: "Beauty", href: "/beauty" },
+    { name: "Home", href: "/home" },
     { name: "Best Sellers", href: "/best-sellers" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
@@ -27,7 +28,7 @@ const Header = () => {
         <div className="flex flex-col items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center mb-4">
-            <img src={logo} alt="i.need" className="h-16" />
+            <img src={logo} alt="i.need" className="w-[300px] h-[150px] object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,12 +36,13 @@ const Header = () => {
             {navigation.map((item) => {
               const getHoverColor = (name: string) => {
                 const colors: { [key: string]: string } = {
-                  "Home": "#bf0100",
+                  "All": "#bf0100",
                   "Tech": "#03bfc0", 
                   "Sports": "#ed5603",
                   "Incredibles": "#5cc801",
                   "Kids": "#8254d0",
                   "Beauty": "#d8ad00",
+                  "Home": "#bf0100",
                   "Best Sellers": "#fbfbfb",
                   "About Us": "#fbfbfb",
                   "Contact": "#fbfbfb"
