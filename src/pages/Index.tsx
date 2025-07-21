@@ -4,6 +4,8 @@ import techCategoryImage from "@/assets/05.jpg";
 import sportsCategoryImage from "@/assets/02.jpg";
 import incrediblesCategoryImage from "@/assets/03.jpg";
 import beautyCategoryImage from "@/assets/04.jpg";
+import kidsCategoryImage from "@/assets/06.jpg";
+import bestsellersCategoryImage from "@/assets/07.jpg";
 
 const Index = () => {
   // Main category grid (3x4 layout with 1:1 aspect ratio)
