@@ -57,10 +57,56 @@ const Tech = () => {
       image: "/lovable-uploads/fd58b0fe-b9ec-40c4-bef7-87e5ea9cc3e7.png",
       link: "#",
     },
+    {
+      id: "tech-10",
+      title: "NEW OPPO Pad 2 - 8GB/256GB",
+      image: "/lovable-uploads/522481eb-a3c8-4d04-80de-abcbd7fa142a.png",
+      link: "#",
+    },
+    {
+      id: "tech-11",
+      title: "POCO X7 Pro 5G | Dimensity 8400-Ultra",
+      image: "/lovable-uploads/cf03d7e0-5d2d-49e5-bbc3-05c57f1e6555.png",
+      link: "#",
+    },
+    {
+      id: "tech-12",
+      title: "Speaker Bluetooth Karaoke 2 Mic + Super Bass",
+      image: "/lovable-uploads/0bb117f4-76d8-49ef-9f74-88b88a184415.png",
+      link: "#",
+    },
+    {
+      id: "tech-13",
+      title: "Meta Quest 3S 128GB - Get Batman: Arkham Shadow",
+      image: "/lovable-uploads/43587acb-999b-44bf-84a3-90f7192a6738.png",
+      link: "#",
+    },
+    {
+      id: "tech-14",
+      title: "PlayStation VR 2 - Horizon Call of The Mountain Bundle",
+      image: "/lovable-uploads/a7112867-3e6a-4f72-8d32-de6915794e7a.png",
+      link: "#",
+    },
+    {
+      id: "tech-15",
+      title: "Turtle Beach Recon 50 Wired Gaming Headset",
+      image: "/lovable-uploads/a48bb481-207b-44d1-9a1e-11317c1b8aa8.png",
+      link: "#",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Title and Subtitle */}
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
+          Cool Stuff Tech.
+        </h1>
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          A amazing selection of cool stuff with links you can trust!
+        </p>
+      </div>
+
       {/* Banner */}
       <div 
         className="w-full h-[500px] flex items-center justify-center relative"
