@@ -30,7 +30,7 @@ const Footer = () => {
         {/* Logo and Contact Info */}
         <div className="text-center mb-12">
           <div className="flex justify-center items-center space-x-3 mb-6">
-            <img src="/lovable-uploads/0a7f253e-30ba-4b68-b256-2a00bf001d46.png" alt="i.need" className="h-16 w-auto" />
+            <img src="/lovable-uploads/07160ddc-b3e9-4ad2-b8a1-79212e7b7b3b.png" alt="i.need" className="w-[350px] h-[150px] object-contain" />
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 mb-6">
