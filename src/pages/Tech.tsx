@@ -97,16 +97,6 @@ const Tech = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Title and Subtitle */}
-      <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
-          Cool Stuff Tech.
-        </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-          A amazing selection of cool stuff with links you can trust!
-        </p>
-      </div>
-
       {/* Banner */}
       <div 
         className="w-full h-[500px] flex items-center justify-center relative"
@@ -117,10 +107,11 @@ const Tech = () => {
         <div 
           className="absolute inset-0 flex items-center justify-center"
           style={{
-            backgroundImage: `url(/lovable-uploads/13ebcf25-766a-4459-b0aa-e3d66de70333.png)`,
+            backgroundImage: `url(/lovable-uploads/d0fd4599-ca05-45bf-9749-3081a0e65db6.png)`,
             backgroundSize: '1200px auto',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
           }}
         />
         <div className="text-center">
@@ -133,11 +124,21 @@ const Tech = () => {
         </div>
       </div>
 
+      {/* Title and Subtitle */}
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
+          Cool Stuff Tech.
+        </h1>
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          A amazing selection of cool stuff with links you can trust!
+        </p>
+      </div>
+
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <CategoryGrid 
           items={techProducts}
-          columns={3}
+          columns={2}
           aspectRatio="portrait"
         />
       </div>
