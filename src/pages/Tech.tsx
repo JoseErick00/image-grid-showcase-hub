@@ -104,24 +104,11 @@ const Tech = () => {
           backgroundColor: '#30bdbe',
         }}
       >
-        <div 
-          className="absolute inset-0 flex items-center justify-center"
-          style={{
-            backgroundImage: `url(/lovable-uploads/d0fd4599-ca05-45bf-9749-3081a0e65db6.png)`,
-            backgroundSize: '1200px auto',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-          }}
+        <img 
+          src="/lovable-uploads/d0fd4599-ca05-45bf-9749-3081a0e65db6.png"
+          alt="Technology Banner"
+          className="max-h-full max-w-full object-contain"
         />
-        <div className="text-center">
-          <h1 className="font-omne-medium text-4xl md:text-6xl text-primary mb-4">
-            Technology
-          </h1>
-          <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            Discover the latest in technology and innovation
-          </p>
-        </div>
       </div>
 
       {/* Title and Subtitle */}
