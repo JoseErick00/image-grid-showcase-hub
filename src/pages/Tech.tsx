@@ -99,7 +99,7 @@ const Tech = () => {
     <div className="min-h-screen bg-background">
       {/* Banner */}
       <div 
-        className="w-full h-[500px] flex items-center justify-center relative"
+        className="w-full h-[400px] flex items-center justify-center relative"
         style={{
           backgroundColor: '#30bdbe',
         }}
