@@ -30,7 +30,7 @@ const Home = () => {
         <CategoryGrid 
           title="Home Categories"
           items={homeProducts}
-          columns={3}
+          columns={2}
           aspectRatio="square"
         />
       </div>

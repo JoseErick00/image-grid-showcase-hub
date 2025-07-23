@@ -32,7 +32,7 @@ const Kids = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <CategoryGrid 
           items={kidsProducts}
-          columns={3}
+          columns={2}
           aspectRatio="portrait"
         />
       </div>
