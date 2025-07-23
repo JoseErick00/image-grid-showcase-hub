@@ -56,6 +56,42 @@ const Sports = () => {
       image: "/lovable-uploads/8487e0e5-f737-47da-a013-56a082e8e176.png",
       link: "#",
     },
+    {
+      id: "sports-10",
+      title: "CIELO X1 Competição Tênis De Corrida Moda",
+      image: "/lovable-uploads/39f4e82c-8bde-4f2d-85c6-a7f51f389611.png",
+      link: "#",
+    },
+    {
+      id: "sports-11",
+      title: "Adidas - Running Duramo 10 Shoes Men Black",
+      image: "/lovable-uploads/f831fb62-2a6a-4c87-b531-78e5273089a0.png",
+      link: "#",
+    },
+    {
+      id: "sports-12",
+      title: "910 Nineten Aurorun Sepatu Lari",
+      image: "/lovable-uploads/1e70c111-9e5b-4065-a795-751c03eb6d33.png",
+      link: "#",
+    },
+    {
+      id: "sports-13",
+      title: "Meta Quest 3S 128GB - Get Batman: Arkham Shadow",
+      image: "/lovable-uploads/fcb90807-021d-4635-ba08-045cfcc65344.png",
+      link: "#",
+    },
+    {
+      id: "sports-14",
+      title: "WEST BIKING Saddle Cover",
+      image: "/lovable-uploads/f8641fab-8354-4789-a47d-4644efda5ef2.png",
+      link: "#",
+    },
+    {
+      id: "sports-15",
+      title: "TKK Leakproof Sports Water Bottle",
+      image: "/lovable-uploads/1354eb9c-6c28-49d3-8140-d08610deed5f.png",
+      link: "#",
+    },
   ];
 
   return (

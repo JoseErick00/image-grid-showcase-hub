@@ -36,16 +36,16 @@ const Header = () => {
             {navigation.map((item) => {
               const getHoverColor = (name: string) => {
                 const colors: { [key: string]: string } = {
-                  "All": "#bf0100",
+                  "All": "#575757",
                   "Tech": "#03bfc0", 
                   "Sports": "#ed5603",
                   "Incredibles": "#5cc801",
                   "Kids": "#8254d0",
                   "Beauty": "#d8ad00",
                   "Home": "#bf0100",
-                  "Best Sellers": "#fbfbfb",
-                  "About Us": "#fbfbfb",
-                  "Contact": "#fbfbfb"
+                  "Best Sellers": "#575757",
+                  "About Us": "#575757",
+                  "Contact": "#575757"
                 };
                 return colors[name] || "#fbfbfb";
               };
