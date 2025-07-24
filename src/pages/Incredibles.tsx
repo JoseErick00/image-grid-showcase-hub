@@ -11,20 +11,30 @@ const Incredibles = () => {
     { id: "incredibles-7", title: "TAU 2 3in1 Emergency Keyring Power Bank", image: "/lovable-uploads/6a2ec552-c40d-4d1d-b52f-d877362aaae2.png", link: "#" },
     { id: "incredibles-8", title: "Tracker Mini Portable Workstation", image: "/lovable-uploads/8813cd7e-3675-4388-80c9-f7bdb05e1aca.png", link: "#" },
     { id: "incredibles-9", title: "Rokid Max AR Glasses", image: "/lovable-uploads/7ca5a8e8-a264-4795-b33b-f26d3798efc1.png", link: "#" },
+    { id: "incredibles-10", title: "Waterproof Bicycle Saddle Bag", image: "/lovable-uploads/e89b86b3-4192-41ac-8e85-0d2422887207.png", link: "#" },
+    { id: "incredibles-11", title: "Philips Air Fryer 2000 Series 4.2L", image: "/lovable-uploads/e5386ab4-afa4-4db5-971d-34bad6a402f0.png", link: "#" },
+    { id: "incredibles-12", title: "30x Zoom Telephoto Phone Lens", image: "/lovable-uploads/1769ebb4-5a12-43b5-bc64-5ddd7a55e670.png", link: "#" },
+    { id: "incredibles-13", title: "Nintendo Switch 2 System", image: "/lovable-uploads/3c9b56ae-87ca-4e3b-afd7-425076310fbe.png", link: "#" },
+    { id: "incredibles-14", title: "OutIn Nano Portable Electric Espresso Machine", image: "/lovable-uploads/28535c53-ea37-48bb-9a0e-548a1825efa2.png", link: "#" },
+    { id: "incredibles-15", title: "Yelomin 49800mAh Solar Power Bank", image: "/lovable-uploads/3a06e222-f87c-425c-bbdc-a594e1d28d89.png", link: "#" },
+    { id: "incredibles-16", title: "APEXEL 200X digital microscope lens", image: "/lovable-uploads/66ece50e-962b-452b-a348-93d2c4a0d3a8.png", link: "#" },
+    { id: "incredibles-17", title: "WILSON NCAA Vivido Soccer Ball", image: "/lovable-uploads/a4864f30-7361-49f5-a0ed-9fcf834eefbb.png", link: "#" },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <div 
-        className="w-full h-[500px] flex items-center justify-center"
+        className="w-full h-[400px] flex items-center justify-center"
         style={{
           backgroundColor: '#5ebb47',
-          backgroundImage: `url(/lovable-uploads/d52ad88d-4a68-4c45-b1cb-314856a0c4d7.png)`,
-          backgroundSize: '1200px auto',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
         }}
       >
+        <img 
+          src="/lovable-uploads/d52ad88d-4a68-4c45-b1cb-314856a0c4d7.png"
+          alt="BannerPage_Incredibles"
+          className="max-h-full object-contain"
+          style={{ width: '1200px' }}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

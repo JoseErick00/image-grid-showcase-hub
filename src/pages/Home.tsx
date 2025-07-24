@@ -16,16 +16,30 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <div 
+        className="w-full h-[400px] flex items-center justify-center"
+        style={{
+          backgroundColor: '#4caf50',
+        }}
+      >
+        <img 
+          src="/assets/home-category.jpg"
+          alt="Home Banner"
+          className="max-h-full object-contain"
+          style={{ width: '1200px' }}
+        />
+      </div>
+
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
+          Home Appliances
+        </h1>
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          Discover premium home appliances and essentials to make your house a perfect home.
+        </p>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
-            Home Appliances
-          </h1>
-          <p className="font-omne-regular text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover premium home appliances and essentials to make your house a perfect home.
-            From kitchen gadgets to living room furniture, find everything you need.
-          </p>
-        </div>
 
         <CategoryGrid 
           title="Home Categories"
