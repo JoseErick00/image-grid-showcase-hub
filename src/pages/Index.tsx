@@ -39,11 +39,11 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Main Product Categories Grid (3x4) */}
+        {/* Main Product Categories Grid (2 columns) */}
         <CategoryGrid 
           title="Product Categories"
           items={mainCategories}
-          columns={3}
+          columns={2}
           aspectRatio="square"
         />
 
