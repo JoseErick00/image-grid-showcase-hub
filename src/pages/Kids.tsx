@@ -2,7 +2,6 @@ import CategoryGrid from "@/components/CategoryGrid";
 
 const Kids = () => {
   const kidsProducts = [
-    { id: "kids-1", title: "Nintendo Super Mario Deluxe Activity Art Set with Metal Carrying Case", image: "/lovable-uploads/e859b684-f374-45a7-a654-965cd854af88.png", link: "#" },
     { id: "kids-2", title: "ENERGIZE LAB Eilik - Cute Robot Pets for Kids and Adults", image: "/lovable-uploads/99f441d4-b12e-4cde-8635-9fb7b5f93ef8.png", link: "#" },
     { id: "kids-3", title: "Miko Mini with 30 Days Free Miko Max: AI Robot for Kids", image: "/lovable-uploads/693911a4-bf68-4d84-a5f0-22c73f54b9d7.png", link: "#" },
     { id: "kids-4", title: "Nex Playground - The Active Play System for Kids & Families", image: "/lovable-uploads/385b7130-208f-48e0-a8f8-b2c80ef66acb.png", link: "#" },
