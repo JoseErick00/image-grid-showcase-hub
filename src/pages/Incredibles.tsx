@@ -29,11 +29,19 @@ const Incredibles = () => {
           backgroundColor: '#5ebb47',
         }}
       >
+        {/* Desktop banner */}
         <img 
           src="/lovable-uploads/d52ad88d-4a68-4c45-b1cb-314856a0c4d7.png"
           alt="BannerPage_Incredibles"
-          className="max-h-full object-contain"
+          className="max-h-full object-contain hidden sm:block"
           style={{ width: '1200px' }}
+        />
+        {/* Mobile banner */}
+        <img 
+          src="/lovable-uploads/94d99613-7cf3-4e78-8a67-3a4ac4fb5d11.png"
+          alt="BannerPage_Incredibles_Mobile"
+          className="max-h-full object-contain block sm:hidden"
+          style={{ width: '336px', height: '400px' }}
         />
       </div>
 
