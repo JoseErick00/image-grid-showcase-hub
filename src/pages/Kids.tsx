@@ -11,6 +11,14 @@ const Kids = () => {
     { id: "kids-7", title: "2 Inch Screen HD Cartoon Mini SLR Camera", image: "/lovable-uploads/8ce27fea-9953-4ae4-9319-701e1c304f73.png", link: "#" },
     { id: "kids-8", title: "Soft Play Mat - Grey", image: "/lovable-uploads/9cde6bae-1124-444d-997d-bce924674d9c.png", link: "#" },
     { id: "kids-9", title: "My Friend's Baby Essentials Gift Set", image: "/lovable-uploads/ac4a393c-da7b-4f3f-8e14-66a6268d7291.png", link: "#" },
+    { id: "kids-10", title: "Digital Pet with 15 Animals Inside, Virtual Electronic Pets React to Touch, Kids Toys for Girls and Boys", image: "/lovable-uploads/0ab379fa-cdb1-447a-b11e-d27054a24b55.png", link: "#" },
+    { id: "kids-11", title: "Magic Mixies – Magic Cauldron Pink - Your Magic Mixie and their Magic Cauldron come with 50+ sounds and reactions", image: "/lovable-uploads/e9b6989c-37b1-45e7-aa7a-f92a476419e4.png", link: "#" },
+    { id: "kids-12", title: "FUZOU Electric Duck Plush Toy, English Version Recording Repeating Dancing Talking Duck", image: "/lovable-uploads/4646da57-05b4-48ce-9bcc-542bdfef717e.png", link: "#" },
+    { id: "kids-13", title: "Baby shoes, children's star tennis shoes - Made of 100% cotton canvas and foam, it has an internal cotton lining, EVA insole and synthetic toe cap", image: "/lovable-uploads/d28481bb-f112-46c8-b5c1-b36770346dad.png", link: "#" },
+    { id: "kids-14", title: "RURUz Bubble Lawn Mower - Push-Along Toy with Over 15,000 Bubbles Per Minute", image: "/lovable-uploads/c3c3f2b9-c1d0-47d2-b3c0-3bd75204950b.png", link: "#" },
+    { id: "kids-15", title: "The First Years Disney Minnie Mouse 2-in-1 Potty & Toddler Toilet Seat", image: "/lovable-uploads/84f61b02-2d9a-4e1c-a399-f2ab54ce1a31.png", link: "#" },
+    { id: "kids-16", title: "Baby Monitor with Camera and Audio, Netvue Baby Sleep Monitor with 1080P HD 5'' Display, Two-Way Audio, Baby Camera", image: "/lovable-uploads/a2acc799-ce63-407e-ab58-c9f42ab92ab2.png", link: "#" },
+    { id: "kids-17", title: "Fashionable sneakers with comfortable, detachable wheels for outdoor use and improved brake head", image: "/lovable-uploads/b6344029-fde5-4086-936e-43623293f39b.png", link: "#" },
   ];
 
   return (
@@ -18,7 +26,7 @@ const Kids = () => {
       <div 
         className="w-full h-[400px] flex items-center justify-center"
         style={{
-          backgroundColor: '#5ebb47',
+          backgroundColor: '#856cb0',
         }}
       >
         <img 

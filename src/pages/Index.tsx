@@ -8,7 +8,7 @@ const Index = () => {
     { id: "tech", title: "Tech", image: "/lovable-uploads/cd71ffb8-492e-43e0-a257-1202bb659780.png", link: "/tech" },
     { id: "sports", title: "Sports", image: "/lovable-uploads/711cc60c-d3c4-4c92-9c87-80d29784d1d7.png", link: "/sports" },
     { id: "incredibles", title: "Incredibles", image: "/lovable-uploads/77e71818-fe8c-4fd1-9f83-7c136e513447.png", link: "/incredibles" },
-    { id: "kids", title: "Kids", image: "/lovable-uploads/5cb4b7ef-8ec9-497c-a4b4-20e9478a0f10.png", link: "/kids" },
+    { id: "kids", title: "Kids", image: "/lovable-uploads/602d25bc-34a0-4822-bd21-b8769e7415d1.png", link: "/kids" },
     { id: "beauty", title: "Beauty", image: "/lovable-uploads/47ae6751-b45a-46de-ac5f-f41927ac71fd.png", link: "/beauty" },
     { id: "best-sellers-1", title: "Best Sellers", image: "/lovable-uploads/0004b60a-0bea-470c-bdda-9ce5c0cc78d0.png", link: "/best-sellers" },
     { id: "featured-tech", title: "Featured Tech", image: "/lovable-uploads/98eb3c81-38fb-4fdc-90d8-67e1d0d19f92.png", link: "/tech" },
