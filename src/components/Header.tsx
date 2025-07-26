@@ -40,7 +40,7 @@ const Header = () => {
         <div className="flex flex-col items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center mb-4">
-            <img src="/lovable-uploads/07160ddc-b3e9-4ad2-b8a1-79212e7b7b3b.png" alt="i.need" className="w-[350px] h-[150px] object-contain" />
+            <img src="/lovable-uploads/07160ddc-b3e9-4ad2-b8a1-79212e7b7b3b.png" alt="i.need" className="w-[200px] h-[150px] object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
