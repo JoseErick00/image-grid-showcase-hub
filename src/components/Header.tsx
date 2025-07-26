@@ -21,10 +21,10 @@ const Header = () => {
   ];
 
   const countries = [
-    { name: "U.S.A", href: "/usa" },
-    { name: "United Kingdom", href: "/united-kingdom" },
-    { name: "Brazil", href: "/brazil" },
-    { name: "Indonesia", href: "/indonesia" },
+    { name: "U.S.A", href: "/usa", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png" },
+    { name: "United Kingdom", href: "/united-kingdom", flag: "/lovable-uploads/86fe3f09-e744-425b-8881-33dcd2500626.png" },
+    { name: "Brazil", href: "/brazil", flag: "/lovable-uploads/515d52d2-28f4-4483-aca5-7070e4ea8fb5.png" },
+    { name: "Indonesia", href: "/indonesia", flag: "/lovable-uploads/0aa41bc5-2fa9-4922-af43-b13dc3921c31.png" },
   ];
 
   const infoPages = [
@@ -91,24 +91,21 @@ const Header = () => {
             <div className="relative">
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
-                onMouseEnter={() => setCountriesDropdownOpen(true)}
-                onMouseLeave={() => setCountriesDropdownOpen(false)}
+                onClick={() => setCountriesDropdownOpen(!countriesDropdownOpen)}
               >
                 Countries
                 <ChevronDown size={16} />
               </button>
               {countriesDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
-                  onMouseEnter={() => setCountriesDropdownOpen(true)}
-                  onMouseLeave={() => setCountriesDropdownOpen(false)}
-                >
+                <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50">
                   {countries.map((country) => (
                     <Link
                       key={country.name}
                       to={country.href}
-                      className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      onClick={() => setCountriesDropdownOpen(false)}
                     >
+                      <img src={country.flag} alt={`${country.name} flag`} className="w-4 h-3 object-cover" />
                       {country.name}
                     </Link>
                   ))}
@@ -120,23 +117,19 @@ const Header = () => {
             <div className="relative">
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
-                onMouseEnter={() => setInfoDropdownOpen(true)}
-                onMouseLeave={() => setInfoDropdownOpen(false)}
+                onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
               >
                 ineed Info
                 <ChevronDown size={16} />
               </button>
               {infoDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
-                  onMouseEnter={() => setInfoDropdownOpen(true)}
-                  onMouseLeave={() => setInfoDropdownOpen(false)}
-                >
+                <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50">
                   {infoPages.map((page) => (
                     <Link
                       key={page.name}
                       to={page.href}
                       className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      onClick={() => setInfoDropdownOpen(false)}
                     >
                       {page.name}
                     </Link>
@@ -182,9 +175,10 @@ const Header = () => {
                     <Link
                       key={country.name}
                       to={country.href}
-                      className="font-omne-regular text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="flex items-center gap-2 font-omne-regular text-sm text-muted-foreground hover:text-foreground transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
+                      <img src={country.flag} alt={`${country.name} flag`} className="w-4 h-3 object-cover" />
                       {country.name}
                     </Link>
                   ))}
