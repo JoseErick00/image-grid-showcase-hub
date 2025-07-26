@@ -1,10 +1,12 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [countriesDropdownOpen, setCountriesDropdownOpen] = useState(false);
+  const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -16,6 +18,16 @@ const Header = () => {
     { name: "Beauty", href: "/beauty" },
     { name: "Home", href: "/home" },
     { name: "Best Sellers", href: "/best-sellers" },
+  ];
+
+  const countries = [
+    { name: "U.S.A", href: "/usa" },
+    { name: "United Kingdom", href: "/united-kingdom" },
+    { name: "Brazil", href: "/brazil" },
+    { name: "Indonesia", href: "/indonesia" },
+  ];
+
+  const infoPages = [
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -32,7 +44,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navigation.map((item) => {
               const getHoverColor = (name: string) => {
                 const colors: { [key: string]: string } = {
@@ -44,8 +56,6 @@ const Header = () => {
                   "Beauty": "#d8ad00",
                   "Home": "#bf0100",
                   "Best Sellers": "#575757",
-                  "About Us": "#575757",
-                  "Contact": "#575757"
                 };
                 return colors[name] || "#fbfbfb";
               };
@@ -76,6 +86,64 @@ const Header = () => {
                 </Link>
               );
             })}
+
+            {/* Countries Dropdown */}
+            <div className="relative">
+              <button
+                className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
+                onMouseEnter={() => setCountriesDropdownOpen(true)}
+                onMouseLeave={() => setCountriesDropdownOpen(false)}
+              >
+                Countries
+                <ChevronDown size={16} />
+              </button>
+              {countriesDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                  onMouseEnter={() => setCountriesDropdownOpen(true)}
+                  onMouseLeave={() => setCountriesDropdownOpen(false)}
+                >
+                  {countries.map((country) => (
+                    <Link
+                      key={country.name}
+                      to={country.href}
+                      className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                    >
+                      {country.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* ineed Info Dropdown */}
+            <div className="relative">
+              <button
+                className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
+                onMouseEnter={() => setInfoDropdownOpen(true)}
+                onMouseLeave={() => setInfoDropdownOpen(false)}
+              >
+                ineed Info
+                <ChevronDown size={16} />
+              </button>
+              {infoDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                  onMouseEnter={() => setInfoDropdownOpen(true)}
+                  onMouseLeave={() => setInfoDropdownOpen(false)}
+                >
+                  {infoPages.map((page) => (
+                    <Link
+                      key={page.name}
+                      to={page.href}
+                      className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                    >
+                      {page.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -105,6 +173,40 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Countries Mobile */}
+              <div className="px-2 py-1">
+                <div className="font-omne-regular text-sm text-foreground font-medium mb-2">Countries</div>
+                <div className="flex flex-col space-y-2 pl-4">
+                  {countries.map((country) => (
+                    <Link
+                      key={country.name}
+                      to={country.href}
+                      className="font-omne-regular text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {country.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* ineed Info Mobile */}
+              <div className="px-2 py-1">
+                <div className="font-omne-regular text-sm text-foreground font-medium mb-2">ineed Info</div>
+                <div className="flex flex-col space-y-2 pl-4">
+                  {infoPages.map((page) => (
+                    <Link
+                      key={page.name}
+                      to={page.href}
+                      className="font-omne-regular text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {page.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </nav>
         )}

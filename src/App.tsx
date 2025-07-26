@@ -14,6 +14,10 @@ import Home from "./pages/Home";
 import BestSellers from "./pages/BestSellers";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import USA from "./pages/USA";
+import UnitedKingdom from "./pages/UnitedKingdom";
+import Brazil from "./pages/Brazil";
+import Indonesia from "./pages/Indonesia";
 import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
@@ -36,6 +40,10 @@ const App = () => (
             <Route path="best-sellers" element={<BestSellers />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="usa" element={<USA />} />
+            <Route path="united-kingdom" element={<UnitedKingdom />} />
+            <Route path="brazil" element={<Brazil />} />
+            <Route path="indonesia" element={<Indonesia />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
