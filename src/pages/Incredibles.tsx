@@ -40,8 +40,7 @@ const Incredibles = () => {
         <img 
           src="/lovable-uploads/2a72b755-d16f-49a4-ba5e-7610e587813d.png"
           alt="BannerPage_Incredibles_Mobile"
-          className="max-h-full object-contain block sm:hidden"
-          style={{ width: '336px', height: '400px' }}
+          className="w-full h-full object-cover block sm:hidden"
         />
       </div>
 

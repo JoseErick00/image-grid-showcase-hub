@@ -39,8 +39,7 @@ const Kids = () => {
         <img 
           src="/lovable-uploads/1d15817e-e2ee-4880-bbd9-23105f73f240.png"
           alt="BannerPage_Kids_Mobile"
-          className="max-h-full object-contain block sm:hidden"
-          style={{ width: '336px', height: '400px' }}
+          className="w-full h-full object-cover block sm:hidden"
         />
       </div>
 
