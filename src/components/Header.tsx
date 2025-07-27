@@ -15,7 +15,7 @@ const Header = () => {
     { name: "Sports", href: "/sports" },
     { name: "Incredibles", href: "/incredibles" },
     { name: "Kids", href: "/kids" },
-    { name: "Beauty", href: "/beauty" },
+    { name: "Health", href: "/health" },
     { name: "Home", href: "/home" },
     { name: "Best Sellers", href: "/best-sellers" },
   ];
@@ -53,7 +53,7 @@ const Header = () => {
                   "Sports": "#ed5603",
                   "Incredibles": "#5cc801",
                   "Kids": "#8254d0",
-                  "Beauty": "#d8ad00",
+                  "Health": "#d8ad00",
                   "Home": "#bf0100",
                   "Best Sellers": "#575757",
                 };

@@ -9,7 +9,7 @@ import Tech from "./pages/Tech";
 import Sports from "./pages/Sports";
 import Incredibles from "./pages/Incredibles";
 import Kids from "./pages/Kids";
-import Beauty from "./pages/Beauty";
+import Health from "./pages/Health";
 import Home from "./pages/Home";
 import BestSellers from "./pages/BestSellers";
 import About from "./pages/About";
@@ -35,7 +35,7 @@ const App = () => (
             <Route path="sports" element={<Sports />} />
             <Route path="incredibles" element={<Incredibles />} />
             <Route path="kids" element={<Kids />} />
-            <Route path="beauty" element={<Beauty />} />
+            <Route path="health" element={<Health />} />
             <Route path="home" element={<Home />} />
             <Route path="best-sellers" element={<BestSellers />} />
             <Route path="about" element={<About />} />

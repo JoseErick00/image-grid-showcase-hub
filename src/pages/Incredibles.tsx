@@ -38,7 +38,7 @@ const Incredibles = () => {
         />
         {/* Mobile banner */}
         <img 
-          src="/lovable-uploads/94d99613-7cf3-4e78-8a67-3a4ac4fb5d11.png"
+          src="/lovable-uploads/f098e2e4-f6d1-48a4-9a1f-f2a2531f9e12.png"
           alt="BannerPage_Incredibles_Mobile"
           className="max-h-full object-contain block sm:hidden"
           style={{ width: '336px', height: '400px' }}
