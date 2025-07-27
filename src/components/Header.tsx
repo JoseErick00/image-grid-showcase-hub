@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center py-4">
+        <div className="flex flex-col items-center py-4 md:py-4 h-[200px] md:h-auto justify-center">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center mb-4">
             <img src="/lovable-uploads/07160ddc-b3e9-4ad2-b8a1-79212e7b7b3b.png" alt="i.need" className="w-[200px] h-[150px] object-contain" />
