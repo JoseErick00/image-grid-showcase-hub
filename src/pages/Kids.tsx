@@ -37,7 +37,7 @@ const Kids = () => {
         />
         {/* Mobile banner */}
         <img 
-          src="/lovable-uploads/8c2569b4-baa1-4d43-81de-bfb0529aec55.png"
+          src="/lovable-uploads/1d15817e-e2ee-4880-bbd9-23105f73f240.png"
           alt="BannerPage_Kids_Mobile"
           className="max-h-full object-contain block sm:hidden"
           style={{ width: '336px', height: '400px' }}
