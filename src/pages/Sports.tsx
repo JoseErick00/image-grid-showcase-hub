@@ -106,8 +106,13 @@ const Sports = () => {
         <img 
           src="/lovable-uploads/791abf90-7467-4aa6-8367-7f23d1139457.png"
           alt="BannerPage_Sports"
-          className="max-h-full object-contain"
+          className="hidden md:block max-h-full object-contain"
           style={{ width: '1200px' }}
+        />
+        <img 
+          src="/lovable-uploads/8547550f-e069-467c-8193-54f923782e92.png"
+          alt="bannerMobile_Sports"
+          className="md:hidden w-full h-full object-cover"
         />
       </div>
 
