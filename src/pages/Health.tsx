@@ -10,6 +10,14 @@ const Health = () => {
     { id: "health-6", title: "Clarisonic Mia 2 Facial Cleansing Brush", image: "/lovable-uploads/1f3746ac-5a7f-4e84-92c4-c454ec504510.png", link: "#" },
     { id: "health-7", title: "Spa Sciences MIO Diamond Tip", image: "/lovable-uploads/8df5e32f-8650-4d85-b909-bc3d997bbf1b.png", link: "#" },
     { id: "health-8", title: "Nano Ionic Facial Steamer", image: "/lovable-uploads/0bebc8d7-d800-47f8-a4ba-35d8618b2ff4.png", link: "#" },
+    { id: "health-9", title: "Meditation Headband", image: "/lovable-uploads/8527d4e1-1cfd-4251-b0cf-2968f71230a2.png", link: "#" },
+    { id: "health-10", title: "iHealth Thermometer", image: "/lovable-uploads/37fbe09b-f034-487a-bc64-b2b3e59dba42.png", link: "#" },
+    { id: "health-11", title: "Yoga Towel", image: "/lovable-uploads/9e9c6d5a-a791-4dac-9ba0-ea63b0cd58a4.png", link: "#" },
+    { id: "health-12", title: "Glucose Monitor", image: "/lovable-uploads/5c124637-1f1e-477c-abc3-f4a98dcab7bd.png", link: "#" },
+    { id: "health-13", title: "Posture Trainer", image: "/lovable-uploads/43fec64c-f29c-490a-959b-a17ee33986c1.png", link: "#" },
+    { id: "health-14", title: "Smart Water Bottle", image: "/lovable-uploads/9f9a8ae8-4f6d-42cd-b53a-4f5f5eb5fc3c.png", link: "#" },
+    { id: "health-15", title: "Smart Ring", image: "/lovable-uploads/044b731b-1f78-44af-bc6c-d28392c4afb9.png", link: "#" },
+    { id: "health-16", title: "Air Purifier", image: "/lovable-uploads/3bfd0612-b144-49d2-a47c-6cb7ca27db5c.png", link: "#" },
   ];
 
   return (
