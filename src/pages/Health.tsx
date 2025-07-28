@@ -35,7 +35,7 @@ const Health = () => {
           style={{ width: '1200px' }}
         />
         <img 
-          src="/lovable-uploads/6824f58c-f970-49fb-b15c-ef040cc4baf4.png"
+          src="/lovable-uploads/bannerMobile_Health.png"
           alt="bannerMobile_Health"
           className="md:hidden w-full h-full object-cover"
         />
