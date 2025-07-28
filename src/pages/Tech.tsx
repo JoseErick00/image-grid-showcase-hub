@@ -107,12 +107,7 @@ const Tech = () => {
         <img 
           src="/lovable-uploads/d0fd4599-ca05-45bf-9749-3081a0e65db6.png"
           alt="Technology Banner"
-          className="hidden md:block max-h-full max-w-full object-contain"
-        />
-        <img 
-          src="/lovable-uploads/bannerMobile_Tech.png"
-          alt="Technology Banner Mobile"
-          className="md:hidden w-full h-full object-cover"
+          className="max-h-full max-w-full object-contain"
         />
       </div>
 
