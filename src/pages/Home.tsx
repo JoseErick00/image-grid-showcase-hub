@@ -24,14 +24,14 @@ const Home = () => {
       >
         {/* Desktop banner */}
         <img 
-          src="/lovable-uploads/927e40c2-7eaa-4d6a-95d6-83d12959b2d7.png"
+          src="/lovable-uploads/a9c25f7a-5c90-4df2-8b4d-f58f68a51d72.png"
           alt="BannerPage_Home"
           className="hidden md:block max-h-full object-contain"
           style={{ width: '1200px' }}
         />
         {/* Mobile banner */}
         <img 
-          src="/lovable-uploads/a9c25f7a-5c90-4df2-8b4d-f58f68a51d72.png"
+          src="/lovable-uploads/927e40c2-7eaa-4d6a-95d6-83d12959b2d7.png"
           alt="bannerMobile_Home"
           className="md:hidden w-full h-full object-cover"
         />
