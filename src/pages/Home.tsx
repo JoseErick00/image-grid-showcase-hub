@@ -13,6 +13,15 @@ const Home = () => {
     { id: "product-8", title: "Hydroponics Growing System", image: "/lovable-uploads/0d1a9eea-6251-4b2c-ac82-321802b43815.png", link: "#" },
     { id: "product-9", title: "Rapid Egg Cooker", image: "/lovable-uploads/b4ee85de-20db-4e52-971b-15d2cd7b4c33.png", link: "#" },
     { id: "product-10", title: "Premium Mixing Bowls", image: "/lovable-uploads/c7cc6932-df66-4f59-a358-2c595dbd5b30.png", link: "#" },
+    { id: "kitchen-11", title: "Kitchen Essentials", image: "/lovable-uploads/1f8af491-47de-46bb-89f1-64d8b019b792.png", link: "#" },
+    { id: "living-12", title: "Living Room", image: "/lovable-uploads/51def888-18e5-4b9b-b59a-f9355ccbcab8.png", link: "#" },
+    { id: "bedroom-13", title: "Bedroom", image: "/lovable-uploads/5df538bf-36e4-4382-bba4-bb2dac4c17ec.png", link: "#" },
+    { id: "bathroom-14", title: "Bathroom", image: "/lovable-uploads/86e1b126-1fe7-4d31-a205-d056371493bc.png", link: "#" },
+    { id: "dining-15", title: "Dining Room", image: "/lovable-uploads/d0cb81d1-f645-4727-8580-0f4673c90ebf.png", link: "#" },
+    { id: "office-16", title: "Home Office", image: "/lovable-uploads/77387b69-498a-4d74-9c69-584eaed924a8.png", link: "#" },
+    { id: "garden-17", title: "Garden & Outdoor", image: "/lovable-uploads/13f65b41-3115-4af6-be75-680dbc47e8e6.png", link: "#" },
+    { id: "storage-18", title: "Storage Solutions", image: "/lovable-uploads/230328a7-a6a2-443a-9eb7-5174b7b869b2.png", link: "#" },
+    { id: "cleaning-19", title: "Cleaning Supplies", image: "/lovable-uploads/230328a7-a6a2-443a-9eb7-5174b7b869b2.png", link: "#" },
   ];
 
   return (
