@@ -1,41 +1,31 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { contactFormSchema, type ContactFormData, sanitizeInput } from "@/lib/validation";
 
 const ContactForm = () => {
   const { toast } = useToast();
-  
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = async (data: ContactFormData) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
     try {
-      // Sanitize inputs
-      const sanitizedData = {
-        name: sanitizeInput(data.name),
-        email: sanitizeInput(data.email),
-        message: sanitizeInput(data.message),
-      };
-
-      // Simulate form submission - In production, connect to Supabase for secure backend
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
@@ -43,85 +33,58 @@ const ContactForm = () => {
         description: "Thank you for your message. We'll get back to you soon.",
       });
       
-      form.reset();
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Form submission error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-md mx-auto space-y-4">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Your Name"
-                  className="font-omne-regular"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  className="font-omne-regular"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Your Message"
-                  rows={4}
-                  className="font-omne-regular resize-none"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <Button 
-          type="submit" 
-          disabled={form.formState.isSubmitting}
-          className="w-full font-omne-medium"
-        >
-          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
-        </Button>
-      </form>
-    </Form>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
+      <Input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+        className="font-omne-regular"
+      />
+      
+      <Input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        className="font-omne-regular"
+      />
+      
+      <Textarea
+        name="message"
+        placeholder="Your Message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+        rows={4}
+        className="font-omne-regular resize-none"
+      />
+      
+      <Button 
+        type="submit" 
+        disabled={isSubmitting}
+        className="w-full font-omne-medium"
+      >
+        {isSubmitting ? "Sending..." : "Send Message"}
+      </Button>
+    </form>
   );
 };
 

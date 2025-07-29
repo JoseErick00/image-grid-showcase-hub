@@ -19,18 +19,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast'],
-        },
-      },
-    },
-  },
-  // Security headers for production
-  define: {
-    __SECURE_MODE__: JSON.stringify(mode === 'production'),
-  },
 }));
