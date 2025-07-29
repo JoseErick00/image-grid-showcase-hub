@@ -30,7 +30,7 @@ const Kids = () => {
       >
         {/* Desktop banner */}
         <img 
-          src="/lovable-uploads/6aed127d-fd8a-468d-b4bc-c22ba82bff71.png"
+          src="/lovable-uploads/5f89ef36-5624-4400-af3c-1c2b3abe012c.png"
           alt="BannerPage_Kids"
           className="max-h-full object-contain hidden sm:block"
           style={{ width: '1200px' }}

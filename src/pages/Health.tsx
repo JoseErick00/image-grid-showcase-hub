@@ -29,7 +29,7 @@ const Health = () => {
         }}
       >
         <img 
-          src="/lovable-uploads/8b5f565d-ef44-4b89-a665-6436682a5e32.png"
+          src="/lovable-uploads/ff5cbfe9-c4c8-493f-a3ea-6d7fd9f19ad5.png"
           alt="BannerPage_Health"
           className="hidden md:block max-h-full object-contain"
           style={{ width: '1200px' }}

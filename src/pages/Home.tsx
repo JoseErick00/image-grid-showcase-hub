@@ -52,7 +52,7 @@ const Home = () => {
           title="Home Categories"
           items={homeProducts}
           columns={2}
-          aspectRatio="square"
+          aspectRatio="portrait"
         />
       </div>
     </div>

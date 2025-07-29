@@ -105,7 +105,7 @@ const Tech = () => {
         }}
       >
         <img 
-          src="/lovable-uploads/d0fd4599-ca05-45bf-9749-3081a0e65db6.png"
+          src="/lovable-uploads/76c528a6-d36e-4b7e-890e-b915f184a590.png"
           alt="Technology Banner"
           className="hidden md:block max-h-full max-w-full object-contain"
         />

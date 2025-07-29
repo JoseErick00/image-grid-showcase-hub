@@ -31,7 +31,7 @@ const Incredibles = () => {
       >
         {/* Desktop banner */}
         <img 
-          src="/lovable-uploads/d52ad88d-4a68-4c45-b1cb-314856a0c4d7.png"
+          src="/lovable-uploads/fb487d7d-5856-4c54-a223-315d1c710362.png"
           alt="BannerPage_Incredibles"
           className="max-h-full object-contain hidden sm:block"
           style={{ width: '1200px' }}
