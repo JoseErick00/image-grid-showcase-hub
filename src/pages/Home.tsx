@@ -21,7 +21,11 @@ const Home = () => {
     { id: "office-16", title: "Home Office", image: "/lovable-uploads/77387b69-498a-4d74-9c69-584eaed924a8.png", link: "#" },
     { id: "garden-17", title: "Garden & Outdoor", image: "/lovable-uploads/13f65b41-3115-4af6-be75-680dbc47e8e6.png", link: "#" },
     { id: "storage-18", title: "Storage Solutions", image: "/lovable-uploads/230328a7-a6a2-443a-9eb7-5174b7b869b2.png", link: "#" },
-    { id: "cleaning-19", title: "Cleaning Supplies", image: "/lovable-uploads/230328a7-a6a2-443a-9eb7-5174b7b869b2.png", link: "#" },
+    { id: "blender-19", title: "nutribullet Full-Size Blender Combo 1200W", image: "/lovable-uploads/457319a4-a10a-4192-8acc-ef13a4824fd3.png", link: "#" },
+    { id: "milk-maker-20", title: "N5 Nut Milk Maker Machine", image: "/lovable-uploads/753c1241-7c08-49da-a3e1-6baaf7448c48.png", link: "#" },
+    { id: "coffee-maker-21", title: "SEVEN&ME Espressor Machine Coffee Maker", image: "/lovable-uploads/a6447d77-adbb-4a62-8a9e-dd4cd0cf1e58.png", link: "#" },
+    { id: "eye-massager-22", title: "Eye Care & Beauty Massager", image: "/lovable-uploads/2b027f99-2ffb-4a90-9ed1-d1c285aee481.png", link: "#" },
+    { id: "egg-cooker-23", title: "Rapid Egg Cooker: 7 Egg Capacity Electric", image: "/lovable-uploads/1ea0a90f-5936-4413-98c1-18498ea21e42.png", link: "#" },
   ];
 
   return (
