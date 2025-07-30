@@ -19,6 +19,12 @@ const Incredibles = () => {
     { id: "incredibles-15", title: "Yelomin 49800mAh Solar Power Bank", image: "/lovable-uploads/3a06e222-f87c-425c-bbdc-a594e1d28d89.png", link: "#" },
     { id: "incredibles-16", title: "APEXEL 200X digital microscope lens", image: "/lovable-uploads/66ece50e-962b-452b-a348-93d2c4a0d3a8.png", link: "#" },
     { id: "incredibles-17", title: "WILSON NCAA Vivido Soccer Ball", image: "/lovable-uploads/a4864f30-7361-49f5-a0ed-9fcf834eefbb.png", link: "#" },
+    { id: "incredibles-18", title: "ONOR USB Conference Microphone for Laptop", image: "/lovable-uploads/415004c8-7aec-46cc-81a5-fd3adf36c25e.png", link: "#" },
+    { id: "incredibles-19", title: "GravaStar Loudspeakers Mars Pro Portable", image: "/lovable-uploads/b639efcc-e4a0-458a-8cff-7e5a54411f97.png", link: "#" },
+    { id: "incredibles-20", title: "Echelon Reflect Smart Connect Fitness Mirror", image: "/lovable-uploads/596073f3-3fa5-44ee-af5c-efc56ca738d4.png", link: "#" },
+    { id: "incredibles-21", title: "Black Shark Phone Cooler for Gaming FunCooler 4", image: "/lovable-uploads/8c16876c-77e7-4f7f-b282-5633f9b58462.png", link: "#" },
+    { id: "incredibles-22", title: "Fanttik Slim V8 Apex Car Vacuum, 4-in-1 Portable", image: "/lovable-uploads/1ad2a814-1a35-49b1-a025-cfbc4224934e.png", link: "#" },
+    { id: "incredibles-23", title: "Flip up Double Visor with Multicolor Visor", image: "/lovable-uploads/aaa7d706-7638-4eab-83e8-cca8e547ff40.png", link: "#" },
   ];
 
   return (
