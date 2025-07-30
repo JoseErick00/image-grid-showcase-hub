@@ -26,6 +26,9 @@ const Home = () => {
     { id: "coffee-maker-21", title: "SEVEN&ME Espressor Machine Coffee Maker", image: "/lovable-uploads/a6447d77-adbb-4a62-8a9e-dd4cd0cf1e58.png", link: "#" },
     { id: "eye-massager-22", title: "Eye Care & Beauty Massager", image: "/lovable-uploads/2b027f99-2ffb-4a90-9ed1-d1c285aee481.png", link: "#" },
     { id: "egg-cooker-23", title: "Rapid Egg Cooker: 7 Egg Capacity Electric", image: "/lovable-uploads/1ea0a90f-5936-4413-98c1-18498ea21e42.png", link: "#" },
+    { id: "eye-care-24", title: "Eye Care & Beauty Massager", image: "/lovable-uploads/c9ae1910-98cb-43c0-b382-fdb2b12ff10c.png", link: "#" },
+    { id: "espresso-25", title: "20 Bar Semi-Automatic Espresso Machine", image: "/lovable-uploads/82f9b64b-6f11-4a03-974e-2bd99223ccea.png", link: "#" },
+    { id: "espresso-maker-26", title: "Professional Espresso Maker with Milk Frother", image: "/lovable-uploads/ea99db9e-0545-482a-aa67-217e64a04ba0.png", link: "#" },
   ];
 
   return (
