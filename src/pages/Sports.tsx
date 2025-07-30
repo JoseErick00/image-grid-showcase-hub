@@ -92,6 +92,48 @@ const Sports = () => {
       image: "/lovable-uploads/1354eb9c-6c28-49d3-8140-d08610deed5f.png",
       link: "#",
     },
+    {
+      id: "sports-16",
+      title: "Ruomeng Home Gym Mirrors 12 Inch x 12Pcs",
+      image: "/lovable-uploads/6c807309-d6d9-4c43-a2cc-93a942f7b103.png",
+      link: "#",
+    },
+    {
+      id: "sports-17",
+      title: "Champion Sports RPX10 Rhino Promax Slam Ball",
+      image: "/lovable-uploads/035eee62-5694-4143-aef9-b23c4f788b12.png",
+      link: "#",
+    },
+    {
+      id: "sports-18",
+      title: "UpCircleSeven Back Roller & Yoga Wheel",
+      image: "/lovable-uploads/bde983c9-352b-48cc-b4da-3b37b37bc800.png",
+      link: "#",
+    },
+    {
+      id: "sports-19",
+      title: "PowerBlock Elite EXP Adjustable Dumbbells",
+      image: "/lovable-uploads/433cd77b-a0e2-44a9-aea8-4e722354be73.png",
+      link: "#",
+    },
+    {
+      id: "sports-20",
+      title: "Hoka Men's Clifton 9 Sneaker",
+      image: "/lovable-uploads/abe94cae-f878-40bf-bf24-904bab355cf6.png",
+      link: "#",
+    },
+    {
+      id: "sports-21",
+      title: "Topo Athletic Men's Phantom 3",
+      image: "/lovable-uploads/71c83d48-c989-4110-895b-4f721a100834.png",
+      link: "#",
+    },
+    {
+      id: "sports-22",
+      title: "Adjustable Dumbbell - Kmart",
+      image: "/lovable-uploads/7d85b789-e412-4fd0-beb3-5f936308fd1d.png",
+      link: "#",
+    },
   ];
 
   return (
