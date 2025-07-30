@@ -93,6 +93,36 @@ const Tech = () => {
       image: "/lovable-uploads/a48bb481-207b-44d1-9a1e-11317c1b8aa8.png",
       link: "#",
     },
+    {
+      id: "tech-16",
+      title: "Hisense Laser Mini Projector C2, 65-300\"",
+      image: "/lovable-uploads/9b810d80-facc-426d-ac2f-64e2a75902c5.png",
+      link: "#",
+    },
+    {
+      id: "tech-17",
+      title: "Xencelabs Pen Display 16 Bundle with Quick Keys",
+      image: "/lovable-uploads/586a67db-eb4e-415c-ade6-928c3d370c5a.png",
+      link: "#",
+    },
+    {
+      id: "tech-18",
+      title: "ProtoArc Wireless Trackball Mouse, EM01 NL",
+      image: "/lovable-uploads/65851a7d-09f3-4f9c-bd56-1eb2043ad75a.png",
+      link: "#",
+    },
+    {
+      id: "tech-19",
+      title: "Robot Pet Dog ChatGPT-4o Smart AI",
+      image: "/lovable-uploads/1b4d3f3a-d9a0-46b5-86d0-2d33a2081cab.png",
+      link: "#",
+    },
+    {
+      id: "tech-20",
+      title: "Teamgee 15.6\" Laptop Screen Extender",
+      image: "/lovable-uploads/7283581c-a75c-4dcf-8c9b-345fc75077c6.png",
+      link: "#",
+    },
   ];
 
   return (
