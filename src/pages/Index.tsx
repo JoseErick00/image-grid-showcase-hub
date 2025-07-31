@@ -4,7 +4,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 const Index = () => {
   // Main category grid (3x4 layout with 4:5 aspect ratio)
   const mainCategories = [
-    { id: "all", title: "All", image: "/lovable-uploads/fa82b283-4d7c-4dbc-8cff-6e4a159d0488.png", link: "/" },
+    { id: "home", title: "Home", image: "/lovable-uploads/df55b33a-e588-44a0-ada4-596fcd92baa6.png", link: "/" },
     { id: "tech", title: "Tech", image: "/lovable-uploads/0e7c011a-57b7-4f8c-80b8-bbc7c0204cde.png", link: "/tech" },
     { id: "sports", title: "Sports", image: "/lovable-uploads/f1c25851-ab90-44e7-98aa-24f95106bea1.png", link: "/sports" },
     { id: "incredibles", title: "Incredibles", image: "/lovable-uploads/77e71818-fe8c-4fd1-9f83-7c136e513447.png", link: "/incredibles" },
