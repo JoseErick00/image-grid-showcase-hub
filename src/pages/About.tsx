@@ -3,6 +3,22 @@
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Banner Section */}
+      <div className="relative w-full">
+        {/* Desktop Banner */}
+        <img 
+          src="/lovable-uploads/bfbac871-33dd-4588-a42a-d8ef69e4279d.png" 
+          alt="About Us Banner" 
+          className="hidden md:block w-full h-64 lg:h-80 object-cover"
+        />
+        {/* Mobile Banner */}
+        <img 
+          src="/lovable-uploads/7581186d-d45c-4e70-91dc-0dd372a9f66c.png" 
+          alt="About Us Banner Mobile" 
+          className="block md:hidden w-full h-48 object-cover"
+        />
+      </div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">
