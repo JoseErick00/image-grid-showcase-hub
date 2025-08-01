@@ -101,7 +101,11 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               {countriesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50">
+                <div 
+                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50"
+                  onMouseEnter={() => setCountriesDropdownOpen(true)}
+                  onMouseLeave={() => setCountriesDropdownOpen(false)}
+                >
                   {countries.map((country) => (
                     <Link
                       key={country.name}
@@ -131,7 +135,11 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               {infoDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50">
+                <div 
+                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                  onMouseEnter={() => setInfoDropdownOpen(true)}
+                  onMouseLeave={() => setInfoDropdownOpen(false)}
+                >
                   {infoPages.map((page) => (
                     <Link
                       key={page.name}
@@ -179,24 +187,15 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
+                    className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
                       isActive(item.href)
                         ? "text-primary"
-                        : "text-muted-foreground hover:text-white"
+                        : ""
                     }`}
+                    style={{
+                      backgroundColor: isActive(item.href) ? "" : getHoverColor(item.name)
+                    }}
                     onClick={() => setIsMenuOpen(false)}
-                    onMouseEnter={(e) => {
-                      if (!isActive(item.href)) {
-                        e.currentTarget.style.backgroundColor = getHoverColor(item.name);
-                        e.currentTarget.style.color = "white";
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isActive(item.href)) {
-                        e.currentTarget.style.backgroundColor = "";
-                        e.currentTarget.style.color = "";
-                      }
-                    }}
                   >
                     {item.name}
                   </Link>
