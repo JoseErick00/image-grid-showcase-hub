@@ -103,8 +103,6 @@ const Header = () => {
               {countriesDropdownOpen && (
                 <div 
                   className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50"
-                  onMouseEnter={() => setCountriesDropdownOpen(true)}
-                  onMouseLeave={() => setCountriesDropdownOpen(false)}
                 >
                   {countries.map((country) => (
                     <Link
@@ -137,8 +135,6 @@ const Header = () => {
               {infoDropdownOpen && (
                 <div 
                   className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
-                  onMouseEnter={() => setInfoDropdownOpen(true)}
-                  onMouseLeave={() => setInfoDropdownOpen(false)}
                 >
                   {infoPages.map((page) => (
                     <Link
