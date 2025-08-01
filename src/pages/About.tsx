@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Banner Section */}
-      <div className="w-full h-[400px] flex items-center justify-center relative">
+      <div className="w-full h-[235px] md:h-[200px] flex items-center justify-center relative">
         {/* Desktop Banner */}
         <img 
           src="/lovable-uploads/bfbac871-33dd-4588-a42a-d8ef69e4279d.png" 
