@@ -40,7 +40,7 @@ const Header = () => {
         <div className="flex flex-col items-center py-4 md:py-4 h-[150px] md:h-auto justify-center">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center mb-4">
-            <img src="/lovable-uploads/07160ddc-b3e9-4ad2-b8a1-79212e7b7b3b.png" alt="i.need" className="w-[200px] h-[150px] object-contain" />
+            <img src="/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png" alt="i.need" className="w-[200px] h-[150px] object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -88,10 +88,14 @@ const Header = () => {
             })}
 
             {/* Countries Dropdown */}
-            <div className="relative">
+            <div 
+              className="relative"
+              onMouseLeave={() => setCountriesDropdownOpen(false)}
+            >
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
                 onClick={() => setCountriesDropdownOpen(!countriesDropdownOpen)}
+                onMouseEnter={() => setCountriesDropdownOpen(true)}
               >
                 Countries
                 <ChevronDown size={16} />
@@ -114,10 +118,14 @@ const Header = () => {
             </div>
 
             {/* ineed Info Dropdown */}
-            <div className="relative">
+            <div 
+              className="relative"
+              onMouseLeave={() => setInfoDropdownOpen(false)}
+            >
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
                 onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
+                onMouseEnter={() => setInfoDropdownOpen(true)}
               >
                 ineed Info
                 <ChevronDown size={16} />
@@ -152,20 +160,48 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-3">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`font-omne-regular px-2 py-1 transition-colors duration-200 ${
-                    isActive(item.href)
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const getHoverColor = (name: string) => {
+                  const colors: { [key: string]: string } = {
+                    "All": "#575757",
+                    "Tech": "#03bfc0", 
+                    "Sports": "#ed5603",
+                    "Incredibles": "#5cc801",
+                    "Kids": "#8254d0",
+                    "Health": "#d8ad00",
+                    "Home": "#bf0100",
+                    "Best Sellers": "#575757",
+                  };
+                  return colors[name] || "#fbfbfb";
+                };
+
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
+                      isActive(item.href)
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-white"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                    onMouseEnter={(e) => {
+                      if (!isActive(item.href)) {
+                        e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                        e.currentTarget.style.color = "white";
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isActive(item.href)) {
+                        e.currentTarget.style.backgroundColor = "";
+                        e.currentTarget.style.color = "";
+                      }
+                    }}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
               
               {/* Countries Mobile */}
               <div className="px-2 py-1">
