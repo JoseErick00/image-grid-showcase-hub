@@ -12,6 +12,7 @@ interface CategoryGridProps {
   columns?: number;
   aspectRatio?: "square" | "portrait";
   buttonColor?: string;
+  showButton?: boolean;
 }
 
 const CategoryGrid = ({ 
@@ -19,7 +20,8 @@ const CategoryGrid = ({
   items, 
   columns = 3, 
   aspectRatio = "square",
-  buttonColor = "#1e40af"
+  buttonColor = "#1e40af",
+  showButton = true
 }: CategoryGridProps) => {
   const gridCols = {
     2: "grid-cols-1 sm:grid-cols-2",
@@ -57,13 +59,15 @@ const CategoryGrid = ({
               <h3 className="font-omne-medium text-lg text-foreground mb-3">
                 {item.title}
               </h3>
-              <Button 
-                className="w-full text-white hover:opacity-90"
-                style={{ backgroundColor: buttonColor }}
-                onClick={(e) => e.preventDefault()}
-              >
-                Buy with our link!
-              </Button>
+              {showButton && (
+                <Button 
+                  className="w-full text-white hover:opacity-90"
+                  style={{ backgroundColor: buttonColor }}
+                  onClick={(e) => e.preventDefault()}
+                >
+                  Buy with our link!
+                </Button>
+              )}
             </div>
           </Link>
         ))}

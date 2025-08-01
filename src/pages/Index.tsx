@@ -33,6 +33,7 @@ const Index = () => {
           items={mainCategories}
           columns={2}
           aspectRatio="portrait"
+          showButton={false}
         />
 
       </div>
