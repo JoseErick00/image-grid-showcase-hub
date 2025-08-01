@@ -11,12 +11,12 @@ const Header = () => {
 
   const navigation = [
     { name: "All", href: "/" },
-    { name: "Tech", href: "/tech" },
-    { name: "Sports", href: "/sports" },
-    { name: "Incredibles", href: "/incredibles" },
-    { name: "Kids", href: "/kids" },
-    { name: "Health", href: "/health" },
     { name: "Home", href: "/home" },
+    { name: "Sports", href: "/sports" },
+    { name: "Health", href: "/health" },
+    { name: "Incredibles", href: "/incredibles" },
+    { name: "Tech", href: "/tech" },
+    { name: "Kids", href: "/kids" },
     { name: "Best Sellers", href: "/best-sellers" },
   ];
 
