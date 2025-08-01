@@ -65,7 +65,7 @@ const CategoryGrid = ({
                   style={{ backgroundColor: buttonColor }}
                   onClick={(e) => e.preventDefault()}
                 >
-                  Buy with our link!
+                  YES! * I need it!
                 </Button>
               )}
             </div>
