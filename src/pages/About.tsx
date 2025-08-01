@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+
 
 const About = () => {
   return (
@@ -7,43 +7,41 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center items-center space-x-4 mb-8">
-            <img src={logo} alt="Showcase" className="h-16 w-16" />
             <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground">
-              About Showcase
+              Welcome to ineed – Showcase Store
             </h1>
           </div>
           <p className="font-omne-regular text-xl text-muted-foreground max-w-2xl mx-auto">
-            Your premier destination for discovering the latest products across multiple categories
+            The Internet's Coolest Corner for Cool Stuff - Your premier destination for discovering the latest products across all eCommerce platforms
           </p>
         </div>
 
         {/* Main Content */}
         <div className="space-y-12">
-          {/* Our Story */}
+          {/* We showcase extraordinary */}
           <section>
-            <h2 className="font-omne-medium text-2xl text-foreground mb-6">Our Story</h2>
+            <h2 className="font-omne-medium text-2xl text-foreground mb-6">We showcase extraordinary</h2>
             <p className="font-omne-regular text-muted-foreground leading-relaxed mb-4">
-              Showcase was born from a simple idea: to create a platform where quality products 
-              from various categories could be discovered and appreciated. We believe that great 
-              products deserve great presentation, and that's exactly what we provide.
+              At ineed, we don't sell ordinary—we showcase extraordinary. Our mission is simple: find the most awesome, beautiful, clever, and just plain cool products floating around platforms like Amazon, Shopee, Alibaba, AliExpress, Temu, and eBay, and bring them together in one jaw-dropping online collection.
             </p>
             <p className="font-omne-regular text-muted-foreground leading-relaxed">
-              Our curated collection spans technology, sports, beauty, kids' products, and more, 
-              ensuring that there's something special for everyone in our showcase.
+              From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered.
             </p>
           </section>
 
-          {/* Our Mission */}
+          {/* Your Happy Places */}
           <section>
-            <h2 className="font-omne-medium text-2xl text-foreground mb-6">Our Mission</h2>
+            <h2 className="font-omne-medium text-2xl text-foreground mb-6">Your Happy Places</h2>
             <p className="font-omne-regular text-muted-foreground leading-relaxed mb-4">
-              We're dedicated to connecting customers with exceptional products through our 
-              carefully curated showcase. Our platform serves as a bridge between innovative 
-              brands and discerning customers who appreciate quality and design.
+              Home – Beautiful, useful, and unexpected upgrades for your space<br/>
+              Sports – Gear and gadgets to power your moves<br/>
+              Health – Self-care meets innovation<br/>
+              Incredibles – Weird, wonderful, and absolutely unnecessary (but totally irresistible)<br/>
+              Tech – The latest, smartest, coolest tech you didn't know you needed<br/>
+              Kids – Cute chaos: clever, fun finds for the little humans
             </p>
             <p className="font-omne-regular text-muted-foreground leading-relaxed">
-              Every product in our showcase is selected based on its quality, innovation, 
-              and potential to enhance our customers' lives.
+              From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered.
             </p>
           </section>
 
