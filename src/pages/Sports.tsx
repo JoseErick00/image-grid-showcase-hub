@@ -174,6 +174,7 @@ const Sports = () => {
           items={sportsProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#f06927"
         />
       </div>
     </div>

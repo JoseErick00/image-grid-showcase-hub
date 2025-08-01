@@ -63,6 +63,7 @@ const Incredibles = () => {
           items={incrediblesProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#5ebb47"
         />
       </div>
     </div>

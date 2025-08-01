@@ -70,6 +70,7 @@ const Home = () => {
           items={homeProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#d01e23"
         />
       </div>
     </div>

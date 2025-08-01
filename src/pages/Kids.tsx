@@ -66,6 +66,7 @@ const Kids = () => {
           items={kidsProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#856cb0"
         />
       </div>
     </div>

@@ -61,6 +61,7 @@ const Health = () => {
           items={healthProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#f9c90c"
         />
       </div>
     </div>

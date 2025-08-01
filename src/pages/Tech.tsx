@@ -162,6 +162,7 @@ const Tech = () => {
           items={techProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#30bdbe"
         />
       </div>
     </div>
