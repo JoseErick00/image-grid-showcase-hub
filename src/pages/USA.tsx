@@ -60,6 +60,7 @@ const USA = () => {
           items={usaProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#b91c1c"
         />
       </div>
     </div>

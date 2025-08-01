@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 interface CategoryGridProps {
   title?: string;
@@ -10,13 +11,15 @@ interface CategoryGridProps {
   }>;
   columns?: number;
   aspectRatio?: "square" | "portrait";
+  buttonColor?: string;
 }
 
 const CategoryGrid = ({ 
   title, 
   items, 
   columns = 3, 
-  aspectRatio = "square" 
+  aspectRatio = "square",
+  buttonColor = "#1e40af"
 }: CategoryGridProps) => {
   const gridCols = {
     2: "grid-cols-1 sm:grid-cols-2",
@@ -51,9 +54,16 @@ const CategoryGrid = ({
             </div>
             
             <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-omne-medium text-lg text-foreground">
+              <h3 className="font-omne-medium text-lg text-foreground mb-3">
                 {item.title}
               </h3>
+              <Button 
+                className="w-full text-white hover:opacity-90"
+                style={{ backgroundColor: buttonColor }}
+                onClick={(e) => e.preventDefault()}
+              >
+                Buy with our link!
+              </Button>
             </div>
           </Link>
         ))}

@@ -60,6 +60,7 @@ const UnitedKingdom = () => {
           items={ukProducts}
           columns={2}
           aspectRatio="portrait"
+          buttonColor="#1e40af"
         />
       </div>
     </div>
