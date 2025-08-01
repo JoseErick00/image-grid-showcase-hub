@@ -88,14 +88,10 @@ const Header = () => {
             })}
 
             {/* Countries Dropdown */}
-            <div 
-              className="relative"
-              onMouseLeave={() => setCountriesDropdownOpen(false)}
-            >
+            <div className="relative">
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
                 onClick={() => setCountriesDropdownOpen(!countriesDropdownOpen)}
-                onMouseEnter={() => setCountriesDropdownOpen(true)}
               >
                 Countries
                 <ChevronDown size={16} />
@@ -120,14 +116,10 @@ const Header = () => {
             </div>
 
             {/* ineed Info Dropdown */}
-            <div 
-              className="relative"
-              onMouseLeave={() => setInfoDropdownOpen(false)}
-            >
+            <div className="relative">
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
                 onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
-                onMouseEnter={() => setInfoDropdownOpen(true)}
               >
                 ineed Info
                 <ChevronDown size={16} />
