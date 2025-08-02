@@ -61,11 +61,11 @@ const CategoryGrid = ({
               </h3>
               {showButton && (
                 <Button 
-                  className="w-full text-white hover:opacity-90"
+                  className="w-full text-white hover:opacity-90 text-xl"
                   style={{ backgroundColor: buttonColor }}
                   onClick={(e) => e.preventDefault()}
                 >
-                  YES! * I need it!
+                  Yes! ineed the link!
                 </Button>
               )}
             </div>
