@@ -154,7 +154,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
+          <nav className="md:hidden py-4 border-t border-border max-h-[70vh] overflow-y-auto">
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => {
                 const getHoverColor = (name: string) => {
@@ -211,17 +211,34 @@ const Header = () => {
               {/* ineed Info Mobile */}
               <div className="px-2 py-1">
                 <div className="font-omne-regular text-sm text-foreground font-medium mb-2">ineed Info</div>
-                <div className="flex flex-col space-y-2 pl-4">
-                  {infoPages.map((page) => (
-                    <Link
-                      key={page.name}
-                      to={page.href}
-                      className="font-omne-regular text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {page.name}
-                    </Link>
-                  ))}
+                <div className="flex flex-col space-y-3 pl-4">
+                  {infoPages.map((page) => {
+                    const getInfoHoverColor = (name: string) => {
+                      const colors: { [key: string]: string } = {
+                        "About Us": "#575757",
+                        "Contact": "#575757",
+                      };
+                      return colors[name] || "#fbfbfb";
+                    };
+
+                    return (
+                      <Link
+                        key={page.name}
+                        to={page.href}
+                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                          isActive(page.href)
+                            ? "text-primary"
+                            : ""
+                        }`}
+                        style={{
+                          backgroundColor: isActive(page.href) ? "" : getInfoHoverColor(page.name)
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {page.name}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             </div>
