@@ -19,11 +19,12 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
-            Discover Amazing Products
+            We select the best products across all apps, making your search easier!
           </h1>
           <p className="font-omne-regular text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our curated collection of premium products across multiple categories. 
-            From cutting-edge technology to beautiful home essentials, find everything you love in one place.
+            We handpick the most brilliant products and gadgets from the world's biggest e-commerce platforms—Amazon, AliExpress, Shopee, Temu, Alibaba, eBay—and bring them together in one inspiring place.
+            <br /><br />
+            Every item in our store is chosen to spark excitement, solve a problem, or just make life a little cooler.
           </p>
         </div>
 
