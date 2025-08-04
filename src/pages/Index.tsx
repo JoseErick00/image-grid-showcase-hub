@@ -18,6 +18,13 @@ const Index = () => {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/485ae8e0-915f-450d-96a5-782e83636c69.png" 
+              alt="Platform Logos" 
+              className="max-w-full h-auto"
+            />
+          </div>
           <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
             We select the best products across all apps, making your search easier!
           </h1>
