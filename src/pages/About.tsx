@@ -168,6 +168,30 @@ const About = () => {
                 We scan Amazon, eBay, Shopee and all apps for the latest smart gadgets and tech toys. Expect unexpected genius.
               </p>
             </div>
+
+            {/* Kids Section */}
+            <div className="mb-8">
+              <div className="mb-4">
+                {/* Desktop Image */}
+                <img 
+                  src="/lovable-uploads/3860584f-4621-4592-bfa4-92d4c995ea61.png" 
+                  alt="Kids Category" 
+                  className="hidden md:block w-full rounded-lg"
+                />
+                {/* Mobile Image */}
+                <img 
+                  src="/lovable-uploads/50042806-c5e7-43c3-8288-aa5d336e340e.png" 
+                  alt="Kids Category Mobile" 
+                  className="md:hidden w-full rounded-lg"
+                />
+              </div>
+              <h3 className="font-omne-medium text-xl mb-2" style={{ color: '#856cb0' }}>
+                Smart fun for small humans.
+              </h3>
+              <p className="font-omne-regular text-muted-foreground leading-relaxed">
+                From clever toys to parenting hacks, we handpick the cutest chaos-making gear across global marketplaces.
+              </p>
+            </div>
           </section>
 
           {/* What We Offer */}
