@@ -215,6 +215,35 @@ const About = () => {
             </div>
           </section>
 
+          {/* Trust Section */}
+          <section className="py-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Column 1 - Trusted */}
+              <div className="flex flex-col items-center text-center">
+                <img 
+                  src="/lovable-uploads/6e3e662e-cdb3-4670-907e-7f181d572cb5.png" 
+                  alt="Trusted Icon" 
+                  className="w-16 h-16 mb-4"
+                />
+                <p className="font-omne-regular text-muted-foreground leading-relaxed">
+                  All sellers and store links on our showcase are tested and tracked based on reviews and delivery complaints.
+                </p>
+              </div>
+              
+              {/* Column 2 - Stars */}
+              <div className="flex flex-col items-center text-center">
+                <img 
+                  src="/lovable-uploads/ef2ab03d-7bfd-458e-a03e-4e72b1cb6315.png" 
+                  alt="Stars Icon" 
+                  className="w-16 h-16 mb-4"
+                />
+                <p className="font-omne-regular text-muted-foreground leading-relaxed">
+                  We monitor customer reviews, complaints, and comments to track our product selection and seller performance.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* What We Offer */}
           <section>
             <h2 className="font-omne-medium text-2xl text-foreground mb-6">What We Offer</h2>
