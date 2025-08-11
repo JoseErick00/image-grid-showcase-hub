@@ -21,13 +21,13 @@ const Index = () => {
           <div className="flex justify-center mb-8">
             {/* Desktop version */}
             <img 
-              src="/lovable-uploads/03d54203-96cd-4f66-9816-3d1ef8b1c098.png" 
+              src="/lovable-uploads/5a060a5f-27bd-4a4f-bb84-77fe7e8b60ce.png" 
               alt="Platform Logos" 
               className="max-w-full h-auto hidden sm:block"
             />
             {/* Mobile version */}
             <img 
-              src="/lovable-uploads/5a060a5f-27bd-4a4f-bb84-77fe7e8b60ce.png" 
+              src="/lovable-uploads/03d54203-96cd-4f66-9816-3d1ef8b1c098.png" 
               alt="Platform Logos" 
               className="max-w-full h-auto block sm:hidden"
             />
