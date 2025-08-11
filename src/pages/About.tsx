@@ -223,7 +223,8 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/6e3e662e-cdb3-4670-907e-7f181d572cb5.png" 
                   alt="Trusted Icon" 
-                  className="w-16 h-16 mb-4"
+                  className="mb-4"
+                  style={{ width: '238px', height: '84px' }}
                 />
                 <p className="font-omne-regular text-muted-foreground leading-relaxed">
                   All sellers and store links on our showcase are tested and tracked based on reviews and delivery complaints.
@@ -235,7 +236,8 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/ef2ab03d-7bfd-458e-a03e-4e72b1cb6315.png" 
                   alt="Stars Icon" 
-                  className="w-16 h-16 mb-4"
+                  className="mb-4"
+                  style={{ width: '238px', height: '84px' }}
                 />
                 <p className="font-omne-regular text-muted-foreground leading-relaxed">
                   We monitor customer reviews, complaints, and comments to track our product selection and seller performance.
