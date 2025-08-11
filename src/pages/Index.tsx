@@ -19,10 +19,17 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-8">
+            {/* Desktop version */}
             <img 
-              src="/lovable-uploads/485ae8e0-915f-450d-96a5-782e83636c69.png" 
+              src="/lovable-uploads/03d54203-96cd-4f66-9816-3d1ef8b1c098.png" 
               alt="Platform Logos" 
-              className="max-w-full h-auto"
+              className="max-w-full h-auto hidden sm:block"
+            />
+            {/* Mobile version */}
+            <img 
+              src="/lovable-uploads/5a060a5f-27bd-4a4f-bb84-77fe7e8b60ce.png" 
+              alt="Platform Logos" 
+              className="max-w-full h-auto block sm:hidden"
             />
           </div>
           <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
