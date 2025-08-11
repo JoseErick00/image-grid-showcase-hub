@@ -4,7 +4,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 const Index = () => {
   // Main category grid with new images
   const mainCategories = [
-    { id: "home", title: "Home", image: "/lovable-uploads/1a6ad022-879d-4ab4-98fd-03bfc5ba358f.png", link: "/" },
+    { id: "home", title: "Home", image: "/lovable-uploads/1a6ad022-879d-4ab4-98fd-03bfc5ba358f.png", link: "/home" },
     { id: "sports", title: "Sports", image: "/lovable-uploads/d7456ebe-3d7a-4f0b-a653-f9830f123e97.png", link: "/sports" },
     { id: "health", title: "Health", image: "/lovable-uploads/53277dc8-d5e5-4839-a769-7e89b57e623b.png", link: "/health" },
     { id: "incredibles", title: "Incredibles", image: "/lovable-uploads/828fbf68-5f5e-4ceb-b830-7402f608f438.png", link: "/incredibles" },
@@ -44,7 +44,7 @@ const Index = () => {
 
         {/* Main Product Categories Grid (2 columns) */}
         <CategoryGrid 
-          title="Product Categories"
+          title="Find everything you need here:"
           items={mainCategories}
           columns={2}
           aspectRatio="portrait"
