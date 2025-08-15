@@ -26,10 +26,10 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Sending contact email:", { name, email, messageLength: message.length });
 
-    // Send email to business address
+    // Send email to verified address (testing mode)
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["jose@ineedstores.com"],
+      to: ["joseerick00@gmail.com"],
       subject: `New Contact Form Message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
