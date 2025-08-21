@@ -32,7 +32,7 @@ const Index = () => {
               className="max-w-full h-auto block sm:hidden"
             />
           </div>
-          <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
+          <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
             We select the best products across all apps, making your search easier!
           </h1>
           <p className="font-omne-regular text-xl text-muted-foreground max-w-3xl mx-auto">
