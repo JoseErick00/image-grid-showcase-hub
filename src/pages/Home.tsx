@@ -56,10 +56,10 @@ const Home = () => {
 
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
-          Home Appliances
+          Smart. Stylish. Surprisingly useful.
         </h1>
         <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-          Discover premium home appliances and essentials to make your house a perfect home.
+          We dig through Amazon, Shopee, Temu & more to bring you the coolest upgrades for your space.
         </p>
       </div>
 

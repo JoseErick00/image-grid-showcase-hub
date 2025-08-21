@@ -161,10 +161,10 @@ const Sports = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
-          ineed Sports.
+          Gear up without the guesswork.
         </h1>
         <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-          Gear up for your next adventure with our sports collection!
+          From innovative tools to smart accessories, we find the fitness and adventure essentials hiding in your favorite e-commerce apps.
         </p>
       </div>
 

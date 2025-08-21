@@ -53,10 +53,10 @@ const Incredibles = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
-            The most INCREDIBLES online stuffs!
+            Totally random. Totally worth it.
           </h1>
           <p className="font-omne-regular text-xl text-muted-foreground max-w-3xl mx-auto">
-            The best online selection of cool products that everyone can and should buy!
+            Weird, wonderful, wildly unnecessary—but you'll want them all. These are the scroll-stoppers from Temu, AliExpress, Amazon and beyond.
           </p>
         </div>
         <CategoryGrid 
