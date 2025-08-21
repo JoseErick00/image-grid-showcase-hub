@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 mb-6">
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Mail size={18} />
-              <span className="font-omne-regular">joseerick00@gmail.com</span>
+              <span className="font-omne-regular">team@ineedstores.com</span>
             </div>
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Phone size={18} />

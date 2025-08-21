@@ -29,7 +29,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-omne-medium text-lg text-foreground mb-2">Email</h3>
-                  <p className="font-omne-regular text-muted-foreground">joseerick00@gmail.com</p>
+                  <p className="font-omne-regular text-muted-foreground">team@ineedstores.com</p>
                   <p className="font-omne-regular text-sm text-muted-foreground mt-1">
                     We'll respond within 24 hours
                   </p>

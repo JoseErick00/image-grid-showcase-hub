@@ -286,7 +286,7 @@ const About = () => {
             </p>
             <div className="space-y-2">
               <p className="font-omne-regular text-muted-foreground">
-                Email: joseerick00@gmail.com
+                Email: team@ineedstores.com
               </p>
               <p className="font-omne-regular text-muted-foreground">
                 Phone: +1 (555) 123-4567
