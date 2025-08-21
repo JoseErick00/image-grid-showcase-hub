@@ -160,7 +160,7 @@ const Sports = () => {
 
       {/* Title and Subtitle */}
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
           Gear up without the guesswork.
         </h1>
         <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">

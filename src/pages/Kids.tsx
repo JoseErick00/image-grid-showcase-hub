@@ -53,7 +53,7 @@ const Kids = () => {
       </div>
 
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-6xl text-foreground mb-6 max-w-[1000px] mx-auto">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6 max-w-[1000px] mx-auto">
           Smart fun for small humans
         </h1>
         <p className="font-omne-regular text-xl text-muted-foreground max-w-[1000px] mx-auto">
