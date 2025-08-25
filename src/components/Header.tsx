@@ -87,33 +87,6 @@ const Header = () => {
               );
             })}
 
-            {/* Countries Dropdown */}
-            <div className="relative">
-              <button
-                className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
-                onClick={() => setCountriesDropdownOpen(!countriesDropdownOpen)}
-              >
-                Countries
-                <ChevronDown size={16} />
-              </button>
-              {countriesDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[180px] z-50"
-                >
-                  {countries.map((country) => (
-                    <Link
-                      key={country.name}
-                      to={country.href}
-                      className="flex items-center gap-2 px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                      onClick={() => setCountriesDropdownOpen(false)}
-                    >
-                      <img src={country.flag} alt={`${country.name} flag`} className="w-4 h-3 object-cover" />
-                      {country.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
 
             {/* ineed Info Dropdown */}
             <div className="relative">
@@ -190,23 +163,6 @@ const Header = () => {
                 );
               })}
               
-              {/* Countries Mobile */}
-              <div className="px-2 py-1">
-                <div className="font-omne-regular text-sm text-foreground font-medium mb-2">Countries</div>
-                <div className="flex flex-col space-y-2 pl-4">
-                  {countries.map((country) => (
-                    <Link
-                      key={country.name}
-                      to={country.href}
-                      className="flex items-center gap-2 font-omne-regular text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <img src={country.flag} alt={`${country.name} flag`} className="w-4 h-3 object-cover" />
-                      {country.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
 
               {/* ineed Info Mobile */}
               <div className="px-2 py-1">

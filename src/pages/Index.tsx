@@ -23,8 +23,6 @@ const Index = () => {
           </h1>
           <p className="font-omne-regular text-xl text-muted-foreground max-w-3xl mx-auto">
             We handpick the most brilliant products and gadgets from the world's biggest e-commerce platforms—Amazon, AliExpress, Shopee, Temu, Alibaba, eBay—and bring them together in one inspiring place.
-            <br /><br />
-            Every item in our store is chosen to spark excitement, solve a problem, or just make life a little cooler.
           </p>
         </div>
 
