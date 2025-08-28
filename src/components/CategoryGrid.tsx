@@ -62,16 +62,20 @@ const CategoryGrid = ({
             </div>
             
             <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="font-omne-medium text-lg text-foreground mb-3">
+              <h3 className={`font-omne-medium text-lg mb-3 ${
+                isCompactMode ? 'text-black lg:text-foreground' : 'text-foreground'
+              }`}>
                 {item.title}
               </h3>
               {showButton && (
                 <Button 
-                  className="w-full text-white hover:opacity-90 text-xl"
+                  className={`w-full text-white hover:opacity-90 ${
+                    isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
+                  }`}
                   style={{ backgroundColor: buttonColor }}
                   onClick={(e) => e.preventDefault()}
                 >
-                  Yes! ineed the link!
+                  {isCompactMode ? 'Yes! I Want it!' : 'Yes! ineed the link!'}
                 </Button>
               )}
             </div>
