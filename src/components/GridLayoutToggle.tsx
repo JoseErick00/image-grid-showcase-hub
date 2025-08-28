@@ -11,7 +11,15 @@ const GridLayoutToggle = () => {
         variant="secondary"
         size="icon"
         onClick={toggleLayout}
-        className="rounded-full shadow-elegant hover:shadow-glow w-12 h-12 bg-background/90 backdrop-blur-sm border border-border hover:bg-accent"
+        className="rounded-full shadow-elegant hover:shadow-glow w-12 h-12 bg-background/90 backdrop-blur-sm border border-border hover:text-white"
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "#575757";
+          e.currentTarget.style.color = "white";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "";
+          e.currentTarget.style.color = "";
+        }}
         aria-label="Toggle grid layout"
       >
         {isCompactMode ? (
