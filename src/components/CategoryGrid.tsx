@@ -62,9 +62,10 @@ const CategoryGrid = ({
             </div>
             
             <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className={`font-omne-medium text-lg mb-3 ${
-                isCompactMode ? 'text-black lg:text-foreground' : 'text-foreground'
-              }`}>
+              <h3 
+                className="font-omne-medium text-lg mb-3 text-white px-3 py-2 rounded-md inline-block"
+                style={{ backgroundColor: buttonColor }}
+              >
                 {item.title}
               </h3>
               {showButton && (
