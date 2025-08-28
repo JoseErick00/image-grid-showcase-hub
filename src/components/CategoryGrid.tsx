@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useGridLayout } from "@/hooks/useGridLayout";
 
 interface CategoryGridProps {
   title?: string;
@@ -23,10 +24,15 @@ const CategoryGrid = ({
   buttonColor = "#1e40af",
   showButton = true
 }: CategoryGridProps) => {
+  const { isCompactMode } = useGridLayout();
+  
+  // Determine actual columns based on layout mode
+  const actualColumns = isCompactMode ? 3 : columns;
+  
   const gridCols = {
-    2: "grid-cols-1 sm:grid-cols-2",
-    3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-    4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+    2: isCompactMode ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2",
+    3: isCompactMode ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+    4: isCompactMode ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
   };
 
   const aspectClass = aspectRatio === "square" ? "aspect-square" : "aspect-[4/5]";
@@ -39,7 +45,7 @@ const CategoryGrid = ({
         </h2>
       )}
       
-      <div className={`grid ${gridCols[columns as keyof typeof gridCols]} gap-6`}>
+      <div className={`grid ${gridCols[actualColumns as keyof typeof gridCols]} gap-6`}>
         {items.map((item) => (
           <Link
             key={item.id}
