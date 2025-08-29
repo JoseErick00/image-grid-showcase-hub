@@ -18,6 +18,7 @@ import USA from "./pages/USA";
 import UnitedKingdom from "./pages/UnitedKingdom";
 import Brazil from "./pages/Brazil";
 import Indonesia from "./pages/Indonesia";
+import Search from "./pages/Search";
 import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="united-kingdom" element={<UnitedKingdom />} />
             <Route path="brazil" element={<Brazil />} />
             <Route path="indonesia" element={<Indonesia />} />
+            <Route path="search" element={<Search />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
