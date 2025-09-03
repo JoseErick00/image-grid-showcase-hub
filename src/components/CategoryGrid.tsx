@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
+import { useState } from "react";
 
 interface CategoryGridProps {
   title?: string;
@@ -25,6 +26,7 @@ const CategoryGrid = ({
   showButton = true
 }: CategoryGridProps) => {
   const { isCompactMode } = useGridLayout();
+  const [revealedItems, setRevealedItems] = useState<Set<string>>(new Set());
   
   // Determine actual columns based on layout mode
   const actualColumns = isCompactMode ? 3 : columns;
@@ -37,6 +39,26 @@ const CategoryGrid = ({
 
   const aspectClass = aspectRatio === "square" ? "aspect-square" : "aspect-[4/5]";
 
+  const handleItemClick = (e: React.MouseEvent, itemId: string, link: string) => {
+    const isRevealed = revealedItems.has(itemId);
+    
+    if (!isRevealed) {
+      // First click: reveal the item
+      e.preventDefault();
+      setRevealedItems(prev => new Set([...prev, itemId]));
+    } else {
+      // Second click: open link in new tab
+      e.preventDefault();
+      window.open(link, '_blank');
+    }
+  };
+
+  const handleButtonClick = (e: React.MouseEvent, link: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(link, '_blank');
+  };
+
   return (
     <section className="py-12">
       {title && (
@@ -46,42 +68,52 @@ const CategoryGrid = ({
       )}
       
       <div className={`grid ${gridCols[actualColumns as keyof typeof gridCols]} gap-6`}>
-        {items.map((item) => (
-          <Link
-            key={item.id}
-            to={item.link}
-            className="group relative overflow-hidden rounded-lg bg-card shadow-elegant hover:shadow-glow transition-all duration-300"
-          >
-            <div className={`${aspectClass} overflow-hidden`}>
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            
-            <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <h3 
-                className="font-omne-medium text-lg mb-3 text-white px-3 py-2 rounded-md inline-block"
-                style={{ backgroundColor: buttonColor }}
-              >
-                {item.title}
-              </h3>
-              {showButton && (
-                <Button 
-                  className={`w-full text-white hover:opacity-90 ${
-                    isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
+        {items.map((item) => {
+          const isRevealed = revealedItems.has(item.id);
+          
+          return (
+            <div
+              key={item.id}
+              className="group relative overflow-hidden rounded-lg bg-card shadow-elegant hover:shadow-glow transition-all duration-300 cursor-pointer"
+              onClick={(e) => handleItemClick(e, item.id, item.link)}
+            >
+              <div className={`${aspectClass} overflow-hidden`}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className={`w-full h-full object-cover transition-transform duration-300 ${
+                    isRevealed ? 'scale-105' : 'group-hover:scale-105'
                   }`}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent transition-opacity duration-300 ${
+                  isRevealed ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                }`} />
+              </div>
+              
+              <div className={`absolute bottom-0 left-0 right-0 p-4 transition-transform duration-300 ${
+                isRevealed ? 'translate-y-0' : 'transform translate-y-full group-hover:translate-y-0'
+              }`}>
+                <h3 
+                  className="font-omne-medium text-lg mb-3 text-white px-3 py-2 rounded-md inline-block"
                   style={{ backgroundColor: buttonColor }}
-                  onClick={(e) => e.preventDefault()}
                 >
-                  {isCompactMode ? 'Yes! I Want it!' : 'Yes! ineed the link!'}
-                </Button>
-              )}
+                  {item.title}
+                </h3>
+                {showButton && (
+                  <Button 
+                    className={`w-full text-white hover:opacity-90 ${
+                      isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
+                    }`}
+                    style={{ backgroundColor: buttonColor }}
+                    onClick={(e) => handleButtonClick(e, item.link)}
+                  >
+                    {isCompactMode ? 'Yes! I Want it!' : 'Yes! ineed the link!'}
+                  </Button>
+                )}
+              </div>
             </div>
-          </Link>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
