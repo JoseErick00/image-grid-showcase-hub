@@ -43,9 +43,9 @@ const CategoryGrid = ({
     const isRevealed = revealedItems.has(itemId);
     
     if (!isRevealed) {
-      // First click: reveal the item
+      // First click: reveal only this item (close others)
       e.preventDefault();
-      setRevealedItems(prev => new Set([...prev, itemId]));
+      setRevealedItems(new Set([itemId]));
     } else {
       // Second click: open link in new tab
       e.preventDefault();
