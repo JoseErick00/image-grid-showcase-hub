@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to verified address (testing mode)
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["ineed.erick@gmail.com"],
+      to: ["joseerick00@gmail.com"],
       subject: `New Contact Form Message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
