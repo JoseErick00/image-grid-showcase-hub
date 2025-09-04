@@ -128,12 +128,6 @@ const Sports = () => {
       image: "/lovable-uploads/71c83d48-c989-4110-895b-4f721a100834.png",
       link: "https://amzn.to/3Vue7zM",
     },
-    {
-      id: "sports-22",
-      title: "Adjustable Dumbbell - Kmart",
-      image: "/lovable-uploads/7d85b789-e412-4fd0-beb3-5f936308fd1d.png",
-      link: "#",
-    },
   ];
 
   return (
