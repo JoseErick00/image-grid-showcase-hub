@@ -24,10 +24,10 @@ const BestSellers = () => {
     <div className="min-h-screen bg-background">
       <div className="w-full h-[500px] bg-gradient-primary flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-omne-medium text-4xl md:text-5xl text-primary mb-4">
+          <h1 className="font-omne-medium text-2xl md:text-5xl text-primary mb-4">
             Best Sellers
           </h1>
-          <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
+          <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
             Our most popular products loved by customers worldwide
           </p>
         </div>

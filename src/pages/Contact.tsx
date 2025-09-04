@@ -7,10 +7,10 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
+          <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
             Contact Us
           </h1>
-          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
+          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
             Have a question or want to get in touch? We'd love to hear from you.
           </p>
         </div>

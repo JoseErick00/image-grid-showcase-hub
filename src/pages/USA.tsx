@@ -46,10 +46,10 @@ const USA = () => {
 
       {/* Title and Subtitle */}
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
           U.S.A Products
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           Amazing selection of products from the United States!
         </p>
       </div>

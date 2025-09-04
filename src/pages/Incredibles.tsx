@@ -52,10 +52,10 @@ const Incredibles = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
+          <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
             Totally random. Totally worth it.
           </h1>
-          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
+          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
             Weird, wonderful, wildly unnecessary—but you'll want them all. These are the scroll-stoppers from Temu, AliExpress, Amazon and beyond.
           </p>
         </div>

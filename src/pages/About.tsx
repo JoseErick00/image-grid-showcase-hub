@@ -23,11 +23,11 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center items-center space-x-4 mb-8">
-            <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground">
+            <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground">
               Welcome to ineed – Showcase Store
             </h1>
           </div>
-          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
+          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
             The Internet's Coolest Corner for Cool Stuff - Your premier destination for discovering the latest products across all eCommerce platforms
           </p>
         </div>

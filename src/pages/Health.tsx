@@ -48,10 +48,10 @@ const Health = () => {
       </div>
 
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-4">
           Self-care, upgraded.
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           We discovered wellness gadgets, beauty tools, and feel-good finds from around the globe—handpicked to help you glow, grow, and chill.
         </p>
       </div>
