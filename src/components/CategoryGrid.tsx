@@ -115,7 +115,7 @@ const CategoryGrid = ({
                     style={{ backgroundColor: buttonColor }}
                     onClick={(e) => handleButtonClick(e, item.link)}
                   >
-                    {isCompactMode ? 'Yes! I Want it!' : 'Yes! ineed the link!'}
+                    {isCompactMode ? 'Yes! I Want it!' : "Yes! It is beautiful!"}
                   </Button>
                 )}
               </div>
