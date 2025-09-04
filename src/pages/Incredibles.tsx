@@ -50,16 +50,15 @@ const Incredibles = () => {
         />
       </div>
 
-      <div className="text-center py-12 bg-black">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-white mb-4">
-          Incredibles Products
-        </h1>
-        <p className="font-omne-regular text-lg text-gray-300 max-w-2xl mx-auto px-4">
-          Things you didn't know you needed (until now).
-        </p>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
+            Totally random. Totally worth it.
+          </h1>
+          <p className="font-omne-regular text-xl text-muted-foreground max-w-3xl mx-auto">
+            Weird, wonderful, wildly unnecessary—but you'll want them all. These are the scroll-stoppers from Temu, AliExpress, Amazon and beyond.
+          </p>
+        </div>
         <CategoryGrid 
           items={incrediblesProducts}
           columns={2}

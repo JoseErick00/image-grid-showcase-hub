@@ -52,12 +52,12 @@ const Kids = () => {
         />
       </div>
 
-      <div className="text-center py-12 bg-black">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-white mb-4">
-          Kids Selection
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6 max-w-[1000px] mx-auto">
+          Smart fun for small humans
         </h1>
-        <p className="font-omne-regular text-lg text-gray-300 max-w-2xl mx-auto px-4">
-          Smart toys. Smarter smiles.
+        <p className="font-omne-regular text-xl text-muted-foreground max-w-[1000px] mx-auto">
+          From clever toys to parenting hacks, we handpick the cutest chaos-making gear across global marketplaces.
         </p>
       </div>
 

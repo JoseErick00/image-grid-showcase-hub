@@ -159,12 +159,12 @@ const Sports = () => {
       </div>
 
       {/* Title and Subtitle */}
-      <div className="text-center py-12 bg-black">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-white mb-4">
-          Sports Selection
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
+          Gear up without the guesswork.
         </h1>
-        <p className="font-omne-regular text-lg text-gray-300 max-w-2xl mx-auto px-4">
-          Train harder. Recover smarter.
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          From innovative tools to smart accessories, we find the fitness and adventure essentials hiding in your favorite e-commerce apps.
         </p>
       </div>
 

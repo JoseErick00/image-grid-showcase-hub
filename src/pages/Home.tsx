@@ -54,12 +54,12 @@ const Home = () => {
         />
       </div>
 
-      <div className="text-center py-12 bg-black">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-white mb-4">
-          Home Selection
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
+          Smart. Stylish. Surprisingly useful.
         </h1>
-        <p className="font-omne-regular text-lg text-gray-300 max-w-2xl mx-auto px-4">
-          Smart living starts here.
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          We dig through Amazon, Shopee, Temu & more to bring you the coolest upgrades for your space.
         </p>
       </div>
 
