@@ -147,12 +147,12 @@ const Tech = () => {
       </div>
 
       {/* Title and Subtitle */}
-      <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
-          Cool. Clever. Cutting-edge.
+      <div className="text-center py-12 bg-black">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-white mb-4">
+          Tech Selection
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-          We scan Amazon, eBay, Shopee and all apps for the latest smart gadgets and tech toys. Expect unexpected genius.
+        <p className="font-omne-regular text-lg text-gray-300 max-w-2xl mx-auto px-4">
+          The future is just one click away.
         </p>
       </div>
 

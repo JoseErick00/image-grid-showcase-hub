@@ -47,12 +47,12 @@ const Health = () => {
         />
       </div>
 
-      <div className="text-center py-12">
-        <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
-          Self-care, upgraded.
+      <div className="text-center py-12 bg-black">
+        <h1 className="font-omne-medium text-4xl md:text-5xl text-white mb-4">
+          Health Selection
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-          We discovered wellness gadgets, beauty tools, and feel-good finds from around the globe—handpicked to help you glow, grow, and chill.
+        <p className="font-omne-regular text-lg text-gray-300 max-w-2xl mx-auto px-4">
+          Cool tools for a better you.
         </p>
       </div>
 
