@@ -8,6 +8,7 @@ interface CategoryGridProps {
   items: Array<{
     id: string;
     title: string;
+    subtitle?: string;
     image: string;
     link: string;
   }>;
@@ -93,12 +94,19 @@ const CategoryGrid = ({
               <div className={`absolute bottom-0 left-0 right-0 p-4 transition-transform duration-300 ${
                 isRevealed ? 'translate-y-0' : 'transform translate-y-full group-hover:translate-y-0'
               }`}>
-                <h3 
-                  className="font-omne-medium text-lg mb-3 text-white px-3 py-2 rounded-md inline-block"
+                <div 
+                  className="px-3 py-2 rounded-md mb-3"
                   style={{ backgroundColor: buttonColor }}
                 >
-                  {item.title}
-                </h3>
+                  <h3 className="font-omne-medium text-lg text-white">
+                    {item.title}
+                  </h3>
+                  {item.subtitle && (
+                    <p className="font-omne-regular text-sm text-white/90 mt-1">
+                      {item.subtitle}
+                    </p>
+                  )}
+                </div>
                 {showButton && (
                   <Button 
                     className={`w-full text-white hover:opacity-90 ${
