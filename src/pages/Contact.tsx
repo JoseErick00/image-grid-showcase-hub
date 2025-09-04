@@ -10,7 +10,7 @@ const Contact = () => {
           <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
             Contact Us
           </h1>
-          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] mx-auto">
+          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
             Have a question or want to get in touch? We'd love to hear from you.
           </p>
         </div>

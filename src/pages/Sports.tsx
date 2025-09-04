@@ -163,7 +163,7 @@ const Sports = () => {
         <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
           Gear up without the guesswork.
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] mx-auto px-4">
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           From innovative tools to smart accessories, we find the fitness and adventure essentials hiding in your favorite e-commerce apps.
         </p>
       </div>

@@ -27,7 +27,7 @@ const About = () => {
               Welcome to ineed – Showcase Store
             </h1>
           </div>
-          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] mx-auto">
+          <p className="font-omne-regular text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
             The Internet's Coolest Corner for Cool Stuff - Your premier destination for discovering the latest products across all eCommerce platforms
           </p>
         </div>

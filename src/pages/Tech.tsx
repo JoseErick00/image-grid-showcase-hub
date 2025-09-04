@@ -151,7 +151,7 @@ const Tech = () => {
         <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
           Cool. Clever. Cutting-edge.
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] mx-auto px-4">
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           We scan Amazon, eBay, Shopee and all apps for the latest smart gadgets and tech toys. Expect unexpected genius.
         </p>
       </div>

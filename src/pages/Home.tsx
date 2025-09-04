@@ -58,7 +58,7 @@ const Home = () => {
         <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-4">
           Smart. Stylish. Surprisingly useful.
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] mx-auto px-4">
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           We dig through Amazon, Shopee, Temu & more to bring you the coolest upgrades for your space.
         </p>
       </div>
