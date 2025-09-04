@@ -26,7 +26,7 @@ const Home = () => {
     { id: "coffee-maker-21", title: "SEVEN&ME Espressor Machine Coffee Maker", image: "/lovable-uploads/a6447d77-adbb-4a62-8a9e-dd4cd0cf1e58.png", link: "https://amzn.to/4nbs4OY" },
     { id: "eye-massager-22", title: "iBreo - Eye Care & Beauty Massager", image: "/lovable-uploads/2b027f99-2ffb-4a90-9ed1-d1c285aee481.png", link: "https://amzn.to/4mUsZUb" },
     { id: "egg-cooker-23", title: "Rapid Egg Cooker: 7 Egg Capacity Electric", image: "/lovable-uploads/1ea0a90f-5936-4413-98c1-18498ea21e42.png", link: "https://amzn.to/4mKeemT" },
-    { id: "eye-care-24", title: "Eye Care & Beauty Massager", image: "/lovable-uploads/c9ae1910-98cb-43c0-b382-fdb2b12ff10c.png", link: "https://amzn.to/4lY3U9w" },
+    { id: "eye-care-24", title: "Govee Floor Lamp 2 with Matter", image: "/lovable-uploads/3b18c90c-50f2-42bb-af7d-0fea19a0b309.png", link: "https://amzn.to/3JIOuZr" },
     { id: "espresso-25", title: "Nesskoko - 20 Bar Semi-Automatic Espresso Machine", image: "/lovable-uploads/82f9b64b-6f11-4a03-974e-2bd99223ccea.png", link: "https://amzn.to/4gfAJh1" },
     { id: "espresso-maker-26", title: "Laekerrt - Professional Espresso Maker with Milk Frother", image: "/lovable-uploads/ea99db9e-0545-482a-aa67-217e64a04ba0.png", link: "https://amzn.to/4g982SX" },
   ];
