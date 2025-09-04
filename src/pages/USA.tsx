@@ -49,7 +49,7 @@ const USA = () => {
         <h1 className="font-omne-medium text-4xl md:text-5xl text-foreground mb-6">
           U.S.A Products
         </h1>
-        <p className="font-omne-regular text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+        <p className="font-omne-regular text-lg text-muted-foreground max-w-[85%] mx-auto px-4">
           Amazing selection of products from the United States!
         </p>
       </div>
