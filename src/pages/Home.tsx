@@ -64,6 +64,44 @@ const Home = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Banner Section */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+              <img 
+                src="/lovable-uploads/ec523e8b-96a0-4f48-9f07-45f9f8d0de3f.png"
+                alt="SMEG Mixer Banner"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+              <img 
+                src="/lovable-uploads/87ca4a3e-a5ab-4170-bc09-3c9252b9279d.png"
+                alt="Nutribullet Banner"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-6">
+            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+              <img 
+                src="/lovable-uploads/ec523e8b-96a0-4f48-9f07-45f9f8d0de3f.png"
+                alt="SMEG Mixer Banner"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+              <img 
+                src="/lovable-uploads/87ca4a3e-a5ab-4170-bc09-3c9252b9279d.png"
+                alt="Nutribullet Banner"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
 
         <CategoryGrid 
           items={homeProducts}
