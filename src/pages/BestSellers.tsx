@@ -86,6 +86,7 @@ const BestSellers = () => {
           items={bestSellersProducts}
           columns={3}
           aspectRatio="portrait"
+          buttonColor="#575757"
         />
       </div>
     </div>
