@@ -70,14 +70,14 @@ const Home = () => {
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <img 
-                src="/lovable-uploads/ec523e8b-96a0-4f48-9f07-45f9f8d0de3f.png"
+                src="/lovable-uploads/b9dd6c1b-146a-49ee-adcd-43f7705a8dfd.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <img 
-                src="/lovable-uploads/87ca4a3e-a5ab-4170-bc09-3c9252b9279d.png"
+                src="/lovable-uploads/3329980d-59b4-4070-8846-8d71d4d6c218.png"
                 alt="Nutribullet Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -88,14 +88,14 @@ const Home = () => {
           <div className="md:hidden space-y-6">
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <img 
-                src="/lovable-uploads/ec523e8b-96a0-4f48-9f07-45f9f8d0de3f.png"
+                src="/lovable-uploads/b9dd6c1b-146a-49ee-adcd-43f7705a8dfd.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <img 
-                src="/lovable-uploads/87ca4a3e-a5ab-4170-bc09-3c9252b9279d.png"
+                src="/lovable-uploads/3329980d-59b4-4070-8846-8d71d4d6c218.png"
                 alt="Nutribullet Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
