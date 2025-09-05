@@ -70,7 +70,7 @@ const Home = () => {
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <img 
-                src="/lovable-uploads/b9dd6c1b-146a-49ee-adcd-43f7705a8dfd.png"
+                src="/lovable-uploads/7dd9d5d4-7cee-403e-b664-8ce0a3db473a.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -88,7 +88,7 @@ const Home = () => {
           <div className="md:hidden space-y-6">
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <img 
-                src="/lovable-uploads/b9dd6c1b-146a-49ee-adcd-43f7705a8dfd.png"
+                src="/lovable-uploads/7dd9d5d4-7cee-403e-b664-8ce0a3db473a.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
