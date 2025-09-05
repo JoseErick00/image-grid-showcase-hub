@@ -68,38 +68,58 @@ const Home = () => {
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
-            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
               <img 
                 src="/lovable-uploads/7dd9d5d4-7cee-403e-b664-8ce0a3db473a.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
-            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
               <img 
                 src="/lovable-uploads/3329980d-59b4-4070-8846-8d71d4d6c218.png"
                 alt="Nutribullet Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+            </a>
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-6">
-            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
               <img 
                 src="/lovable-uploads/7dd9d5d4-7cee-403e-b664-8ce0a3db473a.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
-            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
               <img 
                 src="/lovable-uploads/3329980d-59b4-4070-8846-8d71d4d6c218.png"
                 alt="Nutribullet Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+            </a>
           </div>
         </div>
 
