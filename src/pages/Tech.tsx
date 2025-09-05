@@ -53,8 +53,8 @@ const Tech = () => {
     },
     {
       id: "tech-9",
-      title: "Wireless Kitty Headphones",
-      image: "/lovable-uploads/fd58b0fe-b9ec-40c4-bef7-87e5ea9cc3e7.png",
+      title: "YOWU Cat Ear Headphones CE, Wired/Wireless Headphones",
+      image: "/lovable-uploads/gridtech__9.png",
       link: "https://amzn.to/465JW74",
     },
     {
