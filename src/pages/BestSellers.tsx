@@ -24,7 +24,7 @@ const BestSellers = () => {
     <div className="min-h-screen bg-background">
       {/* Banner */}
       <div 
-        className="w-full h-[400px] flex items-center justify-center"
+        className="w-full h-[300px] md:h-[400px] flex items-center justify-center"
         style={{
           backgroundColor: '#171717',
         }}
