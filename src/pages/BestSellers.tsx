@@ -22,17 +22,31 @@ const BestSellers = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="w-full h-[500px] bg-gradient-primary flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-omne-medium text-2xl md:text-5xl text-primary mb-4">
-            Best Sellers
-          </h1>
-          <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-            Our most popular products loved by customers worldwide
-          </p>
-        </div>
+      {/* Banner */}
+      <div className="w-full h-[400px] relative overflow-hidden">
+        <img 
+          src="/lovable-uploads/dccd85a3-c654-4392-bc18-6d9582347220.png" 
+          alt="Best Sellers Banner" 
+          className="w-full h-full object-cover hidden md:block"
+        />
+        <img 
+          src="/lovable-uploads/ea6a18dd-1881-4784-bfe0-865d961fbe43.png" 
+          alt="Best Sellers Banner" 
+          className="w-full h-full object-cover md:hidden"
+        />
       </div>
 
+      {/* Title and Subtitle */}
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
+          Best Sellers
+        </h1>
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
+          Our most popular products loved by customers worldwide
+        </p>
+      </div>
+
+      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <CategoryGrid 
           items={bestSellersProducts}
