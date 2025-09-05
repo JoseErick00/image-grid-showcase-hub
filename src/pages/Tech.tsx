@@ -123,6 +123,66 @@ const Tech = () => {
       image: "/lovable-uploads/7283581c-a75c-4dcf-8c9b-345fc75077c6.png",
       link: "https://amzn.to/4m6fmAb",
     },
+    {
+      id: "tech-21",
+      title: "Monster Boomerang Neck Speaker Bluetooth Wireless",
+      image: "/lovable-uploads/gridTech__21.jpg",
+      link: "https://amzn.to/45RwdSt",
+    },
+    {
+      id: "tech-22",
+      title: "5-in-1 Wireless Charging Station with Bluetooth Speaker",
+      image: "/lovable-uploads/gridTech__22.jpg",
+      link: "https://amzn.to/4p67cKI",
+    },
+    {
+      id: "tech-23",
+      title: "RayNeo Air 3s AR/XR Glasses, 201\" 120Hz FHD HueView Display",
+      image: "/lovable-uploads/gridTech__23.jpg",
+      link: "https://amzn.to/3I4szvj",
+    },
+    {
+      id: "tech-24",
+      title: "VITURE Luma Pro XR Glasses — 152\" 1200p Ultra Sharp Display",
+      image: "/lovable-uploads/gridTech__24.jpg",
+      link: "https://amzn.to/483Jngv",
+    },
+    {
+      id: "tech-25",
+      title: "Hydrogen Water Bottle Generator - Up to 8100 PPB",
+      image: "/lovable-uploads/gridTech__25.jpg",
+      link: "https://amzn.to/46ccoUP",
+    },
+    {
+      id: "tech-26",
+      title: "Dancing Ferrofluid Bluetooth Speaker 5.0",
+      image: "/lovable-uploads/gridTech__26.jpg",
+      link: "https://amzn.to/4p8vDqN",
+    },
+    {
+      id: "tech-27",
+      title: "Upgraded Outdoor Speakers Bluetooth Speaker",
+      image: "/lovable-uploads/gridTech__27.jpg",
+      link: "https://amzn.to/4neKwGr",
+    },
+    {
+      id: "tech-28",
+      title: "Marshall Stanmore III Bluetooth Home Speaker",
+      image: "/lovable-uploads/gridTech__28.jpg",
+      link: "https://amzn.to/4mOSHtp",
+    },
+    {
+      id: "tech-29",
+      title: "Apple 2024 iMac All-in-One Desktop",
+      image: "/lovable-uploads/gridTech__29.jpg",
+      link: "https://amzn.to/4m44rqF",
+    },
+    {
+      id: "tech-30",
+      title: "Samsung Galaxy Z Flip7 Cell Phone, 512GB AI Smartphone",
+      image: "/lovable-uploads/gridTech__30.jpg",
+      link: "https://amzn.to/3K5pziM",
+    },
   ];
 
   return (
