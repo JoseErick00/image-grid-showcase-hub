@@ -23,16 +23,24 @@ const BestSellers = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Banner */}
-      <div className="w-full h-[400px] relative overflow-hidden">
+      <div 
+        className="w-full h-[400px] flex items-center justify-center"
+        style={{
+          backgroundColor: '#171717',
+        }}
+      >
+        {/* Desktop banner */}
         <img 
           src="/lovable-uploads/dccd85a3-c654-4392-bc18-6d9582347220.png" 
-          alt="Best Sellers Banner" 
-          className="w-full h-full object-cover hidden md:block"
+          alt="BannerPage_BestSellers"
+          className="hidden md:block max-h-full object-contain"
+          style={{ width: '1200px' }}
         />
+        {/* Mobile banner */}
         <img 
           src="/lovable-uploads/ea6a18dd-1881-4784-bfe0-865d961fbe43.png" 
-          alt="Best Sellers Banner" 
-          className="w-full h-full object-cover md:hidden"
+          alt="bannerMobile_BestSellers"
+          className="md:hidden w-full h-full object-cover"
         />
       </div>
 
