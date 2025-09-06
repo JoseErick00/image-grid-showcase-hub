@@ -270,6 +270,65 @@ const Home = () => {
           aspectRatio="portrait"
           buttonColor="#d01e23"
         />
+
+        {/* Small Banner 07 & 08 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/41GXGnk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2524a70c-c79d-474d-b199-27bf8f986012.png"
+                alt="Small Banner 07"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3JQlBuA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/f84138b8-f359-4d06-bd36-a0ccb8354aa8.png"
+                alt="Small Banner 08"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-6">
+            <a 
+              href="https://amzn.to/41GXGnk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2524a70c-c79d-474d-b199-27bf8f986012.png"
+                alt="Small Banner 07"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3JQlBuA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/f84138b8-f359-4d06-bd36-a0ccb8354aa8.png"
+                alt="Small Banner 08"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
