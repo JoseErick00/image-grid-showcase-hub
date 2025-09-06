@@ -70,7 +70,7 @@ const Home = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Banner Section */}
+        {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
@@ -82,7 +82,7 @@ const Home = () => {
             >
               <img 
                 src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
-                alt="SMEG Mixer Banner"
+                alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -94,7 +94,7 @@ const Home = () => {
             >
               <img 
                 src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
-                alt="Nutribullet Banner"
+                alt="Small Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -110,7 +110,7 @@ const Home = () => {
             >
               <img 
                 src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
-                alt="SMEG Mixer Banner"
+                alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -122,15 +122,150 @@ const Home = () => {
             >
               <img 
                 src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
-                alt="Nutribullet Banner"
+                alt="Small Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
         </div>
 
+        {/* First 9 items */}
         <CategoryGrid 
-          items={homeProducts}
+          items={homeProducts.slice(0, 9)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#d01e23"
+        />
+
+        {/* Small Banner 03 & 04 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
+                alt="Small Banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
+                alt="Small Banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-6">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
+                alt="Small Banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
+                alt="Small Banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Second 9 items */}
+        <CategoryGrid 
+          items={homeProducts.slice(9, 18)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#d01e23"
+        />
+
+        {/* Small Banner 05 & 06 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
+                alt="Small Banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
+                alt="Small Banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-6">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
+                alt="Small Banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
+                alt="Small Banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Remaining items */}
+        <CategoryGrid 
+          items={homeProducts.slice(18)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
