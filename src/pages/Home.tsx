@@ -209,25 +209,25 @@ const Home = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="https://amzn.to/4pamuOq" 
+              href="https://amzn.to/45TIhm4" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
+                src="/lovable-uploads/b4ea0c25-7242-4ce3-9ce3-bb5e6edb406e.png"
                 alt="Small Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4lXVDCJ" 
+              href="https://amzn.to/3HYwDxa" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
+                src="/lovable-uploads/c9dc3e26-eab6-4977-8125-a4c704490a45.png"
                 alt="Small Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -237,25 +237,25 @@ const Home = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-6">
             <a 
-              href="https://amzn.to/4pamuOq" 
+              href="https://amzn.to/45TIhm4" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
+                src="/lovable-uploads/b4ea0c25-7242-4ce3-9ce3-bb5e6edb406e.png"
                 alt="Small Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4lXVDCJ" 
+              href="https://amzn.to/3HYwDxa" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
+                src="/lovable-uploads/c9dc3e26-eab6-4977-8125-a4c704490a45.png"
                 alt="Small Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
