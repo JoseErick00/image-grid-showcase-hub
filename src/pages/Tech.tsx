@@ -194,11 +194,19 @@ const Tech = () => {
           backgroundColor: '#30bdbe',
         }}
       >
+        {/* Desktop banner */}
         <img 
           src="/lovable-uploads/76c528a6-d36e-4b7e-890e-b915f184a590.png"
           alt="Technology Banner"
-          className="hidden md:block max-h-full max-w-full object-contain"
+          className="hidden lg:block max-h-full max-w-full object-contain"
         />
+        {/* Tablet banner */}
+        <img 
+          src="/lovable-uploads/76c528a6-d36e-4b7e-890e-b915f184a590.png"
+          alt="Technology Banner"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
+        />
+        {/* Mobile banner */}
         <img 
           src="/lovable-uploads/53d54fc2-cb9e-41f1-9bb1-0d9140579772.png"
           alt="bannerMobile_Tech"

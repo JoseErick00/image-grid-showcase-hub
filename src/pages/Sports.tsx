@@ -139,12 +139,20 @@ const Sports = () => {
           backgroundColor: '#f06927',
         }}
       >
+        {/* Desktop banner */}
         <img 
           src="/lovable-uploads/9b6dbf64-720a-4307-9dda-77b544d1c985.png"
           alt="BannerPage_Sports"
-          className="hidden md:block max-h-full object-contain"
+          className="hidden lg:block max-h-full object-contain"
           style={{ width: '1200px' }}
         />
+        {/* Tablet banner */}
+        <img 
+          src="/lovable-uploads/9b6dbf64-720a-4307-9dda-77b544d1c985.png"
+          alt="BannerPage_Sports"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
+        />
+        {/* Mobile banner */}
         <img 
           src="/lovable-uploads/8547550f-e069-467c-8193-54f923782e92.png"
           alt="bannerMobile_Sports"

@@ -43,8 +43,14 @@ const Home = () => {
         <img 
           src="/lovable-uploads/a9c25f7a-5c90-4df2-8b4d-f58f68a51d72.png"
           alt="BannerPage_Home"
-          className="hidden md:block max-h-full object-contain"
+          className="hidden lg:block max-h-full object-contain"
           style={{ width: '1200px' }}
+        />
+        {/* Tablet banner */}
+        <img 
+          src="/lovable-uploads/a9c25f7a-5c90-4df2-8b4d-f58f68a51d72.png"
+          alt="BannerPage_Home"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
         />
         {/* Mobile banner */}
         <img 
