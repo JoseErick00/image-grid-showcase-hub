@@ -75,7 +75,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/7dd9d5d4-7cee-403e-b664-8ce0a3db473a.png"
+                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -87,7 +87,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/3329980d-59b4-4070-8846-8d71d4d6c218.png"
+                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
                 alt="Nutribullet Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -103,7 +103,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/7dd9d5d4-7cee-403e-b664-8ce0a3db473a.png"
+                src="/lovable-uploads/9eb0b67f-e974-403b-8f5b-4bb899d74790.png"
                 alt="SMEG Mixer Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -115,7 +115,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/3329980d-59b4-4070-8846-8d71d4d6c218.png"
+                src="/lovable-uploads/ec938ed5-bd26-41f1-835e-89fe8a0947b2.png"
                 alt="Nutribullet Banner"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
