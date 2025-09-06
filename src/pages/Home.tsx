@@ -63,7 +63,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Banner Section */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
