@@ -41,14 +41,20 @@ const Kids = () => {
         <img 
           src="/lovable-uploads/5f89ef36-5624-4400-af3c-1c2b3abe012c.png"
           alt="BannerPage_Kids"
-          className="max-h-full object-contain hidden sm:block"
+          className="hidden lg:block max-h-full object-contain"
           style={{ width: '1200px' }}
+        />
+        {/* Tablet banner */}
+        <img 
+          src="/lovable-uploads/5f89ef36-5624-4400-af3c-1c2b3abe012c.png"
+          alt="BannerPage_Kids"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
         />
         {/* Mobile banner */}
         <img 
           src="/lovable-uploads/e0aee23b-17e0-412e-971b-e3ff53bb46f3.png"
           alt="BannerPage_Kids_Mobile"
-          className="w-full h-full object-cover block sm:hidden"
+          className="md:hidden w-full h-full object-cover"
         />
       </div>
 

@@ -39,14 +39,20 @@ const Incredibles = () => {
         <img 
           src="/lovable-uploads/fb487d7d-5856-4c54-a223-315d1c710362.png"
           alt="BannerPage_Incredibles"
-          className="max-h-full object-contain hidden sm:block"
+          className="hidden lg:block max-h-full object-contain"
           style={{ width: '1200px' }}
+        />
+        {/* Tablet banner */}
+        <img 
+          src="/lovable-uploads/fb487d7d-5856-4c54-a223-315d1c710362.png"
+          alt="BannerPage_Incredibles"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
         />
         {/* Mobile banner */}
         <img 
           src="/lovable-uploads/2a72b755-d16f-49a4-ba5e-7610e587813d.png"
           alt="BannerPage_Incredibles_Mobile"
-          className="w-full h-full object-cover block sm:hidden"
+          className="md:hidden w-full h-full object-cover"
         />
       </div>
 

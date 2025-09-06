@@ -34,12 +34,20 @@ const Health = () => {
           backgroundColor: '#f9c90c',
         }}
       >
+        {/* Desktop banner */}
         <img 
           src="/lovable-uploads/ff5cbfe9-c4c8-493f-a3ea-6d7fd9f19ad5.png"
           alt="BannerPage_Health"
-          className="hidden md:block max-h-full object-contain"
+          className="hidden lg:block max-h-full object-contain"
           style={{ width: '1200px' }}
         />
+        {/* Tablet banner */}
+        <img 
+          src="/lovable-uploads/ff5cbfe9-c4c8-493f-a3ea-6d7fd9f19ad5.png"
+          alt="BannerPage_Health"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
+        />
+        {/* Mobile banner */}
         <img 
           src="/lovable-uploads/d430a877-f179-47cc-86cd-9a7619a2d964.png"
           alt="bannerMobile_Health"
