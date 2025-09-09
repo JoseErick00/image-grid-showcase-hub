@@ -2,7 +2,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import SearchBar from "./SearchBar";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,10 +43,6 @@ const Header = () => {
             <img src="/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png" alt="i.need" className="w-[200px] h-[150px] object-contain" />
           </Link>
 
-          {/* Search Bar */}
-          <div className="hidden md:block w-full max-w-md mb-4">
-            <SearchBar />
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 items-center">
@@ -134,10 +129,6 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border max-h-[70vh] overflow-y-auto">
-            {/* Mobile Search */}
-            <div className="px-2 mb-4">
-              <SearchBar />
-            </div>
             
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => {
