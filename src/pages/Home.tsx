@@ -265,13 +265,13 @@ const Home = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/middle_banner01.jpg"
+                src="/lovable-uploads/fed40fc6-505d-4ca1-b165-440074eec5ef.png"
                 alt="Middle Banner 01"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/middle_banner01_mobile.jpg"
+                src="/lovable-uploads/d4a79acb-ec5e-4e9d-8f6f-64f98d132de4.png"
                 alt="Middle Banner 01 Mobile"
                 className="md:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
