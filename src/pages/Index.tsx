@@ -1,5 +1,6 @@
 
 import CategoryGrid from "@/components/CategoryGrid";
+import { Instagram, Share, Palette } from "lucide-react";
 
 const Index = () => {
   // Main category grid with new images
@@ -66,6 +67,22 @@ const Index = () => {
           <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
             We handpick the most brilliant products and gadgets from the world's biggest e-commerce platforms—Amazon, AliExpress, Shopee, Temu, Alibaba, eBay—and bring them together in one inspiring place.
           </p>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center items-center gap-8 mt-8">
+            <div className="flex flex-col items-center">
+              <Instagram className="w-6 h-6 text-gray-400 mb-2" />
+              <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Palette className="w-6 h-6 text-gray-400 mb-2" />
+              <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Share className="w-6 h-6 text-gray-400 mb-2" />
+              <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+            </div>
+          </div>
         </div>
 
         {/* Main Product Categories Grid (2 columns) */}
