@@ -254,6 +254,17 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Large Banner - Prefabricated House */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <img 
+              src="/lovable-uploads/597241cf-a6b2-4a5a-a3f7-e69692e4464a.png"
+              alt="Prefabricated House Banner"
+              className="w-full h-[300px] object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
         {/* Second 9 items */}
         <CategoryGrid 
           items={homeProducts.slice(9, 18)}
@@ -321,16 +332,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Large Banner - Prefabricated House */}
-        <div className="my-12 flex justify-center">
-          <div className="w-full max-w-[1200px]">
-            <img 
-              src="/lovable-uploads/597241cf-a6b2-4a5a-a3f7-e69692e4464a.png"
-              alt="Prefabricated House Banner"
-              className="w-full h-[300px] object-cover rounded-lg"
-            />
-          </div>
-        </div>
 
         {/* Remaining items */}
         <CategoryGrid 
