@@ -2,6 +2,35 @@ import CategoryGrid from "@/components/CategoryGrid";
 import homeCategoryImage from "@/assets/home-category.jpg";
 
 const Home = () => {
+  const handleShare = async () => {
+    try {
+      const url = window.location.href;
+      const shareData = {
+        title: 'Home Selection - iNeed Stores',
+        text: 'Check out these amazing home products from the world\'s biggest e-commerce platforms!',
+        url: url,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: copy to clipboard
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      // Fallback: copy to clipboard
+      try {
+        const url = window.location.href;
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      } catch (clipboardError) {
+        console.log('Share and clipboard failed:', error, clipboardError);
+        alert('Unable to share. Please copy the URL manually.');
+      }
+    }
+  };
+
   const homeProducts = [
     { id: "product-1", title: "Modern LED Table Lamp", image: "/lovable-uploads/4c21ff55-f3a5-4c1b-8716-100e4ed891c4.png", link: "https://amzn.to/47phOOz" },
     { id: "product-2", title: "Beach Towel Set", image: "/lovable-uploads/36b09677-c2a2-489a-8f56-b7de7aa37931.png", link: "https://amzn.to/4nb01z0" },
@@ -67,6 +96,35 @@ const Home = () => {
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           We dig through Amazon, Shopee, Temu & more to bring you the coolest upgrades for your space.
         </p>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center items-center gap-8 mt-8">
+          <a 
+            href="https://www.instagram.com/ineed_stores" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+          </a>
+          <a 
+            href="https://www.pinterest.com/iNeedShowcase/_profile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+          </a>
+          <button 
+            onClick={handleShare}
+            className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+          >
+            <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+          </button>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

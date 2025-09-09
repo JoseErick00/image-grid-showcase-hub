@@ -1,6 +1,35 @@
 import CategoryGrid from "@/components/CategoryGrid";
 
 const Health = () => {
+  const handleShare = async () => {
+    try {
+      const url = window.location.href;
+      const shareData = {
+        title: 'Health Selection - iNeed Stores',
+        text: 'Check out these amazing health products from the world\'s biggest e-commerce platforms!',
+        url: url,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: copy to clipboard
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      // Fallback: copy to clipboard
+      try {
+        const url = window.location.href;
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      } catch (clipboardError) {
+        console.log('Share and clipboard failed:', error, clipboardError);
+        alert('Unable to share. Please copy the URL manually.');
+      }
+    }
+  };
+
   const healthProducts = [
     { id: "health-1", title: "MUSICOZY Sleep Headphones", image: "/lovable-uploads/f8dd9650-899e-4d6a-9ada-6da470386d91.png", link: "https://amzn.to/428IYFF" },
     { id: "health-2", title: "BOB AND BRAD D5 Pro Massage Gun", image: "/lovable-uploads/5538673d-95cf-47fd-93d6-ccc6f29e5f19.png", link: "https://amzn.to/46mLhaE" },
@@ -62,6 +91,35 @@ const Health = () => {
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           We discovered wellness gadgets, beauty tools, and feel-good finds from around the globe—handpicked to help you glow, grow, and chill.
         </p>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center items-center gap-8 mt-8">
+          <a 
+            href="https://www.instagram.com/ineed_stores" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+          </a>
+          <a 
+            href="https://www.pinterest.com/iNeedShowcase/_profile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+          </a>
+          <button 
+            onClick={handleShare}
+            className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+          >
+            <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+          </button>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

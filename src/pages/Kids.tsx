@@ -1,6 +1,35 @@
 import CategoryGrid from "@/components/CategoryGrid";
 
 const Kids = () => {
+  const handleShare = async () => {
+    try {
+      const url = window.location.href;
+      const shareData = {
+        title: 'Kids Selection - iNeed Stores',
+        text: 'Check out these amazing kids products from the world\'s biggest e-commerce platforms!',
+        url: url,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: copy to clipboard
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      // Fallback: copy to clipboard
+      try {
+        const url = window.location.href;
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      } catch (clipboardError) {
+        console.log('Share and clipboard failed:', error, clipboardError);
+        alert('Unable to share. Please copy the URL manually.');
+      }
+    }
+  };
+
   const kidsProducts = [
     { id: "kids-2", title: "ENERGIZE LAB Eilik - Cute Robot Pets for Kids and Adults", image: "/lovable-uploads/99f441d4-b12e-4cde-8635-9fb7b5f93ef8.png", link: "https://amzn.to/4pdD0xu" },
     { id: "kids-3", title: "Miko Mini with 30 Days Free Miko Max: AI Robot for Kids", image: "/lovable-uploads/693911a4-bf68-4d84-a5f0-22c73f54b9d7.png", link: "https://amzn.to/4p9lB90" },
@@ -65,6 +94,35 @@ const Kids = () => {
         <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
           From clever toys to parenting hacks, we handpick the cutest chaos-making gear across global marketplaces.
         </p>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center items-center gap-8 mt-8">
+          <a 
+            href="https://www.instagram.com/ineed_stores" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+          </a>
+          <a 
+            href="https://www.pinterest.com/iNeedShowcase/_profile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+          </a>
+          <button 
+            onClick={handleShare}
+            className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+          >
+            <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[25px] h-[25px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+          </button>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
