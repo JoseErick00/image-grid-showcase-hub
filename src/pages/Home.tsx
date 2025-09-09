@@ -254,14 +254,28 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Large Banner - Prefabricated House */}
+        {/* Large Banner - Middle Banner 01 */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <img 
-              src="/lovable-uploads/597241cf-a6b2-4a5a-a3f7-e69692e4464a.png"
-              alt="Prefabricated House Banner"
-              className="w-full h-[300px] object-cover rounded-lg"
-            />
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601224218445" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/lovable-uploads/middle_banner01.jpg"
+                alt="Middle Banner 01"
+                className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/lovable-uploads/middle_banner01_mobile.jpg"
+                alt="Middle Banner 01 Mobile"
+                className="md:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
           </div>
         </div>
 
