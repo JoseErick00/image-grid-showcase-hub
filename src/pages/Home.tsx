@@ -273,7 +273,7 @@ const Home = () => {
               <img 
                 src="/lovable-uploads/d4a79acb-ec5e-4e9d-8f6f-64f98d132de4.png"
                 alt="Middle Banner 01 Mobile"
-                className="md:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
