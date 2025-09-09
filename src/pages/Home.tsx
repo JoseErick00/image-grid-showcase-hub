@@ -139,7 +139,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/fcf3b482-26b1-4545-b8bb-4870d257eca7.png"
+                src="/lovable-uploads/c6f001a9-6222-4982-9639-65cdadded29d.png"
                 alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -167,7 +167,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/fcf3b482-26b1-4545-b8bb-4870d257eca7.png"
+                src="/lovable-uploads/c6f001a9-6222-4982-9639-65cdadded29d.png"
                 alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
