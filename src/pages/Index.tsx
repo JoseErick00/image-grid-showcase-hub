@@ -1,8 +1,26 @@
 
 import CategoryGrid from "@/components/CategoryGrid";
-import { Instagram, Share, Palette } from "lucide-react";
 
 const Index = () => {
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        const url = document.querySelector('link[rel=canonical]')?.getAttribute('href') || document.location.href;
+        await navigator.share({
+          title: 'Amazing Products - iNeed Stores',
+          url: url,
+        });
+      } catch (error) {
+        console.log('Error sharing:', error);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      const url = document.querySelector('link[rel=canonical]')?.getAttribute('href') || document.location.href;
+      navigator.clipboard.writeText(url);
+      alert('Link copied to clipboard!');
+    }
+  };
+
   // Main category grid with new images
   const mainCategories = [
     { 
@@ -70,18 +88,31 @@ const Index = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center items-center gap-8 mt-8">
-            <div className="flex flex-col items-center">
-              <Instagram className="w-6 h-6 text-gray-400 mb-2" />
+            <a 
+              href="https://www.instagram.com/ineed_stores" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity"
+            >
+              <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-6 h-6 mb-2" />
               <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Palette className="w-6 h-6 text-gray-400 mb-2" />
+            </a>
+            <a 
+              href="https://www.pinterest.com/iNeedShowcase/_profile" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity"
+            >
+              <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-6 h-6 mb-2" />
               <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Share className="w-6 h-6 text-gray-400 mb-2" />
+            </a>
+            <button 
+              onClick={handleShare}
+              className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-6 h-6 mb-2" />
               <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
-            </div>
+            </button>
           </div>
         </div>
 
