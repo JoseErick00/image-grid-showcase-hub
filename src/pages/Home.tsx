@@ -139,8 +139,8 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/44ec7971-2de9-49ff-a186-7d42508229a6.png"
-                alt="Small Banner 01"
+                src="/lovable-uploads/d7e4a8dc-8794-4ca8-a7c3-ec7325e002a3.png"
+                alt="SMEG Mixer - Optimal Robustness"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -151,8 +151,8 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/11f99d87-7d87-4a73-9677-829533ec4b97.png"
-                alt="Small Banner 02"
+                src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
+                alt="High-Performance Blender"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -167,8 +167,8 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/44ec7971-2de9-49ff-a186-7d42508229a6.png"
-                alt="Small Banner 01"
+                src="/lovable-uploads/d7e4a8dc-8794-4ca8-a7c3-ec7325e002a3.png"
+                alt="SMEG Mixer - Optimal Robustness"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -179,8 +179,8 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/11f99d87-7d87-4a73-9677-829533ec4b97.png"
-                alt="Small Banner 02"
+                src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
+                alt="High-Performance Blender"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
