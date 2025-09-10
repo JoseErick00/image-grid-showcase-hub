@@ -135,7 +135,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-01.jpg"
+                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -147,7 +147,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-02.jpg"
+                src="/lovable-uploads/546e640f-9edd-4633-a4c8-734b4244232a.png"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -163,7 +163,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-01.jpg"
+                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -175,7 +175,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-02.jpg"
+                src="/lovable-uploads/546e640f-9edd-4633-a4c8-734b4244232a.png"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -202,7 +202,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-01.jpg"
+                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -214,7 +214,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-04.jpg"
+                src="/lovable-uploads/f65636b6-4d54-495d-a1e3-487ebefe0be6.png"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -230,7 +230,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-01.jpg"
+                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -242,7 +242,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/health-small-banner-04.jpg"
+                src="/lovable-uploads/f65636b6-4d54-495d-a1e3-487ebefe0be6.png"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -261,13 +261,13 @@ const Health = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/health-middle-banner-desktop.jpg"
+                src="/lovable-uploads/eba0496f-36ce-47fc-bab9-cce0a81a714a.png"
                 alt="Health Middle Banner - Wide"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/health-middle-banner-mobile.jpg"
+                src="/lovable-uploads/eba0496f-36ce-47fc-bab9-cce0a81a714a.png"
                 alt="Health Middle Banner"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
