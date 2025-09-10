@@ -358,7 +358,7 @@ const Health = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="https://amzn.to/4nc5w7q" 
+              href="https://amzn.to/4glL9Ma" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -370,13 +370,13 @@ const Health = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/42bw5tr" 
+              href="https://amzn.to/3VG7iuX" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/lovable-uploads/f8e9a1b2-c3d4-5e6f-7a8b-9c0d1e2f3456.png"
                 alt="Health Banner 8"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -386,7 +386,7 @@ const Health = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/4nc5w7q" 
+              href="https://amzn.to/4glL9Ma" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -398,13 +398,13 @@ const Health = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/42bw5tr" 
+              href="https://amzn.to/3VG7iuX" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/lovable-uploads/f8e9a1b2-c3d4-5e6f-7a8b-9c0d1e2f3456.png"
                 alt="Health Banner 8"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
