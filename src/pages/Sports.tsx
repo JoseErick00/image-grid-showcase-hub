@@ -240,7 +240,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/0501f155-1688-4587-afce-60cc68cbfbcc.png"
+                src="/lovable-uploads/c2dfb8a4-6d18-4cd6-b5b7-5d9108d9938a.png"
                 alt="Small Banner S01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -252,7 +252,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/c1fb8cc0-09cd-4a73-999d-162414f64ade.png"
+                src="/lovable-uploads/e437b5b3-5a36-46c7-be90-1e25f5d95a51.png"
                 alt="Small Banner S02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -268,7 +268,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/0501f155-1688-4587-afce-60cc68cbfbcc.png"
+                src="/lovable-uploads/c2dfb8a4-6d18-4cd6-b5b7-5d9108d9938a.png"
                 alt="Small Banner S01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -280,7 +280,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/c1fb8cc0-09cd-4a73-999d-162414f64ade.png"
+                src="/lovable-uploads/e437b5b3-5a36-46c7-be90-1e25f5d95a51.png"
                 alt="Small Banner S02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -307,7 +307,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/85110965-83ee-43b5-b282-190f879b628d.png"
+                src="/lovable-uploads/0501f155-1688-4587-afce-60cc68cbfbcc.png"
                 alt="Small Banner S03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -319,7 +319,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/f163bf5d-29be-414e-ad11-1bb1f6cedd64.png"
+                src="/lovable-uploads/c1fb8cc0-09cd-4a73-999d-162414f64ade.png"
                 alt="Small Banner S04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -335,7 +335,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/85110965-83ee-43b5-b282-190f879b628d.png"
+                src="/lovable-uploads/0501f155-1688-4587-afce-60cc68cbfbcc.png"
                 alt="Small Banner S03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -347,7 +347,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/f163bf5d-29be-414e-ad11-1bb1f6cedd64.png"
+                src="/lovable-uploads/c1fb8cc0-09cd-4a73-999d-162414f64ade.png"
                 alt="Small Banner S04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -366,13 +366,13 @@ const Sports = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/d3c9f84b-9619-42ec-ad54-76102a63bdd2.png"
+                src="/lovable-uploads/f163bf5d-29be-414e-ad11-1bb1f6cedd64.png"
                 alt="Middle Banner S01"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/f97d7ef6-f8c9-4969-9aef-f21bf9cd9363.png"
+                src="/lovable-uploads/85110965-83ee-43b5-b282-190f879b628d.png"
                 alt="Middle Banner S01 Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -399,7 +399,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/c2dfb8a4-6d18-4cd6-b5b7-5d9108d9938a.png"
+                src="/lovable-uploads/2b777cfe-db79-4515-8d5f-46593be0a4ad.png"
                 alt="Small Banner S05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -411,7 +411,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e437b5b3-5a36-46c7-be90-1e25f5d95a51.png"
+                src="/lovable-uploads/b05f9e9d-d6b9-4341-a075-f305bef0c6fd.png"
                 alt="Small Banner S06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -427,7 +427,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/c2dfb8a4-6d18-4cd6-b5b7-5d9108d9938a.png"
+                src="/lovable-uploads/2b777cfe-db79-4515-8d5f-46593be0a4ad.png"
                 alt="Small Banner S05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -439,7 +439,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e437b5b3-5a36-46c7-be90-1e25f5d95a51.png"
+                src="/lovable-uploads/b05f9e9d-d6b9-4341-a075-f305bef0c6fd.png"
                 alt="Small Banner S06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -466,7 +466,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2b777cfe-db79-4515-8d5f-46593be0a4ad.png"
+                src="/lovable-uploads/d3c9f84b-9619-42ec-ad54-76102a63bdd2.png"
                 alt="Small Banner S07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -478,7 +478,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/b05f9e9d-d6b9-4341-a075-f305bef0c6fd.png"
+                src="/lovable-uploads/f97d7ef6-f8c9-4969-9aef-f21bf9cd9363.png"
                 alt="Small Banner S08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -494,7 +494,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2b777cfe-db79-4515-8d5f-46593be0a4ad.png"
+                src="/lovable-uploads/d3c9f84b-9619-42ec-ad54-76102a63bdd2.png"
                 alt="Small Banner S07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -506,7 +506,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/b05f9e9d-d6b9-4341-a075-f305bef0c6fd.png"
+                src="/lovable-uploads/f97d7ef6-f8c9-4969-9aef-f21bf9cd9363.png"
                 alt="Small Banner S08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
