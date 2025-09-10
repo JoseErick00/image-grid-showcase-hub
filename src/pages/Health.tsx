@@ -1,4 +1,5 @@
 import CategoryGrid from "@/components/CategoryGrid";
+import MailchimpSubscription from "@/components/MailchimpSubscription";
 
 const Health = () => {
   const handleShare = async () => {
@@ -122,13 +123,294 @@ const Health = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Small Banner 01 & 02 */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/3VGuGsl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 1"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4pm6lWC" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 2"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/3VGuGsl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 1"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4pm6lWC" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 2"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* First 9 items */}
         <CategoryGrid 
-          items={healthProducts}
+          items={healthProducts.slice(0, 9)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f9c90c"
         />
+
+        {/* Small Banner 03 & 04 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/42pG3sm" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 3"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3V6WPJ1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 4"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/42pG3sm" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 3"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3V6WPJ1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 4"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Large Banner - Middle Banner 01 */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/4869pQg" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Middle Banner - Wide"
+                className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Middle Banner"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Second 9 items */}
+        <CategoryGrid 
+          items={healthProducts.slice(9, 18)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#f9c90c"
+        />
+
+        {/* Small Banner 05 & 06 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/4nn0SNh" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 5"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/46fb97a" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 6"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/4nn0SNh" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 5"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/46fb97a" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 6"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
+
+        {/* Remaining items */}
+        <CategoryGrid 
+          items={healthProducts.slice(18)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#f9c90c"
+        />
+
+        {/* Small Banner 07 & 08 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/4nc5w7q" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 7"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/42bw5tr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 8"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/4nc5w7q" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 7"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/42bw5tr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Health Banner 8"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Social Section */}
