@@ -240,8 +240,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S01.jpg"
-                alt="Small Banner 01"
+                src="/lovable-uploads/ae5a6281-df4d-4320-8c3f-bbeb5479184c.png"
+                alt="Speediance Gym Monster"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -252,8 +252,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S02.jpg"
-                alt="Small Banner 02"
+                src="/lovable-uploads/a556c278-081e-497a-9599-d8ce4f825114.png"
+                alt="Smart Watch Display"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -268,8 +268,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S01.jpg"
-                alt="Small Banner 01"
+                src="/lovable-uploads/ae5a6281-df4d-4320-8c3f-bbeb5479184c.png"
+                alt="Speediance Gym Monster"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -280,8 +280,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S02.jpg"
-                alt="Small Banner 02"
+                src="/lovable-uploads/a556c278-081e-497a-9599-d8ce4f825114.png"
+                alt="Smart Watch Display"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -307,8 +307,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S03.jpg"
-                alt="Small Banner 03"
+                src="/lovable-uploads/da6d492c-b204-4569-b786-0d964f0390c0.png"
+                alt="Smart Scale"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -319,8 +319,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S04.jpg"
-                alt="Small Banner 04"
+                src="/lovable-uploads/135712f5-9220-4bb0-baed-c754e4cfc535.png"
+                alt="Ativafit Exercise Bike"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -335,8 +335,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S03.jpg"
-                alt="Small Banner 03"
+                src="/lovable-uploads/da6d492c-b204-4569-b786-0d964f0390c0.png"
+                alt="Smart Scale"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -347,8 +347,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S04.jpg"
-                alt="Small Banner 04"
+                src="/lovable-uploads/135712f5-9220-4bb0-baed-c754e4cfc535.png"
+                alt="Ativafit Exercise Bike"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -366,14 +366,14 @@ const Sports = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/middle_banner_S01.jpg"
-                alt="Middle Banner 01"
+                src="/lovable-uploads/46c9f956-d5e7-4ddf-bce2-46de8a7d2be0.png"
+                alt="Speediance Gym Monster - Wide"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/middle_banner_mobileS01.jpg"
-                alt="Middle Banner 01 Mobile"
+                src="/lovable-uploads/46c9f956-d5e7-4ddf-bce2-46de8a7d2be0.png"
+                alt="Speediance Gym Monster - Wide"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -399,8 +399,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S05.jpg"
-                alt="Small Banner 05"
+                src="/lovable-uploads/b22b190f-85a3-418a-aae6-252ce5c32316.png"
+                alt="Gorilla Mats Premium"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -411,8 +411,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S06.jpg"
-                alt="Small Banner 06"
+                src="/lovable-uploads/d875dd1b-ac7b-47a2-928e-c8ba99765aa8.png"
+                alt="Perfect Pushup Elite"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -427,8 +427,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S05.jpg"
-                alt="Small Banner 05"
+                src="/lovable-uploads/b22b190f-85a3-418a-aae6-252ce5c32316.png"
+                alt="Gorilla Mats Premium"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -439,8 +439,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S06.jpg"
-                alt="Small Banner 06"
+                src="/lovable-uploads/d875dd1b-ac7b-47a2-928e-c8ba99765aa8.png"
+                alt="Perfect Pushup Elite"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -466,8 +466,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S07.jpg"
-                alt="Small Banner 07"
+                src="/lovable-uploads/4e151610-57c7-449e-9c53-49aa05823077.png"
+                alt="Scosche Rhythm R+2.0 Waterproof"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -478,8 +478,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S08.jpg"
-                alt="Small Banner 08"
+                src="/lovable-uploads/2a399d9e-e18c-4aad-9b30-2b4e4af01966.png"
+                alt="Treadmill Machine Screen Projection"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -494,8 +494,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S07.jpg"
-                alt="Small Banner 07"
+                src="/lovable-uploads/4e151610-57c7-449e-9c53-49aa05823077.png"
+                alt="Scosche Rhythm R+2.0 Waterproof"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -506,8 +506,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S08.jpg"
-                alt="Small Banner 08"
+                src="/lovable-uploads/2a399d9e-e18c-4aad-9b30-2b4e4af01966.png"
+                alt="Treadmill Machine Screen Projection"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
