@@ -240,7 +240,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/7ac19f8d-aed8-4c32-8218-95f1a47752d6.png"
+                src="/lovable-uploads/small_banner_S01.jpg"
                 alt="Small Banner S01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -252,7 +252,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/ef877d34-ffad-4a25-bef4-e1315616b454.png"
+                src="/lovable-uploads/small_banner_S02.jpg"
                 alt="Small Banner S02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -268,7 +268,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/7ac19f8d-aed8-4c32-8218-95f1a47752d6.png"
+                src="/lovable-uploads/small_banner_S01.jpg"
                 alt="Small Banner S01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -280,7 +280,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/ef877d34-ffad-4a25-bef4-e1315616b454.png"
+                src="/lovable-uploads/small_banner_S02.jpg"
                 alt="Small Banner S02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -307,7 +307,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/788c8231-8b24-46c5-9409-25a4de48db36.png"
+                src="/lovable-uploads/small_banner_S03.jpg"
                 alt="Small Banner S03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -319,7 +319,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/a380eebd-09f3-42f7-9154-e63ad4902475.png"
+                src="/lovable-uploads/small_banner_S04.jpg"
                 alt="Small Banner S04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -335,7 +335,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/788c8231-8b24-46c5-9409-25a4de48db36.png"
+                src="/lovable-uploads/small_banner_S03.jpg"
                 alt="Small Banner S03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -347,7 +347,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/a380eebd-09f3-42f7-9154-e63ad4902475.png"
+                src="/lovable-uploads/small_banner_S04.jpg"
                 alt="Small Banner S04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -366,13 +366,13 @@ const Sports = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/e49f9c37-9637-4bf5-96c8-c31c1c4576a5.png"
+                src="/lovable-uploads/middle_banner_S01.jpg"
                 alt="Middle Banner S01"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/03e4d022-6b74-4510-8908-a92f46a4caf6.png"
+                src="/lovable-uploads/middle_banner_mobileS01.jpg"
                 alt="Middle Banner S01 Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -399,7 +399,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/3e9fafc2-ab5c-41f0-a4ce-36c59ee413f7.png"
+                src="/lovable-uploads/small_banner_S05.jpg"
                 alt="Small Banner S05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -411,7 +411,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/4084c594-bb18-4e66-aa04-6d4a4d5cb6a5.png"
+                src="/lovable-uploads/small_banner_S06.jpg"
                 alt="Small Banner S06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -427,7 +427,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/3e9fafc2-ab5c-41f0-a4ce-36c59ee413f7.png"
+                src="/lovable-uploads/small_banner_S05.jpg"
                 alt="Small Banner S05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -439,7 +439,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/4084c594-bb18-4e66-aa04-6d4a4d5cb6a5.png"
+                src="/lovable-uploads/small_banner_S06.jpg"
                 alt="Small Banner S06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -466,7 +466,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/9aac2cd7-0870-4497-b3a0-196f4a680bae.png"
+                src="/lovable-uploads/small_banner_S07.jpg"
                 alt="Small Banner S07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -478,7 +478,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/d913102f-410d-47e2-8886-a5371905321a.png"
+                src="/lovable-uploads/small_banner_S08.jpg"
                 alt="Small Banner S08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -494,7 +494,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/9aac2cd7-0870-4497-b3a0-196f4a680bae.png"
+                src="/lovable-uploads/small_banner_S07.jpg"
                 alt="Small Banner S07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -506,7 +506,7 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/d913102f-410d-47e2-8886-a5371905321a.png"
+                src="/lovable-uploads/small_banner_S08.jpg"
                 alt="Small Banner S08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
