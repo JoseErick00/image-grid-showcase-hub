@@ -267,7 +267,7 @@ const Health = () => {
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/eba0496f-36ce-47fc-bab9-cce0a81a714a.png"
+                src="/lovable-uploads/030da6d9-88d7-4a97-8a16-23e279030a21.png"
                 alt="Health Middle Banner"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
