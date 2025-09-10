@@ -100,13 +100,16 @@ const MailchimpSubscription = () => {
                 border: none;
                 border-radius: 0.375rem;
                 font-size: 1rem;
-                font-weight: 500;
+                font-weight: 700;
                 cursor: pointer;
                 transition: var(--transition-fast);
                 width: auto;
                 min-width: 200px;
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 margin: 0 auto;
+                text-align: center;
               }
               #mc_embed_signup .button:hover {
                 background: hsl(var(--primary) / 0.9);
