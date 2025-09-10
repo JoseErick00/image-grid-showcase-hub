@@ -135,7 +135,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H01.jpg"
+                src="/lovable-uploads/health-small-banner-01.jpg"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -147,7 +147,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H02.jpg"
+                src="/lovable-uploads/health-small-banner-02.jpg"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -163,7 +163,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H01.jpg"
+                src="/lovable-uploads/health-small-banner-01.jpg"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -175,7 +175,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H02.jpg"
+                src="/lovable-uploads/health-small-banner-02.jpg"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -202,7 +202,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H01.jpg"
+                src="/lovable-uploads/health-small-banner-01.jpg"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -214,7 +214,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H04.jpg"
+                src="/lovable-uploads/health-small-banner-04.jpg"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -230,7 +230,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H01.jpg"
+                src="/lovable-uploads/health-small-banner-01.jpg"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -242,7 +242,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/small_banner_H04.jpg"
+                src="/lovable-uploads/health-small-banner-04.jpg"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -261,13 +261,13 @@ const Health = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/middle_banner_H01.jpg"
+                src="/lovable-uploads/health-middle-banner-desktop.jpg"
                 alt="Health Middle Banner - Wide"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/middle_banner_mobileH01.jpg"
+                src="/lovable-uploads/health-middle-banner-mobile.jpg"
                 alt="Health Middle Banner"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
