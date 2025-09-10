@@ -307,8 +307,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/da6d492c-b204-4569-b786-0d964f0390c0.png"
-                alt="Smart Scale"
+                src="/lovable-uploads/c6532d58-687d-4ace-bc72-2ccfa066c0e2.png"
+                alt="Ativafit Exercise Bike"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -319,8 +319,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/135712f5-9220-4bb0-baed-c754e4cfc535.png"
-                alt="Ativafit Exercise Bike"
+                src="/lovable-uploads/bfab75e9-e678-43b5-8f5f-6e4c43fde904.png"
+                alt="Gorilla Mats Premium"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -335,8 +335,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/da6d492c-b204-4569-b786-0d964f0390c0.png"
-                alt="Smart Scale"
+                src="/lovable-uploads/c6532d58-687d-4ace-bc72-2ccfa066c0e2.png"
+                alt="Ativafit Exercise Bike"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -347,8 +347,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/135712f5-9220-4bb0-baed-c754e4cfc535.png"
-                alt="Ativafit Exercise Bike"
+                src="/lovable-uploads/bfab75e9-e678-43b5-8f5f-6e4c43fde904.png"
+                alt="Gorilla Mats Premium"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
