@@ -139,7 +139,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/c63f3e19-35ad-4f8b-bf1a-bc2e56df06ac.png"
+                src="/lovable-uploads/44ec7971-2de9-49ff-a186-7d42508229a6.png"
                 alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -151,7 +151,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/b95a8aba-6ab7-402b-b264-86c756709ddb.png"
+                src="/lovable-uploads/11f99d87-7d87-4a73-9677-829533ec4b97.png"
                 alt="Small Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -167,7 +167,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/c63f3e19-35ad-4f8b-bf1a-bc2e56df06ac.png"
+                src="/lovable-uploads/44ec7971-2de9-49ff-a186-7d42508229a6.png"
                 alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -179,7 +179,7 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/b95a8aba-6ab7-402b-b264-86c756709ddb.png"
+                src="/lovable-uploads/11f99d87-7d87-4a73-9677-829533ec4b97.png"
                 alt="Small Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
