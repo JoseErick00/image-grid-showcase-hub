@@ -378,8 +378,8 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/a098f6fd-01bc-4d52-a499-d80da24aa452.png"
-                alt="Small Banner 08"
+                src="/lovable-uploads/d8a74dd7-4cbe-4e8c-a24e-bfbff41a5e06.png"
+                alt="Spread the sound throughout the house - Smart Speakers"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -406,8 +406,8 @@ const Home = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/a098f6fd-01bc-4d52-a499-d80da24aa452.png"
-                alt="Small Banner 08"
+                src="/lovable-uploads/d8a74dd7-4cbe-4e8c-a24e-bfbff41a5e06.png"
+                alt="Spread the sound throughout the house - Smart Speakers"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
