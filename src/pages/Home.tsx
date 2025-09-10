@@ -372,7 +372,7 @@ const Home = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/470VNDn" 
+              href="https://amzn.to/3JQlBuA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -400,7 +400,7 @@ const Home = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/470VNDn" 
+              href="https://amzn.to/3JQlBuA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
