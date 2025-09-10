@@ -103,7 +103,10 @@ const MailchimpSubscription = () => {
                 font-weight: 500;
                 cursor: pointer;
                 transition: var(--transition-fast);
-                width: 100%;
+                width: auto;
+                min-width: 200px;
+                display: block;
+                margin: 0 auto;
               }
               #mc_embed_signup .button:hover {
                 background: hsl(var(--primary) / 0.9);
@@ -120,9 +123,14 @@ const MailchimpSubscription = () => {
               #mc_embed_signup .clear.foot {
                 margin-top: 1rem;
               }
-              #mc_embed_signup .refferal_badge {
-                margin-top: 1rem;
-              }
+               #mc_embed_signup .refferal_badge {
+                 margin-top: 1rem;
+                 display: block;
+                 text-align: center;
+               }
+               #mc_embed_signup .clear.foot p {
+                 text-align: center;
+               }
             `}
           </style>
           <div id="mc_embed_signup">
