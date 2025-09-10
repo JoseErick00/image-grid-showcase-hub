@@ -93,27 +93,31 @@ const MailchimpSubscription = () => {
                 border-color: hsl(var(--primary));
                 box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
               }
-              #mc_embed_signup .button {
+              #mc_embed_signup input.button {
                 background: hsl(var(--primary));
                 color: hsl(var(--primary-foreground));
-                padding: 0.75rem 1.5rem;
+                padding: 0.5rem 1rem;
                 border: none;
                 border-radius: 0.375rem;
-                font-size: 1rem;
-                font-weight: 700;
+                font-size: 0.875rem;
+                font-weight: 500;
                 cursor: pointer;
-                transition: var(--transition-fast);
+                transition: all 0.2s;
                 width: auto;
                 min-width: 200px;
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 margin: 0 auto;
                 text-align: center;
+                box-shadow: var(--shadow-elegant);
+                gap: 0.5rem;
+                white-space: nowrap;
+                ring-offset-background: transparent;
               }
-              #mc_embed_signup .button:hover {
+              #mc_embed_signup input.button:hover {
                 background: hsl(var(--primary) / 0.9);
-                transform: translateY(-1px);
+                box-shadow: var(--shadow-glow);
               }
               #mc_embed_signup .indicates-required {
                 margin-bottom: 1rem;
