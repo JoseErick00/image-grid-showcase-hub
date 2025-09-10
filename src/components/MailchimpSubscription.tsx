@@ -143,7 +143,7 @@ const MailchimpSubscription = () => {
               target="_blank"
             >
               <div id="mc_embed_signup_scroll">
-                <h2>Subscribe to Our Newsletter</h2>
+                <h2>Receive the latest discoveries by email.</h2>
                 <div className="indicates-required">
                   <span className="asterisk">*</span> indicates required
                 </div>
