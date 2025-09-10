@@ -159,7 +159,7 @@ const Home = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/4pamuOq" 
               target="_blank" 
@@ -226,7 +226,7 @@ const Home = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601398799470" 
               target="_blank" 
@@ -318,7 +318,7 @@ const Home = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/45TIhm4" 
               target="_blank" 
@@ -386,7 +386,7 @@ const Home = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/41GXGnk" 
               target="_blank" 
