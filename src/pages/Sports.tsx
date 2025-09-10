@@ -399,8 +399,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/b22b190f-85a3-418a-aae6-252ce5c32316.png"
-                alt="Gorilla Mats Premium"
+                src="/lovable-uploads/b692cc47-6893-4c5a-b016-779216c0e8e0.png"
+                alt="Perfect Pushup Elite"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -411,8 +411,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/d875dd1b-ac7b-47a2-928e-c8ba99765aa8.png"
-                alt="Perfect Pushup Elite"
+                src="/lovable-uploads/f42b7a30-fb8b-4b82-8cb4-9f4f05055604.png"
+                alt="Scosche Rhythm R+2.0 Waterproof"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -427,8 +427,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/b22b190f-85a3-418a-aae6-252ce5c32316.png"
-                alt="Gorilla Mats Premium"
+                src="/lovable-uploads/b692cc47-6893-4c5a-b016-779216c0e8e0.png"
+                alt="Perfect Pushup Elite"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -439,8 +439,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/d875dd1b-ac7b-47a2-928e-c8ba99765aa8.png"
-                alt="Perfect Pushup Elite"
+                src="/lovable-uploads/f42b7a30-fb8b-4b82-8cb4-9f4f05055604.png"
+                alt="Scosche Rhythm R+2.0 Waterproof"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -466,8 +466,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/4e151610-57c7-449e-9c53-49aa05823077.png"
-                alt="Scosche Rhythm R+2.0 Waterproof"
+                src="/lovable-uploads/93d545e2-d27c-4643-9a6b-eb7e7440f941.png"
+                alt="Treadmill Machine Screen Projection"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -478,8 +478,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2a399d9e-e18c-4aad-9b30-2b4e4af01966.png"
-                alt="Treadmill Machine Screen Projection"
+                src="/lovable-uploads/b3905ecb-db7d-44eb-95a1-bd2a729fe49e.png"
+                alt="Oura Ring Gen3 Horizon Heart Rate Tracker"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -494,8 +494,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/4e151610-57c7-449e-9c53-49aa05823077.png"
-                alt="Scosche Rhythm R+2.0 Waterproof"
+                src="/lovable-uploads/93d545e2-d27c-4643-9a6b-eb7e7440f941.png"
+                alt="Treadmill Machine Screen Projection"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -506,8 +506,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2a399d9e-e18c-4aad-9b30-2b4e4af01966.png"
-                alt="Treadmill Machine Screen Projection"
+                src="/lovable-uploads/b3905ecb-db7d-44eb-95a1-bd2a729fe49e.png"
+                alt="Oura Ring Gen3 Horizon Heart Rate Tracker"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
