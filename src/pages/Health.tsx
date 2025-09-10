@@ -129,25 +129,25 @@ const Health = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="https://amzn.to/3VGuGsl" 
+              href="https://amzn.to/469mPbz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H01.jpg"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4pm6lWC" 
+              href="https://amzn.to/3Ke00Mw" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H02.jpg"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -157,25 +157,25 @@ const Health = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/3VGuGsl" 
+              href="https://amzn.to/469mPbz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H01.jpg"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4pm6lWC" 
+              href="https://amzn.to/3Ke00Mw" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H02.jpg"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -196,25 +196,25 @@ const Health = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="https://amzn.to/42pG3sm" 
+              href="https://amzn.to/47Cpehw" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H01.jpg"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/3V6WPJ1" 
+              href="https://amzn.to/45W1dka" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H04.jpg"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -224,25 +224,25 @@ const Health = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/42pG3sm" 
+              href="https://amzn.to/47Cpehw" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H01.jpg"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/3V6WPJ1" 
+              href="https://amzn.to/45W1dka" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/small_banner_H04.jpg"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -254,20 +254,20 @@ const Health = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/4869pQg" 
+              href="https://amzn.to/41Kf1vD" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/middle_banner_H01.jpg"
                 alt="Health Middle Banner - Wide"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                src="/middle_banner_mobileH01.jpg"
                 alt="Health Middle Banner"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
