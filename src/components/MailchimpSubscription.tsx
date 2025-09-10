@@ -52,14 +52,14 @@ const MailchimpSubscription = () => {
           <style type="text/css">
             {`
               #mc_embed_signup {
-                background: #fff;
+                background: hsl(var(--brand-mid));
                 clear: left;
                 font: 14px Helvetica, Arial, sans-serif;
                 width: 100%;
                 max-width: 600px;
                 margin: 0 auto;
                 border-radius: 8px;
-                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                box-shadow: var(--shadow-elegant);
                 padding: 2rem;
               }
               #mc_embed_signup h2 {
@@ -67,7 +67,7 @@ const MailchimpSubscription = () => {
                 font-weight: 600;
                 margin-bottom: 1rem;
                 text-align: center;
-                color: #1f2937;
+                color: hsl(var(--brand-light));
               }
               #mc_embed_signup .mc-field-group {
                 margin-bottom: 1rem;
@@ -76,43 +76,46 @@ const MailchimpSubscription = () => {
                 display: block;
                 margin-bottom: 0.5rem;
                 font-weight: 500;
-                color: #374151;
+                color: hsl(var(--brand-light));
               }
               #mc_embed_signup input[type="email"] {
                 width: 100%;
                 padding: 0.75rem;
-                border: 1px solid #d1d5db;
+                border: 1px solid hsl(var(--border));
                 border-radius: 0.375rem;
                 font-size: 1rem;
-                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                background: hsl(var(--background));
+                color: hsl(var(--foreground));
+                transition: var(--transition-fast);
               }
               #mc_embed_signup input[type="email"]:focus {
                 outline: none;
-                border-color: #3b82f6;
-                box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+                border-color: hsl(var(--primary));
+                box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
               }
               #mc_embed_signup .button {
-                background-color: #3b82f6;
-                color: white;
+                background: hsl(var(--primary));
+                color: hsl(var(--primary-foreground));
                 padding: 0.75rem 1.5rem;
                 border: none;
                 border-radius: 0.375rem;
                 font-size: 1rem;
                 font-weight: 500;
                 cursor: pointer;
-                transition: background-color 0.15s ease-in-out;
+                transition: var(--transition-fast);
                 width: 100%;
               }
               #mc_embed_signup .button:hover {
-                background-color: #2563eb;
+                background: hsl(var(--primary) / 0.9);
+                transform: translateY(-1px);
               }
               #mc_embed_signup .indicates-required {
                 margin-bottom: 1rem;
                 font-size: 0.875rem;
-                color: #6b7280;
+                color: hsl(var(--muted-foreground));
               }
               #mc_embed_signup .asterisk {
-                color: #ef4444;
+                color: hsl(var(--destructive));
               }
               #mc_embed_signup .clear.foot {
                 margin-top: 1rem;
