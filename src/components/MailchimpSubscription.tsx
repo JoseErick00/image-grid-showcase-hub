@@ -99,7 +99,7 @@ const MailchimpSubscription = () => {
                 padding: 0.625rem 1rem;
                 border: none;
                 border-radius: 0.375rem;
-                font-size: 0.875rem;
+                font-size: 1rem;
                 font-weight: 700;
                 cursor: pointer;
                 transition: all 0.2s;
