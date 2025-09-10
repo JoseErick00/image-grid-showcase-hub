@@ -157,7 +157,6 @@ const MailchimpSubscription = () => {
                     className="required email" 
                     id="mce-EMAIL" 
                     required 
-                    value="" 
                   />
                 </div>
                 <div id="mce-responses" className="clear foot">
@@ -169,7 +168,7 @@ const MailchimpSubscription = () => {
                     type="text" 
                     name="b_b67a6d1fbcbef1d7ac467702d_d6375be57e" 
                     tabIndex={-1} 
-                    value="" 
+                    defaultValue="" 
                   />
                 </div>
                 <div className="optionalParent">
