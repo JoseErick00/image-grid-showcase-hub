@@ -96,11 +96,11 @@ const MailchimpSubscription = () => {
               #mc_embed_signup input.button {
                 background: hsl(var(--primary));
                 color: hsl(var(--primary-foreground));
-                padding: 0.5rem 1rem;
+                padding: 0.625rem 1rem;
                 border: none;
                 border-radius: 0.375rem;
                 font-size: 0.875rem;
-                font-weight: 500;
+                font-weight: 700;
                 cursor: pointer;
                 transition: all 0.2s;
                 width: auto;
@@ -114,6 +114,7 @@ const MailchimpSubscription = () => {
                 gap: 0.5rem;
                 white-space: nowrap;
                 ring-offset-background: transparent;
+                line-height: 1;
               }
               #mc_embed_signup input.button:hover {
                 background: hsl(var(--primary) / 0.9);
