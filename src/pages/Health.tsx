@@ -135,7 +135,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
+                src="/lovable-uploads/d1f230af-956d-40cc-91cc-41247b47756c.png"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -147,7 +147,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/546e640f-9edd-4633-a4c8-734b4244232a.png"
+                src="/lovable-uploads/ab6de73d-0a86-4580-bd2f-bf20f7c80cd8.png"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -163,7 +163,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
+                src="/lovable-uploads/d1f230af-956d-40cc-91cc-41247b47756c.png"
                 alt="Health Banner 1"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -175,7 +175,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/546e640f-9edd-4633-a4c8-734b4244232a.png"
+                src="/lovable-uploads/ab6de73d-0a86-4580-bd2f-bf20f7c80cd8.png"
                 alt="Health Banner 2"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -202,7 +202,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
+                src="/lovable-uploads/d1f230af-956d-40cc-91cc-41247b47756c.png"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -214,7 +214,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/f65636b6-4d54-495d-a1e3-487ebefe0be6.png"
+                src="/lovable-uploads/ab6de73d-0a86-4580-bd2f-bf20f7c80cd8.png"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -230,7 +230,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e40ebe83-01f4-440a-83ca-fa9f5a2aeb92.png"
+                src="/lovable-uploads/d1f230af-956d-40cc-91cc-41247b47756c.png"
                 alt="Health Banner 3"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -242,7 +242,7 @@ const Health = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/f65636b6-4d54-495d-a1e3-487ebefe0be6.png"
+                src="/lovable-uploads/ab6de73d-0a86-4580-bd2f-bf20f7c80cd8.png"
                 alt="Health Banner 4"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
