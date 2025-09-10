@@ -372,8 +372,8 @@ const Sports = () => {
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/46c9f956-d5e7-4ddf-bce2-46de8a7d2be0.png"
-                alt="Speediance Gym Monster - Wide"
+                src="/lovable-uploads/6f847c55-0bcc-42df-af69-571dc20b1202.png"
+                alt="Speediance Gym Monster"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
