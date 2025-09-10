@@ -240,8 +240,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S01.jpg"
-                alt="Small Banner 01"
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Smart Watch Display"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -252,8 +252,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S02.jpg"
-                alt="Small Banner 02"
+                src="/lovable-uploads/ffd48197-8840-4651-89c3-38b46097103b.png"
+                alt="Smart Scale"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -268,8 +268,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S01.jpg"
-                alt="Small Banner 01"
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Smart Watch Display"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -280,8 +280,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/small_banner_S02.jpg"
-                alt="Small Banner 02"
+                src="/lovable-uploads/ffd48197-8840-4651-89c3-38b46097103b.png"
+                alt="Smart Scale"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
