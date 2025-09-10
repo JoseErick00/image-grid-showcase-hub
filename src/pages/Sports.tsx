@@ -1,4 +1,5 @@
 import CategoryGrid from "@/components/CategoryGrid";
+import MailchimpSubscription from "@/components/MailchimpSubscription";
 
 const Sports = () => {
   const handleShare = async () => {
@@ -446,6 +447,9 @@ const Sports = () => {
             </a>
           </div>
         </div>
+
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
 
         {/* Remaining items */}
         <CategoryGrid 

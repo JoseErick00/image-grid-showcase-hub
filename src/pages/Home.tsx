@@ -1,4 +1,5 @@
 import CategoryGrid from "@/components/CategoryGrid";
+import MailchimpSubscription from "@/components/MailchimpSubscription";
 import homeCategoryImage from "@/assets/home-category.jpg";
 
 const Home = () => {
@@ -346,6 +347,8 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
 
         {/* Remaining items */}
         <CategoryGrid 
