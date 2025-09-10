@@ -240,8 +240,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/ae5a6281-df4d-4320-8c3f-bbeb5479184c.png"
-                alt="Speediance Gym Monster"
+                src="/lovable-uploads/small_banner_S01.jpg"
+                alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -252,8 +252,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/a556c278-081e-497a-9599-d8ce4f825114.png"
-                alt="Smart Watch Display"
+                src="/lovable-uploads/small_banner_S02.jpg"
+                alt="Small Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -268,8 +268,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/ae5a6281-df4d-4320-8c3f-bbeb5479184c.png"
-                alt="Speediance Gym Monster"
+                src="/lovable-uploads/small_banner_S01.jpg"
+                alt="Small Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -280,8 +280,8 @@ const Sports = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/a556c278-081e-497a-9599-d8ce4f825114.png"
-                alt="Smart Watch Display"
+                src="/lovable-uploads/small_banner_S02.jpg"
+                alt="Small Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
