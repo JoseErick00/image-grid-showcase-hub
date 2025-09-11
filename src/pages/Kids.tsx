@@ -144,7 +144,7 @@ const Kids = () => {
         {/* Small Banner 01 & 02 - PLACEHOLDER: Replace with your images and links */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="#" 
               target="_blank" 
@@ -211,7 +211,7 @@ const Kids = () => {
         {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="#" 
               target="_blank" 
@@ -303,7 +303,7 @@ const Kids = () => {
         {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="#" 
               target="_blank" 
@@ -373,7 +373,7 @@ const Kids = () => {
         {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="#" 
               target="_blank" 

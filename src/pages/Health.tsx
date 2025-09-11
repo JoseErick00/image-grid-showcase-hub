@@ -140,7 +140,7 @@ const Health = () => {
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/469mPbz" 
               target="_blank" 
@@ -207,7 +207,7 @@ const Health = () => {
         {/* Small Banner 03 & 04 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/47Cpehw" 
               target="_blank" 
@@ -299,7 +299,7 @@ const Health = () => {
         {/* Small Banner 05 & 06 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/46d32rX" 
               target="_blank" 
@@ -369,7 +369,7 @@ const Health = () => {
         {/* Small Banner 07 & 08 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/4glL9Ma" 
               target="_blank" 
