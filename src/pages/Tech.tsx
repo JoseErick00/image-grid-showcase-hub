@@ -297,31 +297,31 @@ const Tech = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Small Banner 01 & 02 - PLACEHOLDER: Replace with your images and links */}
+        {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/41OutH5" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 01"
+                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
+                alt="Laptop Screen Extender for multitasking professionals"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4nx1Uqd" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 02"
+                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
+                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -330,27 +330,27 @@ const Tech = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/41OutH5" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 01"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
+                alt="Laptop Screen Extender for multitasking professionals"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4nx1Uqd" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 02"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
+                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
@@ -364,31 +364,31 @@ const Tech = () => {
           buttonColor="#30bdbe"
         />
 
-        {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
+        {/* Small Banner 03 & 04 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/47DLKqg" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 03"
+                src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
+                alt="GOOVIS Art XR 110 virtual screen with 4,496PPI"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4n3i5LW" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 04"
+                src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
+                alt="Speediance Home Gym"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -397,27 +397,27 @@ const Tech = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/47DLKqg" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 03"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
+                alt="GOOVIS Art XR 110 virtual screen with 4,496PPI"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4n3i5LW" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 04"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
+                alt="Speediance Home Gym"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
