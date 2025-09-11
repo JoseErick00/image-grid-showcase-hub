@@ -142,7 +142,7 @@ const Incredibles = () => {
         {/* Small Banner 01 & 02 - PLACEHOLDER: Replace with your images and links */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/41Q0wXf" 
               target="_blank" 
@@ -170,7 +170,7 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12">
+          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/41Q0wXf" 
               target="_blank" 
@@ -209,7 +209,7 @@ const Incredibles = () => {
         {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/4pg4Ski" 
               target="_blank" 
@@ -237,7 +237,7 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12">
+          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/4pg4Ski" 
               target="_blank" 
@@ -301,7 +301,7 @@ const Incredibles = () => {
         {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/4ntPaAA" 
               target="_blank" 
@@ -329,7 +329,7 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12">
+          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/4ntPaAA" 
               target="_blank" 
@@ -371,7 +371,7 @@ const Incredibles = () => {
         {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/3VHC9au" 
               target="_blank" 
@@ -399,7 +399,7 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12">
+          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
             <a 
               href="https://amzn.to/3VHC9au" 
               target="_blank" 
