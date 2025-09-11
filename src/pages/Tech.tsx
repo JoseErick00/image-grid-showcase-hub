@@ -300,12 +300,12 @@ const Tech = () => {
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/41OutH5" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
@@ -317,7 +317,7 @@ const Tech = () => {
               href="https://amzn.to/4nx1Uqd" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
@@ -367,12 +367,12 @@ const Tech = () => {
         {/* Small Banner 03 & 04 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/47DLKqg" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
@@ -384,7 +384,7 @@ const Tech = () => {
               href="https://amzn.to/4n3i5LW" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
@@ -459,12 +459,12 @@ const Tech = () => {
         {/* Small Banner 05 & 06 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/42rQLi2" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
@@ -476,7 +476,7 @@ const Tech = () => {
               href="https://amzn.to/46hrLeM" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
@@ -529,12 +529,12 @@ const Tech = () => {
         {/* Small Banner 07 & 08 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/47z5Lyb" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
@@ -546,7 +546,7 @@ const Tech = () => {
               href="https://amzn.to/4m7uOfr" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
