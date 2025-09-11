@@ -1,6 +1,5 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
-import middleBannerTabletS from "@/assets/middle_banner_tabletS01.jpg";
 
 const Sports = () => {
   const handleShare = async () => {
@@ -387,7 +386,7 @@ const Sports = () => {
               />
               {/* Tablet banner */}
               <img 
-                src={middleBannerTabletS}
+                src="/lovable-uploads/efe91c75-3862-4b23-94e7-638959eacca7.png"
                 alt="Speediance Gym Monster Tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />

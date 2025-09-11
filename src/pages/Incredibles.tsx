@@ -1,6 +1,5 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
-import middleBannerTabletInc from "@/assets/middle_banner_tabletInc01.jpg";
 
 const Incredibles = () => {
   const handleShare = async () => {
@@ -283,7 +282,7 @@ const Incredibles = () => {
               />
               {/* Tablet banner */}
               <img 
-                src={middleBannerTabletInc}
+                src="/lovable-uploads/be62ca83-68b4-4ded-a7fa-d8c601a33a4c.png"
                 alt="Incredibles Middle Banner Tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
