@@ -456,31 +456,31 @@ const Tech = () => {
           buttonColor="#30bdbe"
         />
 
-        {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
+        {/* Small Banner 05 & 06 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/42rQLi2" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 05"
+                src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
+                alt="Homey Pro - The ultimate smart home hub"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/46hrLeM" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 06"
+                src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
+                alt="Atmos Surround Sound System - Revolutionize Your Gaming Sound Experience"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -489,27 +489,27 @@ const Tech = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/42rQLi2" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
+                alt="Homey Pro - The ultimate smart home hub"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/46hrLeM" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
+                alt="Atmos Surround Sound System - Revolutionize Your Gaming Sound Experience"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
@@ -526,31 +526,31 @@ const Tech = () => {
           buttonColor="#30bdbe"
         />
 
-        {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
+        {/* Small Banner 07 & 08 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/47z5Lyb" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 07"
+                src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
+                alt="EMOPET AI Desk Robot Companion - Hi, what's your name?"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4m7uOfr" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 08"
+                src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
+                alt="Unitree Go2 Robot Dog"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -559,27 +559,27 @@ const Tech = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/47z5Lyb" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
+                alt="EMOPET AI Desk Robot Companion - Hi, what's your name?"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4m7uOfr" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Tech Banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
+                alt="Unitree Go2 Robot Dog"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
