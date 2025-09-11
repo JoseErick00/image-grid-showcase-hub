@@ -276,13 +276,13 @@ const Incredibles = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/05e9229e-e4c0-4578-b6f6-167686fa746b.png"
+                src="/lovable-uploads/a628407b-cabc-4ef0-a110-b1f80f929df7.png"
                 alt="Incredibles Middle Banner"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/89475a8d-0804-4f20-9800-338f5fc021d5.png"
+                src="/lovable-uploads/c07af6b8-341d-4ff4-bc50-6f860f8632f5.png"
                 alt="Incredibles Middle Banner Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
