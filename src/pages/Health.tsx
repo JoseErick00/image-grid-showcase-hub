@@ -145,7 +145,7 @@ const Health = () => {
               href="https://amzn.to/469mPbz" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/ab6de73d-0a86-4580-bd2f-bf20f7c80cd8.png"
@@ -157,7 +157,7 @@ const Health = () => {
               href="https://amzn.to/3Ke00Mw" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/d1f230af-956d-40cc-91cc-41247b47756c.png"
@@ -212,7 +212,7 @@ const Health = () => {
               href="https://amzn.to/47Cpehw" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/9608cee8-1535-4ce8-ac04-ee61b4e32208.png"
@@ -224,7 +224,7 @@ const Health = () => {
               href="https://amzn.to/45W1dka" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/8cd6889f-8307-43a6-a66a-6f645529107d.png"
@@ -304,7 +304,7 @@ const Health = () => {
               href="https://amzn.to/46d32rX" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/0b524f63-d5c2-4ddf-ac23-33dfdeaafbd4.png"
@@ -316,7 +316,7 @@ const Health = () => {
               href="https://amzn.to/3HR0mYX" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/3c523f09-422f-44b7-abe0-e44de492f254.png"
@@ -374,7 +374,7 @@ const Health = () => {
               href="https://amzn.to/4glL9Ma" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/03f4892b-8848-4e51-97ee-62ef4ba54b10.png"
@@ -386,7 +386,7 @@ const Health = () => {
               href="https://amzn.to/3VG7iuX" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/d69bc2a3-6df4-46ae-9f27-831f086f0dda.png"

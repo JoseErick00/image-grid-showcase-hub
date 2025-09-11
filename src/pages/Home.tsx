@@ -144,13 +144,13 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
-          {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          {/* Tablet: Two columns (matches mobile styling) */}
+          <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/4pamuOq" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
                 src="/lovable-uploads/d7e4a8dc-8794-4ca8-a7c3-ec7325e002a3.png"
@@ -162,7 +162,47 @@ const Home = () => {
               href="https://amzn.to/4lXVDCJ" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
+                alt="High-Performance Blender"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+
+          {/* Desktop: Two columns */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/d7e4a8dc-8794-4ca8-a7c3-ec7325e002a3.png"
+                alt="SMEG Mixer - Optimal Robustness"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
+                alt="High-Performance Blender"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
@@ -217,7 +257,7 @@ const Home = () => {
               href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601398799470" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/9e9e2dc1-d1f1-4902-a214-88287dd73197.png"
@@ -229,7 +269,7 @@ const Home = () => {
               href="https://amzn.to/4pb42W6" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/1a0c3363-d8b4-4b74-b779-367f7dfb0d2e.png"
@@ -309,7 +349,7 @@ const Home = () => {
               href="https://amzn.to/45TIhm4" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/5c98a00d-73ad-4db3-93ad-07d905a258fd.png"
@@ -321,7 +361,7 @@ const Home = () => {
               href="https://amzn.to/3HYwDxa" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/5a67d369-f742-41b6-a0da-ad244452ffad.png"
@@ -379,7 +419,7 @@ const Home = () => {
               href="https://amzn.to/41GXGnk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/a098f6fd-01bc-4d52-a499-d80da24aa452.png"
@@ -391,7 +431,7 @@ const Home = () => {
               href="https://amzn.to/3JQlBuA" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/d8a74dd7-4cbe-4e8c-a24e-bfbff41a5e06.png"
