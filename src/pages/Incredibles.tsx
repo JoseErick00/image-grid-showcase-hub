@@ -150,7 +150,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/b7b57966-e910-44aa-a20b-f2a70c2fdd2f.png"
+                src="/Small_Banner_Inc01.jpg"
                 alt="Incredibles Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -162,7 +162,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/5bbacd6c-ebc7-42c5-8f69-962b8afb356c.png"
+                src="/Small_Banner_Inc02.jpg"
                 alt="Incredibles Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -178,7 +178,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/b7b57966-e910-44aa-a20b-f2a70c2fdd2f.png"
+                src="/Small_Banner_Inc01.jpg"
                 alt="Incredibles Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -190,7 +190,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/5bbacd6c-ebc7-42c5-8f69-962b8afb356c.png"
+                src="/Small_Banner_Inc02.jpg"
                 alt="Incredibles Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -217,7 +217,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/ff3d2395-57b5-4ebd-b196-9059fd7781de.png"
+                src="/Small_Banner_Inc03.jpg"
                 alt="Incredibles Banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -229,7 +229,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/76906b31-b8d5-4f6d-ba63-ded56fc84ca4.png"
+                src="/Small_Banner_Inc04.jpg"
                 alt="Incredibles Banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -245,7 +245,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/ff3d2395-57b5-4ebd-b196-9059fd7781de.png"
+                src="/Small_Banner_Inc03.jpg"
                 alt="Incredibles Banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -257,7 +257,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/76906b31-b8d5-4f6d-ba63-ded56fc84ca4.png"
+                src="/Small_Banner_Inc04.jpg"
                 alt="Incredibles Banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -276,13 +276,13 @@ const Incredibles = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/eeb91070-1a10-4fce-be05-6967d36fa93f.png"
+                src="/middle_banner_Inc01.jpg"
                 alt="Incredibles Middle Banner"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/b1e52070-3f4a-40da-9a58-36993d3cb636.png"
+                src="/middle_banner_mobileInc01.jpg"
                 alt="Incredibles Middle Banner Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -309,7 +309,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/7fb8fa86-708f-48e2-b1b4-6e0de3667dd6.png"
+                src="/Small_Banner_Inc05.jpg"
                 alt="Incredibles Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -321,7 +321,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/293ee0cd-c836-49ed-8f6a-6ba41ff6a94e.png"
+                src="/Small_Banner_Inc06.jpg"
                 alt="Incredibles Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -337,7 +337,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/7fb8fa86-708f-48e2-b1b4-6e0de3667dd6.png"
+                src="/Small_Banner_Inc05.jpg"
                 alt="Incredibles Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -349,7 +349,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/293ee0cd-c836-49ed-8f6a-6ba41ff6a94e.png"
+                src="/Small_Banner_Inc06.jpg"
                 alt="Incredibles Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -379,7 +379,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/c8d265cd-c697-47ce-a0f5-95f9c0c7aa7f.png"
+                src="/Small_Banner_Inc07.jpg"
                 alt="Incredibles Banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -391,7 +391,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/4ccbcced-e536-425e-800f-0ffc4a95b186.png"
+                src="/Small_Banner_Inc08.jpg"
                 alt="Incredibles Banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -407,7 +407,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/c8d265cd-c697-47ce-a0f5-95f9c0c7aa7f.png"
+                src="/Small_Banner_Inc07.jpg"
                 alt="Incredibles Banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -419,7 +419,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/4ccbcced-e536-425e-800f-0ffc4a95b186.png"
+                src="/Small_Banner_Inc08.jpg"
                 alt="Incredibles Banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
