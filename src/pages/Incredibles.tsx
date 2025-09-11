@@ -150,7 +150,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/05e9229e-e4c0-4578-b6f6-167686fa746b.png"
+                src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
                 alt="Incredibles Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -162,7 +162,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/89475a8d-0804-4f20-9800-338f5fc021d5.png"
+                src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
                 alt="Incredibles Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -178,7 +178,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/05e9229e-e4c0-4578-b6f6-167686fa746b.png"
+                src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
                 alt="Incredibles Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -190,7 +190,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/89475a8d-0804-4f20-9800-338f5fc021d5.png"
+                src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
                 alt="Incredibles Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -217,7 +217,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
+                src="/lovable-uploads/c0f2c3b1-9727-4d77-80c6-f660a5b69061.png"
                 alt="Incredibles Banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -229,7 +229,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
+                src="/lovable-uploads/28ece2a0-40a7-45e8-8c1e-1a3695f3b948.png"
                 alt="Incredibles Banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -245,7 +245,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
+                src="/lovable-uploads/c0f2c3b1-9727-4d77-80c6-f660a5b69061.png"
                 alt="Incredibles Banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -257,7 +257,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
+                src="/lovable-uploads/28ece2a0-40a7-45e8-8c1e-1a3695f3b948.png"
                 alt="Incredibles Banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -276,13 +276,13 @@ const Incredibles = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/b46501c9-bcd2-4731-b9d6-3b010ebc416e.png"
+                src="/lovable-uploads/05e9229e-e4c0-4578-b6f6-167686fa746b.png"
                 alt="Incredibles Middle Banner"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/4bc55f24-3394-4ea2-a7c2-4a9132932bf1.png"
+                src="/lovable-uploads/89475a8d-0804-4f20-9800-338f5fc021d5.png"
                 alt="Incredibles Middle Banner Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -309,7 +309,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/c0f2c3b1-9727-4d77-80c6-f660a5b69061.png"
+                src="/lovable-uploads/faa89934-5cb2-4128-932d-fedbc88d0372.png"
                 alt="Incredibles Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -321,7 +321,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/28ece2a0-40a7-45e8-8c1e-1a3695f3b948.png"
+                src="/lovable-uploads/1d4475b0-a5c0-4993-942f-02f48aa87542.png"
                 alt="Incredibles Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -337,7 +337,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/c0f2c3b1-9727-4d77-80c6-f660a5b69061.png"
+                src="/lovable-uploads/faa89934-5cb2-4128-932d-fedbc88d0372.png"
                 alt="Incredibles Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -349,7 +349,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/28ece2a0-40a7-45e8-8c1e-1a3695f3b948.png"
+                src="/lovable-uploads/1d4475b0-a5c0-4993-942f-02f48aa87542.png"
                 alt="Incredibles Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -379,7 +379,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/faa89934-5cb2-4128-932d-fedbc88d0372.png"
+                src="/lovable-uploads/b46501c9-bcd2-4731-b9d6-3b010ebc416e.png"
                 alt="Incredibles Banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -391,7 +391,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/1d4475b0-a5c0-4993-942f-02f48aa87542.png"
+                src="/lovable-uploads/4bc55f24-3394-4ea2-a7c2-4a9132932bf1.png"
                 alt="Incredibles Banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -407,7 +407,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/faa89934-5cb2-4128-932d-fedbc88d0372.png"
+                src="/lovable-uploads/b46501c9-bcd2-4731-b9d6-3b010ebc416e.png"
                 alt="Incredibles Banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -419,7 +419,7 @@ const Incredibles = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/lovable-uploads/1d4475b0-a5c0-4993-942f-02f48aa87542.png"
+                src="/lovable-uploads/4bc55f24-3394-4ea2-a7c2-4a9132932bf1.png"
                 alt="Incredibles Banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
