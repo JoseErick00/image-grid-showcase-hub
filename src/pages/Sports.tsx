@@ -251,7 +251,7 @@ const Sports = () => {
               href="https://amzn.to/3VGuGsl" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
@@ -263,7 +263,7 @@ const Sports = () => {
               href="https://amzn.to/4pm6lWC" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/ffd48197-8840-4651-89c3-38b46097103b.png"
@@ -318,7 +318,7 @@ const Sports = () => {
               href="https://amzn.to/42pG3sm" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/c6532d58-687d-4ace-bc72-2ccfa066c0e2.png"
@@ -330,7 +330,7 @@ const Sports = () => {
               href="https://amzn.to/3V6WPJ1" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/bfab75e9-e678-43b5-8f5f-6e4c43fde904.png"
@@ -410,7 +410,7 @@ const Sports = () => {
               href="https://amzn.to/4nn0SNh" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/b692cc47-6893-4c5a-b016-779216c0e8e0.png"
@@ -422,7 +422,7 @@ const Sports = () => {
               href="https://amzn.to/46fb97a" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/f42b7a30-fb8b-4b82-8cb4-9f4f05055604.png"
@@ -480,7 +480,7 @@ const Sports = () => {
               href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601246820679" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/93d545e2-d27c-4643-9a6b-eb7e7440f941.png"
@@ -492,7 +492,7 @@ const Sports = () => {
               href="https://amzn.to/3VcoDvt" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/b3905ecb-db7d-44eb-95a1-bd2a729fe49e.png"
