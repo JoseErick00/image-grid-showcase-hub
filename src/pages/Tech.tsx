@@ -305,7 +305,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -317,7 +317,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -333,7 +333,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -345,7 +345,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -372,7 +372,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -384,7 +384,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -400,7 +400,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -412,7 +412,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -464,7 +464,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -476,7 +476,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -492,7 +492,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -504,7 +504,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -534,7 +534,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -546,7 +546,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -562,7 +562,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
@@ -574,7 +574,7 @@ const Tech = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
             >
               <img 
                 src="/placeholder.svg"
