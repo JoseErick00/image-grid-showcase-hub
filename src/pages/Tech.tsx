@@ -1,4 +1,5 @@
 import CategoryGrid from "@/components/CategoryGrid";
+import MailchimpSubscription from "@/components/MailchimpSubscription";
 
 const Tech = () => {
   const handleShare = async () => {
@@ -295,14 +296,294 @@ const Tech = () => {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Small Banner 01 & 02 - PLACEHOLDER: Replace with your images and links */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 01"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 02"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 01"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 02"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* First 9 items */}
         <CategoryGrid 
-          items={techProducts}
+          items={techProducts.slice(0, 9)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#30bdbe"
         />
+
+        {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Large Banner - Middle Banner 01 - PLACEHOLDER: Replace with your images and links */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Middle Banner - Wide"
+                className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Middle Banner"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Second 9 items */}
+        <CategoryGrid 
+          items={techProducts.slice(9, 18)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#30bdbe"
+        />
+
+        {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
+
+        {/* Remaining items */}
+        <CategoryGrid 
+          items={techProducts.slice(18)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#30bdbe"
+        />
+
+        {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 07"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 08"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 07"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/placeholder.svg"
+                alt="Tech Banner 08"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
