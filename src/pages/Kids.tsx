@@ -87,11 +87,12 @@ const Kids = () => {
         />
       </div>
 
+      {/* Title and Subtitle */}
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[85%] md:max-w-[85%] mx-auto">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
           Smart fun for small humans
         </h1>
-        <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           From clever toys to parenting hacks, we handpick the cutest chaos-making gear across global marketplaces.
         </p>
 
@@ -138,6 +139,7 @@ const Kids = () => {
         </div>
       </div>
 
+      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <CategoryGrid 
           items={kidsProducts}

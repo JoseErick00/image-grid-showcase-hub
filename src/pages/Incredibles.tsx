@@ -85,57 +85,60 @@ const Incredibles = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-            Totally random. Totally worth it.
-          </h1>
-          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
-            Weird, wonderful, wildly unnecessary—but you'll want them all. These are the scroll-stoppers from Temu, AliExpress, Amazon and beyond.
-          </p>
+      {/* Title and Subtitle */}
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
+          Totally random. Totally worth it.
+        </h1>
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
+          Weird, wonderful, wildly unnecessary—but you'll want them all. These are the scroll-stoppers from Temu, AliExpress, Amazon and beyond.
+        </p>
 
-          {/* Social Media Icons */}
-          <div className="flex justify-center items-center gap-8 mt-8">
-            <a 
-              href="https://www.instagram.com/ineed_stores" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex flex-col items-center hover:opacity-80 transition-opacity"
-            >
-              <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[30px] h-[30px] mb-2" />
-              <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
-            </a>
-            <a 
-              href="https://www.pinterest.com/iNeedShowcase/_profile" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex flex-col items-center hover:opacity-80 transition-opacity"
-            >
-              <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[30px] h-[30px] mb-2" />
-              <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
-            </a>
-            <button 
-              onClick={handleShare}
-              className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
-            >
-              <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[30px] h-[30px] mb-2" />
-              <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
-            </button>
-          </div>
+        {/* Social Media Icons */}
+        <div className="flex justify-center items-center gap-8 mt-8">
+          <a 
+            href="https://www.instagram.com/ineed_stores" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[30px] h-[30px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+          </a>
+          <a 
+            href="https://www.pinterest.com/iNeedShowcase/_profile" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-80 transition-opacity"
+          >
+            <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[30px] h-[30px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+          </a>
+          <button 
+            onClick={handleShare}
+            className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+          >
+            <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[30px] h-[30px] mb-2" />
+            <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+          </button>
+        </div>
 
-          {/* Checklist Box */}
-          <div className="flex justify-center mt-12">
-            <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-              <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
-              <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-                <li>1. You want internet's coolest treasures.</li>
-                <li>2. You want internet's most incredible finds.</li>
-                <li>3. You need clever gadgets to pure fun finds.</li>
-                <li>4. You want to browse cool products.</li>
-              </ol>
-            </div>
+        {/* Checklist Box */}
+        <div className="flex justify-center mt-12">
+          <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
+              <li>1. You want internet's coolest treasures.</li>
+              <li>2. You want internet's most incredible finds.</li>
+              <li>3. You need clever gadgets to pure fun finds.</li>
+              <li>4. You want to browse cool products.</li>
+            </ol>
           </div>
         </div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <CategoryGrid
           items={incrediblesProducts}
           columns={2}
