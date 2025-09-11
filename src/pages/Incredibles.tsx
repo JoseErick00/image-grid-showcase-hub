@@ -144,25 +144,25 @@ const Incredibles = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/41Q0wXf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc01.jpg"
                 alt="Incredibles Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3HVwk6l" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc02.jpg"
                 alt="Incredibles Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -172,25 +172,25 @@ const Incredibles = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/41Q0wXf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc01.jpg"
                 alt="Incredibles Banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3HVwk6l" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc02.jpg"
                 alt="Incredibles Banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -211,25 +211,25 @@ const Incredibles = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/4pg4Ski" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc03.jpg"
                 alt="Incredibles Banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3V7IcFj" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc04.jpg"
                 alt="Incredibles Banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -239,25 +239,25 @@ const Incredibles = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/4pg4Ski" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc03.jpg"
                 alt="Incredibles Banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3V7IcFj" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc04.jpg"
                 alt="Incredibles Banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -269,20 +269,20 @@ const Incredibles = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="#" 
+              href="https://amzn.to/3Vw5rsV" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/placeholder.svg"
+                src="/middle_banner_Inc01.jpg"
                 alt="Incredibles Middle Banner"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/placeholder.svg"
+                src="/middle_banner_mobileInc01.jpg"
                 alt="Incredibles Middle Banner Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -303,25 +303,25 @@ const Incredibles = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/4ntPaAA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc05.jpg"
                 alt="Incredibles Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/48c0H2V" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc06.jpg"
                 alt="Incredibles Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -331,25 +331,25 @@ const Incredibles = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/4ntPaAA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc05.jpg"
                 alt="Incredibles Banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/48c0H2V" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc06.jpg"
                 alt="Incredibles Banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -373,25 +373,25 @@ const Incredibles = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
-              href="#" 
+              href="https://amzn.to/3VHC9au" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc07.jpg"
                 alt="Incredibles Banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4niVBGk" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc08.jpg"
                 alt="Incredibles Banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -401,25 +401,25 @@ const Incredibles = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/3VHC9au" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc07.jpg"
                 alt="Incredibles Banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/4niVBGk" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
             >
               <img 
-                src="/placeholder.svg"
+                src="/Small_Banner_Inc08.jpg"
                 alt="Incredibles Banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
