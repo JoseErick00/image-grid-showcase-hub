@@ -198,18 +198,6 @@ const Home = () => {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-            <a 
-              href="https://amzn.to/4lXVDCJ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
-                alt="High-Performance Blender"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
           </div>
           
           {/* Mobile: Stacked */}
