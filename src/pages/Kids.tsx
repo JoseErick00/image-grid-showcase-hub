@@ -127,8 +127,8 @@ const Kids = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center" style={{ backgroundColor: '#856cb0' }}>
-            <h2 className="font-omne-medium text-white text-base md:text-lg mb-6 text-left">Checklist you need:</h2>
-            <ol className="font-omne-regular text-white text-sm md:text-base space-y-3 text-left">
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
               <li>1. You got a new house</li>
               <li>2. You need to buy a gift for someone.</li>
               <li>3. You want to make your house cooler.</li>
