@@ -203,7 +203,7 @@ const Incredibles = () => {
           items={incrediblesProducts.slice(0, 9)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#5ebb47"
         />
 
         {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
@@ -295,7 +295,7 @@ const Incredibles = () => {
           items={incrediblesProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#5ebb47"
         />
 
         {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
@@ -365,7 +365,7 @@ const Incredibles = () => {
           items={incrediblesProducts.slice(18)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#5ebb47"
         />
 
         {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}

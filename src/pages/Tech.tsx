@@ -361,7 +361,7 @@ const Tech = () => {
           items={techProducts.slice(0, 9)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#30bdbe"
         />
 
         {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
@@ -453,7 +453,7 @@ const Tech = () => {
           items={techProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#30bdbe"
         />
 
         {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
@@ -523,7 +523,7 @@ const Tech = () => {
           items={techProducts.slice(18)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#30bdbe"
         />
 
         {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}

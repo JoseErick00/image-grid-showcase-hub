@@ -205,7 +205,7 @@ const Kids = () => {
           items={kidsProducts.slice(0, 9)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#856cb0"
         />
 
         {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
@@ -297,7 +297,7 @@ const Kids = () => {
           items={kidsProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#856cb0"
         />
 
         {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
@@ -367,7 +367,7 @@ const Kids = () => {
           items={kidsProducts.slice(18)}
           columns={2}
           aspectRatio="portrait"
-          buttonColor="#d01e23"
+          buttonColor="#856cb0"
         />
 
         {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
