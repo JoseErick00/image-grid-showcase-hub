@@ -125,13 +125,13 @@ const Incredibles = () => {
 
           {/* Checklist Box */}
           <div className="flex justify-center mt-12">
-            <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center" style={{ backgroundColor: '#5ebb47' }}>
+            <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
               <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
               <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-                <li>1. You got a new house</li>
-                <li>2. You need to buy a gift for someone.</li>
-                <li>3. You want to make your house cooler.</li>
-                <li>4. You want just browser cool products.</li>
+                <li>1. You want internet's coolest treasures.</li>
+                <li>2. You want internet's most incredible finds.</li>
+                <li>3. You need clever gadgets to pure fun finds.</li>
+                <li>4. You want to browse cool products.</li>
               </ol>
             </div>
           </div>
