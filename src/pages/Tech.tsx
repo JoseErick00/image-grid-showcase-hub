@@ -440,7 +440,7 @@ const Tech = () => {
               />
               {/* Tablet banner */}
               <img 
-                src="/lovable-uploads/21802d39-e764-4bc8-895f-78ffe02f9643.png"
+                src="/lovable-uploads/203b5a53-a951-4c41-9665-475fbb77f446.png"
                 alt="Apple iMac Tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />

@@ -313,7 +313,7 @@ const Home = () => {
               />
               {/* Tablet banner */}
               <img 
-                src="/lovable-uploads/203b5a53-a951-4c41-9665-475fbb77f446.png"
+                src="/lovable-uploads/21802d39-e764-4bc8-895f-78ffe02f9643.png"
                 alt="Middle Banner 01 Tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
