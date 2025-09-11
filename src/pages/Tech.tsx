@@ -434,13 +434,13 @@ const Tech = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/d1578abb-66a3-4ea0-accb-7939452acac9.png"
+                src="/lovable-uploads/bc69cde8-d45e-416b-b8f0-71558500fa68.png"
                 alt="Apple iMac - The best all-in-one ever!"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/bc69cde8-d45e-416b-b8f0-71558500fa68.png"
+                src="/lovable-uploads/d1578abb-66a3-4ea0-accb-7939452acac9.png"
                 alt="Apple iMac - The best all-in-one ever!"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
