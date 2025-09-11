@@ -423,25 +423,25 @@ const Tech = () => {
           </div>
         </div>
 
-        {/* Large Banner - Middle Banner - PLACEHOLDER: Replace with your image and link */}
+        {/* Large Banner - Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="#" 
+              href="https://amzn.to/41QlNA5" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/placeholder.svg"
-                alt="Tech Middle Banner"
+                src="/lovable-uploads/d1578abb-66a3-4ea0-accb-7939452acac9.png"
+                alt="Apple iMac - The best all-in-one ever!"
                 className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/placeholder.svg"
-                alt="Tech Middle Banner Mobile"
+                src="/lovable-uploads/bc69cde8-d45e-416b-b8f0-71558500fa68.png"
+                alt="Apple iMac - The best all-in-one ever!"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
