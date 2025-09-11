@@ -246,7 +246,7 @@ const Sports = () => {
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/3VGuGsl" 
               target="_blank" 
@@ -313,7 +313,7 @@ const Sports = () => {
         {/* Small Banner 03 & 04 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/42pG3sm" 
               target="_blank" 
@@ -405,7 +405,7 @@ const Sports = () => {
         {/* Small Banner 05 & 06 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/4nn0SNh" 
               target="_blank" 
@@ -475,7 +475,7 @@ const Sports = () => {
         {/* Small Banner 07 & 08 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601246820679" 
               target="_blank" 
