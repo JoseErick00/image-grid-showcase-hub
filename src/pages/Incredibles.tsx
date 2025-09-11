@@ -142,12 +142,12 @@ const Incredibles = () => {
         {/* Small Banner 01 & 02 - PLACEHOLDER: Replace with your images and links */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/41Q0wXf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
@@ -159,7 +159,7 @@ const Incredibles = () => {
               href="https://amzn.to/3HVwk6l" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
@@ -170,12 +170,12 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/41Q0wXf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
@@ -187,7 +187,7 @@ const Incredibles = () => {
               href="https://amzn.to/3HVwk6l" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
@@ -209,12 +209,12 @@ const Incredibles = () => {
         {/* Small Banner 03 & 04 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/4pg4Ski" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/c0f2c3b1-9727-4d77-80c6-f660a5b69061.png"
@@ -226,7 +226,7 @@ const Incredibles = () => {
               href="https://amzn.to/3V7IcFj" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/28ece2a0-40a7-45e8-8c1e-1a3695f3b948.png"
@@ -237,12 +237,12 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/4pg4Ski" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/c0f2c3b1-9727-4d77-80c6-f660a5b69061.png"
@@ -254,7 +254,7 @@ const Incredibles = () => {
               href="https://amzn.to/3V7IcFj" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/28ece2a0-40a7-45e8-8c1e-1a3695f3b948.png"
@@ -301,12 +301,12 @@ const Incredibles = () => {
         {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/4ntPaAA" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/faa89934-5cb2-4128-932d-fedbc88d0372.png"
@@ -318,7 +318,7 @@ const Incredibles = () => {
               href="https://amzn.to/48c0H2V" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/1d4475b0-a5c0-4993-942f-02f48aa87542.png"
@@ -329,12 +329,12 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/4ntPaAA" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/faa89934-5cb2-4128-932d-fedbc88d0372.png"
@@ -346,7 +346,7 @@ const Incredibles = () => {
               href="https://amzn.to/48c0H2V" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/1d4475b0-a5c0-4993-942f-02f48aa87542.png"
@@ -371,12 +371,12 @@ const Incredibles = () => {
         {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-[540px] mx-auto">
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             <a 
               href="https://amzn.to/3VHC9au" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/b46501c9-bcd2-4731-b9d6-3b010ebc416e.png"
@@ -388,7 +388,7 @@ const Incredibles = () => {
               href="https://amzn.to/4niVBGk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/4bc55f24-3394-4ea2-a7c2-4a9132932bf1.png"
@@ -399,12 +399,12 @@ const Incredibles = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12 max-w-[540px] mx-auto">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/3VHC9au" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/b46501c9-bcd2-4731-b9d6-3b010ebc416e.png"
@@ -416,7 +416,7 @@ const Incredibles = () => {
               href="https://amzn.to/4niVBGk" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px] max-w-[540px] mx-auto"
             >
               <img 
                 src="/lovable-uploads/4bc55f24-3394-4ea2-a7c2-4a9132932bf1.png"
