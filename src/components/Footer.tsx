@@ -33,29 +33,16 @@ const Footer = () => {
             <img src="/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png" alt="i.need" className="w-[350px] h-[150px] object-contain" />
           </div>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 mb-6">
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <Mail size={18} />
-              <span className="font-omne-regular">team@ineedstores.com</span>
-            </div>
-            <div className="flex items-center space-x-2 text-muted-foreground">
-              <Phone size={18} />
-              <span className="font-omne-regular">+1 (555) 123-4567</span>
-            </div>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="flex justify-center space-x-6 mb-8">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                aria-label={social.name}
-              >
-                <social.icon size={24} />
-              </a>
-            ))}
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="font-omne-medium text-2xl mb-4 text-foreground">
+              The Internet's Coolest Corner for Cool Stuff
+            </h2>
+            <p className="font-omne-regular text-muted-foreground leading-relaxed">
+              At ineed, we don't sell ordinary—we showcase extraordinary. Our mission is simple: find the most awesome, beautiful, clever, and just plain cool products floating around platforms like Amazon, Shopee, Alibaba, AliExpress, Temu, and eBay, and bring them together in one jaw-dropping online collection.
+            </p>
+            <p className="font-omne-regular text-muted-foreground leading-relaxed mt-4">
+              From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered.
+            </p>
           </div>
         </div>
 
