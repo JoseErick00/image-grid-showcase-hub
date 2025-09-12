@@ -232,13 +232,15 @@ const Home = () => {
         {/* Brand animated banner */}
         <section aria-label="Brand animated banner" className="my-12 flex justify-center">
           <div className="w-[600px] h-[300px] max-w-[85%] md:max-w-[600px] flex items-center justify-center overflow-hidden rounded-lg bg-muted">
-            <img
-              src="/lovable-uploads/brand_video01.webp"
-              alt="Brand animated banner - Home selection"
-              className="w-[600px] h-[300px] object-contain"
-              loading="lazy"
-              onError={(e) => { e.currentTarget.src = '/lovable-uploads/cdbc94fd-32cd-4bfd-b792-ed07a206994a.png'; }}
-            />
+            <picture>
+              <source srcSet="/lovable-uploads/brand_video01.webp" type="image/webp" />
+              <img
+                src="/lovable-uploads/b853d9d5-7822-4990-8551-638eadf05715.png"
+                alt="Brand animated banner - Home selection (animated if supported)"
+                className="w-[600px] h-[300px] object-contain"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </section>
 
