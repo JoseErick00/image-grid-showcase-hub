@@ -323,25 +323,31 @@ const Kids = () => {
           </div>
         </div>
 
-        {/* Large Banner - Middle Banner - PLACEHOLDER: Replace with your image and link */}
+        {/* Large Banner - Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="#" 
+              href="https://amzn.to/4gjsIYp" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/placeholder.svg"
-                alt="Kids Middle Banner"
-                className="hidden md:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/bb143a29-abac-4459-9862-e7af7b218d15.png"
+                alt="PlayStation 5 Pro Kids Middle Banner"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/lovable-uploads/8192d749-f331-4a38-a4cc-0021cf14a63c.png"
+                alt="PlayStation 5 Pro Kids Middle Banner Tablet"
+                className="hidden md:block lg:hidden w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/placeholder.svg"
-                alt="Kids Middle Banner Mobile"
+                src="/lovable-uploads/3a7c8a1f-f0c2-422b-8f93-389f06a6483b.png"
+                alt="PlayStation 5 Pro Kids Middle Banner Mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
