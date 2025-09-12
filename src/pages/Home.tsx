@@ -229,6 +229,19 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Animated Brand Video */}
+        <div className="my-12 flex justify-center">
+          <div 
+            className="w-[600px] h-[300px] max-w-[85%] flex items-center justify-center overflow-hidden rounded-lg"
+          >
+            <img 
+              src="/lovable-uploads/770e549a-416b-4968-91b6-ffdc33ee632a.png"
+              alt="Brand Video Animation"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         {/* First 9 items */}
         <CategoryGrid 
           items={homeProducts.slice(0, 9)}
