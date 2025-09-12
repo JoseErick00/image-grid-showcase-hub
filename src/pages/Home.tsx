@@ -229,6 +229,18 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Brand animated banner */}
+        <section aria-label="Brand animated banner" className="my-12 flex justify-center">
+          <div className="w-[600px] h-[300px] max-w-[85%] md:max-w-[600px] flex items-center justify-center overflow-hidden rounded-lg bg-muted">
+            <img
+              src="/lovable-uploads/baf11501-4bbc-4926-9694-9f532479ddce.png"
+              alt="Brand animated banner - Home selection"
+              className="w-[600px] h-[300px] object-contain"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* First 9 items */}
         <CategoryGrid 
           items={homeProducts.slice(0, 9)}
