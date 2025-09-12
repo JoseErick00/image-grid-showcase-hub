@@ -362,31 +362,31 @@ const Kids = () => {
           buttonColor="#856cb0"
         />
 
-        {/* Small Banner 05 & 06 - PLACEHOLDER: Replace with your images and links */}
+        {/* Small Banner 05 & 06 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="#" 
+              href="https://amzn.to/3IiFtG8" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 05"
+                src="/lovable-uploads/98b45fe6-66f9-4263-b4f4-7dac9b9ebb0f.png"
+                alt="3D Puzzles"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3VJubO7" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 06"
+                src="/lovable-uploads/7fdbd92d-ef35-48c4-b9d9-e78a65d1da43.png"
+                alt="Cool LED lights on the wheels"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -395,27 +395,27 @@ const Kids = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/3IiFtG8" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/98b45fe6-66f9-4263-b4f4-7dac9b9ebb0f.png"
+                alt="3D Puzzles"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3VJubO7" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/7fdbd92d-ef35-48c4-b9d9-e78a65d1da43.png"
+                alt="Cool LED lights on the wheels"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
@@ -432,31 +432,31 @@ const Kids = () => {
           buttonColor="#856cb0"
         />
 
-        {/* Small Banner 07 & 08 - PLACEHOLDER: Replace with your images and links */}
+        {/* Small Banner 07 & 08 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="#" 
+              href="https://amzn.to/3VLg2jv" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 07"
+                src="/lovable-uploads/9fbb1ba8-cad0-43c6-b24b-a73ddddfabdd.png"
+                alt="NERF Rival Nemesis MXVII"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3HXXae6" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 08"
+                src="/lovable-uploads/f939782b-fc71-4011-aa86-7ac2cf30cc14.png"
+                alt="Loona sees and understands your world"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -465,27 +465,27 @@ const Kids = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="#" 
+              href="https://amzn.to/3VLg2jv" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/9fbb1ba8-cad0-43c6-b24b-a73ddddfabdd.png"
+                alt="NERF Rival Nemesis MXVII"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="#" 
+              href="https://amzn.to/3HXXae6" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/placeholder.svg"
-                alt="Kids Banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/lovable-uploads/f939782b-fc71-4011-aa86-7ac2cf30cc14.png"
+                alt="Loona sees and understands your world"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
