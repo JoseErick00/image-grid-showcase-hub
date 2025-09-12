@@ -114,12 +114,12 @@ const USA = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center" style={{ backgroundColor: '#b91c1c' }}>
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">The Only Checklist You Need:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. You got a new house</li>
-              <li>2. You need to buy a gift for someone.</li>
-              <li>3. You want to make your house cooler.</li>
-              <li>4. You want just browser cool products.</li>
+              <li>1. Just moved into a new home.</li>
+              <li>2. Looking for the perfect gift .</li>
+              <li>3. Want to make your home cooler (and smarter).</li>
+              <li>4. Just love browsing awesome finds.</li>
             </ol>
           </div>
         </div>
