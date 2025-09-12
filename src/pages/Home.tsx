@@ -229,21 +229,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Brand animated banner */}
-        <section aria-label="Brand animated banner" className="my-12 flex justify-center">
-          <div className="w-[600px] h-[300px] max-w-[85%] md:max-w-[600px] flex items-center justify-center overflow-hidden rounded-lg bg-muted">
-            <picture>
-              <source srcSet="/lovable-uploads/brand_video01.webp" type="image/webp" />
-              <img
-                src="/lovable-uploads/b853d9d5-7822-4990-8551-638eadf05715.png"
-                alt="Brand animated banner - Home selection (animated if supported)"
-                className="w-[600px] h-[300px] object-contain"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-        </section>
-
         {/* First 9 items */}
         <CategoryGrid 
           items={homeProducts.slice(0, 9)}
