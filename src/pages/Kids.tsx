@@ -144,12 +144,12 @@ const Kids = () => {
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/4mXCodw" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/4d1bd7a8-f41c-46b4-aab8-eb51f43f63ce.png"
@@ -161,35 +161,7 @@ const Kids = () => {
               href="https://amzn.to/3V9ro0F" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
-            >
-              <img 
-                src="/lovable-uploads/91a62cc6-225a-4694-ae47-b449076608be.png"
-                alt="Ms. Rachel Speak & Sing Doll"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-          </div>
-          
-          {/* Tablet: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-6">
-            <a 
-              href="https://amzn.to/4mXCodw" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
-            >
-              <img 
-                src="/lovable-uploads/4d1bd7a8-f41c-46b4-aab8-eb51f43f63ce.png"
-                alt="Star Wars Imperial Stormtrooper Helmet"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/3V9ro0F" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/91a62cc6-225a-4694-ae47-b449076608be.png"
@@ -200,29 +172,29 @@ const Kids = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/4mXCodw" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
                 src="/lovable-uploads/4d1bd7a8-f41c-46b4-aab8-eb51f43f63ce.png"
                 alt="Star Wars Imperial Stormtrooper Helmet"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
               href="https://amzn.to/3V9ro0F" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
                 src="/lovable-uploads/91a62cc6-225a-4694-ae47-b449076608be.png"
                 alt="Ms. Rachel Speak & Sing Doll"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
@@ -239,12 +211,12 @@ const Kids = () => {
         {/* Small Banner 03 & 04 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://amzn.to/41PpOot" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/a4f4abdc-7c83-4030-aaaf-f8c8e3c9e5bb.png"
@@ -256,35 +228,7 @@ const Kids = () => {
               href="https://amzn.to/46xs2LH" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[300px]"
-            >
-              <img 
-                src="/lovable-uploads/8662e272-1d32-45fd-8bec-c7d097a3d5eb.png"
-                alt="Miko Mini AI Robot for Kids"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-          </div>
-          
-          {/* Tablet: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-6">
-            <a 
-              href="https://amzn.to/41PpOot" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
-            >
-              <img 
-                src="/lovable-uploads/a4f4abdc-7c83-4030-aaaf-f8c8e3c9e5bb.png"
-                alt="Brilliant Gift Idea for Kids Robot"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/46xs2LH" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
                 src="/lovable-uploads/8662e272-1d32-45fd-8bec-c7d097a3d5eb.png"
@@ -295,29 +239,29 @@ const Kids = () => {
           </div>
           
           {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-6">
+          <div className="md:hidden space-y-12">
             <a 
               href="https://amzn.to/41PpOot" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
                 src="/lovable-uploads/a4f4abdc-7c83-4030-aaaf-f8c8e3c9e5bb.png"
                 alt="Brilliant Gift Idea for Kids Robot"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
               href="https://amzn.to/46xs2LH" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block h-[200px]"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
                 src="/lovable-uploads/8662e272-1d32-45fd-8bec-c7d097a3d5eb.png"
                 alt="Miko Mini AI Robot for Kids"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
