@@ -12,7 +12,7 @@ const Footer = () => {
     { name: "Sports", href: "/sports" },
     { name: "Incredibles", href: "/incredibles" },
     { name: "Kids", href: "/kids" },
-    { name: "Beauty", href: "/beauty" },
+    { name: "Health", href: "/health" },
     { name: "Best Sellers", href: "/best-sellers" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
