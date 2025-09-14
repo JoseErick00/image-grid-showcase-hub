@@ -294,6 +294,37 @@ const Tech = () => {
             </ol>
           </div>
         </div>
+
+        {/* Promo Banner 01 */}
+        <div className="flex justify-center mt-12">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/3Ij0dgQ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/Promo_bannerTech.jpg"
+                alt="CASEKOO iPhone 17 Pro - Any questions about this?"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/Promo_bannerTech_tablet.jpg"
+                alt="CASEKOO iPhone 17 Pro - Buy your case with us!"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/Promo_bannerTech_mobile.jpg"
+                alt="CASEKOO iPhone 17 Pro - Buy your case with us!"
+                className="md:hidden w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
