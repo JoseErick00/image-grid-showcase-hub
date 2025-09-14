@@ -320,7 +320,7 @@ const Tech = () => {
               <img 
                 src="/Promo_bannerTech_mobile.jpg"
                 alt="CASEKOO iPhone 17 Pro - Buy your case with us!"
-                className="md:hidden w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
