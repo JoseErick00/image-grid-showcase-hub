@@ -29,15 +29,8 @@ const CategoryGrid = ({
   const { isCompactMode } = useGridLayout();
   const [revealedItems, setRevealedItems] = useState<Set<string>>(new Set());
   
-  // Determine actual columns based on layout mode
-  const actualColumns = isCompactMode ? 3 : columns;
-  
-  const gridCols = {
-    2: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-2",
-    3: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-2 lg:grid-cols-3",
-    4: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-2 lg:grid-cols-4",
-  };
-
+  // Determine grid classes based on layout mode
+  const gridClass = isCompactMode ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-2 lg:grid-cols-3";
   const aspectClass = aspectRatio === "square" ? "aspect-square" : "aspect-[4/5]";
 
   const handleItemClick = (e: React.MouseEvent, itemId: string, link: string) => {
@@ -68,7 +61,7 @@ const CategoryGrid = ({
         </h2>
       )}
       
-      <div className={`grid ${gridCols[actualColumns as keyof typeof gridCols]} gap-6`}>
+      <div className={`grid ${gridClass} gap-6`}>
         {items.map((item) => {
           const isRevealed = revealedItems.has(item.id);
           
