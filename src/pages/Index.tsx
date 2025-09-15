@@ -152,6 +152,172 @@ const Index = () => {
           buttonColor="#000000"
         />
 
+        {/* What is happening section */}
+        <div className="mt-16">
+          <h2 className="font-omne-medium text-2xl md:text-4xl text-foreground mb-8 text-center">
+            What is happening:
+          </h2>
+          
+          {/* Small banners grid - responsive */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Home Category Banners */}
+            <a 
+              href="https://amzn.to/4pamuOq" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/d7e4a8dc-8794-4ca8-a7c3-ec7325e002a3.png"
+                alt="SMEG Mixer - Optimal Robustness"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4lXVDCJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ebbc0e4d-284e-4faf-ae4d-2d13514ce018.png"
+                alt="High-Performance Blender"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            
+            {/* Sports Category Banners */}
+            <a 
+              href="https://amzn.to/3VGuGsl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/2852aad8-cbc9-442c-9729-926c7ca836df.png"
+                alt="Smart Watch Display"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4pm6lWC" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ffd48197-8840-4651-89c3-38b46097103b.png"
+                alt="Smart Scale"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            
+            {/* Health Category Banners */}
+            <a 
+              href="https://amzn.to/469mPbz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/ab6de73d-0a86-4580-bd2f-bf20f7c80cd8.png"
+                alt="Health Banner 1"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3Ke00Mw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/d1f230af-956d-40cc-91cc-41247b47756c.png"
+                alt="Health Banner 2"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            
+            {/* Incredibles Category Banners */}
+            <a 
+              href="https://amzn.to/41Q0wXf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/bdf7fd0b-3de7-4e60-a90c-0798e535d563.png"
+                alt="Incredibles Banner 01"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3HVwk6l" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/f0906d23-ea56-4d27-b934-34b4ace0ae78.png"
+                alt="Incredibles Banner 02"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            
+            {/* Tech Category Banners */}
+            <a 
+              href="https://amzn.to/41OutH5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
+                alt="Laptop Screen Extender for multitasking professionals"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4nx1Uqd" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
+                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            
+            {/* Kids Category Banners */}
+            <a 
+              href="https://amzn.to/4mXCodw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/4d1bd7a8-f41c-46b4-aab8-eb51f43f63ce.png"
+                alt="Star Wars Imperial Stormtrooper Helmet"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/3V9ro0F" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/91a62cc6-225a-4694-ae47-b449076608be.png"
+                alt="Ms. Rachel Speak & Sing Doll"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );
