@@ -86,6 +86,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Banner Section */}
+      <div className="w-full h-[235px] md:h-[200px] flex items-center justify-center relative">
+        {/* Desktop Banner */}
+        <img 
+          src="/lovable-uploads/bfbac871-33dd-4588-a42a-d8ef69e4279d.png" 
+          alt="Banner" 
+          className="hidden md:block max-h-full max-w-full object-contain"
+        />
+        {/* Mobile Banner */}
+        <img 
+          src="/lovable-uploads/7581186d-d45c-4e70-91dc-0dd372a9f66c.png" 
+          alt="Banner Mobile" 
+          className="md:hidden w-full h-full object-cover"
+        />
+      </div>
+
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
