@@ -123,6 +123,13 @@ const UnitedKingdom = () => {
             </ol>
           </div>
         </div>
+
+        {/* Browse Message */}
+        <div className="text-center mt-8">
+          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#1e40af' }}>
+            Browse our finds and click to buy on the platform! Enjoy!
+          </p>
+        </div>
       </div>
 
       {/* Content */}
