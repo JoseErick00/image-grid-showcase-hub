@@ -1,6 +1,5 @@
 
 import CategoryGrid from "@/components/CategoryGrid";
-import brandImage from "@/assets/brand_animation01.webp";
 
 const Index = () => {
   const handleShare = async () => {
@@ -125,15 +124,6 @@ const Index = () => {
               <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
             </button>
           </div>
-        </div>
-
-        {/* Brand Image */}
-        <div className="flex justify-center mb-8">
-          <img 
-            src={brandImage} 
-            alt="Brand" 
-            className="max-w-full h-auto"
-          />
         </div>
 
         {/* Main Product Categories Grid (2 columns) */}
