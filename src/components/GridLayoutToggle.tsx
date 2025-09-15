@@ -11,7 +11,7 @@ const GridLayoutToggle = () => {
         variant="secondary"
         size="icon"
         onClick={toggleLayout}
-        className="rounded-full shadow-elegant hover:shadow-glow w-12 h-12 bg-background/90 backdrop-blur-sm border border-border hover:text-white"
+        className="rounded-full shadow-elegant hover:shadow-glow w-24 h-24 bg-background/90 backdrop-blur-sm border border-border hover:text-white"
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = "#575757";
           e.currentTarget.style.color = "white";
