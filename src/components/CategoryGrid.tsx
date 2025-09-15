@@ -33,9 +33,9 @@ const CategoryGrid = ({
   const actualColumns = isCompactMode ? 3 : columns;
   
   const gridCols = {
-    2: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2",
-    3: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-    4: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+    2: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-2",
+    3: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-2 lg:grid-cols-3",
+    4: isCompactMode ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-2 lg:grid-cols-4",
   };
 
   const aspectClass = aspectRatio === "square" ? "aspect-square" : "aspect-[4/5]";
