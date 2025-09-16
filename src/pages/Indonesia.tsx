@@ -126,7 +126,7 @@ const Indonesia = () => {
 
         {/* Browse Message */}
         <div className="text-center mt-8">
-          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#dc2626' }}>
+          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
             Browse our finds and click to buy on the platform! Enjoy!
           </p>
         </div>
