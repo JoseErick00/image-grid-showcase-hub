@@ -240,6 +240,13 @@ const Sports = () => {
             </ol>
           </div>
         </div>
+
+        {/* Browse Message */}
+        <div className="text-center mt-8">
+          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#f06927' }}>
+            Browse our finds and click to buy on the platform! Enjoy!
+          </p>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
