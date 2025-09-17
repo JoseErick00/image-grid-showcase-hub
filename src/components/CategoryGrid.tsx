@@ -93,7 +93,7 @@ const CategoryGrid = ({
                   className="px-3 py-2 rounded-md mb-3"
                   style={{ backgroundColor: buttonColor }}
                 >
-                  <h3 className="font-omne-medium text-lg text-white">
+                  <h3 className="font-omne-medium text-base text-white">
                     {item.title}
                   </h3>
                   {item.subtitle && (
