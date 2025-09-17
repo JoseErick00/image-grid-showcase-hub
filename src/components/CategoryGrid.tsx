@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 
 interface CategoryGridProps {
@@ -27,6 +28,7 @@ const CategoryGrid = ({
   showButton = true
 }: CategoryGridProps) => {
   const { isCompactMode } = useGridLayout();
+  const isMobile = useIsMobile();
   const [revealedItems, setRevealedItems] = useState<Set<string>>(new Set());
   
   // Determine grid classes based on layout mode
@@ -108,7 +110,7 @@ const CategoryGrid = ({
                     style={{ backgroundColor: buttonColor }}
                     onClick={(e) => handleButtonClick(e, item.link)}
                   >
-                    {isCompactMode ? 'Get mine!' : "Yes! It is beautiful!"}
+                    {isMobile ? 'Get mine!' : "Yes! It is beautiful!"}
                   </Button>
                 )}
               </div>
