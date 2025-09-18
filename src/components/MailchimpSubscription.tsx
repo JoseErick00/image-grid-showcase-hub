@@ -28,18 +28,24 @@ const MailchimpSubscription = () => {
       initScript.type = "text/javascript";
       initScript.setAttribute('data-mailchimp-init', 'true');
       initScript.innerHTML = `
-        (function($) {
-          window.fnames = new Array(); 
-          window.ftypes = new Array();
-          fnames[0]='EMAIL';ftypes[0]='email';
-          fnames[1]='FNAME';ftypes[1]='text';
-          fnames[2]='LNAME';ftypes[2]='text';
-          fnames[3]='ADDRESS';ftypes[3]='address';
-          fnames[4]='PHONE';ftypes[4]='phone';
-          fnames[5]='BIRTHDAY';ftypes[5]='birthday';
-          fnames[6]='COMPANY';ftypes[6]='text';
-        }(jQuery));
-        var $mcj = jQuery.noConflict(true);
+        (function(){
+          if (typeof window !== 'undefined' && typeof (window as any).jQuery !== 'undefined') {
+            (function($) {
+              (window as any).fnames = new Array(); 
+              (window as any).ftypes = new Array();
+              (window as any).fnames[0]='EMAIL';(window as any).ftypes[0]='email';
+              (window as any).fnames[1]='FNAME';(window as any).ftypes[1]='text';
+              (window as any).fnames[2]='LNAME';(window as any).ftypes[2]='text';
+              (window as any).fnames[3]='ADDRESS';(window as any).ftypes[3]='address';
+              (window as any).fnames[4]='PHONE';(window as any).ftypes[4]='phone';
+              (window as any).fnames[5]='BIRTHDAY';(window as any).ftypes[5]='birthday';
+              (window as any).fnames[6]='COMPANY';(window as any).ftypes[6]='text';
+            })(jQuery);
+            (window as any).$mcj = (window as any).jQuery.noConflict(true);
+          } else {
+            console.warn('Mailchimp jQuery not found; skipping mc-validate init');
+          }
+        })();
       `;
       document.head.appendChild(initScript);
     }
