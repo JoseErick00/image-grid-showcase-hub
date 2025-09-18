@@ -302,7 +302,7 @@ const Tech = () => {
           </p>
           <div className="mt-6 flex justify-center">
             <img 
-              src="/src/assets/brand_animation01-2.webp" 
+              src="/brand_animation01-2.webp" 
               alt="Brand animation" 
               className="max-w-xs w-full h-auto"
             />
