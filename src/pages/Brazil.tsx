@@ -63,7 +63,7 @@ const Brazil = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Banner */}
-      <div className="w-full h-[400px] md:h-[500px] relative overflow-hidden">
+      <div className="w-full h-[400px] relative overflow-hidden">
         <img 
           src={isMobile ? "/brazil-banner-mobile.jpg" : "/brazil-banner-desktop.jpg"}
           alt="Brazil Products Banner"
