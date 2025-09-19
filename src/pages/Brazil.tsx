@@ -1,6 +1,8 @@
 import CategoryGrid from "@/components/CategoryGrid";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Brazil = () => {
+  const isMobile = useIsMobile();
   const handleShare = async () => {
     try {
       const url = window.location.href;
@@ -61,16 +63,12 @@ const Brazil = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Banner */}
-      <div 
-        className="w-full h-[400px] flex items-center justify-center relative"
-        style={{
-          backgroundColor: '#16a34a',
-        }}
-      >
-        <div className="text-center text-white">
-          <h1 className="font-omne-medium text-6xl">Brazil</h1>
-          <p className="font-omne-regular text-xl mt-4">Brazilian Products</p>
-        </div>
+      <div className="w-full h-[400px] md:h-[500px] relative overflow-hidden">
+        <img 
+          src={isMobile ? "/brazil-banner-mobile.jpg" : "/brazil-banner-desktop.jpg"}
+          alt="Brazil Products Banner"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Title and Subtitle */}
