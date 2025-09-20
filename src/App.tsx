@@ -16,7 +16,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import USA from "./pages/USA";
 import UnitedKingdom from "./pages/UnitedKingdom";
-import Brazil from "./pages/Brazil";
+import Brasil from "./pages/Brasil";
 import Indonesia from "./pages/Indonesia";
 import Search from "./pages/Search";
 import Layout from "./components/Layout";
@@ -43,7 +43,7 @@ const App = () => (
             <Route path="contact" element={<Contact />} />
             <Route path="usa" element={<USA />} />
             <Route path="united-kingdom" element={<UnitedKingdom />} />
-            <Route path="brazil" element={<Brazil />} />
+            <Route path="brasil" element={<Brasil />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
