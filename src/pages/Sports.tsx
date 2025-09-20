@@ -246,13 +246,6 @@ const Sports = () => {
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
             Browse our finds and click to buy on the platform! Enjoy!
           </p>
-          <div className="mt-6 flex justify-center">
-            <img 
-              src="/brand_animation01-2.webp" 
-              alt="Brand animation" 
-              className="max-w-xs w-full h-auto"
-            />
-          </div>
         </div>
       </div>
 
