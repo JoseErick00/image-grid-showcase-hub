@@ -73,13 +73,13 @@ const Brasil = () => {
 
       {/* Category Grid Menu */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Casa */}
           <div className="text-center">
             <img 
               src="/assets/categoria-casa.jpg" 
               alt="Casa" 
-              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="font-omne-regular text-sm text-muted-foreground mt-2">
               A vida inteligente começa em casa.
@@ -91,7 +91,7 @@ const Brasil = () => {
             <img 
               src="/assets/categoria-esportes.jpg" 
               alt="Esportes" 
-              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="font-omne-regular text-sm text-muted-foreground mt-2">
               Gadgets legais. Movimentos mais inteligentes.
@@ -103,7 +103,7 @@ const Brasil = () => {
             <img 
               src="/assets/categoria-saude.jpg" 
               alt="Saúde" 
-              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="font-omne-regular text-sm text-muted-foreground mt-2">
               Autocuidado mais inteligente.
@@ -115,7 +115,7 @@ const Brasil = () => {
             <img 
               src="/assets/categoria-incriveis.jpg" 
               alt="Incríveis" 
-              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="font-omne-regular text-sm text-muted-foreground mt-2">
               De "O que é isso?" para "Eu preciso disso".
@@ -127,7 +127,7 @@ const Brasil = () => {
             <img 
               src="/assets/categoria-tech.jpg" 
               alt="Tech" 
-              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="font-omne-regular text-sm text-muted-foreground mt-2">
               Sua dose diária de tecnologia de ponta.
@@ -139,7 +139,7 @@ const Brasil = () => {
             <img 
               src="/assets/categoria-brinquedos.jpg" 
               alt="Brinquedos" 
-              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="font-omne-regular text-sm text-muted-foreground mt-2">
               Brinquedos legais, achados inteligentes, diversão sem fim.
