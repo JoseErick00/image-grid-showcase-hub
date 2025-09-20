@@ -7,8 +7,8 @@ const Brazil = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brazil Products - iNeed Stores',
-        text: 'Check out these amazing Brazil products from the world\'s biggest e-commerce platforms!',
+        title: 'Brasil Products - iNeed Stores',
+        text: 'Check out these amazing Brasil products from the world\'s biggest e-commerce platforms!',
         url: url,
       };
 
@@ -66,7 +66,7 @@ const Brazil = () => {
       <div className="w-full h-[400px] relative overflow-hidden">
         <img 
           src={isMobile ? "/brazil-banner-mobile.jpg" : "/brazil-banner-desktop.jpg"}
-          alt="Brazil Products Banner"
+          alt="Brasil Products Banner"
           className="w-full h-full object-cover"
         />
       </div>
@@ -74,10 +74,10 @@ const Brazil = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brazil Products
+          Brasil Products
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          Amazing selection of products from Brazil!
+          Amazing selection of products from Brasil!
         </p>
 
         {/* Social Media Icons */}
