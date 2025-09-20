@@ -71,6 +71,83 @@ const Brasil = () => {
         />
       </div>
 
+      {/* Category Grid Menu */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {/* Casa */}
+          <div className="text-center">
+            <img 
+              src="/assets/categoria-casa.jpg" 
+              alt="Casa" 
+              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+              A vida inteligente começa em casa.
+            </p>
+          </div>
+
+          {/* Esportes */}
+          <div className="text-center">
+            <img 
+              src="/assets/categoria-esportes.jpg" 
+              alt="Esportes" 
+              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+              Gadgets legais. Movimentos mais inteligentes.
+            </p>
+          </div>
+
+          {/* Saude */}
+          <div className="text-center">
+            <img 
+              src="/assets/categoria-saude.jpg" 
+              alt="Saúde" 
+              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+              Autocuidado mais inteligente.
+            </p>
+          </div>
+
+          {/* Incriveis */}
+          <div className="text-center">
+            <img 
+              src="/assets/categoria-incriveis.jpg" 
+              alt="Incríveis" 
+              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+              De "O que é isso?" para "Eu preciso disso".
+            </p>
+          </div>
+
+          {/* Tech */}
+          <div className="text-center">
+            <img 
+              src="/assets/categoria-tech.jpg" 
+              alt="Tech" 
+              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+              Sua dose diária de tecnologia de ponta.
+            </p>
+          </div>
+
+          {/* Brinquedos */}
+          <div className="text-center">
+            <img 
+              src="/assets/categoria-brinquedos.jpg" 
+              alt="Brinquedos" 
+              className="w-full h-32 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+              Brinquedos legais, achados inteligentes, diversão sem fim.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
