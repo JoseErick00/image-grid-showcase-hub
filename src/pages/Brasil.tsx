@@ -202,7 +202,7 @@ const Brasil = () => {
               <img 
                 src={product.image} 
                 alt={product.title} 
-                className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                className="w-full aspect-[3/4] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
               />
               <h3 className="font-omne-regular text-lg text-foreground mt-4 mb-2">
                 {product.title}
