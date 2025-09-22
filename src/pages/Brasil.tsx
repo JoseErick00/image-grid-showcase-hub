@@ -1,10 +1,8 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { useState } from "react";
 
 const Brasil = () => {
   const isMobile = useIsMobile();
-  const [revealedItems, setRevealedItems] = useState<Set<string>>(new Set());
   const handleShare = async () => {
     try {
       const url = window.location.href;
@@ -32,26 +30,6 @@ const Brasil = () => {
         alert('Unable to share. Please copy the URL manually.');
       }
     }
-  };
-
-  const handleItemClick = (e: React.MouseEvent, itemId: string, link: string) => {
-    const isRevealed = revealedItems.has(itemId);
-    
-    if (!isRevealed) {
-      // First click: reveal only this item (close others)
-      e.preventDefault();
-      setRevealedItems(new Set([itemId]));
-    } else {
-      // Second click: open link in new tab
-      e.preventDefault();
-      window.open(link, '_blank');
-    }
-  };
-
-  const handleButtonClick = (e: React.MouseEvent, link: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    window.open(link, '_blank');
   };
 
   // Brasil products placeholder - same structure as other category pages
@@ -219,50 +197,24 @@ const Brasil = () => {
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {brasilProducts.map((product) => {
-            const isRevealed = revealedItems.has(product.id);
-            
-            return (
-              <div
-                key={product.id}
-                className="group relative overflow-hidden rounded-lg bg-card shadow-elegant hover:shadow-glow transition-all duration-300 cursor-pointer"
-                onClick={(e) => handleItemClick(e, product.id, product.link)}
+          {brasilProducts.map((product) => (
+            <div key={product.id} className="text-center">
+              <img 
+                src={product.image} 
+                alt={product.title} 
+                className="w-full aspect-[3/4] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+              />
+              <h3 className="font-omne-regular text-lg text-foreground mt-4 mb-2">
+                {product.title}
+              </h3>
+              <button 
+                onClick={() => window.open(product.link, '_blank')}
+                className="px-6 py-2 bg-green-600 text-white font-omne-regular text-sm rounded-lg hover:bg-green-700 transition-colors duration-300"
               >
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className={`w-full h-full object-cover transition-transform duration-300 ${
-                      isRevealed ? 'scale-105' : 'group-hover:scale-105'
-                    }`}
-                  />
-                  <div className={`absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent transition-opacity duration-300 ${
-                    isRevealed ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                  }`} />
-                </div>
-                
-                <div className={`absolute bottom-0 left-0 right-0 p-4 transition-transform duration-300 ${
-                  isRevealed ? 'translate-y-0' : 'transform translate-y-full group-hover:translate-y-0'
-                }`}>
-                  <div 
-                    className="px-3 py-2 rounded-md mb-3"
-                    style={{ backgroundColor: "#16a34a" }}
-                  >
-                    <h3 className="font-omne-medium text-base text-white">
-                      {product.title}
-                    </h3>
-                  </div>
-                  <button 
-                    className="w-full text-white text-xl hover:opacity-90 px-6 py-2 rounded-lg transition-opacity duration-300"
-                    style={{ backgroundColor: "#16a34a" }}
-                    onClick={(e) => handleButtonClick(e, product.link)}
-                  >
-                    {isMobile ? 'Get mine!' : "Yes! It is beautiful!"}
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+                Buy Now
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 
