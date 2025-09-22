@@ -20,6 +20,12 @@ import Brasil from "./pages/Brasil";
 import Indonesia from "./pages/Indonesia";
 import Search from "./pages/Search";
 import Layout from "./components/Layout";
+import BrasilCasa from "./pages/BrasilCasa";
+import BrasilEsportes from "./pages/BrasilEsportes";
+import BrasilSaude from "./pages/BrasilSaude";
+import BrasilIncriveis from "./pages/BrasilIncriveis";
+import BrasilTech from "./pages/BrasilTech";
+import BrasilKids from "./pages/BrasilKids";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +50,12 @@ const App = () => (
             <Route path="usa" element={<USA />} />
             <Route path="united-kingdom" element={<UnitedKingdom />} />
             <Route path="brasil" element={<Brasil />} />
+            <Route path="brasil/casa" element={<BrasilCasa />} />
+            <Route path="brasil/esportes" element={<BrasilEsportes />} />
+            <Route path="brasil/saude" element={<BrasilSaude />} />
+            <Route path="brasil/incriveis" element={<BrasilIncriveis />} />
+            <Route path="brasil/tech" element={<BrasilTech />} />
+            <Route path="brasil/kids" element={<BrasilKids />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
