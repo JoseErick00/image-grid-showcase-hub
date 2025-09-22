@@ -201,6 +201,7 @@ const Brasil = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#16a34a"
+          showButton={true}
         />
       </div>
 
