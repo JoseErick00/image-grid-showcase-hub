@@ -81,9 +81,12 @@ const Brasil = () => {
               alt="Casa" 
               className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2 mb-3">
               A vida inteligente começa em casa.
             </p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-omne-medium text-sm">
+              Explorar Casa
+            </button>
           </div>
 
           {/* Esportes */}
@@ -93,9 +96,12 @@ const Brasil = () => {
               alt="Esportes" 
               className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2 mb-3">
               Gadgets legais. Movimentos mais inteligentes.
             </p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-omne-medium text-sm">
+              Explorar Esportes
+            </button>
           </div>
 
           {/* Saude */}
@@ -105,9 +111,12 @@ const Brasil = () => {
               alt="Saúde" 
               className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2 mb-3">
               Autocuidado mais inteligente.
             </p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-omne-medium text-sm">
+              Explorar Saúde
+            </button>
           </div>
 
           {/* Incriveis */}
@@ -117,9 +126,12 @@ const Brasil = () => {
               alt="Incríveis" 
               className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2 mb-3">
               De "O que é isso?" para "Eu preciso disso".
             </p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-omne-medium text-sm">
+              Explorar Incríveis
+            </button>
           </div>
 
           {/* Tech */}
@@ -129,9 +141,12 @@ const Brasil = () => {
               alt="Tech" 
               className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2 mb-3">
               Sua dose diária de tecnologia de ponta.
             </p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-omne-medium text-sm">
+              Explorar Tech
+            </button>
           </div>
 
           {/* Brinquedos */}
@@ -141,9 +156,12 @@ const Brasil = () => {
               alt="Brinquedos" 
               className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+            <p className="font-omne-regular text-sm text-muted-foreground mt-2 mb-3">
               Brinquedos legais, achados inteligentes, diversão sem fim.
             </p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-omne-medium text-sm">
+              Explorar Brinquedos
+            </button>
           </div>
         </div>
       </div>
