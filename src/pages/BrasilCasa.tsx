@@ -21,6 +21,16 @@ import casa17 from "@/assets/casa_17.jpg";
 import casa18 from "@/assets/casa_18.jpg";
 import casa19 from "@/assets/casa_19.jpg";
 import casa20 from "@/assets/casa_20.jpg";
+import casa21 from "@/assets/casa_21.jpg";
+import casa22 from "@/assets/casa_22.jpg";
+import casa23 from "@/assets/casa_23.jpg";
+import casa24 from "@/assets/casa_24.jpg";
+import casa25 from "@/assets/casa_25.jpg";
+import casa26 from "@/assets/casa_26.jpg";
+import casa27 from "@/assets/casa_27.jpg";
+import casa28 from "@/assets/casa_28.jpg";
+import casa29 from "@/assets/casa_29.jpg";
+import casa30 from "@/assets/casa_30.jpg";
 
 const BrasilCasa = () => {
   const handleShare = async () => {
@@ -73,6 +83,16 @@ const BrasilCasa = () => {
     { id: "product-18", title: "Pipoqueira pop cine vermelha com dosador- Agratto", image: casa18, link: "https://s.shopee.com.br/7fQeDcPLv3" },
     { id: "product-19", title: "Lustre de LED minimalista nórdico moderno.", image: casa19, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601318448302" },
     { id: "product-20", title: "O lustre de LED Bubble Abstracta é interessante! ", image: casa20, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601514504509" },
+    { id: "product-21", title: "Estiloso - Wok de ferro tradicional feito à mão", image: casa21, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601394094436" },
+    { id: "product-22", title: "Wok romano de alumínio fundido microprensado de 32cm", image: casa22, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601395967300" },
+    { id: "product-23", title: "Cozedor rápido de ovos Deluxe - DASH", image: casa23, link: "https://amzn.to/4nJtiBi" },
+    { id: "product-24", title: "Vintage Marshall - Acton III Bluetooth Speaker", image: casa24, link: "https://amzn.to/3IqzteE" },
+    { id: "product-25", title: "Kit 4 Capas de Almofadas Para Sofá 45x45", image: casa25, link: "https://amzn.to/46jm8ho" },
+    { id: "product-26", title: "Moedor de café elétrico e triturador de grãos da Amazon.", image: casa26, link: "https://amzn.to/4nJtVe8" },
+    { id: "product-27", title: "Frigideira antidearente dupla multiuso na Shopee", image: casa27, link: "https://s.shopee.com.br/10tkOB3Oja" },
+    { id: "product-28", title: "Fatiador de cozinha multifuncional profissional", image: casa28, link: "https://s.shopee.com.br/6prXM9xjhg" },
+    { id: "product-29", title: "O bonitinho da Shopee!  Kit Conjunto 19 peças de utensílios.", image: casa29, link: "https://s.shopee.com.br/4VTcatyi18" },
+    { id: "product-30", title: "Luminária de mesa para estúdio e quarto nórdico moderno e pós-moderno", image: casa30, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600719870014" },
   ];
 
   return (
