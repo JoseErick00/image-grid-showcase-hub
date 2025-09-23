@@ -11,6 +11,16 @@ import casa07 from "@/assets/casa_07.jpg";
 import casa08 from "@/assets/casa_08.jpg";
 import casa09 from "@/assets/casa_09.jpg";
 import casa10 from "@/assets/casa_10.jpg";
+import casa11 from "@/assets/casa_11.jpg";
+import casa12 from "@/assets/casa_12.jpg";
+import casa13 from "@/assets/casa_13.jpg";
+import casa14 from "@/assets/casa_14.jpg";
+import casa15 from "@/assets/casa_15.jpg";
+import casa16 from "@/assets/casa_16.jpg";
+import casa17 from "@/assets/casa_17.jpg";
+import casa18 from "@/assets/casa_18.jpg";
+import casa19 from "@/assets/casa_19.jpg";
+import casa20 from "@/assets/casa_20.jpg";
 
 const BrasilCasa = () => {
   const handleShare = async () => {
@@ -53,6 +63,16 @@ const BrasilCasa = () => {
     { id: "product-8", title: "Kit de trilho de cortina inteligente motorizado para casa moderna", image: casa08, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601569922905" },
     { id: "product-9", title: "Luminária de mesa LED de vidro estilo design nórdico", image: casa09, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601496798108" },
     { id: "product-10", title: "Máquina de café com filtro estético estilo retrô anos 50 - Smeg", image: casa10, link: "https://amzn.to/3Iwxkhh" },
+    { id: "product-11", title: "Cafeteira Elite Gourmet EC812G Vintage 50's", image: casa11, link: "https://amzn.to/3Ki5vKc" },
+    { id: "product-12", title: "Robô Aspirador e Mopa 2 em 1 - DREAME D9 Max Gen 2", image: casa12, link: "https://amzn.to/3Iya4zD" },
+    { id: "product-13", title: "Mais um aspirador baratinho -  Electrolux ERB30 bivolt – 2h20min", image: casa13, link: "https://amzn.to/4nbsxRD" },
+    { id: "product-14", title: "Linda cadeira para sala de estar confortável de veludo MOBLAN Decor.", image: casa14, link: "https://amzn.to/46H9bgm" },
+    { id: "product-15", title: "Estiloso - Cesto de roupa suja bambu dobravel", image: casa15, link: "https://s.shopee.com.br/3Vb5E7uoJh" },
+    { id: "product-16", title: "Marmita elétrica veicular bivolt - 110V/220V", image: casa16, link: "https://s.shopee.com.br/3fuVR3w1Lj" },
+    { id: "product-17", title: "Kit - 04 Capas de almofadas decorativas 45x45 em Oxford.", image: casa17, link: "https://s.shopee.com.br/11D52MezB" },
+    { id: "product-18", title: "Pipoqueira pop cine vermelha com dosador- Agratto", image: casa18, link: "https://s.shopee.com.br/7fQeDcPLv3" },
+    { id: "product-19", title: "Lustre de LED minimalista nórdico moderno.", image: casa19, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601318448302" },
+    { id: "product-20", title: "O lustre de LED Bubble Abstracta é interessante! ", image: casa20, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601514504509" },
   ];
 
   return (
