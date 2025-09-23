@@ -31,6 +31,16 @@ import casa27 from "@/assets/casa_27.jpg";
 import casa28 from "@/assets/casa_28.jpg";
 import casa29 from "@/assets/casa_29.jpg";
 import casa30 from "@/assets/casa_30.jpg";
+import casa31 from "@/assets/casa_31.jpg";
+import casa32 from "@/assets/casa_32.jpg";
+import casa33 from "@/assets/casa_33.jpg";
+import casa34 from "@/assets/casa_34.jpg";
+import casa35 from "@/assets/casa_35.jpg";
+import casa36 from "@/assets/casa_36.jpg";
+import casa37 from "@/assets/casa_37.jpg";
+import casa38 from "@/assets/casa_38.jpg";
+import casa39 from "@/assets/casa_39.jpg";
+import casa40 from "@/assets/casa_40.jpg";
 
 const BrasilCasa = () => {
   const handleShare = async () => {
@@ -93,6 +103,16 @@ const BrasilCasa = () => {
     { id: "product-28", title: "Fatiador de cozinha multifuncional profissional", image: casa28, link: "https://s.shopee.com.br/6prXM9xjhg" },
     { id: "product-29", title: "O bonitinho da Shopee!  Kit Conjunto 19 peças de utensílios.", image: casa29, link: "https://s.shopee.com.br/4VTcatyi18" },
     { id: "product-30", title: "Luminária de mesa para estúdio e quarto nórdico moderno e pós-moderno", image: casa30, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600719870014" },
+    { id: "product-31", title: "Porta LP- Suporte de mesa para guardar disco de vinil", image: casa31, link: "https://s.shopee.com.br/4q6TCdL0Yz" },
+    { id: "product-32", title: "Rack para vitrola e discos de vinil com nicho extra", image: casa32, link: "https://s.shopee.com.br/4q6TCnqANU" },
+    { id: "product-33", title: "O Echo Dot com o melhor som já lançado", image: casa33, link: "https://amzn.to/4msh3ba" },
+    { id: "product-34", title: "Echo Show 8 - Smart display com áudio espacial + Alexa", image: casa34, link: "https://amzn.to/3Kex5rU" },
+    { id: "product-35", title: "Colchão Queen Emma Original – 10 anos de garantia", image: casa35, link: "https://amzn.to/4nIWjNk" },
+    { id: "product-36", title: "DOWMGYDX Tapete de tatame para dormir, colchão japonês.", image: casa36, link: "https://amzn.to/4my6ao9" },
+    { id: "product-37", title: "Geguton - Porta-Livros Toni.", image: casa37, link: "https://amzn.to/4pxrvBb" },
+    { id: "product-38", title: "Panela de cozinha de ferro fundido esmaltado 3,0 L 3,5 kg", image: casa38, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601389001391" },
+    { id: "product-39", title: "Cafeteira Italiana Moka Alumínio 9 Xícaras", image: casa39, link: "https://amzn.to/3IbAUxt" },
+    { id: "product-40", title: "Sistema de cultivo hidropônico para jardim interno com luz LED.", image: casa40, link: "https://amzn.to/4mtLUUU" },
   ];
 
   return (
