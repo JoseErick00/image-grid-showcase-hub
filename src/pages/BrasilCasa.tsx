@@ -203,46 +203,93 @@ const BrasilCasa = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Banners Section */}
-        <div className="mb-8">
-          <a href="https://amzn.to/46f5Upj" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/59909999-5555-4444-aaaa-333333333333.png"
-              alt="Amazon Banner"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Promo Banner 01 */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/3Ij0dgQ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/Promo_bannerTech.jpg"
+                alt="Casa promo banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/Promo_bannerTech_tablet.jpg"
+                alt="Casa promo banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/Promo_bannerTech_mobile.jpg"
+                alt="Casa promo banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
-
-        {/* Layout Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a href="https://amzn.to/46f5Upj" target="_blank" rel="noopener noreferrer">
-            <img
-              src={homeCategoryImage}
-              alt="Category"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <h3 className="mt-2 font-semibold text-gray-900">Kitchen Gadgets</h3>
-            <p className="text-gray-600">Explore the latest kitchen innovations.</p>
-          </a>
-          <a href="https://amzn.to/46f5Upj" target="_blank" rel="noopener noreferrer">
-            <img
-              src={homeCategoryImage}
-              alt="Category"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <h3 className="mt-2 font-semibold text-gray-900">Home Decor</h3>
-            <p className="text-gray-600">Transform your living space.</p>
-          </a>
-          <a href="https://amzn.to/46f5Upj" target="_blank" rel="noopener noreferrer">
-            <img
-              src={homeCategoryImage}
-              alt="Category"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <h3 className="mt-2 font-semibold text-gray-900">Smart Home Devices</h3>
-            <p className="text-gray-600">Automate your home for convenience.</p>
-          </a>
+        {/* Small Banner 01 & 02 */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/41OutH5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
+                alt="Laptop Screen Extender for multitasking professionals"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4nx1Uqd" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
+                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/41OutH5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
+                alt="Laptop Screen Extender for multitasking professionals"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4nx1Uqd" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
+                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
         {/* First 9 items */}
@@ -253,15 +300,94 @@ const BrasilCasa = () => {
           buttonColor="#d01e23"
         />
 
-        {/* Banners Section */}
-        <div className="my-8">
-          <a href="https://amzn.to/46f5Upj" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/59909999-5555-4444-aaaa-333333333333.png"
-              alt="Amazon Banner"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Small Banner 03 & 04 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/47DLKqg" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
+                alt="GOOVIS Art XR 110 virtual screen with 4,496PPI"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4n3i5LW" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
+                alt="Speediance Home Gym"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/47DLKqg" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
+                alt="GOOVIS Art XR 110 virtual screen with 4,496PPI"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4n3i5LW" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
+                alt="Speediance Home Gym"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Large Banner - Middle Banner */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/41QlNA5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/lovable-uploads/bc69cde8-d45e-416b-b8f0-71558500fa68.png"
+                alt="Casa middle banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/lovable-uploads/203b5a53-a951-4c41-9665-475fbb77f446.png"
+                alt="Casa middle banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/lovable-uploads/d1578abb-66a3-4ea0-accb-7939452acac9.png"
+                alt="Casa middle banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Second 9 items */}
@@ -272,28 +398,136 @@ const BrasilCasa = () => {
           buttonColor="#d01e23"
         />
 
-        {/* Banners Section */}
-        <div className="my-8">
-          <a href="https://amzn.to/46f5Upj" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/59909999-5555-4444-aaaa-333333333333.png"
-              alt="Amazon Banner"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Small Banner 05 & 06 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/42rQLi2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
+                alt="Homey Pro - The ultimate smart home hub"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/46hrLeM" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
+                alt="Atmos Surround Sound System - Revolutionize Your Gaming Sound Experience"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/42rQLi2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
+                alt="Homey Pro - The ultimate smart home hub"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/46hrLeM" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
+                alt="Atmos Surround Sound System - Revolutionize Your Gaming Sound Experience"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
-        {/* Last items */}
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
+
+        {/* Remaining items */}
         <CategoryGrid 
           items={homeProducts.slice(18)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
         />
+
+        {/* Small Banner 07 & 08 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/47z5Lyb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
+                alt="EMOPET AI Desk Robot Companion - Hi, what's your name?"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4m7uOfr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
+                alt="Unitree Go2 Robot Dog"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/47z5Lyb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
+                alt="EMOPET AI Desk Robot Companion - Hi, what's your name?"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4m7uOfr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
+                alt="Unitree Go2 Robot Dog"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
-      {/* Newsletter Section */}
-      <MailchimpSubscription />
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
