@@ -1,10 +1,12 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Mail, Phone, Facebook, Instagram, Twitter } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isBrasilPage = location.pathname.startsWith('/brasil');
 
   const footerLinks = [
     { name: "Home", href: "/" },
@@ -17,6 +19,19 @@ const Footer = () => {
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
+
+  const brasilFooterLinks = [
+    { name: "Casa", href: "/brasil/casa" },
+    { name: "Esportes", href: "/brasil/esportes" },
+    { name: "Saúde", href: "/brasil/saude" },
+    { name: "Incríveis", href: "/brasil/incriveis" },
+    { name: "Tecnologia", href: "/brasil/tech" },
+    { name: "Brinquedos", href: "/brasil/kids" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const currentFooterLinks = isBrasilPage ? brasilFooterLinks : footerLinks;
 
   const socialLinks = [
     { name: "Facebook", icon: Facebook, href: "#" },
@@ -55,7 +70,7 @@ const Footer = () => {
         {/* Footer Links */}
         <div className="border-t border-border pt-8">
           <div className="flex flex-wrap justify-center gap-6 mb-6">
-            {footerLinks.map((link) => (
+            {currentFooterLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
