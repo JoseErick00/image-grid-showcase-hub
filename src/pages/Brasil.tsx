@@ -62,12 +62,30 @@ const Brasil = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Banner */}
-      <div className="w-full h-[400px] relative overflow-hidden">
+      <div 
+        className="w-full h-[400px] flex items-center justify-center"
+        style={{
+          backgroundColor: '#d01e23', // You can change this to match Brasil theme colors
+        }}
+      >
+        {/* Desktop banner */}
+        <img 
+          src="/brazil-banner-desktop.jpg"
+          alt="Brasil Products Banner"
+          className="hidden lg:block max-h-full object-contain"
+          style={{ width: '1200px' }}
+        />
+        {/* Tablet banner */}
+        <img 
+          src="/brazil-banner-desktop.jpg"
+          alt="Brasil Products Banner"
+          className="hidden md:block lg:hidden w-full h-full object-cover"
+        />
+        {/* Mobile banner */}
         <img 
           src={isMobile ? "/brazil-banner-mobile.jpg" : "/brazil-banner-desktop.jpg"}
-          alt="Brasil Products Banner"
-          className="w-full h-full object-cover"
+          alt="Brasil Products Banner Mobile"
+          className="md:hidden w-full h-full object-cover"
         />
       </div>
 
