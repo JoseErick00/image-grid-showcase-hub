@@ -106,7 +106,7 @@ const BrasilKids = () => {
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
             <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[30px] h-[30px] mb-2" />
-            <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+            <p className="font-omne-regular text-sm text-muted-foreground">Segue a gente no Instagram!</p>
           </a>
           <a 
             href="https://www.pinterest.com/iNeedShowcase/_profile" 
@@ -115,14 +115,14 @@ const BrasilKids = () => {
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
             <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[30px] h-[30px] mb-2" />
-            <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+            <p className="font-omne-regular text-sm text-muted-foreground">Tem mais no nosso Pinterest!</p>
           </a>
           <button 
             onClick={handleShare}
             className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
           >
             <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[30px] h-[30px] mb-2" />
-            <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+            <p className="font-omne-regular text-sm text-muted-foreground">Envie para um amigo!</p>
           </button>
         </div>
 
@@ -260,7 +260,7 @@ const BrasilKids = () => {
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
             <img src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" alt="Instagram" className="w-[30px] h-[30px] mb-2" />
-            <p className="font-omne-regular text-sm text-muted-foreground">Follow us on instagram.</p>
+            <p className="font-omne-regular text-sm text-muted-foreground">Segue a gente no Instagram!</p>
           </a>
           <a 
             href="https://www.pinterest.com/iNeedShowcase/_profile" 
@@ -269,14 +269,14 @@ const BrasilKids = () => {
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
             <img src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" alt="Pinterest" className="w-[30px] h-[30px] mb-2" />
-            <p className="font-omne-regular text-sm text-muted-foreground">Check out our moodboard.</p>
+            <p className="font-omne-regular text-sm text-muted-foreground">Tem mais no nosso Pinterest!</p>
           </a>
           <button 
             onClick={handleShare}
             className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
           >
             <img src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" alt="Share" className="w-[30px] h-[30px] mb-2" />
-            <p className="font-omne-regular text-sm text-muted-foreground">Share this list with a friend.</p>
+            <p className="font-omne-regular text-sm text-muted-foreground">Envie para um amigo!</p>
           </button>
         </div>
       </div>
