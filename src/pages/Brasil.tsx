@@ -7,8 +7,8 @@ const Brasil = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brasil Products - iNeed Stores',
-        text: 'Check out these amazing Brasil products from the world\'s biggest e-commerce platforms!',
+        title: 'Produtos do Brasil - iNeed Stores',
+        text: 'Confira estes produtos incríveis do Brasil das maiores plataformas de e-commerce do mundo!',
         url: url,
       };
 
@@ -169,10 +169,10 @@ const Brasil = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Products
+          Produtos do Brasil
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          Amazing selection of products from Brasil!
+          Seleção incrível de produtos do Brasil!
         </p>
 
         {/* Social Media Icons */}
@@ -207,7 +207,7 @@ const Brasil = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -239,7 +239,7 @@ const Brasil = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}

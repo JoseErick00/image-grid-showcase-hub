@@ -125,12 +125,12 @@ const BrasilSaude = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. You want healthy living, upgraded in Brasil.</li>
-              <li>2. You want innovations for mind & body in Brasil.</li>
-              <li>3. You need cool tools for a better you in Brasil.</li>
-              <li>4. You want to browse cool products from Brasil.</li>
+              <li>1. Você quer vida saudável aprimorada.</li>
+              <li>2. Você quer inovações para mente e corpo.</li>
+              <li>3. Você precisa de ferramentas legais para um você melhor.</li>
+              <li>4. Você quer navegar por produtos legais.</li>
             </ol>
           </div>
         </div>
@@ -138,7 +138,7 @@ const BrasilSaude = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -241,7 +241,7 @@ const BrasilSaude = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}

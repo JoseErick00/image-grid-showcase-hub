@@ -6,8 +6,8 @@ const BrasilIncriveis = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brasil Incríveis Products - iNeed Stores',
-        text: 'Check out these incredible products from Brasil from the world\'s biggest e-commerce platforms!',
+        title: 'Produtos Brasil Incríveis - iNeed Stores',
+        text: 'Confira estes produtos incríveis do Brasil das maiores plataformas de e-commerce do mundo!',
         url: url,
       };
 
@@ -89,10 +89,10 @@ const BrasilIncriveis = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Incríveis - Totally random. Totally worth it.
+          Brasil Incríveis - Totalmente aleatório. Totalmente vale a pena.
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          Weird, wonderful, wildly unnecessary—but you'll want them all. These are the scroll-stoppers from Temu, AliExpress, Amazon and beyond in Brasil.
+          Estranho, maravilhoso, totalmente desnecessário—mas você vai querer todos. Estes são os que param o scroll do Temu, AliExpress, Amazon e mais.
         </p>
 
         {/* Social Media Icons */}
@@ -127,12 +127,12 @@ const BrasilIncriveis = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. You want internet's coolest treasures from Brasil.</li>
-              <li>2. You want internet's most incredible finds from Brasil.</li>
-              <li>3. You need clever gadgets to pure fun finds from Brasil.</li>
-              <li>4. You want to browse cool products from Brasil.</li>
+              <li>1. Você quer os tesouros mais legais da internet.</li>
+              <li>2. Você quer os achados mais incríveis da internet.</li>
+              <li>3. Você precisa de gadgets inteligentes e achados de pura diversão.</li>
+              <li>4. Você quer navegar por produtos legais.</li>
             </ol>
           </div>
         </div>
@@ -140,7 +140,7 @@ const BrasilIncriveis = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -210,7 +210,7 @@ const BrasilIncriveis = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}

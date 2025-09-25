@@ -6,8 +6,8 @@ const BrasilEsportes = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brasil Esportes Selection - iNeed Stores',
-        text: 'Check out these amazing sports products from Brasil from the world\'s biggest e-commerce platforms!',
+        title: 'Seleção Brasil Esportes - iNeed Stores',
+        text: 'Confira estes produtos esportivos incríveis do Brasil das maiores plataformas de e-commerce do mundo!',
         url: url,
       };
 
@@ -193,10 +193,10 @@ const BrasilEsportes = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Esportes - Gear up without the guesswork.
+          Brasil Esportes - Equipar-se sem adivinhação.
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          From innovative tools to smart accessories, we find the fitness and adventure essentials hiding in your favorite e-commerce apps in Brasil.
+          De ferramentas inovadoras a acessórios inteligentes, encontramos os essenciais de fitness e aventura escondidos nos seus apps de e-commerce favoritos.
         </p>
 
         {/* Social Media Icons */}
@@ -231,12 +231,12 @@ const BrasilEsportes = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Your Sports & Fitness Checklist:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Sua Lista de Esportes e Fitness:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. Ready to power up your workouts in Brasil.</li>
-              <li>2. Need the best gear & smart gadgets in Brasil.</li>
-              <li>3. Want finds that fit your active lifestyle in Brasil.</li>
-              <li>4. Love browsing cool, game-changing products from Brasil.</li>
+              <li>1. Pronto para turbinar seus treinos.</li>
+              <li>2. Precisa dos melhores equipamentos e gadgets inteligentes.</li>
+              <li>3. Quer achados que combinam com seu estilo de vida ativo.</li>
+              <li>4. Ama navegar por produtos legais e revolucionários.</li>
             </ol>
           </div>
         </div>
@@ -244,7 +244,7 @@ const BrasilEsportes = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -314,7 +314,7 @@ const BrasilEsportes = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}

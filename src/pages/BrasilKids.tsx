@@ -6,8 +6,8 @@ const BrasilKids = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brasil Kids Selection - iNeed Stores',
-        text: 'Check out these amazing kids products from Brasil from the world\'s biggest e-commerce platforms!',
+        title: 'Seleção Brasil Brinquedos - iNeed Stores',
+        text: 'Confira estes produtos infantis incríveis do Brasil das maiores plataformas de e-commerce do mundo!',
         url: url,
       };
 
@@ -91,10 +91,10 @@ const BrasilKids = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Kids - Smart fun for small humans
+          Brasil Brinquedos - Diversão inteligente para pequenos humanos
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          From clever toys to parenting hacks, we handpick the cutest chaos-making gear across global marketplaces in Brasil.
+          De brinquedos inteligentes a truques de parentalidade, selecionamos os equipamentos mais fofos que fazem bagunça em marketplaces globais.
         </p>
 
         {/* Social Media Icons */}
@@ -129,12 +129,12 @@ const BrasilKids = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. You want cool toys, clever finds from Brasil.</li>
-              <li>2. You need ideas for your tiny humans in Brasil.</li>
-              <li>3. You need the coolest kids' gadgets in one click from Brasil.</li>
-              <li>4. You want to browse cool products from Brasil.</li>
+              <li>1. Você quer brinquedos legais, achados inteligentes.</li>
+              <li>2. Você precisa de ideias para seus pequenos humanos.</li>
+              <li>3. Você precisa dos gadgets infantis mais legais a um clique.</li>
+              <li>4. Você quer navegar por produtos legais.</li>
             </ol>
           </div>
         </div>
@@ -142,7 +142,7 @@ const BrasilKids = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -248,7 +248,7 @@ const BrasilKids = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}

@@ -47,8 +47,8 @@ const BrasilCasa = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brasil Casa Selection - iNeed Stores',
-        text: 'Check out these amazing home products from Brasil from the world\'s biggest e-commerce platforms!',
+        title: 'Seleção Brasil Casa - iNeed Stores',
+        text: 'Confira estes produtos incríveis para casa do Brasil das maiores plataformas de e-commerce do mundo!',
         url: url,
       };
 
@@ -184,12 +184,12 @@ const BrasilCasa = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="bg-muted w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">The Only Checklist You Need:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">A Única Lista que Você Precisa:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. Just moved into a new home in Brasil.</li>
-              <li>2. Looking for the perfect gift in Brasil.</li>
-              <li>3. Want to make your home cooler (and smarter) in Brasil.</li>
-              <li>4. Just love browsing awesome finds from Brasil.</li>
+              <li>1. Acabou de se mudar para uma nova casa.</li>
+              <li>2. Procurando o presente perfeito.</li>
+              <li>3. Quer deixar sua casa mais legal (e inteligente).</li>
+              <li>4. Ama navegar por achados incríveis.</li>
             </ol>
           </div>
         </div>
@@ -197,7 +197,7 @@ const BrasilCasa = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -532,7 +532,7 @@ const BrasilCasa = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}

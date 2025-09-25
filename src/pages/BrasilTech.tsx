@@ -6,8 +6,8 @@ const BrasilTech = () => {
     try {
       const url = window.location.href;
       const shareData = {
-        title: 'Brasil Tech Selection - iNeed Stores',
-        text: 'Check out these amazing tech products from Brasil from the world\'s biggest e-commerce platforms!',
+        title: 'Seleção Brasil Tech - iNeed Stores',
+        text: 'Confira estes produtos tecnológicos incríveis do Brasil das maiores plataformas de e-commerce do mundo!',
         url: url,
       };
 
@@ -247,10 +247,10 @@ const BrasilTech = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Tech - Cool. Clever. Cutting-edge.
+          Brasil Tech - Legal. Inteligente. Vanguarda.
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          We scan Amazon, eBay, Shopee and all apps for the latest smart gadgets and tech toys in Brasil. Expect unexpected genius.
+          Escaneamos Amazon, eBay, Shopee e todos os apps pelos gadgets inteligentes e brinquedos tech mais recentes. Espere genialidade inesperada.
         </p>
 
         {/* Social Media Icons */}
@@ -285,12 +285,12 @@ const BrasilTech = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Checklist you need:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
-              <li>1. You want cool gadgets and genius ideas from Brasil.</li>
-              <li>2. You want the latest, smartest, coolest from Brasil.</li>
-              <li>3. You need the future in one click away from Brasil.</li>
-              <li>4. You want to browse cool products from Brasil.</li>
+              <li>1. Você quer gadgets legais e ideias geniais.</li>
+              <li>2. Você quer o mais recente, inteligente e legal.</li>
+              <li>3. Você precisa do futuro a um clique de distância.</li>
+              <li>4. Você quer navegar por produtos legais.</li>
             </ol>
           </div>
         </div>
@@ -298,7 +298,7 @@ const BrasilTech = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Browse our finds and click to buy on the platform! Enjoy!
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
           </p>
         </div>
       </div>
@@ -368,7 +368,7 @@ const BrasilTech = () => {
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
         <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8">
-          Did you like the selection?
+          Gostou da seleção?
         </h2>
         
         {/* Social Media Icons */}
