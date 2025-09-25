@@ -207,26 +207,26 @@ const BrasilCasa = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/3Ij0dgQ" 
+              href="https://amzn.to/4gyzdXk" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/Promo_bannerTech.jpg"
+                src="/Promo_banner.jpg"
                 alt="Casa promo banner - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/Promo_bannerTech_tablet.jpg"
+                src="/Promo_banner_tablet.jpg"
                 alt="Casa promo banner - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/Promo_bannerTech_mobile.jpg"
+                src="/Promo_banner_mobile.jpg"
                 alt="Casa promo banner - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -238,26 +238,26 @@ const BrasilCasa = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/41OutH5" 
+              href="https://s.shopee.com.br/qaNROYO3R" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
-                alt="Laptop Screen Extender for multitasking professionals"
+                src="/Small_banner01.jpg"
+                alt="Small banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4nx1Uqd" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
-                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
+                src="/Small_banner02.jpg"
+                alt="Small banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -266,26 +266,26 @@ const BrasilCasa = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/41OutH5" 
+              href="https://s.shopee.com.br/qaNROYO3R" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/9c868b66-5bd6-49d6-91e5-b542a90b919a.png"
-                alt="Laptop Screen Extender for multitasking professionals"
+                src="/Small_banner01.jpg"
+                alt="Small banner 01"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4nx1Uqd" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/d227e50e-175f-4df2-a17b-4ee1ac0979fa.png"
-                alt="ZHIYUN Smooth 5S AI Pro Gimbal Stabilizer for Smartphone"
+                src="/Small_banner02.jpg"
+                alt="Small banner 02"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -305,26 +305,26 @@ const BrasilCasa = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/47DLKqg" 
+              href="https://s.shopee.com.br/8fJEnXMXHX" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
-                alt="GOOVIS Art XR 110 virtual screen with 4,496PPI"
+                src="/Small_banner03.jpg"
+                alt="Small banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4n3i5LW" 
+              href="https://amzn.to/4mDelQm" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
-                alt="Speediance Home Gym"
+                src="/Small_banner04.jpg"
+                alt="Small banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -333,26 +333,26 @@ const BrasilCasa = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/47DLKqg" 
+              href="https://s.shopee.com.br/8fJEnXMXHX" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/620844c7-45e6-49d0-963e-7a021a6c59df.png"
-                alt="GOOVIS Art XR 110 virtual screen with 4,496PPI"
+                src="/Small_banner03.jpg"
+                alt="Small banner 03"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4n3i5LW" 
+              href="https://amzn.to/4mDelQm" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/e95ca176-a85c-45c1-a9b9-7b6e426b0ab9.png"
-                alt="Speediance Home Gym"
+                src="/Small_banner04.jpg"
+                alt="Small banner 04"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -363,26 +363,26 @@ const BrasilCasa = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/41QlNA5" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271111162" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/lovable-uploads/bc69cde8-d45e-416b-b8f0-71558500fa68.png"
+                src="/middle_banner.jpg"
                 alt="Casa middle banner - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/lovable-uploads/203b5a53-a951-4c41-9665-475fbb77f446.png"
+                src="/middle_banner_tablet.jpg"
                 alt="Casa middle banner - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/lovable-uploads/d1578abb-66a3-4ea0-accb-7939452acac9.png"
+                src="/middle_banner_mobile.jpg"
                 alt="Casa middle banner - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
