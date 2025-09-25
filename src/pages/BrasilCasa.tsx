@@ -403,26 +403,26 @@ const BrasilCasa = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/42rQLi2" 
+              href="https://amzn.to/428TnRX" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
-                alt="Homey Pro - The ultimate smart home hub"
+                src="/Small_banner05.jpg"
+                alt="Small banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/46hrLeM" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
-                alt="Atmos Surround Sound System - Revolutionize Your Gaming Sound Experience"
+                src="/Small_banner06.jpg"
+                alt="Small banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -431,19 +431,19 @@ const BrasilCasa = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/42rQLi2" 
+              href="https://amzn.to/428TnRX" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/300d01c9-d842-4cec-80ed-ae6795ec210d.png"
-                alt="Homey Pro - The ultimate smart home hub"
+                src="/Small_banner05.jpg"
+                alt="Small banner 05"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/46hrLeM" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
