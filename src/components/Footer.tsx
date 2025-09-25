@@ -50,20 +50,20 @@ const Footer = () => {
           
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="font-omne-medium text-2xl mb-4 text-foreground">
-              The Internet's Coolest Corner for Cool Stuff
+              {isBrasilPage ? "A melhor seleção de coisas legais da Internet:" : "The Internet's Coolest Corner for Cool Stuff"}
             </h2>
             <p className="font-omne-regular text-muted-foreground leading-relaxed">
-              At ineed, we don't sell ordinary—we showcase extraordinary. Our mission is simple: find the most awesome, beautiful, clever, and just plain cool products floating around platforms like Amazon, Shopee, Alibaba, AliExpress, Temu, and eBay, and bring them together in one jaw-dropping online collection.
+              {isBrasilPage ? "Na iNeed, não vendemos o comum — exibimos o extraordinário. Nossa missão é simples: encontrar os produtos mais incríveis, bonitos, inteligentes e simplesmente descolados que circulam por plataformas como Amazon, Shopee, Alibaba, AliExpress, Temu e eBay e reuni-los em uma coleção maravilhosa, útil e divertida." : "At ineed, we don't sell ordinary—we showcase extraordinary. Our mission is simple: find the most awesome, beautiful, clever, and just plain cool products floating around platforms like Amazon, Shopee, Alibaba, AliExpress, Temu, and eBay, and bring them together in one jaw-dropping online collection."}
             </p>
             <p className="font-omne-regular text-muted-foreground leading-relaxed mt-4">
-              From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered.
+              {isBrasilPage ? "De gadgets alucinantes a produtos para casa, achados infantis divertidos e tudo o mais — nós facilitamos a sua busca nas plataformas e trazemos o melhor de cada uma delas." : "From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered."}
             </p>
           </div>
         </div>
 
         {/* Contact Form */}
         <div className="mb-12">
-          <h3 className="font-omne-medium text-lg text-center mb-6">Get in Touch</h3>
+          <h3 className="font-omne-medium text-lg text-center mb-6">{isBrasilPage ? "Fala com a gente!" : "Get in Touch"}</h3>
           <ContactForm />
         </div>
 
