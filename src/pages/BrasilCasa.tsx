@@ -449,8 +449,8 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/8a797ad3-2fb7-442b-bcd0-eff88d9aa302.png"
-                alt="Atmos Surround Sound System - Revolutionize Your Gaming Sound Experience"
+                src="/Small_banner06.jpg"
+                alt="Small banner 06"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -473,26 +473,26 @@ const BrasilCasa = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/47z5Lyb" 
+              href="https://amzn.to/48ySI01" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
-                alt="EMOPET AI Desk Robot Companion - Hi, what's your name?"
+                src="/Small_banner07.jpg"
+                alt="Small banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4m7uOfr" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
-                alt="Unitree Go2 Robot Dog"
+                src="/Small_banner08.jpg"
+                alt="Small banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -501,26 +501,26 @@ const BrasilCasa = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/47z5Lyb" 
+              href="https://amzn.to/48ySI01" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/9741e368-0046-4b67-9646-15d83c1f1852.png"
-                alt="EMOPET AI Desk Robot Companion - Hi, what's your name?"
+                src="/Small_banner07.jpg"
+                alt="Small banner 07"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/4m7uOfr" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/lovable-uploads/90b5e6c2-9cbc-4d0d-8c5d-274ac9d9d9ae.png"
-                alt="Unitree Go2 Robot Dog"
+                src="/Small_banner08.jpg"
+                alt="Small banner 08"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
