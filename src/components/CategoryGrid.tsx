@@ -93,7 +93,7 @@ const CategoryGrid = ({
                   className="px-3 py-2 rounded-md mb-3"
                   style={{ backgroundColor: buttonColor }}
                 >
-                  <h3 className="font-omne-medium text-base text-white">
+                  <h3 className={`font-omne-medium text-white ${isMobile ? 'text-sm' : 'text-base'}`}>
                     {item.title}
                   </h3>
                   {item.subtitle && (
@@ -105,12 +105,12 @@ const CategoryGrid = ({
                 {showButton && (
                   <Button 
                     className={`w-full text-white hover:opacity-90 ${
-                      isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
+                      isMobile ? 'text-sm' : (isCompactMode ? 'text-sm lg:text-xl' : 'text-xl')
                     }`}
                     style={{ backgroundColor: buttonColor }}
                     onClick={(e) => handleButtonClick(e, item.link)}
                   >
-                    {isMobile ? 'Get mine!' : "Yes! It is beautiful!"}
+                    {isMobile ? 'Eu quero!' : "Eita, eu quero também!"}
                   </Button>
                 )}
               </div>
