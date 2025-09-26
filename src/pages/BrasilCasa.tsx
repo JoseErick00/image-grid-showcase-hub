@@ -41,6 +41,16 @@ import casa37 from "@/assets/casa_37.jpg";
 import casa38 from "@/assets/casa_38.jpg";
 import casa39 from "@/assets/casa_39.jpg";
 import casa40 from "@/assets/casa_40.jpg";
+import casa41 from "@/assets/casa_41.jpg";
+import casa42 from "@/assets/casa_42.jpg";
+import casa43 from "@/assets/casa_43.jpg";
+import casa44 from "@/assets/casa_44.jpg";
+import casa45 from "@/assets/casa_45.jpg";
+import casa46 from "@/assets/casa_46.jpg";
+import casa47 from "@/assets/casa_47.jpg";
+import casa48 from "@/assets/casa_48.jpg";
+import casa49 from "@/assets/casa_49.jpg";
+import casa50 from "@/assets/casa_50.jpg";
 
 const BrasilCasa = () => {
   const handleShare = async () => {
@@ -113,6 +123,16 @@ const BrasilCasa = () => {
     { id: "product-38", title: "Panela de cozinha de ferro fundido esmaltado 3,0 L 3,5 kg", image: casa38, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601389001391" },
     { id: "product-39", title: "Cafeteira Italiana Moka Alumínio 9 Xícaras", image: casa39, link: "https://amzn.to/3IbAUxt" },
     { id: "product-40", title: "Sistema de cultivo hidropônico para jardim interno com luz LED.", image: casa40, link: "https://amzn.to/4mtLUUU" },
+    { id: "product-41", title: "Armário de Cozinha Rustic/verde Vik Mades", image: casa41, link: "https://amzn.to/3IH3oiD" },
+    { id: "product-42", title: "Kit 15 Potes Tampa Hermético Porta Alimentos", image: casa42, link: "https://amzn.to/3Ivzu0Q" },
+    { id: "product-43", title: "Oxford Aparelho De Jantar 30 Peças Ryo Maresia", image: casa43, link: "https://amzn.to/46MOuj8" },
+    { id: "product-44", title: "Aparelho de Jantar 30 peças Donna Lola", image: casa44, link: "https://amzn.to/4njgOjT" },
+    { id: "product-45", title: "Jogo de Panelas 13 peças Titanium Antiaderente Granito", image: casa45, link: "https://amzn.to/4729WAP" },
+    { id: "product-46", title: "Chaleira Eletrica Inox, 220v, 1,8 Litro - Agratto", image: casa46, link: "https://amzn.to/4nkbCfz" },
+    { id: "product-47", title: "Kit facas de cozinha/Churrasco Profissional Antiaderente", image: casa47, link: "https://s.shopee.com.br/AUkuOHZgh9" },
+    { id: "product-48", title: "OKICASA Air fryer Recipiente de vidro de 4,5 L", image: casa48, link: "https://s.shopee.com.br/2B5mU5YjgW" },
+    { id: "product-49", title: "Fritadeira de ar de vidro espesso transparente panorâmico de 360°", image: casa49, link: "https://s.shopee.com.br/7KnsdjkyN9" },
+    { id: "product-50", title: "Conjunto de panelas antiaderentes - Pure Titanium de (4 peças)", image: casa50, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517720876" },
   ];
 
   return (
@@ -526,6 +546,14 @@ const BrasilCasa = () => {
             </a>
           </div>
         </div>
+
+        {/* New products after Small Banner 07 & 08 */}
+        <CategoryGrid 
+          items={homeProducts.slice(40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#d01e23"
+        />
       </div>
 
 
