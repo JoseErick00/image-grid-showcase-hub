@@ -51,6 +51,11 @@ import casa47 from "@/assets/casa_47.jpg";
 import casa48 from "@/assets/casa_48.jpg";
 import casa49 from "@/assets/casa_49.jpg";
 import casa50 from "@/assets/casa_50.jpg";
+import promoBanner02 from "@/assets/Promo_banner02.jpg";
+import promoBanner02Mobile from "@/assets/Promo_banner02_mobile.jpg";
+import promoBanner02Tablet from "@/assets/Promo_banner02_tablet.jpg";
+import smallBanner09 from "@/assets/Small_banner09.jpg";
+import smallBanner10 from "@/assets/Small_banner10.jpg";
 
 const BrasilCasa = () => {
   const handleShare = async () => {
@@ -556,6 +561,95 @@ const BrasilCasa = () => {
         />
       </div>
 
+        {/* Promo Banner 02 */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/42z0XFR" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src={promoBanner02}
+                alt="Promo banner 02 - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src={promoBanner02Tablet}
+                alt="Promo banner 02 - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src={promoBanner02Mobile}
+                alt="Promo banner 02 - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Small Banner 09 & 10 */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://s.shopee.com.br/4VThmrhENE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner09}
+                alt="Small banner 09"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://s.shopee.com.br/3VbAbbWUnx" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner10}
+                alt="Small banner 10"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://s.shopee.com.br/4VThmrhENE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner09}
+                alt="Small banner 09"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://s.shopee.com.br/3VbAbbWUnx" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner10}
+                alt="Small banner 10"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
