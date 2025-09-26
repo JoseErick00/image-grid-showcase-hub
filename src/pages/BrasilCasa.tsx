@@ -146,7 +146,7 @@ const BrasilCasa = () => {
 
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-4">
-          Brasil Casa - Inteligente. Estilosa e útil!
+          Casa Inteligente. Estilosa e útil!
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           Pesquisamos a fundo na Amazon, Shopee, Temu e muito mais para trazer as melhores novidades para sua casa.
@@ -184,10 +184,10 @@ const BrasilCasa = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="bg-muted w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">A Única Lista que Você Precisa:</h2>
+            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Esta lista é para você que :</h2>
             <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
               <li>1. Acabou de se mudar para uma nova casa.</li>
-              <li>2. Procurando o presente perfeito.</li>
+              <li>2. Procura um presente bacana.</li>
               <li>3. Quer deixar sua casa mais legal (e inteligente).</li>
               <li>4. Ama navegar por achados incríveis.</li>
             </ol>
