@@ -557,33 +557,35 @@ const BrasilCasa = () => {
       </div>
 
         {/* Promo Banner 02 */}
-        <div className="my-12 flex justify-center">
-          <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/42z0XFR" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src="/Promo_banner02.jpg"
-                alt="Casa promo banner 02 - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src="/Promo_banner02_tablet.jpg"
-                alt="Casa promo banner 02 - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src="/Promo_banner02_mobile.jpg"
-                alt="Casa promo banner 02 - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="my-12 flex justify-center">
+            <div className="w-full max-w-[1200px]">
+              <a 
+                href="https://amzn.to/42z0XFR" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              >
+                {/* Desktop banner */}
+                <img 
+                  src="/Promo_banner02.jpg"
+                  alt="Casa promo banner 02 - desktop"
+                  className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Tablet banner */}
+                <img 
+                  src="/Promo_banner02_tablet.jpg"
+                  alt="Casa promo banner 02 - tablet"
+                  className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Mobile banner */}
+                <img 
+                  src="/Promo_banner02_mobile.jpg"
+                  alt="Casa promo banner 02 - mobile"
+                  className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </div>
           </div>
         </div>
         {/* Small Banner 09 & 10 */}
