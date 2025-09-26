@@ -587,7 +587,7 @@ const BrasilCasa = () => {
           </div>
         </div>
         {/* Small Banner 09 & 10 */}
-        <div className="mb-12">
+        <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
