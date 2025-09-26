@@ -51,11 +51,6 @@ import casa47 from "@/assets/casa_47.jpg";
 import casa48 from "@/assets/casa_48.jpg";
 import casa49 from "@/assets/casa_49.jpg";
 import casa50 from "@/assets/casa_50.jpg";
-import promoBanner02 from "@/assets/Promo_banner02.jpg";
-import promoBanner02Mobile from "@/assets/Promo_banner02_mobile.jpg";
-import promoBanner02Tablet from "@/assets/Promo_banner02_tablet.jpg";
-import smallBanner09 from "@/assets/Small_banner09.jpg";
-import smallBanner10 from "@/assets/Small_banner10.jpg";
 
 const BrasilCasa = () => {
   const handleShare = async () => {
@@ -572,26 +567,25 @@ const BrasilCasa = () => {
             >
               {/* Desktop banner */}
               <img 
-                src={promoBanner02}
-                alt="Promo banner 02 - desktop"
+                src="/Promo_banner02.jpg"
+                alt="Casa promo banner 02 - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src={promoBanner02Tablet}
-                alt="Promo banner 02 - tablet"
+                src="/Promo_banner02_tablet.jpg"
+                alt="Casa promo banner 02 - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src={promoBanner02Mobile}
-                alt="Promo banner 02 - mobile"
+                src="/Promo_banner02_mobile.jpg"
+                alt="Casa promo banner 02 - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
         </div>
-
         {/* Small Banner 09 & 10 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
@@ -603,7 +597,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src={smallBanner09}
+                src="/Small_banner09.jpg"
                 alt="Small banner 09"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -615,7 +609,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src={smallBanner10}
+                src="/Small_banner10.jpg"
                 alt="Small banner 10"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -631,7 +625,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src={smallBanner09}
+                src="/Small_banner09.jpg"
                 alt="Small banner 09"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -643,7 +637,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src={smallBanner10}
+                src="/Small_banner10.jpg"
                 alt="Small banner 10"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
