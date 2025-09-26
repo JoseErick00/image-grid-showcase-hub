@@ -587,61 +587,63 @@ const BrasilCasa = () => {
           </div>
         </div>
         {/* Small Banner 09 & 10 */}
-        <div className="my-12">
-          {/* Desktop: Two columns */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/4VThmrhENE" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/Small_banner09.jpg"
-                alt="Small banner 09"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/3VbAbbWUnx" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/Small_banner10.jpg"
-                alt="Small banner 10"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-          </div>
-          
-          {/* Mobile: Stacked */}
-          <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/4VThmrhENE" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/Small_banner09.jpg"
-                alt="Small banner 09"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/3VbAbbWUnx" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/Small_banner10.jpg"
-                alt="Small banner 10"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="my-12">
+            {/* Desktop: Two columns */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+              <a 
+                href="https://s.shopee.com.br/4VThmrhENE" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              >
+                <img 
+                  src="/Small_banner09.jpg"
+                  alt="Small banner 09"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+              <a 
+                href="https://s.shopee.com.br/3VbAbbWUnx" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              >
+                <img 
+                  src="/Small_banner10.jpg"
+                  alt="Small banner 10"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </div>
+            
+            {/* Mobile: Stacked */}
+            <div className="md:hidden space-y-12">
+              <a 
+                href="https://s.shopee.com.br/4VThmrhENE" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              >
+                <img 
+                  src="/Small_banner09.jpg"
+                  alt="Small banner 09"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+              <a 
+                href="https://s.shopee.com.br/3VbAbbWUnx" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              >
+                <img 
+                  src="/Small_banner10.jpg"
+                  alt="Small banner 10"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
