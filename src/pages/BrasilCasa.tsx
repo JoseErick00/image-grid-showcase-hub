@@ -650,73 +650,75 @@ const BrasilCasa = () => {
         </div>
 
         {/* Product Grid 51-60 */}
-        <CategoryGrid
-          items={[
-            {
-              id: "casa_51",
-              title: "OKICASA - Chaleira Elétrica Premium de Vidro 2L",
-              image: "/casa_51.jpg",
-              link: "https://s.shopee.com.br/3LHk9EI6iG"
-            },
-            {
-              id: "casa_52",
-              title: "Aspirador de Pó Vertical Portátil 1100w de Potência",
-              image: "/casa_52.jpg",
-              link: "https://s.shopee.com.br/20mMZSNofa"
-            },
-            {
-              id: "casa_53",
-              title: "Cozedor de Ovos Elétrico 7 Ovos",
-              image: "/casa_53.jpg",
-              link: "https://s.shopee.com.br/7V7J88t50M"
-            },
-            {
-              id: "casa_54",
-              title: "Cabeceira para cama box - Jessica",
-              image: "/casa_54.jpg",
-              link: "https://s.shopee.com.br/4fn7lzqP8T"
-            },
-            {
-              id: "casa_55",
-              title: "Grande panela de barriga pura - Forjada à Mão!",
-              image: "/casa_55.jpg",
-              link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601518067638"
-            },
-            {
-              id: "casa_56",
-              title: "Fritadeira Elétrica Masterchef Oven By Mallory",
-              image: "/casa_56.jpg",
-              link: "https://amzn.to/3Kkw6q8"
-            },
-            {
-              id: "casa_57",
-              title: "Cafeteira, Filtro v60, 600m",
-              image: "/casa_57.jpg",
-              link: "https://amzn.to/3Knlabh"
-            },
-            {
-              id: "casa_58",
-              title: "Cafeteira Espresso Nespresso Vertuo",
-              image: "/casa_58.jpg",
-              link: "https://amzn.to/4mxdmAX"
-            },
-            {
-              id: "casa_59",
-              title: "Cantinho Do Café Para Sala De Estar (Off White/Freijó)",
-              image: "/casa_59.jpg",
-              link: "https://amzn.to/4gIlPjr"
-            },
-            {
-              id: "casa_60",
-              title: "Conjunto de panelas antiaderentes - Pure Titanium de (4 peças)",
-              image: "/casa_60.jpg",
-              link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517720876"
-            }
-          ]}
-          columns={2}
-          aspectRatio="portrait"
-          buttonColor="#d01e23"
-        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <CategoryGrid
+            items={[
+              {
+                id: "casa_51",
+                title: "OKICASA - Chaleira Elétrica Premium de Vidro 2L",
+                image: "/casa_51.jpg",
+                link: "https://s.shopee.com.br/3LHk9EI6iG"
+              },
+              {
+                id: "casa_52",
+                title: "Aspirador de Pó Vertical Portátil 1100w de Potência",
+                image: "/casa_52.jpg",
+                link: "https://s.shopee.com.br/20mMZSNofa"
+              },
+              {
+                id: "casa_53",
+                title: "Cozedor de Ovos Elétrico 7 Ovos",
+                image: "/casa_53.jpg",
+                link: "https://s.shopee.com.br/7V7J88t50M"
+              },
+              {
+                id: "casa_54",
+                title: "Cabeceira para cama box - Jessica",
+                image: "/casa_54.jpg",
+                link: "https://s.shopee.com.br/4fn7lzqP8T"
+              },
+              {
+                id: "casa_55",
+                title: "Grande panela de barriga pura - Forjada à Mão!",
+                image: "/casa_55.jpg",
+                link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601518067638"
+              },
+              {
+                id: "casa_56",
+                title: "Fritadeira Elétrica Masterchef Oven By Mallory",
+                image: "/casa_56.jpg",
+                link: "https://amzn.to/3Kkw6q8"
+              },
+              {
+                id: "casa_57",
+                title: "Cafeteira, Filtro v60, 600m",
+                image: "/casa_57.jpg",
+                link: "https://amzn.to/3Knlabh"
+              },
+              {
+                id: "casa_58",
+                title: "Cafeteira Espresso Nespresso Vertuo",
+                image: "/casa_58.jpg",
+                link: "https://amzn.to/4mxdmAX"
+              },
+              {
+                id: "casa_59",
+                title: "Cantinho Do Café Para Sala De Estar (Off White/Freijó)",
+                image: "/casa_59.jpg",
+                link: "https://amzn.to/4gIlPjr"
+              },
+              {
+                id: "casa_60",
+                title: "Conjunto de panelas antiaderentes - Pure Titanium de (4 peças)",
+                image: "/casa_60.jpg",
+                link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517720876"
+              }
+            ]}
+            columns={2}
+            aspectRatio="portrait"
+            buttonColor="#d01e23"
+          />
+        </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
