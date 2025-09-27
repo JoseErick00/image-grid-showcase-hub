@@ -713,9 +713,9 @@ const BrasilCasa = () => {
               link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517720876"
             }
           ]}
-          columns={3}
-          aspectRatio="square"
-          buttonColor="#dc2626"
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#d01e23"
         />
 
       {/* Bottom Social Section */}
