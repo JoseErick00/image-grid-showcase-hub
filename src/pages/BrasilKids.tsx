@@ -10,6 +10,16 @@ import kids07 from "@/assets/kids_07.jpg";
 import kids08 from "@/assets/kids_08.jpg";
 import kids09 from "@/assets/kids_09.jpg";
 import kids10 from "@/assets/kids_10.jpg";
+import kids11 from "@/assets/kids_11.jpg";
+import kids12 from "@/assets/kids_12.jpg";
+import kids13 from "@/assets/kids_13.jpg";
+import kids14 from "@/assets/kids_14.jpg";
+import kids15 from "@/assets/kids_15.jpg";
+import kids16 from "@/assets/kids_16.jpg";
+import kids17 from "@/assets/kids_17.jpg";
+import kids18 from "@/assets/kids_18.jpg";
+import kids19 from "@/assets/kids_19.jpg";
+import kids20 from "@/assets/kids_20.jpg";
 
 const BrasilKids = () => {
   const handleShare = async () => {
@@ -52,16 +62,16 @@ const BrasilKids = () => {
     { id: "kids-8", title: "Telefone celular de plástico - Aprendizagem Infantil", image: kids08, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601576443886" },
     { id: "kids-9", title: "Câmera digital para crianças, impressão instantânea de vídeos coloridos com foco fixo.", image: kids09, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601378119967" },
     { id: "kids-10", title: "Brinquedo de vinil Animais da Selva Colecionáveis", image: kids10, link: "https://s.shopee.com.br/7V7PjNu6H3" },
-    { id: "kids-11", title: "Magic Mixies – Magic Cauldron Pink", image: "/lovable-uploads/e9b6989c-37b1-45e7-aa7a-f92a476419e4.png", link: "https://amzn.to/4ngf4HQ" },
-    { id: "kids-12", title: "FUZOU Electric Duck Plush Toy, English Version Recording Repeating Dancing Talking Duck", image: "/lovable-uploads/4646da57-05b4-48ce-9bcc-542bdfef717e.png", link: "https://amzn.to/3V3Z6od" },
-    { id: "kids-13", title: "Baby shoes, children's star tennis shoes", image: "/lovable-uploads/d28481bb-f112-46c8-b5c1-b36770346dad.png", link: "https://amzn.to/45Prn87" },
-    { id: "kids-14", title: "RURUz Bubble Lawn Mower - Push-Along Toy with Over 15,000 Bubbles Per Minute", image: "/lovable-uploads/c3c3f2b9-c1d0-47d2-b3c0-3bd75204950b.png", link: "https://amzn.to/47vz4li" },
-    { id: "kids-15", title: "The First Years Disney Minnie Mouse - Potty training toilet", image: "/lovable-uploads/84f61b02-2d9a-4e1c-a399-f2ab54ce1a31.png", link: "https://amzn.to/4nfPtyE" },
-    { id: "kids-16", title: "VTech Upgraded Smart WiFi Baby Monitor, 1080p FHD Camera", image: "/lovable-uploads/3684e324-9202-4ea0-adbd-eef395d6df5f.png", link: "https://amzn.to/47pID5b" },
-    { id: "kids-17", title: "Wooowyet LED Roller Skate Shoes for Kids", image: "/lovable-uploads/0507e298-0613-444c-9b7b-d5611653f810.png", link: "https://amzn.to/46lYxwd" },
-    { id: "kids-18", title: "Magnetic Blocks - Build Mine Magnet World Edition", image: "/lovable-uploads/24ae9d50-fdcd-4910-9698-5c062dd02b70.png", link: "https://amzn.to/4nkQvtw" },
-    { id: "kids-19", title: "YOTO Player (3rd Gen.) + Starter Pack Bundle Kids Bluetooth Audio Speaker", image: "/lovable-uploads/32220abf-1e24-4437-a9f5-e8824e91f6c8.png", link: "https://amzn.to/4mKP5Z9" },
-    { id: "kids-20", title: "pindaloo - The Original Skill Game", image: "/lovable-uploads/9ade59f9-dafd-499d-bf4f-0257ef56d94d.png", link: "https://amzn.to/3HW2kaq" },
+    { id: "kids-11", title: "Robô de controle de voz interativo para crianças inteligente", image: kids11, link: "https://amzn.to/3KlkOSD" },
+    { id: "kids-12", title: "Robô Robbie Bots, Branco", image: kids12, link: "https://amzn.to/3WjqZZO" },
+    { id: "kids-13", title: "Câmera digital infantil de lente dupla de unicórnio de desenho animado 48 MP", image: kids13, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601567922865" },
+    { id: "kids-14", title: "Balão de alumínio transparente para decoração de festa de aniversário", image: kids14, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601401980297" },
+    { id: "kids-15", title: "Maxtop  - Mini walkie talkie de longo alcance.", image: kids15, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000023326574" },
+    { id: "kids-16", title: "Clingo Balanço Automático para Bebê com Controle Remoto, Bluetooth, Sons Suaves", image: kids16, link: "https://amzn.to/3KtlaGL" },
+    { id: "kids-17", title: "BUBA Mantinha estrelinhas rosa.", image: kids17, link: "https://amzn.to/4nWmFf0" },
+    { id: "kids-18", title: "DM -Patins ajustável, patins infantis 4 Rodas", image: kids18, link: "https://amzn.to/3WfvHI5" },
+    { id: "kids-19", title: "Brinquedo de pelúcia Capybara com mochila tartaruga.", image: kids19, link: "https://amzn.to/3Krk1zs" },
+    { id: "kids-20", title: "Jogo puxa puxa batatinha - Estrela.", image: kids20, link: "https://amzn.to/3WfSgMQ" },
     { id: "kids-21", title: "Kids Camera Instant Print Gifts for Kids Age 3-12", image: "/lovable-uploads/d514c8d7-0a8f-4a0d-94fc-ceffb69f16a7.png", link: "https://amzn.to/45SlRSo" },
     { id: "kids-22", title: "PREPOP Gesture Sensing RC Stunt Car, 4WD Rotating", image: "/lovable-uploads/00c30071-02f6-44eb-ad1e-f4860db14900.png", link: "https://amzn.to/3V1GfKw" },
     { id: "kids-23", title: "98K Kids Robot Toys for Girls and Boys", image: "/lovable-uploads/90519a4f-5f1c-43dc-b6f9-1544b6ee6ba2.png", link: "https://amzn.to/4mOVhzz" },
