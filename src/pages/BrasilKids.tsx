@@ -1,5 +1,16 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import kids01 from "@/assets/kids_01.jpg";
+import kids02 from "@/assets/kids_02.jpg";
+import kids03 from "@/assets/kids_03.jpg";
+import kids04 from "@/assets/kids_04.jpg";
+import kids05 from "@/assets/kids_05.jpg";
+import kids06 from "@/assets/kids_06.jpg";
+import kids07 from "@/assets/kids_07.jpg";
+import kids08 from "@/assets/kids_08.jpg";
+import kids09 from "@/assets/kids_09.jpg";
+import kids10 from "@/assets/kids_10.jpg";
+import casa03 from "@/assets/casa_03.jpg";
 
 const BrasilKids = () => {
   const handleShare = async () => {
@@ -32,15 +43,16 @@ const BrasilKids = () => {
   };
 
   const kidsProducts = [
-    { id: "kids-2", title: "ENERGIZE LAB Eilik - Cute Robot Pets for Kids and Adults", image: "/lovable-uploads/99f441d4-b12e-4cde-8635-9fb7b5f93ef8.png", link: "https://amzn.to/4pdD0xu" },
-    { id: "kids-3", title: "Miko Mini with 30 Days Free Miko Max: AI Robot for Kids", image: "/lovable-uploads/693911a4-bf68-4d84-a5f0-22c73f54b9d7.png", link: "https://amzn.to/4p9lB90" },
-    { id: "kids-4", title: "Nex Playground - The Active Play System for Kids & Families", image: "/lovable-uploads/385b7130-208f-48e0-a8f8-b2c80ef66acb.png", link: "https://amzn.to/464ap4L" },
-    { id: "kids-5", title: "ZZZMOON Story Projector for Kids", image: "/lovable-uploads/d6a1079d-4798-4e80-8763-40e5a4b2d47f.png", link: "https://amzn.to/3VlXu9D" },
-    { id: "kids-6", title: "Portable Kids Bedroom Baby Sleep Train Alarm Clock", image: "/lovable-uploads/c3aae6d0-7c98-4bfb-a747-5627cfb05fdf.png", link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600717087062" },
-    { id: "kids-7", title: "2 Inch Screen HD Cartoon Mini SLR Camera", image: "/lovable-uploads/8ce27fea-9953-4ae4-9319-701e1c304f73.png", link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601074960510" },
-    { id: "kids-8", title: "Soft Play Mat - Grey", image: "/lovable-uploads/9cde6bae-1124-444d-997d-bce924674d9c.png", link: "https://amzn.to/3JGCR5r" },
-    { id: "kids-9", title: "My Friend's Baby Essentials Gift Set", image: "/lovable-uploads/ac4a393c-da7b-4f3f-8e14-66a6268d7291.png", link: "https://amzn.to/4mYmIqz" },
-    { id: "kids-10", title: "Digital Pet with 15 Animals Inside, Virtual Electronic Pets React to Touch", image: "/lovable-uploads/0ab379fa-cdb1-447a-b11e-d27054a24b55.png", link: "https://amzn.to/46aZJBD" },
+    { id: "kids-1", title: "Canguru Para Bebê Ergonômico 20KG Premium 12 Posições", image: kids01, link: "https://amzn.to/3ILPyvn" },
+    { id: "kids-2", title: "Hoverboard Elétrico com Luzes LED, 6.5 Polegadas", image: kids02, link: "https://amzn.to/4ogPVgT" },
+    { id: "kids-3", title: "Patinete Infantil, Com 3 Rodas, Luzes Led nas Rodas, Dobrável", image: casa03, link: "https://amzn.to/488wHoH" },
+    { id: "kids-4", title: "Cercado para bebê grande cercadinho infantil", image: kids04, link: "https://s.shopee.com.br/1BDM6DpAiX" },
+    { id: "kids-5", title: "Bola para bebês som e sentidos BANG TOYS", image: kids05, link: "https://s.shopee.com.br/AA8ApH8JWA" },
+    { id: "kids-6", title: "Maleta de ferramentas infantil kit 3 em 1 vira mochila com 22 peças.", image: kids06, link: "https://s.shopee.com.br/7fQpr5Kvot" },
+    { id: "kids-7", title: "Globos 4D coloridos e brilhantes para decoração de festa de aniversário infantil", image: kids07, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601083558219" },
+    { id: "kids-8", title: "Telefone celular de plástico - Aprendizagem Infantil", image: kids08, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601576443886" },
+    { id: "kids-9", title: "Câmera digital para crianças, impressão instantânea de vídeos coloridos com foco fixo.", image: kids09, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601378119967" },
+    { id: "kids-10", title: "Brinquedo de vinil Animais da Selva Colecionáveis", image: kids10, link: "https://s.shopee.com.br/7V7PjNu6H3" },
     { id: "kids-11", title: "Magic Mixies – Magic Cauldron Pink", image: "/lovable-uploads/e9b6989c-37b1-45e7-aa7a-f92a476419e4.png", link: "https://amzn.to/4ngf4HQ" },
     { id: "kids-12", title: "FUZOU Electric Duck Plush Toy, English Version Recording Repeating Dancing Talking Duck", image: "/lovable-uploads/4646da57-05b4-48ce-9bcc-542bdfef717e.png", link: "https://amzn.to/3V3Z6od" },
     { id: "kids-13", title: "Baby shoes, children's star tennis shoes", image: "/lovable-uploads/d28481bb-f112-46c8-b5c1-b36770346dad.png", link: "https://amzn.to/45Prn87" },
