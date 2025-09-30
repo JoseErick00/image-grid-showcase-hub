@@ -10,7 +10,6 @@ import kids07 from "@/assets/kids_07.jpg";
 import kids08 from "@/assets/kids_08.jpg";
 import kids09 from "@/assets/kids_09.jpg";
 import kids10 from "@/assets/kids_10.jpg";
-import casa03 from "@/assets/casa_03.jpg";
 
 const BrasilKids = () => {
   const handleShare = async () => {
@@ -45,7 +44,7 @@ const BrasilKids = () => {
   const kidsProducts = [
     { id: "kids-1", title: "Canguru Para Bebê Ergonômico 20KG Premium 12 Posições", image: kids01, link: "https://amzn.to/3ILPyvn" },
     { id: "kids-2", title: "Hoverboard Elétrico com Luzes LED, 6.5 Polegadas", image: kids02, link: "https://amzn.to/4ogPVgT" },
-    { id: "kids-3", title: "Patinete Infantil, Com 3 Rodas, Luzes Led nas Rodas, Dobrável", image: casa03, link: "https://amzn.to/488wHoH" },
+    { id: "kids-3", title: "Patinete Infantil, Com 3 Rodas, Luzes Led nas Rodas, Dobrável", image: kids03, link: "https://amzn.to/488wHoH" },
     { id: "kids-4", title: "Cercado para bebê grande cercadinho infantil", image: kids04, link: "https://s.shopee.com.br/1BDM6DpAiX" },
     { id: "kids-5", title: "Bola para bebês som e sentidos BANG TOYS", image: kids05, link: "https://s.shopee.com.br/AA8ApH8JWA" },
     { id: "kids-6", title: "Maleta de ferramentas infantil kit 3 em 1 vira mochila com 22 peças.", image: kids06, link: "https://s.shopee.com.br/7fQpr5Kvot" },
