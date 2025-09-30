@@ -91,10 +91,10 @@ const BrasilKids = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Brinquedos - Diversão inteligente para pequenos humanos
+          Diversão inteligente para seus pequenos humanos
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          De brinquedos inteligentes a truques de parentalidade, selecionamos os equipamentos mais fofos que fazem bagunça em marketplaces globais.
+          De brinquedos inteligentes a truques e gadgets divertidos e didáticos, selecionamos os produtos mais fofos e interessantes que irão ajudar na evolução de seus humaninhos.
         </p>
 
         {/* Social Media Icons */}
