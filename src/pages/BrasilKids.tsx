@@ -40,6 +40,16 @@ import kids37 from "@/assets/kids_37.jpg";
 import kids38 from "@/assets/kids_38.jpg";
 import kids39 from "@/assets/kids_39.jpg";
 import kids40 from "@/assets/kids_40.jpg";
+import kids41 from "@/assets/kids_41.jpg";
+import kids42 from "@/assets/kids_42.jpg";
+import kids43 from "@/assets/kids_43.jpg";
+import kids44 from "@/assets/kids_44.jpg";
+import kids45 from "@/assets/kids_45.jpg";
+import kids46 from "@/assets/kids_46.jpg";
+import kids47 from "@/assets/kids_47.jpg";
+import kids48 from "@/assets/kids_48.jpg";
+import kids49 from "@/assets/kids_49.jpg";
+import kids50 from "@/assets/kids_50.jpg";
 
 const BrasilKids = () => {
   const handleShare = async () => {
@@ -112,6 +122,16 @@ const BrasilKids = () => {
     { id: "kids-38", title: "Patinete 3 Rodas Infantil Musical Com Luzes", image: kids38, link: "https://amzn.to/48H59XC" },
     { id: "kids-39", title: "TOPAMIX Organizador de brinquedos e livros", image: kids39, link: "https://amzn.to/485Gw6V" },
     { id: "kids-40", title: "Cesto organizador decorativo ideal para brinquedos", image: kids40, link: "https://amzn.to/3IoZhb5" },
+    { id: "kids-41", title: "Cama infantil de chão montessoriana solteiro (com cômoda)", image: kids41, link: "https://amzn.to/4nQnVAm" },
+    { id: "kids-42", title: "Conjunto Roupa de Cama - Decoração infantil juvenil menina", image: kids42, link: "https://amzn.to/3VJES3u" },
+    { id: "kids-43", title: "Jogo conjunto infantil menino - 04 Peças Futebol", image: kids43, link: "https://amzn.to/4gPYU5P" },
+    { id: "kids-44", title: "Bonecos de pelúcia série fofa animais - TATA DREAM OF BABY", image: kids44, link: "https://s.shopee.com.br/6VEtv18qqe" },
+    { id: "kids-45", title: "Cadeira de banho para bebê sentar com apoio de encosto", image: kids45, link: "https://s.shopee.com.br/1BDNZvtNWi" },
+    { id: "kids-46", title: "Máquina de espuma elétrica de brinquedo com concentrado e blaster de espuma portátil", image: kids46, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601560091486" },
+    { id: "kids-47", title: "Brinquedos de armas para brincadeiras ao ar livre com bolhas.", image: kids47, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601560091486" },
+    { id: "kids-48", title: "Bonecos de ação de anime de PVC 3D realistas", image: kids48, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601452969614" },
+    { id: "kids-49", title: "Gato Mochila de pelúcia realista, com enchimento de algodão PP", image: kids49, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601583463852" },
+    { id: "kids-50", title: "Cesto organizador decorativo ideal para brinquedos", image: kids50, link: "https://amzn.to/3IoZhb5" },
   ];
 
   return (
@@ -631,6 +651,16 @@ const BrasilKids = () => {
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
+
+      {/* New products after Mailchimp */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <CategoryGrid 
+          items={kidsProducts.slice(40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#856cb0"
+        />
+      </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
