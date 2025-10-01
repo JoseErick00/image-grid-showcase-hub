@@ -25,6 +25,11 @@ import kids22 from "@/assets/kids_22.jpg";
 import kids23 from "@/assets/kids_23.jpg";
 import kids24 from "@/assets/kids_24.jpg";
 import kids25 from "@/assets/kids_25.jpg";
+import kids26 from "@/assets/kids_26.jpg";
+import kids27 from "@/assets/kids_27.jpg";
+import kids28 from "@/assets/kids_28.jpg";
+import kids29 from "@/assets/kids_29.jpg";
+import kids30 from "@/assets/kids_30.jpg";
 import kids31 from "@/assets/kids_31.jpg";
 import kids32 from "@/assets/kids_32.jpg";
 import kids33 from "@/assets/kids_33.jpg";
@@ -90,6 +95,13 @@ const BrasilKids = () => {
     { id: "kids-21", title: "UNO Jogo de Cartas Harry Potter", image: kids21, link: "https://amzn.to/42hctWe" },
     { id: "kids-22", title: "Super Mio Robot", image: kids22, link: "https://amzn.to/4gSlqvd" },
     { id: "kids-23", title: "LEGO Jurassic World Fuga no Rio do T. rex", image: kids23, link: "https://amzn.to/42n9Z8K" },
+    { id: "kids-24", title: "Robô Inteligente: Cão elétrico que dança e faz a festa e grava voz", image: kids24, link: "https://amzn.to/4gPNYW4" },
+    { id: "kids-25", title: "Pais & Filhos - Caiu Perdeu, 54 Pçs", image: kids25, link: "https://amzn.to/3IrLIHT" },
+    { id: "kids-26", title: "Conjunto Jardineira Para Bebê Menina Kit 2 Peças", image: kids26, link: "https://s.shopee.com.br/5AjW06TIei" },
+    { id: "kids-27", title: "Carrinho Off-road Drift - Recarregável controle remoto - 4wd VR", image: kids27, link: "https://s.shopee.com.br/qaWqRpJwJ" },
+    { id: "kids-28", title: "Dinossauro Rex - Brinquedo com luzes, anda, emite sons, cores e fumaça", image: kids28, link: "https://s.shopee.com.br/3LHrpaJL3x" },
+    { id: "kids-29", title: "Jogo barril do pirata brinquedo com 16 espadas.", image: kids29, link: "https://s.shopee.com.br/5pzCooxzhj" },
+    { id: "kids-30", title: "Robô Aranha Diversão - 6 pernas com som e luzes.", image: kids30, link: "https://s.shopee.com.br/BKq4tyJVy" },
     { id: "kids-31", title: "Automático Pokeball Throw  - Pokemon", image: kids31, link: "https://s.shopee.com.br/7fQr2uK0wO" },
     { id: "kids-32", title: "Tapete de atividades piano musical para crianças", image: kids32, link: "https://s.shopee.com.br/5VMMTrHxpj" },
     { id: "kids-33", title: "BUBA - Meu primeiro pandeiro brinquedo chocalho Infantil", image: kids33, link: "https://s.shopee.com.br/5VMMTrHxpj" },
