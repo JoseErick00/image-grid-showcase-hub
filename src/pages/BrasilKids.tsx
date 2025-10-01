@@ -20,6 +20,16 @@ import kids17 from "@/assets/kids_17.jpg";
 import kids18 from "@/assets/kids_18.jpg";
 import kids19 from "@/assets/kids_19.jpg";
 import kids20 from "@/assets/kids_20.jpg";
+import kids21 from "@/assets/kids_21.jpg";
+import kids22 from "@/assets/kids_22.jpg";
+import kids23 from "@/assets/kids_23.jpg";
+import kids24 from "@/assets/kids_24.jpg";
+import kids25 from "@/assets/kids_25.jpg";
+import kids26 from "@/assets/kids_26.jpg";
+import kids27 from "@/assets/kids_27.jpg";
+import kids28 from "@/assets/kids_28.jpg";
+import kids29 from "@/assets/kids_29.jpg";
+import kids30 from "@/assets/kids_30.jpg";
 
 const BrasilKids = () => {
   const handleShare = async () => {
@@ -72,12 +82,16 @@ const BrasilKids = () => {
     { id: "kids-18", title: "DM -Patins ajustável, patins infantis 4 Rodas", image: kids18, link: "https://amzn.to/3WfvHI5" },
     { id: "kids-19", title: "Brinquedo de pelúcia Capybara com mochila tartaruga.", image: kids19, link: "https://amzn.to/3Krk1zs" },
     { id: "kids-20", title: "Jogo puxa puxa batatinha - Estrela.", image: kids20, link: "https://amzn.to/3WfSgMQ" },
-    { id: "kids-21", title: "Kids Camera Instant Print Gifts for Kids Age 3-12", image: "/lovable-uploads/d514c8d7-0a8f-4a0d-94fc-ceffb69f16a7.png", link: "https://amzn.to/45SlRSo" },
-    { id: "kids-22", title: "PREPOP Gesture Sensing RC Stunt Car, 4WD Rotating", image: "/lovable-uploads/00c30071-02f6-44eb-ad1e-f4860db14900.png", link: "https://amzn.to/3V1GfKw" },
-    { id: "kids-23", title: "98K Kids Robot Toys for Girls and Boys", image: "/lovable-uploads/90519a4f-5f1c-43dc-b6f9-1544b6ee6ba2.png", link: "https://amzn.to/4mOVhzz" },
-    { id: "kids-24", title: "Whoobli Punching Bag for Kids", image: "/lovable-uploads/ad228b5b-e3ad-40a1-bdbc-aaf718d45217.png", link: "https://amzn.to/4p93aBe" },
-    { id: "kids-25", title: "Flybar Pogo Trick Ball for Kids", image: "/lovable-uploads/6d04332e-25b8-4325-bf2b-98259232c63f.png", link: "https://amzn.to/45P5QfT" },
-    { id: "kids-26", title: "2 Pack Slushy Cup, Slushie Maker Cups Magic Frozen", image: "/lovable-uploads/be452162-4a09-4d4a-a2fe-7ad07208385f.png", link: "https://amzn.to/47tU9wo" },
+    { id: "kids-21", title: "UNO Jogo de Cartas Harry Potter", image: kids21, link: "https://amzn.to/42hctWe" },
+    { id: "kids-22", title: "Super Mio Robot", image: kids22, link: "https://amzn.to/4gSlqvd" },
+    { id: "kids-23", title: "LEGO Jurassic World Fuga no Rio do T. rex", image: kids23, link: "https://amzn.to/42n9Z8K" },
+    { id: "kids-24", title: "Robô Inteligente: Cão elétrico que dança e faz a festa e grava voz", image: kids24, link: "https://amzn.to/4gPNYW4" },
+    { id: "kids-25", title: "Pais & Filhos - Caiu Perdeu, 54 Pçs", image: kids25, link: "https://amzn.to/3IrLIHT" },
+    { id: "kids-26", title: "Conjunto Jardineira Para Bebê Menina Kit 2 Peças", image: kids26, link: "https://s.shopee.com.br/5AjW06TIei" },
+    { id: "kids-27", title: "Carrinho Off-road Drift - Recarregável controle remoto - 4wd VR", image: kids27, link: "https://s.shopee.com.br/qaWqRpJwJ" },
+    { id: "kids-28", title: "Dinossauro Rex - Brinquedo com luzes, anda, emite sons, cores e fumaça", image: kids28, link: "https://s.shopee.com.br/3LHrpaJL3x" },
+    { id: "kids-29", title: "Jogo barril do pirata brinquedo com 16 espadas.", image: kids29, link: "https://s.shopee.com.br/5pzCooxzhj" },
+    { id: "kids-30", title: "Robô Aranha Diversão - 6 pernas com som e luzes.", image: kids30, link: "https://s.shopee.com.br/BKq4tyJVy" },
   ];
 
   return (
