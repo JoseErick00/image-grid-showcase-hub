@@ -131,7 +131,7 @@ const BrasilKids = () => {
     { id: "kids-47", title: "Brinquedos de armas para brincadeiras ao ar livre com bolhas.", image: kids47, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601560091486" },
     { id: "kids-48", title: "Bonecos de ação de anime de PVC 3D realistas", image: kids48, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601452969614" },
     { id: "kids-49", title: "Gato Mochila de pelúcia realista, com enchimento de algodão PP", image: kids49, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601583463852" },
-    { id: "kids-50", title: "Cesto organizador decorativo ideal para brinquedos", image: kids50, link: "https://amzn.to/3IoZhb5" },
+    { id: "kids-50", title: "Bola voadora mágica de brinquedos com luz LED", image: kids50, link: "https://s.shopee.com.br/1LWnqoNY5Z" },
   ];
 
   return (
