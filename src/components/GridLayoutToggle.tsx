@@ -1,9 +1,12 @@
 import { LayoutGrid, Grid3X3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useGridLayout } from '@/hooks/useGridLayout';
+import { useLocation } from 'react-router-dom';
 
 const GridLayoutToggle = () => {
   const { isCompactMode, toggleLayout } = useGridLayout();
+  const location = useLocation();
+  const isBrasilPage = location.pathname.startsWith('/brasil');
 
   return (
     <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2">
@@ -29,7 +32,7 @@ const GridLayoutToggle = () => {
         )}
       </Button>
       <span className="text-xs font-medium text-foreground bg-background/90 backdrop-blur-sm px-2 py-1 rounded">
-        Lupa
+        {isBrasilPage ? 'Lupa' : 'Grid'}
       </span>
     </div>
   );
