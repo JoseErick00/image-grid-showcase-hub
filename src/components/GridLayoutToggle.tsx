@@ -29,7 +29,7 @@ const GridLayoutToggle = () => {
         )}
       </Button>
       <span className="text-xs font-medium text-foreground bg-background/90 backdrop-blur-sm px-2 py-1 rounded">
-        Grid
+        Lupa
       </span>
     </div>
   );
