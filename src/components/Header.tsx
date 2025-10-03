@@ -61,7 +61,7 @@ const Header = () => {
 
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 items-center">
+          <nav className="hidden md:flex space-x-3 lg:space-x-6 items-center">
             {navigation.map((item) => {
               const getHoverColor = (name: string) => {
                 const colors: { [key: string]: string } = {
