@@ -9,7 +9,9 @@ const Header = () => {
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
+  const isBrasilPage = location.pathname.startsWith('/brasil');
+
+  const defaultNavigation = [
     { name: "All", href: "/" },
     { name: "Home", href: "/home" },
     { name: "Sports", href: "/sports" },
@@ -19,6 +21,19 @@ const Header = () => {
     { name: "Kids", href: "/kids" },
     { name: "Best Sellers", href: "/best-sellers" },
   ];
+
+  const brasilNavigation = [
+    { name: "Todas", href: "/brasil" },
+    { name: "Casa", href: "/brasil/casa" },
+    { name: "Esportes", href: "/brasil/esportes" },
+    { name: "Saúde", href: "/brasil/saude" },
+    { name: "Incríveis", href: "/brasil/incriveis" },
+    { name: "Tech", href: "/brasil/tech" },
+    { name: "Brinquedos", href: "/brasil/kids" },
+    { name: "Mais Vendidos", href: "/brasil/mais-vendidos" },
+  ];
+
+  const navigation = isBrasilPage ? brasilNavigation : defaultNavigation;
 
   const countries = [
     { name: "U.S.A", href: "/usa", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png" },
@@ -33,7 +48,6 @@ const Header = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-  const isBrasilPage = location.pathname.startsWith('/brasil');
   const logoLink = isBrasilPage ? '/brasil' : '/';
 
   return (
@@ -59,6 +73,14 @@ const Header = () => {
                   "Health": "#d8ad00",
                   "Home": "#bf0100",
                   "Best Sellers": "#575757",
+                  // Brasil navigation colors
+                  "Todas": "#575757",
+                  "Casa": "#bf0100",
+                  "Esportes": "#ed5603",
+                  "Saúde": "#d8ad00",
+                  "Incríveis": "#5cc801",
+                  "Brinquedos": "#8254d0",
+                  "Mais Vendidos": "#575757",
                 };
                 return colors[name] || "#fbfbfb";
               };
@@ -144,6 +166,14 @@ const Header = () => {
                     "Health": "#d8ad00",
                     "Home": "#bf0100",
                     "Best Sellers": "#575757",
+                    // Brasil navigation colors
+                    "Todas": "#575757",
+                    "Casa": "#bf0100",
+                    "Esportes": "#ed5603",
+                    "Saúde": "#d8ad00",
+                    "Incríveis": "#5cc801",
+                    "Brinquedos": "#8254d0",
+                    "Mais Vendidos": "#575757",
                   };
                   return colors[name] || "#fbfbfb";
                 };
