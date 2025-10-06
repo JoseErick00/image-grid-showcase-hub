@@ -1,5 +1,24 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import promoBanner from "@/assets/Promo_banner.jpg";
+import promoBannerMobile from "@/assets/Promo_banner_mobile.jpg";
+import promoBannerTablet from "@/assets/Promo_banner_tablet.jpg";
+import smallBanner01 from "@/assets/Small_banner01.jpg";
+import smallBanner02 from "@/assets/Small_banner02.jpg";
+import smallBanner03 from "@/assets/Small_banner03.jpg";
+import smallBanner04 from "@/assets/Small_banner04.jpg";
+import middleBanner from "@/assets/middle_banner.jpg";
+import middleBannerMobile from "@/assets/middle_banner_mobile.jpg";
+import middleBannerTablet from "@/assets/middle_banner_tablet.jpg";
+import smallBanner05 from "@/assets/Small_banner05.jpg";
+import smallBanner06 from "@/assets/Small_banner06.jpg";
+import smallBanner07 from "@/assets/Small_banner07.jpg";
+import smallBanner08 from "@/assets/Small_banner08.jpg";
+import promoBanner02 from "@/assets/Promo_banner02.jpg";
+import promoBanner02Mobile from "@/assets/Promo_banner02_mobile.jpg";
+import promoBanner02Tablet from "@/assets/Promo_banner02_tablet.jpg";
+import smallBanner09 from "@/assets/Small_banner09.jpg";
+import smallBanner10 from "@/assets/Small_banner10.jpg";
 
 const BrasilTech = () => {
   const handleShare = async () => {
@@ -304,15 +323,94 @@ const BrasilTech = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Banners Section */}
-        <div className="mb-8">
-          <a href="https://www.instagram.com/ineed_stores" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/39164949-4199-4a6d-b93f-da119843292f.png"
-              alt="Instagram Ad"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Promo Banner 01 */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/48JaeyE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src={promoBanner}
+                alt="Tech promo banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src={promoBannerTablet}
+                alt="Tech promo banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src={promoBannerMobile}
+                alt="Tech promo banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+        
+        {/* Small Banner 01 & 02 */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://s.shopee.com.br/9zonpLhHH0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner01}
+                alt="Small banner 01"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner02}
+                alt="Small banner 02"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://s.shopee.com.br/9zonpLhHH0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner01}
+                alt="Small banner 01"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner02}
+                alt="Small banner 02"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
         {/* First 9 items */}
@@ -323,15 +421,94 @@ const BrasilTech = () => {
           buttonColor="#30bdbe"
         />
 
-        {/* Banners Section */}
-        <div className="mb-8">
-          <a href="https://www.pinterest.com/iNeedShowcase/_profile" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/9999159f-564f-4a79-b19f-8e94c65f9468.png"
-              alt="Pinterest Ad"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Small Banner 03 & 04 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601365537793" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner03}
+                alt="Small banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://s.shopee.com.br/5L2yKb0AbP" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner04}
+                alt="Small banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601365537793" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner03}
+                alt="Small banner 03"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://s.shopee.com.br/5L2yKb0AbP" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner04}
+                alt="Small banner 04"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Large Banner - Middle Banner */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/4gUQs5u" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src={middleBanner}
+                alt="Tech middle banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src={middleBannerTablet}
+                alt="Tech middle banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src={middleBannerMobile}
+                alt="Tech middle banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Second 9 items */}
@@ -342,25 +519,229 @@ const BrasilTech = () => {
           buttonColor="#30bdbe"
         />
 
-        {/* Banners Section */}
-        <div className="mb-8">
-          <a href="https://www.tiktok.com/@ineedstores" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/9599092d-256f-4559-8455-744699a75754.png"
-              alt="TikTok Ad"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Small Banner 05 & 06 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://s.shopee.com.br/60IfAB4aC8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner05}
+                alt="Small banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4nVFPBz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner06}
+                alt="Small banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://s.shopee.com.br/60IfAB4aC8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner05}
+                alt="Small banner 05"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4nVFPBz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner06}
+                alt="Small banner 06"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
-        {/* Last items */}
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
+
+        {/* Items 19-30 */}
         <CategoryGrid 
-          items={techProducts.slice(18)}
+          items={techProducts.slice(18, 30)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#30bdbe"
         />
+
+        {/* Small Banner 07 & 08 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/4mGYDUb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner07}
+                alt="Small banner 07"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601257292412" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src={smallBanner08}
+                alt="Small banner 08"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/4mGYDUb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner07}
+                alt="Small banner 07"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601257292412" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src={smallBanner08}
+                alt="Small banner 08"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
+
+        {/* Promo Banner 02 */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="my-12 flex justify-center">
+            <div className="w-full max-w-[1200px]">
+              <a 
+                href="https://amzn.to/3WprEJf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              >
+                {/* Desktop banner */}
+                <img 
+                  src={promoBanner02}
+                  alt="Tech promo banner 02 - desktop"
+                  className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Tablet banner */}
+                <img 
+                  src={promoBanner02Tablet}
+                  alt="Tech promo banner 02 - tablet"
+                  className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Mobile banner */}
+                <img 
+                  src={promoBanner02Mobile}
+                  alt="Tech promo banner 02 - mobile"
+                  className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Small Banner 09 & 10 */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="my-12">
+            {/* Desktop: Two columns */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+              <a 
+                href="https://amzn.to/3VIO5ZV" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              >
+                <img 
+                  src={smallBanner09}
+                  alt="Small banner 09"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+              <a 
+                href="https://amzn.to/48Ic7vw" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              >
+                <img 
+                  src={smallBanner10}
+                  alt="Small banner 10"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </div>
+            
+            {/* Mobile: Stacked */}
+            <div className="md:hidden space-y-12">
+              <a 
+                href="https://amzn.to/3VIO5ZV" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              >
+                <img 
+                  src={smallBanner09}
+                  alt="Small banner 09"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+              <a 
+                href="https://amzn.to/48Ic7vw" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer overflow-hidden rounded-lg block"
+              >
+                <img 
+                  src={smallBanner10}
+                  alt="Small banner 10"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </div>
+         </div>
+        </div>
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
