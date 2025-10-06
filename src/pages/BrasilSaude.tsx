@@ -144,26 +144,94 @@ const BrasilSaude = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="w-full h-[200px] flex items-center justify-center">
-          {/* Desktop banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="hidden lg:block max-h-full object-contain"
-            style={{ width: '1200px' }}
-          />
-          {/* Tablet banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="hidden md:block lg:hidden w-full h-full object-cover"
-          />
-          {/* Mobile banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="md:hidden w-full h-full object-cover"
-          />
+        {/* Promo Banner 01 */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/4gyzdXk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/Promo_banner.jpg"
+                alt="Saude promo banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/Promo_banner_tablet.jpg"
+                alt="Saude promo banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/Promo_banner_mobile.jpg"
+                alt="Saude promo banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Small Banner 01 & 02 */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://s.shopee.com.br/qaNROYO3R" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner01.jpg"
+                alt="Small banner 01"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner02.jpg"
+                alt="Small banner 02"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://s.shopee.com.br/qaNROYO3R" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner01.jpg"
+                alt="Small banner 01"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner02.jpg"
+                alt="Small banner 02"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
         {/* First 9 items */}
@@ -174,26 +242,94 @@ const BrasilSaude = () => {
           buttonColor="#f9c90c"
         />
 
-        <div className="w-full h-[200px] flex items-center justify-center">
-          {/* Desktop banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="hidden lg:block max-h-full object-contain"
-            style={{ width: '1200px' }}
-          />
-          {/* Tablet banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="hidden md:block lg:hidden w-full h-full object-cover"
-          />
-          {/* Mobile banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="md:hidden w-full h-full object-cover"
-          />
+        {/* Small Banner 03 & 04 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://s.shopee.com.br/8fJEnXMXHX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner03.jpg"
+                alt="Small banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4mDelQm" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner04.jpg"
+                alt="Small banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://s.shopee.com.br/8fJEnXMXHX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner03.jpg"
+                alt="Small banner 03"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/4mDelQm" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner04.jpg"
+                alt="Small banner 04"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Large Banner - Middle Banner */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271111162" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/middle_banner.jpg"
+                alt="Saude middle banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/middle_banner_tablet.jpg"
+                alt="Saude middle banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/middle_banner_mobile.jpg"
+                alt="Saude middle banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Second 9 items */}
@@ -204,27 +340,67 @@ const BrasilSaude = () => {
           buttonColor="#f9c90c"
         />
 
-        <div className="w-full h-[200px] flex items-center justify-center">
-          {/* Desktop banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="hidden lg:block max-h-full object-contain"
-            style={{ width: '1200px' }}
-          />
-          {/* Tablet banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="hidden md:block lg:hidden w-full h-full object-cover"
-          />
-          {/* Mobile banner */}
-          <img 
-            src="/lovable-uploads/59991999-464a-4596-853a-679553289436.png"
-            alt="Banner_BrasilSaude"
-            className="md:hidden w-full h-full object-cover"
-          />
+        {/* Small Banner 05 & 06 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/428TnRX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner05.jpg"
+                alt="Small banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner06.jpg"
+                alt="Small banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/428TnRX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner05.jpg"
+                alt="Small banner 05"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner06.jpg"
+                alt="Small banner 06"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
+
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
 
         {/* Last items */}
         <CategoryGrid 
@@ -233,9 +409,162 @@ const BrasilSaude = () => {
           aspectRatio="portrait"
           buttonColor="#f9c90c"
         />
+
+        {/* Small Banner 07 & 08 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/48ySI01" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner07.jpg"
+                alt="Small banner 07"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner08.jpg"
+                alt="Small banner 08"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/48ySI01" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner07.jpg"
+                alt="Small banner 07"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner08.jpg"
+                alt="Small banner 08"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
-      {/* Newsletter Section */}
+      {/* Promo Banner 02 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/42z0XFR" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/Promo_banner02.jpg"
+                alt="Saude promo banner 02 - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/Promo_banner02_tablet.jpg"
+                alt="Saude promo banner 02 - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/Promo_banner02_mobile.jpg"
+                alt="Saude promo banner 02 - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Small Banner 09 & 10 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://s.shopee.com.br/4VThmrhENE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner09.jpg"
+                alt="Small banner 09"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://s.shopee.com.br/3VbAbbWUnx" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/Small_banner10.jpg"
+                alt="Small banner 10"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://s.shopee.com.br/4VThmrhENE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner09.jpg"
+                alt="Small banner 09"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://s.shopee.com.br/3VbAbbWUnx" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/Small_banner10.jpg"
+                alt="Small banner 10"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Final Mailchimp Subscription */}
       <MailchimpSubscription />
 
       {/* Bottom Social Section */}
