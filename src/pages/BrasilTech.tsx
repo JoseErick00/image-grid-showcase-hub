@@ -266,7 +266,7 @@ const BrasilTech = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
-          Brasil Tech - Legal. Inteligente. Vanguarda.
+          Legal. Inteligente. Bem pra frente!
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
           Escaneamos Amazon, eBay, Shopee e todos os apps pelos gadgets inteligentes e brinquedos tech mais recentes. Espere genialidade inesperada.
@@ -327,7 +327,7 @@ const BrasilTech = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/3WprEJf"
+              href="https://amzn.to/4nFADlB"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
