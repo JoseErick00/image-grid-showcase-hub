@@ -1,22 +1,22 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
-import promoBanner from "@/assets/Promo_banner.jpg";
-import promoBannerMobile from "@/assets/Promo_banner_mobile.jpg";
-import promoBannerTablet from "@/assets/Promo_banner_tablet.jpg";
+import promoBanner from "@/assets/tech/Promo_banner.jpg";
+import promoBannerMobile from "@/assets/tech/Promo_banner_mobile.jpg";
+import promoBannerTablet from "@/assets/tech/Promo_banner_tablet.jpg";
 import smallBanner01 from "@/assets/Small_banner01.jpg";
 import smallBanner02 from "@/assets/Small_banner02.jpg";
 import smallBanner03 from "@/assets/Small_banner03.jpg";
 import smallBanner04 from "@/assets/Small_banner04.jpg";
-import middleBanner from "@/assets/middle_banner.jpg";
-import middleBannerMobile from "@/assets/middle_banner_mobile.jpg";
-import middleBannerTablet from "@/assets/middle_banner_tablet.jpg";
+import middleBanner from "@/assets/tech/middle_banner.jpg";
+import middleBannerMobile from "@/assets/tech/middle_banner_mobile.jpg";
+import middleBannerTablet from "@/assets/tech/middle_banner_tablet.jpg";
 import smallBanner05 from "@/assets/Small_banner05.jpg";
 import smallBanner06 from "@/assets/Small_banner06.jpg";
 import smallBanner07 from "@/assets/Small_banner07.jpg";
 import smallBanner08 from "@/assets/Small_banner08.jpg";
-import promoBanner02 from "@/assets/Promo_banner02.jpg";
-import promoBanner02Mobile from "@/assets/Promo_banner02_mobile.jpg";
-import promoBanner02Tablet from "@/assets/Promo_banner02_tablet.jpg";
+import promoBanner02 from "@/assets/tech/Promo_banner02.jpg";
+import promoBanner02Mobile from "@/assets/tech/Promo_banner02_mobile.jpg";
+import promoBanner02Tablet from "@/assets/tech/Promo_banner02_tablet.jpg";
 import smallBanner09 from "@/assets/Small_banner09.jpg";
 import smallBanner10 from "@/assets/Small_banner10.jpg";
 
@@ -327,7 +327,7 @@ const BrasilTech = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/48JaeyE" 
+              href="https://amzn.to/3WprEJf"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -484,7 +484,7 @@ const BrasilTech = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/4gUQs5u" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
