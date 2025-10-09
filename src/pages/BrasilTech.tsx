@@ -19,6 +19,16 @@ import promoBanner02Mobile from "@/assets/tech/Promo_banner02_mobile.jpg";
 import promoBanner02Tablet from "@/assets/tech/Promo_banner02_tablet.jpg";
 import smallBanner09 from "@/assets/tech/Small_banner09.jpg";
 import smallBanner10 from "@/assets/tech/Small_banner10.jpg";
+import tech01 from "@/assets/tech/tech_01.jpg";
+import tech02 from "@/assets/tech/tech_02.jpg";
+import tech03 from "@/assets/tech/tech_03.jpg";
+import tech04 from "@/assets/tech/tech_04.jpg";
+import tech05 from "@/assets/tech/tech_05.jpg";
+import tech06 from "@/assets/tech/tech_06.jpg";
+import tech07 from "@/assets/tech/tech_07.jpg";
+import tech08 from "@/assets/tech/tech_08.jpg";
+import tech09 from "@/assets/tech/tech_09.jpg";
+import tech10 from "@/assets/tech/tech_10.jpg";
 
 const BrasilTech = () => {
   const handleShare = async () => {
@@ -54,63 +64,63 @@ const BrasilTech = () => {
   const techProducts = [
     {
       id: "tech-1",
-      title: "Custom Controllerzz Wireless Controller for Microsoft Xbox",
-      image: "/lovable-uploads/634a8b86-78f1-4ff0-b5e7-97028a2deacf.png",
-      link: "https://amzn.to/3JMNJyr",
+      title: "Capa frontal de substituição para controle do Xbox Series X",
+      image: tech01,
+      link: "https://amzn.to/46LkCEQ",
     },
     {
       id: "tech-2", 
-      title: "Apple Watch Series 10",
-      image: "/lovable-uploads/83c147a8-9409-4947-b562-f8762431c5ac.png",
-      link: "https://amzn.to/4g9DUXC",
+      title: "r36s Vídeo game console portatil  - Cartão TF de 128GB",
+      image: tech02,
+      link: "https://amzn.to/4mWLhDw",
     },
     {
       id: "tech-3",
-      title: "HP Stream 14 Laptop",
-      image: "/lovable-uploads/d9a41e8b-bdcd-4b51-86a1-182c966f3cdb.png", 
-      link: "https://amzn.to/46mta4O",
+      title: "Placa Mãe Gigabyte B550M K, AM4, 4x DDR4 (até 128GB)", 
+      image: tech03,
+      link: "https://s.shopee.com.br/1VqQoUspKA",
     },
     {
       id: "tech-4",
-      title: "Hot and Cold Lifting Face Massager",
-      image: "/lovable-uploads/c7f054b9-fb50-4d67-9a13-52d91f49a4b0.png",
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601394644682",
+      title: "Mini Telefone - SIM Único 1,77 Polegadas 21 Teclas",
+      image: tech04,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601487697355",
     },
     {
       id: "tech-5",
-      title: "Women Period Pain Relief Belt",
-      image: "/lovable-uploads/e4c4a301-f425-4755-9c2f-d0779fb16c56.png",
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601220806740",
+      title: "Smartwatch, HUAWEI Band 10",
+      image: tech05,
+      link: "https://amzn.to/4nOp6ki",
     },
     {
       id: "tech-6",
-      title: "Smart Speaker Stereo Surround",
-      image: "/lovable-uploads/3ea2eed9-aaf6-491a-82fb-b54368d28156.png",
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601398799470",
+      title: "Smart Air tag - Rastreador bluetooth para iPhone",
+      image: tech06,
+      link: "https://s.shopee.com.br/8Kgl0PAmtf",
     },
     {
       id: "tech-7",
-      title: "Fujifilm INSTAX Mini 11 Camera",
-      image: "/lovable-uploads/0e9249d1-e033-4533-97d3-af0fba179649.png",
-      link: "https://amzn.to/3V1gaLu",
+      title: "Relógio T800 Ultra - Esportivo sem fio (À prova d'água). ",
+      image: tech07,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601083558219",
     },
     {
       id: "tech-8",
-      title: "3-in-1 Magnetic Wireless Charger",
-      image: "/lovable-uploads/3db2c2d2-bf1f-4ca5-8a33-92ace6e9a69c.png",
-      link: "https://amzn.to/41ZUCTB",
+      title: "Basike - Fones de ouvido Clip-on, Bluetooth 5.4",
+      image: tech08,
+      link: "https://amzn.to/46INSMt",
     },
     {
       id: "tech-9",
-      title: "YOWU Cat Ear Headphones CE, Wired/Wireless Headphones",
-      image: "/lovable-uploads/49247e7f-652a-4022-bee1-c766317f9969.png",
-      link: "https://amzn.to/465JW74",
+      title: "Estação de carregamento sem fio dobrável 5 em 1 com lâmpada LED.",
+      image: tech09,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601401594879",
     },
     {
       id: "tech-10",
-      title: "NEW OPPO Pad 2 - 8GB/256GB",
-      image: "/lovable-uploads/522481eb-a3c8-4d04-80de-abcbd7fa142a.png",
-      link: "https://amzn.to/4m6ONL7",
+      title: "Impressora de etiquetas portátil bluetooth.",
+      image: tech10,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600317657280",
     },
     {
       id: "tech-11",
