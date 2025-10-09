@@ -10,15 +10,15 @@ import smallBanner04 from "@/assets/tech/Small_banner04.jpg";
 import middleBanner from "@/assets/tech/middle_banner.jpg";
 import middleBannerMobile from "@/assets/tech/middle_banner_mobile.jpg";
 import middleBannerTablet from "@/assets/tech/middle_banner_tablet.jpg";
-import smallBanner05 from "@/assets/Small_banner05.jpg";
-import smallBanner06 from "@/assets/Small_banner06.jpg";
-import smallBanner07 from "@/assets/Small_banner07.jpg";
-import smallBanner08 from "@/assets/Small_banner08.jpg";
+import smallBanner05 from "@/assets/tech/Small_banner05.jpg";
+import smallBanner06 from "@/assets/tech/Small_banner06.jpg";
+import smallBanner07 from "@/assets/tech/Small_banner07.jpg";
+import smallBanner08 from "@/assets/tech/Small_banner08.jpg";
 import promoBanner02 from "@/assets/tech/Promo_banner02.jpg";
 import promoBanner02Mobile from "@/assets/tech/Promo_banner02_mobile.jpg";
 import promoBanner02Tablet from "@/assets/tech/Promo_banner02_tablet.jpg";
-import smallBanner09 from "@/assets/Small_banner09.jpg";
-import smallBanner10 from "@/assets/Small_banner10.jpg";
+import smallBanner09 from "@/assets/tech/Small_banner09.jpg";
+import smallBanner10 from "@/assets/tech/Small_banner10.jpg";
 
 const BrasilTech = () => {
   const handleShare = async () => {
@@ -524,7 +524,7 @@ const BrasilTech = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://s.shopee.com.br/60IfAB4aC8" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600970099195" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -536,7 +536,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/4nVFPBz" 
+              href="https://s.shopee.com.br/8V0Ak3bDCn" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -552,7 +552,7 @@ const BrasilTech = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://s.shopee.com.br/60IfAB4aC8" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600970099195" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -564,7 +564,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/4nVFPBz" 
+              href="https://s.shopee.com.br/8V0Ak3bDCn" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -594,7 +594,7 @@ const BrasilTech = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/4mGYDUb" 
+              href="https://s.shopee.com.br/7V7dZJmkS0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -606,7 +606,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601257292412" 
+              href="https://amzn.to/4nVFPBz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -622,7 +622,7 @@ const BrasilTech = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/4mGYDUb" 
+              href="https://s.shopee.com.br/7V7dZJmkS0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -634,7 +634,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601257292412" 
+              href="https://amzn.to/4nVFPBz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -688,7 +688,7 @@ const BrasilTech = () => {
             {/* Desktop: Two columns */}
             <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
               <a 
-                href="https://amzn.to/3VIO5ZV" 
+                href="https://amzn.to/46ZfdbY" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -700,7 +700,7 @@ const BrasilTech = () => {
                 />
               </a>
               <a 
-                href="https://amzn.to/48Ic7vw" 
+                href="https://amzn.to/47fv0oq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -716,7 +716,7 @@ const BrasilTech = () => {
             {/* Mobile: Stacked */}
             <div className="md:hidden space-y-12">
               <a 
-                href="https://amzn.to/3VIO5ZV" 
+                href="https://amzn.to/46ZfdbY" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -728,7 +728,7 @@ const BrasilTech = () => {
                 />
               </a>
               <a 
-                href="https://amzn.to/48Ic7vw" 
+                href="https://amzn.to/47fv0oq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block"
