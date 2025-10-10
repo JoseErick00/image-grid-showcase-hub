@@ -96,13 +96,13 @@ const BrasilTech = () => {
       id: "tech-6",
       title: "Smart Air tag - Rastreador bluetooth para iPhone",
       image: tech06,
-      link: "https://s.shopee.com.br/8Kgl0PAmtf",
+      link: "https://s.shopee.com.br/AUlGh5kPhp",
     },
     {
       id: "tech-7",
       title: "Relógio T800 Ultra - Esportivo sem fio (À prova d'água). ",
       image: tech07,
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601083558219",
+      link: "https://s.shopee.com.br/8Kgl0PAmtf",
     },
     {
       id: "tech-8",
