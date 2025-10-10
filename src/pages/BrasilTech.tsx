@@ -29,6 +29,16 @@ import tech07 from "@/assets/tech/tech_07.jpg";
 import tech08 from "@/assets/tech/tech_08.jpg";
 import tech09 from "@/assets/tech/tech_09.jpg";
 import tech10 from "@/assets/tech/tech_10.jpg";
+import tech11 from "@/assets/tech/tech_11.jpg";
+import tech12 from "@/assets/tech/tech_12.jpg";
+import tech13 from "@/assets/tech/tech_13.jpg";
+import tech14 from "@/assets/tech/tech_14.jpg";
+import tech15 from "@/assets/tech/tech_15.jpg";
+import tech16 from "@/assets/tech/tech_16.jpg";
+import tech17 from "@/assets/tech/tech_17.jpg";
+import tech18 from "@/assets/tech/tech_18.jpg";
+import tech19 from "@/assets/tech/tech_19.jpg";
+import tech20 from "@/assets/tech/tech_20.jpg";
 
 const BrasilTech = () => {
   const handleShare = async () => {
@@ -124,63 +134,63 @@ const BrasilTech = () => {
     },
     {
       id: "tech-11",
-      title: "Xiaomi Poco X7 PRO 5G + 4G LTE (for Tmobile Mint Tello & Global)",
-      image: "/lovable-uploads/474c5f55-db97-45b8-8cce-4a6468a7e13a.png",
-      link: "https://amzn.to/4807AUP",
+      title: "Xiaomi Poco X7 Pro 5G NFC Black (Preto) 12GB RAM 512GB",
+      image: tech11,
+      link: "https://amzn.to/4n00LH0",
     },
     {
       id: "tech-12",
-      title: "Maui Jim Men's Puu Kukui Polarized Sunglasses",
-      image: "/lovable-uploads/a8bb6679-5259-4185-ae80-3f25c3721497.png",
-      link: "https://amzn.to/45ZzvmN",
+      title: "Extensão de monitor portátil para Laptop de 16,1\" Full Hd 1080P",
+      image: tech12,
+      link: "https://amzn.to/4qb8O6D",
     },
     {
       id: "tech-13",
-      title: "Meta Quest 3S 128GB - Get Batman: Arkham Shadow",
-      image: "/lovable-uploads/43587acb-999b-44bf-84a3-90f7192a6738.png",
-      link: "https://amzn.to/47ZUrv0",
+      title: "Bastão de selfie - Tripé retrátil com luz LED",
+      image: tech13,
+      link: "https://s.shopee.com.br/30fFqSTEDW",
     },
     {
       id: "tech-14",
-      title: "PlayStation VR 2 - Horizon Call of The Mountain Bundle",
-      image: "/lovable-uploads/a7112867-3e6a-4f72-8d32-de6915794e7a.png",
-      link: "https://amzn.to/4g9zK1J",
+      title: "Amplificador de tela de celular - 6D criativo com áudio",
+      image: tech14,
+      link: "https://s.shopee.com.br/LeUh0GDwg",
     },
     {
       id: "tech-15",
-      title: "SteelSeries Arctis Nova Pro",
-      image: "/lovable-uploads/ad3956a2-e1c0-4f0f-895e-cae11873e6d4.png",
-      link: "https://amzn.to/47oY5hV",
+      title: "Óculos inteligentes W610 com IA, câmera 4K HD e 270mAh",
+      image: tech15,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601588033744",
     },
     {
       id: "tech-16",
-      title: "Hisense Laser Mini Projector C2, 65-300\\\"",
-      image: "/lovable-uploads/9b810d80-facc-426d-ac2f-64e2a75902c5.png",
-      link: "https://amzn.to/461255L",
+      title: "Mini ventilador portátil USB de alta velocidade.",
+      image: tech16,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=11000026017811",
     },
     {
       id: "tech-17",
-      title: "Xencelabs Pen Display 16 Bundle with Quick Keys",
-      image: "/lovable-uploads/586a67db-eb4e-415c-ade6-928c3d370c5a.png",
-      link: "https://amzn.to/47u82dV",
+      title: "Ventilador esportivo silencioso para pendurar no pescoço.",
+      image: tech17,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601115652024",
     },
     {
       id: "tech-18",
-      title: "ProtoArc Wireless Trackball Mouse, EM01 NL",
-      image: "/lovable-uploads/65851a7d-09f3-4f9c-bd56-1eb2043ad75a.png",
-      link: "https://amzn.to/3HIF4g3",
+      title: "Meta Quest 3S 128GB — Get Batman",
+      image: tech18,
+      link: "https://amzn.to/4n49bwV",
     },
     {
       id: "tech-19",
-      title: "Petma Smart Robot Dog for Kids",
-      image: "/lovable-uploads/ca54d36d-9437-4b8c-81b3-ddfe71260adc.png",
-      link: "https://amzn.to/4gi4yxC",
+      title: "Kodak Mini Shot 2 Retro - Câmera instantânea e impressora fotográfica.",
+      image: tech19,
+      link: "https://amzn.to/4q1Vi4T",
     },
     {
       id: "tech-20",
-      title: "Teamgee 15.6\\\" Laptop Screen Extender",
-      image: "/lovable-uploads/7283581c-a75c-4dcf-8c9b-345fc75077c6.png",
-      link: "https://amzn.to/4m6fmAb",
+      title: "Polaroid Go Generation 2 – Minicâmera Instantânea – Preta (9096)",
+      image: tech20,
+      link: "https://amzn.to/4h4wdm1",
     },
     {
       id: "tech-21",
