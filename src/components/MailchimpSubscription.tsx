@@ -51,9 +51,39 @@ const MailchimpSubscription = () => {
     }
   }, []);
 
+  const handleShare = async () => {
+    try {
+      const url = window.location.href;
+      const shareData = {
+        title: 'iNeed Stores - Brasil',
+        text: 'Confira esta seleção incrível de produtos!',
+        url: url,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: copy to clipboard
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      // Fallback: copy to clipboard
+      try {
+        const url = window.location.href;
+        await navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      } catch (clipboardError) {
+        console.log('Share and clipboard failed:', error, clipboardError);
+        alert('Unable to share. Please copy the URL manually.');
+      }
+    }
+  };
+
   return (
-    <div className="my-12 flex justify-center">
-      <div className="w-full max-w-2xl">
+    <div className="my-12 flex justify-center px-4">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Mailchimp Column */}
         <div id="mc_embed_shell">
           <style type="text/css">
             {`
@@ -214,6 +244,24 @@ const MailchimpSubscription = () => {
               </div>
             </form>
           </div>
+        </div>
+
+        {/* Share Column */}
+        <div className="flex flex-col items-center justify-center text-center p-8">
+          <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mb-8 max-w-md">
+            Está gostando da lista? Envie pra alguém que precisa ver essa seleção!
+          </h2>
+          <button 
+            onClick={handleShare}
+            className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+          >
+            <img 
+              src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" 
+              alt="Share" 
+              className="w-[60px] h-[60px] mb-4" 
+            />
+            <p className="font-omne-regular text-base text-muted-foreground">Envie para um amigo!</p>
+          </button>
         </div>
       </div>
     </div>
