@@ -146,8 +146,8 @@ const BrasilIncriveis = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
-            <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
+            <h2 className="font-omne-medium text-white text-lg md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
+            <ol className="font-omne-regular text-white text-sm md:text-lg space-y-3 text-left">
               <li>1. Você quer os tesouros mais legais da internet.</li>
               <li>2. Você quer os achados mais incríveis da internet.</li>
               <li>3. Você precisa de gadgets inteligentes e achados de pura diversão.</li>

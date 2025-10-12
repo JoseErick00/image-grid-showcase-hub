@@ -324,8 +324,8 @@ const BrasilTech = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-2xl md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
-            <ol className="font-omne-regular text-white text-base md:text-lg space-y-3 text-left">
+            <h2 className="font-omne-medium text-white text-lg md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
+            <ol className="font-omne-regular text-white text-sm md:text-lg space-y-3 text-left">
               <li>1. Você quer gadgets legais e ideias geniais.</li>
               <li>2. Você quer o mais recente, inteligente e legal.</li>
               <li>3. Você precisa do futuro a um clique de distância.</li>
