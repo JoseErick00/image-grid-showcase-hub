@@ -48,7 +48,7 @@ const Footer = () => {
             <img src="/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png" alt="i.need" className="w-[350px] h-[150px] object-contain" />
           </div>
           
-          <div className="max-w-4xl mx-auto text-center mb-8">
+          <div className="w-[80%] md:w-[60%] mx-auto text-center mb-8">
             <h2 className="font-omne-medium text-2xl mb-4 text-foreground">
               {isBrasilPage ? "A melhor seleção de coisas legais da Internet:" : "The Internet's Coolest Corner for Cool Stuff"}
             </h2>
