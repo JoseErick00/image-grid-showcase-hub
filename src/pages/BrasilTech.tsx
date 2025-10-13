@@ -312,6 +312,66 @@ const BrasilTech = () => {
       image: "/lovable-uploads/tech_40.jpg",
       link: "https://amzn.to/4n5Da7E",
     },
+    {
+      id: "tech-41",
+      title: "Xiaomi Redmi Pad SE 11\" 8GB/256GB",
+      image: "/lovable-uploads/tech_41.jpg",
+      link: "https://amzn.to/4q8BlJU",
+    },
+    {
+      id: "tech-42",
+      title: "Fones com 40H de Reprodução, Hi-Res LDAC, Controle via App.",
+      image: "/lovable-uploads/tech_42.jpg",
+      link: "https://amzn.to/3ILeV0C",
+    },
+    {
+      id: "tech-43",
+      title: "Mini Console Retro Super Nintendo com 130 mil jogos",
+      image: "/lovable-uploads/tech_43.jpg",
+      link: "https://amzn.to/4h4JVoS",
+    },
+    {
+      id: "tech-44",
+      title: "Mouse pad GAMER extra grande 30x80cm impermeável",
+      image: "/lovable-uploads/tech_44.jpg",
+      link: "https://s.shopee.com.br/1BDgyo1Njv",
+    },
+    {
+      id: "tech-45",
+      title: "Carregador sem fio magnético 3 em 1 para celulares, iPhone 13 12 Pro Max Mini",
+      image: "/lovable-uploads/tech_45.jpg",
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600431064590",
+    },
+    {
+      id: "tech-46",
+      title: "SmartWatch 2 em 1 com fones de ouvido sem fio TWS",
+      image: "/lovable-uploads/tech_46.jpg",
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601232862354",
+    },
+    {
+      id: "tech-47",
+      title: "Hub USB tipo C para HDMI, MacBook ,Laptop, PC  e Smartphones",
+      image: "/lovable-uploads/tech_47.jpg",
+      link: "https://s.shopee.com.br/4ArIb8u47d",
+    },
+    {
+      id: "tech-48",
+      title: "BYINTEK Projetor U4, Suporta 4K 1080P Full HD, Foco Automático",
+      image: "/lovable-uploads/tech_48.jpg",
+      link: "https://amzn.to/43fd0Io",
+    },
+    {
+      id: "tech-49",
+      title: "Beats Pill – Caixa de som Bluetooth",
+      image: "/lovable-uploads/tech_49.jpg",
+      link: "https://amzn.to/4mYgkPr",
+    },
+    {
+      id: "tech-50",
+      title: "Smartphone, HUAWEI Mate X6, 12GB+512GB, Ultrafino, dobrável e Durável.",
+      image: "/lovable-uploads/tech_50.jpg",
+      link: "https://amzn.to/4n17LmI",
+    },
   ];
 
   return (
@@ -833,6 +893,14 @@ const BrasilTech = () => {
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
+
+      {/* Products 41-50 */}
+      <CategoryGrid 
+        items={techProducts.slice(40, 50)}
+        columns={2}
+        aspectRatio="portrait"
+        buttonColor="#1e40af"
+      />
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
