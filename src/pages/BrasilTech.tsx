@@ -252,6 +252,66 @@ const BrasilTech = () => {
       image: "/lovable-uploads/tech_30.jpg",
       link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601570265476",
     },
+    {
+      id: "tech-31",
+      title: "Óculos inteligentes G300 AI, câmera HD de 800 W, 32 GB,  ChatGPT.",
+      image: "/lovable-uploads/tech_31.jpg",
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601561240112",
+    },
+    {
+      id: "tech-32",
+      title: "PLEXTONE MX2 Pro - Ventilador com radiador líquido para smartphone e tablets.",
+      image: "/lovable-uploads/tech_32.jpg",
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601442969443",
+    },
+    {
+      id: "tech-33",
+      title: "Suporte articulado de mesa, pistão a gás.",
+      image: "/lovable-uploads/tech_33.jpg",
+      link: "https://amzn.to/4qmpesW",
+    },
+    {
+      id: "tech-34",
+      title: "Extensor de tela de laptop, monitor de computador portátil .",
+      image: "/lovable-uploads/tech_34.jpg",
+      link: "https://amzn.to/46Mo0iS",
+    },
+    {
+      id: "tech-35",
+      title: "MousePad 20x20cm pequeno  - Eddias",
+      image: "/lovable-uploads/tech_35.jpg",
+      link: "https://s.shopee.com.br/1LX6rOxCeP",
+    },
+    {
+      id: "tech-36",
+      title: "Teclado mágico para ipad",
+      image: "/lovable-uploads/tech_36.jpg",
+      link: "https://s.shopee.com.br/1qTNT3yiUS",
+    },
+    {
+      id: "tech-37",
+      title: "Mesa digitalizadora 11,6'' de alta precisão e sensibilidade.",
+      image: "/lovable-uploads/tech_37.jpg",
+      link: "https://s.shopee.com.br/4VU8eWA654",
+    },
+    {
+      id: "tech-38",
+      title: "Mesa mutiuso para notebook com altura regulavel.",
+      image: "/lovable-uploads/tech_38.jpg",
+      link: "https://s.shopee.com.br/AA8VPaXxkP",
+    },
+    {
+      id: "tech-39",
+      title: "EPULY Switch Dock carregador compatível com Nintendo Switch",
+      image: "/lovable-uploads/tech_39.jpg",
+      link: "https://amzn.to/42Cuhew",
+    },
+    {
+      id: "tech-40",
+      title: "Echo Dot (Geração mais recente)",
+      image: "/lovable-uploads/tech_40.jpg",
+      link: "https://amzn.to/4n5Da7E",
+    },
   ];
 
   return (
