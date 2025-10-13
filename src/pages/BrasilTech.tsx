@@ -727,6 +727,14 @@ const BrasilTech = () => {
             </a>
           </div>
         </div>
+
+        {/* Items 31-40 */}
+        <CategoryGrid 
+          items={techProducts.slice(30, 40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#30bdbe"
+        />
       </div>
 
         {/* Promo Banner 02 */}
