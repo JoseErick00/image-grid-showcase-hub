@@ -169,7 +169,7 @@ const BrasilIncriveis = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/48JaeyE" 
+              href="https://amzn.to/4oijqP1"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -326,7 +326,7 @@ const BrasilIncriveis = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/4gUQs5u" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -488,7 +488,7 @@ const BrasilIncriveis = () => {
           <div className="my-12 flex justify-center">
             <div className="w-full max-w-[1200px]">
               <a 
-                href="https://amzn.to/3WprEJf" 
+                href="https://amzn.to/48z1r2x"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block"
