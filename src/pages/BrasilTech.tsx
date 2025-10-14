@@ -895,12 +895,14 @@ const BrasilTech = () => {
       <MailchimpSubscription />
 
       {/* Products 41-50 */}
-      <CategoryGrid 
-        items={techProducts.slice(40, 50)}
-        columns={2}
-        aspectRatio="portrait"
-        buttonColor="#30bdbe"
-      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <CategoryGrid 
+          items={techProducts.slice(40, 50)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#30bdbe"
+        />
+      </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
