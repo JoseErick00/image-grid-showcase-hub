@@ -3,22 +3,22 @@ import MailchimpSubscription from "@/components/MailchimpSubscription";
 import promoBanner from "@/assets/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/Promo_banner_tablet.jpg";
-import smallBanner01 from "@/assets/Small_banner01.jpg";
-import smallBanner02 from "@/assets/Small_banner02.jpg";
-import smallBanner03 from "@/assets/Small_banner03.jpg";
-import smallBanner04 from "@/assets/Small_banner04.jpg";
-import middleBanner from "@/assets/middle_banner.jpg";
-import middleBannerMobile from "@/assets/middle_banner_mobile.jpg";
+import smallBanner01 from "@/assets/Small_banner_Inc01.jpg";
+import smallBanner02 from "@/assets/Small_banner_Inc02.jpg";
+import smallBanner03 from "@/assets/Small_banner_Inc03.jpg";
+import smallBanner04 from "@/assets/Small_banner_Inc04.jpg";
+import middleBanner from "@/assets/middle_banner_Inc.jpg";
+import middleBannerMobile from "@/assets/middle_banner_mobileInc.jpg";
 import middleBannerTablet from "@/assets/middle_banner_tablet.jpg";
-import smallBanner05 from "@/assets/Small_banner05.jpg";
-import smallBanner06 from "@/assets/Small_banner06.jpg";
-import smallBanner07 from "@/assets/Small_banner07.jpg";
-import smallBanner08 from "@/assets/Small_banner08.jpg";
+import smallBanner05 from "@/assets/Small_banner_Inc05.jpg";
+import smallBanner06 from "@/assets/Small_banner_Inc06.jpg";
+import smallBanner07 from "@/assets/Small_banner_Inc07.jpg";
+import smallBanner08 from "@/assets/Small_banner_Inc08.jpg";
 import promoBanner02 from "@/assets/Promo_banner02.jpg";
 import promoBanner02Mobile from "@/assets/Promo_banner02_mobile.jpg";
 import promoBanner02Tablet from "@/assets/Promo_banner02_tablet.jpg";
-import smallBanner09 from "@/assets/Small_banner09.jpg";
-import smallBanner10 from "@/assets/Small_banner10.jpg";
+import smallBanner09 from "@/assets/Small_banner_Inc09.jpg";
+import smallBanner10 from "@/assets/Small_banner_Inc10.jpg";
 
 const BrasilIncriveis = () => {
   const handleShare = async () => {
