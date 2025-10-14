@@ -201,7 +201,7 @@ const BrasilIncriveis = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://s.shopee.com.br/9zonpLhHH0" 
+              href="https://s.shopee.com.br/9Usq4oWcNx" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -213,7 +213,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -229,7 +229,7 @@ const BrasilIncriveis = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://s.shopee.com.br/9zonpLhHH0" 
+              href="https://s.shopee.com.br/9Usq4oWcNx" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -241,7 +241,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -268,7 +268,7 @@ const BrasilIncriveis = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601365537793" 
+              href="https://amzn.to/48uWOX4" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -280,7 +280,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://s.shopee.com.br/5L2yKb0AbP" 
+              href="https://s.shopee.com.br/8zwZih2PKR" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -296,7 +296,7 @@ const BrasilIncriveis = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601365537793" 
+              href="https://amzn.to/48uWOX4" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -308,7 +308,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://s.shopee.com.br/5L2yKb0AbP" 
+              href="https://s.shopee.com.br/8zwZih2PKR" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -366,7 +366,7 @@ const BrasilIncriveis = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://s.shopee.com.br/60IfAB4aC8" 
+              href="https://s.shopee.com.br/7V7dZJmkS0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -378,7 +378,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/4nVFPBz" 
+              href="https://amzn.to/4nQ8b0I" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -394,7 +394,7 @@ const BrasilIncriveis = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://s.shopee.com.br/60IfAB4aC8" 
+              href="https://s.shopee.com.br/7V7dZJmkS0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -406,7 +406,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/4nVFPBz" 
+              href="https://amzn.to/4nQ8b0I" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -428,7 +428,7 @@ const BrasilIncriveis = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/4mGYDUb" 
+              href="https://amzn.to/46PWJfn" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -440,7 +440,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601257292412" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -456,7 +456,7 @@ const BrasilIncriveis = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/4mGYDUb" 
+              href="https://amzn.to/46PWJfn" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -468,7 +468,7 @@ const BrasilIncriveis = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601257292412" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -534,7 +534,7 @@ const BrasilIncriveis = () => {
                 />
               </a>
               <a 
-                href="https://amzn.to/48Ic7vw" 
+                href="https://amzn.to/47fv0oq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -562,7 +562,7 @@ const BrasilIncriveis = () => {
                 />
               </a>
               <a 
-                href="https://amzn.to/48Ic7vw" 
+                href="https://amzn.to/47fv0oq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block"
