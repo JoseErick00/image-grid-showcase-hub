@@ -899,7 +899,7 @@ const BrasilTech = () => {
         items={techProducts.slice(40, 50)}
         columns={2}
         aspectRatio="portrait"
-        buttonColor="#1e40af"
+        buttonColor="#30bdbe"
       />
 
       {/* Bottom Social Section */}
