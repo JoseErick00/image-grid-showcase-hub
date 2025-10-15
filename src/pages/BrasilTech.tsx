@@ -511,7 +511,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601233371983" 
+              href="https://s.click.aliexpress.com/e/_c4NbxkKj" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -539,7 +539,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601233371983" 
+              href="https://s.click.aliexpress.com/e/_c4NbxkKj" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -676,7 +676,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://s.shopee.com.br/8V0Ak3bDCn" 
+              href="https://s.click.aliexpress.com/e/_c3acXZXZ" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -704,7 +704,7 @@ const BrasilTech = () => {
               />
             </a>
             <a 
-              href="https://s.shopee.com.br/8V0Ak3bDCn" 
+              href="https://s.click.aliexpress.com/e/_c3acXZXZ" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
