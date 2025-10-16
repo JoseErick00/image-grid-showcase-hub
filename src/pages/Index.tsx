@@ -105,10 +105,10 @@ const Index = () => {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[85%] md:max-w-[85%] mx-auto">
+          <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[80%] md:max-w-[70%] mx-auto">
             We select the best products across all apps, making your search easier!
           </h1>
-          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
+          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[80%] md:max-w-[70%] mx-auto">
             We handpick the most brilliant products and gadgets from the world's biggest e-commerce platforms—Amazon, AliExpress, Shopee, Temu, Alibaba, eBay—and bring them together in one inspiring place.
           </p>
 

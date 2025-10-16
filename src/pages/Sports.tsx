@@ -192,10 +192,10 @@ const Sports = () => {
 
       {/* Title and Subtitle */}
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[80%] md:max-w-[70%] mx-auto">
           Gear up without the guesswork.
         </h1>
-        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[80%] md:max-w-[70%] mx-auto px-4">
           From innovative tools to smart accessories, we find the fitness and adventure essentials hiding in your favorite e-commerce apps.
         </p>
 
