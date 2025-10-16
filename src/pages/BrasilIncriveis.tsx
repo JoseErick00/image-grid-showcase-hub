@@ -19,6 +19,16 @@ import promoBanner02Mobile from "@/assets/Promo_banner02_mobileInc.jpg";
 import promoBanner02Tablet from "@/assets/Promo_banner02_tabletInc.jpg";
 import smallBanner09 from "@/assets/Small_banner_Inc09.jpg";
 import smallBanner10 from "@/assets/Small_banner_Inc10.jpg";
+import inc01 from "@/assets/inc_01.jpg";
+import inc02 from "@/assets/inc_02.jpg";
+import inc03 from "@/assets/inc_03.jpg";
+import inc04 from "@/assets/inc_04.jpg";
+import inc05 from "@/assets/inc_05.jpg";
+import inc06 from "@/assets/inc_06.jpg";
+import inc07 from "@/assets/inc_07.jpg";
+import inc08 from "@/assets/inc_08.jpg";
+import inc09 from "@/assets/inc_09.jpg";
+import inc10 from "@/assets/inc_10.jpg";
 
 const BrasilIncriveis = () => {
   const handleShare = async () => {
@@ -51,16 +61,16 @@ const BrasilIncriveis = () => {
   };
 
   const incrediblesProducts = [
-    { id: "incredibles-1", title: "BOOX Tablet Tab Ultra B/W ePaper PC", image: "/lovable-uploads/193549b0-0a02-4527-89a3-feb51e4ea2ce.png", link: "https://amzn.to/3JJK3h4" },
-    { id: "incredibles-2", title: "Infinity Dodecahedron Gaming Light", image: "/lovable-uploads/d3eeff5f-d2af-4810-9a5f-18edca9576f6.png", link: "https://amzn.to/3UVTufL" },
-    { id: "incredibles-3", title: "Instax Pal Camera", image: "/lovable-uploads/e11971cc-8f62-4bb5-81df-554244346ef9.png", link: "https://amzn.to/4nj8nF8" },
-    { id: "incredibles-4", title: "Lirpe R1 Modular Electric Scooter", image: "/lovable-uploads/6b012b44-c829-4f61-be2b-be53b38be6fb.png", link: "https://amzn.to/4mFb3wG" },
-    { id: "incredibles-5", title: "Inmotion V14 Adventure", image: "/lovable-uploads/549f93b8-6007-4d13-98e9-8da94f9b46cf.png", link: "https://amzn.to/45LFvPQ" },
-    { id: "incredibles-6", title: "RORRY Portable Charger 5000mAh", image: "/lovable-uploads/710ad74d-4554-457b-af87-a967ea256a25.png", link: "https://amzn.to/3JPiuml" },
-    { id: "incredibles-7", title: "TAU 2 3in1 Emergency Keyring Power Bank", image: "/lovable-uploads/6a2ec552-c40d-4d1d-b52f-d877362aaae2.png", link: "https://amzn.to/42c7WnC" },
-    { id: "incredibles-8", title: "Tracker Mini Portable Workstation", image: "/lovable-uploads/8813cd7e-3675-4388-80c9-f7bdb05e1aca.png", link: "https://amzn.to/4g4J1rT" },
-    { id: "incredibles-9", title: "Rokid Max AR Glasses", image: "/lovable-uploads/7ca5a8e8-a264-4795-b33b-f26d3798efc1.png", link: "https://amzn.to/4ndGBK0" },
-    { id: "incredibles-10", title: "Waterproof Bicycle Saddle Bag", image: "/lovable-uploads/e89b86b3-4192-41ac-8e85-0d2422887207.png", link: "https://amzn.to/3V3bUv0" },
+    { id: "incredibles-1", title: "KYEDAY Máscara punk cosplay.", image: inc01, link: "https://amzn.to/4oiP8vw" },
+    { id: "incredibles-2", title: "Echo Show 5 (Geração mais recente) | Smart display com Alexa", image: inc02, link: "https://amzn.to/3J9tBXr" },
+    { id: "incredibles-3", title: "Óculos AR de alto brilho ENMESI V50 1080P", image: inc03, link: "https://s.click.aliexpress.com/e/_c3Q0cFPD" },
+    { id: "incredibles-4", title: "Inflator automotivo sem fio do pneu da bomba esperta portátil", image: inc04, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601545267266" },
+    { id: "incredibles-5", title: "Zhiyun Smooth Q3 Smartphone Estabilizador Gimbal Portátil de 3 eixos.", image: inc05, link: "https://amzn.to/4qaKwcR" },
+    { id: "incredibles-6", title: "Sistema Automático de Hidroponia 8 Pots", image: inc06, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601182089025" },
+    { id: "incredibles-7", title: "Microfone sem fio duplo de lapela K9 Tipo C", image: inc07, link: "https://s.shopee.com.br/6VFGjTJbIQ" },
+    { id: "incredibles-8", title: "Vabaso - Lancheira elétrica para adultos", image: inc08, link: "https://amzn.to/4qcXvKY" },
+    { id: "incredibles-9", title: "Robô aspirador de piscina sem fio automático 3312.", image: inc09, link: "https://s.click.aliexpress.com/e/_c3tpV1In" },
+    { id: "incredibles-10", title: "Vitrola maleta Retrô  - Toca discos de vinil antiga", image: inc10, link: "https://s.shopee.com.br/7AUyHvQYjL" },
     { id: "incredibles-11", title: "Philips Air Fryer 2000 Series 4.2L", image: "/lovable-uploads/e5386ab4-afa4-4db5-971d-34bad6a402f0.png", link: "https://amzn.to/4lZweIH" },
     { id: "incredibles-12", title: "30x Zoom Telephoto Phone Lens", image: "/lovable-uploads/940826c7-cde9-4aae-8cac-684940a9461c.png", link: "https://amzn.to/3JJOSHa" },
     { id: "incredibles-13", title: "Nintendo Switch 2 System", image: "/lovable-uploads/3c9b56ae-87ca-4e3b-afd7-425076310fbe.png", link: "https://amzn.to/4g3X6WA" },
