@@ -460,6 +460,14 @@ const BrasilIncriveis = () => {
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
 
+        {/* Products 19-30 */}
+        <CategoryGrid 
+          items={incrediblesProducts.slice(18, 30)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#5ebb47"
+        />
+
         {/* Small Banner 07 & 08 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
@@ -616,16 +624,6 @@ const BrasilIncriveis = () => {
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
-
-      {/* Last items */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <CategoryGrid 
-          items={incrediblesProducts.slice(18)}
-          columns={2}
-          aspectRatio="portrait"
-          buttonColor="#5ebb47"
-        />
-      </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
