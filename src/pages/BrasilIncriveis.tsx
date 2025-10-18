@@ -39,6 +39,16 @@ import inc17 from "@/assets/inc_17.jpg";
 import inc18 from "@/assets/inc_18.jpg";
 import inc19 from "@/assets/inc_19.jpg";
 import inc20 from "@/assets/inc_20.jpg";
+import inc21 from "@/assets/inc_21.jpg";
+import inc22 from "@/assets/inc_22.jpg";
+import inc23 from "@/assets/inc_23.jpg";
+import inc24 from "@/assets/inc_24.jpg";
+import inc25 from "@/assets/inc_25.jpg";
+import inc26 from "@/assets/inc_26.jpg";
+import inc27 from "@/assets/inc_27.jpg";
+import inc28 from "@/assets/inc_28.jpg";
+import inc29 from "@/assets/inc_29.jpg";
+import inc30 from "@/assets/inc_30.jpg";
 
 const BrasilIncriveis = () => {
   const handleShare = async () => {
@@ -91,9 +101,16 @@ const BrasilIncriveis = () => {
     { id: "incredibles-18", title: "Tambor Handpan 14 notas cor dourada (432hz 440hz), feito à mão.", image: inc18, link: "https://s.click.aliexpress.com/e/_c4P49LTh" },
     { id: "incredibles-19", title: "Fone de ouvido Headset - Gamer Havit H2002d", image: inc19, link: "https://s.shopee.com.br/qay7KXAhU" },
     { id: "incredibles-20", title: "Polaroid Go Generation 2 – Minicâmera Instantânea – Preta (9096)", image: inc20, link: "https://amzn.to/4h4wdm1" },
-    { id: "incredibles-21", title: "Black Shark Phone Cooler for Gaming FunCooler 4", image: "/lovable-uploads/8c16876c-77e7-4f7f-b282-5633f9b58462.png", link: "https://amzn.to/42dUXlk" },
-    { id: "incredibles-22", title: "Fanttik Slim V8 Apex Car Vacuum, 4-in-1 Portable", image: "/lovable-uploads/1ad2a814-1a35-49b1-a025-cfbc4224934e.png", link: "https://amzn.to/480CRah" },
-    { id: "incredibles-23", title: "Flip up Double Visor with Multicolor Visor", image: "/lovable-uploads/aaa7d706-7638-4eab-83e8-cca8e547ff40.png", link: "https://amzn.to/4g9uivR" },
+    { id: "incredibles-21", title: "Suporte cachorro Bulldog para Alexa Echo Dot 4 e 5", image: inc21, link: "https://s.shopee.com.br/qayPDlAFK" },
+    { id: "incredibles-22", title: "Monster Boomerang Petite Neckband, Alto-falante Bluetooth 5.0", image: inc22, link: "https://amzn.to/43dZbdf" },
+    { id: "incredibles-23", title: "Torneiras Pull-Out,  cozinha ou banheiro.", image: inc23, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601591939104" },
+    { id: "incredibles-24", title: "Lente de microscópio de bolso APEXEL 200X com filtro CPL e luz LED.", image: inc24, link: "https://s.click.aliexpress.com/e/_c3euq09Z" },
+    { id: "incredibles-25", title: "APEXEL - Nova lente macro 4K HD 100mm atualizada com LED", image: inc25, link: "https://s.click.aliexpress.com/e/_c3ZC634F" },
+    { id: "incredibles-26", title: "SealVax® Selador a vácuo portátil.", image: inc26, link: "https://amzn.to/3JjmcEW" },
+    { id: "incredibles-27", title: "Conjunto de tábuas grande 4 peças -  Joseph & Joseph.", image: inc27, link: "https://amzn.to/4hiEYZQ" },
+    { id: "incredibles-28", title: "Meta Skyler Cat Eye Sunglasses.", image: inc28, link: "https://amzn.to/4hcIULq" },
+    { id: "incredibles-29", title: "Impressora 3D Creality Ender 3 V3 KE.", image: inc29, link: "https://amzn.to/43kMsWb" },
+    { id: "incredibles-30", title: "Tradutor - WiFi , Touch Screen, 4G Voz Android.", image: inc30, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601574131100" },
   ];
 
   return (
