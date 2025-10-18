@@ -29,6 +29,16 @@ import inc07 from "@/assets/inc_07.jpg";
 import inc08 from "@/assets/inc_08.jpg";
 import inc09 from "@/assets/inc_09.jpg";
 import inc10 from "@/assets/inc_10.jpg";
+import inc11 from "@/assets/inc_11.jpg";
+import inc12 from "@/assets/inc_12.jpg";
+import inc13 from "@/assets/inc_13.jpg";
+import inc14 from "@/assets/inc_14.jpg";
+import inc15 from "@/assets/inc_15.jpg";
+import inc16 from "@/assets/inc_16.jpg";
+import inc17 from "@/assets/inc_17.jpg";
+import inc18 from "@/assets/inc_18.jpg";
+import inc19 from "@/assets/inc_19.jpg";
+import inc20 from "@/assets/inc_20.jpg";
 
 const BrasilIncriveis = () => {
   const handleShare = async () => {
@@ -71,16 +81,16 @@ const BrasilIncriveis = () => {
     { id: "incredibles-8", title: "Vabaso - Lancheira elétrica para adultos", image: inc08, link: "https://amzn.to/4qcXvKY" },
     { id: "incredibles-9", title: "Robô aspirador de piscina sem fio automático 3312.", image: inc09, link: "https://s.click.aliexpress.com/e/_c3tpV1In" },
     { id: "incredibles-10", title: "Vitrola maleta Retrô  - Toca discos de vinil antiga", image: inc10, link: "https://s.shopee.com.br/7AUyHvQYjL" },
-    { id: "incredibles-11", title: "Philips Air Fryer 2000 Series 4.2L", image: "/lovable-uploads/e5386ab4-afa4-4db5-971d-34bad6a402f0.png", link: "https://amzn.to/4lZweIH" },
-    { id: "incredibles-12", title: "30x Zoom Telephoto Phone Lens", image: "/lovable-uploads/940826c7-cde9-4aae-8cac-684940a9461c.png", link: "https://amzn.to/3JJOSHa" },
-    { id: "incredibles-13", title: "Nintendo Switch 2 System", image: "/lovable-uploads/3c9b56ae-87ca-4e3b-afd7-425076310fbe.png", link: "https://amzn.to/4g3X6WA" },
-    { id: "incredibles-14", title: "OutIn Nano Portable Electric Espresso Machine", image: "/lovable-uploads/28535c53-ea37-48bb-9a0e-548a1825efa2.png", link: "https://amzn.to/3I7m6Q6" },
-    { id: "incredibles-15", title: "Yelomin 49800mAh Solar Power Bank", image: "/lovable-uploads/3a06e222-f87c-425c-bbdc-a594e1d28d89.png", link: "https://amzn.to/4n7dsjE" },
-    { id: "incredibles-16", title: "APEXEL 200X digital microscope lens", image: "/lovable-uploads/66ece50e-962b-452b-a348-93d2c4a0d3a8.png", link: "https://amzn.to/4g5nRKe" },
-    { id: "incredibles-17", title: "WILSON NCAA Vivido Soccer Ball", image: "/lovable-uploads/a4864f30-7361-49f5-a0ed-9fcf834eefbb.png", link: "https://amzn.to/3I2xYTu" },
-    { id: "incredibles-18", title: "TONOR USB Conference Microphone for Laptop", image: "/lovable-uploads/415004c8-7aec-46cc-81a5-fd3adf36c25e.png", link: "https://amzn.to/3UZP2fW" },
-    { id: "incredibles-19", title: "GravaStar Loudspeakers Mars Pro Portable", image: "/lovable-uploads/b639efcc-e4a0-458a-8cff-7e5a54411f97.png", link: "https://amzn.to/41ANJrB" },
-    { id: "incredibles-20", title: "Echelon Reflect Smart Connect Fitness Mirror", image: "/lovable-uploads/596073f3-3fa5-44ee-af5c-efc56ca738d4.png", link: "https://amzn.to/4p4zDIY" },
+    { id: "incredibles-11", title: "Fones de ouvido tradutor com 144 tipos de idiomas e interpretação simultânea.", image: inc11, link: "https://s.click.aliexpress.com/e/_c3ZQamr5" },
+    { id: "incredibles-12", title: "Ariete 643 - Máquina de sorvete- Retrô vermelha.", image: inc12, link: "https://amzn.to/3L0M5Ka" },
+    { id: "incredibles-13", title: "Cesta de grelha giratória para CHURRASCO, para grelhar e defumar", image: inc13, link: "https://amzn.to/4naGFto" },
+    { id: "incredibles-14", title: "Máscara de Led (Neon Duplo), Cosplay, Carnaval, Fantasia Halloween.", image: inc14, link: "https://amzn.to/4n7opRX" },
+    { id: "incredibles-15", title: "Localizador Inteligente - Certificado pelo Google.", image: inc15, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601513954521" },
+    { id: "incredibles-16", title: "Chaleira de café elétrica - Várias cores", image: inc16, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517279220" },
+    { id: "incredibles-17", title: "JISULIFE Ventilador de pescoço portátil Pro", image: inc17, link: "https://amzn.to/3KOv1Hs" },
+    { id: "incredibles-18", title: "Tambor Handpan 14 notas cor dourada (432hz 440hz), feito à mão.", image: inc18, link: "https://s.click.aliexpress.com/e/_c4P49LTh" },
+    { id: "incredibles-19", title: "Fone de ouvido Headset - Gamer Havit H2002d", image: inc19, link: "https://s.shopee.com.br/qay7KXAhU" },
+    { id: "incredibles-20", title: "Polaroid Go Generation 2 – Minicâmera Instantânea – Preta (9096)", image: inc20, link: "https://amzn.to/4h4wdm1" },
     { id: "incredibles-21", title: "Black Shark Phone Cooler for Gaming FunCooler 4", image: "/lovable-uploads/8c16876c-77e7-4f7f-b282-5633f9b58462.png", link: "https://amzn.to/42dUXlk" },
     { id: "incredibles-22", title: "Fanttik Slim V8 Apex Car Vacuum, 4-in-1 Portable", image: "/lovable-uploads/1ad2a814-1a35-49b1-a025-cfbc4224934e.png", link: "https://amzn.to/480CRah" },
     { id: "incredibles-23", title: "Flip up Double Visor with Multicolor Visor", image: "/lovable-uploads/aaa7d706-7638-4eab-83e8-cca8e547ff40.png", link: "https://amzn.to/4g9uivR" },
