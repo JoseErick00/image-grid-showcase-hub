@@ -410,15 +410,7 @@ const BrasilIncriveis = () => {
           </div>
         </div>
 
-        {/* Products 31-40 */}
-        <CategoryGrid 
-          items={incrediblesProducts.slice(30, 40)}
-          columns={2}
-          aspectRatio="portrait"
-          buttonColor="#5ebb47"
-        />
-
-        {/* Second 9 items */}
+        {/* Second 9 items (10-18) */}
         <CategoryGrid
           items={incrediblesProducts.slice(9, 18)}
           columns={2}
@@ -554,6 +546,14 @@ const BrasilIncriveis = () => {
             </a>
           </div>
         </div>
+
+        {/* Products 31-40 */}
+        <CategoryGrid 
+          items={incrediblesProducts.slice(30, 40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#5ebb47"
+        />
       </div>
 
         {/* Promo Banner 02 */}
