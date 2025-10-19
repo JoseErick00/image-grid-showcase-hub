@@ -49,6 +49,16 @@ import inc27 from "@/assets/inc_27.jpg";
 import inc28 from "@/assets/inc_28.jpg";
 import inc29 from "@/assets/inc_29.jpg";
 import inc30 from "@/assets/inc_30.jpg";
+import inc31 from "@/assets/inc_31.jpg";
+import inc32 from "@/assets/inc_32.jpg";
+import inc33 from "@/assets/inc_33.jpg";
+import inc34 from "@/assets/inc_34.jpg";
+import inc35 from "@/assets/inc_35.jpg";
+import inc36 from "@/assets/inc_36.jpg";
+import inc37 from "@/assets/inc_37.jpg";
+import inc38 from "@/assets/inc_38.jpg";
+import inc39 from "@/assets/inc_39.jpg";
+import inc40 from "@/assets/inc_40.jpg";
 
 const BrasilIncriveis = () => {
   const handleShare = async () => {
@@ -111,6 +121,16 @@ const BrasilIncriveis = () => {
     { id: "incredibles-28", title: "Meta Skyler Cat Eye Sunglasses.", image: inc28, link: "https://amzn.to/4hcIULq" },
     { id: "incredibles-29", title: "Impressora 3D Creality Ender 3 V3 KE.", image: inc29, link: "https://amzn.to/43kMsWb" },
     { id: "incredibles-30", title: "Tradutor - WiFi , Touch Screen, 4G Voz Android.", image: inc30, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601574131100" },
+    { id: "incredibles-31", title: "Óculos inteligentes G300 AI, câmera HD de 800 W, 32 GB,  ChatGPT.", image: inc31, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601561240112" },
+    { id: "incredibles-32", title: "PLEXTONE MX2 Pro - Ventilador com radiador líquido para smartphone e tablets.", image: inc32, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601442969443" },
+    { id: "incredibles-33", title: "Fone Bluetooth sem fio de ouvido - P9 TWS -  Macaron", image: inc33, link: "https://s.shopee.com.br/5fgFeohC1A" },
+    { id: "incredibles-34", title: "Extensor de tela de laptop, monitor de computador portátil .", image: inc34, link: "https://amzn.to/46Mo0iS" },
+    { id: "incredibles-35", title: "Eufy - Câmera de segurança S350,  dupla, 4K", image: inc35, link: "https://amzn.to/4qihEzp" },
+    { id: "incredibles-36", title: "KODAK Impressora fotográfica instantânea .", image: inc36, link: "https://amzn.to/3WPn4Ek" },
+    { id: "incredibles-37", title: "Stainless Steel Thermos Bottle, Hot and Cold for 72H", image: inc37, link: "https://s.click.aliexpress.com/e/_c3klU0xV" },
+    { id: "incredibles-38", title: "Fone de ouvido Ergonômico TWS - Anti-queda", image: inc38, link: "https://s.shopee.com.br/9zpEqr0utn" },
+    { id: "incredibles-39", title: "Câmera digital Xiaomi 4K 50MP 16X Estudante", image: inc39, link: "https://s.click.aliexpress.com/e/_c4BXpt7D" },
+    { id: "incredibles-40", title: "Echo Dot (Geração mais recente)", image: inc40, link: "https://amzn.to/4n5Da7E" },
   ];
 
   return (
@@ -390,8 +410,16 @@ const BrasilIncriveis = () => {
           </div>
         </div>
 
-        {/* Second 9 items */}
+        {/* Products 31-40 */}
         <CategoryGrid 
+          items={incrediblesProducts.slice(30, 40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#5ebb47"
+        />
+
+        {/* Second 9 items */}
+        <CategoryGrid
           items={incrediblesProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"
