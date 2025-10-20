@@ -59,6 +59,16 @@ import inc37 from "@/assets/inc_37.jpg";
 import inc38 from "@/assets/inc_38.jpg";
 import inc39 from "@/assets/inc_39.jpg";
 import inc40 from "@/assets/inc_40.jpg";
+import inc41 from "@/assets/inc_41.jpg";
+import inc42 from "@/assets/inc_42.jpg";
+import inc43 from "@/assets/inc_43.jpg";
+import inc44 from "@/assets/inc_44.jpg";
+import inc45 from "@/assets/inc_45.jpg";
+import inc46 from "@/assets/inc_46.jpg";
+import inc47 from "@/assets/inc_47.jpg";
+import inc48 from "@/assets/inc_48.jpg";
+import inc49 from "@/assets/inc_49.jpg";
+import inc50 from "@/assets/inc_50.jpg";
 
 const BrasilIncriveis = () => {
   const handleShare = async () => {
@@ -131,6 +141,16 @@ const BrasilIncriveis = () => {
     { id: "incredibles-38", title: "Fone de ouvido Ergonômico TWS - Anti-queda", image: inc38, link: "https://s.shopee.com.br/9zpEqr0utn" },
     { id: "incredibles-39", title: "Câmera digital Xiaomi 4K 50MP 16X Estudante", image: inc39, link: "https://s.click.aliexpress.com/e/_c4BXpt7D" },
     { id: "incredibles-40", title: "Echo Dot (Geração mais recente)", image: inc40, link: "https://amzn.to/4n5Da7E" },
+    { id: "incredibles-41", title: "Moedor de grãos e nozes elétrico - Vitamer", image: inc41, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600223431384" },
+    { id: "incredibles-42", title: "Mankeel - Scooter aquática.", image: inc42, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600551828862" },
+    { id: "incredibles-43", title: "Mini Console Retro Super Nintendo com 130 mil jogos", image: inc43, link: "https://amzn.to/4h4JVoS" },
+    { id: "incredibles-44", title: "Xiaomi Poco X7 Pro 5G NFC Black (Preto) 12GB RAM 512GB", image: inc44, link: "https://amzn.to/4n00LH0" },
+    { id: "incredibles-45", title: "Carregador sem fio magnético 3 em 1 para celulares, iPhone 13 12 Pro Max Mini", image: inc45, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600431064590" },
+    { id: "incredibles-46", title: "SmartWatch 2 em 1 com fones de ouvido sem fio TWS", image: inc46, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601232862354" },
+    { id: "incredibles-47", title: "Beats Pill – Caixa de som Bluetooth", image: inc47, link: "https://amzn.to/4mYgkPr" },
+    { id: "incredibles-48", title: "Smartphone, HUAWEI Mate X6, 12GB+512GB, Ultrafino, dobrável e Durável.", image: inc48, link: "https://amzn.to/4n17LmI" },
+    { id: "incredibles-49", title: "Mini teclado para Smart TV, Tablet, Xbox360/Ps3.", image: inc49, link: "https://s.shopee.com.br/gHPxCXvbI" },
+    { id: "incredibles-50", title: "Karaokê alto-falante - Bluetooth portátil de alta potência", image: inc50, link: "https://s.click.aliexpress.com/e/_c4B3E0Mf" },
   ];
 
   return (
@@ -652,6 +672,16 @@ const BrasilIncriveis = () => {
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
+
+      {/* Products 41-50 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <CategoryGrid 
+          items={incrediblesProducts.slice(40, 50)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#5ebb47"
+        />
+      </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
