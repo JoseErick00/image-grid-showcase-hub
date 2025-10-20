@@ -96,10 +96,10 @@ const BrasilSaude = () => {
 
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-4">
-          Brasil Saúde - Self-care, upgraded.
+          Autocuidado e saúde em dia.
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto px-4">
-          We discovered wellness gadgets, beauty tools, and feel-good finds from around the globe—handpicked to help you glow, grow, and chill in Brasil.
+          Aqui trazemos gadgets de bem-estar, ferramentas de beleza e descobertas que fazem você se sentir bem — tudo cuidadosamente selecionado para ajudar você a se cuidar, ficar bem e relaxar.
         </p>
 
         {/* Social Media Icons */}
@@ -134,12 +134,12 @@ const BrasilSaude = () => {
         {/* Checklist Box */}
         <div className="flex justify-center mt-12">
           <div className="w-[600px] max-w-[85%] md:w-[600px] h-[300px] rounded-lg p-8 flex flex-col justify-center bg-muted">
-            <h2 className="font-omne-medium text-white text-lg md:text-3xl mb-6 text-left">Lista que você precisa:</h2>
+            <h2 className="font-omne-medium text-white text-lg md:text-3xl mb-6 text-left">Essa lista é para você que:</h2>
             <ol className="font-omne-regular text-white text-sm md:text-lg space-y-3 text-left">
-              <li>1. Você quer vida saudável aprimorada.</li>
-              <li>2. Você quer inovações para mente e corpo.</li>
-              <li>3. Você precisa de ferramentas legais para um você melhor.</li>
-              <li>4. Você quer navegar por produtos legais.</li>
+              <li>1. Quer vida saudável e atualizada.</li>
+              <li>2. Quer inovações para sua mente e corpo.</li>
+              <li>3. Quer ter coisas legais para sua melhor versão.</li>
+              <li>4. Você ama navegar por produtos legais.</li>
             </ol>
           </div>
         </div>
