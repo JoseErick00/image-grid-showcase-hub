@@ -1,5 +1,14 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import promoBanner from "@/assets/saude/Promo_banner.jpg";
+import promoBannerMobile from "@/assets/saude/Promo_banner_mobile.jpg";
+import promoBannerTablet from "@/assets/saude/Promo_banner_tablet.jpg";
+import middleBanner from "@/assets/saude/middle_banner.jpg";
+import middleBannerMobile from "@/assets/saude/middle_banner_mobile.jpg";
+import middleBannerTablet from "@/assets/saude/middle_banner_tablet.jpg";
+import promoBanner02 from "@/assets/saude/Promo_banner02.jpg";
+import promoBanner02Mobile from "@/assets/saude/Promo_banner02_mobile.jpg";
+import promoBanner02Tablet from "@/assets/saude/Promo_banner02_tablet.jpg";
 
 const BrasilSaude = () => {
   const handleShare = async () => {
@@ -148,26 +157,26 @@ const BrasilSaude = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/4gyzdXk" 
+              href="https://amzn.to/4oijqP1" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/Promo_banner.jpg"
+                src={promoBanner}
                 alt="Saude promo banner - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/Promo_banner_tablet.jpg"
+                src={promoBannerTablet}
                 alt="Saude promo banner - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/Promo_banner_mobile.jpg"
+                src={promoBannerMobile}
                 alt="Saude promo banner - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -305,26 +314,26 @@ const BrasilSaude = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271111162" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/middle_banner.jpg"
+                src={middleBanner}
                 alt="Saude middle banner - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/middle_banner_tablet.jpg"
+                src={middleBannerTablet}
                 alt="Saude middle banner - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/middle_banner_mobile.jpg"
+                src={middleBannerMobile}
                 alt="Saude middle banner - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -475,26 +484,26 @@ const BrasilSaude = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/42z0XFR" 
+              href="https://amzn.to/48z1r2x" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/Promo_banner02.jpg"
+                src={promoBanner02}
                 alt="Saude promo banner 02 - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/Promo_banner02_tablet.jpg"
+                src={promoBanner02Tablet}
                 alt="Saude promo banner 02 - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/Promo_banner02_mobile.jpg"
+                src={promoBanner02Mobile}
                 alt="Saude promo banner 02 - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
