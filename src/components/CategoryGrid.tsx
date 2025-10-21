@@ -17,6 +17,7 @@ interface CategoryGridProps {
   aspectRatio?: "square" | "portrait";
   buttonColor?: string;
   showButton?: boolean;
+  labelTextColor?: string;
 }
 
 const CategoryGrid = ({ 
@@ -25,7 +26,8 @@ const CategoryGrid = ({
   columns = 3, 
   aspectRatio = "square",
   buttonColor = "#1e40af",
-  showButton = true
+  showButton = true,
+  labelTextColor = "#ffffff"
 }: CategoryGridProps) => {
   const { isCompactMode } = useGridLayout();
   const isMobile = useIsMobile();
@@ -93,11 +95,17 @@ const CategoryGrid = ({
                   className="px-3 py-2 rounded-md mb-3"
                   style={{ backgroundColor: buttonColor }}
                 >
-                  <h3 className={`font-omne-medium text-white ${isMobile ? 'text-sm' : 'text-base'}`}>
+                  <h3 
+                    className={`font-omne-medium ${isMobile ? 'text-sm' : 'text-base'}`}
+                    style={{ color: labelTextColor }}
+                  >
                     {item.title}
                   </h3>
                   {item.subtitle && (
-                    <p className="font-omne-regular text-sm text-white/90 mt-1">
+                    <p 
+                      className={`font-omne-regular text-sm mt-1`}
+                      style={{ color: labelTextColor, opacity: 0.9 }}
+                    >
                       {item.subtitle}
                     </p>
                   )}

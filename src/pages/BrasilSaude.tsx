@@ -269,6 +269,7 @@ const BrasilSaude = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f9c90c"
+          labelTextColor="#171717"
         />
 
         {/* Small Banner 03 & 04 */}
@@ -367,6 +368,7 @@ const BrasilSaude = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f9c90c"
+          labelTextColor="#171717"
         />
 
         {/* Small Banner 05 & 06 */}
@@ -437,6 +439,7 @@ const BrasilSaude = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f9c90c"
+          labelTextColor="#171717"
         />
 
         {/* Small Banner 07 & 08 */}
