@@ -19,6 +19,16 @@ import smallBanner07 from "@/assets/saude/Small_banner07.jpg";
 import smallBanner08 from "@/assets/saude/Small_banner08.jpg";
 import smallBanner09 from "@/assets/saude/Small_banner09.jpg";
 import smallBanner10 from "@/assets/saude/Small_banner10.jpg";
+import sau01 from "@/assets/saude/sau_01.jpg";
+import sau02 from "@/assets/saude/sau_02.jpg";
+import sau03 from "@/assets/saude/sau_03.jpg";
+import sau04 from "@/assets/saude/sau_04.jpg";
+import sau05 from "@/assets/saude/sau_05.jpg";
+import sau06 from "@/assets/saude/sau_06.jpg";
+import sau07 from "@/assets/saude/sau_07.jpg";
+import sau08 from "@/assets/saude/sau_08.jpg";
+import sau09 from "@/assets/saude/sau_09.jpg";
+import sau10 from "@/assets/saude/sau_10.jpg";
 
 const BrasilSaude = () => {
   const handleShare = async () => {
@@ -51,16 +61,16 @@ const BrasilSaude = () => {
   };
 
   const healthProducts = [
-    { id: "health-1", title: "MUSICOZY Sleep Headphones", image: "/lovable-uploads/f8dd9650-899e-4d6a-9ada-6da470386d91.png", link: "https://amzn.to/428IYFF" },
-    { id: "health-2", title: "BOB AND BRAD D5 Pro Massage Gun", image: "/lovable-uploads/5538673d-95cf-47fd-93d6-ccc6f29e5f19.png", link: "https://amzn.to/46mLhaE" },
-    { id: "health-3", title: "Philips SmartSleep Wake-up Light", image: "/lovable-uploads/07861344-be10-4989-ab2d-f2858546337b.png", link: "https://amzn.to/4gbfQnd" },
-    { id: "health-4", title: "Lumen Metabolism Tracker Device", image: "/lovable-uploads/0b05785b-0dac-417c-821c-5ec21aa1d997.png", link: "https://amzn.to/4mOPnhP" },
-    { id: "health-5", title: "RUTAWZ LED Face Mask", image: "/lovable-uploads/051d7566-065b-4d6c-a2fc-1a3e2a3a40ff.png", link: "https://amzn.to/4g9oUJ9" },
-    { id: "health-6", title: "Clarisonic Mia 2 Facial Cleansing Brush", image: "/lovable-uploads/1f3746ac-5a7f-4e84-92c4-c454ec504510.png", link: "https://amzn.to/4mPYKxM" },
-    { id: "health-7", title: "Spa Sciences MIO Diamond Tip", image: "/lovable-uploads/8df5e32f-8650-4d85-b909-bc3d997bbf1b.png", link: "https://amzn.to/46mRYcU" },
-    { id: "health-8", title: "Nano Ionic Facial Steamer", image: "/lovable-uploads/0bebc8d7-d800-47f8-a4ba-35d8618b2ff4.png", link: "https://amzn.to/3JEGXei" },
-    { id: "health-9", title: "Meditation Headband", image: "/lovable-uploads/8527d4e1-1cfd-4251-b0cf-2968f71230a2.png", link: "https://amzn.to/465pnaC" },
-    { id: "health-10", title: "iHealth Thermometer", image: "/lovable-uploads/37fbe09b-f034-487a-bc64-b2b3e59dba42.png", link: "https://amzn.to/4g5Z2Ox" },
+    { id: "health-1", title: "Espectrômetro para remoção de rugas e redução de poros", image: sau01, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601431050123" },
+    { id: "health-2", title: "Varinha mágica de massagem para olho contorno.", image: sau02, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600993765827" },
+    { id: "health-3", title: "Modelador 1 Curves, Taiff, Bivolt", image: sau03, link: "https://amzn.to/4hkvtJv" },
+    { id: "health-4", title: "Anel inteligente de LED rastreador de saúde.", image: sau04, link: "https://amzn.to/43cogFN" },
+    { id: "health-5", title: "Caneta depiladora para sobrancelhas - Design Indolor. ", image: sau05, link: "https://s.shopee.com.br/qb2mDZbWF" },
+    { id: "health-6", title: "Esmalte em gel refletivo, Glitter/ Olho de Gato. ", image: sau06, link: "https://s.shopee.com.br/1BDtBQazJr" },
+    { id: "health-7", title: "Kit Tintura para sobrancelha e cílios -10ml", image: sau07, link: "https://s.shopee.com.br/VyCORBT55" },
+    { id: "health-8", title: "Aparador Kemei 3 em 1 (pelos, sobrancelhas, nariz)", image: sau08, link: "https://s.click.aliexpress.com/e/_c3wAAcMj" },
+    { id: "health-9", title: "Creme facial com 8% de colágeno e ácido hialurônico de alta qualidade.", image: sau09, link: "https://s.click.aliexpress.com/e/_c4r6rOUT" },
+    { id: "health-10", title: "Dispositivo de elevação de queixo duplo .", image: sau10, link: "https://s.click.aliexpress.com/e/_c3cjEgxh" },
     { id: "health-11", title: "agoy Gecko Touch - Next-Gen Microfiber", image: "/lovable-uploads/9e9c6d5a-a791-4dac-9ba0-ea63b0cd58a4.png", link: "https://amzn.to/3HSwTOf" },
     { id: "health-12", title: "Glucose Monitor", image: "/lovable-uploads/5c124637-1f1e-477c-abc3-f4a98dcab7bd.png", link: "https://amzn.to/45N8Glv" },
     { id: "health-13", title: "P1 Smart Posture Trainer & Corrector", image: "/lovable-uploads/43fec64c-f29c-490a-959b-a17ee33986c1.png", link: "https://amzn.to/465Mty8" },
