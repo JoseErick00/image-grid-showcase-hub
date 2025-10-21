@@ -39,6 +39,16 @@ import sau17 from "@/assets/saude/sau_17.jpg";
 import sau18 from "@/assets/saude/sau_18.jpg";
 import sau19 from "@/assets/saude/sau_19.jpg";
 import sau20 from "@/assets/saude/sau_20.jpg";
+import sau21 from "@/assets/saude/sau_21.jpg";
+import sau22 from "@/assets/saude/sau_22.jpg";
+import sau23 from "@/assets/saude/sau_23.jpg";
+import sau24 from "@/assets/saude/sau_24.jpg";
+import sau25 from "@/assets/saude/sau_25.jpg";
+import sau26 from "@/assets/saude/sau_26.jpg";
+import sau27 from "@/assets/saude/sau_27.jpg";
+import sau28 from "@/assets/saude/sau_28.jpg";
+import sau29 from "@/assets/saude/sau_29.jpg";
+import sau30 from "@/assets/saude/sau_30.jpg";
 
 const BrasilSaude = () => {
   const handleShare = async () => {
@@ -91,8 +101,16 @@ const BrasilSaude = () => {
     { id: "health-18", title: "Massageador facial antirrugas pescoço e rosto.", image: sau18, link: "https://s.click.aliexpress.com/e/_c3DTND6b" },
     { id: "health-19", title: "Pó clareador dental.", image: sau19, link: "https://s.click.aliexpress.com/e/_c4STPLeb" },
     { id: "health-20", title: "Armani Beauty, Stronger With You - Parfum.", image: sau20, link: "https://amzn.to/48FeKyr" },
-    { id: "health-21", title: "ZzzQuil PURE Zzz's Melatonin Gummies Sleep Aid", image: "/lovable-uploads/b988ed66-310b-4568-9466-25b94d44db9e.png", link: "https://amzn.to/4ng1gNz" },
-    { id: "health-22", title: "Vibes High-Fidelity Earplugs Invisible Ear Plugs for Concerts", image: "/lovable-uploads/462548ae-68e2-4e1f-abf6-6504366270b1.png", link: "https://amzn.to/4lUJApz" },
+    { id: "health-21", title: "Massageador Elétrico - Alta frequência, Profissional.", image: sau21, link: "https://s.shopee.com.br/1qTaSW7tQO" },
+    { id: "health-22", title: "Termômetro Digital Infravermelho  - Display LCD", image: sau22, link: "https://s.shopee.com.br/8V0UPDos2O" },
+    { id: "health-23", title: "Escova de Dente Elétrica Oral-B Series iO2", image: sau23, link: "https://amzn.to/3WL6IwC" },
+    { id: "health-24", title: "OIO Creme Facial Restaurador Superpause ", image: sau24, link: "https://amzn.to/48A2Qps" },
+    { id: "health-25", title: "Creme dental clareador 5D", image: sau25, link: "https://s.click.aliexpress.com/e/_c4tXDAFp" },
+    { id: "health-26", title: "Linha Coreana Centella (probio-cica).", image: sau26, link: "https://s.click.aliexpress.com/e/_c3kCYO9z" },
+    { id: "health-27", title: "Elevador facial anti-rugas e anti-envelhecimento .", image: sau27, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600902163353" },
+    { id: "health-28", title: "Máscara de terapia de luz vermelha - LED 7 cores.", image: sau28, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601571373779" },
+    { id: "health-29", title: "Anaïs Anaïs, Perfume Feminino.", image: sau29, link: "https://amzn.to/4hh9Sl6" },
+    { id: "health-30", title: "Morte Súbita Máscara Super Hidratante.", image: sau30, link: "https://amzn.to/4qmT2FB" },
   ];
 
   return (
