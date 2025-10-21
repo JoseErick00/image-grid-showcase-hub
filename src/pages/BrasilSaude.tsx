@@ -29,6 +29,16 @@ import sau07 from "@/assets/saude/sau_07.jpg";
 import sau08 from "@/assets/saude/sau_08.jpg";
 import sau09 from "@/assets/saude/sau_09.jpg";
 import sau10 from "@/assets/saude/sau_10.jpg";
+import sau11 from "@/assets/saude/sau_11.jpg";
+import sau12 from "@/assets/saude/sau_12.jpg";
+import sau13 from "@/assets/saude/sau_13.jpg";
+import sau14 from "@/assets/saude/sau_14.jpg";
+import sau15 from "@/assets/saude/sau_15.jpg";
+import sau16 from "@/assets/saude/sau_16.jpg";
+import sau17 from "@/assets/saude/sau_17.jpg";
+import sau18 from "@/assets/saude/sau_18.jpg";
+import sau19 from "@/assets/saude/sau_19.jpg";
+import sau20 from "@/assets/saude/sau_20.jpg";
 
 const BrasilSaude = () => {
   const handleShare = async () => {
@@ -71,16 +81,16 @@ const BrasilSaude = () => {
     { id: "health-8", title: "Aparador Kemei 3 em 1 (pelos, sobrancelhas, nariz)", image: sau08, link: "https://s.click.aliexpress.com/e/_c3wAAcMj" },
     { id: "health-9", title: "Creme facial com 8% de colágeno e ácido hialurônico de alta qualidade.", image: sau09, link: "https://s.click.aliexpress.com/e/_c4r6rOUT" },
     { id: "health-10", title: "Dispositivo de elevação de queixo duplo .", image: sau10, link: "https://s.click.aliexpress.com/e/_c3cjEgxh" },
-    { id: "health-11", title: "agoy Gecko Touch - Next-Gen Microfiber", image: "/lovable-uploads/9e9c6d5a-a791-4dac-9ba0-ea63b0cd58a4.png", link: "https://amzn.to/3HSwTOf" },
-    { id: "health-12", title: "Glucose Monitor", image: "/lovable-uploads/5c124637-1f1e-477c-abc3-f4a98dcab7bd.png", link: "https://amzn.to/45N8Glv" },
-    { id: "health-13", title: "P1 Smart Posture Trainer & Corrector", image: "/lovable-uploads/43fec64c-f29c-490a-959b-a17ee33986c1.png", link: "https://amzn.to/465Mty8" },
-    { id: "health-14", title: "HidrateSpark PRO 2 Smart Water Bottle", image: "/lovable-uploads/9f9a8ae8-4f6d-42cd-b53a-4f5f5eb5fc3c.png", link: "https://amzn.to/3JKeK5O" },
-    { id: "health-15", title: "Oura Ring 4 - Smart Ring", image: "/lovable-uploads/044b731b-1f78-44af-bc6c-d28392c4afb9.png", link: "https://amzn.to/4p4vN2q" },
-    { id: "health-16", title: "Air Purifier", image: "/lovable-uploads/3bfd0612-b144-49d2-a47c-6cb7ca27db5c.png", link: "https://amzn.to/4p2Dc2x" },
-    { id: "health-17", title: "Fitness Tracker with Blood Oxygen", image: "/lovable-uploads/3b6925d4-b156-4ba4-8d9d-9baadd6b4fa0.png", link: "https://amzn.to/47lPOv8" },
-    { id: "health-18", title: "MUSE 2: The Brain Sensing Headband - EEG MUSE Headband Meditation Tracker", image: "/lovable-uploads/58b9b2f2-f665-421f-a77f-5e90fff6c1c3.png", link: "https://amzn.to/3UZKPcc" },
-    { id: "health-19", title: "ASAKUKI 500ml Premium Essential Oil Diffuser with Remote Control", image: "/lovable-uploads/76b6107c-40cd-4003-b140-1134e5b2c329.png", link: "https://amzn.to/3K4dhqR" },
-    { id: "health-20", title: "SNOOZ Smart White Noise Sound Machine Real Fan Inside", image: "/lovable-uploads/b41d7cb0-9e98-43c6-8bbd-8bb06b8927a1.png", link: "https://amzn.to/3HSyiEv" },
+    { id: "health-11", title: "Perfume ARMAF - Club de Nuit Intense Edition.", image: sau11, link: "https://amzn.to/4neZQlQ" },
+    { id: "health-12", title: "A Secador de Cabelo By Juliette, Mondial.", image: sau12, link: "https://amzn.to/3LlcBhr" },
+    { id: "health-13", title: "Lattafa Fakhar Gold Extrait- Eau de Parfum", image: sau13, link: "https://amzn.to/49e7t8S" },
+    { id: "health-14", title: "Massageador de barriga multifuncional Bian Shi", image: sau14, link: "https://s.click.aliexpress.com/e/_c4mcun5v" },
+    { id: "health-15", title: "Massageador ocular com EMS antienvelhecimento.", image: sau15, link: "https://s.click.aliexpress.com/e/_c3WzqZoX" },
+    { id: "health-16", title: "Kit 1, 2 ou 3 Necessaire - Organizador cosmético", image: sau16, link: "https://s.shopee.com.br/9AGAsiaOPo" },
+    { id: "health-17", title: "Lixador de pé elétrico da Shopee.", image: sau17, link: "https://s.shopee.com.br/9zpHtN0XoJ" },
+    { id: "health-18", title: "Massageador facial antirrugas pescoço e rosto.", image: sau18, link: "https://s.click.aliexpress.com/e/_c3DTND6b" },
+    { id: "health-19", title: "Pó clareador dental.", image: sau19, link: "https://s.click.aliexpress.com/e/_c4STPLeb" },
+    { id: "health-20", title: "Armani Beauty, Stronger With You - Parfum.", image: sau20, link: "https://amzn.to/48FeKyr" },
     { id: "health-21", title: "ZzzQuil PURE Zzz's Melatonin Gummies Sleep Aid", image: "/lovable-uploads/b988ed66-310b-4568-9466-25b94d44db9e.png", link: "https://amzn.to/4ng1gNz" },
     { id: "health-22", title: "Vibes High-Fidelity Earplugs Invisible Ear Plugs for Concerts", image: "/lovable-uploads/462548ae-68e2-4e1f-abf6-6504366270b1.png", link: "https://amzn.to/4lUJApz" },
   ];
