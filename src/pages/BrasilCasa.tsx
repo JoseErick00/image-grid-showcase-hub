@@ -265,7 +265,7 @@ const BrasilCasa = () => {
             >
               <img 
                 src="/brasil/casa/small_banner01.jpg"
-                alt="Chaleira Inox por indução - Shopee"
+                alt="Small banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -277,106 +277,11 @@ const BrasilCasa = () => {
             >
               <img 
                 src="/brasil/casa/small_banner02.jpg"
-                alt="Mini horta hidropônica - Alibaba"
+                alt="Small banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-            <a 
-              href="https://s.shopee.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner03.jpg"
-                alt="Máquina de costura - Shopee"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner04.jpg"
-                alt="Nutribullet - Amazon"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner05.jpg"
-                alt="Smeg - Amazon"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner06.jpg"
-                alt="Sistema de Jardim Hidropônico - Alibaba"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner07.jpg"
-                alt="Bowls de aço inox - Amazon"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner08.jpg"
-                alt="Panela de pressão decorada - Alibaba"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner09.jpg"
-                alt="Projetor 4K - Shopee"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner10.jpg"
-                alt="Processador de alimentos - Shopee"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+          </div>
           </div>
           
           {/* Mobile: Stacked */}
@@ -389,7 +294,7 @@ const BrasilCasa = () => {
             >
               <img 
                 src="/brasil/casa/small_banner01.jpg"
-                alt="Chaleira Inox por indução - Shopee"
+                alt="Small banner 01"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
@@ -401,106 +306,11 @@ const BrasilCasa = () => {
             >
               <img 
                 src="/brasil/casa/small_banner02.jpg"
-                alt="Mini horta hidropônica - Alibaba"
+                alt="Small banner 02"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-            <a 
-              href="https://s.shopee.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner03.jpg"
-                alt="Máquina de costura - Shopee"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner04.jpg"
-                alt="Nutribullet - Amazon"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner05.jpg"
-                alt="Smeg - Amazon"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner06.jpg"
-                alt="Sistema de Jardim Hidropônico - Alibaba"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner07.jpg"
-                alt="Bowls de aço inox - Amazon"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner08.jpg"
-                alt="Panela de pressão decorada - Alibaba"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner09.jpg"
-                alt="Projetor 4K - Shopee"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner10.jpg"
-                alt="Processador de alimentos - Shopee"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            {/* trimmed to two banners only */}
           </div>
         </div>
 
@@ -523,7 +333,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/Small_banner03.jpg"
+                src="/brasil/casa/small_banner03.jpg"
                 alt="Small banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -535,7 +345,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/Small_banner04.jpg"
+                src="/brasil/casa/small_banner04.jpg"
                 alt="Small banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -551,7 +361,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/Small_banner03.jpg"
+                src="/brasil/casa/small_banner03.jpg"
                 alt="Small banner 03"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -563,7 +373,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/Small_banner04.jpg"
+                src="/brasil/casa/small_banner04.jpg"
                 alt="Small banner 04"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -621,7 +431,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/Small_banner05.jpg"
+                src="/brasil/casa/small_banner05.jpg"
                 alt="Small banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -633,7 +443,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/Small_banner06.jpg"
+                src="/brasil/casa/small_banner06.jpg"
                 alt="Small banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -649,7 +459,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/Small_banner05.jpg"
+                src="/brasil/casa/small_banner05.jpg"
                 alt="Small banner 05"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -661,7 +471,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/Small_banner06.jpg"
+                src="/brasil/casa/small_banner06.jpg"
                 alt="Small banner 06"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -691,7 +501,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/Small_banner07.jpg"
+                src="/brasil/casa/small_banner07.jpg"
                 alt="Small banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -703,7 +513,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/Small_banner08.jpg"
+                src="/brasil/casa/small_banner08.jpg"
                 alt="Small banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -719,7 +529,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/Small_banner07.jpg"
+                src="/brasil/casa/small_banner07.jpg"
                 alt="Small banner 07"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -731,7 +541,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/Small_banner08.jpg"
+                src="/brasil/casa/small_banner08.jpg"
                 alt="Small banner 08"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
