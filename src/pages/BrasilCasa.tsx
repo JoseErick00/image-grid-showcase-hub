@@ -234,19 +234,19 @@ const BrasilCasa = () => {
             >
               {/* Desktop banner */}
               <img 
-                src="/Promo_banner.jpg"
+                src="/brasil/casa/promo_banner.jpg"
                 alt="Casa promo banner - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/Promo_banner_tablet.jpg"
+                src="/brasil/casa/promo_banner_tablet.jpg"
                 alt="Casa promo banner - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/Promo_banner_mobile.jpg"
+                src="/brasil/casa/promo_banner_mobile.jpg"
                 alt="Casa promo banner - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
