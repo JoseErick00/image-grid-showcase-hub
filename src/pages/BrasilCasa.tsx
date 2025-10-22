@@ -253,9 +253,9 @@ const BrasilCasa = () => {
             </a>
           </div>
         </div>
-        {/* Small Banners Grid */}
+        {/* Small Banner 01 & 02 */}
         <div className="mb-12">
-          {/* Desktop & Tablet: Two columns */}
+          {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
               href="https://s.shopee.com.br/qaNROYO3R" 
@@ -264,7 +264,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner01.jpg"
+                src="/Small_banner01.jpg"
                 alt="Small banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -276,12 +276,11 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner02.jpg"
+                src="/Small_banner02.jpg"
                 alt="Small banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-          </div>
           </div>
           
           {/* Mobile: Stacked */}
@@ -293,7 +292,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner01.jpg"
+                src="/Small_banner01.jpg"
                 alt="Small banner 01"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -305,12 +304,11 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner02.jpg"
+                src="/Small_banner02.jpg"
                 alt="Small banner 02"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-            {/* trimmed to two banners only */}
           </div>
         </div>
 
@@ -333,7 +331,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner03.jpg"
+                src="/Small_banner03.jpg"
                 alt="Small banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -345,7 +343,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner04.jpg"
+                src="/Small_banner04.jpg"
                 alt="Small banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -361,7 +359,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner03.jpg"
+                src="/Small_banner03.jpg"
                 alt="Small banner 03"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -373,7 +371,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner04.jpg"
+                src="/Small_banner04.jpg"
                 alt="Small banner 04"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -431,7 +429,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner05.jpg"
+                src="/Small_banner05.jpg"
                 alt="Small banner 05"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -443,7 +441,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner06.jpg"
+                src="/Small_banner06.jpg"
                 alt="Small banner 06"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -459,7 +457,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner05.jpg"
+                src="/Small_banner05.jpg"
                 alt="Small banner 05"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -471,7 +469,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner06.jpg"
+                src="/Small_banner06.jpg"
                 alt="Small banner 06"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -501,7 +499,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner07.jpg"
+                src="/Small_banner07.jpg"
                 alt="Small banner 07"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -513,7 +511,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/casa/small_banner08.jpg"
+                src="/Small_banner08.jpg"
                 alt="Small banner 08"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -529,7 +527,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner07.jpg"
+                src="/Small_banner07.jpg"
                 alt="Small banner 07"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -541,7 +539,7 @@ const BrasilCasa = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/casa/small_banner08.jpg"
+                src="/Small_banner08.jpg"
                 alt="Small banner 08"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
