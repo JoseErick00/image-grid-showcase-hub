@@ -501,9 +501,9 @@ const BrasilSaude = () => {
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
 
-        {/* Last items */}
+        {/* Items 19-30 */}
         <CategoryGrid 
-          items={healthProducts.slice(18)}
+          items={healthProducts.slice(18, 30)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f9c90c"
