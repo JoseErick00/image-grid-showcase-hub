@@ -49,6 +49,16 @@ import sau27 from "@/assets/saude/sau_27.jpg";
 import sau28 from "@/assets/saude/sau_28.jpg";
 import sau29 from "@/assets/saude/sau_29.jpg";
 import sau30 from "@/assets/saude/sau_30.jpg";
+import sau31 from "@/assets/saude/sau_31.jpg";
+import sau32 from "@/assets/saude/sau_32.jpg";
+import sau33 from "@/assets/saude/sau_33.jpg";
+import sau34 from "@/assets/saude/sau_34.jpg";
+import sau35 from "@/assets/saude/sau_35.jpg";
+import sau36 from "@/assets/saude/sau_36.jpg";
+import sau37 from "@/assets/saude/sau_37.jpg";
+import sau38 from "@/assets/saude/sau_38.jpg";
+import sau39 from "@/assets/saude/sau_39.jpg";
+import sau40 from "@/assets/saude/sau_40.jpg";
 
 const BrasilSaude = () => {
   const handleShare = async () => {
@@ -111,6 +121,16 @@ const BrasilSaude = () => {
     { id: "health-28", title: "Máscara de terapia de luz vermelha - LED 7 cores.", image: sau28, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601571373779" },
     { id: "health-29", title: "Anaïs Anaïs, Perfume Feminino.", image: sau29, link: "https://amzn.to/4hh9Sl6" },
     { id: "health-30", title: "Morte Súbita Máscara Super Hidratante.", image: sau30, link: "https://amzn.to/4qmT2FB" },
+    { id: "health-31", title: "MLG-Barbeador elétrico portátil lavável.", image: sau31, link: "https://s.click.aliexpress.com/e/_c2zSOYkL" },
+    { id: "health-32", title: "Ultrassônico Difusor de Aroma", image: sau32, link: "https://amzn.to/3L2VW2a" },
+    { id: "health-33", title: "Shiseido Future Solution Lx Legendary.", image: sau33, link: "https://amzn.to/4nVDeYS" },
+    { id: "health-34", title: "Máscara facial LED de terapia anti-envelhecimento", image: sau34, link: "https://s.click.aliexpress.com/e/_c45HIj5Z" },
+    { id: "health-35", title: "Novo massageador elétrico de olhos", image: sau35, link: "https://s.click.aliexpress.com/e/_c4OAF5wT" },
+    { id: "health-36", title: "Lavitan Sono 150 Comprimidos Sabor Morango", image: sau36, link: "https://s.shopee.com.br/9AGCrzop7E" },
+    { id: "health-37", title: "Máscara matizadora tonalizante - Sem amônia.", image: sau37, link: "https://s.shopee.com.br/30fZX3K8Pn" },
+    { id: "health-38", title: "Attracione Men (Perfume masculino com feromônios ativados)", image: sau38, link: "https://s.shopee.com.br/2B6SXycSq5" },
+    { id: "health-39", title: "Vodka Limited Edition – Eau de Toilette", image: sau39, link: "https://amzn.to/47fzn1G" },
+    { id: "health-40", title: "Ferro corporal (Coreano) para impulsionar o colágeno.", image: sau40, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601574001336" },
   ];
 
   return (
@@ -528,6 +548,15 @@ const BrasilSaude = () => {
             </a>
           </div>
         </div>
+
+        {/* Product Grid 31-40 */}
+        <CategoryGrid 
+          items={healthProducts.slice(30)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#f9c90c"
+          labelTextColor="#171717"
+        />
       </div>
 
       {/* Promo Banner 02 */}
