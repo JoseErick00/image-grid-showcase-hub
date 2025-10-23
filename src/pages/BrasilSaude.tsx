@@ -59,6 +59,16 @@ import sau37 from "@/assets/saude/sau_37.jpg";
 import sau38 from "@/assets/saude/sau_38.jpg";
 import sau39 from "@/assets/saude/sau_39.jpg";
 import sau40 from "@/assets/saude/sau_40.jpg";
+import sau41 from "@/assets/saude/sau_41.jpg";
+import sau42 from "@/assets/saude/sau_42.jpg";
+import sau43 from "@/assets/saude/sau_43.jpg";
+import sau44 from "@/assets/saude/sau_44.jpg";
+import sau45 from "@/assets/saude/sau_45.jpg";
+import sau46 from "@/assets/saude/sau_46.jpg";
+import sau47 from "@/assets/saude/sau_47.jpg";
+import sau48 from "@/assets/saude/sau_48.jpg";
+import sau49 from "@/assets/saude/sau_49.jpg";
+import sau50 from "@/assets/saude/sau_50.jpg";
 
 const BrasilSaude = () => {
   const handleShare = async () => {
@@ -131,6 +141,16 @@ const BrasilSaude = () => {
     { id: "health-38", title: "Attracione Men (Perfume masculino com feromônios ativados)", image: sau38, link: "https://s.shopee.com.br/2B6SXycSq5" },
     { id: "health-39", title: "Vodka Limited Edition – Eau de Toilette", image: sau39, link: "https://amzn.to/47fzn1G" },
     { id: "health-40", title: "Ferro corporal (Coreano) para impulsionar o colágeno.", image: sau40, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601574001336" },
+    { id: "health-41", title: "Kit 13 Pçs iincéis de maquiagem contorno Kabuki", image: sau41, link: "https://s.shopee.com.br/8pdO3tZM5P" },
+    { id: "health-42", title: "Escova alisadora de cabelo elétrica - Bivolt", image: sau42, link: "https://s.shopee.com.br/11zY9LGMm" },
+    { id: "health-43", title: "Kit de 4 Perfumes Feminios - Árabes 100ml", image: sau43, link: "https://amzn.to/4h4JVoS" },
+    { id: "health-44", title: "Umidificador de ar ultrassônico com luzes", image: sau44, link: "https://amzn.to/3L4BuxZ" },
+    { id: "health-45", title: "BOSS BOTTLED TRIUMPH ELIXIR perfume intenso.", image: sau45, link: "https://amzn.to/4hpoTl6" },
+    { id: "health-46", title: "LAIKOU- Linha Coreana de Skin Care.", image: sau46, link: "https://s.click.aliexpress.com/e/_c4PSpddv" },
+    { id: "health-47", title: "Kit Centella cuidados faciais (Hidratante,Óleo, Essência, Elixir)", image: sau47, link: "https://s.click.aliexpress.com/e/_c3aul5Bz" },
+    { id: "health-48", title: "Máscara antienvelhecimento. Tratamento de luz", image: sau48, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601397806223" },
+    { id: "health-49", title: "Conjunto de máscara facial de argila, 4 unidades.", image: sau49, link: "https://s.click.aliexpress.com/e/_c3QTeser" },
+    { id: "health-50", title: "Anel aferidor de saúde para homens e mulheres.", image: sau50, link: "https://amzn.to/4769Zg8" },
   ];
 
   return (
@@ -655,6 +675,17 @@ const BrasilSaude = () => {
 
       {/* Final Mailchimp Subscription */}
       <MailchimpSubscription />
+
+      {/* Product Grid 41-50 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <CategoryGrid 
+          items={healthProducts.slice(40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#f9c90c"
+          labelTextColor="#171717"
+        />
+      </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
