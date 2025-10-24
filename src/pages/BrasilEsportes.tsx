@@ -250,62 +250,229 @@ const BrasilEsportes = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Banners */}
-        <div className="mb-8">
-          <a href="https://amzn.to/463xxQZ" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/34ffdd1f-95f0-4fc7-9251-e1a0f6b725a3.png"
-              alt="Banner_BrasilEsportes_01"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Promo Banner 01 */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src="/brasil/esportes/promo_banner.jpg"
+                alt="Esportes promo banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src="/brasil/esportes/promo_banner_tablet.jpg"
+                alt="Esportes promo banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src="/brasil/esportes/promo_banner_mobile.jpg"
+                alt="Esportes promo banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
-        {/* First 9 items */}
+        {/* Small Banner 01 & 02 */}
+        <div className="mb-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/brasil/esportes/small_banner01.jpg"
+                alt="Small banner 01"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/brasil/esportes/small_banner02.jpg"
+                alt="Small banner 02"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/brasil/esportes/small_banner01.jpg"
+                alt="Small banner 01"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/brasil/esportes/small_banner02.jpg"
+                alt="Small banner 02"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Items 1-10 */}
         <CategoryGrid 
-          items={sportsProducts.slice(0, 9)}
+          items={sportsProducts.slice(0, 10)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f06927"
         />
 
-        {/* Banners */}
-        <div className="mb-8">
-          <a href="https://amzn.to/463xxQZ" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/34ffdd1f-95f0-4fc7-9251-e1a0f6b725a3.png"
-              alt="Banner_BrasilEsportes_02"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Small Banner 03 & 04 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/brasil/esportes/small_banner03.jpg"
+                alt="Small banner 03"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/brasil/esportes/small_banner04.jpg"
+                alt="Small banner 04"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/brasil/esportes/small_banner03.jpg"
+                alt="Small banner 03"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/brasil/esportes/small_banner04.jpg"
+                alt="Small banner 04"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
 
-        {/* Second 9 items */}
+        {/* Items 11-21 */}
         <CategoryGrid 
-          items={sportsProducts.slice(9, 18)}
+          items={sportsProducts.slice(10)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f06927"
         />
 
-        {/* Banners */}
-        <div className="mb-8">
-          <a href="https://amzn.to/463xxQZ" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/lovable-uploads/34ffdd1f-95f0-4fc7-9251-e1a0f6b725a3.png"
-              alt="Banner_BrasilEsportes_03"
-              className="w-full rounded-lg"
-            />
-          </a>
+        {/* Small Banner 05 & 06 */}
+        <div className="my-12">
+          {/* Desktop: Two columns */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/brasil/esportes/small_banner05.jpg"
+                alt="Small banner 05"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            >
+              <img 
+                src="/brasil/esportes/small_banner06.jpg"
+                alt="Small banner 06"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          
+          {/* Mobile: Stacked */}
+          <div className="md:hidden space-y-12">
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/brasil/esportes/small_banner05.jpg"
+                alt="Small banner 05"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <a 
+              href="https://amzn.to/463xxQZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              <img 
+                src="/brasil/esportes/small_banner06.jpg"
+                alt="Small banner 06"
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
-
-        {/* Last items */}
-        <CategoryGrid 
-          items={sportsProducts.slice(18)}
-          columns={2}
-          aspectRatio="portrait"
-          buttonColor="#f06927"
-        />
       </div>
 
       {/* Newsletter Section */}
