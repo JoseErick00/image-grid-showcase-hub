@@ -184,10 +184,10 @@ const BrasilIncriveis = () => {
 
       {/* Title and Subtitle */}
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[80%] md:max-w-[70%] mx-auto px-4">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[960px] md:max-w-[840px] mx-auto px-4">
           Totalmente aleatório. Totalmente vale a pena.
         </h1>
-        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[80%] md:max-w-[70%] mx-auto px-4">
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[960px] md:max-w-[840px] mx-auto px-4">
           Estranho, maravilhoso, totalmente desnecessário—mas você vai querer todos. Estes são os que param o scroll do Temu, AliExpress, Amazon e mais.
         </p>
 

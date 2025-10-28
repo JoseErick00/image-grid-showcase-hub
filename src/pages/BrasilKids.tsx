@@ -184,10 +184,10 @@ const BrasilKids = () => {
 
       {/* Title and Subtitle */}
       <div className="text-center py-12">
-        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[80%] md:max-w-[70%] mx-auto px-4">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[960px] md:max-w-[840px] mx-auto px-4">
           Diversão inteligente para seus pequenos humanos
         </h1>
-        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[80%] md:max-w-[70%] mx-auto px-4">
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[960px] md:max-w-[840px] mx-auto px-4">
           De brinquedos inteligentes a truques e gadgets divertidos e didáticos, selecionamos os produtos mais fofos e interessantes que irão ajudar na evolução de seus humaninhos.
         </p>
 
