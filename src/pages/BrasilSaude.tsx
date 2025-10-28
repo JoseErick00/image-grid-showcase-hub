@@ -245,7 +245,7 @@ const BrasilSaude = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/4oijqP1" 
+              href="https://s.shopee.com.br/30fWEgYwuy" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -277,7 +277,7 @@ const BrasilSaude = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://s.shopee.com.br/9Usq4oWcNx" 
+              href="https://amzn.to/4ncCP2U" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -289,7 +289,7 @@ const BrasilSaude = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/4ncCP2U" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -305,7 +305,7 @@ const BrasilSaude = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://s.shopee.com.br/9Usq4oWcNx" 
+              href="https://amzn.to/4ncCP2U" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -317,7 +317,7 @@ const BrasilSaude = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/4ncCP2U" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
