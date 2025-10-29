@@ -9,16 +9,16 @@ import middleBannerTablet from "@/assets/brasil-esportes/middle_banner_tablet.jp
 import promoBanner02 from "@/assets/brasil-esportes/Promo_banner02.jpg";
 import promoBanner02Mobile from "@/assets/brasil-esportes/Promo_banner02_mobile.jpg";
 import promoBanner02Tablet from "@/assets/brasil-esportes/Promo_banner02_tablet.jpg";
-import smallBanner01 from "@/assets/esportes/Small_banner01.jpg";
-import smallBanner02 from "@/assets/esportes/Small_banner02.jpg";
-import smallBanner03 from "@/assets/esportes/Small_banner03.jpg";
-import smallBanner04 from "@/assets/esportes/Small_banner04.jpg";
-import smallBanner05 from "@/assets/esportes/Small_banner05.jpg";
-import smallBanner06 from "@/assets/esportes/Small_banner06.jpg";
-import smallBanner07 from "@/assets/esportes/Small_banner07.jpg";
-import smallBanner08 from "@/assets/esportes/Small_banner08.jpg";
-import smallBanner09 from "@/assets/esportes/Small_banner09.jpg";
-import smallBanner10 from "@/assets/esportes/Small_banner10.jpg";
+import smallBanner01 from "@/assets/brasil-esportes/Small_banner01.jpg";
+import smallBanner02 from "@/assets/brasil-esportes/Small_banner02.jpg";
+import smallBanner03 from "@/assets/brasil-esportes/Small_banner03.jpg";
+import smallBanner04 from "@/assets/brasil-esportes/Small_banner04.jpg";
+import smallBanner05 from "@/assets/brasil-esportes/Small_banner05.jpg";
+import smallBanner06 from "@/assets/brasil-esportes/Small_banner06.jpg";
+import smallBanner07 from "@/assets/brasil-esportes/Small_banner07.jpg";
+import smallBanner08 from "@/assets/brasil-esportes/Small_banner08.jpg";
+import smallBanner09 from "@/assets/brasil-esportes/Small_banner09.jpg";
+import smallBanner10 from "@/assets/brasil-esportes/Small_banner10.jpg";
 
 const BrasilEsportes = () => {
   const handleShare = async () => {
@@ -305,25 +305,25 @@ const BrasilEsportes = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.click.aliexpress.com/e/_c3nLhzfZ" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/esportes/small_banner01.jpg"
+                src={smallBanner01}
                 alt="Small banner 01"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/esportes/small_banner02.jpg"
+                src={smallBanner02}
                 alt="Small banner 02"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -333,25 +333,25 @@ const BrasilEsportes = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.click.aliexpress.com/e/_c3nLhzfZ" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/esportes/small_banner01.jpg"
+                src={smallBanner01}
                 alt="Small banner 01"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/esportes/small_banner02.jpg"
+                src={smallBanner02}
                 alt="Small banner 02"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -372,25 +372,25 @@ const BrasilEsportes = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.shopee.com.br/2g2lxBa1XI" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/esportes/small_banner03.jpg"
+                src={smallBanner03}
                 alt="Small banner 03"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/48EVTDE"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
             >
               <img 
-                src="/brasil/esportes/small_banner04.jpg"
+                src={smallBanner04}
                 alt="Small banner 04"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -400,25 +400,25 @@ const BrasilEsportes = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.shopee.com.br/2g2lxBa1XI" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/esportes/small_banner03.jpg"
+                src={smallBanner03}
                 alt="Small banner 03"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/48EVTDE"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               <img 
-                src="/brasil/esportes/small_banner04.jpg"
+                src={smallBanner04}
                 alt="Small banner 04"
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -470,7 +470,7 @@ const BrasilEsportes = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/4hgzFdg" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -482,7 +482,7 @@ const BrasilEsportes = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -498,7 +498,7 @@ const BrasilEsportes = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/4hgzFdg" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -510,7 +510,7 @@ const BrasilEsportes = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -540,7 +540,7 @@ const BrasilEsportes = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/47M9LuL" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -552,7 +552,7 @@ const BrasilEsportes = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.shopee.com.br/qbESdxD7m"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -568,7 +568,7 @@ const BrasilEsportes = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/47M9LuL" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -580,7 +580,7 @@ const BrasilEsportes = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.shopee.com.br/qbESdxD7m"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -634,7 +634,7 @@ const BrasilEsportes = () => {
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/3JmeXvY" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -646,7 +646,7 @@ const BrasilEsportes = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.click.aliexpress.com/e/_c2wZo71N"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -662,7 +662,7 @@ const BrasilEsportes = () => {
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://amzn.to/3JmeXvY" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
@@ -674,7 +674,7 @@ const BrasilEsportes = () => {
               />
             </a>
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.click.aliexpress.com/e/_c2wZo71N"
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
