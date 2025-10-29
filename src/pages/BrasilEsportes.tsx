@@ -1,14 +1,14 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
-import promoBanner from "@/assets/esportes/Promo_banner.jpg";
-import promoBannerMobile from "@/assets/esportes/Promo_banner_mobile.jpg";
-import promoBannerTablet from "@/assets/esportes/Promo_banner_tablet.jpg";
-import middleBanner from "@/assets/esportes/middle_banner.jpg";
-import middleBannerMobile from "@/assets/esportes/middle_banner_mobile.jpg";
-import middleBannerTablet from "@/assets/esportes/middle_banner_tablet.jpg";
-import promoBanner02 from "@/assets/esportes/Promo_banner02.jpg";
-import promoBanner02Mobile from "@/assets/esportes/Promo_banner02_mobile.jpg";
-import promoBanner02Tablet from "@/assets/esportes/Promo_banner02_tablet.jpg";
+import promoBanner from "@/assets/brasil-esportes/Promo_banner.jpg";
+import promoBannerMobile from "@/assets/brasil-esportes/Promo_banner_mobile.jpg";
+import promoBannerTablet from "@/assets/brasil-esportes/Promo_banner_tablet.jpg";
+import middleBanner from "@/assets/brasil-esportes/middle_banner.jpg";
+import middleBannerMobile from "@/assets/brasil-esportes/middle_banner_mobile.jpg";
+import middleBannerTablet from "@/assets/brasil-esportes/middle_banner_tablet.jpg";
+import promoBanner02 from "@/assets/brasil-esportes/Promo_banner02.jpg";
+import promoBanner02Mobile from "@/assets/brasil-esportes/Promo_banner02_mobile.jpg";
+import promoBanner02Tablet from "@/assets/brasil-esportes/Promo_banner02_tablet.jpg";
 import smallBanner01 from "@/assets/esportes/Small_banner01.jpg";
 import smallBanner02 from "@/assets/esportes/Small_banner02.jpg";
 import smallBanner03 from "@/assets/esportes/Small_banner03.jpg";
@@ -273,26 +273,26 @@ const BrasilEsportes = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://s.click.aliexpress.com/e/_c4cwqPUj" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
             >
               {/* Desktop banner */}
               <img 
-                src="/brasil/esportes/promo_banner.jpg"
+                src={promoBanner}
                 alt="Esportes promo banner - desktop"
                 className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Tablet banner */}
               <img 
-                src="/brasil/esportes/promo_banner_tablet.jpg"
+                src={promoBannerTablet}
                 alt="Esportes promo banner - tablet"
                 className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Mobile banner */}
               <img 
-                src="/brasil/esportes/promo_banner_mobile.jpg"
+                src={promoBannerMobile}
                 alt="Esportes promo banner - mobile"
                 className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -434,6 +434,37 @@ const BrasilEsportes = () => {
           buttonColor="#f06927"
         />
 
+        {/* Middle Banner */}
+        <div className="my-12 flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <a 
+              href="https://s.shopee.com.br/6psKueTPOu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative group cursor-pointer overflow-hidden rounded-lg block"
+            >
+              {/* Desktop banner */}
+              <img 
+                src={middleBanner}
+                alt="Esportes middle banner - desktop"
+                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Tablet banner */}
+              <img 
+                src={middleBannerTablet}
+                alt="Esportes middle banner - tablet"
+                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Mobile banner */}
+              <img 
+                src={middleBannerMobile}
+                alt="Esportes middle banner - mobile"
+                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+        </div>
+
         {/* Small Banner 05 & 06 */}
         <div className="my-12">
           {/* Desktop: Two columns */}
@@ -569,7 +600,7 @@ const BrasilEsportes = () => {
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
-              href="https://amzn.to/463xxQZ" 
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600217877049" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative group cursor-pointer overflow-hidden rounded-lg block"
