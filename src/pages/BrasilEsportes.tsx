@@ -19,6 +19,16 @@ import smallBanner07 from "@/assets/brasil-esportes/Small_banner07.jpg";
 import smallBanner08 from "@/assets/brasil-esportes/Small_banner08.jpg";
 import smallBanner09 from "@/assets/brasil-esportes/Small_banner09.jpg";
 import smallBanner10 from "@/assets/brasil-esportes/Small_banner10.jpg";
+import esp01 from "@/assets/brasil-esportes/esp_01.jpg";
+import esp02 from "@/assets/brasil-esportes/esp_02.jpg";
+import esp03 from "@/assets/brasil-esportes/esp_03.jpg";
+import esp04 from "@/assets/brasil-esportes/esp_04.jpg";
+import esp05 from "@/assets/brasil-esportes/esp_05.jpg";
+import esp06 from "@/assets/brasil-esportes/esp_06.jpg";
+import esp07 from "@/assets/brasil-esportes/esp_07.jpg";
+import esp08 from "@/assets/brasil-esportes/esp_08.jpg";
+import esp09 from "@/assets/brasil-esportes/esp_09.jpg";
+import esp10 from "@/assets/brasil-esportes/esp_10.jpg";
 
 const BrasilEsportes = () => {
   const handleShare = async () => {
@@ -53,63 +63,63 @@ const BrasilEsportes = () => {
   const sportsProducts = [
     {
       id: "sports-1",
-      title: "FBSPORT 11' Premium Stand Up Paddle Board",
-      image: "/lovable-uploads/25f48c27-317a-4c8a-8b3c-aab9f7eae328.png",
-      link: "https://amzn.to/47shej4",
+      title: "SJCAM SJ4000 Câmera de Ação, 4K- 30FPS, Ultra HD",
+      image: esp01,
+      link: "https://amzn.to/3LfokOL",
     },
     {
       id: "sports-2",
-      title: "Foldable & Compact Boot Dryer & Boot Warmer with Timer",
-      image: "/lovable-uploads/34ffdd1f-95f0-4fc7-9251-e1a0f6b725a3.png",
-      link: "https://amzn.to/463xxQZ",
+      title: "Rede de badmínton profissional, esportes indoor e outdoor.",
+      image: esp02,
+      link: "https://s.click.aliexpress.com/e/_c4KxfWCX",
     },
     {
       id: "sports-3",
-      title: "Rymora Calf Compression Sleeves for Men & Women",
-      image: "/lovable-uploads/263559e2-0b27-4aa6-b916-be8f94c81c95.png",
-      link: "https://amzn.to/47rSeZe",
+      title: "Tênis de corrida de maratona com placa de carbono, respirável.",
+      image: esp03,
+      link: "https://s.click.aliexpress.com/e/_c3xuFLy7",
     },
     {
       id: "sports-4",
-      title: "Science In Sport GO Isotonic Energy Gels",
-      image: "/lovable-uploads/3bfce5f0-2cf4-4582-ba0f-628a00b48397.png",
-      link: "https://amzn.to/4ggdljC",
+      title: "Óculos de visão noturna digital monocular - Infravermelho - Zoom 8X",
+      image: esp04,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601577399804",
     },
     {
       id: "sports-5",
-      title: "Adjustable Weight-bearing Wristbands",
-      image: "/lovable-uploads/3ea5f6ea-cbf3-4ca0-b8df-dc4c488daf26.png",
-      link: "https://amzn.to/4n6Rf5g",
+      title: "Botas de Rebound para Adultos.",
+      image: esp05,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600076876373",
     },
     {
       id: "sports-6",
-      title: "Enlee Bicycle Saddle Bag Reflective Design",
-      image: "/lovable-uploads/5d2be1ae-a4fc-4933-b313-f81d51ab3234.png",
-      link: "https://amzn.to/429h9gx",
+      title: "Kit 2 Shorts Masculino de Compressão Kong",
+      image: esp06,
+      link: "https://s.shopee.com.br/9KZmZwHKgU",
     },
     {
       id: "sports-7",
-      title: "Adjustable Dumbbell",
-      image: "/lovable-uploads/f70909c5-577a-4422-8f36-963272c33fbe.png",
-      link: "https://amzn.to/4ncBcCR",
+      title: "Selim largo e super confortável com sinalizador adesivo refletivo",
+      image: esp07,
+      link: "https://s.shopee.com.br/6KwAzfcwG9",
     },
     {
       id: "sports-8",
-      title: "Uboway Adjustable Dumbbell Set (2.5-12.5 lbs) – Pair of Free Weights",
-      image: "/lovable-uploads/7051d118-fd50-49fe-84f1-e3d98e673a52.png",
-      link: "https://amzn.to/46mw7lK",
+      title: "Bola de vôlei original fundidas (5 bolas) - Tamanho padrão.",
+      image: esp08,
+      link: "https://s.click.aliexpress.com/e/_c45RYfhl",
     },
     {
       id: "sports-9",
-      title: "Wahoo TICKR FIT Heart Rate Armband",
-      image: "/lovable-uploads/8487e0e5-f737-47da-a013-56a082e8e176.png",
-      link: "https://amzn.to/41CiRXB",
+      title: "Kit Com Parafina + Raspador + Chavinha de Quilha + Chaveiro + Estojo – Wax.",
+      image: esp09,
+      link: "https://amzn.to/47gL4GP",
     },
     {
       id: "sports-10",
-      title: "HOKA Men's Running Shoes, 11.5 US",
-      image: "/lovable-uploads/3dfa2362-2d39-4475-a8a2-6137cc891d87.png",
-      link: "https://amzn.to/4g7JnxT",
+      title: "Capacete de moto, Mormaii M1 - Titanium",
+      image: esp10,
+      link: "https://amzn.to/48TVXzu",
     },
     {
       id: "sports-11",
