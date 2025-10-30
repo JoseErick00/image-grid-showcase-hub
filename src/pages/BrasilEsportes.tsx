@@ -29,6 +29,16 @@ import esp07 from "@/assets/brasil-esportes/esp_07.jpg";
 import esp08 from "@/assets/brasil-esportes/esp_08.jpg";
 import esp09 from "@/assets/brasil-esportes/esp_09.jpg";
 import esp10 from "@/assets/brasil-esportes/esp_10.jpg";
+import esp11 from "@/assets/brasil-esportes/esp_11.jpg";
+import esp12 from "@/assets/brasil-esportes/esp_12.jpg";
+import esp13 from "@/assets/brasil-esportes/esp_13.jpg";
+import esp14 from "@/assets/brasil-esportes/esp_14.jpg";
+import esp15 from "@/assets/brasil-esportes/esp_15.jpg";
+import esp16 from "@/assets/brasil-esportes/esp_16.jpg";
+import esp17 from "@/assets/brasil-esportes/esp_17.jpg";
+import esp18 from "@/assets/brasil-esportes/esp_18.jpg";
+import esp19 from "@/assets/brasil-esportes/esp_19.jpg";
+import esp20 from "@/assets/brasil-esportes/esp_20.jpg";
 
 const BrasilEsportes = () => {
   const handleShare = async () => {
@@ -123,63 +133,63 @@ const BrasilEsportes = () => {
     },
     {
       id: "sports-11",
-      title: "adidas Men's Duramo SL 2 Running Sneaker",
-      image: "/lovable-uploads/f831fb62-2a6a-4c87-b531-78e5273089a0.png",
-      link: "https://amzn.to/45XVB9f",
+      title: "Raquete de tênis de praia GAIVOTA 12K",
+      image: esp11,
+      link: "https://s.click.aliexpress.com/e/_c3MGDnER",
     },
     {
       id: "sports-12",
-      title: "Nike Women's Free Metcon 6 Workout Shoe",
-      image: "/lovable-uploads/e33cc5a2-6e07-4773-af7d-00463ef4d7d5.png",
-      link: "https://amzn.to/3K2JoXY",
+      title: "Bola de futebol resistente ao desgaste - Kelme.",
+      image: esp12,
+      link: "https://s.click.aliexpress.com/e/_c3ggv70L",
     },
     {
       id: "sports-13",
-      title: "TORRAS 2025 Top Al Neck Air Conditioner Coolify Cyber",
-      image: "/lovable-uploads/2dda708c-c787-4c19-accf-118577fe900f.png",
-      link: "https://amzn.to/47nY5yJ",
+      title: "Tênis ONEMIX Ultra-Light Rebound, Placa de Carbono.",
+      image: esp13,
+      link: "https://s.click.aliexpress.com/e/_c34P1Ler",
     },
     {
       id: "sports-14",
-      title: "Souke Sports Bike Seat Cover",
-      image: "/lovable-uploads/f8641fab-8354-4789-a47d-4644efda5ef2.png",
-      link: "https://amzn.to/4g3L0N4",
+      title: "Roda para Yoga de alta qualidade EVA e PC.",
+      image: esp14,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600579246563",
     },
     {
       id: "sports-15",
-      title: "TKK Leakproof Sports Water Bottle",
-      image: "/lovable-uploads/1354eb9c-6c28-49d3-8140-d08610deed5f.png",
-      link: "https://amzn.to/46lOUh5",
+      title: "Tênis de malha respirável - Sola acolchoada para maratonas.",
+      image: esp15,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601515679185",
     },
     {
       id: "sports-16",
-      title: "Ruomeng Home Gym Mirrors 12 Inch x 12Pcs",
-      image: "/lovable-uploads/6c807309-d6d9-4c43-a2cc-93a942f7b103.png",
-      link: "https://amzn.to/4plv0KS",
+      title: "SELVAGEM HOMEM E4 Impermeável.",
+      image: esp16,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517279220",
     },
     {
       id: "sports-17",
-      title: "Champion Sports RPX10 Rhino Promax Slam Ball",
-      image: "/lovable-uploads/035eee62-5694-4143-aef9-b23c4f788b12.png",
-      link: "https://amzn.to/465IHoe",
+      title: "SKYBOARD Esteira Bluetooth 2.0, Dobrável.",
+      image: esp17,
+      link: "https://s.shopee.com.br/7pkyme5VPY",
     },
     {
       id: "sports-18",
-      title: "UpCircleSeven Back Roller & Yoga Wheel",
-      image: "/lovable-uploads/bde983c9-352b-48cc-b4da-3b37b37bc800.png",
-      link: "https://amzn.to/3I5Gr8t",
+      title: "Bola Futebol Campo/Society/Futsal Oficial Topper",
+      image: esp18,
+      link: "https://s.shopee.com.br/40YGDhvLFB",
     },
     {
       id: "sports-19",
-      title: "PowerBlock Elite EXP Adjustable Dumbbells",
-      image: "/lovable-uploads/433cd77b-a0e2-44a9-aea8-4e722354be73.png",
-      link: "https://amzn.to/4639Qbz",
+      title: "Tênis Feminino Esportivo - Raibull",
+      image: esp19,
+      link: "https://s.shopee.com.br/4fnqN6l3Yn",
     },
     {
       id: "sports-20",
-      title: "Hoka Men's Clifton 9 Sneaker",
-      image: "/lovable-uploads/abe94cae-f878-40bf-bf24-904bab355cf6.png",
-      link: "https://amzn.to/41EJ4op",
+      title: "SHINECON - Óculos de sol de tradução AI.",
+      image: esp20,
+      link: "https://amzn.to/3LfFWdg",
     },
     {
       id: "sports-21",
