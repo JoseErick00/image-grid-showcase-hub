@@ -232,7 +232,7 @@ const BrasilEsportes = () => {
       {/* Title and Subtitle */}
       <div className="text-center py-12">
         <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[960px] md:max-w-[840px] mx-auto px-4">
-          Turbine seu treino sem suposições.
+          Turbine seu treino com os achados mais legais da internet.
         </h1>
         <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[960px] md:max-w-[840px] mx-auto px-4">
           Ferramentas inovadoras e acessórios fitness inteligentes: encontramos os melhores produtos escondidos nos aplicativos online. Cresça, fique saudável, turbine seus movimentos!
