@@ -49,6 +49,16 @@ import esp27 from "@/assets/brasil-esportes/esp_27.jpg";
 import esp28 from "@/assets/brasil-esportes/esp_28.jpg";
 import esp29 from "@/assets/brasil-esportes/esp_29.jpg";
 import esp30 from "@/assets/brasil-esportes/esp_30.jpg";
+import esp31 from "@/assets/brasil-esportes/esp_31.jpg";
+import esp32 from "@/assets/brasil-esportes/esp_32.jpg";
+import esp33 from "@/assets/brasil-esportes/esp_33.jpg";
+import esp34 from "@/assets/brasil-esportes/esp_34.jpg";
+import esp35 from "@/assets/brasil-esportes/esp_35.jpg";
+import esp36 from "@/assets/brasil-esportes/esp_36.jpg";
+import esp37 from "@/assets/brasil-esportes/esp_37.jpg";
+import esp38 from "@/assets/brasil-esportes/esp_38.jpg";
+import esp39 from "@/assets/brasil-esportes/esp_39.jpg";
+import esp40 from "@/assets/brasil-esportes/esp_40.jpg";
 
 const BrasilEsportes = () => {
   const handleShare = async () => {
@@ -260,6 +270,66 @@ const BrasilEsportes = () => {
       title: "Kit 5 Mini Bands Elástico - Treino em casa, 5 Níveis",
       image: esp30,
       link: "https://s.shopee.com.br/1VqoYSbL7Z",
+    },
+    {
+      id: "sports-31",
+      title: "Tênis Calce Fácil - Academia, corrida, caminhada",
+      image: esp31,
+      link: "https://s.shopee.com.br/1gAEkaS1Bo",
+    },
+    {
+      id: "sports-32",
+      title: "Bicicleta ergometrica fitness profissional 120kg",
+      image: esp32,
+      link: "https://s.shopee.com.br/6psKueTPOu",
+    },
+    {
+      id: "sports-33",
+      title: "Relógio Digital  Masculino",
+      image: esp33,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600512489593",
+    },
+    {
+      id: "sports-34",
+      title: "Relógio Esportivo de Luxo BOBO",
+      image: esp34,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600283354630",
+    },
+    {
+      id: "sports-35",
+      title: "Lentes para Celular DSDZ-18XWYJ com Zoom Óptico Universal",
+      image: esp35,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600201202643",
+    },
+    {
+      id: "sports-36",
+      title: "Anel Inteligente Monitor de Sono e Fitness",
+      image: esp36,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601407549582",
+    },
+    {
+      id: "sports-37",
+      title: "Tênis de basquete . Amortecedor, respirável, antiderrapante.",
+      image: esp37,
+      link: "https://s.click.aliexpress.com/e/_c44hBJEX",
+    },
+    {
+      id: "sports-38",
+      title: "Joelheira com suporte de mola antiderrapante.",
+      image: esp38,
+      link: "https://s.click.aliexpress.com/e/_c4eDs9DH",
+    },
+    {
+      id: "sports-39",
+      title: "Garrafa Fitness 2,4 litros - Portátil de grande capacidade .",
+      image: esp39,
+      link: "https://s.click.aliexpress.com/e/_c4CKalJh",
+    },
+    {
+      id: "sports-40",
+      title: "Afrosurf - A história do surf na Africa",
+      image: esp40,
+      link: "https://amzn.to/4ny0zyT",
     },
   ];
 
@@ -677,6 +747,14 @@ const BrasilEsportes = () => {
             </a>
           </div>
         </div>
+
+        {/* Items 31-40 */}
+        <CategoryGrid 
+          items={sportsProducts.slice(30, 40)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#f06927"
+        />
       </div>
 
       {/* Promo Banner 02 */}
