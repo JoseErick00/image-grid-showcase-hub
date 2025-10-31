@@ -39,6 +39,16 @@ import esp17 from "@/assets/brasil-esportes/esp_17.jpg";
 import esp18 from "@/assets/brasil-esportes/esp_18.jpg";
 import esp19 from "@/assets/brasil-esportes/esp_19.jpg";
 import esp20 from "@/assets/brasil-esportes/esp_20.jpg";
+import esp21 from "@/assets/brasil-esportes/esp_21.jpg";
+import esp22 from "@/assets/brasil-esportes/esp_22.jpg";
+import esp23 from "@/assets/brasil-esportes/esp_23.jpg";
+import esp24 from "@/assets/brasil-esportes/esp_24.jpg";
+import esp25 from "@/assets/brasil-esportes/esp_25.jpg";
+import esp26 from "@/assets/brasil-esportes/esp_26.jpg";
+import esp27 from "@/assets/brasil-esportes/esp_27.jpg";
+import esp28 from "@/assets/brasil-esportes/esp_28.jpg";
+import esp29 from "@/assets/brasil-esportes/esp_29.jpg";
+import esp30 from "@/assets/brasil-esportes/esp_30.jpg";
 
 const BrasilEsportes = () => {
   const handleShare = async () => {
@@ -193,9 +203,63 @@ const BrasilEsportes = () => {
     },
     {
       id: "sports-21",
-      title: "Topo Athletic Men's Phantom 3",
-      image: "/lovable-uploads/71c83d48-c989-4110-895b-4f721a100834.png",
-      link: "https://amzn.to/3Vue7zM",
+      title: "intercomunicador EJEAS V6 Pro com Bluetooth.",
+      image: esp21,
+      link: "https://amzn.to/4qBXYXo",
+    },
+    {
+      id: "sports-22",
+      title: "JBL, Óculos de Sol com Som, Soundgear - Onyx",
+      image: esp22,
+      link: "https://amzn.to/3Li8dzW",
+    },
+    {
+      id: "sports-23",
+      title: "Capacete Mormaii M1 Original",
+      image: esp23,
+      link: "https://amzn.to/4nutdAI",
+    },
+    {
+      id: "sports-24",
+      title: "Bell - Capacete Bullitt",
+      image: esp24,
+      link: "https://amzn.to/4oJMG1o",
+    },
+    {
+      id: "sports-25",
+      title: "Sapatilha náutica - Tênis híbrido",
+      image: esp25,
+      link: "https://s.shopee.com.br/1VqoZDioyZ",
+    },
+    {
+      id: "sports-26",
+      title: "Bola de equilíbrio suíço anti-explosão com bomba rápida.",
+      image: esp26,
+      link: "https://s.click.aliexpress.com/e/_c4EfLO3l",
+    },
+    {
+      id: "sports-27",
+      title: "Mikasa - Bola de futebol ft 5, profissional.",
+      image: esp27,
+      link: "https://s.click.aliexpress.com/e/_c3w1px59",
+    },
+    {
+      id: "sports-28",
+      title: "FitVille Tênis de basquete masculino de cano alto.",
+      image: esp28,
+      link: "https://s.click.aliexpress.com/e/_c3XbxStD",
+    },
+    {
+      id: "sports-29",
+      title: "Eva - yoga esteiras antiderrapante - 4mm de espessura.",
+      image: esp29,
+      link: "https://s.click.aliexpress.com/e/_c2QrV1VH",
+    },
+    {
+      id: "sports-30",
+      title: "Kit 5 Mini Bands Elástico - Treino em casa, 5 Níveis",
+      image: esp30,
+      link: "https://s.shopee.com.br/1VqoYSbL7Z",
     },
   ];
 
@@ -544,16 +608,16 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
-        {/* Mailchimp Subscription */}
-        <MailchimpSubscription />
-
-        {/* Items 18-21 (remaining items) */}
+        {/* Items 21-30 */}
         <CategoryGrid 
-          items={sportsProducts.slice(18)}
+          items={sportsProducts.slice(20, 30)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f06927"
         />
+
+        {/* Mailchimp Subscription */}
+        <MailchimpSubscription />
 
         {/* Small Banner 07 & 08 */}
         <div className="my-12">
