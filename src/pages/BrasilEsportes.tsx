@@ -510,9 +510,9 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
-        {/* Items 11-21 */}
+        {/* Items 11-20 */}
         <CategoryGrid 
-          items={sportsProducts.slice(10)}
+          items={sportsProducts.slice(10, 20)}
           columns={2}
           aspectRatio="portrait"
           buttonColor="#f06927"
