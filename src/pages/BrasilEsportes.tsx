@@ -59,6 +59,16 @@ import esp37 from "@/assets/brasil-esportes/esp_37.jpg";
 import esp38 from "@/assets/brasil-esportes/esp_38.jpg";
 import esp39 from "@/assets/brasil-esportes/esp_39.jpg";
 import esp40 from "@/assets/brasil-esportes/esp_40.jpg";
+import esp41 from "@/assets/brasil-esportes/esp_41.jpg";
+import esp42 from "@/assets/brasil-esportes/esp_42.jpg";
+import esp43 from "@/assets/brasil-esportes/esp_43.jpg";
+import esp44 from "@/assets/brasil-esportes/esp_44.jpg";
+import esp45 from "@/assets/brasil-esportes/esp_45.jpg";
+import esp46 from "@/assets/brasil-esportes/esp_46.jpg";
+import esp47 from "@/assets/brasil-esportes/esp_47.jpg";
+import esp48 from "@/assets/brasil-esportes/esp_48.jpg";
+import esp49 from "@/assets/brasil-esportes/esp_49.jpg";
+import esp50 from "@/assets/brasil-esportes/esp_50.jpg";
 
 const BrasilEsportes = () => {
   const handleShare = async () => {
@@ -330,6 +340,66 @@ const BrasilEsportes = () => {
       title: "Afrosurf - A história do surf na Africa",
       image: esp40,
       link: "https://amzn.to/4ny0zyT",
+    },
+    {
+      id: "sports-41",
+      title: "Playshion Longboard Skateboard Cruiser",
+      image: esp41,
+      link: "https://amzn.to/47wk44J",
+    },
+    {
+      id: "sports-42",
+      title: "GLOBE Skate Longboard.",
+      image: esp42,
+      link: "https://amzn.to/3JFmeHr",
+    },
+    {
+      id: "sports-43",
+      title: "Five Ten Adidas Crawe Climbing.",
+      image: esp43,
+      link: "https://amzn.to/47LJgpj",
+    },
+    {
+      id: "sports-44",
+      title: "Massageador de cintura inteligente.",
+      image: esp44,
+      link: "https://s.click.aliexpress.com/e/_c3PRPMcJ",
+    },
+    {
+      id: "sports-45",
+      title: "Bola de Basquete de treinamento 3lbs/2.2lbs.",
+      image: esp45,
+      link: "https://s.click.aliexpress.com/e/_c4cOG8QT",
+    },
+    {
+      id: "sports-46",
+      title: "E88 Pro Drone HD Câmera Dupla",
+      image: esp46,
+      link: "https://s.shopee.com.br/1qTq6HtSVg",
+    },
+    {
+      id: "sports-47",
+      title: "Tripé Universal com nível câmeras, 1,02m",
+      image: esp47,
+      link: "https://s.shopee.com.br/3LIdtCS6sM",
+    },
+    {
+      id: "sports-48",
+      title: "Ventosas abdominais com  3 Ajustes.",
+      image: esp48,
+      link: "https://s.shopee.com.br/7V8CrC8AGP",
+    },
+    {
+      id: "sports-49",
+      title: "Prancha Inflável de Stand-Up Paddle.",
+      image: esp49,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601020067731",
+    },
+    {
+      id: "sports-50",
+      title: "Mochila de Corrida Impermeável.",
+      image: esp50,
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601310479243",
     },
   ];
 
@@ -853,6 +923,16 @@ const BrasilEsportes = () => {
 
       {/* Final Mailchimp Subscription */}
       <MailchimpSubscription />
+
+      {/* Items 41-50 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <CategoryGrid 
+          items={sportsProducts.slice(40, 50)}
+          columns={2}
+          aspectRatio="portrait"
+          buttonColor="#f06927"
+        />
+      </div>
 
       {/* Bottom Social Section */}
       <div className="text-center py-12 bg-muted/30">
