@@ -218,13 +218,6 @@ const BrasilCasa = () => {
           </div>
         </div>
 
-        {/* Browse Message */}
-        <div className="text-center mt-8">
-          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
-          </p>
-        </div>
-
         {/* Register Section */}
         <div className="mt-16 mb-8">
           <h2 className="font-omne-medium text-xl md:text-2xl text-foreground text-center mb-8 px-4">
@@ -300,6 +293,13 @@ const BrasilCasa = () => {
               </p>
             </a>
           </div>
+        </div>
+
+        {/* Browse Message */}
+        <div className="text-center mt-8">
+          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
+            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
+          </p>
         </div>
       </div>
 
