@@ -484,10 +484,88 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
+
+        {/* Register Section */}
+        <div className="mt-16 mb-8">
+          <h2 className="font-omne-medium text-xl md:text-2xl text-foreground text-center mb-8 px-4">
+            Ainda não tem cadastro nos aplicativos? Use um dos nossos links e aproveite nossas dicas:
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
+            {/* Shopee */}
+            <a
+              href="https://s.shopee.com.br/30fFqSTEDW"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/lovable-uploads/a65fd96b-0ccb-4ade-88f9-e69b4e2c1c2f.png"
+                alt="Shopee"
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              />
+              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
+                Shopee
+              </p>
+            </a>
+
+            {/* Amazon */}
+            <a
+              href="https://amzn.to/4mYJvuz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/lovable-uploads/4e76a4e2-cfdc-4789-8464-0e6b0eaf67bb.png"
+                alt="Amazon"
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              />
+              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
+                Amazon
+              </p>
+            </a>
+
+            {/* AliExpress */}
+            <a
+              href="https://s.click.aliexpress.com/e/_c3Y7xtbz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/lovable-uploads/b72f3cb3-79ee-4a8a-adc3-01ad14a2eabf.png"
+                alt="AliExpress"
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              />
+              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
+                AliExpress
+              </p>
+            </a>
+
+            {/* Alibaba */}
+            <a
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601431050123"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/lovable-uploads/df1be29a-0a8e-4652-a880-ca7e72ef9aa3.png"
+                alt="Alibaba"
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              />
+              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
+                Alibaba
+              </p>
+            </a>
+          </div>
+        </div>
+
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
+            Aproveite nosso ACHADOS (e perdidos!)
           </p>
         </div>
       </div>
