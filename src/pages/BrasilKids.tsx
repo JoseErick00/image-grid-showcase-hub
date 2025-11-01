@@ -69,6 +69,10 @@ import promoBanner02Mobile from "@/assets/Promo_banner02_mobile.jpg";
 import promoBanner02Tablet from "@/assets/Promo_banner02_tablet.jpg";
 import smallBanner09 from "@/assets/Small_banner09.jpg";
 import smallBanner10 from "@/assets/Small_banner10.jpg";
+import logoShopee from "@/assets/platform-logos/logo_shopee.png";
+import logoAmazon from "@/assets/platform-logos/logo_amazon.png";
+import logoAliexpress from "@/assets/platform-logos/logo_aliexpress.png";
+import logoAlibaba from "@/assets/platform-logos/logo_alibaba.png";
 
 const BrasilKids = () => {
   const handleShare = async () => {
@@ -246,66 +250,66 @@ const BrasilKids = () => {
               href="https://s.shopee.com.br/30fFqSTEDW"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
-              <img
-                src="/lovable-uploads/a65fd96b-0ccb-4ade-88f9-e69b4e2c1c2f.png"
-                alt="Shopee"
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              <img 
+                src={logoShopee} 
+                alt="Shopee" 
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
               />
-              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
-                Shopee
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
+                Todo mundo tem Shopee instalado.
               </p>
             </a>
 
             {/* Amazon */}
             <a
-              href="https://amzn.to/4mYJvuz"
+              href="https://amzn.to/3KOv1Hs"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
-              <img
-                src="/lovable-uploads/4e76a4e2-cfdc-4789-8464-0e6b0eaf67bb.png"
-                alt="Amazon"
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              <img 
+                src={logoAmazon} 
+                alt="Amazon" 
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
               />
-              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
-                Amazon
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
+                Tem coisas que você só encontra na Amazon.
               </p>
             </a>
 
             {/* AliExpress */}
             <a
-              href="https://s.click.aliexpress.com/e/_c3Y7xtbz"
+              href="https://s.click.aliexpress.com/e/_c2u6wfU3"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
-              <img
-                src="/lovable-uploads/b72f3cb3-79ee-4a8a-adc3-01ad14a2eabf.png"
-                alt="AliExpress"
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              <img 
+                src={logoAliexpress} 
+                alt="AliExpress" 
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
               />
-              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
-                AliExpress
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
+                Entrega sim e tem muito Fretes Grátis!
               </p>
             </a>
 
             {/* Alibaba */}
             <a
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601431050123"
+              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600201202643"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 hover:opacity-80 transition-opacity"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
-              <img
-                src="/lovable-uploads/df1be29a-0a8e-4652-a880-ca7e72ef9aa3.png"
-                alt="Alibaba"
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              <img 
+                src={logoAlibaba} 
+                alt="Alibaba" 
+                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
               />
-              <p className="font-omne-regular text-sm md:text-base text-center" style={{ color: '#ffffff' }}>
-                Alibaba
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
+                Entrega sim! E é baratíssimo.
               </p>
             </a>
           </div>
