@@ -296,9 +296,9 @@ const BrasilCasa = () => {
         </div>
 
         {/* Browse Message */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-8 mb-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Aproveite nosso ACHADOS (e perdidos!)
+            Aproveite nossos ACHADOS (e perdidos!)
           </p>
         </div>
       </div>
