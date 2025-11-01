@@ -242,7 +242,7 @@ const BrasilCasa = () => {
               <img 
                 src={logoShopee} 
                 alt="Shopee" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-1"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Todo mundo tem Shopee instalado.
@@ -259,7 +259,7 @@ const BrasilCasa = () => {
               <img 
                 src={logoAmazon} 
                 alt="Amazon" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-1"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Tem coisas que você só encontra na Amazon.
@@ -276,7 +276,7 @@ const BrasilCasa = () => {
               <img 
                 src={logoAliexpress} 
                 alt="AliExpress" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-1"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Entrega sim e tem muito Fretes Grátis!
@@ -293,7 +293,7 @@ const BrasilCasa = () => {
               <img 
                 src={logoAlibaba} 
                 alt="Alibaba" 
-                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-1"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Entrega sim! E é baratíssimo.
