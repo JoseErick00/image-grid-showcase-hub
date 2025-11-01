@@ -316,7 +316,7 @@ const BrasilIncriveis = () => {
         </div>
 
         {/* Browse Message */}
-        <div className="text-center mt-8 mb-8">
+        <div className="text-center mt-12 mb-12">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
             Aproveite nossos ACHADOS (e perdidos!)
           </p>
