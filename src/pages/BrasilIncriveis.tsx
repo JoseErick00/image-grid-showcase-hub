@@ -316,16 +316,16 @@ const BrasilIncriveis = () => {
         </div>
 
         {/* Browse Message */}
-        <div className="text-center mt-12 mb-12">
+        <div className="text-center mt-8 mb-0">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
             Aproveite nossos ACHADOS (e perdidos!)
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8">
         {/* Promo Banner 01 */}
-        <div className="my-12 flex justify-center">
+        <div className="mt-5 mb-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
             <a 
               href="https://amzn.to/4oijqP1"
