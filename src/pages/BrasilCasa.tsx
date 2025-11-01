@@ -231,20 +231,20 @@ const BrasilCasa = () => {
             Ainda não tem cadastro nos aplicativos? Use um dos nossos links e aproveite nossas dicas:
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
             {/* Shopee */}
             <a
               href="https://s.shopee.com.br/30fFqSTEDW"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-card rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
               <img 
                 src={logoShopee} 
                 alt="Shopee" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain mb-4"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-2"
               />
-              <p className="font-omne-regular text-sm md:text-base text-card-foreground text-center">
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Todo mundo tem Shopee instalado.
               </p>
             </a>
@@ -254,14 +254,14 @@ const BrasilCasa = () => {
               href="https://amzn.to/3KOv1Hs"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-card rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
               <img 
                 src={logoAmazon} 
                 alt="Amazon" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain mb-4"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-2"
               />
-              <p className="font-omne-regular text-sm md:text-base text-card-foreground text-center">
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Tem coisas que você só encontra na Amazon.
               </p>
             </a>
@@ -271,14 +271,14 @@ const BrasilCasa = () => {
               href="https://s.click.aliexpress.com/e/_c2u6wfU3"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-card rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
               <img 
                 src={logoAliexpress} 
                 alt="AliExpress" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain mb-4"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-2"
               />
-              <p className="font-omne-regular text-sm md:text-base text-card-foreground text-center">
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Entrega sim e tem muito Fretes Grátis!
               </p>
             </a>
@@ -288,14 +288,14 @@ const BrasilCasa = () => {
               href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600201202643"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-card rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity duration-300"
             >
               <img 
                 src={logoAlibaba} 
                 alt="Alibaba" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain mb-4"
+                className="w-32 h-32 md:w-40 md:h-40 object-contain mb-2"
               />
-              <p className="font-omne-regular text-sm md:text-base text-card-foreground text-center">
+              <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Entrega sim! E é baratíssimo.
               </p>
             </a>
