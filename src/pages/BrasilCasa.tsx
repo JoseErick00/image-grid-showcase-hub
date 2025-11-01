@@ -298,7 +298,7 @@ const BrasilCasa = () => {
         {/* Browse Message */}
         <div className="text-center mt-8">
           <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
+            Aproveite nosso ACHADOS (e perdidos!)
           </p>
         </div>
       </div>
