@@ -476,7 +476,7 @@ const BrasilTech = () => {
               <img 
                 src={logoShopee} 
                 alt="Shopee" 
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
+                className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Todo mundo tem Shopee instalado.
@@ -493,7 +493,7 @@ const BrasilTech = () => {
               <img 
                 src={logoAmazon} 
                 alt="Amazon" 
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
+                className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Tem coisas que você só encontra na Amazon.
@@ -510,7 +510,7 @@ const BrasilTech = () => {
               <img 
                 src={logoAliexpress} 
                 alt="AliExpress" 
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
+                className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Entrega sim e tem muito Fretes Grátis!
@@ -527,7 +527,7 @@ const BrasilTech = () => {
               <img 
                 src={logoAlibaba} 
                 alt="Alibaba" 
-                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] object-contain mb-0"
+                className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] object-contain mb-0"
               />
               <p className="font-omne-regular text-sm md:text-base text-foreground text-center">
                 Entrega sim! E é baratíssimo.
