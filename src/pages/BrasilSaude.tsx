@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import PushPhrase from "@/components/PushPhrase";
 import promoBanner from "@/assets/saude/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/saude/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/saude/Promo_banner_tablet.jpg";
@@ -413,6 +414,12 @@ const BrasilSaude = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text=" A melhor vitrine de achados online! Duvidamos de você achar algo mais legal no Brasil."
+          color="#f9c90c"
+        />
+
         {/* First 9 items */}
         <CategoryGrid 
           items={healthProducts.slice(0, 9)}
@@ -579,6 +586,12 @@ const BrasilSaude = () => {
             </a>
           </div>
         </div>
+
+        {/* Push Phrase 02 */}
+        <PushPhrase 
+          text=" Caro ou barato! Aqui você só vai encontrar coisas bacanas! Então, relaxa ai no sofá e procura, deseja, procura!"
+          color="#f9c90c"
+        />
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
@@ -754,6 +767,12 @@ const BrasilSaude = () => {
           </div>
         </div>
       </div>
+
+      {/* Push Phrase 03 */}
+      <PushPhrase 
+        text=" Achou algum link quebrado? Avise a gente e ajude a manter nossa vitrine segura."
+        color="#f9c90c"
+      />
 
       {/* Final Mailchimp Subscription */}
       <MailchimpSubscription />
