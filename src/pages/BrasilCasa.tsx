@@ -567,7 +567,7 @@ const BrasilCasa = () => {
 
         {/* Push Phrase 02 */}
         <PushPhrase 
-          text="Não posso comprar agora! Mas posso sonhar e desejar! Com certeza você vai achar algo muito seu!"
+          text="Não posso comprar agora, mas posso sonhar e desejar! Aqui com certeza você vai achar algo muito legal!"
           color="#d01e23"
         />
 
