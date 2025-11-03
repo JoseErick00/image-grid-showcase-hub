@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import PushPhrase from "@/components/PushPhrase";
 import kids01 from "@/assets/kids_01.jpg";
 import kids02 from "@/assets/kids_02.jpg";
 import kids03 from "@/assets/kids_03.jpg";
@@ -413,6 +414,12 @@ const BrasilKids = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text=" A iNeed é para navegar, procurar, desejar, clicar, comprar! Divirta-se apenas navegando."
+          color="#856cb0"
+        />
+
         {/* First 9 items */}
         <CategoryGrid 
           items={kidsProducts.slice(0, 9)}
@@ -577,6 +584,12 @@ const BrasilKids = () => {
             </a>
           </div>
         </div>
+
+        {/* Push Phrase 02 */}
+        <PushPhrase 
+          text=" Não é sobre preço, é sobre achados online! Aqui você só vai encontrar coisas bacanas!"
+          color="#856cb0"
+        />
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
@@ -746,9 +759,15 @@ const BrasilKids = () => {
                   className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </a>
-            </div>
+             </div>
          </div>
         </div>
+
+        {/* Push Phrase 03 */}
+        <PushPhrase 
+          text=" Achou algum link quebrado? Avise a gente e ajude a manter nossa vitrine segura."
+          color="#856cb0"
+        />
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
