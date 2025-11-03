@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import PushPhrase from "@/components/PushPhrase";
 import promoBanner from "@/assets/tech/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/tech/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/tech/Promo_banner_tablet.jpg";
@@ -635,6 +636,12 @@ const BrasilTech = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text=" A iNeed é para navegar, procurar, desejar, clicar, comprar! Relaxe e ache todas as novidades e ofertas do momento."
+          color="#30bdbe"
+        />
+
         {/* First 9 items */}
         <CategoryGrid 
           items={techProducts.slice(0, 9)}
@@ -799,6 +806,12 @@ const BrasilTech = () => {
             </a>
           </div>
         </div>
+
+        {/* Push Phrase 02 */}
+        <PushPhrase 
+          text=" Não é sobre preço, é sobre achados online! Aqui você só vai encontrar coisas bacanas!"
+          color="#30bdbe"
+        />
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
@@ -972,6 +985,12 @@ const BrasilTech = () => {
             </div>
          </div>
         </div>
+
+        {/* Push Phrase 03 */}
+        <PushPhrase 
+          text=" Achou algum link quebrado? Avise a gente e ajude a manter nossa vitrine segura."
+          color="#30bdbe"
+        />
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
