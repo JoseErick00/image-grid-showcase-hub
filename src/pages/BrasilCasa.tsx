@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import PushPhrase from "@/components/PushPhrase";
 import homeCategoryImage from "@/assets/home-category.jpg";
 import casa01 from "@/assets/casa_01.jpg";
 import casa02 from "@/assets/casa_02.jpg";
@@ -393,8 +394,14 @@ const BrasilCasa = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text="Caro ou barato! Na iNeed, mais importante que o preço é a novidade, entrega e a qualidade."
+          color="#d01e23"
+        />
+
         {/* First 9 items */}
-        <CategoryGrid 
+        <CategoryGrid
           items={homeProducts.slice(0, 9)}
           columns={2}
           aspectRatio="portrait"
@@ -557,6 +564,12 @@ const BrasilCasa = () => {
             </a>
           </div>
         </div>
+
+        {/* Push Phrase 02 */}
+        <PushPhrase 
+          text="Não posso comprar agora! Mas posso sonhar e desejar! Com certeza você vai achar algo muito seu!"
+          color="#d01e23"
+        />
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
@@ -729,6 +742,12 @@ const BrasilCasa = () => {
             </div>
          </div>
         </div>
+
+        {/* Push Phrase 03 */}
+        <PushPhrase 
+          text="Teve algum problema com sua compra? Avisa a gente e ajude a manter nossa vitrine segura!"
+          color="#d01e23"
+        />
 
         {/* Product Grid 51-60 */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
