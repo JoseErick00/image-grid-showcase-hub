@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import PushPhrase from "@/components/PushPhrase";
 import promoBanner from "@/assets/Promo_banner_Inc.jpg";
 import promoBannerMobile from "@/assets/Promo_banner_mobileInc.jpg";
 import promoBannerTablet from "@/assets/Promo_banner_tabletInc.jpg";
@@ -414,6 +415,12 @@ const BrasilIncriveis = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text=" Cansado(a) da mesmisse das lojas online? Então olha essa vitrine de coisas legais perdidas por ai."
+          color="#5ebb47"
+        />
+
         {/* First 9 items */}
         <CategoryGrid 
           items={incrediblesProducts.slice(0, 9)}
@@ -578,6 +585,12 @@ const BrasilIncriveis = () => {
             </a>
           </div>
         </div>
+
+        {/* Push Phrase 02 */}
+        <PushPhrase 
+          text=" Caro ou barato! Aqui você só vai encontrar coisas bacanas! Relaxa ai no sofá e procura, deseje, ache!"
+          color="#5ebb47"
+        />
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
@@ -748,9 +761,15 @@ const BrasilIncriveis = () => {
                   className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </a>
-            </div>
-         </div>
+             </div>
+          </div>
         </div>
+
+        {/* Push Phrase 03 */}
+        <PushPhrase 
+          text=" Achou algum link quebrado? Avise a gente e ajude a manter nossa vitrine segura."
+          color="#5ebb47"
+        />
 
       {/* Newsletter Section */}
       <MailchimpSubscription />
