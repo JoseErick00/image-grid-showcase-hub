@@ -607,12 +607,6 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
-        {/* Push Phrase 01 */}
-        <PushPhrase 
-          text="Nossa loja não é só para comprar, é uma vitrine para você desejar, navegar, procurar e achar!"
-          color="#f06927"
-        />
-
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
@@ -672,8 +666,14 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text="Nossa loja não é só para comprar, é uma vitrine para você desejar, navegar, procurar e achar!"
+          color="#f06927"
+        />
+
         {/* Items 1-10 */}
-        <CategoryGrid 
+        <CategoryGrid
           items={sportsProducts.slice(0, 10)}
           columns={2}
           aspectRatio="portrait"
