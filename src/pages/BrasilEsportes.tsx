@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import PushPhrase from "@/components/PushPhrase";
 import promoBanner from "@/assets/brasil-esportes/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/brasil-esportes/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/brasil-esportes/Promo_banner_tablet.jpg";
@@ -606,6 +607,12 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
+        {/* Push Phrase 01 */}
+        <PushPhrase 
+          text="Nossa loja não é só para comprar, é uma vitrine para você desejar, navegar, procurar e achar!"
+          color="#f06927"
+        />
+
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
@@ -830,8 +837,14 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
+        {/* Push Phrase 02 */}
+        <PushPhrase 
+          text="Caro ou barato! Na iNeed, mais importante que o preço é a novidade, entrega e a qualidade."
+          color="#f06927"
+        />
+
         {/* Items 21-30 */}
-        <CategoryGrid 
+        <CategoryGrid
           items={sportsProducts.slice(20, 30)}
           columns={2}
           aspectRatio="portrait"
@@ -1001,6 +1014,12 @@ const BrasilEsportes = () => {
             </a>
           </div>
         </div>
+
+        {/* Push Phrase 03 */}
+        <PushPhrase 
+          text="Teve algum problema com sua compra? Avise a gente e ajude a manter nossa vitrine segura!"
+          color="#f06927"
+        />
       </div>
 
       {/* Final Mailchimp Subscription */}
