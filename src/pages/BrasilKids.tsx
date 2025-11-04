@@ -1,6 +1,7 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
+import TrustBadges from "@/components/TrustBadges";
 import kids01 from "@/assets/kids_01.jpg";
 import kids02 from "@/assets/kids_02.jpg";
 import kids03 from "@/assets/kids_03.jpg";
@@ -518,8 +519,10 @@ const BrasilKids = () => {
           </div>
         </div>
 
+        <TrustBadges />
+
         {/* Second 9 items */}
-        <CategoryGrid 
+        <CategoryGrid
           items={kidsProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"

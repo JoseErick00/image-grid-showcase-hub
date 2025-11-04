@@ -1,6 +1,7 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
+import TrustBadges from "@/components/TrustBadges";
 import promoBanner from "@/assets/saude/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/saude/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/saude/Promo_banner_tablet.jpg";
@@ -519,8 +520,10 @@ const BrasilSaude = () => {
           </div>
         </div>
 
+        <TrustBadges />
+
         {/* Second 9 items */}
-        <CategoryGrid 
+        <CategoryGrid
           items={healthProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"

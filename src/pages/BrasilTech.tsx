@@ -1,6 +1,7 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
+import TrustBadges from "@/components/TrustBadges";
 import promoBanner from "@/assets/tech/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/tech/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/tech/Promo_banner_tablet.jpg";
@@ -740,8 +741,10 @@ const BrasilTech = () => {
           </div>
         </div>
 
+        <TrustBadges />
+
         {/* Second 9 items */}
-        <CategoryGrid 
+        <CategoryGrid
           items={techProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"

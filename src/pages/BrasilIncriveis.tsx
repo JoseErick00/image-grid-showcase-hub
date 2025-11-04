@@ -1,6 +1,7 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
+import TrustBadges from "@/components/TrustBadges";
 import promoBanner from "@/assets/Promo_banner_Inc.jpg";
 import promoBannerMobile from "@/assets/Promo_banner_mobileInc.jpg";
 import promoBannerTablet from "@/assets/Promo_banner_tabletInc.jpg";
@@ -518,6 +519,8 @@ const BrasilIncriveis = () => {
             </a>
           </div>
         </div>
+
+        <TrustBadges />
 
         {/* Second 9 items (10-18) */}
         <CategoryGrid
