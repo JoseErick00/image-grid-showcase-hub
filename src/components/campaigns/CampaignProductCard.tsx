@@ -24,14 +24,14 @@ const CampaignProductCard = ({ image, label, link, platform }: CampaignProductCa
         />
       </a>
       
-      <div className="p-4 flex flex-col gap-3">
-        <div className="flex flex-col gap-2">
+      <div className="p-4 flex flex-col gap-3 items-center">
+        <div className="flex flex-col gap-2 items-center">
           <img
             src={platformLogos[platform]}
             alt={platform}
-            className="h-8 w-auto object-contain self-start"
+            className="h-16 w-auto object-contain"
           />
-          <p className="text-sm font-omne-medium text-[#171717] line-clamp-2">
+          <p className="text-sm font-omne-medium text-[#171717] line-clamp-2 text-center">
             {label}
           </p>
         </div>

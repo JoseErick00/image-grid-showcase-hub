@@ -7,7 +7,7 @@ interface CampaignHeroBannerProps {
 
 const CampaignHeroBanner = ({ desktop, tablet, mobile, alt = "Campaign Banner" }: CampaignHeroBannerProps) => {
   return (
-    <div className="w-full mb-8 sticky top-[72px] z-40 bg-gray-50">
+    <div className="w-full sticky top-[72px] z-40 bg-background">
       <picture>
         <source media="(min-width: 1024px)" srcSet={desktop} />
         <source media="(min-width: 640px)" srcSet={tablet} />

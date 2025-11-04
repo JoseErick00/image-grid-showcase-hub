@@ -47,15 +47,16 @@ interface CampaignTemplateProps {
 
 const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
+      {/* Hero Banner */}
+      <CampaignHeroBanner
+        desktop={config.heroBanner.desktop}
+        tablet={config.heroBanner.tablet}
+        mobile={config.heroBanner.mobile}
+        alt={config.pageTitle}
+      />
+      
       <div className="container mx-auto px-4 py-8">
-        {/* Hero Banner */}
-        <CampaignHeroBanner
-          desktop={config.heroBanner.desktop}
-          tablet={config.heroBanner.tablet}
-          mobile={config.heroBanner.mobile}
-          alt={config.pageTitle}
-        />
 
         {/* Title and Subtitle */}
         <div className="text-center mb-8">
