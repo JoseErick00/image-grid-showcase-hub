@@ -5,9 +5,9 @@ export const selCozinhaData: CampaignConfig = {
   pageSubtitle: "Os melhores produtos para transformar sua cozinha",
   
   heroBanner: {
-    desktop: "https://placehold.co/1200x250/2563eb/white?text=Sele%C3%A7%C3%A3o+para+Cozinha",
-    tablet: "https://placehold.co/800x250/2563eb/white?text=Sele%C3%A7%C3%A3o+para+Cozinha",
-    mobile: "https://placehold.co/600x250/2563eb/white?text=Sele%C3%A7%C3%A3o+Cozinha",
+    desktop: "/images/campaigns/sel-cozinha-hero-desktop.jpg",
+    tablet: "/images/campaigns/sel-cozinha-hero-tablet.jpg",
+    mobile: "/images/campaigns/sel-cozinha-hero-mobile.jpg",
   },
   
   navButtons: [
