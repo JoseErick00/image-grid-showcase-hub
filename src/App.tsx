@@ -26,15 +26,18 @@ import BrasilSaude from "./pages/BrasilSaude";
 import BrasilIncriveis from "./pages/BrasilIncriveis";
 import BrasilTech from "./pages/BrasilTech";
 import BrasilKids from "./pages/BrasilKids";
+import BrasilCasaSelCozinha from "./pages/campaigns/BrasilCasaSelCozinha";
+import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+      <GridLayoutProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
@@ -56,12 +59,14 @@ const App = () => (
             <Route path="brasil/incriveis" element={<BrasilIncriveis />} />
             <Route path="brasil/tech" element={<BrasilTech />} />
             <Route path="brasil/kids" element={<BrasilKids />} />
+            <Route path="brasil/casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </GridLayoutProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
