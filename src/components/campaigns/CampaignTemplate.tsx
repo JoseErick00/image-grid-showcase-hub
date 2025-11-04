@@ -47,7 +47,7 @@ interface CampaignTemplateProps {
 
 const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
       <CampaignHeroBanner
         desktop={config.heroBanner.desktop}
