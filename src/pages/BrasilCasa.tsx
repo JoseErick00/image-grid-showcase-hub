@@ -2,7 +2,6 @@ import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
-import ProductCard from "@/components/ProductCard";
 import homeCategoryImage from "@/assets/home-category.jpg";
 import casa01 from "@/assets/casa_01.jpg";
 import casa02 from "@/assets/casa_02.jpg";
@@ -411,7 +410,6 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
-          useNewProductCard={true}
         />
 
         {/* Small Banner 03 & 04 */}
@@ -510,7 +508,6 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
-          useNewProductCard={true}
         />
 
         {/* Small Banner 05 & 06 */}
@@ -587,7 +584,6 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
-          useNewProductCard={true}
         />
 
         {/* Small Banner 07 & 08 */}
@@ -655,7 +651,6 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
-          useNewProductCard={true}
         />
       </div>
 
@@ -826,7 +821,6 @@ const BrasilCasa = () => {
             columns={2}
             aspectRatio="portrait"
             buttonColor="#d01e23"
-            useNewProductCard={true}
           />
         </div>
 

@@ -2,7 +2,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import WishlistButton from "@/components/WishlistButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,10 +64,6 @@ const Header = () => {
               />
             </Link>
             
-            {/* Wishlist Button - Desktop */}
-            <div className="hidden md:block absolute right-0">
-              <WishlistButton />
-            </div>
           </div>
 
 
@@ -153,9 +148,8 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Mobile menu button and Wishlist */}
-          <div className="md:hidden absolute top-4 right-4 flex items-center gap-2">
-            <WishlistButton />
+          {/* Mobile menu button */}
+          <div className="md:hidden absolute top-4 right-4">
             <button
               className="p-2 text-muted-foreground hover:text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

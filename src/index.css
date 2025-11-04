@@ -44,10 +44,6 @@ All colors MUST be HSL.
     --brand-light: 0 0% 96.9%; /* #f7f7f7 */
     --brand-mid: 0 0% 21.6%; /* #373737 */
     
-    /* Trust & Conversion Colors */
-    --trust-green: 142 76% 36%; /* For verified badges */
-    --trending-red: 0 84% 60%; /* For trending badges */
-    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-dark)), hsl(var(--brand-mid)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--brand-dark)), hsl(var(--brand-mid) / 0.8));
