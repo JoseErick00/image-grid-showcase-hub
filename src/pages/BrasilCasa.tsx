@@ -502,8 +502,10 @@ const BrasilCasa = () => {
           </div>
         </div>
 
+        <TrustBadges />
+
         {/* Second 9 items */}
-        <CategoryGrid 
+        <CategoryGrid
           items={homeProducts.slice(9, 18)}
           columns={2}
           aspectRatio="portrait"
