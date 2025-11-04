@@ -40,8 +40,8 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
           <img
             src={promoBanner.mobile}
             alt="Promo Banner"
-            className="w-full h-auto max-w-[1200px] mx-auto object-cover rounded-lg group-hover:opacity-90 transition-opacity"
-            style={{ maxHeight: '500px' }}
+            className="w-full h-auto md:h-auto max-w-[1200px] mx-auto object-cover rounded-lg group-hover:opacity-90 transition-opacity md:max-h-[500px]"
+            style={{ height: '400px' }}
           />
         </picture>
       </a>
