@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
+import ProductCard from "@/components/ProductCard";
 
 interface CategoryGridProps {
   title?: string;
@@ -12,12 +13,14 @@ interface CategoryGridProps {
     subtitle?: string;
     image: string;
     link: string;
+    isTrending?: boolean;
   }>;
   columns?: number;
   aspectRatio?: "square" | "portrait";
   buttonColor?: string;
   showButton?: boolean;
   labelTextColor?: string;
+  useNewProductCard?: boolean;
 }
 
 const CategoryGrid = ({ 
@@ -27,7 +30,8 @@ const CategoryGrid = ({
   aspectRatio = "square",
   buttonColor = "#1e40af",
   showButton = true,
-  labelTextColor = "#ffffff"
+  labelTextColor = "#ffffff",
+  useNewProductCard = false
 }: CategoryGridProps) => {
   const { isCompactMode } = useGridLayout();
   const isMobile = useIsMobile();
@@ -68,6 +72,22 @@ const CategoryGrid = ({
       <div className={`grid ${gridClass} gap-6`}>
         {items.map((item) => {
           const isRevealed = revealedItems.has(item.id);
+          
+          // Use new ProductCard if enabled
+          if (useNewProductCard) {
+            return (
+              <ProductCard
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                image={item.image}
+                link={item.link}
+                isTrending={item.isTrending}
+                aspectRatio={aspectRatio === "square" ? "1/1" : "4/5"}
+                labelTextColor={labelTextColor}
+              />
+            );
+          }
           
           return (
             <div

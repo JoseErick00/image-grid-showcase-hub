@@ -2,6 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import WishlistButton from "@/components/WishlistButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,13 +56,20 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center py-4 md:py-4 h-[150px] md:h-auto justify-center">
           {/* Logo */}
-          <Link to={logoLink} className="flex items-center justify-center mb-4">
-            <img 
-              src={isBrasilPage ? "/lovable-uploads/Logo_png.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
-              alt="i.need" 
-              className="w-[200px] h-[150px] object-contain" 
-            />
-          </Link>
+          <div className="relative w-full flex justify-center items-center mb-4">
+            <Link to={logoLink} className="flex items-center justify-center">
+              <img 
+                src={isBrasilPage ? "/lovable-uploads/Logo_png.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
+                alt="i.need" 
+                className="w-[200px] h-[150px] object-contain" 
+              />
+            </Link>
+            
+            {/* Wishlist Button - Desktop */}
+            <div className="hidden md:block absolute right-0">
+              <WishlistButton />
+            </div>
+          </div>
 
 
           {/* Desktop Navigation */}
@@ -145,13 +153,16 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile menu button and Wishlist */}
+          <div className="md:hidden absolute top-4 right-4 flex items-center gap-2">
+            <WishlistButton />
+            <button
+              className="p-2 text-muted-foreground hover:text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

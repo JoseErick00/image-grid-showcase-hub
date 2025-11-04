@@ -1,6 +1,8 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
+import TrustBadges from "@/components/TrustBadges";
+import ProductCard from "@/components/ProductCard";
 import homeCategoryImage from "@/assets/home-category.jpg";
 import casa01 from "@/assets/casa_01.jpg";
 import casa02 from "@/assets/casa_02.jpg";
@@ -88,18 +90,18 @@ const BrasilCasa = () => {
   };
 
   const homeProducts = [
-    { id: "product-1", title: "E essa - Panela pressão elétrica Electrolux digital capacidade 6L silenciosa segura 10 travas segurança.", image: casa01, link: "https://amzn.to/3Vt8emt" },
-    { id: "product-2", title: "Uma Fritadeira air fryer forno 12L :O", image: casa02, link: "https://amzn.to/3KcxIlO" },
+    { id: "product-1", title: "E essa - Panela pressão elétrica Electrolux digital capacidade 6L silenciosa segura 10 travas segurança.", image: casa01, link: "https://amzn.to/3Vt8emt", isTrending: true },
+    { id: "product-2", title: "Uma Fritadeira air fryer forno 12L :O", image: casa02, link: "https://amzn.to/3KcxIlO", isTrending: true },
     { id: "product-3", title: "Linda mesa de cabeceira retro na Shoppe.", image: casa03, link: "https://s.shopee.com.br/3Vb47TgWQN" },
     { id: "product-4", title: "Capa para colchão impermeavel matelado.", image: casa04, link: "https://s.shopee.com.br/8Uzk5EQwqU" },
-    { id: "product-5", title: "Bolsa Térmica de alta capacidade e qualidade.", image: casa05, link: "https://s.shopee.com.br/4LABIlqqtM" },
+    { id: "product-5", title: "Bolsa Térmica de alta capacidade e qualidade.", image: casa05, link: "https://s.shopee.com.br/4LABIlqqtM", isTrending: true },
     { id: "product-6", title: "Maravilhoso kit conjunto de potes de (Vidro Resistente ).", image: casa06, link: "https://s.shopee.com.br/5ffYxBwOkC" },
     { id: "product-7", title: "Alto-falante inteligente de alto desempenho com som estéreo surround e graves, design elegante com lâmpada LED", image: casa07, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601398799470" },
     { id: "product-8", title: "Kit de trilho de cortina inteligente motorizado para casa moderna", image: casa08, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601569922905" },
     { id: "product-9", title: "Luminária de mesa LED de vidro estilo design nórdico", image: casa09, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601496798108" },
-    { id: "product-10", title: "Máquina de café com filtro estético estilo retrô anos 50 - Smeg", image: casa10, link: "https://amzn.to/3Iwxkhh" },
+    { id: "product-10", title: "Máquina de café com filtro estético estilo retrô anos 50 - Smeg", image: casa10, link: "https://amzn.to/3Iwxkhh", isTrending: true },
     { id: "product-11", title: "Cafeteira Elite Gourmet EC812G Vintage 50's", image: casa11, link: "https://amzn.to/3Ki5vKc" },
-    { id: "product-12", title: "Robô Aspirador e Mopa 2 em 1 - DREAME D9 Max Gen 2", image: casa12, link: "https://amzn.to/3Iya4zD" },
+    { id: "product-12", title: "Robô Aspirador e Mopa 2 em 1 - DREAME D9 Max Gen 2", image: casa12, link: "https://amzn.to/3Iya4zD", isTrending: true },
     { id: "product-13", title: "Mais um aspirador baratinho -  Electrolux ERB30 bivolt – 2h20min", image: casa13, link: "https://amzn.to/4nbsxRD" },
     { id: "product-14", title: "Linda cadeira para sala de estar confortável de veludo MOBLAN Decor.", image: casa14, link: "https://amzn.to/46H9bgm" },
     { id: "product-15", title: "Estiloso - Cesto de roupa suja bambu dobravel", image: casa15, link: "https://s.shopee.com.br/3Vb5E7uoJh" },
@@ -111,7 +113,7 @@ const BrasilCasa = () => {
     { id: "product-21", title: "Estiloso - Wok de ferro tradicional feito à mão", image: casa21, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601394094436" },
     { id: "product-22", title: "Wok romano de alumínio fundido microprensado de 32cm", image: casa22, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601395967300" },
     { id: "product-23", title: "Cozedor rápido de ovos Deluxe - DASH", image: casa23, link: "https://amzn.to/4nJtiBi" },
-    { id: "product-24", title: "Vintage Marshall - Acton III Bluetooth Speaker", image: casa24, link: "https://amzn.to/3IqzteE" },
+    { id: "product-24", title: "Vintage Marshall - Acton III Bluetooth Speaker", image: casa24, link: "https://amzn.to/3IqzteE", isTrending: true },
     { id: "product-25", title: "Kit 4 Capas de Almofadas Para Sofá 45x45", image: casa25, link: "https://amzn.to/46jm8ho" },
     { id: "product-26", title: "Moedor de café elétrico e triturador de grãos da Amazon.", image: casa26, link: "https://amzn.to/4nJtVe8" },
     { id: "product-27", title: "Frigideira antidearente dupla multiuso na Shopee", image: casa27, link: "https://s.shopee.com.br/10tkOB3Oja" },
@@ -120,14 +122,14 @@ const BrasilCasa = () => {
     { id: "product-30", title: "Luminária de mesa para estúdio e quarto nórdico moderno e pós-moderno", image: casa30, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600719870014" },
     { id: "product-31", title: "Porta LP- Suporte de mesa para guardar disco de vinil", image: casa31, link: "https://s.shopee.com.br/4q6TCdL0Yz" },
     { id: "product-32", title: "Rack para vitrola e discos de vinil com nicho extra", image: casa32, link: "https://s.shopee.com.br/4q6TCnqANU" },
-    { id: "product-33", title: "O Echo Dot com o melhor som já lançado", image: casa33, link: "https://amzn.to/4msh3ba" },
-    { id: "product-34", title: "Echo Show 8 - Smart display com áudio espacial + Alexa", image: casa34, link: "https://amzn.to/3Kex5rU" },
+    { id: "product-33", title: "O Echo Dot com o melhor som já lançado", image: casa33, link: "https://amzn.to/4msh3ba", isTrending: true },
+    { id: "product-34", title: "Echo Show 8 - Smart display com áudio espacial + Alexa", image: casa34, link: "https://amzn.to/3Kex5rU", isTrending: true },
     { id: "product-35", title: "Colchão Queen Emma Original – 10 anos de garantia", image: casa35, link: "https://amzn.to/4nIWjNk" },
     { id: "product-36", title: "DOWMGYDX Tapete de tatame para dormir, colchão japonês.", image: casa36, link: "https://amzn.to/4my6ao9" },
     { id: "product-37", title: "Geguton - Porta-Livros Toni.", image: casa37, link: "https://amzn.to/4pxrvBb" },
     { id: "product-38", title: "Panela de cozinha de ferro fundido esmaltado 3,0 L 3,5 kg", image: casa38, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601389001391" },
     { id: "product-39", title: "Cafeteira Italiana Moka Alumínio 9 Xícaras", image: casa39, link: "https://amzn.to/3IbAUxt" },
-    { id: "product-40", title: "Sistema de cultivo hidropônico para jardim interno com luz LED.", image: casa40, link: "https://amzn.to/4mtLUUU" },
+    { id: "product-40", title: "Sistema de cultivo hidropônico para jardim interno com luz LED.", image: casa40, link: "https://amzn.to/4mtLUUU", isTrending: true },
     { id: "product-41", title: "Armário de Cozinha Rustic/verde Vik Mades", image: casa41, link: "https://amzn.to/3IH3oiD" },
     { id: "product-42", title: "Kit 15 Potes Tampa Hermético Porta Alimentos", image: casa42, link: "https://amzn.to/3Ivzu0Q" },
     { id: "product-43", title: "Oxford Aparelho De Jantar 30 Peças Ryo Maresia", image: casa43, link: "https://amzn.to/46MOuj8" },
@@ -135,7 +137,7 @@ const BrasilCasa = () => {
     { id: "product-45", title: "Jogo de Panelas 13 peças Titanium Antiaderente Granito", image: casa45, link: "https://amzn.to/4729WAP" },
     { id: "product-46", title: "Chaleira Eletrica Inox, 220v, 1,8 Litro - Agratto", image: casa46, link: "https://amzn.to/4nkbCfz" },
     { id: "product-47", title: "Kit facas de cozinha/Churrasco Profissional Antiaderente", image: casa47, link: "https://s.shopee.com.br/AUkuOHZgh9" },
-    { id: "product-48", title: "OKICASA Air fryer Recipiente de vidro de 4,5 L", image: casa48, link: "https://s.shopee.com.br/2B5mU5YjgW" },
+    { id: "product-48", title: "OKICASA Air fryer Recipiente de vidro de 4,5 L", image: casa48, link: "https://s.shopee.com.br/2B5mU5YjgW", isTrending: true },
     { id: "product-49", title: "Fritadeira de ar de vidro espesso transparente panorâmico de 360°", image: casa49, link: "https://s.shopee.com.br/7KnsdjkyN9" },
     { id: "product-50", title: "Conjunto de panelas antiaderentes - Pure Titanium de (4 peças)", image: casa50, link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601517720876" },
   ];
@@ -304,6 +306,9 @@ const BrasilCasa = () => {
         </div>
       </div>
 
+      {/* Trust Badges Section */}
+      <TrustBadges />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8">
         {/* Promo Banner 01 */}
         <div className="mt-5 mb-12 flex justify-center">
@@ -406,6 +411,7 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
+          useNewProductCard={true}
         />
 
         {/* Small Banner 03 & 04 */}
@@ -504,6 +510,7 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
+          useNewProductCard={true}
         />
 
         {/* Small Banner 05 & 06 */}
@@ -580,6 +587,7 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
+          useNewProductCard={true}
         />
 
         {/* Small Banner 07 & 08 */}
@@ -647,6 +655,7 @@ const BrasilCasa = () => {
           columns={2}
           aspectRatio="portrait"
           buttonColor="#d01e23"
+          useNewProductCard={true}
         />
       </div>
 
@@ -817,6 +826,7 @@ const BrasilCasa = () => {
             columns={2}
             aspectRatio="portrait"
             buttonColor="#d01e23"
+            useNewProductCard={true}
           />
         </div>
 

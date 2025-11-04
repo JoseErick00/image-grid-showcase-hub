@@ -26,6 +26,7 @@ import BrasilSaude from "./pages/BrasilSaude";
 import BrasilIncriveis from "./pages/BrasilIncriveis";
 import BrasilTech from "./pages/BrasilTech";
 import BrasilKids from "./pages/BrasilKids";
+import Wishlist from "./pages/Wishlist";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="brasil/kids" element={<BrasilKids />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
+            <Route path="wishlist" element={<Wishlist />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
