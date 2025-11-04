@@ -1,5 +1,6 @@
 import CampaignProductCard from './CampaignProductCard';
 import { type Platform } from '@/utils/platformLogos';
+import { useGridLayout } from '@/hooks/useGridLayout';
 
 interface Product {
   image: string;
@@ -22,6 +23,8 @@ interface CampaignSectionProps {
 }
 
 const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) => {
+  const { isCompactMode } = useGridLayout();
+  
   return (
     <section id={id} className="mb-16 scroll-mt-20">
       {/* Promo Banner */}
@@ -44,7 +47,11 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
       </a>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+      <div className={`grid gap-6 max-w-[1200px] mx-auto ${
+        isCompactMode 
+          ? 'grid-cols-2 md:grid-cols-3' 
+          : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+      }`}>
         {products.map((product, index) => (
           <CampaignProductCard
             key={index}
