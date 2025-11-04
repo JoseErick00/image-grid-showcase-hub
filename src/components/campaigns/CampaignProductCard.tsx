@@ -1,4 +1,3 @@
-import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
 
@@ -26,31 +25,28 @@ const CampaignProductCard = ({ image, label, link, platform }: CampaignProductCa
       </a>
       
       <div className="p-4 flex flex-col gap-3">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-2">
           <img
             src={platformLogos[platform]}
             alt={platform}
-            className="h-5 w-auto object-contain"
+            className="h-8 w-auto object-contain self-start"
           />
-          <p className="text-sm font-omne-medium text-foreground line-clamp-2 flex-1">
+          <p className="text-sm font-omne-medium text-[#171717] line-clamp-2">
             {label}
           </p>
         </div>
         
         <Button
-          variant="brand"
           size="sm"
-          className="w-full"
+          className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
           asChild
         >
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2"
           >
             Ver Preço Agora
-            <ExternalLink className="h-4 w-4" />
           </a>
         </Button>
       </div>
