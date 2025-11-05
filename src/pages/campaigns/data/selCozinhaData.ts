@@ -45,35 +45,6 @@ export const selCozinhaData: CampaignConfig = {
           platform: "shopee",
         },
         {
-          image: "/images/campaigns/products/pdt_07.jpg",
-          label: "Procurando uma panela lindinha para sua cozinha?",
-          link: "https://s.click.aliexpress.com/e/_c2IM46qX",
-          platform: "aliexpress",
-        },
-        {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Colheres+Silicone",
-          label: "Kit Colheres de Silicone 6 Peças Coloridas",
-          link: "https://www.amazon.com.br/",
-          platform: "amazon",
-        },
-        {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Escorredor",
-          label: "Escorredor de Macarrão e Legumes Retrátil",
-          link: "https://shopee.com.br/",
-          platform: "shopee",
-        },
-      ],
-    },
-    {
-      id: "section2",
-      promoBanner: {
-        desktop: "/images/campaigns/promo-banner-02-desktop.jpg",
-        tablet: "/images/campaigns/promo-banner-02-tablet.jpg",
-        mobile: "/images/campaigns/promo-banner-02-mobile.jpg",
-        link: "https://s.click.aliexpress.com/e/_c3MSfTYB",
-      },
-      products: [
-        {
           image: "/images/campaigns/products/pdt_04.jpg",
           label: "Essa batedeira SALVA VIDAS! Batedeira Elétrica de Mão110v",
           link: "https://amzn.to/3JLe7Jp",
@@ -91,6 +62,29 @@ export const selCozinhaData: CampaignConfig = {
           link: "https://s.shopee.com.br/2B6obSombw",
           platform: "shopee",
         },
+      ],
+    },
+    {
+      id: "section2",
+      promoBanner: {
+        desktop: "/images/campaigns/promo-banner-02-desktop.jpg",
+        tablet: "/images/campaigns/promo-banner-02-tablet.jpg",
+        mobile: "/images/campaigns/promo-banner-02-mobile.jpg",
+        link: "https://s.click.aliexpress.com/e/_c3MSfTYB",
+      },
+      products: [
+        {
+          image: "/images/campaigns/products/pdt_07.jpg",
+          label: "Procurando uma panela lindinha para sua cozinha?",
+          link: "https://s.click.aliexpress.com/e/_c2IM46qX",
+          platform: "aliexpress",
+        },
+        {
+          image: "/images/campaigns/products/pdt_08.jpg",
+          label: "Conjunto de 7 recipientes de plástico sem BPA para cereais",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601040233188",
+          platform: "alibaba",
+        },
         {
           image: "/images/campaigns/products/pdt_09.jpg",
           label: "Café com estilo e beleza na cozinha.",
@@ -102,6 +96,12 @@ export const selCozinhaData: CampaignConfig = {
           label: "Filminho com pipoca e sem sujar panelas!",
           link: "https://amzn.to/4olLaCT",
           platform: "amazon",
+        },
+        {
+          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Liquidificador",
+          label: "Liquidificador de Alta Potência 1200W",
+          link: "https://pt.aliexpress.com/",
+          platform: "aliexpress",
         },
         {
           image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Mixer",
@@ -121,9 +121,9 @@ export const selCozinhaData: CampaignConfig = {
       },
       products: [
         {
-          image: "/images/campaigns/products/pdt_08.jpg",
-          label: "Conjunto de 7 recipientes de plástico sem BPA para cereais",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601040233188",
+          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Potes+Herm%C3%A9ticos",
+          label: "Conjunto de Potes Herméticos 10 Peças",
+          link: "https://www.alibaba.com/",
           platform: "alibaba",
         },
         {
