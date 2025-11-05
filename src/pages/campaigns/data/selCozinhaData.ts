@@ -20,10 +20,10 @@ export const selCozinhaData: CampaignConfig = {
     {
       id: "section1",
       promoBanner: {
-        desktop: "https://placehold.co/1200x500/059669/white?text=Utens%C3%ADlios+de+Cozinha",
-        tablet: "https://placehold.co/800x400/059669/white?text=Utens%C3%ADlios",
-        mobile: "https://placehold.co/600x300/059669/white?text=Utens%C3%ADlios",
-        link: "https://www.amazon.com.br/",
+        desktop: "/images/campaigns/promo-banner-01-desktop.jpg",
+        tablet: "/images/campaigns/promo-banner-01-tablet.jpg",
+        mobile: "/images/campaigns/promo-banner-01-mobile.jpg",
+        link: "https://amzn.to/4nJtiBi",
       },
       products: [
         {
@@ -67,10 +67,10 @@ export const selCozinhaData: CampaignConfig = {
     {
       id: "section2",
       promoBanner: {
-        desktop: "https://placehold.co/1200x500/dc2626/white?text=Eletrodom%C3%A9sticos",
-        tablet: "https://placehold.co/800x400/dc2626/white?text=Eletrodom%C3%A9sticos",
-        mobile: "https://placehold.co/600x300/dc2626/white?text=Eletros",
-        link: "https://www.amazon.com.br/",
+        desktop: "/images/campaigns/promo-banner-02-desktop.jpg",
+        tablet: "/images/campaigns/promo-banner-02-tablet.jpg",
+        mobile: "/images/campaigns/promo-banner-02-mobile.jpg",
+        link: "https://s.click.aliexpress.com/e/_c3MSfTYB",
       },
       products: [
         {
@@ -114,10 +114,10 @@ export const selCozinhaData: CampaignConfig = {
     {
       id: "section3",
       promoBanner: {
-        desktop: "https://placehold.co/1200x500/7c3aed/white?text=Organiza%C3%A7%C3%A3o",
-        tablet: "https://placehold.co/800x400/7c3aed/white?text=Organiza%C3%A7%C3%A3o",
-        mobile: "https://placehold.co/600x300/7c3aed/white?text=Organiza%C3%A7%C3%A3o",
-        link: "https://shopee.com.br/",
+        desktop: "/images/campaigns/promo-banner-03-desktop.jpg",
+        tablet: "/images/campaigns/promo-banner-03-tablet.jpg",
+        mobile: "/images/campaigns/promo-banner-03-mobile.jpg",
+        link: "https://s.shopee.com.br/9pWFJrvr6K",
       },
       products: [
         {
