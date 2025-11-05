@@ -122,7 +122,7 @@ export const selCozinhaData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/products/pdt_13.jpg",
-          label: "Soverte em casa, com sua receita!",
+          label: "Sorvete em casa para criançada!",
           link: "https://amzn.to/48Xye1j",
           platform: "amazon",
         },
