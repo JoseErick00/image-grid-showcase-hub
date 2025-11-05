@@ -18,6 +18,7 @@ interface Product {
   label: string;
   link: string;
   platform: Platform;
+  stamp?: string;
 }
 
 interface Section {

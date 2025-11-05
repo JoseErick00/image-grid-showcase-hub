@@ -7,6 +7,7 @@ interface Product {
   label: string;
   link: string;
   platform: Platform;
+  stamp?: string;
 }
 
 interface PromoBanner {
@@ -59,6 +60,7 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
             label={product.label}
             link={product.link}
             platform={product.platform}
+            stamp={product.stamp}
           />
         ))}
       </div>

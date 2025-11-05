@@ -6,17 +6,23 @@ interface CampaignProductCardProps {
   label: string;
   link: string;
   platform: Platform;
+  stamp?: string;
 }
 
-const CampaignProductCard = ({ image, label, link, platform }: CampaignProductCardProps) => {
+const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignProductCardProps) => {
   return (
     <div className="flex flex-col bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block aspect-square overflow-hidden group"
+        className="block aspect-square overflow-hidden group relative"
       >
+        {stamp && (
+          <div className="absolute top-3 left-3 bg-[#171717] text-white px-3 py-1.5 rounded-md font-omne-medium text-xs z-10 shadow-lg">
+            {stamp}
+          </div>
+        )}
         <img
           src={image}
           alt={label}
