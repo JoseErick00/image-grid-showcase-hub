@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
+import { Share2 } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
 interface CampaignProductCardProps {
   image: string;
@@ -10,6 +12,36 @@ interface CampaignProductCardProps {
 }
 
 const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignProductCardProps) => {
+  const handleShare = async () => {
+    try {
+      const shareData = {
+        title: label,
+        text: 'Olha que legal eu achei na iNeed!',
+        url: link,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(link);
+        toast({
+          title: "Link copiado!",
+          description: "O link do produto foi copiado para a área de transferência.",
+        });
+      }
+    } catch (error) {
+      try {
+        await navigator.clipboard.writeText(link);
+        toast({
+          title: "Link copiado!",
+          description: "O link do produto foi copiado para a área de transferência.",
+        });
+      } catch (clipboardError) {
+        console.log('Share and clipboard failed:', error, clipboardError);
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
       <a
@@ -42,19 +74,30 @@ const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignPr
           </p>
         </div>
         
-        <Button
-          size="sm"
-          className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
-          asChild
-        >
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="w-full flex gap-2">
+          <Button
+            size="sm"
+            className="flex-1 bg-[#171717] text-white hover:bg-[#171717]/90"
+            asChild
           >
-            Ver Preço Agora
-          </a>
-        </Button>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver Preço Agora
+            </a>
+          </Button>
+          
+          <Button
+            size="sm"
+            variant="outline"
+            className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
+            onClick={handleShare}
+          >
+            <Share2 className="h-4 w-4" />
+          </Button>
+        </div>
       </div>
     </div>
   );
