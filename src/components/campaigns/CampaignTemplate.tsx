@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import CampaignHeroBanner from './CampaignHeroBanner';
 import CampaignNavButtons from './CampaignNavButtons';
 import CampaignSection from './CampaignSection';
+import PlatformRegister from './PlatformRegister';
 import { Button } from '@/components/ui/button';
 import { type Platform } from '@/utils/platformLogos';
 
@@ -108,8 +109,11 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
           />
         ))}
 
+        {/* Platform Register Section */}
+        <PlatformRegister />
+
         {/* Social Media and Back Button */}
-        <div className="mt-16 mb-8 flex flex-col items-center gap-6">
+        <div className="mt-8 mb-8 flex flex-col items-center gap-6">
           {/* Social Media Icons */}
           <div className="flex justify-center items-center gap-8">
             <a 
