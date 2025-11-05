@@ -85,7 +85,7 @@ const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignPr
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver Preço Agora
+              Eu gosto, eu quero!
             </a>
           </Button>
           
