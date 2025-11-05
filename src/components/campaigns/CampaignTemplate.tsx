@@ -76,7 +76,7 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ backgroundColor: '#f7f7f7' }}>
       {/* Hero Banner */}
       <CampaignHeroBanner
         desktop={config.heroBanner.desktop}
