@@ -1,7 +1,7 @@
-import logoAmazon from '@/assets/platform-logos/logo_amazon_color.png';
-import logoShopee from '@/assets/platform-logos/logo_shopee_color.png';
-import logoAliexpress from '@/assets/platform-logos/logo_aliexpress_color.png';
-import logoAlibaba from '@/assets/platform-logos/logo_alibaba_color.png';
+import logoAmazon from '@/assets/platform-logos/logo_amazon_gray.png';
+import logoShopee from '@/assets/platform-logos/logo_shopee_gray.png';
+import logoAliexpress from '@/assets/platform-logos/logo_aliexpress_gray.png';
+import logoAlibaba from '@/assets/platform-logos/logo_alibaba_gray.png';
 
 const PlatformRegister = () => {
   return (

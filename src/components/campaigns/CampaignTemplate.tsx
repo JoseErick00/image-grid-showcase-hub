@@ -4,6 +4,7 @@ import CampaignHeroBanner from './CampaignHeroBanner';
 import CampaignNavButtons from './CampaignNavButtons';
 import CampaignSection from './CampaignSection';
 import PlatformRegister from './PlatformRegister';
+import TrustBadges from '@/components/TrustBadges';
 import { Button } from '@/components/ui/button';
 import { type Platform } from '@/utils/platformLogos';
 
@@ -111,6 +112,9 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
 
         {/* Platform Register Section */}
         <PlatformRegister />
+
+        {/* Trust Badges Section */}
+        <TrustBadges />
 
         {/* Social Media and Back Button */}
         <div className="mt-8 mb-8 flex flex-col items-center gap-6">
