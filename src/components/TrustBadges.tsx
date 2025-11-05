@@ -34,7 +34,8 @@ const TrustBadges = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center text-center p-4 md:p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300"
+                className="flex flex-col items-center text-center p-4 md:p-6 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300"
+                style={{ backgroundColor: '#171717' }}
               >
                 <div className="mb-3 p-3 rounded-full bg-primary/10">
                   <Icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
