@@ -27,28 +27,28 @@ export const selCozinhaData: CampaignConfig = {
       },
       products: [
         {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Jogo+de+Panelas",
-          label: "Jogo de Panelas Antiaderente 5 Peças",
-          link: "https://www.amazon.com.br/",
-          platform: "amazon",
-        },
-        {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Kit+Facas",
-          label: "Kit de Facas Profissionais em Aço Inox",
-          link: "https://shopee.com.br/",
-          platform: "shopee",
-        },
-        {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Conjunto+Tigelas",
-          label: "Conjunto de Tigelas de Vidro com Tampa",
-          link: "https://pt.aliexpress.com/",
+          image: "/images/campaigns/products/pdt_01.jpg",
+          label: "Panela de barriga grande antiaderente, wok de cozinha chinesa com cabo de madeira",
+          link: "https://s.click.aliexpress.com/e/_c39xdd0J",
           platform: "aliexpress",
         },
         {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=T%C3%A1bua+de+Corte",
-          label: "Tábua de Corte em Bambu Sustentável",
-          link: "https://www.alibaba.com/",
+          image: "/images/campaigns/products/pdt_02.jpg",
+          label: "O cortador  e descascador de frutas e verduras mais comprado do momento",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601414814345",
           platform: "alibaba",
+        },
+        {
+          image: "/images/campaigns/products/pdt_03.jpg",
+          label: "Batedor manual elétrico para todo tipo de bebidas.",
+          link: "https://s.shopee.com.br/9AGYvOhADh",
+          platform: "shopee",
+        },
+        {
+          image: "/images/campaigns/products/pdt_07.jpg",
+          label: "Procurando uma panela lindinha para sua cozinha?",
+          link: "https://s.click.aliexpress.com/e/_c2IM46qX",
+          platform: "aliexpress",
         },
         {
           image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Colheres+Silicone",
@@ -74,34 +74,34 @@ export const selCozinhaData: CampaignConfig = {
       },
       products: [
         {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Liquidificador",
-          label: "Liquidificador de Alta Potência 1200W",
-          link: "https://pt.aliexpress.com/",
-          platform: "aliexpress",
-        },
-        {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Batedeira",
-          label: "Batedeira Planetária 5L com 12 Velocidades",
-          link: "https://www.alibaba.com/",
-          platform: "alibaba",
-        },
-        {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Processador",
-          label: "Processador de Alimentos Multifuncional",
-          link: "https://www.amazon.com.br/",
+          image: "/images/campaigns/products/pdt_04.jpg",
+          label: "Essa batedeira SALVA VIDAS! Batedeira Elétrica de Mão110v",
+          link: "https://amzn.to/3JLe7Jp",
           platform: "amazon",
         },
         {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Airfryer",
-          label: "Air Fryer Digital 5.5L sem Óleo",
-          link: "https://shopee.com.br/",
+          image: "/images/campaigns/products/pdt_05.jpg",
+          label: "Moedor de Café 160W  - Philco",
+          link: "https://amzn.to/4qIw6kh",
+          platform: "amazon",
+        },
+        {
+          image: "/images/campaigns/products/pdt_06.jpg",
+          label: "Panela de arroz - Só quem tem sabe como é bom ter uma!",
+          link: "https://s.shopee.com.br/2B6obSombw",
           platform: "shopee",
         },
         {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Cafeteira",
-          label: "Cafeteira Elétrica Programável 1.5L",
-          link: "https://pt.aliexpress.com/",
-          platform: "aliexpress",
+          image: "/images/campaigns/products/pdt_09.jpg",
+          label: "Café com estilo e beleza na cozinha.",
+          link: "https://amzn.to/47rTYkI",
+          platform: "amazon",
+        },
+        {
+          image: "/images/campaigns/products/pdt_10.jpg",
+          label: "Filminho com pipoca e sem sujar panelas!",
+          link: "https://amzn.to/4olLaCT",
+          platform: "amazon",
         },
         {
           image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Mixer",
@@ -121,9 +121,9 @@ export const selCozinhaData: CampaignConfig = {
       },
       products: [
         {
-          image: "https://placehold.co/1080x1080/e5e7eb/1f2937?text=Potes+Herm%C3%A9ticos",
-          label: "Conjunto de Potes Herméticos 10 Peças",
-          link: "https://www.alibaba.com/",
+          image: "/images/campaigns/products/pdt_08.jpg",
+          label: "Conjunto de 7 recipientes de plástico sem BPA para cereais",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601040233188",
           platform: "alibaba",
         },
         {
