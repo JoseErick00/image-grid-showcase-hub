@@ -85,7 +85,8 @@ const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignPr
               target="_blank"
               rel="noopener noreferrer"
             >
-              Eu gosto, eu quero!
+              <span className="md:hidden">Eu quero!</span>
+              <span className="hidden md:inline">Eita, eu quero também!</span>
             </a>
           </Button>
           
