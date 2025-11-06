@@ -27,6 +27,7 @@ import BrasilIncriveis from "./pages/BrasilIncriveis";
 import BrasilTech from "./pages/BrasilTech";
 import BrasilKids from "./pages/BrasilKids";
 import BrasilCasaSelCozinha from "./pages/campaigns/BrasilCasaSelCozinha";
+import BrasilCasaSelSala from "./pages/campaigns/BrasilCasaSelSala";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
             <Route path="brasil/tech" element={<BrasilTech />} />
             <Route path="brasil/kids" element={<BrasilKids />} />
             <Route path="brasil/casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
+            <Route path="brasil/casa/sel-sala" element={<BrasilCasaSelSala />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
