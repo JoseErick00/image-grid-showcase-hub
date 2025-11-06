@@ -12,8 +12,8 @@ export const selCozinhaData: CampaignConfig = {
   
   navButtons: [
     { label: "Utensílios", targetId: "section1" },
-    { label: "Eletrodomésticos", targetId: "section2" },
-    { label: "Organização", targetId: "section3" }
+    { label: "Queremos!", targetId: "section2" },
+    { label: "+ Achados!", targetId: "section3" }
   ],
   
   sections: [
