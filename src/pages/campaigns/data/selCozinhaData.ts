@@ -2,7 +2,7 @@ import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCozinhaData: CampaignConfig = {
   pageTitle: "Seleção para Cozinha",
-  pageSubtitle: "Os melhores produtos para transformar sua cozinha",
+  pageSubtitle: "As novidades mais legais e os baratinhos e estilosos que estão a fim de ir para sua cozinha!",
   
   heroBanner: {
     desktop: "/images/campaigns/sel-cozinha-hero-desktop.jpg",
