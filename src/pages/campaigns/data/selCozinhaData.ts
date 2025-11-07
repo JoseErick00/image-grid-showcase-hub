@@ -27,37 +27,37 @@ export const selCozinhaData: CampaignConfig = {
       },
       products: [
         {
-          image: "/images/campaigns/sel-cozinha/pdt_01.jpg",
+          image: "/placeholder.svg",
           label: "Panela de barriga grande antiaderente, wok de cozinha chinesa com cabo de madeira",
           link: "https://s.click.aliexpress.com/e/_c39xdd0J",
           platform: "aliexpress",
         },
         {
-          image: "/images/campaigns/sel-cozinha/pdt_02.jpg",
+          image: "/placeholder.svg",
           label: "O cortador  e descascador de frutas e verduras mais comprado do momento",
           link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601414814345",
           platform: "alibaba",
         },
         {
-          image: "/images/campaigns/sel-cozinha/pdt_03.jpg",
+          image: "/placeholder.svg",
           label: "Batedor manual elétrico para todo tipo de bebidas.",
           link: "https://s.shopee.com.br/9AGYvOhADh",
           platform: "shopee",
         },
         {
-          image: "/images/campaigns/sel-cozinha/pdt_04.jpg",
+          image: "/placeholder.svg",
           label: "Essa batedeira SALVA VIDAS! Batedeira Elétrica de Mão110v",
           link: "https://amzn.to/3JLe7Jp",
           platform: "amazon",
         },
         {
-          image: "/images/campaigns/sel-cozinha/pdt_05.jpg",
+          image: "/placeholder.svg",
           label: "Moedor de Café 160W  - Philco",
           link: "https://amzn.to/4qIw6kh",
           platform: "amazon",
         },
         {
-          image: "/images/campaigns/sel-cozinha/pdt_06.jpg",
+          image: "/placeholder.svg",
           label: "Panela de arroz - Só quem tem sabe como é bom ter uma!",
           link: "https://s.shopee.com.br/2B6obSombw",
           platform: "shopee",
