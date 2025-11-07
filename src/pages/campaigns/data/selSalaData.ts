@@ -5,9 +5,9 @@ export const selSalaData: CampaignConfig = {
   pageSubtitle: "As novidades mais legais e os baratinhos e estilosos que estão a fim de ir para sua sala!",
   
   heroBanner: {
-    desktop: "/images/campaigns/sel-sala-hero-desktop.jpg",
-    tablet: "/images/campaigns/sel-sala-hero-tablet.jpg",
-    mobile: "/images/campaigns/sel-sala-hero-mobile.jpg",
+    desktop: "/images/campaigns/sel-sala-hero-desktop.jpg?v=2",
+    tablet: "/images/campaigns/sel-sala-hero-tablet.jpg?v=2",
+    mobile: "/images/campaigns/sel-sala-hero-mobile.jpg?v=2",
   },
   
   navButtons: [
@@ -20,9 +20,9 @@ export const selSalaData: CampaignConfig = {
     {
       id: "section1",
       promoBanner: {
-        desktop: "/images/campaigns/promo-banner-sala-01-desktop.jpg",
-        tablet: "/images/campaigns/promo-banner-sala-01-tablet.jpg",
-        mobile: "/images/campaigns/promo-banner-sala-01-mobile.jpg",
+        desktop: "/images/campaigns/promo-banner-sala-01-desktop.jpg?v=2",
+        tablet: "/images/campaigns/promo-banner-sala-01-tablet.jpg?v=2",
+        mobile: "/images/campaigns/promo-banner-sala-01-mobile.jpg?v=2",
         link: "https://amzn.to/497ZgmS",
       },
       products: [
@@ -67,9 +67,9 @@ export const selSalaData: CampaignConfig = {
     {
       id: "section2",
       promoBanner: {
-        desktop: "/images/campaigns/promo-banner-sala-02-desktop.jpg",
-        tablet: "/images/campaigns/promo-banner-sala-02-tablet.jpg",
-        mobile: "/images/campaigns/promo-banner-sala-02-mobile.jpg",
+        desktop: "/images/campaigns/promo-banner-sala-02-desktop.jpg?v=2",
+        tablet: "/images/campaigns/promo-banner-sala-02-tablet.jpg?v=2",
+        mobile: "/images/campaigns/promo-banner-sala-02-mobile.jpg?v=2",
         link: "https://s.click.aliexpress.com/e/_c4cA8C79",
       },
       products: [
