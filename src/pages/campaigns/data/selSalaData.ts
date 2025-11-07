@@ -75,7 +75,7 @@ export const selSalaData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-sala/pdt_07.jpg",
-          label: "O 'Tchan' da sua sala poser esse!",
+          label: "O 'Tchan' da sua sala pode ser esse!",
           link: "https://amzn.to/3WFxHd5",
           platform: "amazon",
         },
