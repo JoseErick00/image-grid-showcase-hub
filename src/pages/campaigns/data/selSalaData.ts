@@ -114,9 +114,9 @@ export const selSalaData: CampaignConfig = {
     {
       id: "section3",
       promoBanner: {
-        desktop: "/images/campaigns/promo-banner-sala-03-desktop.jpg",
-        tablet: "/images/campaigns/promo-banner-sala-03-tablet.jpg",
-        mobile: "/images/campaigns/promo-banner-sala-03-mobile.jpg",
+        desktop: "/images/campaigns/promo-banner-sala-03-desktop.jpg?v=3",
+        tablet: "/images/campaigns/promo-banner-sala-03-tablet.jpg?v=3",
+        mobile: "/images/campaigns/promo-banner-sala-03-mobile.jpg?v=3",
         link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601057773501",
       },
       products: [
