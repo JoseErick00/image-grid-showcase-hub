@@ -23,7 +23,7 @@ export const selSalaData: CampaignConfig = {
         desktop: "/images/campaigns/promo-banner-sala-01-desktop.jpg",
         tablet: "/images/campaigns/promo-banner-sala-01-tablet.jpg",
         mobile: "/images/campaigns/promo-banner-sala-01-mobile.jpg",
-        link: "https://amzn.to/placeholder",
+        link: "https://amzn.to/497ZgmS",
       },
       products: [
         {
@@ -70,7 +70,7 @@ export const selSalaData: CampaignConfig = {
         desktop: "/images/campaigns/promo-banner-sala-02-desktop.jpg",
         tablet: "/images/campaigns/promo-banner-sala-02-tablet.jpg",
         mobile: "/images/campaigns/promo-banner-sala-02-mobile.jpg",
-        link: "https://amzn.to/placeholder",
+        link: "https://s.click.aliexpress.com/e/_c4cA8C79",
       },
       products: [
         {
@@ -117,7 +117,7 @@ export const selSalaData: CampaignConfig = {
         desktop: "/images/campaigns/promo-banner-sala-03-desktop.jpg",
         tablet: "/images/campaigns/promo-banner-sala-03-tablet.jpg",
         mobile: "/images/campaigns/promo-banner-sala-03-mobile.jpg",
-        link: "https://amzn.to/placeholder",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601057773501",
       },
       products: [
         {
