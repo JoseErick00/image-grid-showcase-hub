@@ -725,7 +725,7 @@ const BrasilIncriveis = () => {
                 />
               </a>
               <a 
-                href="https://amzn.to/47fv0oq" 
+                href="https://amzn.to/49cm70B" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
@@ -753,7 +753,7 @@ const BrasilIncriveis = () => {
                 />
               </a>
               <a 
-                href="https://amzn.to/47fv0oq" 
+                href="https://amzn.to/49cm70B" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer overflow-hidden rounded-lg block"
