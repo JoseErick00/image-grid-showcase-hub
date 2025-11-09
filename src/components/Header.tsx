@@ -113,6 +113,7 @@ const Header = () => {
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
+                      onClick={() => setCasaDropdownOpen((prev) => !prev)}
                       onMouseEnter={(e) => {
                         if (!isActive(item.href) && !location.pathname.startsWith('/brasil/casa/')) {
                           e.currentTarget.style.backgroundColor = getHoverColor(item.name);
@@ -131,7 +132,9 @@ const Header = () => {
                     </button>
                     {casaDropdownOpen && (
                       <div 
-                        className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                        className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                        onMouseEnter={() => setCasaDropdownOpen(true)}
+                        onMouseLeave={() => setCasaDropdownOpen(false)}
                       >
                         {casaPages.map((page) => (
                           <Link
@@ -185,13 +188,16 @@ const Header = () => {
             >
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
+                onClick={() => setInfoDropdownOpen((prev) => !prev)}
               >
                 ineed Info
                 <ChevronDown size={16} />
               </button>
               {infoDropdownOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                  className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                  onMouseEnter={() => setInfoDropdownOpen(true)}
+                  onMouseLeave={() => setInfoDropdownOpen(false)}
                 >
                   {infoPages.map((page) => (
                     <Link
