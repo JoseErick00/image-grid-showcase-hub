@@ -7,6 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [countriesDropdownOpen, setCountriesDropdownOpen] = useState(false);
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
+  const [casaDropdownOpen, setCasaDropdownOpen] = useState(false);
   const location = useLocation();
 
   const isBrasilPage = location.pathname.startsWith('/brasil');
@@ -45,6 +46,11 @@ const Header = () => {
   const infoPages = [
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
+  ];
+
+  const casaPages = [
+    { name: "Seleção para Sala", href: "/brasil/casa/sel-sala" },
+    { name: "Seleção para Cozinha", href: "/brasil/casa/sel-cozinha" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -91,6 +97,58 @@ const Header = () => {
                 };
                 return colors[name] || "#fbfbfb";
               };
+
+              // Check if this is the Casa item for Brasil and should have a dropdown
+              if (item.name === "Casa" && isBrasilPage) {
+                return (
+                  <div 
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setCasaDropdownOpen(true)}
+                    onMouseLeave={() => setCasaDropdownOpen(false)}
+                  >
+                    <Link
+                      to={item.href}
+                      className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
+                        isActive(item.href) || location.pathname.startsWith('/brasil/casa/')
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-white"
+                      }`}
+                      onMouseEnter={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/casa/')) {
+                          e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                          e.currentTarget.style.color = "white";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/casa/')) {
+                          e.currentTarget.style.backgroundColor = "";
+                          e.currentTarget.style.color = "";
+                        }
+                      }}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} />
+                    </Link>
+                    {casaDropdownOpen && (
+                      <div 
+                        className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                      >
+                        {casaPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                            onClick={() => setCasaDropdownOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
 
               return (
                 <Link
@@ -186,6 +244,47 @@ const Header = () => {
                   };
                   return colors[name] || "#fbfbfb";
                 };
+
+                // Casa dropdown for mobile Brasil navigation
+                if (item.name === "Casa" && isBrasilPage) {
+                  return (
+                    <div key={item.name} className="px-2 py-1">
+                      <Link
+                        to={item.href}
+                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white block ${
+                          isActive(item.href) || location.pathname.startsWith('/brasil/casa/')
+                            ? "text-primary"
+                            : ""
+                        }`}
+                        style={{
+                          backgroundColor: isActive(item.href) || location.pathname.startsWith('/brasil/casa/') ? "" : getHoverColor(item.name)
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                        {casaPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                              isActive(page.href)
+                                ? "text-primary"
+                                : ""
+                            }`}
+                            style={{
+                              backgroundColor: isActive(page.href) ? "" : "#bf0100"
+                            }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
 
                 return (
                   <Link
