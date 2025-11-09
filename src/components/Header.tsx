@@ -107,8 +107,7 @@ const Header = () => {
                     onMouseEnter={() => setCasaDropdownOpen(true)}
                     onMouseLeave={() => setCasaDropdownOpen(false)}
                   >
-                    <Link
-                      to={item.href}
+                    <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
                         isActive(item.href) || location.pathname.startsWith('/brasil/casa/')
                           ? "text-primary"
@@ -129,7 +128,7 @@ const Header = () => {
                     >
                       {item.name}
                       <ChevronDown size={16} />
-                    </Link>
+                    </button>
                     {casaDropdownOpen && (
                       <div 
                         className="absolute top-full left-0 mt-1 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
@@ -138,7 +137,7 @@ const Header = () => {
                           <Link
                             key={page.name}
                             to={page.href}
-                            className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                            className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
                             onClick={() => setCasaDropdownOpen(false)}
                           >
                             {page.name}
@@ -179,10 +178,13 @@ const Header = () => {
 
 
             {/* ineed Info Dropdown */}
-            <div className="relative">
+            <div 
+              className="relative"
+              onMouseEnter={() => setInfoDropdownOpen(true)}
+              onMouseLeave={() => setInfoDropdownOpen(false)}
+            >
               <button
                 className="font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 text-muted-foreground hover:text-foreground flex items-center gap-1"
-                onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
               >
                 ineed Info
                 <ChevronDown size={16} />
@@ -195,7 +197,7 @@ const Header = () => {
                     <Link
                       key={page.name}
                       to={page.href}
-                      className="block px-4 py-2 text-sm font-omne-regular text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
                       onClick={() => setInfoDropdownOpen(false)}
                     >
                       {page.name}
