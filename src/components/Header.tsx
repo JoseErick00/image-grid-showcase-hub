@@ -49,6 +49,7 @@ const Header = () => {
   ];
 
   const casaPages = [
+    { name: "Coisas legais para Casa", href: "/brasil/casa" },
     { name: "Seleção para Sala", href: "/brasil/casa/sel-sala" },
     { name: "Seleção para Cozinha", href: "/brasil/casa/sel-cozinha" },
   ];
