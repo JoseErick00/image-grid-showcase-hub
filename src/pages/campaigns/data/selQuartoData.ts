@@ -5,9 +5,9 @@ export const selQuartoData: CampaignConfig = {
   pageSubtitle: "Descubra os melhores achados para deixar seu quarto ainda mais aconchegante!",
   
   heroBanner: {
-    desktop: "https://placehold.co/1200x250/e2e8f0/64748b?text=Hero+Banner+Desktop",
-    tablet: "https://placehold.co/800x250/e2e8f0/64748b?text=Hero+Banner+Tablet",
-    mobile: "https://placehold.co/600x250/e2e8f0/64748b?text=Hero+Banner+Mobile",
+    desktop: "/images/campaigns/sel-quarto-hero-desktop.jpg",
+    tablet: "/images/campaigns/sel-quarto-hero-tablet.jpg",
+    mobile: "/images/campaigns/sel-quarto-hero-mobile.jpg",
   },
   
   navButtons: [
