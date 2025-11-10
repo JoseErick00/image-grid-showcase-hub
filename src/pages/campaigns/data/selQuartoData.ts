@@ -20,10 +20,10 @@ export const selQuartoData: CampaignConfig = {
     {
       id: "section1",
       promoBanner: {
-        desktop: "https://placehold.co/1200x400/cbd5e1/475569?text=Promo+Banner+Desktop",
-        tablet: "https://placehold.co/800x400/cbd5e1/475569?text=Promo+Banner+Tablet",
-        mobile: "https://placehold.co/600x400/cbd5e1/475569?text=Promo+Banner+Mobile",
-        link: "https://example.com",
+        desktop: "/images/campaigns/sel-quarto-promo1-desktop.jpg",
+        tablet: "/images/campaigns/sel-quarto-promo1-tablet.jpg",
+        mobile: "/images/campaigns/sel-quarto-promo1-mobile.jpg",
+        link: "https://s.click.aliexpress.com/e/_c3nLigzp",
       },
       products: [
         {
@@ -67,10 +67,10 @@ export const selQuartoData: CampaignConfig = {
     {
       id: "section2",
       promoBanner: {
-        desktop: "https://placehold.co/1200x400/cbd5e1/475569?text=Promo+Banner+2+Desktop",
-        tablet: "https://placehold.co/800x400/cbd5e1/475569?text=Promo+Banner+2+Tablet",
-        mobile: "https://placehold.co/600x400/cbd5e1/475569?text=Promo+Banner+2+Mobile",
-        link: "https://example.com",
+        desktop: "/images/campaigns/sel-quarto-promo2-desktop.jpg",
+        tablet: "/images/campaigns/sel-quarto-promo2-tablet.jpg",
+        mobile: "/images/campaigns/sel-quarto-promo2-mobile.jpg",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601576976541",
       },
       products: [
         {
@@ -114,10 +114,10 @@ export const selQuartoData: CampaignConfig = {
     {
       id: "section3",
       promoBanner: {
-        desktop: "https://placehold.co/1200x400/cbd5e1/475569?text=Promo+Banner+3+Desktop",
-        tablet: "https://placehold.co/800x400/cbd5e1/475569?text=Promo+Banner+3+Tablet",
-        mobile: "https://placehold.co/600x400/cbd5e1/475569?text=Promo+Banner+3+Mobile",
-        link: "https://example.com",
+        desktop: "/images/campaigns/sel-quarto-promo3-desktop.jpg",
+        tablet: "/images/campaigns/sel-quarto-promo3-tablet.jpg",
+        mobile: "/images/campaigns/sel-quarto-promo3-mobile.jpg",
+        link: "https://amzn.to/47IjLUB",
       },
       products: [
         {
