@@ -156,8 +156,8 @@ export const selQuartoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-quarto/pdt_18.jpg",
           label: "Queremos! Fácil, bonito e útil!",
-          link: "https://s.click.aliexpress.com/e/_c3mgnH99",
-          platform: "aliexpress",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601491473637",
+          platform: "alibaba",
         },
       ],
     },
