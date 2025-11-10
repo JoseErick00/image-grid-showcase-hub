@@ -52,6 +52,7 @@ const Header = () => {
     { name: "Coisas legais para Casa", href: "/brasil/casa" },
     { name: "Seleção para Sala", href: "/brasil/casa/sel-sala" },
     { name: "Seleção para Cozinha", href: "/brasil/casa/sel-cozinha" },
+    { name: "Seleção para o Quarto", href: "/brasil/casa/sel-quarto" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
