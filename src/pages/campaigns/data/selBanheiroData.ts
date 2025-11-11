@@ -23,7 +23,7 @@ export const selBanheiroData: CampaignConfig = {
         desktop: "/images/campaigns/sel-banheiro-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-banheiro-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-banheiro-promo1-mobile.jpg",
-        link: "https://s.shopee.com.br/example1",
+        link: "https://s.click.aliexpress.com/e/_c3kF4GUb",
       },
       products: [
         {
@@ -70,7 +70,7 @@ export const selBanheiroData: CampaignConfig = {
         desktop: "/images/campaigns/sel-banheiro-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-banheiro-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-banheiro-promo2-mobile.jpg",
-        link: "https://amzn.to/example7",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601117254763",
       },
       products: [
         {
@@ -118,7 +118,7 @@ export const selBanheiroData: CampaignConfig = {
         desktop: "/images/campaigns/sel-banheiro-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-banheiro-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-banheiro-promo3-mobile.jpg",
-        link: "https://s.click.aliexpress.com/e/_example13",
+        link: "https://s.shopee.com.br/60Jgc15Y9p",
       },
       products: [
         {
