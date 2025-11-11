@@ -61,6 +61,7 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
             link={product.link}
             platform={product.platform}
             stamp={product.stamp}
+            position={index + 1}
           />
         ))}
       </div>

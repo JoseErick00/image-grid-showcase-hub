@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
 import { Share2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { trackProductClick, trackProductShare } from '@/utils/analytics';
 
 interface CampaignProductCardProps {
   image: string;
@@ -9,10 +10,16 @@ interface CampaignProductCardProps {
   link: string;
   platform: Platform;
   stamp?: string;
+  position?: number;
 }
 
-const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignProductCardProps) => {
+const CampaignProductCard = ({ image, label, link, platform, stamp, position }: CampaignProductCardProps) => {
+  const handleProductClick = () => {
+    trackProductClick({ label, platform, link, position });
+  };
   const handleShare = async () => {
+    trackProductShare({ label, platform, link });
+    
     try {
       const shareData = {
         title: label,
@@ -49,6 +56,7 @@ const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignPr
         target="_blank"
         rel="noopener noreferrer"
         className="block aspect-square overflow-hidden group relative"
+        onClick={handleProductClick}
       >
         {stamp && (
           <div className="absolute top-3 left-3 bg-[#171717] text-white px-3 py-1.5 rounded-md font-omne-medium text-xs z-10 shadow-lg">
@@ -84,6 +92,7 @@ const CampaignProductCard = ({ image, label, link, platform, stamp }: CampaignPr
               href={link}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleProductClick}
             >
               <span className="md:hidden">Eu quero!</span>
               <span className="hidden md:inline">Eita, eu quero também!</span>
