@@ -42,6 +42,10 @@ export interface CampaignConfig {
   };
   navButtons: [NavButton, NavButton, NavButton];
   sections: [Section, Section, Section];
+  backLink?: {
+    url: string;
+    label: string;
+  };
 }
 
 interface CampaignTemplateProps {
@@ -148,15 +152,15 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
             </button>
           </div>
 
-          {/* Back to Brasil Casa Button */}
+          {/* Back Button */}
           <Button
             variant="outline"
             className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
             asChild
           >
-            <Link to="/brasil/casa" className="flex items-center gap-2">
+            <Link to={config.backLink?.url || "/brasil/casa"} className="flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
-              Voltar para Brasil Casa
+              {config.backLink?.label || "Voltar para Brasil Casa"}
             </Link>
           </Button>
         </div>
