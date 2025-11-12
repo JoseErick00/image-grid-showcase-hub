@@ -8,6 +8,7 @@ const Header = () => {
   const [countriesDropdownOpen, setCountriesDropdownOpen] = useState(false);
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
   const [casaDropdownOpen, setCasaDropdownOpen] = useState(false);
+  const [esportesDropdownOpen, setEsportesDropdownOpen] = useState(false);
   const location = useLocation();
 
   const isBrasilPage = location.pathname.startsWith('/brasil');
@@ -54,6 +55,11 @@ const Header = () => {
     { name: "Seleção para Cozinha", href: "/brasil/casa/sel-cozinha" },
     { name: "Seleção para o Quarto", href: "/brasil/casa/sel-quarto" },
     { name: "Seleção para o Banheiro", href: "/brasil/casa/sel-banheiro" },
+  ];
+
+  const esportesPages = [
+    { name: "Coisas legais - Esportes", href: "/brasil/esportes" },
+    { name: "Seleção para Academia", href: "/brasil/esportes/sel-academia" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -145,6 +151,60 @@ const Header = () => {
                             to={page.href}
                             className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
                             onClick={() => setCasaDropdownOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              // Check if this is the Esportes item for Brasil and should have a dropdown
+              if (item.name === "Esportes" && isBrasilPage) {
+                return (
+                  <div 
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setEsportesDropdownOpen(true)}
+                    onMouseLeave={() => setEsportesDropdownOpen(false)}
+                  >
+                    <button
+                      className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
+                        isActive(item.href) || location.pathname.startsWith('/brasil/esportes/')
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-white"
+                      }`}
+                      onClick={() => setEsportesDropdownOpen((prev) => !prev)}
+                      onMouseEnter={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/esportes/')) {
+                          e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                          e.currentTarget.style.color = "white";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/esportes/')) {
+                          e.currentTarget.style.backgroundColor = "";
+                          e.currentTarget.style.color = "";
+                        }
+                      }}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} />
+                    </button>
+                    {esportesDropdownOpen && (
+                      <div 
+                        className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                        onMouseEnter={() => setEsportesDropdownOpen(true)}
+                        onMouseLeave={() => setEsportesDropdownOpen(false)}
+                      >
+                        {esportesPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
+                            onClick={() => setEsportesDropdownOpen(false)}
                           >
                             {page.name}
                           </Link>
@@ -286,6 +346,47 @@ const Header = () => {
                             }`}
                             style={{
                               backgroundColor: isActive(page.href) ? "" : "#bf0100"
+                            }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                // Esportes dropdown for mobile Brasil navigation
+                if (item.name === "Esportes" && isBrasilPage) {
+                  return (
+                    <div key={item.name} className="px-2 py-1">
+                      <Link
+                        to={item.href}
+                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white block ${
+                          isActive(item.href) || location.pathname.startsWith('/brasil/esportes/')
+                            ? "text-primary"
+                            : ""
+                        }`}
+                        style={{
+                          backgroundColor: isActive(item.href) || location.pathname.startsWith('/brasil/esportes/') ? "" : getHoverColor(item.name)
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                        {esportesPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                              isActive(page.href)
+                                ? "text-primary"
+                                : ""
+                            }`}
+                            style={{
+                              backgroundColor: isActive(page.href) ? "" : "#ed5603"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
