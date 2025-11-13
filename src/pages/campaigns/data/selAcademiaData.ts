@@ -13,9 +13,9 @@ export const selAcademiaData: CampaignConfig = {
     label: "Voltar para Brasil Esportes",
   },
   navButtons: [
-    { label: "Equipamentos", targetId: "section1" },
+    { label: "Queremos!", targetId: "section1" },
     { label: "Acessórios", targetId: "section2" },
-    { label: "Suplementos", targetId: "section3" },
+    { label: "+ Achados", targetId: "section3" },
   ],
   sections: [
     {
