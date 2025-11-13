@@ -24,7 +24,7 @@ export const selAcademiaData: CampaignConfig = {
         desktop: "/images/campaigns/sel-academia/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-academia/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-academia/promo1-mobile.jpg",
-        link: "https://s.shopee.com.br/example1",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601030741599",
       },
       products: [
         {
@@ -71,7 +71,7 @@ export const selAcademiaData: CampaignConfig = {
         desktop: "/images/campaigns/sel-academia/promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-academia/promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-academia/promo2-mobile.jpg",
-        link: "https://s.shopee.com.br/example2",
+        link: "https://s.shopee.com.br/70CFWudhU9",
       },
       products: [
         {
@@ -118,7 +118,7 @@ export const selAcademiaData: CampaignConfig = {
         desktop: "/images/campaigns/sel-academia/promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-academia/promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-academia/promo3-mobile.jpg",
-        link: "https://s.shopee.com.br/example3",
+        link: "https://amzn.to/48aearu",
       },
       products: [
         {
