@@ -20,9 +20,9 @@ export const selBanheiroData: CampaignConfig = {
     {
       id: "section1",
       promoBanner: {
-        desktop: "/images/campaigns/sel-banheiro-promo1-desktop.jpg?v=1",
-        tablet: "/images/campaigns/sel-banheiro-promo1-tablet.jpg?v=1",
-        mobile: "/images/campaigns/sel-banheiro-promo1-mobile.jpg?v=1",
+        desktop: "/images/campaigns/sel-banheiro-promo1-desktop.jpg?v=2",
+        tablet: "/images/campaigns/sel-banheiro-promo1-tablet.jpg?v=2",
+        mobile: "/images/campaigns/sel-banheiro-promo1-mobile.jpg?v=2",
         link: "https://s.click.aliexpress.com/e/_c3kF4GUb",
       },
       products: [
