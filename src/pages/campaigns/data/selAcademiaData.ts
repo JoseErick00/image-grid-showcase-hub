@@ -4,9 +4,9 @@ export const selAcademiaData: CampaignConfig = {
   pageTitle: "Seleção para Academia",
   pageSubtitle: "Os melhores produtos para turbinar seu treino e deixar sua academia em casa ainda mais completa!",
   heroBanner: {
-    desktop: "/images/campaigns/sel-academia/hero-banner-desktop.jpg",
-    tablet: "/images/campaigns/sel-academia/hero-banner-tablet.jpg",
-    mobile: "/images/campaigns/sel-academia/hero-banner-mobile.jpg",
+    desktop: "/images/campaigns/sel-academia-hero-desktop.jpg",
+    tablet: "/images/campaigns/sel-academia-hero-tablet.jpg",
+    mobile: "/images/campaigns/sel-academia-hero-mobile.jpg",
   },
   backLink: {
     url: "/brasil/esportes",
