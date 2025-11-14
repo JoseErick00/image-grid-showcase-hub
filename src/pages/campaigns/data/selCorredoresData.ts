@@ -132,7 +132,7 @@ export const selCorredoresData: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-corredores/pdt_14.jpg",
-          label: "Para caminhas sem agonizar!",
+          label: "Para caminhar sem agonizar!",
           link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601203660948",
           platform: "alibaba",
         },
