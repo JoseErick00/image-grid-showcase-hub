@@ -60,6 +60,7 @@ const Header = () => {
   const esportesPages = [
     { name: "Coisas legais - Esportes", href: "/brasil/esportes" },
     { name: "Seleção para Academia", href: "/brasil/esportes/sel-academia" },
+    { name: "Seleção para Corredores", href: "/brasil/esportes/sel-corredores" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
