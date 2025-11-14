@@ -24,7 +24,7 @@ export const selCorredoresData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corredores/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-corredores/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-corredores/promo1-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601030741599",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601299219182",
       },
       products: [
         {
@@ -72,7 +72,7 @@ export const selCorredoresData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corredores/promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-corredores/promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-corredores/promo2-mobile.jpg",
-        link: "https://s.shopee.com.br/70CFWudhU9",
+        link: "https://s.click.aliexpress.com/e/_c34XmNvp",
       },
       products: [
         {
@@ -120,7 +120,7 @@ export const selCorredoresData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corredores/promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-corredores/promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-corredores/promo3-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600495527688",
+        link: "https://s.shopee.com.br/5AkeA3MtCH",
       },
       products: [
         {
