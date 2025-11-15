@@ -24,7 +24,7 @@ export const selAquaticosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-aquaticos/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-aquaticos/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-aquaticos/promo1-mobile.jpg",
-        link: "https://s.shopee.com.br/placeholder",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601442798359",
       },
       products: [
         {
@@ -72,7 +72,7 @@ export const selAquaticosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-aquaticos/promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-aquaticos/promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-aquaticos/promo2-mobile.jpg",
-        link: "https://s.shopee.com.br/placeholder7",
+        link: "https://amzn.to/3M3Qc8L",
       },
       products: [
         {
@@ -120,7 +120,7 @@ export const selAquaticosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-aquaticos/promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-aquaticos/promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-aquaticos/promo3-mobile.jpg",
-        link: "https://s.shopee.com.br/placeholder13",
+        link: "https://s.click.aliexpress.com/e/_c4L2ZDJr",
       },
       products: [
         {
