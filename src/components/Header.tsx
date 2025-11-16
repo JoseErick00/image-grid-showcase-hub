@@ -62,6 +62,7 @@ const Header = () => {
     { name: "Seleção para Academia", href: "/brasil/esportes/sel-academia" },
     { name: "Seleção para Corredores", href: "/brasil/esportes/sel-corredores" },
     { name: "Seleção - Aquáticos", href: "/brasil/esportes/sel-aquaticos" },
+    { name: "Seleção - Time em Campo", href: "/brasil/esportes/sel-time-campo" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
