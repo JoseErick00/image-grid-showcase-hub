@@ -33,6 +33,7 @@ import BrasilCasaSelBanheiro from "./pages/campaigns/BrasilCasaSelBanheiro";
 import BrasilEsportesSelAcademia from "./pages/campaigns/BrasilEsportesSelAcademia";
 import BrasilEsportesSelCorredores from "./pages/campaigns/BrasilEsportesSelCorredores";
 import BrasilEsportesSelAquaticos from "./pages/campaigns/BrasilEsportesSelAquaticos";
+import BrasilEsportesSelTimeCampo from "./pages/campaigns/BrasilEsportesSelTimeCampo";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -72,6 +73,7 @@ const App = () => (
             <Route path="brasil/esportes/sel-academia" element={<BrasilEsportesSelAcademia />} />
             <Route path="brasil/esportes/sel-corredores" element={<BrasilEsportesSelCorredores />} />
             <Route path="brasil/esportes/sel-aquaticos" element={<BrasilEsportesSelAquaticos />} />
+            <Route path="brasil/esportes/sel-time-campo" element={<BrasilEsportesSelTimeCampo />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
