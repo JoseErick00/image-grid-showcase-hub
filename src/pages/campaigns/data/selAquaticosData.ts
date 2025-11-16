@@ -13,9 +13,9 @@ export const selAquaticosData: CampaignConfig = {
     label: "Voltar para Brasil Esportes",
   },
   navButtons: [
-    { label: "Natação", targetId: "section1" },
-    { label: "Mergulho", targetId: "section2" },
-    { label: "Acessórios", targetId: "section3" },
+    { label: "Novinhos", targetId: "section1" },
+    { label: "Pranchas e +", targetId: "section2" },
+    { label: "Vai + fundo!", targetId: "section3" },
   ],
   sections: [
     {
