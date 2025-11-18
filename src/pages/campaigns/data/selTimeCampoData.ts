@@ -13,9 +13,9 @@ export const selTimeCampoData: CampaignConfig = {
     label: "Voltar para Brasil Esportes",
   },
   navButtons: [
-    { label: "Futebol", targetId: "section1" },
-    { label: "Vôlei", targetId: "section2" },
-    { label: "Acessórios", targetId: "section3" },
+    { label: "Bem legais!", targetId: "section1" },
+    { label: "Queremos!", targetId: "section2" },
+    { label: "+ Novidades", targetId: "section3" },
   ],
   sections: [
     {
@@ -123,7 +123,7 @@ export const selTimeCampoData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-time-campo/pdt_13.jpg",
-          label: "Um kit para jogas vôlei na piscina",
+          label: "Um kit para jogar vôlei na piscina",
           link: "https://amzn.to/49UnVeQ",
           platform: "amazon",
         },
