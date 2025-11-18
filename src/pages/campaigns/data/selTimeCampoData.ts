@@ -26,7 +26,32 @@ export const selTimeCampoData: CampaignConfig = {
         mobile: "/images/campaigns/sel-time-campo/promo1-mobile.jpg",
         link: "https://s.click.aliexpress.com/e/_c4L2ZDJr",
       },
-      products: [],
+      products: [
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_01.jpg",
+          label: "Angry - Bola de Basquete.",
+          link: "https://s.click.aliexpress.com/e/_c4WncS5r",
+          platform: "aliexpress",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_03.jpg",
+          label: "MUNEFE Rede de treinamento de futebol",
+          link: "https://amzn.to/3M6jdAI",
+          platform: "amazon",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_06.jpg",
+          label: "Uma seleção de chuteiras na Shopee!",
+          link: "https://s.shopee.com.br/1qUIbe4njZ",
+          platform: "shopee",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_07.jpg",
+          label: "Essa de futebol society também na Shopee.",
+          link: "https://s.shopee.com.br/8AOMACbGTI",
+          platform: "shopee",
+        },
+      ],
     },
     {
       id: "section2",
@@ -36,7 +61,26 @@ export const selTimeCampoData: CampaignConfig = {
         mobile: "/images/campaigns/sel-time-campo/promo2-mobile.jpg",
         link: "https://amzn.to/3M3Qc8L",
       },
-      products: [],
+      products: [
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_04.jpg",
+          label: "Conjunto portátil ajustável para vôlei de praia.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601031806385",
+          platform: "alibaba",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_05.jpg",
+          label: "Bola de vôlei de alta qualidade no precinho!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600975553391",
+          platform: "alibaba",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_08.jpg",
+          label: "Rede volei 9,5m praia e quadra - Profissional",
+          link: "https://s.shopee.com.br/2VjzPemwEh",
+          platform: "shopee",
+        },
+      ],
     },
     {
       id: "section3",
@@ -46,7 +90,26 @@ export const selTimeCampoData: CampaignConfig = {
         mobile: "/images/campaigns/sel-time-campo/promo3-mobile.jpg",
         link: "https://amzn.to/4i4k2pL",
       },
-      products: [],
+      products: [
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_02.jpg",
+          label: "Kit tenis de mesa Vollo - Retrátil+Rede VT805",
+          link: "https://amzn.to/4i1UfOO",
+          platform: "amazon",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_09.jpg",
+          label: "Caixa de basquete de nylon com moldura.",
+          link: "https://s.shopee.com.br/3fvwoNTszV",
+          platform: "shopee",
+        },
+        {
+          image: "/images/campaigns/sel-time-campo/pdt_10.jpg",
+          label: "Vollo Raquete de tênis de mesa.",
+          link: "https://amzn.to/4i5CyOk",
+          platform: "amazon",
+        },
+      ],
     },
   ],
 };
