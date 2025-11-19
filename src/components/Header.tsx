@@ -9,6 +9,7 @@ const Header = () => {
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
   const [casaDropdownOpen, setCasaDropdownOpen] = useState(false);
   const [esportesDropdownOpen, setEsportesDropdownOpen] = useState(false);
+  const [saudeDropdownOpen, setSaudeDropdownOpen] = useState(false);
   const location = useLocation();
 
   const isBrasilPage = location.pathname.startsWith('/brasil');
@@ -63,6 +64,11 @@ const Header = () => {
     { name: "Seleção para Corredores", href: "/brasil/esportes/sel-corredores" },
     { name: "Seleção - Aquáticos", href: "/brasil/esportes/sel-aquaticos" },
     { name: "Seleção - Time em Campo", href: "/brasil/esportes/sel-time-campo" },
+  ];
+
+  const saudePages = [
+    { name: "Coisas legais para saúde", href: "/brasil/saude" },
+    { name: "Seleção - Cuidado com o rosto", href: "/brasil/saude/sel-cuidado-rosto" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -208,6 +214,60 @@ const Header = () => {
                             to={page.href}
                             className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
                             onClick={() => setEsportesDropdownOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              // Check if this is the Saúde item for Brasil and should have a dropdown
+              if (item.name === "Saúde" && isBrasilPage) {
+                return (
+                  <div 
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setSaudeDropdownOpen(true)}
+                    onMouseLeave={() => setSaudeDropdownOpen(false)}
+                  >
+                    <button
+                      className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
+                        isActive(item.href) || location.pathname.startsWith('/brasil/saude/')
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-white"
+                      }`}
+                      onClick={() => setSaudeDropdownOpen((prev) => !prev)}
+                      onMouseEnter={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/saude/')) {
+                          e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                          e.currentTarget.style.color = "white";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/saude/')) {
+                          e.currentTarget.style.backgroundColor = "";
+                          e.currentTarget.style.color = "";
+                        }
+                      }}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} />
+                    </button>
+                    {saudeDropdownOpen && (
+                      <div 
+                        className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                        onMouseEnter={() => setSaudeDropdownOpen(true)}
+                        onMouseLeave={() => setSaudeDropdownOpen(false)}
+                      >
+                        {saudePages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
+                            onClick={() => setSaudeDropdownOpen(false)}
                           >
                             {page.name}
                           </Link>
@@ -390,6 +450,47 @@ const Header = () => {
                             }`}
                             style={{
                               backgroundColor: isActive(page.href) ? "" : "#ed5603"
+                            }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                // Saúde dropdown for mobile Brasil navigation
+                if (item.name === "Saúde" && isBrasilPage) {
+                  return (
+                    <div key={item.name} className="px-2 py-1">
+                      <Link
+                        to={item.href}
+                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white block ${
+                          isActive(item.href) || location.pathname.startsWith('/brasil/saude/')
+                            ? "text-primary"
+                            : ""
+                        }`}
+                        style={{
+                          backgroundColor: isActive(item.href) || location.pathname.startsWith('/brasil/saude/') ? "" : getHoverColor(item.name)
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                        {saudePages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                              isActive(page.href)
+                                ? "text-primary"
+                                : ""
+                            }`}
+                            style={{
+                              backgroundColor: isActive(page.href) ? "" : "#d8ad00"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
