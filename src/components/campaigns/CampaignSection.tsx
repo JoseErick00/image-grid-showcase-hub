@@ -33,7 +33,7 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
         href={promoBanner.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full mb-8 group"
+        className="block w-full mb-8 group max-w-[1200px] mx-auto rounded-lg overflow-hidden"
       >
         <picture>
           <source media="(min-width: 1024px)" srcSet={promoBanner.desktop} />
@@ -41,7 +41,7 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
           <img
             src={promoBanner.mobile}
             alt="Promo Banner"
-            className="w-full h-[400px] sm:h-[500px] lg:h-[500px] max-w-[1200px] mx-auto object-contain rounded-lg group-hover:opacity-90 transition-opacity"
+            className="w-full h-[400px] sm:h-[500px] lg:h-[500px] object-cover group-hover:opacity-90 transition-opacity"
           />
         </picture>
       </a>
