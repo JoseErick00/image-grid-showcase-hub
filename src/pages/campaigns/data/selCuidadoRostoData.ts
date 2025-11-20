@@ -131,21 +131,21 @@ export const selCuidadoRostoData: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-cuidado-rosto/pdt_14.jpg",
-          label: "Para manchas escuras e melasmas.",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601600010676",
-          platform: "alibaba",
-        },
-        {
-          image: "/images/campaigns/sel-cuidado-rosto/pdt_15.jpg",
-          label: "Produto 15",
-          link: "#",
+          label: "Rolo de gelo massageador.",
+          link: "https://s.shopee.com.br/6pt28PtBCK",
           platform: "shopee",
         },
         {
+          image: "/images/campaigns/sel-cuidado-rosto/pdt_15.jpg",
+          label: "Máscara facial Detox.",
+          link: "https://amzn.to/48bRiqE",
+          platform: "amazon",
+        },
+        {
           image: "/images/campaigns/sel-cuidado-rosto/pdt_16.jpg",
-          label: "Produto 16",
-          link: "#",
-          platform: "aliexpress",
+          label: "Tratamento completo para manchas escuras.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601600010676",
+          platform: "alibaba",
         },
         {
           image: "/images/campaigns/sel-cuidado-rosto/pdt_17.jpg",
