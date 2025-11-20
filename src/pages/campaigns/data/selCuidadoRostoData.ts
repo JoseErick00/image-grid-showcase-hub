@@ -24,7 +24,7 @@ export const selCuidadoRostoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cuidado-rosto/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-cuidado-rosto/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-cuidado-rosto/promo1-mobile.jpg",
-        link: "#",
+        link: "https://s.click.aliexpress.com/e/_c3z8K8XJ",
       },
       products: [
         {
@@ -71,7 +71,7 @@ export const selCuidadoRostoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cuidado-rosto/promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-cuidado-rosto/promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-cuidado-rosto/promo2-mobile.jpg",
-        link: "#",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600464137710",
       },
       products: [
         {
@@ -118,7 +118,7 @@ export const selCuidadoRostoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cuidado-rosto/promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-cuidado-rosto/promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-cuidado-rosto/promo3-mobile.jpg",
-        link: "#",
+        link: "https://s.click.aliexpress.com/e/_c3AF7QGh",
       },
       products: [
         {
