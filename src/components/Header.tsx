@@ -69,6 +69,7 @@ const Header = () => {
   const saudePages = [
     { name: "Coisas legais para saúde", href: "/brasil/saude" },
     { name: "Seleção - Cuidado com o rosto", href: "/brasil/saude/sel-cuidado-rosto" },
+    { name: "Seleção para o Corpo", href: "/brasil/saude/sel-corpo" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
