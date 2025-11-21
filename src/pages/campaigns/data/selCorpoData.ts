@@ -38,39 +38,41 @@ export const selCorpoData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-corpo/pdt_01.jpg",
-          label: "Produto 1 - Hidratação corporal",
-          link: "#",
-          platform: "amazon"
+          label: "Para perder peso, cólicas e constipação.",
+          link: "https://s.click.aliexpress.com/e/_c4NygiQl",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_02.jpg",
-          label: "Produto 2 - Creme hidratante",
-          link: "#",
-          platform: "aliexpress"
+          label: "Esse ventilador portátil vai salvar sua vida.",
+          link: "https://amzn.to/4iaG0r3",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_03.jpg",
-          label: "Produto 3 - Óleo corporal",
-          link: "#",
+          label: "Depilador 4EM1 da Shopee.",
+          link: "https://s.shopee.com.br/gIQZEuO5l",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_04.jpg",
-          label: "Produto 4 - Loção corporal",
-          link: "#",
-          platform: "shopee"
+          label: "Massageador para os olhos super barato!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601491157281",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_05.jpg",
-          label: "Produto 5 - Manteiga corporal",
-          link: "#",
+          label: "Novidade fofa para aliviar as cólicas menstruais!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600767273549",
           platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_06.jpg",
-          label: "Produto 6 - Kit hidratação",
-          link: "#",
-          platform: "amazon"
+          label: "Conjunto de ventosas a vácuo.",
+          link: "https://s.click.aliexpress.com/e/_c4TnTRcN",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         }
       ]
     },
@@ -85,27 +87,28 @@ export const selCorpoData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-corpo/pdt_07.jpg",
-          label: "Produto 7 - Massageador",
-          link: "#",
-          platform: "aliexpress"
+          label: "Cintos de tonificação corporal.",
+          link: "https://s.click.aliexpress.com/e/_c2IRYyIH",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_08.jpg",
-          label: "Produto 8 - Rolo massageador",
-          link: "#",
-          platform: "shopee"
+          label: "Promete clarear a pele em 3 dias!",
+          link: "https://s.click.aliexpress.com/e/_c4eIsUFn",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_09.jpg",
-          label: "Produto 9 - Massageador elétrico",
-          link: "#",
-          platform: "amazon"
+          label: "Kit original ant-manchas da Principia na Shopee.!",
+          link: "https://s.shopee.com.br/50RPn5zKeR",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_10.jpg",
-          label: "Produto 10 - Kit massagem",
-          link: "#",
-          platform: "aliexpress"
+          label: "Isso relaxa muiiito!!",
+          link: "https://amzn.to/4ofiRFr",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_11.jpg",
