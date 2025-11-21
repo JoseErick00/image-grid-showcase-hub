@@ -33,7 +33,7 @@ export const selCorpoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corpo-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-corpo-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-corpo-promo1-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c3rBZ2Zb"
       },
       products: [
         {
@@ -80,7 +80,7 @@ export const selCorpoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corpo-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-corpo-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-corpo-promo2-mobile.jpg",
-        link: "#"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601004488017"
       },
       products: [
         {
@@ -127,7 +127,7 @@ export const selCorpoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corpo-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-corpo-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-corpo-promo3-mobile.jpg",
-        link: "#"
+        link: "https://s.shopee.com.br/8AOR1aH1FF"
       },
       products: [
         {
