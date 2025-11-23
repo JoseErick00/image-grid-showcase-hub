@@ -14,15 +14,15 @@ export const selCorpoData: CampaignConfig = {
   },
   navButtons: [
     {
-      label: "Hidratação",
+      label: "Necessários!",
       targetId: "hidratacao"
     },
     {
-      label: "Massagem",
+      label: "Queremos.",
       targetId: "massagem"
     },
     {
-      label: "Tratamentos",
+      label: "+ Para o corpo",
       targetId: "tratamentos"
     }
   ],
