@@ -112,14 +112,14 @@ export const selCorpoData: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_11.jpg",
-          label: "Produto 11 - Aparelho de massagem",
-          link: "#",
-          platform: "alibaba"
+          label: "Esse é para quem se movimenta muito!",
+          link: "https://amzn.to/3KjBuKo",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_12.jpg",
-          label: "Produto 12 - Massageador profissional",
-          link: "#",
+          label: "Kit necessário para um banho completo!",
+          link: "https://amzn.to/4ryzOh9",
           platform: "amazon"
         }
       ]
