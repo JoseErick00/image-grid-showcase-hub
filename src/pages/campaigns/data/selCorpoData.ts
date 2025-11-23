@@ -135,38 +135,39 @@ export const selCorpoData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-corpo/pdt_13.jpg",
-          label: "Produto 13 - Esfoliante corporal",
-          link: "#",
+          label: "Uma camiseta para perda de peso.",
+          link: "https://s.click.aliexpress.com/e/_c2wyCFoZ",
           platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_14.jpg",
-          label: "Produto 14 - Redutor de medidas",
-          link: "#",
-          platform: "shopee"
+          label: "Olha o preço de salvar o joelho.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601580221145",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_15.jpg",
-          label: "Produto 15 - Tratamento anticelulite",
-          link: "#",
-          platform: "amazon"
+          label: "Estimulador inteligente de emagrecimento",
+          link: "https://s.click.aliexpress.com/e/_c3YKv0hn",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_16.jpg",
-          label: "Produto 16 - Creme firmador",
-          link: "#",
-          platform: "alibaba"
+          label: "Não precisa de tratamentos muito caros.",
+          link: "https://s.click.aliexpress.com/e/_c3ub7ilR",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_17.jpg",
-          label: "Produto 17 - Gel modelador",
-          link: "#",
-          platform: "alibaba"
+          label: "Corretor de Postura Inteligente - Unissex",
+          link: "https://amzn.to/3XISxIT",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-corpo/pdt_18.jpg",
-          label: "Produto 18 - Kit tratamento completo",
-          link: "#",
+          label: "Balança digital corporal com aplicativo",
+          link: "https://amzn.to/4iiZLwH",
           platform: "amazon"
         }
       ]
