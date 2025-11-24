@@ -2,7 +2,7 @@ import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCremesGringosData: CampaignConfig = {
   pageTitle: "Seleção de cremes 'Gringos'",
-  pageSubtitle: "Os melhores cremes importados do mundo para sua pele",
+  pageSubtitle: "Uma seleção de achados para deixar você sem desculpas de não ter dinheiro para cuidar da sua pele!",
   heroBanner: {
   desktop: "/images/campaigns/sel-cremes-hero-desktop.jpg",
     tablet: "/images/campaigns/sel-cremes-hero-tablet.jpg",
