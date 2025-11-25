@@ -10,6 +10,7 @@ const Header = () => {
   const [casaDropdownOpen, setCasaDropdownOpen] = useState(false);
   const [esportesDropdownOpen, setEsportesDropdownOpen] = useState(false);
   const [saudeDropdownOpen, setSaudeDropdownOpen] = useState(false);
+  const [incriveisDropdownOpen, setIncriveisDropdownOpen] = useState(false);
   const location = useLocation();
 
   const isBrasilPage = location.pathname.startsWith('/brasil');
@@ -71,6 +72,11 @@ const Header = () => {
     { name: "Seleção - Cuidado com o rosto", href: "/brasil/saude/sel-cuidado-rosto" },
     { name: "Seleção para o Corpo", href: "/brasil/saude/sel-corpo" },
     { name: "Seleção de cremes 'Gringos'", href: "/brasil/saude/sel-cremes-gringos" },
+  ];
+
+  const incriveisPages = [
+    { name: "Achados incríveis da internet", href: "/brasil/incriveis" },
+    { name: "Seleção para acampamentos", href: "/brasil/incriveis/sel-acampamentos" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -270,6 +276,60 @@ const Header = () => {
                             to={page.href}
                             className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
                             onClick={() => setSaudeDropdownOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              // Check if this is the Incríveis item for Brasil and should have a dropdown
+              if (item.name === "Incríveis" && isBrasilPage) {
+                return (
+                  <div 
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setIncriveisDropdownOpen(true)}
+                    onMouseLeave={() => setIncriveisDropdownOpen(false)}
+                  >
+                    <button
+                      className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
+                        isActive(item.href) || location.pathname.startsWith('/brasil/incriveis/')
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-white"
+                      }`}
+                      onClick={() => setIncriveisDropdownOpen((prev) => !prev)}
+                      onMouseEnter={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/incriveis/')) {
+                          e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                          e.currentTarget.style.color = "white";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/incriveis/')) {
+                          e.currentTarget.style.backgroundColor = "";
+                          e.currentTarget.style.color = "";
+                        }
+                      }}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} />
+                    </button>
+                    {incriveisDropdownOpen && (
+                      <div 
+                        className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                        onMouseEnter={() => setIncriveisDropdownOpen(true)}
+                        onMouseLeave={() => setIncriveisDropdownOpen(false)}
+                      >
+                        {incriveisPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
+                            onClick={() => setIncriveisDropdownOpen(false)}
                           >
                             {page.name}
                           </Link>
@@ -493,6 +553,47 @@ const Header = () => {
                             }`}
                             style={{
                               backgroundColor: isActive(page.href) ? "" : "#d8ad00"
+                            }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                // Incríveis dropdown for mobile Brasil navigation
+                if (item.name === "Incríveis" && isBrasilPage) {
+                  return (
+                    <div key={item.name} className="px-2 py-1">
+                      <Link
+                        to={item.href}
+                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white block ${
+                          isActive(item.href) || location.pathname.startsWith('/brasil/incriveis/')
+                            ? "text-primary"
+                            : ""
+                        }`}
+                        style={{
+                          backgroundColor: isActive(item.href) || location.pathname.startsWith('/brasil/incriveis/') ? "" : getHoverColor(item.name)
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                        {incriveisPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                              isActive(page.href)
+                                ? "text-primary"
+                                : ""
+                            }`}
+                            style={{
+                              backgroundColor: isActive(page.href) ? "" : "#5cc801"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
