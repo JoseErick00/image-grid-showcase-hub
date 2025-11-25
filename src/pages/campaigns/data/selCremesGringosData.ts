@@ -33,7 +33,7 @@ export const selCremesGringosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cremes-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-cremes-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-cremes-promo1-mobile.jpg",
-        link: "https://s.click.aliexpress.com/e/_c3rBZ2Zb"
+        link: "https://s.click.aliexpress.com/e/_c4mcjuj7"
       },
       products: [
         {
@@ -82,7 +82,7 @@ export const selCremesGringosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cremes-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-cremes-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-cremes-promo2-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601004488017"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000035424468"
       },
       products: [
         {
@@ -130,7 +130,7 @@ export const selCremesGringosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cremes-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-cremes-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-cremes-promo3-mobile.jpg",
-        link: "https://s.shopee.com.br/8AOR1aH1FF"
+        link: "https://amzn.to/4ohRp9Y"
       },
       products: [
         {
