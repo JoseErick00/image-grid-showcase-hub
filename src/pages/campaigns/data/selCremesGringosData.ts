@@ -38,41 +38,40 @@ export const selCremesGringosData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-cremes/pdt_01.jpg",
-          label: "Creme hidratante premium importado",
-          link: "https://s.click.aliexpress.com/e/_c4NygiQl",
-          platform: "aliexpress",
+          label: "Seda Hidrolisada, Sericina Hidrolisada e Colágeno Humano.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601481815117",
+          platform: "alibaba",
           stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_02.jpg",
-          label: "Sérum facial intensivo",
-          link: "https://amzn.to/4iaG0r3",
-          platform: "amazon"
+          label: "Tratamento de clareamento completo bem barato.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000035415600",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_03.jpg",
-          label: "Gel hidratante coreano",
-          link: "https://s.shopee.com.br/gIQZEuO5l",
-          platform: "shopee"
+          label: "Sadoer - Soro antienvelhecimento",
+          link: "https://s.click.aliexpress.com/e/_c3JF486p",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_04.jpg",
-          label: "Creme de dia protetor",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601491157281",
-          platform: "alibaba"
+          label: "5 pçs/set BIOAQUA Colágeno de Caracol.",
+          link: "https://s.click.aliexpress.com/e/_c33ktq2h",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_05.jpg",
-          label: "Loção corporal nutritiva",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600767273549",
-          platform: "alibaba"
+          label: "Mais um conjunto com preço legal para homens.",
+          link: "https://s.click.aliexpress.com/e/_c3HCYtyh",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_06.jpg",
-          label: "Creme para mãos premium",
-          link: "https://s.click.aliexpress.com/e/_c4TnTRcN",
-          platform: "aliexpress",
-          stamp: "Frete Grátis!"
+          label: "Retinol + Colágeno natural bem em conta!",
+          link: "https://s.click.aliexpress.com/e/_c3s0ZfnB",
+          platform: "aliexpress"
         }
       ]
     },
@@ -87,27 +86,26 @@ export const selCremesGringosData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-cremes/pdt_07.jpg",
-          label: "Creme anti-rugas profissional",
-          link: "https://s.click.aliexpress.com/e/_c2IRYyIH",
-          platform: "aliexpress",
-          stamp: "Frete Grátis!"
-        },
-        {
-          image: "/images/campaigns/sel-cremes/pdt_08.jpg",
-          label: "Sérum de retinol concentrado",
-          link: "https://s.click.aliexpress.com/e/_c4eIsUFn",
-          platform: "aliexpress"
-        },
-        {
-          image: "/images/campaigns/sel-cremes/pdt_09.jpg",
-          label: "Creme de colágeno japonês",
-          link: "https://s.shopee.com.br/50RPn5zKeR",
+          label: "Melhore a potência dos cremes com essa máscara.",
+          link: "https://s.shopee.com.br/qbwbn2VxY",
           platform: "shopee"
         },
         {
+          image: "/images/campaigns/sel-cremes/pdt_08.jpg",
+          label: "Tem esse kit também na Shopee.",
+          link: "https://s.shopee.com.br/50RVZmDlr2",
+          platform: "shopee"
+        },
+        {
+          image: "/images/campaigns/sel-cremes/pdt_09.jpg",
+          label: "ISDIN Sérum Facial Clareador Anti-Idade",
+          link: "https://amzn.to/3XMLrD8",
+          platform: "amazon"
+        },
+        {
           image: "/images/campaigns/sel-cremes/pdt_10.jpg",
-          label: "Tratamento firmador facial",
-          link: "https://amzn.to/4ofiRFr",
+          label: "Kit skincare vitamina C baratíssimo!",
+          link: "https://amzn.to/3JTKPIT",
           platform: "amazon"
         },
         {
