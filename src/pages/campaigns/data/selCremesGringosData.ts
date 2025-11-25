@@ -110,14 +110,14 @@ export const selCremesGringosData: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_11.jpg",
-          label: "Creme para área dos olhos",
-          link: "https://amzn.to/3KjBuKo",
-          platform: "amazon"
+          label: "Conjunto muito barato!",
+          link: "https://s.click.aliexpress.com/e/_c4CsTPz7",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_12.jpg",
-          label: "Máscara facial rejuvenescedora",
-          link: "https://amzn.to/4ryzOh9",
+          label: "NOVO: Kit Cuidado Facial - Proper Jack",
+          link: "https://amzn.to/3JUFdhz",
           platform: "amazon"
         }
       ]
@@ -133,40 +133,41 @@ export const selCremesGringosData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-cremes/pdt_13.jpg",
-          label: "Creme clareador importado",
-          link: "https://s.click.aliexpress.com/e/_c2wyCFoZ",
-          platform: "aliexpress"
+          label: "Ajuda muito no firmamento da pele.",
+          link: "https://s.shopee.com.br/3AzrQgKvAx",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_14.jpg",
-          label: "Tratamento para manchas",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601580221145",
-          platform: "alibaba"
+          label: "Um tratamento completo para espinhas.",
+          link: "https://s.click.aliexpress.com/e/_c3hnTjJP",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_15.jpg",
-          label: "Creme para acne e oleosidade",
-          link: "https://s.click.aliexpress.com/e/_c3YKv0hn",
+          label: "Redutor facial de papada e rugas!",
+          link: "https://amzn.to/3XgUJHq",
+          platform: "amazon"
+        },
+        {
+          image: "/images/campaigns/sel-cremes/pdt_16.jpg",
+          label: "Kit Marroquino para o cabelo, baratinho.",
+          link: "https://s.click.aliexpress.com/e/_c2xhqaOZ",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
         {
-          image: "/images/campaigns/sel-cremes/pdt_16.jpg",
-          label: "Esfoliante facial enzimático",
-          link: "https://s.click.aliexpress.com/e/_c3ub7ilR",
-          platform: "aliexpress"
-        },
-        {
           image: "/images/campaigns/sel-cremes/pdt_17.jpg",
-          label: "Creme reparador noturno",
-          link: "https://amzn.to/3XISxIT",
-          platform: "amazon"
+          label: "Coreano Centella  para levar a todo lugar!",
+          link: "https://s.click.aliexpress.com/e/_c4N5XIKt",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_18.jpg",
-          label: "Kit completo de skincare",
-          link: "https://amzn.to/4iiZLwH",
-          platform: "amazon"
+          label: "Saindo bem barato mesmo com o frente.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601585937294",
+          platform: "alibaba"
         }
       ]
     }
