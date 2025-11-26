@@ -33,7 +33,7 @@ export const selAcampamentosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-acampamentos-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-acampamentos-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-acampamentos-promo1-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c3DBvSKN"
       },
       products: [
         {
@@ -80,7 +80,7 @@ export const selAcampamentosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-acampamentos-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-acampamentos-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-acampamentos-promo2-mobile.jpg",
-        link: "#"
+        link: "https://s.shopee.com.br/9zqDAw613T"
       },
       products: [
         {
@@ -127,7 +127,7 @@ export const selAcampamentosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-acampamentos-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-acampamentos-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-acampamentos-promo3-mobile.jpg",
-        link: "#"
+        link: "https://amzn.to/4p2Td8d"
       },
       products: [
         {
