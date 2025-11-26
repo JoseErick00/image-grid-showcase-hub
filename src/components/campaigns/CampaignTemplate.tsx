@@ -110,7 +110,7 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
           <div key={index}>
             {/* Engagement Text 1 - Before Section 2 */}
             {index === 1 && (
-              <div className="text-center my-12">
+              <div className="text-center my-12 max-w-[70%] md:max-w-[60%] mx-auto">
                 <p className="text-xl md:text-4xl font-omne-medium mb-6" style={{ color: '#171717' }}>
                   Gostou de algum achado? Clica no botão compartilhar e enviar para alguém também ver!
                 </p>
@@ -129,7 +129,7 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
 
             {/* Engagement Text 2 - Before Section 3 */}
             {index === 2 && (
-              <div className="text-center my-12">
+              <div className="text-center my-12 max-w-[70%] md:max-w-[60%] mx-auto">
                 <p className="text-xl md:text-4xl font-omne-medium mb-6" style={{ color: '#171717' }}>
                   Não perca nossa loja de vista, segue a gente no Instagram e no Pinterest!
                 </p>
