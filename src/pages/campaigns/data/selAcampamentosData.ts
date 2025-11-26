@@ -38,39 +38,40 @@ export const selAcampamentosData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-acampamentos/pdt_01.jpg",
-          label: "Produto placeholder 1",
-          link: "#",
-          platform: "aliexpress"
+          label: "A gente nunca sabe quando vai precisar!",
+          link: "https://amzn.to/4rBgAaC",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_02.jpg",
-          label: "Produto placeholder 2",
-          link: "#",
+          label: "Qualidade Coleman no precinho na Amazon!",
+          link: "https://amzn.to/3XPdqSH",
           platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_03.jpg",
-          label: "Produto placeholder 3",
-          link: "#",
+          label: "Esse canivete da Shopee!",
+          link: "https://s.shopee.com.br/2g3cVX23sg",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_04.jpg",
-          label: "Produto placeholder 4",
-          link: "#",
-          platform: "alibaba"
+          label: "Lanterna e carregador solar da Shopee!",
+          link: "https://s.shopee.com.br/gIY8DraJk",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_05.jpg",
-          label: "Produto placeholder 5",
-          link: "#",
-          platform: "aliexpress"
+          label: "Bolsa Impermeável  - Saco estanque 2/5/10/15/20/30L",
+          link: "https://s.shopee.com.br/1qUVWaH9tP",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_06.jpg",
-          label: "Produto placeholder 6",
-          link: "#",
-          platform: "amazon"
+          label: "Mochila à prova d'água com frete grátis!",
+          link: "https://s.click.aliexpress.com/e/_c4qrfUJf",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         }
       ]
     },
@@ -85,27 +86,28 @@ export const selAcampamentosData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-acampamentos/pdt_07.jpg",
-          label: "Produto placeholder 7",
-          link: "#",
-          platform: "shopee"
+          label: "Colchão com bomba de ar embutida! ",
+          link: "https://s.click.aliexpress.com/e/_c3PD7LaZ",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_08.jpg",
-          label: "Produto placeholder 8",
-          link: "#",
-          platform: "aliexpress"
+          label: "Essa mesa portátil super útil da Alibaba!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601287089141",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_09.jpg",
-          label: "Produto placeholder 9",
-          link: "#",
-          platform: "amazon"
+          label: "Outra mesa portátil e mais barata!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601572217893",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_10.jpg",
-          label: "Produto placeholder 10",
-          link: "#",
-          platform: "alibaba"
+          label: "UCO Lanterna de vela de latão original!",
+          link: "https://amzn.to/48BdRGr",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_11.jpg",
