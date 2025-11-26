@@ -107,12 +107,67 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
 
         {/* Sections */}
         {config.sections.map((section, index) => (
-          <CampaignSection
-            key={index}
-            id={section.id}
-            promoBanner={section.promoBanner}
-            products={section.products}
-          />
+          <div key={index}>
+            {/* Engagement Text 1 - Before Section 2 */}
+            {index === 1 && (
+              <div className="text-center my-12">
+                <p className="text-xl md:text-4xl font-omne-medium mb-6" style={{ color: '#171717' }}>
+                  Gostou de algum achado? Clica no botão compartilhar e enviar para alguém também ver!
+                </p>
+                <button 
+                  onClick={handleShare}
+                  className="hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+                >
+                  <img 
+                    src="/lovable-uploads/cfae5a27-ced4-4233-abfe-63aceb7a53a8.png" 
+                    alt="Compartilhar" 
+                    className="w-12 h-12 md:w-14 md:h-14 mx-auto" 
+                  />
+                </button>
+              </div>
+            )}
+
+            {/* Engagement Text 2 - Before Section 3 */}
+            {index === 2 && (
+              <div className="text-center my-12">
+                <p className="text-xl md:text-4xl font-omne-medium mb-6" style={{ color: '#171717' }}>
+                  Não perca nossa loja de vista, segue a gente no Instagram e no Pinterest!
+                </p>
+                <div className="flex justify-center gap-8">
+                  <a 
+                    href="https://www.instagram.com/ineedstoreinc/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img 
+                      src="/lovable-uploads/cff5e1b9-fafa-411f-ae1b-144bb3b41ec2.png" 
+                      alt="Instagram" 
+                      className="w-12 h-12 md:w-14 md:h-14" 
+                    />
+                  </a>
+                  <a 
+                    href="https://www.pinterest.com/iNeedShowcase/_profile" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img 
+                      src="/lovable-uploads/7fe6f19c-7dee-4c7a-a6ee-3be3d3ff5f47.png" 
+                      alt="Pinterest" 
+                      className="w-12 h-12 md:w-14 md:h-14" 
+                    />
+                  </a>
+                </div>
+              </div>
+            )}
+
+            <CampaignSection
+              id={section.id}
+              promoBanner={section.promoBanner}
+              products={section.products}
+            />
+          </div>
         ))}
 
         {/* Platform Register Section */}
