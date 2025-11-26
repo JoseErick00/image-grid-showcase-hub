@@ -111,14 +111,14 @@ export const selAcampamentosData: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_11.jpg",
-          label: "Produto placeholder 11",
-          link: "#",
-          platform: "aliexpress"
+          label: "Dica da iNeed! Tenha um desses!",
+          link: "https://amzn.to/3XQowXH",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_12.jpg",
-          label: "Produto placeholder 12",
-          link: "#",
+          label: "Colchão de casal auto inflável!",
+          link: "https://amzn.to/4rhEGqJ",
           platform: "amazon"
         }
       ]
@@ -134,39 +134,42 @@ export const selAcampamentosData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-acampamentos/pdt_13.jpg",
-          label: "Produto placeholder 13",
-          link: "#",
+          label: "Baratíssima na Shopee!",
+          link: "https://s.shopee.com.br/9pWn7SwP9c",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_14.jpg",
-          label: "Produto placeholder 14",
-          link: "#",
-          platform: "aliexpress"
+          label: "Barraca com aprovação alta na Shopee!",
+          link: "https://s.shopee.com.br/9pWn7fZchf",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_15.jpg",
-          label: "Produto placeholder 15",
-          link: "#",
-          platform: "amazon"
+          label: "COOSPO - Mini bomba de ar!",
+          link: "https://s.click.aliexpress.com/e/_c4nvMJhn",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_16.jpg",
-          label: "Produto placeholder 16",
-          link: "#",
-          platform: "alibaba"
+          label: "Cafeteira portátil baratinha na Aliexpress!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601600010676",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_17.jpg",
-          label: "Produto placeholder 17",
-          link: "#",
-          platform: "aliexpress"
+          label: "Esse rack vai salvar sua vida!",
+          link: "https://s.click.aliexpress.com/e/_c32yGG9b",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-acampamentos/pdt_18.jpg",
-          label: "Produto placeholder 18",
-          link: "#",
-          platform: "amazon"
+          label: "Esse kit da Alibaba é muito fofo!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601586660701",
+          platform: "alibaba"
         }
       ]
     }
