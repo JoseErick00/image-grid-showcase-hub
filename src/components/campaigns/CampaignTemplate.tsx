@@ -5,6 +5,7 @@ import CampaignNavButtons from './CampaignNavButtons';
 import CampaignSection from './CampaignSection';
 import PlatformRegister from './PlatformRegister';
 import TrustBadges from '@/components/TrustBadges';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { type Platform } from '@/utils/platformLogos';
 
@@ -46,6 +47,14 @@ export interface CampaignConfig {
     url: string;
     label: string;
   };
+  seo?: {
+    title: string;
+    description: string;
+    keywords?: string;
+    canonicalUrl?: string;
+    ogImage?: string;
+    structuredData?: object;
+  };
 }
 
 interface CampaignTemplateProps {
@@ -82,6 +91,9 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f7f7f7' }}>
+      {/* SEO Tags */}
+      {config.seo && <SEO {...config.seo} />}
+      
       {/* Hero Banner */}
       <CampaignHeroBanner
         desktop={config.heroBanner.desktop}

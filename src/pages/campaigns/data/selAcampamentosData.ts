@@ -12,6 +12,49 @@ export const selAcampamentosData: CampaignConfig = {
     url: "/brasil/incriveis",
     label: "Voltar para Brasil Incríveis"
   },
+  seo: {
+    title: "Equipamentos para Acampamento - Seleção Completa",
+    description: "Descubra os melhores equipamentos para acampamento: barracas, mochilas impermeáveis, lanternas, colchões infláveis e muito mais. Produtos de qualidade para sua aventura ao ar livre!",
+    keywords: "equipamentos acampamento, barraca camping, mochila impermeável, lanterna camping, colchão inflável, kit acampamento, produtos outdoor, aventura natureza",
+    canonicalUrl: "https://ineedstore.com.br/brasil/incriveis/sel-acampamentos",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção para acampamentos",
+      "description": "Tudo que você precisa para uma aventura ao ar livre perfeita!",
+      "url": "https://ineedstore.com.br/brasil/incriveis/sel-acampamentos",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Acampamento",
+        "numberOfItems": 18,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Equipamentos Básicos"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Itens de Conforto"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Equipamentos de Segurança"
+          }
+        ]
+      }
+    }
+  },
   navButtons: [
     {
       label: "Básicos",

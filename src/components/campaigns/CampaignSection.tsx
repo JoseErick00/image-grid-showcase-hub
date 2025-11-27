@@ -40,8 +40,9 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
           <source media="(min-width: 640px)" srcSet={promoBanner.tablet} />
           <img
             src={promoBanner.mobile}
-            alt="Promo Banner"
+            alt={`Banner promocional de produtos para acampamento - Seção ${id}`}
             className="w-full h-[400px] sm:h-[500px] lg:h-[500px] object-cover group-hover:opacity-90 transition-opacity"
+            loading="lazy"
           />
         </picture>
       </a>
