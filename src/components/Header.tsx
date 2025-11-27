@@ -77,6 +77,7 @@ const Header = () => {
   const incriveisPages = [
     { name: "Achados incríveis da internet", href: "/brasil/incriveis" },
     { name: "Seleção para acampamentos", href: "/brasil/incriveis/sel-acampamentos" },
+    { name: "Seleção amantes de Praia", href: "/brasil/incriveis/sel-praia" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
