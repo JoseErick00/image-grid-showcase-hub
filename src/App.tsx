@@ -38,6 +38,7 @@ import BrasilSaudeSelCuidadoRosto from "./pages/campaigns/BrasilSaudeSelCuidadoR
 import BrasilSaudeSelCorpo from "./pages/campaigns/BrasilSaudeSelCorpo";
 import BrasilSaudeSelCremesGringos from "./pages/campaigns/BrasilSaudeSelCremesGringos";
 import BrasilIncriveisSelAcampamentos from "./pages/campaigns/BrasilIncriveisSelAcampamentos";
+import BrasilIncriveisSelPraia from "./pages/campaigns/BrasilIncriveisSelPraia";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -82,6 +83,7 @@ const App = () => (
             <Route path="brasil/saude/sel-corpo" element={<BrasilSaudeSelCorpo />} />
             <Route path="brasil/saude/sel-cremes-gringos" element={<BrasilSaudeSelCremesGringos />} />
             <Route path="brasil/incriveis/sel-acampamentos" element={<BrasilIncriveisSelAcampamentos />} />
+            <Route path="brasil/incriveis/sel-praia" element={<BrasilIncriveisSelPraia />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
