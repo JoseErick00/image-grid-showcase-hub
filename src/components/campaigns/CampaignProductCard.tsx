@@ -63,11 +63,12 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
             {stamp}
           </div>
         )}
-        <img
-          src={image}
-          alt={label}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+      <img
+        src={image}
+        alt={`${label} - Produto para acampamento`}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
       </a>
       
       <div className="p-4 flex flex-col gap-3 items-center">
