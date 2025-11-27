@@ -76,7 +76,7 @@ export const selPraiaData: CampaignConfig = {
         desktop: "/images/campaigns/sel-praia-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-praia-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-praia-promo1-mobile.jpg",
-        link: "#"
+        link: "https://amzn.to/49CwT0d"
       },
       products: [
         {
@@ -123,7 +123,7 @@ export const selPraiaData: CampaignConfig = {
         desktop: "/images/campaigns/sel-praia-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-praia-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-praia-promo2-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c4kvEq5b"
       },
       products: [
         {
@@ -170,7 +170,7 @@ export const selPraiaData: CampaignConfig = {
         desktop: "/images/campaigns/sel-praia-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-praia-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-praia-promo3-mobile.jpg",
-        link: "#"
+        link: "https://amzn.to/485lJQz"
       },
       products: [
         {
