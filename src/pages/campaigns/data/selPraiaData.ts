@@ -2,7 +2,7 @@ import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selPraiaData: CampaignConfig = {
   pageTitle: "Seleção amantes de Praia",
-  pageSubtitle: "Tudo para aproveitar o sol, mar e areia com estilo e conforto!",
+  pageSubtitle: "Uma seleção de achados que de uma forma ou outra você vai precisar!",
   heroBanner: {
     desktop: "/images/campaigns/sel-praia-hero-desktop.jpg",
     tablet: "/images/campaigns/sel-praia-hero-tablet.jpg",
@@ -65,7 +65,7 @@ export const selPraiaData: CampaignConfig = {
       targetId: "conforto"
     },
     {
-      label: "Diversão",
+      label: "+ Achados",
       targetId: "diversao"
     }
   ],
