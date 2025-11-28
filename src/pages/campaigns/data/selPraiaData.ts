@@ -155,15 +155,15 @@ export const selPraiaData: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-praia/pdt_11.jpg",
-          label: "Produto placeholder 11",
-          link: "#",
-          platform: "aliexpress"
+          label: "Para quem passa o dia todo na praia!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601564482821",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_12.jpg",
-          label: "Produto placeholder 12",
-          link: "#",
-          platform: "amazon"
+          label: "Lindas e baratas!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601454779078",
+          platform: "alibaba"
         }
       ]
     },
@@ -178,39 +178,41 @@ export const selPraiaData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-praia/pdt_13.jpg",
-          label: "Produto placeholder 13",
-          link: "#",
-          platform: "shopee"
+          label: "Dobrável, impermeável, à prova de areia, extra-grande!",
+          link: "https://s.click.aliexpress.com/e/_c4stFIFJ",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_14.jpg",
-          label: "Produto placeholder 14",
-          link: "#",
-          platform: "aliexpress"
+          label: "O cooler mais bacana da Amazon!",
+          link: "https://amzn.to/3Mb7lgR",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_15.jpg",
-          label: "Produto placeholder 15",
-          link: "#",
-          platform: "amazon"
+          label: "COOSPO - Mini bomba de ar!",
+          link: "https://s.click.aliexpress.com/e/_c4nvMJhn",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_16.jpg",
-          label: "Produto placeholder 16",
-          link: "#",
-          platform: "alibaba"
+          label: "Mochila Raqueteira - Beach Tennis",
+          link: "https://amzn.to/3XlPRRy",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_17.jpg",
-          label: "Produto placeholder 17",
-          link: "#",
-          platform: "aliexpress"
+          label: "Esses óculos de sol por aqui de novo!",
+          link: "https://s.shopee.com.br/4AsTSARIPm",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_18.jpg",
-          label: "Produto placeholder 18",
-          link: "#",
-          platform: "amazon"
+          label: "Um charme de bambu baratinho!",
+          link: "https://s.shopee.com.br/6AdXqEs3Mz",
+          platform: "shopee"
         }
       ]
     }
