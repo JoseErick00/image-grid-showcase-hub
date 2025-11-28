@@ -9,6 +9,38 @@ export const selSalaData: CampaignConfig = {
     tablet: "/images/campaigns/sel-sala-hero-tablet.jpg?v=2",
     mobile: "/images/campaigns/sel-sala-hero-mobile.jpg?v=2",
   },
+
+  seo: {
+    title: "Produtos para Sala - Decoração e Conforto | iNeed Store",
+    description: "Descubra os melhores produtos para sua sala: projetores, difusores, cortinas, caixas de som, tapetes e muito mais com os melhores preços!",
+    keywords: "decoração sala, móveis sala, projetor, difusor, cortina blackout, caixa de som, tapete, porta retratos, luminária, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/casa/sel-sala",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção para Sala",
+      "description": "As novidades mais legais e os baratinhos e estilosos que estão a fim de ir para sua sala!",
+      "url": "https://ineedstore.com.br/brasil/casa/sel-sala",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Sala",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Decoração" },
+          { "@type": "ListItem", "position": 2, "name": "Conforto!" },
+          { "@type": "ListItem", "position": 3, "name": "+ Achados!" }
+        ]
+      }
+    }
+  },
   
   navButtons: [
     { label: "Decoração", targetId: "section1" },

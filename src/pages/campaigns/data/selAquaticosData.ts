@@ -12,6 +12,37 @@ export const selAquaticosData: CampaignConfig = {
     url: "/brasil/esportes",
     label: "Voltar para Brasil Esportes",
   },
+  seo: {
+    title: "Produtos para Esportes Aquáticos - Natação e Mergulho | iNeed Store",
+    description: "Os melhores produtos para natação, mergulho e esportes aquáticos: máscaras, nadadeiras, óculos, pranchas e muito mais!",
+    keywords: "natação, mergulho, esportes aquáticos, surf, máscara mergulho, nadadeira, óculos natação, prancha, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/esportes/sel-aquaticos",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção - Aquáticos",
+      "description": "Os melhores produtos para natação, mergulho e esportes aquáticos!",
+      "url": "https://ineedstore.com.br/brasil/esportes/sel-aquaticos",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Esportes Aquáticos",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Novinhos" },
+          { "@type": "ListItem", "position": 2, "name": "Pranchas e +" },
+          { "@type": "ListItem", "position": 3, "name": "Vai + fundo!" }
+        ]
+      }
+    }
+  },
   navButtons: [
     { label: "Novinhos", targetId: "section1" },
     { label: "Pranchas e +", targetId: "section2" },

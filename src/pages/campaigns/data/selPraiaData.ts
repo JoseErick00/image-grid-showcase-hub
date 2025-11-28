@@ -13,9 +13,9 @@ export const selPraiaData: CampaignConfig = {
     label: "Voltar para Brasil Incríveis"
   },
   seo: {
-    title: "Produtos para Praia - Seleção Completa para Amantes do Mar",
+    title: "Produtos para Praia - Seleção Completa para Amantes do Mar | iNeed Store",
     description: "Descubra os melhores produtos para praia: cadeiras, guarda-sóis, coolers, toalhas, acessórios de natação e muito mais. Tudo para aproveitar o sol e mar com conforto!",
-    keywords: "produtos praia, cadeira praia, guarda-sol, cooler praia, toalha praia, acessórios natação, bolsa praia, óculos sol, protetor solar",
+    keywords: "produtos praia, cadeira praia, guarda-sol, cooler praia, toalha praia, acessórios natação, bolsa praia, óculos sol, protetor solar, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
     canonicalUrl: "https://ineedstore.com.br/brasil/incriveis/sel-praia",
     structuredData: {
       "@context": "https://schema.org",
