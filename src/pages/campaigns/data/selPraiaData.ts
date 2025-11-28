@@ -81,39 +81,41 @@ export const selPraiaData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-praia/pdt_01.jpg",
-          label: "Produto placeholder 01",
-          link: "#",
-          platform: "amazon"
+          label: "Muito bacana e prática, essa mochila!",
+          link: "https://s.shopee.com.br/4foixzlBnC",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_02.jpg",
-          label: "Produto placeholder 02",
-          link: "#",
+          label: "Frescoball da Mormaii baratinho!",
+          link: "https://s.shopee.com.br/qc0Pr7tJG",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_03.jpg",
-          label: "Produto placeholder 03",
-          link: "#",
-          platform: "aliexpress"
+          label: "Uma 'Canga' estilosa e baratinha!",
+          link: "https://s.click.aliexpress.com/e/_c3wv3HuN",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_04.jpg",
-          label: "Produto placeholder 04",
-          link: "#",
-          platform: "alibaba"
+          label: "à prova d'água à prova de areia com zíper!",
+          link: "https://amzn.to/44BdBVw",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_05.jpg",
-          label: "Produto placeholder 05",
-          link: "#",
+          label: "Leiam os comentários na Amazon!",
+          link: "https://amzn.to/3M6Tmsr",
           platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_06.jpg",
-          label: "Produto placeholder 06",
-          link: "#",
-          platform: "shopee"
+          label: "Ventilador de pescoço é muito legal e barato!",
+          link: "https://s.click.aliexpress.com/e/_c3LVtlNB",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         }
       ]
     },
@@ -128,27 +130,28 @@ export const selPraiaData: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-praia/pdt_07.jpg",
-          label: "Produto placeholder 07",
-          link: "#",
-          platform: "aliexpress"
+          label: "Aumente o Zoom das fotos de Surf!",
+          link: "https://s.click.aliexpress.com/e/_c3f3EVOp",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_08.jpg",
-          label: "Produto placeholder 08",
-          link: "#",
-          platform: "amazon"
+          label: "Use o sol para carregar o celular!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601459204040",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_09.jpg",
-          label: "Produto placeholder 09",
-          link: "#",
+          label: "Essa rede triângulo serve para todo lugar!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601401546472",
           platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_10.jpg",
-          label: "Produto placeholder 10",
-          link: "#",
-          platform: "shopee"
+          label: "Esses óculos de sol importado com preço justo",
+          link: "https://amzn.to/4af2Mfp",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-praia/pdt_11.jpg",
