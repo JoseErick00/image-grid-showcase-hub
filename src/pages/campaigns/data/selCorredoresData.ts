@@ -12,6 +12,37 @@ export const selCorredoresData: CampaignConfig = {
     url: "/brasil/esportes",
     label: "Voltar para Brasil Esportes",
   },
+  seo: {
+    title: "Produtos para Corrida - Seleção para Corredores | iNeed Store",
+    description: "Os melhores produtos para turbinar sua corrida: tênis, acessórios, suplementos, smartwatches e equipamentos selecionados com os melhores preços!",
+    keywords: "corrida, running, tênis corrida, acessórios corredor, meias compressão, smartwatch esportivo, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/esportes/sel-corredores",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção para Corredores",
+      "description": "Os melhores produtos para turbinar sua corrida e melhorar seu desempenho!",
+      "url": "https://ineedstore.com.br/brasil/esportes/sel-corredores",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Corrida",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Queremos!" },
+          { "@type": "ListItem", "position": 2, "name": "Acessórios" },
+          { "@type": "ListItem", "position": 3, "name": "+ Achados" }
+        ]
+      }
+    }
+  },
   navButtons: [
     { label: "Queremos!", targetId: "section1" },
     { label: "Acessórios", targetId: "section2" },

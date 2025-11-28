@@ -9,6 +9,38 @@ export const selQuartoData: CampaignConfig = {
     tablet: "/images/campaigns/sel-quarto-hero-tablet.jpg",
     mobile: "/images/campaigns/sel-quarto-hero-mobile.jpg",
   },
+
+  seo: {
+    title: "Produtos para Quarto - Decoração e Organização | iNeed Store",
+    description: "Encontre os melhores produtos para seu quarto: luminárias, organizadores, roupa de cama, decoração e muito mais com os melhores preços!",
+    keywords: "decoração quarto, luminária, organizador, roupa de cama, abajur, umidificador, massageador, projetor 4K, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/casa/sel-quarto",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção para o Quarto",
+      "description": "Descubra os melhores achados para deixar seu quarto ainda mais aconchegante!",
+      "url": "https://ineedstore.com.br/brasil/casa/sel-quarto",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Quarto",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Decoração" },
+          { "@type": "ListItem", "position": 2, "name": "Conforto" },
+          { "@type": "ListItem", "position": 3, "name": "Organização" }
+        ]
+      }
+    }
+  },
   
   navButtons: [
     { label: "Decoração", targetId: "section1" },

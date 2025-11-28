@@ -12,6 +12,37 @@ export const selCremesGringosData: CampaignConfig = {
     url: "/brasil/saude",
     label: "Voltar para Brasil Saúde"
   },
+  seo: {
+    title: "Cremes Importados - Seleção de Cremes Gringos | iNeed Store",
+    description: "Os melhores cremes importados: hidratação, anti-idade, tratamentos premium das melhores marcas internacionais com os melhores preços!",
+    keywords: "cremes importados, skincare internacional, hidratação, anti-idade, colágeno, retinol, creme coreano, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/saude/sel-cremes-gringos",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção de cremes 'Gringos'",
+      "description": "Uma seleção de achados para deixar você sem desculpas de não ter dinheiro para cuidar da sua pele!",
+      "url": "https://ineedstore.com.br/brasil/saude/sel-cremes-gringos",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Cremes Importados",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Hidratação" },
+          { "@type": "ListItem", "position": 2, "name": "Anti-idade" },
+          { "@type": "ListItem", "position": 3, "name": "Tratamentos" }
+        ]
+      }
+    }
+  },
   navButtons: [
     {
       label: "Hidratação",

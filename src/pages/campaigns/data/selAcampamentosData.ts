@@ -13,9 +13,9 @@ export const selAcampamentosData: CampaignConfig = {
     label: "Voltar para Brasil Incríveis"
   },
   seo: {
-    title: "Equipamentos para Acampamento - Seleção Completa",
+    title: "Equipamentos para Acampamento - Seleção Completa | iNeed Store",
     description: "Descubra os melhores equipamentos para acampamento: barracas, mochilas impermeáveis, lanternas, colchões infláveis e muito mais. Produtos de qualidade para sua aventura ao ar livre!",
-    keywords: "equipamentos acampamento, barraca camping, mochila impermeável, lanterna camping, colchão inflável, kit acampamento, produtos outdoor, aventura natureza",
+    keywords: "equipamentos acampamento, barraca camping, mochila impermeável, lanterna camping, colchão inflável, kit acampamento, produtos outdoor, aventura natureza, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
     canonicalUrl: "https://ineedstore.com.br/brasil/incriveis/sel-acampamentos",
     structuredData: {
       "@context": "https://schema.org",

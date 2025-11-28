@@ -12,6 +12,37 @@ export const selAcademiaData: CampaignConfig = {
     url: "/brasil/esportes",
     label: "Voltar para Brasil Esportes",
   },
+  seo: {
+    title: "Produtos para Academia - Equipamentos de Treino | iNeed Store",
+    description: "Os melhores produtos para turbinar seu treino: halteres, acessórios fitness, roupas, smartwatches e equipamentos selecionados!",
+    keywords: "academia, fitness, treino, musculação, halteres, acessórios fitness, roupas treino, smartwatch, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/esportes/sel-academia",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção para Academia",
+      "description": "Os melhores produtos para turbinar seu treino e deixar sua academia em casa ainda mais completa!",
+      "url": "https://ineedstore.com.br/brasil/esportes/sel-academia",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Academia",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Queremos!" },
+          { "@type": "ListItem", "position": 2, "name": "Acessórios" },
+          { "@type": "ListItem", "position": 3, "name": "+ Achados" }
+        ]
+      }
+    }
+  },
   navButtons: [
     { label: "Queremos!", targetId: "section1" },
     { label: "Acessórios", targetId: "section2" },

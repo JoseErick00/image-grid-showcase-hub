@@ -12,6 +12,37 @@ export const selTimeCampoData: CampaignConfig = {
     url: "/brasil/esportes",
     label: "Voltar para Brasil Esportes",
   },
+  seo: {
+    title: "Produtos para Esportes de Equipe - Time em Campo | iNeed Store",
+    description: "Os melhores produtos para futebol, vôlei, basquete e esportes de equipe: bolas, redes, chuteiras, equipamentos e muito mais!",
+    keywords: "futebol, vôlei, basquete, esportes equipe, bola, rede, chuteira, equipamentos esportivos, achados, loja de presentes, gadgets, coisas legais, produtos bacanas, Amazon, Shopee, Alibaba, AliExpress, Temu, eBay, Magazine Luiza, Mercado Livre, Americanas.com, Submarino.com",
+    canonicalUrl: "https://ineedstore.com.br/brasil/esportes/sel-time-campo",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seleção - Time em Campo",
+      "description": "Os melhores produtos para futebol, vôlei e esportes de equipe!",
+      "url": "https://ineedstore.com.br/brasil/esportes/sel-time-campo",
+      "publisher": {
+        "@type": "Organization",
+        "name": "iNeed Store",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ineedstore.com.br/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Produtos para Esportes de Equipe",
+        "numberOfItems": 18,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Bem legais!" },
+          { "@type": "ListItem", "position": 2, "name": "Queremos!" },
+          { "@type": "ListItem", "position": 3, "name": "+ Novidades" }
+        ]
+      }
+    }
+  },
   navButtons: [
     { label: "Bem legais!", targetId: "section1" },
     { label: "Queremos!", targetId: "section2" },
