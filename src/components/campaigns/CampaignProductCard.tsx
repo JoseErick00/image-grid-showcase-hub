@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
-import { trackProductClick, trackProductShare } from '@/utils/analytics';
+import { trackProductClick } from '@/utils/analytics';
 import LikeButton from '@/components/ui/LikeButton';
 import ShareButton from '@/components/ui/ShareButton';
+
 interface CampaignProductCardProps {
   image: string;
   label: string;
@@ -13,7 +14,6 @@ interface CampaignProductCardProps {
 }
 
 const CampaignProductCard = ({ image, label, link, platform, stamp, position }: CampaignProductCardProps) => {
-  // Generate a unique product ID based on the link
   const productId = btoa(link).slice(0, 20);
 
   const handleProductClick = () => {
@@ -60,7 +60,8 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
           </p>
         </div>
         
-        <div className="w-full flex gap-2">
+        {/* Desktop: all buttons in one row */}
+        <div className="hidden md:flex w-full gap-2">
           <Button
             size="sm"
             className="flex-1 bg-[#171717] text-white hover:bg-[#171717]/90"
@@ -72,8 +73,7 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
               rel="noopener noreferrer"
               onClick={handleProductClick}
             >
-              <span className="md:hidden">Eu quero!</span>
-              <span className="hidden md:inline">Eita, eu quero também!</span>
+              Eita, eu quero também!
             </a>
           </Button>
           
@@ -84,6 +84,34 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
             shareData={shareData}
             className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
           />
+        </div>
+
+        {/* Mobile: stacked layout */}
+        <div className="flex md:hidden flex-col w-full gap-2">
+          <Button
+            size="sm"
+            className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
+            asChild
+          >
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleProductClick}
+            >
+              Eu quero!
+            </a>
+          </Button>
+          
+          <div className="flex gap-2 justify-center">
+            <LikeButton productId={productId} />
+            
+            <ShareButton
+              productId={productId}
+              shareData={shareData}
+              className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
+            />
+          </div>
         </div>
       </div>
     </div>

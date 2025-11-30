@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
@@ -13,8 +13,8 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
   const [likeCount, setLikeCount] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const isProcessing = useRef(false);
 
-  // Generate a storage key based on product ID
   const storageKey = `liked_${productId}`;
 
   useEffect(() => {
@@ -53,37 +53,48 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (hasLiked) return;
+    // Prevent multiple clicks and check localStorage again
+    if (hasLiked || isProcessing.current || localStorage.getItem(storageKey)) {
+      return;
+    }
 
-    setIsAnimating(true);
+    // Lock immediately
+    isProcessing.current = true;
     setHasLiked(true);
-    setLikeCount(prev => prev + 1);
     localStorage.setItem(storageKey, 'true');
-
+    setIsAnimating(true);
     setTimeout(() => setIsAnimating(false), 300);
 
     try {
-      // Try to update existing record
       const { data: existingData } = await supabase
         .from('product_likes')
         .select('like_count')
         .eq('product_id', productId)
         .maybeSingle();
 
+      let newCount: number;
       if (existingData) {
-        // Update existing record
+        newCount = existingData.like_count + 1;
         await supabase
           .from('product_likes')
-          .update({ like_count: existingData.like_count + 1 })
+          .update({ like_count: newCount })
           .eq('product_id', productId);
       } else {
-        // Insert new record
+        newCount = 1;
         await supabase
           .from('product_likes')
           .insert({ product_id: productId, like_count: 1 });
       }
+      
+      // Update UI with confirmed value from DB
+      setLikeCount(newCount);
     } catch (error) {
       console.error('Error updating likes:', error);
+      // Revert on error
+      setHasLiked(false);
+      localStorage.removeItem(storageKey);
+    } finally {
+      isProcessing.current = false;
     }
   };
 
@@ -92,7 +103,7 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
       variant="outline"
       size="sm"
       className={cn(
-        "border-[#171717] hover:bg-[#171717] hover:text-white transition-all duration-200",
+        "h-9 w-9 p-0 flex-shrink-0 border-[#171717] hover:bg-[#171717] hover:text-white transition-all duration-200",
         hasLiked ? "bg-red-50 border-red-400 text-red-500 hover:bg-red-100 hover:text-red-600" : "text-[#171717] bg-white",
         isAnimating && "scale-110",
         className
@@ -107,9 +118,6 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
           isAnimating && "animate-pulse"
         )} 
       />
-      {likeCount > 0 && (
-        <span className="ml-1 text-xs font-medium">{likeCount}</span>
-      )}
     </Button>
   );
 };

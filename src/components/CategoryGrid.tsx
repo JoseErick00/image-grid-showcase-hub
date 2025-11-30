@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
-import { trackProductClick, trackProductShare } from "@/utils/analytics";
+import { trackProductClick } from "@/utils/analytics";
 import LikeButton from "@/components/ui/LikeButton";
 import ShareButton from "@/components/ui/ShareButton";
 
@@ -36,7 +36,6 @@ const CategoryGrid = ({
   const isMobile = useIsMobile();
   const [revealedItems, setRevealedItems] = useState<Set<string>>(new Set());
   
-  // Determine grid classes based on layout mode
   const gridClass = isCompactMode ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-2 lg:grid-cols-3";
   const aspectClass = aspectRatio === "square" ? "aspect-square" : "aspect-[4/5]";
 
@@ -44,11 +43,9 @@ const CategoryGrid = ({
     const isRevealed = revealedItems.has(itemId);
     
     if (!isRevealed) {
-      // First click: reveal only this item (close others)
       e.preventDefault();
       setRevealedItems(new Set([itemId]));
     } else {
-      // Second click: open link in new tab
       e.preventDefault();
       window.open(link, '_blank');
     }
@@ -121,26 +118,51 @@ const CategoryGrid = ({
                   )}
                 </div>
                 {showButton && (
-                  <div className="flex gap-2">
-                    <Button 
-                      className={`flex-1 text-white hover:opacity-90 ${
-                        isMobile ? 'text-sm' : (isCompactMode ? 'text-sm lg:text-xl' : 'text-xl')
-                      }`}
-                      style={{ backgroundColor: buttonColor }}
-                      onClick={(e) => handleButtonClick(e, item.link, item.title)}
-                    >
-                      {isMobile ? 'Eu quero!' : "Eita, eu quero também!"}
-                    </Button>
-                    <LikeButton 
-                      productId={btoa(item.link).slice(0, 20)} 
-                      className="bg-white"
-                    />
-                    <ShareButton
-                      productId={btoa(item.link).slice(0, 20)}
-                      shareData={getShareData(item)}
-                      className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
-                    />
-                  </div>
+                  <>
+                    {/* Desktop: all buttons in one row */}
+                    <div className="hidden md:flex gap-2">
+                      <Button 
+                        className={`flex-1 text-white hover:opacity-90 ${
+                          isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
+                        }`}
+                        style={{ backgroundColor: buttonColor }}
+                        onClick={(e) => handleButtonClick(e, item.link, item.title)}
+                      >
+                        Eita, eu quero também!
+                      </Button>
+                      <LikeButton 
+                        productId={btoa(item.link).slice(0, 20)} 
+                        className="bg-white"
+                      />
+                      <ShareButton
+                        productId={btoa(item.link).slice(0, 20)}
+                        shareData={getShareData(item)}
+                        className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
+                      />
+                    </div>
+
+                    {/* Mobile: stacked layout */}
+                    <div className="flex md:hidden flex-col gap-2">
+                      <Button 
+                        className="w-full text-white hover:opacity-90 text-sm"
+                        style={{ backgroundColor: buttonColor }}
+                        onClick={(e) => handleButtonClick(e, item.link, item.title)}
+                      >
+                        Eu quero!
+                      </Button>
+                      <div className="flex gap-2 justify-center">
+                        <LikeButton 
+                          productId={btoa(item.link).slice(0, 20)} 
+                          className="bg-white"
+                        />
+                        <ShareButton
+                          productId={btoa(item.link).slice(0, 20)}
+                          shareData={getShareData(item)}
+                          className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
+                        />
+                      </div>
+                    </div>
+                  </>
                 )}
               </div>
             </div>
