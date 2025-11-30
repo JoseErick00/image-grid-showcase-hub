@@ -96,11 +96,11 @@ const LikeButton = ({ productId, className, compact = false }: LikeButtonProps) 
     return (
       <button
         className={cn(
-          "flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all duration-200",
-          "bg-white/90 backdrop-blur-sm shadow-sm",
+          "flex items-center gap-1 px-2 py-1.5 text-xs font-medium transition-all duration-200",
+          "bg-white/70 backdrop-blur-sm border border-[#171717]",
           hasLiked 
             ? "text-red-500" 
-            : "text-[#171717] hover:bg-white",
+            : "text-[#171717] hover:bg-white/90",
           isAnimating && "scale-110",
           className
         )}
