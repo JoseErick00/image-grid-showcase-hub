@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -6,6 +5,7 @@ import { useState } from "react";
 import { Share2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { trackProductClick, trackProductShare } from "@/utils/analytics";
+import LikeButton from "@/components/ui/LikeButton";
 
 interface CategoryGridProps {
   title?: string;
@@ -160,6 +160,10 @@ const CategoryGrid = ({
                     >
                       {isMobile ? 'Eu quero!' : "Eita, eu quero também!"}
                     </Button>
+                    <LikeButton 
+                      productId={btoa(item.link).slice(0, 20)} 
+                      className="bg-white"
+                    />
                     <Button
                       variant="outline"
                       className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"

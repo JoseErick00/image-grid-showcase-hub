@@ -3,6 +3,7 @@ import { platformLogos, type Platform } from '@/utils/platformLogos';
 import { Share2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { trackProductClick, trackProductShare } from '@/utils/analytics';
+import LikeButton from '@/components/ui/LikeButton';
 
 interface CampaignProductCardProps {
   image: string;
@@ -14,9 +15,13 @@ interface CampaignProductCardProps {
 }
 
 const CampaignProductCard = ({ image, label, link, platform, stamp, position }: CampaignProductCardProps) => {
+  // Generate a unique product ID based on the link
+  const productId = btoa(link).slice(0, 20);
+
   const handleProductClick = () => {
     trackProductClick({ label, platform, link, position });
   };
+
   const handleShare = async () => {
     trackProductShare({ label, platform, link });
     
@@ -63,12 +68,12 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
             {stamp}
           </div>
         )}
-      <img
-        src={image}
-        alt={`${label} - Produto para acampamento`}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        loading="lazy"
-      />
+        <img
+          src={image}
+          alt={`${label} - Produto para acampamento`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
       </a>
       
       <div className="p-4 flex flex-col gap-3 items-center">
@@ -99,6 +104,8 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
               <span className="hidden md:inline">Eita, eu quero também!</span>
             </a>
           </Button>
+          
+          <LikeButton productId={productId} />
           
           <Button
             size="sm"
