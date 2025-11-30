@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
+import { Share2 } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { trackProductClick, trackProductShare } from "@/utils/analytics";
 
 interface CategoryGridProps {
   title?: string;
@@ -52,10 +55,45 @@ const CategoryGrid = ({
     }
   };
 
-  const handleButtonClick = (e: React.MouseEvent, link: string) => {
+  const handleButtonClick = (e: React.MouseEvent, link: string, title: string) => {
     e.preventDefault();
     e.stopPropagation();
+    trackProductClick({ label: title, platform: 'category', link });
     window.open(link, '_blank');
+  };
+
+  const handleShare = async (e: React.MouseEvent, item: { title: string; link: string }) => {
+    e.preventDefault();
+    e.stopPropagation();
+    trackProductShare({ label: item.title, platform: 'category', link: item.link });
+    
+    try {
+      const shareData = {
+        title: item.title,
+        text: 'Olha que legal eu achei na iNeed!',
+        url: item.link,
+      };
+
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(item.link);
+        toast({
+          title: "Link copiado!",
+          description: "O link do produto foi copiado para a área de transferência.",
+        });
+      }
+    } catch (error) {
+      try {
+        await navigator.clipboard.writeText(item.link);
+        toast({
+          title: "Link copiado!",
+          description: "O link do produto foi copiado para a área de transferência.",
+        });
+      } catch (clipboardError) {
+        console.log('Share and clipboard failed:', error, clipboardError);
+      }
+    }
   };
 
   return (
@@ -112,15 +150,24 @@ const CategoryGrid = ({
                   )}
                 </div>
                 {showButton && (
-                  <Button 
-                    className={`w-full text-white hover:opacity-90 ${
-                      isMobile ? 'text-sm' : (isCompactMode ? 'text-sm lg:text-xl' : 'text-xl')
-                    }`}
-                    style={{ backgroundColor: buttonColor }}
-                    onClick={(e) => handleButtonClick(e, item.link)}
-                  >
-                    {isMobile ? 'Eu quero!' : "Eita, eu quero também!"}
-                  </Button>
+                  <div className="flex gap-2">
+                    <Button 
+                      className={`flex-1 text-white hover:opacity-90 ${
+                        isMobile ? 'text-sm' : (isCompactMode ? 'text-sm lg:text-xl' : 'text-xl')
+                      }`}
+                      style={{ backgroundColor: buttonColor }}
+                      onClick={(e) => handleButtonClick(e, item.link, item.title)}
+                    >
+                      {isMobile ? 'Eu quero!' : "Eita, eu quero também!"}
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
+                      onClick={(e) => handleShare(e, item)}
+                    >
+                      <Share2 className="h-4 w-4" />
+                    </Button>
+                  </div>
                 )}
               </div>
             </div>
