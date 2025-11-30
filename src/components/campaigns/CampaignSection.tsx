@@ -1,10 +1,7 @@
 import CampaignProductCard from './CampaignProductCard';
 import { type Platform } from '@/utils/platformLogos';
 import { useGridLayout } from '@/hooks/useGridLayout';
-import { Share2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { toast } from '@/hooks/use-toast';
-
+import ShareButton from '@/components/ui/ShareButton';
 interface Product {
   image: string;
   label: string;
@@ -29,37 +26,11 @@ interface CampaignSectionProps {
 const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) => {
   const { isCompactMode } = useGridLayout();
 
-  const handleBannerShare = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    try {
-      const shareData = {
-        title: `Confira esta promoção incrível!`,
-        text: 'Olha que promoção legal eu achei na iNeed!',
-        url: promoBanner.link,
-      };
-
-      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
-        await navigator.share(shareData);
-      } else {
-        await navigator.clipboard.writeText(promoBanner.link);
-        toast({
-          title: "Link copiado!",
-          description: "O link da promoção foi copiado para a área de transferência.",
-        });
-      }
-    } catch (error) {
-      try {
-        await navigator.clipboard.writeText(promoBanner.link);
-        toast({
-          title: "Link copiado!",
-          description: "O link da promoção foi copiado para a área de transferência.",
-        });
-      } catch (clipboardError) {
-        console.log('Share and clipboard failed:', error, clipboardError);
-      }
-    }
+  const bannerProductId = `banner-${id}`;
+  const bannerShareData = {
+    title: 'Confira esta promoção incrível!',
+    text: 'Olha que promoção legal eu achei na iNeed!',
+    url: promoBanner.link,
   };
   
   return (
@@ -85,15 +56,12 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
         </a>
         
         {/* Share Button */}
-        <Button
-          size="sm"
-          variant="outline"
-          className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
-          onClick={handleBannerShare}
-        >
-          <Share2 className="h-4 w-4 mr-2" />
-          Compartilhar
-        </Button>
+        <ShareButton
+          productId={bannerProductId}
+          shareData={bannerShareData}
+          variant="banner"
+          className="absolute bottom-4 right-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
+        />
       </div>
 
       {/* Product Grid */}

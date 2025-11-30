@@ -20,6 +20,7 @@ export type Database = {
           id: string
           like_count: number
           product_id: string
+          share_count: number
           updated_at: string
         }
         Insert: {
@@ -27,6 +28,7 @@ export type Database = {
           id?: string
           like_count?: number
           product_id: string
+          share_count?: number
           updated_at?: string
         }
         Update: {
@@ -34,6 +36,7 @@ export type Database = {
           id?: string
           like_count?: number
           product_id?: string
+          share_count?: number
           updated_at?: string
         }
         Relationships: []

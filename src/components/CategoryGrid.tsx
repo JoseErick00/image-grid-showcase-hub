@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { useGridLayout } from "@/hooks/useGridLayout";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
-import { Share2 } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
 import { trackProductClick, trackProductShare } from "@/utils/analytics";
 import LikeButton from "@/components/ui/LikeButton";
+import ShareButton from "@/components/ui/ShareButton";
 
 interface CategoryGridProps {
   title?: string;
@@ -62,39 +61,11 @@ const CategoryGrid = ({
     window.open(link, '_blank');
   };
 
-  const handleShare = async (e: React.MouseEvent, item: { title: string; link: string }) => {
-    e.preventDefault();
-    e.stopPropagation();
-    trackProductShare({ label: item.title, platform: 'category', link: item.link });
-    
-    try {
-      const shareData = {
-        title: item.title,
-        text: 'Olha que legal eu achei na iNeed!',
-        url: item.link,
-      };
-
-      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
-        await navigator.share(shareData);
-      } else {
-        await navigator.clipboard.writeText(item.link);
-        toast({
-          title: "Link copiado!",
-          description: "O link do produto foi copiado para a área de transferência.",
-        });
-      }
-    } catch (error) {
-      try {
-        await navigator.clipboard.writeText(item.link);
-        toast({
-          title: "Link copiado!",
-          description: "O link do produto foi copiado para a área de transferência.",
-        });
-      } catch (clipboardError) {
-        console.log('Share and clipboard failed:', error, clipboardError);
-      }
-    }
-  };
+  const getShareData = (item: { title: string; link: string }) => ({
+    title: item.title,
+    text: 'Olha que legal eu achei na iNeed!',
+    url: item.link,
+  });
 
   return (
     <section className="py-12">
@@ -164,13 +135,11 @@ const CategoryGrid = ({
                       productId={btoa(item.link).slice(0, 20)} 
                       className="bg-white"
                     />
-                    <Button
-                      variant="outline"
+                    <ShareButton
+                      productId={btoa(item.link).slice(0, 20)}
+                      shareData={getShareData(item)}
                       className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
-                      onClick={(e) => handleShare(e, item)}
-                    >
-                      <Share2 className="h-4 w-4" />
-                    </Button>
+                    />
                   </div>
                 )}
               </div>

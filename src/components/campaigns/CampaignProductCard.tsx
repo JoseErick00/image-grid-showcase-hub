@@ -1,10 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
-import { Share2 } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
 import { trackProductClick, trackProductShare } from '@/utils/analytics';
 import LikeButton from '@/components/ui/LikeButton';
-
+import ShareButton from '@/components/ui/ShareButton';
 interface CampaignProductCardProps {
   image: string;
   label: string;
@@ -22,36 +20,10 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
     trackProductClick({ label, platform, link, position });
   };
 
-  const handleShare = async () => {
-    trackProductShare({ label, platform, link });
-    
-    try {
-      const shareData = {
-        title: label,
-        text: 'Olha que legal eu achei na iNeed!',
-        url: link,
-      };
-
-      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
-        await navigator.share(shareData);
-      } else {
-        await navigator.clipboard.writeText(link);
-        toast({
-          title: "Link copiado!",
-          description: "O link do produto foi copiado para a área de transferência.",
-        });
-      }
-    } catch (error) {
-      try {
-        await navigator.clipboard.writeText(link);
-        toast({
-          title: "Link copiado!",
-          description: "O link do produto foi copiado para a área de transferência.",
-        });
-      } catch (clipboardError) {
-        console.log('Share and clipboard failed:', error, clipboardError);
-      }
-    }
+  const shareData = {
+    title: label,
+    text: 'Olha que legal eu achei na iNeed!',
+    url: link,
   };
 
   return (
@@ -107,14 +79,11 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
           
           <LikeButton productId={productId} />
           
-          <Button
-            size="sm"
-            variant="outline"
+          <ShareButton
+            productId={productId}
+            shareData={shareData}
             className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
-            onClick={handleShare}
-          >
-            <Share2 className="h-4 w-4" />
-          </Button>
+          />
         </div>
       </div>
     </div>
