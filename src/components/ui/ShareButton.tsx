@@ -106,8 +106,8 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
     return (
       <button
         className={cn(
-          "flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all duration-200",
-          "bg-white/90 backdrop-blur-sm shadow-sm text-[#171717] hover:bg-white",
+          "flex items-center gap-1 px-2 py-1.5 text-xs font-medium transition-all duration-200",
+          "bg-white/70 backdrop-blur-sm border border-[#171717] text-[#171717] hover:bg-white/90",
           className
         )}
         onClick={handleShare}
