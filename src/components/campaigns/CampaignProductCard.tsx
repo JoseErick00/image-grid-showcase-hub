@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
 import { trackProductClick } from '@/utils/analytics';
+import { generateProductId } from '@/utils/productHash';
 import LikeButton from '@/components/ui/LikeButton';
 import ShareButton from '@/components/ui/ShareButton';
 
@@ -14,7 +15,7 @@ interface CampaignProductCardProps {
 }
 
 const CampaignProductCard = ({ image, label, link, platform, stamp, position }: CampaignProductCardProps) => {
-  const productId = btoa(link).slice(0, 20);
+  const productId = generateProductId(link);
 
   const handleProductClick = () => {
     trackProductClick({ label, platform, link, position });
