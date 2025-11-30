@@ -121,16 +121,13 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
 
   return (
     <Button
-      size="icon"
+      size="sm"
       variant="outline"
-      className={`border-muted-foreground/30 text-muted-foreground hover:text-foreground hover:border-foreground ${className}`}
+      className={`h-9 w-9 p-0 flex-shrink-0 ${className}`}
       onClick={handleShare}
       disabled={isSharing}
     >
       <Share2 className="h-4 w-4" />
-      {shareCount !== null && shareCount > 0 && (
-        <span className="ml-1 text-xs">{shareCount}</span>
-      )}
     </Button>
   );
 };
