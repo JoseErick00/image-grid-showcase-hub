@@ -96,7 +96,7 @@ const LikeButton = ({ productId, className, compact = false }: LikeButtonProps) 
     return (
       <button
         className={cn(
-          "flex items-center gap-1 px-2 py-1.5 text-xs font-medium transition-all duration-200",
+          "flex items-center justify-center gap-1 w-12 h-12 rounded-md text-xs font-medium transition-all duration-200",
           "bg-white/70 backdrop-blur-sm border border-[#171717]",
           hasLiked 
             ? "text-red-500" 
@@ -109,7 +109,7 @@ const LikeButton = ({ productId, className, compact = false }: LikeButtonProps) 
       >
         <Heart 
           className={cn(
-            "h-3.5 w-3.5 transition-all duration-200",
+            "h-4 w-4 transition-all duration-200",
             hasLiked && "fill-red-500 text-red-500"
           )} 
         />
