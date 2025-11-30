@@ -7,9 +7,10 @@ import { cn } from '@/lib/utils';
 interface LikeButtonProps {
   productId: string;
   className?: string;
+  compact?: boolean;
 }
 
-const LikeButton = ({ productId, className }: LikeButtonProps) => {
+const LikeButton = ({ productId, className, compact = false }: LikeButtonProps) => {
   const [likeCount, setLikeCount] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -18,13 +19,10 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
   const storageKey = `liked_${productId}`;
 
   useEffect(() => {
-    // Check if user already liked this product
     const liked = localStorage.getItem(storageKey);
     if (liked) {
       setHasLiked(true);
     }
-
-    // Fetch current like count
     fetchLikeCount();
   }, [productId]);
 
@@ -53,12 +51,10 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
     e.preventDefault();
     e.stopPropagation();
 
-    // Prevent multiple clicks and check localStorage again
     if (hasLiked || isProcessing.current || localStorage.getItem(storageKey)) {
       return;
     }
 
-    // Lock immediately
     isProcessing.current = true;
     setHasLiked(true);
     localStorage.setItem(storageKey, 'true');
@@ -86,17 +82,41 @@ const LikeButton = ({ productId, className }: LikeButtonProps) => {
           .insert({ product_id: productId, like_count: 1 });
       }
       
-      // Update UI with confirmed value from DB
       setLikeCount(newCount);
     } catch (error) {
       console.error('Error updating likes:', error);
-      // Revert on error
       setHasLiked(false);
       localStorage.removeItem(storageKey);
     } finally {
       isProcessing.current = false;
     }
   };
+
+  if (compact) {
+    return (
+      <button
+        className={cn(
+          "flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all duration-200",
+          "bg-white/90 backdrop-blur-sm shadow-sm",
+          hasLiked 
+            ? "text-red-500" 
+            : "text-[#171717] hover:bg-white",
+          isAnimating && "scale-110",
+          className
+        )}
+        onClick={handleLike}
+        disabled={hasLiked}
+      >
+        <Heart 
+          className={cn(
+            "h-3.5 w-3.5 transition-all duration-200",
+            hasLiked && "fill-red-500 text-red-500"
+          )} 
+        />
+        <span>{likeCount}</span>
+      </button>
+    );
+  }
 
   return (
     <Button

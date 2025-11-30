@@ -3,6 +3,7 @@ import { Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
+import { cn } from '@/lib/utils';
 
 interface ShareButtonProps {
   productId: string;
@@ -12,7 +13,7 @@ interface ShareButtonProps {
     url: string;
   };
   className?: string;
-  variant?: 'default' | 'banner';
+  variant?: 'default' | 'banner' | 'compact';
 }
 
 const ShareButton = ({ productId, shareData, className = '', variant = 'default' }: ShareButtonProps) => {
@@ -101,6 +102,23 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
     }
   };
 
+  if (variant === 'compact') {
+    return (
+      <button
+        className={cn(
+          "flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all duration-200",
+          "bg-white/90 backdrop-blur-sm shadow-sm text-[#171717] hover:bg-white",
+          className
+        )}
+        onClick={handleShare}
+        disabled={isSharing}
+      >
+        <Share2 className="h-3.5 w-3.5" />
+        <span>{shareCount ?? 0}</span>
+      </button>
+    );
+  }
+
   if (variant === 'banner') {
     return (
       <Button
@@ -123,7 +141,7 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
     <Button
       size="sm"
       variant="outline"
-      className={`h-9 w-9 p-0 flex-shrink-0 ${className}`}
+      className={cn("h-9 w-9 p-0 flex-shrink-0", className)}
       onClick={handleShare}
       disabled={isSharing}
     >
