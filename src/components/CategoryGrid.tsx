@@ -3,6 +3,7 @@ import { useGridLayout } from "@/hooks/useGridLayout";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import { trackProductClick } from "@/utils/analytics";
+import { generateProductId } from "@/utils/productHash";
 import LikeButton from "@/components/ui/LikeButton";
 import ShareButton from "@/components/ui/ShareButton";
 
@@ -75,7 +76,7 @@ const CategoryGrid = ({
       <div className={`grid ${gridClass} gap-6`}>
         {items.map((item) => {
           const isRevealed = revealedItems.has(item.id);
-          const productId = btoa(item.link).slice(0, 20);
+          const productId = generateProductId(item.link);
           
           return (
             <div
