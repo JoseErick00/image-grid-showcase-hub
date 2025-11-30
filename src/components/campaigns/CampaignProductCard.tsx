@@ -40,6 +40,17 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
             {stamp}
           </div>
         )}
+        
+        {/* Like/Share buttons overlay */}
+        <div className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
+          <LikeButton productId={productId} compact />
+          <ShareButton
+            productId={productId}
+            shareData={shareData}
+            variant="compact"
+          />
+        </div>
+        
         <img
           src={image}
           alt={`${label} - Produto para acampamento`}
@@ -60,59 +71,21 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
           </p>
         </div>
         
-        {/* Desktop: all buttons in one row */}
-        <div className="hidden md:flex w-full gap-2">
-          <Button
-            size="sm"
-            className="flex-1 bg-[#171717] text-white hover:bg-[#171717]/90"
-            asChild
+        <Button
+          size="sm"
+          className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
+          asChild
+        >
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleProductClick}
           >
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleProductClick}
-            >
-              Eita, eu quero também!
-            </a>
-          </Button>
-          
-          <LikeButton productId={productId} />
-          
-          <ShareButton
-            productId={productId}
-            shareData={shareData}
-            className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
-          />
-        </div>
-
-        {/* Mobile: stacked layout */}
-        <div className="flex md:hidden flex-col w-full gap-2">
-          <Button
-            size="sm"
-            className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
-            asChild
-          >
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleProductClick}
-            >
-              Eu quero!
-            </a>
-          </Button>
-          
-          <div className="flex gap-2 justify-center">
-            <LikeButton productId={productId} />
-            
-            <ShareButton
-              productId={productId}
-              shareData={shareData}
-              className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
-            />
-          </div>
-        </div>
+            <span className="hidden md:inline">Eita, eu quero também!</span>
+            <span className="md:hidden">Eu quero!</span>
+          </a>
+        </Button>
       </div>
     </div>
   );

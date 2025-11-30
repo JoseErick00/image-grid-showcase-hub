@@ -75,6 +75,7 @@ const CategoryGrid = ({
       <div className={`grid ${gridClass} gap-6`}>
         {items.map((item) => {
           const isRevealed = revealedItems.has(item.id);
+          const productId = btoa(item.link).slice(0, 20);
           
           return (
             <div
@@ -82,7 +83,7 @@ const CategoryGrid = ({
               className="group relative overflow-hidden rounded-lg bg-card shadow-elegant hover:shadow-glow transition-all duration-300 cursor-pointer"
               onClick={(e) => handleItemClick(e, item.id, item.link)}
             >
-              <div className={`${aspectClass} overflow-hidden`}>
+              <div className={`${aspectClass} overflow-hidden relative`}>
                 <img
                   src={item.image}
                   alt={item.title}
@@ -90,6 +91,17 @@ const CategoryGrid = ({
                     isRevealed ? 'scale-105' : 'group-hover:scale-105'
                   }`}
                 />
+                
+                {/* Like/Share buttons overlay - always visible */}
+                <div className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
+                  <LikeButton productId={productId} compact />
+                  <ShareButton
+                    productId={productId}
+                    shareData={getShareData(item)}
+                    variant="compact"
+                  />
+                </div>
+                
                 <div className={`absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent transition-opacity duration-300 ${
                   isRevealed ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                 }`} />
@@ -118,51 +130,15 @@ const CategoryGrid = ({
                   )}
                 </div>
                 {showButton && (
-                  <>
-                    {/* Desktop: all buttons in one row */}
-                    <div className="hidden md:flex gap-2">
-                      <Button 
-                        className={`flex-1 text-white hover:opacity-90 ${
-                          isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
-                        }`}
-                        style={{ backgroundColor: buttonColor }}
-                        onClick={(e) => handleButtonClick(e, item.link, item.title)}
-                      >
-                        Eita, eu quero também!
-                      </Button>
-                      <LikeButton 
-                        productId={btoa(item.link).slice(0, 20)} 
-                        className="bg-white"
-                      />
-                      <ShareButton
-                        productId={btoa(item.link).slice(0, 20)}
-                        shareData={getShareData(item)}
-                        className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
-                      />
-                    </div>
-
-                    {/* Mobile: stacked layout */}
-                    <div className="flex md:hidden flex-col gap-2">
-                      <Button 
-                        className="w-full text-white hover:opacity-90 text-sm"
-                        style={{ backgroundColor: buttonColor }}
-                        onClick={(e) => handleButtonClick(e, item.link, item.title)}
-                      >
-                        Eu quero!
-                      </Button>
-                      <div className="flex gap-2 justify-center">
-                        <LikeButton 
-                          productId={btoa(item.link).slice(0, 20)} 
-                          className="bg-white"
-                        />
-                        <ShareButton
-                          productId={btoa(item.link).slice(0, 20)}
-                          shareData={getShareData(item)}
-                          className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white bg-white"
-                        />
-                      </div>
-                    </div>
-                  </>
+                  <Button 
+                    className={`w-full text-white hover:opacity-90 ${
+                      isMobile ? 'text-sm' : isCompactMode ? 'text-sm lg:text-xl' : 'text-xl'
+                    }`}
+                    style={{ backgroundColor: buttonColor }}
+                    onClick={(e) => handleButtonClick(e, item.link, item.title)}
+                  >
+                    {isMobile ? 'Eu quero!' : 'Eita, eu quero também!'}
+                  </Button>
                 )}
               </div>
             </div>
