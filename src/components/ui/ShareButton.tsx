@@ -106,14 +106,14 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
     return (
       <button
         className={cn(
-          "flex items-center gap-1 px-2 py-1.5 text-xs font-medium transition-all duration-200",
+          "flex items-center justify-center gap-1 w-12 h-12 rounded-md text-xs font-medium transition-all duration-200",
           "bg-white/70 backdrop-blur-sm border border-[#171717] text-[#171717] hover:bg-white/90",
           className
         )}
         onClick={handleShare}
         disabled={isSharing}
       >
-        <Share2 className="h-3.5 w-3.5" />
+        <Share2 className="h-4 w-4" />
         <span>{shareCount ?? 0}</span>
       </button>
     );
