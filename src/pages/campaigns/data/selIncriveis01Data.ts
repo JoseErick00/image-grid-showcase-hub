@@ -81,38 +81,39 @@ export const selIncriveis01Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis01/pdt_01.jpg",
-          label: "Produto placeholder 01",
-          link: "#",
-          platform: "aliexpress"
+          label: "Baratíssima Air Fryer de 12L!",
+          link: "https://s.shopee.com.br/6Kx04yfP5X",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_02.jpg",
-          label: "Produto placeholder 02",
-          link: "#",
-          platform: "amazon"
+          label: "BBB - Bom, Bonito e Barato!",
+          link: "https://s.shopee.com.br/5Al3saK94W",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_03.jpg",
-          label: "Produto placeholder 03",
-          link: "#",
+          label: "Esses albúns para Instamax da Shopee",
+          link: "https://s.shopee.com.br/9fDTGArtAr",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_04.jpg",
-          label: "Produto placeholder 04",
-          link: "#",
-          platform: "alibaba"
+          label: "Para aumentar o zoom dos celulares!",
+          link: "https://s.click.aliexpress.com/e/_c4XColoZ",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_05.jpg",
-          label: "Produto placeholder 05",
-          link: "#",
-          platform: "amazon"
+          label: "Queremos e queremos!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600712991949",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_06.jpg",
-          label: "Produto placeholder 06",
-          link: "#",
+          label: "Tenha uma mini horta na cozinha!",
+          link: "https://s.click.aliexpress.com/e/_c3TyWNy1",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         }
@@ -129,27 +130,27 @@ export const selIncriveis01Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis01/pdt_07.jpg",
-          label: "Produto placeholder 07",
-          link: "#",
-          platform: "shopee"
-        },
-        {
-          image: "/images/campaigns/sel-incriveis01/pdt_08.jpg",
-          label: "Produto placeholder 08",
-          link: "#",
+          label: "Sem risco de roubos por aproximação!",
+          link: "https://amzn.to/48IAWHo",
           platform: "amazon"
         },
         {
+          image: "/images/campaigns/sel-incriveis01/pdt_08.jpg",
+          label: "Esse tênis de corrida com placa carbono é lindo!",
+          link: "https://s.click.aliexpress.com/e/_c4XC6ofx",
+          platform: "aliexpress"
+        },
+        {
           image: "/images/campaigns/sel-incriveis01/pdt_09.jpg",
-          label: "Produto placeholder 09",
-          link: "#",
+          label: "Olha essa gracinha para criançada! Amamos!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601602742141",
           platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_10.jpg",
-          label: "Produto placeholder 10",
-          link: "#",
-          platform: "aliexpress"
+          label: "BBB - Bom, Bonito e Barato!",
+          link: "https://s.shopee.com.br/3AzyI8UViV",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_11.jpg",
