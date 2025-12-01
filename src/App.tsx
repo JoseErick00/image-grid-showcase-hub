@@ -39,6 +39,9 @@ import BrasilSaudeSelCorpo from "./pages/campaigns/BrasilSaudeSelCorpo";
 import BrasilSaudeSelCremesGringos from "./pages/campaigns/BrasilSaudeSelCremesGringos";
 import BrasilIncriveisSelAcampamentos from "./pages/campaigns/BrasilIncriveisSelAcampamentos";
 import BrasilIncriveisSelPraia from "./pages/campaigns/BrasilIncriveisSelPraia";
+import BrasilIncriveisSelIncriveis01 from "./pages/campaigns/BrasilIncriveisSelIncriveis01";
+import BrasilIncriveisSelIncriveis02 from "./pages/campaigns/BrasilIncriveisSelIncriveis02";
+import BrasilIncriveisSelIncriveis03 from "./pages/campaigns/BrasilIncriveisSelIncriveis03";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -84,6 +87,9 @@ const App = () => (
             <Route path="brasil/saude/sel-cremes-gringos" element={<BrasilSaudeSelCremesGringos />} />
             <Route path="brasil/incriveis/sel-acampamentos" element={<BrasilIncriveisSelAcampamentos />} />
             <Route path="brasil/incriveis/sel-praia" element={<BrasilIncriveisSelPraia />} />
+            <Route path="brasil/incriveis/sel-incriveis-01" element={<BrasilIncriveisSelIncriveis01 />} />
+            <Route path="brasil/incriveis/sel-incriveis-02" element={<BrasilIncriveisSelIncriveis02 />} />
+            <Route path="brasil/incriveis/sel-incriveis-03" element={<BrasilIncriveisSelIncriveis03 />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
