@@ -76,7 +76,7 @@ export const selIncriveis01Data: CampaignConfig = {
         desktop: "/images/campaigns/sel-incriveis01-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-incriveis01-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-incriveis01-promo1-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c3saMzKH"
       },
       products: [
         {
@@ -124,7 +124,7 @@ export const selIncriveis01Data: CampaignConfig = {
         desktop: "/images/campaigns/sel-incriveis01-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-incriveis01-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-incriveis01-promo2-mobile.jpg",
-        link: "#"
+        link: "https://amzn.to/4atD1YS"
       },
       products: [
         {
@@ -171,7 +171,7 @@ export const selIncriveis01Data: CampaignConfig = {
         desktop: "/images/campaigns/sel-incriveis01-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-incriveis01-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-incriveis01-promo3-mobile.jpg",
-        link: "#"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601418247161"
       },
       products: [
         {
