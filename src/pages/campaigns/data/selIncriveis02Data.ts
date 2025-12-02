@@ -81,38 +81,39 @@ export const selIncriveis02Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis02/pdt_01.jpg",
-          label: "Produto placeholder 01",
-          link: "#",
-          platform: "aliexpress"
+          label: "É lindo, mas tem que comprar dois pares.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601433242232",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_02.jpg",
-          label: "Produto placeholder 02",
-          link: "#",
-          platform: "amazon"
+          label: "Óculos com câmera, tradutor, IA e frete grátis!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601558576394",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_03.jpg",
-          label: "Produto placeholder 03",
-          link: "#",
+          label: "Dá uma olhada nessa mochila da Shopee.",
+          link: "https://s.shopee.com.br/12wYckOiD",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_04.jpg",
-          label: "Produto placeholder 04",
-          link: "#",
-          platform: "alibaba"
+          label: "Esse skate hoverboard tem tudo e mais um pouquinho!",
+          link: "https://s.shopee.com.br/AKT8rPLB9m",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_05.jpg",
-          label: "Produto placeholder 05",
-          link: "#",
-          platform: "amazon"
+          label: "Muito lindo! Olha esse relógio.",
+          link: "https://s.click.aliexpress.com/e/_c4XqLiBx",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_06.jpg",
-          label: "Produto placeholder 06",
-          link: "#",
+          label: "Sobre piscina. Você descansa, ele limpa!",
+          link: "https://s.click.aliexpress.com/e/_c3oPZZTr",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         }
@@ -129,27 +130,27 @@ export const selIncriveis02Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis02/pdt_07.jpg",
-          label: "Produto placeholder 07",
-          link: "#",
-          platform: "shopee"
+          label: "Um charme na cozinha!",
+          link: "https://amzn.to/3Y81I5L",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_08.jpg",
-          label: "Produto placeholder 08",
-          link: "#",
+          label: "Fácil, prático, barato e serve para todo lugar.",
+          link: "https://amzn.to/3KAjyva",
           platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_09.jpg",
-          label: "Produto placeholder 09",
-          link: "#",
-          platform: "alibaba"
+          label: "Um kit de cuidados completo para seus amores!",
+          link: "https://s.shopee.com.br/8V1UfUftNT",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_10.jpg",
-          label: "Produto placeholder 10",
-          link: "#",
-          platform: "aliexpress"
+          label: "Baratíssimaaaa na Shopee!",
+          link: "https://s.shopee.com.br/2LQrJyywYm",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_11.jpg",
