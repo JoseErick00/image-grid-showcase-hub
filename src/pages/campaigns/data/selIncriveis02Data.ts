@@ -76,7 +76,7 @@ export const selIncriveis02Data: CampaignConfig = {
         desktop: "/images/campaigns/sel-incriveis02-promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-incriveis02-promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-incriveis02-promo1-mobile.jpg",
-        link: "#"
+        link: "https://s.shopee.com.br/1LYK7fNfUW"
       },
       products: [
         {
@@ -124,7 +124,7 @@ export const selIncriveis02Data: CampaignConfig = {
         desktop: "/images/campaigns/sel-incriveis02-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-incriveis02-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-incriveis02-promo2-mobile.jpg",
-        link: "#"
+        link: "https://amzn.to/4pakB3T"
       },
       products: [
         {
@@ -171,7 +171,7 @@ export const selIncriveis02Data: CampaignConfig = {
         desktop: "/images/campaigns/sel-incriveis02-promo3-desktop.jpg",
         tablet: "/images/campaigns/sel-incriveis02-promo3-tablet.jpg",
         mobile: "/images/campaigns/sel-incriveis02-promo3-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c3TdRz0Z"
       },
       products: [
         {
