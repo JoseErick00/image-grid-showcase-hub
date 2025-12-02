@@ -154,14 +154,14 @@ export const selIncriveis01Data: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_11.jpg",
-          label: "Produto placeholder 11",
-          link: "#",
-          platform: "shopee"
+          label: "Razer Teclado para jogos Tartarus Pro",
+          link: "https://amzn.to/3Mc0UKH",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_12.jpg",
-          label: "Produto placeholder 12",
-          link: "#",
+          label: "Esse moedor de café elétrico na Amazon!",
+          link: "https://amzn.to/4iuOjhP",
           platform: "amazon"
         }
       ]
@@ -177,40 +177,42 @@ export const selIncriveis01Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis01/pdt_13.jpg",
-          label: "Produto placeholder 13",
-          link: "#",
+          label: "Fone de ouvidos para jogadores na Shopee",
+          link: "https://s.shopee.com.br/60KArsaENc",
+          platform: "shopee"
+        },
+        {
+          image: "/images/campaigns/sel-incriveis01/pdt_14.jpg",
+          label: "Esse óculos de realidade virtual está baratinho na Shopee",
+          link: "https://s.shopee.com.br/20o0wVbvqS",
+          platform: "shopee"
+        },
+        {
+          image: "/images/campaigns/sel-incriveis01/pdt_15.jpg",
+          label: "Umidificador de ar com pingos de chuva!",
+          link: "https://s.click.aliexpress.com/e/_c4bH0pbJ",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
         {
-          image: "/images/campaigns/sel-incriveis01/pdt_14.jpg",
-          label: "Produto placeholder 14",
-          link: "#",
-          platform: "amazon"
-        },
-        {
-          image: "/images/campaigns/sel-incriveis01/pdt_15.jpg",
-          label: "Produto placeholder 15",
-          link: "#",
-          platform: "shopee"
-        },
-        {
           image: "/images/campaigns/sel-incriveis01/pdt_16.jpg",
-          label: "Produto placeholder 16",
-          link: "#",
-          platform: "alibaba"
+          label: "Kit de ferramentas elétricas de precisão.",
+          link: "https://s.click.aliexpress.com/e/_c3xqYdiH",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_17.jpg",
-          label: "Produto placeholder 17",
-          link: "#",
-          platform: "amazon"
+          label: "Piscina limpa com tranquilidade!",
+          link: "https://s.click.aliexpress.com/e/_c41pMfqd",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis01/pdt_18.jpg",
-          label: "Produto placeholder 18",
-          link: "#",
-          platform: "aliexpress"
+          label: "Um mini celular para ter de reserva!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601572093871",
+          platform: "alibaba"
         }
       ]
     }
