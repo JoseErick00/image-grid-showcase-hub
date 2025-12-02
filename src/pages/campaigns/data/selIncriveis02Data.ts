@@ -154,15 +154,16 @@ export const selIncriveis02Data: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_11.jpg",
-          label: "Produto placeholder 11",
-          link: "#",
-          platform: "shopee"
+          label: "Mais um tênis bacana na AliExpress!",
+          link: "https://s.click.aliexpress.com/e/_c3JUXiSp",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_12.jpg",
-          label: "Produto placeholder 12",
-          link: "#",
-          platform: "amazon"
+          label: "Outro mini-celular para ter de reserva!",
+          link: "https://s.click.aliexpress.com/e/_c3W776ID",
+          platform: "aliexpress"
         }
       ]
     },
@@ -177,40 +178,40 @@ export const selIncriveis02Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis02/pdt_13.jpg",
-          label: "Produto placeholder 13",
-          link: "#",
-          platform: "aliexpress",
-          stamp: "Frete Grátis!"
+          label: "Assista o vídeo dessa cafeteira portátil!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271506013",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_14.jpg",
-          label: "Produto placeholder 14",
-          link: "#",
-          platform: "amazon"
+          label: "Tem fones de ouvidos, é ótima para dormir!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601132564417",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_15.jpg",
-          label: "Produto placeholder 15",
-          link: "#",
+          label: "Magsafe Portátil: Compatível iPhone 11-14 Pro Max",
+          link: "https://s.shopee.com.br/9fDRbRzaw5",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_16.jpg",
-          label: "Produto placeholder 16",
-          link: "#",
-          platform: "alibaba"
+          label: "Esse mini power bank da Shopee é uma graça!",
+          link: "https://s.shopee.com.br/2qN7sIVkZn",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_17.jpg",
-          label: "Produto placeholder 17",
-          link: "#",
-          platform: "amazon"
+          label: "Assista o vídeo na Shopee!",
+          link: "https://s.shopee.com.br/6AdZsOe6bo",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis02/pdt_18.jpg",
-          label: "Produto placeholder 18",
-          link: "#",
-          platform: "aliexpress"
+          label: "Olha o preço e a qualidade desse bastão de selfie.",
+          link: "https://s.click.aliexpress.com/e/_c4SofArx",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         }
       ]
     }
