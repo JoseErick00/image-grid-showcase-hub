@@ -2,6 +2,7 @@ import CampaignProductCard from './CampaignProductCard';
 import { type Platform } from '@/utils/platformLogos';
 import { useGridLayout } from '@/hooks/useGridLayout';
 import ShareButton from '@/components/ui/ShareButton';
+import LikeButton from '@/components/ui/LikeButton';
 interface Product {
   image: string;
   label: string;
@@ -55,13 +56,15 @@ const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) =>
           </picture>
         </a>
         
-        {/* Share Button */}
-        <ShareButton
-          productId={bannerProductId}
-          shareData={bannerShareData}
-          variant="banner"
-          className="absolute bottom-4 right-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
-        />
+        {/* Like/Share buttons overlay */}
+        <div className="absolute bottom-4 right-4 flex flex-col gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <LikeButton productId={bannerProductId} compact />
+          <ShareButton
+            productId={bannerProductId}
+            shareData={bannerShareData}
+            variant="compact"
+          />
+        </div>
       </div>
 
       {/* Product Grid */}
