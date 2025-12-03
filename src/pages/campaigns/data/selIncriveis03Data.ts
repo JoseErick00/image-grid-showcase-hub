@@ -205,7 +205,7 @@ export const selIncriveis03Data: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_17.jpg",
-          label: "Assista o vídeo na Shopee!",
+          label: "Para quem gosta de novidades!",
           link: "https://s.click.aliexpress.com/e/_c4eBlAf7",
           platform: "aliexpress"
         },
