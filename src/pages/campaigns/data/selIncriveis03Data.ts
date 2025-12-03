@@ -81,40 +81,40 @@ export const selIncriveis03Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis03/pdt_01.jpg",
-          label: "Produto placeholder 01",
-          link: "#",
-          platform: "aliexpress"
+          label: "Fashion, para quem é fashion!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600787212507",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_02.jpg",
-          label: "Produto placeholder 02",
-          link: "#",
-          platform: "amazon"
+          label: "Main um óculos com câmera, tradutor, IA e frete grátis!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601561240112",
+          platform: "alibaba",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_03.jpg",
-          label: "Produto placeholder 03",
-          link: "#",
+          label: "Kit Halteres 6 em 1 -  até 50kg ajustável",
+          link: "https://s.shopee.com.br/10vTjtunUh",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_04.jpg",
-          label: "Produto placeholder 04",
-          link: "#",
-          platform: "alibaba"
+          label: "Baratíssimo e bem avaliado!",
+          link: "https://s.shopee.com.br/2VkHU0G4X5",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_05.jpg",
-          label: "Produto placeholder 05",
-          link: "#",
+          label: "Ninja Creami Sorveteira 127v",
+          link: "https://amzn.to/3K6zVzC",
           platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_06.jpg",
-          label: "Produto placeholder 06",
-          link: "#",
-          platform: "aliexpress",
-          stamp: "Frete Grátis!"
+          label: "Telescópio portátil de refratação astronômica.",
+          link: "https://amzn.to/4pJ0biv",
+          platform: "amazon"
         }
       ]
     },
@@ -129,27 +129,31 @@ export const selIncriveis03Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis03/pdt_07.jpg",
-          label: "Produto placeholder 07",
-          link: "#",
-          platform: "shopee"
+          label: "Mais um tênis 5 estrelas na AliExpress!",
+          link: "https://s.click.aliexpress.com/e/_c34ZyUBx",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_08.jpg",
-          label: "Produto placeholder 08",
-          link: "#",
-          platform: "amazon"
+          label: "Esse mini tripé baratinho!",
+          link: "https://s.click.aliexpress.com/e/_c4dUWPsp",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_09.jpg",
-          label: "Produto placeholder 09",
-          link: "#",
-          platform: "alibaba"
+          label: "Cycplus sensor de freqüência cardíaca.",
+          link: "https://s.click.aliexpress.com/e/_c3A37eih",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_10.jpg",
-          label: "Produto placeholder 10",
-          link: "#",
-          platform: "aliexpress"
+          label: "Fotógrafos, corram aqui para ver isso!",
+          link: "https://s.click.aliexpress.com/e/_c2vh4rxX",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_11.jpg",
