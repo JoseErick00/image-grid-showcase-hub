@@ -87,7 +87,7 @@ export const selIncriveis03Data: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_02.jpg",
-          label: "Main um óculos com câmera, tradutor, IA e frete grátis!",
+          label: "Mais um óculos com câmera, tradutor, IA e frete grátis!",
           link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601561240112",
           platform: "alibaba",
           stamp: "Frete Grátis!"
