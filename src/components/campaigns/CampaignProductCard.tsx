@@ -62,14 +62,14 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
       
       <div className="p-4 flex flex-col gap-3 items-center">
         <div className="flex flex-col gap-2 items-center">
+          <p className="text-sm font-omne-medium text-[#171717] line-clamp-2 text-center">
+            {label}
+          </p>
           <img
             src={platformLogos[platform]}
             alt={platform}
             className="h-16 w-auto object-contain"
           />
-          <p className="text-sm font-omne-medium text-[#171717] line-clamp-2 text-center">
-            {label}
-          </p>
         </div>
         
         <Button
