@@ -157,15 +157,15 @@ export const selIncriveis03Data: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_11.jpg",
-          label: "Produto placeholder 11",
-          link: "#",
+          label: "ROMANTIC CROWN Copo Térmico",
+          link: "https://s.shopee.com.br/2VkHWD0KRV",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_12.jpg",
-          label: "Produto placeholder 12",
-          link: "#",
-          platform: "amazon"
+          label: "Semi profissional ajustável com base de Alumínio.",
+          link: "https://s.shopee.com.br/4LBvgtNv00",
+          platform: "shopee"
         }
       ]
     },
@@ -180,40 +180,40 @@ export const selIncriveis03Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis03/pdt_13.jpg",
-          label: "Produto placeholder 13",
-          link: "#",
-          platform: "aliexpress",
-          stamp: "Frete Grátis!"
-        },
-        {
-          image: "/images/campaigns/sel-incriveis03/pdt_14.jpg",
-          label: "Produto placeholder 14",
-          link: "#",
-          platform: "amazon"
-        },
-        {
-          image: "/images/campaigns/sel-incriveis03/pdt_15.jpg",
-          label: "Produto placeholder 15",
-          link: "#",
+          label: "Xiaomi Redmi Pad 2 WIFI 256GB",
+          link: "https://s.shopee.com.br/2B7R6jADBp",
           platform: "shopee"
         },
         {
-          image: "/images/campaigns/sel-incriveis03/pdt_16.jpg",
-          label: "Produto placeholder 16",
-          link: "#",
+          image: "/images/campaigns/sel-incriveis03/pdt_14.jpg",
+          label: "Essa fofura de smartwatch da Shopee",
+          link: "https://s.shopee.com.br/4AsVUH5pUK",
+          platform: "shopee"
+        },
+        {
+          image: "/images/campaigns/sel-incriveis03/pdt_15.jpg",
+          label: "Smart Ring R13 - Monitoramento de saúde.",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601601967710",
           platform: "alibaba"
         },
         {
+          image: "/images/campaigns/sel-incriveis03/pdt_16.jpg",
+          label: "Assista o vídeo na Alibaba!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601386265054",
+          platform: "alibaba",
+          stamp: "Frete Grátis!"
+        },
+        {
           image: "/images/campaigns/sel-incriveis03/pdt_17.jpg",
-          label: "Produto placeholder 17",
-          link: "#",
-          platform: "amazon"
+          label: "Assista o vídeo na Shopee!",
+          link: "https://s.click.aliexpress.com/e/_c4eBlAf7",
+          platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-incriveis03/pdt_18.jpg",
-          label: "Produto placeholder 18",
-          link: "#",
-          platform: "aliexpress"
+          label: "Pro Tork R8 - Viseira fumê",
+          link: "https://s.shopee.com.br/1VrqQ5qHeU",
+          platform: "shopee"
         }
       ]
     }
