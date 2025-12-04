@@ -82,39 +82,40 @@ export const selIncriveis04Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis04/pdt_01.jpg",
-          label: "Produto 1 - Tech & Gadgets",
-          link: "#",
-          platform: "shopee"
+          label: "O Bettdow é a melhor escolha entre os mais baratos!",
+          link: "https://amzn.to/4oAVbvw",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_02.jpg",
-          label: "Produto 2 - Tech & Gadgets",
-          link: "#",
-          platform: "shopee"
+          label: "Muito útil para os mochileiros e 'trilheiros'!",
+          link: "https://amzn.to/4rGDwFu",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_03.jpg",
-          label: "Produto 3 - Tech & Gadgets",
-          link: "#",
+          label: "De longe o POCO é o melhor celular com valor justo!",
+          link: "https://s.shopee.com.br/1qUahtlvy3",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_04.jpg",
-          label: "Produto 4 - Tech & Gadgets",
-          link: "#",
-          platform: "aliexpress"
+          label: "Todo mundo que tem, elogia essa limpadora!",
+          link: "https://s.shopee.com.br/gIdJS2Rxz",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_05.jpg",
-          label: "Produto 5 - Tech & Gadgets",
-          link: "#",
-          platform: "alibaba"
+          label: "Baratinho para ajustar ao treino!",
+          link: "https://s.shopee.com.br/6ptGeIDZ1O",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_06.jpg",
-          label: "Produto 6 - Tech & Gadgets",
-          link: "#",
-          platform: "aliexpress"
+          label: "Olha que bacana essa câmera chaveiro! Queremos!",
+          link: "https://s.click.aliexpress.com/e/_c3hi2GLX",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         }
       ]
     },
@@ -129,27 +130,29 @@ export const selIncriveis04Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis04/pdt_07.jpg",
-          label: "Produto 7 - Estilo",
-          link: "#",
-          platform: "amazon"
-        },
-        {
-          image: "/images/campaigns/sel-incriveis04/pdt_08.jpg",
-          label: "Produto 8 - Estilo",
-          link: "#",
-          platform: "aliexpress"
-        },
-        {
-          image: "/images/campaigns/sel-incriveis04/pdt_09.jpg",
-          label: "Produto 9 - Estilo",
-          link: "#",
+          label: "Esse bonitão sai baratinho com o frete!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601215967438",
           platform: "alibaba"
         },
         {
+          image: "/images/campaigns/sel-incriveis04/pdt_08.jpg",
+          label: "Pontente e com valor bem bacana!",
+          link: "https://s.click.aliexpress.com/e/_c4dUWPsp",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
+        },
+        {
+          image: "/images/campaigns/sel-incriveis04/pdt_09.jpg",
+          label: "Olha esse vigilante que barato!",
+          link: "https://s.click.aliexpress.com/e/_c3A37eih",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
+        },
+        {
           image: "/images/campaigns/sel-incriveis04/pdt_10.jpg",
-          label: "Produto 10 - Estilo",
-          link: "#",
-          platform: "shopee"
+          label: "Assistam o vídeo na Alibaba!",
+          link: "https://www.alibaba.com/product-detail/2026-Silence-Hot-Sales-Wired-RGB_1600776365049.html",
+          platform: "alibaba"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_11.jpg",
