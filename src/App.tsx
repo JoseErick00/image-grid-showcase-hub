@@ -42,6 +42,7 @@ import BrasilIncriveisSelPraia from "./pages/campaigns/BrasilIncriveisSelPraia";
 import BrasilIncriveisSelIncriveis01 from "./pages/campaigns/BrasilIncriveisSelIncriveis01";
 import BrasilIncriveisSelIncriveis02 from "./pages/campaigns/BrasilIncriveisSelIncriveis02";
 import BrasilIncriveisSelIncriveis03 from "./pages/campaigns/BrasilIncriveisSelIncriveis03";
+import BrasilIncriveisSelIncriveis04 from "./pages/campaigns/BrasilIncriveisSelIncriveis04";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -90,6 +91,7 @@ const App = () => (
             <Route path="brasil/incriveis/sel-incriveis-01" element={<BrasilIncriveisSelIncriveis01 />} />
             <Route path="brasil/incriveis/sel-incriveis-02" element={<BrasilIncriveisSelIncriveis02 />} />
             <Route path="brasil/incriveis/sel-incriveis-03" element={<BrasilIncriveisSelIncriveis03 />} />
+            <Route path="brasil/incriveis/sel-incriveis-04" element={<BrasilIncriveisSelIncriveis04 />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
