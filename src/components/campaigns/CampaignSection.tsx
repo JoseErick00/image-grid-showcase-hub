@@ -22,12 +22,13 @@ interface CampaignSectionProps {
   id: string;
   promoBanner: PromoBanner;
   products: Product[];
+  campaignSlug?: string;
 }
 
-const CampaignSection = ({ id, promoBanner, products }: CampaignSectionProps) => {
+const CampaignSection = ({ id, promoBanner, products, campaignSlug }: CampaignSectionProps) => {
   const { isCompactMode } = useGridLayout();
 
-  const bannerProductId = `banner-${id}`;
+  const bannerProductId = campaignSlug ? `banner-${campaignSlug}-${id}` : `banner-${id}`;
   const bannerShareData = {
     title: 'Confira esta promoção incrível!',
     text: 'Olha que promoção legal eu achei na iNeed!',
