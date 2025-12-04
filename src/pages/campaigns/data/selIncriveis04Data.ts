@@ -156,15 +156,15 @@ export const selIncriveis04Data: CampaignConfig = {
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_11.jpg",
-          label: "Produto 11 - Estilo",
-          link: "#",
-          platform: "amazon"
+          label: "Baratíssimo na Shopee",
+          link: "https://s.shopee.com.br/4VVLsNhswE",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_12.jpg",
-          label: "Produto 12 - Estilo",
-          link: "#",
-          platform: "amazon"
+          label: "Quem comprar avisa a gente! Queremos!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441454462",
+          platform: "alibaba"
         }
       ]
     },
@@ -179,38 +179,38 @@ export const selIncriveis04Data: CampaignConfig = {
       products: [
         {
           image: "/images/campaigns/sel-incriveis04/pdt_13.jpg",
-          label: "Produto 13 - Mais Achados",
-          link: "#",
-          platform: "shopee"
+          label: "Charmoso, protetor e com localizador!",
+          link: "https://amzn.to/3KBafLz",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_14.jpg",
-          label: "Produto 14 - Mais Achados",
-          link: "#",
+          label: "Talvez seu carro precise de um desse!",
+          link: "https://s.shopee.com.br/qcBDBTnkw",
           platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_15.jpg",
-          label: "Produto 15 - Mais Achados",
-          link: "#",
-          platform: "aliexpress"
+          label: "Uma lindinha baratinha na Shopee!",
+          link: "https://s.shopee.com.br/4q8JzGranZ",
+          platform: "shopee"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_16.jpg",
-          label: "Produto 16 - Mais Achados",
-          link: "#",
-          platform: "aliexpress"
+          label: "Vale muito a pena ter uma Instax!",
+          link: "https://amzn.to/4ryZWrU",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_17.jpg",
-          label: "Produto 17 - Mais Achados",
-          link: "#",
-          platform: "aliexpress"
+          label: "Esse microfone para celular e gravações externas.",
+          link: "https://amzn.to/4pBcr5b",
+          platform: "amazon"
         },
         {
           image: "/images/campaigns/sel-incriveis04/pdt_18.jpg",
-          label: "Produto 18 - Mais Achados",
-          link: "#",
+          label: "Garotas, esse dispositivo baratinho pode ajudar!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600676408246",
           platform: "alibaba"
         }
       ]
