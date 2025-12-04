@@ -58,11 +58,11 @@ export const selIncriveis01Data: CampaignConfig = {
   },
   navButtons: [
     {
-      label: "Tech & Gadgets",
+      label: "Encontre +",
       targetId: "tech-gadgets"
     },
     {
-      label: "Estilo",
+      label: "Compartilhe!",
       targetId: "estilo"
     },
     {
