@@ -1,6 +1,7 @@
 import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selIncriveis04Data: CampaignConfig = {
+  campaignSlug: "sel-incriveis-04",
   pageTitle: "Os achados mais bacanas da internet estão aqui!",
   pageSubtitle: "Uma seleção das novidades e dos mais bem avaliados nas plataformas (4.5 a 5 estrelas)!",
   heroBanner: {

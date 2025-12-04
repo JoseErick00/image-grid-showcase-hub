@@ -34,6 +34,7 @@ interface Section {
 }
 
 export interface CampaignConfig {
+  campaignSlug?: string;
   pageTitle: string;
   pageSubtitle: string;
   heroBanner: {
@@ -178,6 +179,7 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
               id={section.id}
               promoBanner={section.promoBanner}
               products={section.products}
+              campaignSlug={config.campaignSlug}
             />
           </div>
         ))}
