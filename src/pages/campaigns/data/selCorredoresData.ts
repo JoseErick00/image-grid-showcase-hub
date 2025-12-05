@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCorredoresData: CampaignConfig = {
+  campaignSlug: "sel-corredores",
   pageTitle: "Seleção para Corredores",
   pageSubtitle: "Os melhores produtos para turbinar sua corrida e melhorar seu desempenho!",
   heroBanner: {

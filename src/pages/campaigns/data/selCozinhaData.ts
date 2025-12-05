@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCozinhaData: CampaignConfig = {
+  campaignSlug: "sel-cozinha",
   pageTitle: "Seleção para Cozinha",
   pageSubtitle: "As novidades mais legais e os baratinhos e estilosos que estão a fim de ir para sua cozinha!",
   

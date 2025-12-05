@@ -1,6 +1,7 @@
 import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCorpoData: CampaignConfig = {
+  campaignSlug: "sel-corpo",
   pageTitle: "Seleção para o Corpo",
   pageSubtitle: "Uma seleção muito bacana de 'cuidados' com o corpo!",
   heroBanner: {

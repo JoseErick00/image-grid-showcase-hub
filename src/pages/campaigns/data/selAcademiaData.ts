@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selAcademiaData: CampaignConfig = {
+  campaignSlug: "sel-academia",
   pageTitle: "Seleção para Academia",
   pageSubtitle: "Os melhores produtos para turbinar seu treino e deixar sua academia em casa ainda mais completa!",
   heroBanner: {
