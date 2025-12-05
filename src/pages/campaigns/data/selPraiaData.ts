@@ -1,6 +1,7 @@
 import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selPraiaData: CampaignConfig = {
+  campaignSlug: "sel-praia",
   pageTitle: "Seleção amantes de Praia",
   pageSubtitle: "Uma seleção de achados que de uma forma ou outra você vai precisar!",
   heroBanner: {

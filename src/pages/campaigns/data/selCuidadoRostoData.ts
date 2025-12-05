@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCuidadoRostoData: CampaignConfig = {
+  campaignSlug: "sel-cuidado-rosto",
   pageTitle: "Seleção - Cuidado com o rosto",
   pageSubtitle: "Os melhores produtos para cuidados faciais e beleza!",
   heroBanner: {

@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selQuartoData: CampaignConfig = {
+  campaignSlug: "sel-quarto",
   pageTitle: "Seleção para o Quarto",
   pageSubtitle: "Descubra os melhores achados para deixar seu quarto ainda mais aconchegante!",
   

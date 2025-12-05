@@ -1,6 +1,7 @@
 import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCremesGringosData: CampaignConfig = {
+  campaignSlug: "sel-cremes-gringos",
   pageTitle: "Seleção de cremes 'Gringos'",
   pageSubtitle: "Uma seleção de achados para deixar você sem desculpas de não ter dinheiro para cuidar da sua pele!",
   heroBanner: {

@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selAquaticosData: CampaignConfig = {
+  campaignSlug: "sel-aquaticos",
   pageTitle: "Seleção - Aquáticos",
   pageSubtitle: "Os melhores produtos para natação, mergulho e esportes aquáticos!",
   heroBanner: {

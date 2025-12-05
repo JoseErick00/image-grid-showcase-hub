@@ -1,6 +1,7 @@
 import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selSalaData: CampaignConfig = {
+  campaignSlug: "sel-sala",
   pageTitle: "Seleção para Sala",
   pageSubtitle: "As novidades mais legais e os baratinhos e estilosos que estão a fim de ir para sua sala!",
   
