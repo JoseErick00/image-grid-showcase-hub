@@ -173,7 +173,7 @@ export const selCalcadosFemininosData: CampaignConfig = {
         },
         {
           image: "/campaigns/incriveis/products/calcados-fem-16.jpg",
-          label: "Mais um lidinho na Alibaba!",
+          label: "Mais um lindinho na Alibaba!",
           link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600711408114",
           platform: "alibaba" as const
         },
