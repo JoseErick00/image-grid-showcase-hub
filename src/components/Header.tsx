@@ -80,6 +80,7 @@ const Header = () => {
     { name: "Seleção OS INCRÍVEIS 02", href: "/brasil/incriveis/sel-incriveis-02" },
     { name: "Seleção OS INCRÍVEIS 03", href: "/brasil/incriveis/sel-incriveis-03" },
     { name: "Seleção OS INCRÍVEIS 04", href: "/brasil/incriveis/sel-incriveis-04" },
+    { name: "Seleção - Calçados Femininos", href: "/brasil/incriveis/sel-calcados-femininos" },
     { name: "Seleção para acampamentos", href: "/brasil/incriveis/sel-acampamentos" },
     { name: "Seleção amantes de Praia", href: "/brasil/incriveis/sel-praia" },
   ];
