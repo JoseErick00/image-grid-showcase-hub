@@ -107,10 +107,10 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
 
         {/* Title and Subtitle */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-omne-medium mb-3" style={{ color: '#171717' }}>
+          <h1 className="text-3xl md:text-4xl font-omne-medium mb-3 max-w-[960px] md:max-w-[840px] mx-auto px-4" style={{ color: '#171717' }}>
             {config.pageTitle}
           </h1>
-          <p className="text-xl font-omne-regular text-muted-foreground">
+          <p className="text-xl font-omne-regular text-muted-foreground max-w-[960px] md:max-w-[840px] mx-auto px-4">
             {config.pageSubtitle}
           </p>
         </div>
