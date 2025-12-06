@@ -52,10 +52,10 @@ export const selCalcadosFemininosData: CampaignConfig = {
     {
       id: "calcados-1",
       promoBanner: {
-        desktop: "/campaigns/incriveis/banners/promo-incriveis-01-desktop.webp",
-        tablet: "/campaigns/incriveis/banners/promo-incriveis-01-tablet.webp",
-        mobile: "/campaigns/incriveis/banners/promo-incriveis-01-mobile.webp",
-        link: "#"
+        desktop: "/campaigns/incriveis/banners/promo-calcados-01-desktop.jpg",
+        tablet: "/campaigns/incriveis/banners/promo-calcados-01-tablet.jpg",
+        mobile: "/campaigns/incriveis/banners/promo-calcados-01-mobile.jpg",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601432888107"
       },
       products: [
         {
@@ -99,10 +99,10 @@ export const selCalcadosFemininosData: CampaignConfig = {
     {
       id: "calcados-2",
       promoBanner: {
-        desktop: "/campaigns/incriveis/banners/promo-incriveis-02-desktop.webp",
-        tablet: "/campaigns/incriveis/banners/promo-incriveis-02-tablet.webp",
-        mobile: "/campaigns/incriveis/banners/promo-incriveis-02-mobile.webp",
-        link: "#"
+        desktop: "/campaigns/incriveis/banners/promo-calcados-02-desktop.jpg",
+        tablet: "/campaigns/incriveis/banners/promo-calcados-02-tablet.jpg",
+        mobile: "/campaigns/incriveis/banners/promo-calcados-02-mobile.jpg",
+        link: "https://amzn.to/3XDVtqh"
       },
       products: [
         {
@@ -146,10 +146,10 @@ export const selCalcadosFemininosData: CampaignConfig = {
     {
       id: "calcados-3",
       promoBanner: {
-        desktop: "/campaigns/incriveis/banners/promo-incriveis-03-desktop.webp",
-        tablet: "/campaigns/incriveis/banners/promo-incriveis-03-tablet.webp",
-        mobile: "/campaigns/incriveis/banners/promo-incriveis-03-mobile.webp",
-        link: "#"
+        desktop: "/campaigns/incriveis/banners/promo-calcados-03-desktop.jpg",
+        tablet: "/campaigns/incriveis/banners/promo-calcados-03-tablet.jpg",
+        mobile: "/campaigns/incriveis/banners/promo-calcados-03-mobile.jpg",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601607685076"
       },
       products: [
         {
