@@ -5,9 +5,9 @@ export const selCalcadosFemininosData: CampaignConfig = {
   pageTitle: "Os calçados femininos mais bacanas da Shopee, Amazon, Alibaba e AliExpress, estão aqui!",
   pageSubtitle: "Aproveite a seleção de calçados 'bacanérrimos' que você só encontra aqui na iNeed. Encontre calçados para tudo e para todas!",
   heroBanner: {
-    desktop: "/campaigns/incriveis/banners/hero-incriveis-desktop.webp",
-    tablet: "/campaigns/incriveis/banners/hero-incriveis-tablet.webp",
-    mobile: "/campaigns/incriveis/banners/hero-incriveis-mobile.webp"
+    desktop: "/campaigns/incriveis/banners/hero-calcados-femininos-desktop.jpg",
+    tablet: "/campaigns/incriveis/banners/hero-calcados-femininos-tablet.jpg",
+    mobile: "/campaigns/incriveis/banners/hero-calcados-femininos-mobile.jpg"
   },
   backLink: { url: "/brasil/incriveis", label: "Voltar para Incríveis" },
   seo: {
