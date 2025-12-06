@@ -59,40 +59,40 @@ export const selCalcadosFemininosData: CampaignConfig = {
       },
       products: [
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 1",
-          link: "#calcados-femininos-1",
+          image: "/campaigns/incriveis/products/calcados-fem-01.jpg",
+          label: "Bonita, confortável e no precinho Alibaba!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601200710477",
+          platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-02.jpg",
+          label: "Essa fofurinha baratinha da Shopee!",
+          link: "https://s.shopee.com.br/3LJXksUMc5",
           platform: "shopee" as const
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 2",
-          link: "#calcados-femininos-2",
+          image: "/campaigns/incriveis/products/calcados-fem-03.jpg",
+          label: "Um casual que deixa qualquer passeio confortável!",
+          link: "https://s.shopee.com.br/5VO2ILJ8Sa",
           platform: "shopee" as const
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 3",
-          link: "#calcados-femininos-3",
+          image: "/campaigns/incriveis/products/calcados-fem-04.jpg",
+          label: "Chegando no Brasil (sem avaliação ainda!)",
+          link: "https://s.shopee.com.br/BMVxis16W",
           platform: "shopee" as const
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 4",
-          link: "#calcados-femininos-4",
-          platform: "shopee" as const
+          image: "/campaigns/incriveis/products/calcados-fem-05.jpg",
+          label: "Preço para 2 pares, então compartilha logo com sua amiga!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601604356149",
+          platform: "alibaba" as const
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 5",
-          link: "#calcados-femininos-5",
-          platform: "shopee" as const
-        },
-        {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 6",
-          link: "#calcados-femininos-6",
-          platform: "shopee" as const
+          image: "/campaigns/incriveis/products/calcados-fem-06.jpg",
+          label: "Olha o preço dessa na Amazon!",
+          link: "https://amzn.to/4py2DIM",
+          platform: "amazon" as const
         }
       ]
     },
@@ -106,28 +106,29 @@ export const selCalcadosFemininosData: CampaignConfig = {
       },
       products: [
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 7",
-          link: "#calcados-femininos-7",
+          image: "/campaigns/incriveis/products/calcados-fem-07.jpg",
+          label: "BBB, Bom, Bonito e Barato!",
+          link: "https://amzn.to/4rE7JEY",
           platform: "amazon" as const
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 8",
-          link: "#calcados-femininos-8",
+          image: "/campaigns/incriveis/products/calcados-fem-08.jpg",
+          label: "Excelente, bonito e barato!",
+          link: "https://amzn.to/4azMHRL",
           platform: "amazon" as const
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 9",
-          link: "#calcados-femininos-9",
-          platform: "amazon" as const
+          image: "/campaigns/incriveis/products/calcados-fem-09.jpg",
+          label: "Placa de carbono, para quem está correndo muito!",
+          link: "https://s.click.aliexpress.com/e/_c4DnxNSt",
+          platform: "aliexpress" as const,
+          stamp: "Frete Grátis!"
         },
         {
-          image: "/placeholder.svg",
-          label: "Produto Calçado Feminino 10",
-          link: "#calcados-femininos-10",
-          platform: "amazon" as const
+          image: "/campaigns/incriveis/products/calcados-fem-10.jpg",
+          label: "Malandrinha e baratinha!",
+          link: "https://s.shopee.com.br/1gBJjfxhkM",
+          platform: "shopee" as const
         },
         {
           image: "/placeholder.svg",
