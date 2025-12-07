@@ -6,7 +6,7 @@ interface NavButton {
 }
 
 interface CampaignNavButtonsProps {
-  buttons: [NavButton, NavButton, NavButton];
+  buttons: NavButton[];
 }
 
 const CampaignNavButtons = ({ buttons }: CampaignNavButtonsProps) => {
