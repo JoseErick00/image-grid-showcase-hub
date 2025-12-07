@@ -236,6 +236,24 @@ export const selCalcadosFemininosData: CampaignConfig = {
           label: "Sandália para o verão e pra toda hora!",
           link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601386020178",
           platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-25.jpg",
+          label: "Compartilha com a amiga. As duas coloridas!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601301273445",
+          platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-26.jpg",
+          label: "Dois pares também super baratos!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600832941199",
+          platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-27.jpg",
+          label: "Essas Havaianas lindas na Amazon",
+          link: "https://amzn.to/4oymtSZ",
+          platform: "amazon" as const
         }
       ]
     }
