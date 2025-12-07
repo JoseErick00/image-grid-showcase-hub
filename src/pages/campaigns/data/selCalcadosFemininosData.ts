@@ -46,7 +46,8 @@ export const selCalcadosFemininosData: CampaignConfig = {
   navButtons: [
     { label: "Encontre +", targetId: "calcados-1" },
     { label: "Compartilhe!", targetId: "calcados-2" },
-    { label: "+ Achados", targetId: "calcados-3" }
+    { label: "+ Achados", targetId: "calcados-3" },
+    { label: "+ Baratos", targetId: "calcados-4" }
   ],
   sections: [
     {
@@ -188,6 +189,53 @@ export const selCalcadosFemininosData: CampaignConfig = {
           label: "Olha que bonito e barato na Amazon!",
           link: "https://amzn.to/44ceYdi",
           platform: "amazon" as const
+        }
+      ]
+    },
+    {
+      id: "calcados-4",
+      promoBanner: {
+        desktop: "/campaigns/incriveis/banners/calcados-fem-promo-04.jpg",
+        tablet: "/campaigns/incriveis/banners/calcados-fem-promo-04_tablet.jpg",
+        mobile: "/campaigns/incriveis/banners/calcados-fem-promo-04_mobile.jpg",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601189812625"
+      },
+      products: [
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-19.jpg",
+          label: "FILA, Recovery, Feminino",
+          link: "https://amzn.to/4pRItt7",
+          platform: "amazon" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-20.jpg",
+          label: "Baratíssimo na Shopee! Compra!",
+          link: "https://s.shopee.com.br/2B7aK3Zrfc",
+          platform: "shopee" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-21.jpg",
+          label: "Compartilha com a amiga e compra junto!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601158911519",
+          platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-22.jpg",
+          label: "Mais um bonito e baratíssimo da Alibaba!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600431154126",
+          platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-23.jpg",
+          label: "Muito estilo por um preço bem justo!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601275338342",
+          platform: "alibaba" as const
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-fem-24.jpg",
+          label: "Sandália para o verão e pra toda hora!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601386020178",
+          platform: "alibaba" as const
         }
       ]
     }

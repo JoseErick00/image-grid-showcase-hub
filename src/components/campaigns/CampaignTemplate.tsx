@@ -42,8 +42,8 @@ export interface CampaignConfig {
     tablet: string;
     mobile: string;
   };
-  navButtons: [NavButton, NavButton, NavButton];
-  sections: [Section, Section, Section];
+  navButtons: NavButton[];
+  sections: Section[];
   backLink?: {
     url: string;
     label: string;
