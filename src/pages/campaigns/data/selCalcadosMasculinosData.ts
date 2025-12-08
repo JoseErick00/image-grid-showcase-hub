@@ -63,7 +63,47 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         mobile: "/campaigns/incriveis/banners/promo-calcados-masc-01-mobile.jpg",
         link: "https://s.click.aliexpress.com/e/_c3IXpXvn"
       },
-      products: []
+      products: [
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-01.jpg",
+          label: "BBB - Bom, Bonito e Barato!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601615265696",
+          platform: "alibaba"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-02.jpg",
+          label: "Todo mundo falando do conforto!",
+          link: "https://s.shopee.com.br/3LJXksUMc5",
+          platform: "shopee",
+          stamp: "Frete Grátis!"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-03.jpg",
+          label: "Esse é bem minimalista e barato!",
+          link: "https://s.shopee.com.br/5VO2ILJ8Sa",
+          platform: "shopee",
+          stamp: "Frete Grátis!"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-04.jpg",
+          label: "Mais estiloso e no precinho Shopee!",
+          link: "https://s.shopee.com.br/7plx82HTyp",
+          platform: "shopee"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-05.jpg",
+          label: "Nem todo mundo gosta de Havaianas!",
+          link: "https://s.click.aliexpress.com/e/_c4pCd4SN",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-06.jpg",
+          label: "Dá uma potência na postura e na caminhada!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601569372282",
+          platform: "alibaba"
+        }
+      ]
     },
     {
       id: "calcados-masc-2",
@@ -73,7 +113,32 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         mobile: "/campaigns/incriveis/banners/promo-calcados-masc-02-mobile.jpg",
         link: "https://s.click.aliexpress.com/e/_c3QVMv8V"
       },
-      products: []
+      products: [
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-07.jpg",
+          label: "Queremos! Olympikus Grafeno 3.",
+          link: "https://amzn.to/49Xeg7n",
+          platform: "amazon"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-08.jpg",
+          label: "O Olympikus Veloz também é bacanão!",
+          link: "https://amzn.to/4azMHRL",
+          platform: "amazon"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-09.jpg",
+          label: "O Fila Striker é um charme esportivo!",
+          link: "https://amzn.to/44Abu4D",
+          platform: "amazon"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-10.jpg",
+          label: "Esse chinelo está muito bem avaliado!",
+          link: "https://s.shopee.com.br/9zqRhaFk0W",
+          platform: "shopee"
+        }
+      ]
     },
     {
       id: "calcados-masc-3",
