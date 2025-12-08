@@ -14,6 +14,107 @@ export type Database = {
   }
   public: {
     Tables: {
+      campaigns: {
+        Row: {
+          category_id: string
+          created_at: string | null
+          display_order: number | null
+          hero_desktop: string | null
+          hero_mobile: string | null
+          hero_tablet: string | null
+          id: string
+          is_active: boolean | null
+          name: string
+          seo_description: string | null
+          seo_keywords: string[] | null
+          seo_title: string | null
+          slug: string
+          subtitle: string | null
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          category_id: string
+          created_at?: string | null
+          display_order?: number | null
+          hero_desktop?: string | null
+          hero_mobile?: string | null
+          hero_tablet?: string | null
+          id?: string
+          is_active?: boolean | null
+          name: string
+          seo_description?: string | null
+          seo_keywords?: string[] | null
+          seo_title?: string | null
+          slug: string
+          subtitle?: string | null
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          category_id?: string
+          created_at?: string | null
+          display_order?: number | null
+          hero_desktop?: string | null
+          hero_mobile?: string | null
+          hero_tablet?: string | null
+          id?: string
+          is_active?: boolean | null
+          name?: string
+          seo_description?: string | null
+          seo_keywords?: string[] | null
+          seo_title?: string | null
+          slug?: string
+          subtitle?: string | null
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "campaigns_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      categories: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          display_order: number | null
+          icon: string | null
+          id: string
+          is_active: boolean | null
+          name: string
+          slug: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          display_order?: number | null
+          icon?: string | null
+          id?: string
+          is_active?: boolean | null
+          name: string
+          slug: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          display_order?: number | null
+          icon?: string | null
+          id?: string
+          is_active?: boolean | null
+          name?: string
+          slug?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       product_likes: {
         Row: {
           created_at: string
@@ -40,6 +141,127 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      products: {
+        Row: {
+          affiliate_link: string
+          campaign_id: string
+          click_count: number | null
+          created_at: string | null
+          display_order: number | null
+          id: string
+          image_url: string
+          is_active: boolean | null
+          label: string
+          like_count: number | null
+          platform: string
+          section_id: string
+          share_count: number | null
+          stamp: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          affiliate_link: string
+          campaign_id: string
+          click_count?: number | null
+          created_at?: string | null
+          display_order?: number | null
+          id?: string
+          image_url: string
+          is_active?: boolean | null
+          label: string
+          like_count?: number | null
+          platform: string
+          section_id: string
+          share_count?: number | null
+          stamp?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          affiliate_link?: string
+          campaign_id?: string
+          click_count?: number | null
+          created_at?: string | null
+          display_order?: number | null
+          id?: string
+          image_url?: string
+          is_active?: boolean | null
+          label?: string
+          like_count?: number | null
+          platform?: string
+          section_id?: string
+          share_count?: number | null
+          stamp?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "products_campaign_id_fkey"
+            columns: ["campaign_id"]
+            isOneToOne: false
+            referencedRelation: "campaigns"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      promo_banners: {
+        Row: {
+          affiliate_link: string
+          campaign_id: string
+          click_count: number | null
+          created_at: string | null
+          desktop_url: string
+          display_order: number | null
+          id: string
+          is_active: boolean | null
+          like_count: number | null
+          mobile_url: string | null
+          section_id: string
+          share_count: number | null
+          tablet_url: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          affiliate_link: string
+          campaign_id: string
+          click_count?: number | null
+          created_at?: string | null
+          desktop_url: string
+          display_order?: number | null
+          id?: string
+          is_active?: boolean | null
+          like_count?: number | null
+          mobile_url?: string | null
+          section_id: string
+          share_count?: number | null
+          tablet_url?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          affiliate_link?: string
+          campaign_id?: string
+          click_count?: number | null
+          created_at?: string | null
+          desktop_url?: string
+          display_order?: number | null
+          id?: string
+          is_active?: boolean | null
+          like_count?: number | null
+          mobile_url?: string | null
+          section_id?: string
+          share_count?: number | null
+          tablet_url?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "promo_banners_campaign_id_fkey"
+            columns: ["campaign_id"]
+            isOneToOne: false
+            referencedRelation: "campaigns"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
