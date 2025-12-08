@@ -178,20 +178,20 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-15.jpg",
           label: "Para quem usa aquele casual de sempre!",
-          link: "https://s.shopee.com.br/2qNLsHf3LP",
-          platform: "shopee"
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601639599699",
+          platform: "alibaba"
         },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-16.jpg",
           label: "Esse está bem baratinho na também!",
-          link: "https://s.shopee.com.br/8AOsEZmIVO",
+          link: "https://s.shopee.com.br/2qNLsHf3LP",
           platform: "shopee"
         },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-17.jpg",
           label: "BBB – Bom, Bonito e Barato!",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601639599699",
-          platform: "alibaba"
+          link: "https://s.shopee.com.br/8AOsEZmIVO",
+          platform: "shopee"
         },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-18.jpg",
