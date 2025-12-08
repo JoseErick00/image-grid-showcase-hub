@@ -183,7 +183,7 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-16.jpg",
-          label: "Esse está bem baratinho na também!",
+          label: "Esse está bem baratinho na Shopee também!",
           link: "https://s.shopee.com.br/2qNLsHf3LP",
           platform: "shopee"
         },
