@@ -45,6 +45,7 @@ import BrasilIncriveisSelIncriveis03 from "./pages/campaigns/BrasilIncriveisSelI
 import BrasilIncriveisSelIncriveis04 from "./pages/campaigns/BrasilIncriveisSelIncriveis04";
 import BrasilIncriveisSelCalcadosFemininos from "./pages/campaigns/BrasilIncriveisSelCalcadosFemininos";
 import BrasilIncriveisSelCalcadosMasculinos from "./pages/campaigns/BrasilIncriveisSelCalcadosMasculinos";
+import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -99,6 +100,8 @@ const App = () => (
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
           </Route>
+          {/* Admin routes - fora do Layout principal */}
+          <Route path="admin/migrate" element={<MigrateCampaigns />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
