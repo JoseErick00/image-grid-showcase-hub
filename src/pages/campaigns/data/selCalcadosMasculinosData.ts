@@ -137,18 +137,7 @@ export const selCalcadosMasculinosData: CampaignConfig = {
           label: "Esse chinelo está muito bem avaliado!",
           link: "https://s.shopee.com.br/9zqRhaFk0W",
           platform: "shopee"
-        }
-      ]
-    },
-    {
-      id: "calcados-masc-3",
-      promoBanner: {
-        desktop: "/campaigns/incriveis/banners/promo-calcados-masc-03-desktop.jpg",
-        tablet: "/campaigns/incriveis/banners/promo-calcados-masc-03-tablet.jpg",
-        mobile: "/campaigns/incriveis/banners/promo-calcados-masc-03-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=62479176325"
-      },
-      products: [
+        },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-11.jpg",
           label: "Aquele passeio mais arrumadinho!",
@@ -162,7 +151,18 @@ export const selCalcadosMasculinosData: CampaignConfig = {
           link: "https://s.click.aliexpress.com/e/_c3QVMv8V",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
-        },
+        }
+      ]
+    },
+    {
+      id: "calcados-masc-3",
+      promoBanner: {
+        desktop: "/campaigns/incriveis/banners/promo-calcados-masc-03-desktop.jpg",
+        tablet: "/campaigns/incriveis/banners/promo-calcados-masc-03-tablet.jpg",
+        mobile: "/campaigns/incriveis/banners/promo-calcados-masc-03-mobile.jpg",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=62479176325"
+      },
+      products: [
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-13.jpg",
           label: "Bonitão e de qualidade! Queremos!",
@@ -186,6 +186,18 @@ export const selCalcadosMasculinosData: CampaignConfig = {
           label: "Esse está bem baratinho na também!",
           link: "https://s.shopee.com.br/8AOsEZmIVO",
           platform: "shopee"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-17.jpg",
+          label: "BBB – Bom, Bonito e Barato!",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601639599699",
+          platform: "alibaba"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-18.jpg",
+          label: "Olha que bonito e barato na Alibaba",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601615385120",
+          platform: "alibaba"
         }
       ]
     },
@@ -198,18 +210,6 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         link: "#"
       },
       products: [
-        {
-          image: "/campaigns/incriveis/products/calcados-masc-pdt-17.jpg",
-          label: "BBB – Bom, Bonito e Barato!",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601639599699",
-          platform: "alibaba"
-        },
-        {
-          image: "/campaigns/incriveis/products/calcados-masc-pdt-18.jpg",
-          label: "Olha que bonito e barato na Alibaba",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601615385120",
-          platform: "alibaba"
-        },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-19.jpg",
           label: "Essas Havaianas da Shopee!",
