@@ -73,15 +73,15 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-02.jpg",
           label: "Todo mundo falando do conforto!",
-          link: "https://s.shopee.com.br/3LJXksUMc5",
-          platform: "shopee",
+          link: "https://s.click.aliexpress.com/e/_c42cYvnF",
+          platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-03.jpg",
           label: "Esse é bem minimalista e barato!",
-          link: "https://s.shopee.com.br/5VO2ILJ8Sa",
-          platform: "shopee",
+          link: "https://s.click.aliexpress.com/e/_c3vXztX3",
+          platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
         {
