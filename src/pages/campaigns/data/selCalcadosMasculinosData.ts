@@ -61,7 +61,7 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         desktop: "/campaigns/incriveis/banners/promo-calcados-masc-01-desktop.jpg",
         tablet: "/campaigns/incriveis/banners/promo-calcados-masc-01-tablet.jpg",
         mobile: "/campaigns/incriveis/banners/promo-calcados-masc-01-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c3IXpXvn"
       },
       products: []
     },
@@ -71,7 +71,7 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         desktop: "/campaigns/incriveis/banners/promo-calcados-masc-02-desktop.jpg",
         tablet: "/campaigns/incriveis/banners/promo-calcados-masc-02-tablet.jpg",
         mobile: "/campaigns/incriveis/banners/promo-calcados-masc-02-mobile.jpg",
-        link: "#"
+        link: "https://s.click.aliexpress.com/e/_c3QVMv8V"
       },
       products: []
     },
@@ -81,7 +81,7 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         desktop: "/campaigns/incriveis/banners/promo-calcados-masc-03-desktop.jpg",
         tablet: "/campaigns/incriveis/banners/promo-calcados-masc-03-tablet.jpg",
         mobile: "/campaigns/incriveis/banners/promo-calcados-masc-03-mobile.jpg",
-        link: "#"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=62479176325"
       },
       products: []
     },
