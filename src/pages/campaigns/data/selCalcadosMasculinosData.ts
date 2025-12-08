@@ -123,7 +123,7 @@ export const selCalcadosMasculinosData: CampaignConfig = {
         {
           image: "/campaigns/incriveis/products/calcados-masc-pdt-08.jpg",
           label: "O Olympikus Veloz também é bacanão!",
-          link: "https://amzn.to/4azMHRL",
+          link: "https://amzn.to/3KgrqlC",
           platform: "amazon"
         },
         {
