@@ -204,10 +204,10 @@ export const selCalcadosMasculinosData: CampaignConfig = {
     {
       id: "calcados-masc-4",
       promoBanner: {
-        desktop: "/campaigns/incriveis/banners/promo-calcados-masc-04-desktop.jpg",
-        tablet: "/campaigns/incriveis/banners/promo-calcados-masc-04-tablet.jpg",
-        mobile: "/campaigns/incriveis/banners/promo-calcados-masc-04-mobile.jpg",
-        link: "#"
+        desktop: "/campaigns/incriveis/banners/calcados-masc-promo-banner04.jpg",
+        tablet: "/campaigns/incriveis/banners/calcados-masc-promo-banner04-tablet.jpg",
+        mobile: "/campaigns/incriveis/banners/calcados-masc-promo-banner04-mobile.jpg",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441454462"
       },
       products: [
         {
@@ -221,6 +221,50 @@ export const selCalcadosMasculinosData: CampaignConfig = {
           label: "Lindo tênis retrô de corrida!",
           link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601613517940",
           platform: "alibaba"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-21.jpg",
+          label: "Mais estilo e entrega garantida na Alibaba",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601332510727",
+          platform: "alibaba"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-22.jpg",
+          label: "Esse Mormaii UrbanFree - bege!",
+          link: "https://amzn.to/4aHWUvo",
+          platform: "amazon"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-23.jpg",
+          label: "Conjunto Sapato + Relógio. Quase de graça!",
+          link: "https://amzn.to/4a8eysh",
+          platform: "amazon"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-24.jpg",
+          label: "Baratíssimo, qual a desculpa?",
+          link: "https://amzn.to/4pSKUeZ",
+          platform: "alibaba"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-25.jpg",
+          label: "Entrega tudo, e ainda é barato!",
+          link: "https://s.shopee.com.br/9AHPUZAfQp",
+          platform: "shopee"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-26.jpg",
+          label: "O visual seguro e resolvido!",
+          link: "https://s.click.aliexpress.com/e/_c4dZttVx",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
+        },
+        {
+          image: "/campaigns/incriveis/products/calcados-masc-pdt-27.jpg",
+          label: "O Xtep 2000km é muita qualidade por um preço baixo!",
+          link: "https://s.click.aliexpress.com/e/_c4Pmnrkp",
+          platform: "aliexpress",
+          stamp: "Frete Grátis!"
         }
       ]
     }
