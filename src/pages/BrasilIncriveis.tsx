@@ -2,6 +2,8 @@ import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
+import CategoryPromoBanner from "@/components/CategoryPromoBanner";
+import CategorySmallBanner from "@/components/CategorySmallBanner";
 import promoBanner from "@/assets/Promo_banner_Inc.jpg";
 import promoBannerMobile from "@/assets/Promo_banner_mobileInc.jpg";
 import promoBannerTablet from "@/assets/Promo_banner_tabletInc.jpg";
