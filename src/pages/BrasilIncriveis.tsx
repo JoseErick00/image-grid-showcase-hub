@@ -402,58 +402,40 @@ const BrasilIncriveis = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/48uWOX4" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/8zwZih2PKR" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://amzn.to/48uWOX4"
+              alt="Small banner 03"
+              categorySlug="brasil-incriveis"
+              bannerId="small-03"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://s.shopee.com.br/8zwZih2PKR"
+              alt="Small banner 04"
+              categorySlug="brasil-incriveis"
+              bannerId="small-04"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/48uWOX4" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/8zwZih2PKR" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://amzn.to/48uWOX4"
+              alt="Small banner 03"
+              categorySlug="brasil-incriveis"
+              bannerId="small-03-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://s.shopee.com.br/8zwZih2PKR"
+              alt="Small banner 04"
+              categorySlug="brasil-incriveis"
+              bannerId="small-04-mobile"
+            />
           </div>
         </div>
 
@@ -486,58 +468,40 @@ const BrasilIncriveis = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/7V7dZJmkS0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/4nQ8b0I" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://s.shopee.com.br/7V7dZJmkS0"
+              alt="Small banner 05"
+              categorySlug="brasil-incriveis"
+              bannerId="small-05"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://amzn.to/4nQ8b0I"
+              alt="Small banner 06"
+              categorySlug="brasil-incriveis"
+              bannerId="small-06"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/7V7dZJmkS0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/4nQ8b0I" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://s.shopee.com.br/7V7dZJmkS0"
+              alt="Small banner 05"
+              categorySlug="brasil-incriveis"
+              bannerId="small-05-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://amzn.to/4nQ8b0I"
+              alt="Small banner 06"
+              categorySlug="brasil-incriveis"
+              bannerId="small-06-mobile"
+            />
           </div>
         </div>
 
@@ -562,58 +526,40 @@ const BrasilIncriveis = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/46PWJfn" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://amzn.to/46PWJfn"
+              alt="Small banner 07"
+              categorySlug="brasil-incriveis"
+              bannerId="small-07"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078"
+              alt="Small banner 08"
+              categorySlug="brasil-incriveis"
+              bannerId="small-08"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/46PWJfn" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://amzn.to/46PWJfn"
+              alt="Small banner 07"
+              categorySlug="brasil-incriveis"
+              bannerId="small-07-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078"
+              alt="Small banner 08"
+              categorySlug="brasil-incriveis"
+              bannerId="small-08-mobile"
+            />
           </div>
         </div>
 
@@ -630,31 +576,15 @@ const BrasilIncriveis = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="my-12 flex justify-center">
             <div className="w-full max-w-[1200px]">
-              <a 
-                href="https://amzn.to/48z1r2x"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                {/* Desktop banner */}
-                <img 
-                  src={promoBanner02}
-                  alt="Incríveis promo banner 02 - desktop"
-                  className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Tablet banner */}
-                <img 
-                  src={promoBanner02Tablet}
-                  alt="Incríveis promo banner 02 - tablet"
-                  className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Mobile banner */}
-                <img 
-                  src={promoBanner02Mobile}
-                  alt="Incríveis promo banner 02 - mobile"
-                  className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategoryPromoBanner
+                desktopImage={promoBanner02}
+                tabletImage={promoBanner02Tablet}
+                mobileImage={promoBanner02Mobile}
+                link="https://amzn.to/48z1r2x"
+                alt="Incríveis promo banner 02"
+                categorySlug="brasil-incriveis"
+                bannerId="promo-02"
+              />
             </div>
           </div>
         </div>
@@ -664,59 +594,41 @@ const BrasilIncriveis = () => {
           <div className="my-12">
             {/* Desktop: Two columns */}
             <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-              <a 
-                href="https://amzn.to/3VIO5ZV" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-              >
-                <img 
-                  src={smallBanner09}
-                  alt="Small banner 09"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-              <a 
-                href="https://amzn.to/49cm70B" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-              >
-                <img 
-                  src={smallBanner10}
-                  alt="Small banner 10"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategorySmallBanner
+                image={smallBanner09}
+                link="https://amzn.to/3VIO5ZV"
+                alt="Small banner 09"
+                categorySlug="brasil-incriveis"
+                bannerId="small-09"
+                className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              />
+              <CategorySmallBanner
+                image={smallBanner10}
+                link="https://amzn.to/49cm70B"
+                alt="Small banner 10"
+                categorySlug="brasil-incriveis"
+                bannerId="small-10"
+                className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              />
             </div>
             
             {/* Mobile: Stacked */}
             <div className="md:hidden space-y-12">
-              <a 
-                href="https://amzn.to/3VIO5ZV" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                <img 
-                  src={smallBanner09}
-                  alt="Small banner 09"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-              <a 
-                href="https://amzn.to/49cm70B" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                <img 
-                  src={smallBanner10}
-                  alt="Small banner 10"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-             </div>
+              <CategorySmallBanner
+                image={smallBanner09}
+                link="https://amzn.to/3VIO5ZV"
+                alt="Small banner 09"
+                categorySlug="brasil-incriveis"
+                bannerId="small-09-mobile"
+              />
+              <CategorySmallBanner
+                image={smallBanner10}
+                link="https://amzn.to/49cm70B"
+                alt="Small banner 10"
+                categorySlug="brasil-incriveis"
+                bannerId="small-10-mobile"
+              />
+            </div>
           </div>
         </div>
 

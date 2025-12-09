@@ -623,58 +623,40 @@ const BrasilTech = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/3VIO5ZV" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/48Ic7vw" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://amzn.to/3VIO5ZV"
+              alt="Small banner 03"
+              categorySlug="brasil-tech"
+              bannerId="small-03"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://amzn.to/48Ic7vw"
+              alt="Small banner 04"
+              categorySlug="brasil-tech"
+              bannerId="small-04"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/3VIO5ZV" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/48Ic7vw" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://amzn.to/3VIO5ZV"
+              alt="Small banner 03"
+              categorySlug="brasil-tech"
+              bannerId="small-03-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://amzn.to/48Ic7vw"
+              alt="Small banner 04"
+              categorySlug="brasil-tech"
+              bannerId="small-04-mobile"
+            />
           </div>
         </div>
 
@@ -707,58 +689,40 @@ const BrasilTech = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600970099195" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.click.aliexpress.com/e/_c3acXZXZ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600970099195"
+              alt="Small banner 05"
+              categorySlug="brasil-tech"
+              bannerId="small-05"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://s.click.aliexpress.com/e/_c3acXZXZ"
+              alt="Small banner 06"
+              categorySlug="brasil-tech"
+              bannerId="small-06"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600970099195" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.click.aliexpress.com/e/_c3acXZXZ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600970099195"
+              alt="Small banner 05"
+              categorySlug="brasil-tech"
+              bannerId="small-05-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://s.click.aliexpress.com/e/_c3acXZXZ"
+              alt="Small banner 06"
+              categorySlug="brasil-tech"
+              bannerId="small-06-mobile"
+            />
           </div>
         </div>
 
@@ -783,58 +747,40 @@ const BrasilTech = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/7V7dZJmkS0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/4nVFPBz" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://s.shopee.com.br/7V7dZJmkS0"
+              alt="Small banner 07"
+              categorySlug="brasil-tech"
+              bannerId="small-07"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://amzn.to/4nVFPBz"
+              alt="Small banner 08"
+              categorySlug="brasil-tech"
+              bannerId="small-08"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/7V7dZJmkS0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/4nVFPBz" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://s.shopee.com.br/7V7dZJmkS0"
+              alt="Small banner 07"
+              categorySlug="brasil-tech"
+              bannerId="small-07-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://amzn.to/4nVFPBz"
+              alt="Small banner 08"
+              categorySlug="brasil-tech"
+              bannerId="small-08-mobile"
+            />
           </div>
         </div>
 
@@ -851,31 +797,15 @@ const BrasilTech = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="my-12 flex justify-center">
             <div className="w-full max-w-[1200px]">
-              <a 
-                href="https://amzn.to/3WprEJf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                {/* Desktop banner */}
-                <img 
-                  src={promoBanner02}
-                  alt="Tech promo banner 02 - desktop"
-                  className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Tablet banner */}
-                <img 
-                  src={promoBanner02Tablet}
-                  alt="Tech promo banner 02 - tablet"
-                  className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Mobile banner */}
-                <img 
-                  src={promoBanner02Mobile}
-                  alt="Tech promo banner 02 - mobile"
-                  className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategoryPromoBanner
+                desktopImage={promoBanner02}
+                tabletImage={promoBanner02Tablet}
+                mobileImage={promoBanner02Mobile}
+                link="https://amzn.to/3WprEJf"
+                alt="Tech promo banner 02"
+                categorySlug="brasil-tech"
+                bannerId="promo-02"
+              />
             </div>
           </div>
         </div>
@@ -885,58 +815,40 @@ const BrasilTech = () => {
           <div className="my-12">
             {/* Desktop: Two columns */}
             <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-              <a 
-                href="https://amzn.to/46ZfdbY" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-              >
-                <img 
-                  src={smallBanner09}
-                  alt="Small banner 09"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-              <a 
-                href="https://amzn.to/47fv0oq" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-              >
-                <img 
-                  src={smallBanner10}
-                  alt="Small banner 10"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategorySmallBanner
+                image={smallBanner09}
+                link="https://amzn.to/46ZfdbY"
+                alt="Small banner 09"
+                categorySlug="brasil-tech"
+                bannerId="small-09"
+                className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              />
+              <CategorySmallBanner
+                image={smallBanner10}
+                link="https://amzn.to/47fv0oq"
+                alt="Small banner 10"
+                categorySlug="brasil-tech"
+                bannerId="small-10"
+                className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              />
             </div>
             
             {/* Mobile: Stacked */}
             <div className="md:hidden space-y-12">
-              <a 
-                href="https://amzn.to/46ZfdbY" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                <img 
-                  src={smallBanner09}
-                  alt="Small banner 09"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-              <a 
-                href="https://amzn.to/47fv0oq" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                <img 
-                  src={smallBanner10}
-                  alt="Small banner 10"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategorySmallBanner
+                image={smallBanner09}
+                link="https://amzn.to/46ZfdbY"
+                alt="Small banner 09"
+                categorySlug="brasil-tech"
+                bannerId="small-09-mobile"
+              />
+              <CategorySmallBanner
+                image={smallBanner10}
+                link="https://amzn.to/47fv0oq"
+                alt="Small banner 10"
+                categorySlug="brasil-tech"
+                bannerId="small-10-mobile"
+              />
             </div>
          </div>
         </div>
