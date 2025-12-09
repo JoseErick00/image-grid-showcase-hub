@@ -1,6 +1,8 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
+import CategoryPromoBanner from "@/components/CategoryPromoBanner";
+import CategorySmallBanner from "@/components/CategorySmallBanner";
 import promoBanner from "@/assets/brasil-esportes/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/brasil-esportes/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/brasil-esportes/Promo_banner_tablet.jpg";
@@ -613,31 +615,15 @@ const BrasilEsportes = () => {
         {/* Promo Banner 01 */}
         <div className="mt-5 mb-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://s.click.aliexpress.com/e/_c4cwqPUj" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={promoBanner}
-                alt="Esportes promo banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={promoBannerTablet}
-                alt="Esportes promo banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={promoBannerMobile}
-                alt="Esportes promo banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={promoBanner}
+              tabletImage={promoBannerTablet}
+              mobileImage={promoBannerMobile}
+              link="https://s.click.aliexpress.com/e/_c4cwqPUj"
+              alt="Esportes promo banner"
+              categorySlug="brasil-esportes"
+              bannerId="promo-01"
+            />
           </div>
         </div>
 
@@ -645,58 +631,40 @@ const BrasilEsportes = () => {
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.click.aliexpress.com/e/_c3nLhzfZ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.click.aliexpress.com/e/_c3nLhzfZ"
+              alt="Small banner 01"
+              categorySlug="brasil-esportes"
+              bannerId="small-01"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
+              alt="Small banner 02"
+              categorySlug="brasil-esportes"
+              bannerId="small-02"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.click.aliexpress.com/e/_c3nLhzfZ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.click.aliexpress.com/e/_c3nLhzfZ"
+              alt="Small banner 01"
+              categorySlug="brasil-esportes"
+              bannerId="small-01-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
+              alt="Small banner 02"
+              categorySlug="brasil-esportes"
+              bannerId="small-02-mobile"
+            />
           </div>
         </div>
 
@@ -718,58 +686,40 @@ const BrasilEsportes = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/2g2lxBa1XI" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/48EVTDE"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://s.shopee.com.br/2g2lxBa1XI"
+              alt="Small banner 03"
+              categorySlug="brasil-esportes"
+              bannerId="small-03"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://amzn.to/48EVTDE"
+              alt="Small banner 04"
+              categorySlug="brasil-esportes"
+              bannerId="small-04"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/2g2lxBa1XI" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/48EVTDE"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://s.shopee.com.br/2g2lxBa1XI"
+              alt="Small banner 03"
+              categorySlug="brasil-esportes"
+              bannerId="small-03-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://amzn.to/48EVTDE"
+              alt="Small banner 04"
+              categorySlug="brasil-esportes"
+              bannerId="small-04-mobile"
+            />
           </div>
         </div>
 
@@ -784,31 +734,15 @@ const BrasilEsportes = () => {
         {/* Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://s.shopee.com.br/6psKueTPOu" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={middleBanner}
-                alt="Esportes middle banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={middleBannerTablet}
-                alt="Esportes middle banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={middleBannerMobile}
-                alt="Esportes middle banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={middleBanner}
+              tabletImage={middleBannerTablet}
+              mobileImage={middleBannerMobile}
+              link="https://s.shopee.com.br/6psKueTPOu"
+              alt="Esportes middle banner"
+              categorySlug="brasil-esportes"
+              bannerId="middle"
+            />
           </div>
         </div>
 
@@ -816,58 +750,40 @@ const BrasilEsportes = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/4hgzFdg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://amzn.to/4hgzFdg"
+              alt="Small banner 05"
+              categorySlug="brasil-esportes"
+              bannerId="small-05"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567"
+              alt="Small banner 06"
+              categorySlug="brasil-esportes"
+              bannerId="small-06"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/4hgzFdg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://amzn.to/4hgzFdg"
+              alt="Small banner 05"
+              categorySlug="brasil-esportes"
+              bannerId="small-05-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567"
+              alt="Small banner 06"
+              categorySlug="brasil-esportes"
+              bannerId="small-06-mobile"
+            />
           </div>
         </div>
 
@@ -892,58 +808,40 @@ const BrasilEsportes = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/47M9LuL" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/qbESdxD7m"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://amzn.to/47M9LuL"
+              alt="Small banner 07"
+              categorySlug="brasil-esportes"
+              bannerId="small-07"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://s.shopee.com.br/qbESdxD7m"
+              alt="Small banner 08"
+              categorySlug="brasil-esportes"
+              bannerId="small-08"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/47M9LuL" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/qbESdxD7m"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://amzn.to/47M9LuL"
+              alt="Small banner 07"
+              categorySlug="brasil-esportes"
+              bannerId="small-07-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://s.shopee.com.br/qbESdxD7m"
+              alt="Small banner 08"
+              categorySlug="brasil-esportes"
+              bannerId="small-08-mobile"
+            />
           </div>
         </div>
 
@@ -960,31 +858,15 @@ const BrasilEsportes = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600217877049" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={promoBanner02}
-                alt="Esportes promo banner 02 - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={promoBanner02Tablet}
-                alt="Esportes promo banner 02 - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={promoBanner02Mobile}
-                alt="Esportes promo banner 02 - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={promoBanner02}
+              tabletImage={promoBanner02Tablet}
+              mobileImage={promoBanner02Mobile}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600217877049"
+              alt="Esportes promo banner 02"
+              categorySlug="brasil-esportes"
+              bannerId="promo-02"
+            />
           </div>
         </div>
       </div>
@@ -994,58 +876,40 @@ const BrasilEsportes = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/3JmeXvY" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner09}
-                alt="Small banner 09"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.click.aliexpress.com/e/_c2wZo71N"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner10}
-                alt="Small banner 10"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner09}
+              link="https://amzn.to/3JmeXvY"
+              alt="Small banner 09"
+              categorySlug="brasil-esportes"
+              bannerId="small-09"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner10}
+              link="https://s.click.aliexpress.com/e/_c2wZo71N"
+              alt="Small banner 10"
+              categorySlug="brasil-esportes"
+              bannerId="small-10"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/3JmeXvY" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner09}
-                alt="Small banner 09"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.click.aliexpress.com/e/_c2wZo71N"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner10}
-                alt="Small banner 10"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner09}
+              link="https://amzn.to/3JmeXvY"
+              alt="Small banner 09"
+              categorySlug="brasil-esportes"
+              bannerId="small-09-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner10}
+              link="https://s.click.aliexpress.com/e/_c2wZo71N"
+              alt="Small banner 10"
+              categorySlug="brasil-esportes"
+              bannerId="small-10-mobile"
+            />
           </div>
         </div>
 
