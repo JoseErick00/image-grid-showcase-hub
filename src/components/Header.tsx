@@ -11,6 +11,7 @@ const Header = () => {
   const [esportesDropdownOpen, setEsportesDropdownOpen] = useState(false);
   const [saudeDropdownOpen, setSaudeDropdownOpen] = useState(false);
   const [incriveisDropdownOpen, setIncriveisDropdownOpen] = useState(false);
+  const [lojasDropdownOpen, setLojasDropdownOpen] = useState(false);
   const location = useLocation();
 
   const isBrasilPage = location.pathname.startsWith('/brasil');
@@ -34,7 +35,14 @@ const Header = () => {
     { name: "Incríveis", href: "/brasil/incriveis" },
     { name: "Tech", href: "/brasil/tech" },
     { name: "Brinquedos", href: "/brasil/kids" },
-    { name: "Mais Vendidos", href: "/brasil/mais-vendidos" },
+    { name: "+ Lojas", href: "/brasil/lojas" },
+  ];
+
+  const lojasPages = [
+    { name: "Shopee", href: "/brasil/lojas/shopee", color: "#EE4D2D" },
+    { name: "AliExpress", href: "/brasil/lojas/aliexpress", color: "#E43225" },
+    { name: "Amazon", href: "/brasil/lojas/amazon", color: "#FF9900" },
+    { name: "Alibaba", href: "/brasil/lojas/alibaba", color: "#FF6A00" },
   ];
 
   const navigation = isBrasilPage ? brasilNavigation : defaultNavigation;
@@ -126,7 +134,7 @@ const Header = () => {
                   "Saúde": "#d8ad00",
                   "Incríveis": "#5cc801",
                   "Brinquedos": "#8254d0",
-                  "Mais Vendidos": "#575757",
+                  "+ Lojas": "#0ea5e9",
                 };
                 return colors[name] || "#fbfbfb";
               };
@@ -347,6 +355,61 @@ const Header = () => {
                 );
               }
 
+              // Check if this is the "+ Lojas" item for Brasil and should have a dropdown
+              if (item.name === "+ Lojas" && isBrasilPage) {
+                return (
+                  <div 
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setLojasDropdownOpen(true)}
+                    onMouseLeave={() => setLojasDropdownOpen(false)}
+                  >
+                    <button
+                      className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
+                        location.pathname.startsWith('/brasil/lojas/')
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-white"
+                      }`}
+                      onClick={() => setLojasDropdownOpen((prev) => !prev)}
+                      onMouseEnter={(e) => {
+                        if (!location.pathname.startsWith('/brasil/lojas/')) {
+                          e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                          e.currentTarget.style.color = "white";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!location.pathname.startsWith('/brasil/lojas/')) {
+                          e.currentTarget.style.backgroundColor = "";
+                          e.currentTarget.style.color = "";
+                        }
+                      }}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} />
+                    </button>
+                    {lojasDropdownOpen && (
+                      <div 
+                        className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[160px] z-50"
+                        onMouseEnter={() => setLojasDropdownOpen(true)}
+                        onMouseLeave={() => setLojasDropdownOpen(false)}
+                      >
+                        {lojasPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className="block px-4 py-2 text-sm font-omne-regular text-white hover:opacity-80 transition-colors"
+                            style={{ backgroundColor: page.color }}
+                            onClick={() => setLojasDropdownOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.name}
@@ -443,7 +506,7 @@ const Header = () => {
                     "Saúde": "#d8ad00",
                     "Incríveis": "#5cc801",
                     "Brinquedos": "#8254d0",
-                    "Mais Vendidos": "#575757",
+                    "+ Lojas": "#0ea5e9",
                   };
                   return colors[name] || "#fbfbfb";
                 };
@@ -601,6 +664,39 @@ const Header = () => {
                             }`}
                             style={{
                               backgroundColor: isActive(page.href) ? "" : "#5cc801"
+                            }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                // + Lojas dropdown for mobile Brasil navigation
+                if (item.name === "+ Lojas" && isBrasilPage) {
+                  return (
+                    <div key={item.name} className="px-2 py-1">
+                      <div
+                        className="font-omne-regular px-2 py-1 rounded text-white block"
+                        style={{ backgroundColor: getHoverColor(item.name) }}
+                      >
+                        {item.name}
+                      </div>
+                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                        {lojasPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                              isActive(page.href)
+                                ? "text-primary"
+                                : ""
+                            }`}
+                            style={{
+                              backgroundColor: isActive(page.href) ? "" : page.color
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
