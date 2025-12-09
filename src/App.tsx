@@ -45,6 +45,7 @@ import BrasilIncriveisSelIncriveis03 from "./pages/campaigns/BrasilIncriveisSelI
 import BrasilIncriveisSelIncriveis04 from "./pages/campaigns/BrasilIncriveisSelIncriveis04";
 import BrasilIncriveisSelCalcadosFemininos from "./pages/campaigns/BrasilIncriveisSelCalcadosFemininos";
 import BrasilIncriveisSelCalcadosMasculinos from "./pages/campaigns/BrasilIncriveisSelCalcadosMasculinos";
+import DynamicCampaignPage from "./pages/campaigns/DynamicCampaignPage";
 import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
@@ -99,6 +100,8 @@ const App = () => (
             <Route path="brasil/incriveis/sel-calcados-masculinos" element={<BrasilIncriveisSelCalcadosMasculinos />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
+            {/* Dynamic campaign route - loads from Supabase */}
+            <Route path="campanha/:slug" element={<DynamicCampaignPage />} />
           </Route>
           {/* Admin routes - fora do Layout principal */}
           <Route path="admin/migrate" element={<MigrateCampaigns />} />
