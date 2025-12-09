@@ -47,6 +47,7 @@ import BrasilIncriveisSelCalcadosFemininos from "./pages/campaigns/BrasilIncrive
 import BrasilIncriveisSelCalcadosMasculinos from "./pages/campaigns/BrasilIncriveisSelCalcadosMasculinos";
 import DynamicCampaignPage from "./pages/campaigns/DynamicCampaignPage";
 import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
+import StorePage from "./pages/lojas/StorePage";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 
 const queryClient = new QueryClient();
@@ -98,6 +99,8 @@ const App = () => (
             <Route path="brasil/incriveis/sel-incriveis-04" element={<BrasilIncriveisSelIncriveis04 />} />
             <Route path="brasil/incriveis/sel-calcados-femininos" element={<BrasilIncriveisSelCalcadosFemininos />} />
             <Route path="brasil/incriveis/sel-calcados-masculinos" element={<BrasilIncriveisSelCalcadosMasculinos />} />
+            {/* Store pages by platform */}
+            <Route path="brasil/lojas/:platform" element={<StorePage />} />
             <Route path="indonesia" element={<Indonesia />} />
             <Route path="search" element={<Search />} />
             {/* Dynamic campaign route - loads from Supabase */}
