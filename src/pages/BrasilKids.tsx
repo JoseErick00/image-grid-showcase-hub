@@ -2,6 +2,8 @@ import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
+import CategoryPromoBanner from "@/components/CategoryPromoBanner";
+import CategorySmallBanner from "@/components/CategorySmallBanner";
 import kids01 from "@/assets/kids_01.jpg";
 import kids02 from "@/assets/kids_02.jpg";
 import kids03 from "@/assets/kids_03.jpg";
@@ -329,89 +331,55 @@ const BrasilKids = () => {
         {/* Promo Banner 01 */}
         <div className="mt-5 mb-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/48JaeyE" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={promoBanner}
-                alt="Casa promo banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={promoBannerTablet}
-                alt="Casa promo banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={promoBannerMobile}
-                alt="Casa promo banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={promoBanner}
+              tabletImage={promoBannerTablet}
+              mobileImage={promoBannerMobile}
+              link="https://amzn.to/48JaeyE"
+              alt="Kids promo banner"
+              categorySlug="brasil-kids"
+              bannerId="promo-01"
+            />
           </div>
         </div>
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/9zonpLhHH0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.shopee.com.br/9zonpLhHH0"
+              alt="Small banner 01"
+              categorySlug="brasil-kids"
+              bannerId="small-01"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120"
+              alt="Small banner 02"
+              categorySlug="brasil-kids"
+              bannerId="small-02"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/9zonpLhHH0" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.shopee.com.br/9zonpLhHH0"
+              alt="Small banner 01"
+              categorySlug="brasil-kids"
+              bannerId="small-01-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601362965120"
+              alt="Small banner 02"
+              categorySlug="brasil-kids"
+              bannerId="small-02-mobile"
+            />
           </div>
         </div>
 
@@ -489,33 +457,18 @@ const BrasilKids = () => {
         </div>
 
         {/* Large Banner - Middle Banner */}
+        {/* Large Banner - Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/4gUQs5u" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={middleBanner}
-                alt="Casa middle banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={middleBannerTablet}
-                alt="Casa middle banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={middleBannerMobile}
-                alt="Casa middle banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={middleBanner}
+              tabletImage={middleBannerTablet}
+              mobileImage={middleBannerMobile}
+              link="https://amzn.to/4gUQs5u"
+              alt="Kids middle banner"
+              categorySlug="brasil-kids"
+              bannerId="middle"
+            />
           </div>
         </div>
 
