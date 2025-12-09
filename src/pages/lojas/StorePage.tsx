@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useStoreProducts } from '@/hooks/useStoreProducts';
@@ -14,6 +14,11 @@ import ShareButton from '@/components/ui/ShareButton';
 const StorePage = () => {
   const { platform } = useParams<{ platform: string }>();
   const [currentPage, setCurrentPage] = useState(1);
+  
+  // Reset page when platform changes
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [platform]);
   
   const platformKey = platform as Platform;
   const storeConfig = storeConfigs[platformKey];
@@ -54,10 +59,10 @@ const StorePage = () => {
       
       {/* Title and Subtitle - Same style as campaign pages */}
       <div className="text-center py-8 md:py-12 max-w-[960px] md:max-w-[840px] mx-auto px-4">
-        <h1 className="font-omne-semibold text-2xl md:text-4xl text-foreground mb-4">
+        <h1 className="font-omne-semibold text-2xl md:text-4xl text-[#171717] mb-4">
           {storeConfig.title}
         </h1>
-        <p className="font-omne-regular text-lg md:text-xl text-muted-foreground">
+        <p className="font-omne-regular text-lg md:text-xl text-[#555555]">
           {storeConfig.subtitle}
         </p>
       </div>
@@ -88,9 +93,9 @@ const StorePage = () => {
                   </picture>
                 </a>
                 <div className="absolute bottom-4 right-4 flex flex-col gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
-                  <LikeButton productId={`store-${platform}-banner-${section.id}`} compact />
+                  <LikeButton productId={section.banner.originalId || `store-${platform}-banner-${section.id}`} compact />
                   <ShareButton
-                    productId={`store-${platform}-banner-${section.id}`}
+                    productId={section.banner.originalId || `store-${platform}-banner-${section.id}`}
                     shareData={{ title: 'Promoção iNeed', text: 'Confira esta promoção!', url: section.banner.link }}
                     variant="compact"
                   />
@@ -156,7 +161,7 @@ const StorePage = () => {
         
         {/* Page info */}
         <div className="text-center mb-8">
-          <p className="text-muted-foreground">
+          <p className="text-[#555555]">
             Página {currentPage} de {totalPages} • {totalProducts} produtos
           </p>
         </div>
