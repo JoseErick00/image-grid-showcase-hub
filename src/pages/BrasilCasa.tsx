@@ -384,58 +384,40 @@ const BrasilCasa = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/8fJEnXMXHX" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner03.jpg"
-                alt="Small banner 03"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/4mDelQm" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner04.jpg"
-                alt="Small banner 04"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner03.jpg"
+              link="https://s.shopee.com.br/8fJEnXMXHX"
+              alt="Small banner 03"
+              categorySlug="brasil-casa"
+              bannerId="small-03"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner04.jpg"
+              link="https://amzn.to/4mDelQm"
+              alt="Small banner 04"
+              categorySlug="brasil-casa"
+              bannerId="small-04"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/8fJEnXMXHX" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner03.jpg"
-                alt="Small banner 03"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/4mDelQm" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner04.jpg"
-                alt="Small banner 04"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner03.jpg"
+              link="https://s.shopee.com.br/8fJEnXMXHX"
+              alt="Small banner 03"
+              categorySlug="brasil-casa"
+              bannerId="small-03-mobile"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner04.jpg"
+              link="https://amzn.to/4mDelQm"
+              alt="Small banner 04"
+              categorySlug="brasil-casa"
+              bannerId="small-04-mobile"
+            />
           </div>
         </div>
 
@@ -468,58 +450,40 @@ const BrasilCasa = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/428TnRX" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner05.jpg"
-                alt="Small banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner06.jpg"
-                alt="Small banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner05.jpg"
+              link="https://amzn.to/428TnRX"
+              alt="Small banner 05"
+              categorySlug="brasil-casa"
+              bannerId="small-05"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner06.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537"
+              alt="Small banner 06"
+              categorySlug="brasil-casa"
+              bannerId="small-06"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/428TnRX" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner05.jpg"
-                alt="Small banner 05"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner06.jpg"
-                alt="Small banner 06"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner05.jpg"
+              link="https://amzn.to/428TnRX"
+              alt="Small banner 05"
+              categorySlug="brasil-casa"
+              bannerId="small-05-mobile"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner06.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537"
+              alt="Small banner 06"
+              categorySlug="brasil-casa"
+              bannerId="small-06-mobile"
+            />
           </div>
         </div>
 
@@ -544,58 +508,40 @@ const BrasilCasa = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/48ySI01" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner07.jpg"
-                alt="Small banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner08.jpg"
-                alt="Small banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner07.jpg"
+              link="https://amzn.to/48ySI01"
+              alt="Small banner 07"
+              categorySlug="brasil-casa"
+              bannerId="small-07"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner08.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330"
+              alt="Small banner 08"
+              categorySlug="brasil-casa"
+              bannerId="small-08"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/48ySI01" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner07.jpg"
-                alt="Small banner 07"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner08.jpg"
-                alt="Small banner 08"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner07.jpg"
+              link="https://amzn.to/48ySI01"
+              alt="Small banner 07"
+              categorySlug="brasil-casa"
+              bannerId="small-07-mobile"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner08.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330"
+              alt="Small banner 08"
+              categorySlug="brasil-casa"
+              bannerId="small-08-mobile"
+            />
           </div>
         </div>
 
@@ -612,31 +558,15 @@ const BrasilCasa = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="my-12 flex justify-center">
             <div className="w-full max-w-[1200px]">
-              <a 
-                href="https://amzn.to/42z0XFR" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                {/* Desktop banner */}
-                <img 
-                  src="/Promo_banner02.jpg"
-                  alt="Casa promo banner 02 - desktop"
-                  className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Tablet banner */}
-                <img 
-                  src="/Promo_banner02_tablet.jpg"
-                  alt="Casa promo banner 02 - tablet"
-                  className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Mobile banner */}
-                <img 
-                  src="/Promo_banner02_mobile.jpg"
-                  alt="Casa promo banner 02 - mobile"
-                  className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategoryPromoBanner
+                desktopImage="/Promo_banner02.jpg"
+                tabletImage="/Promo_banner02_tablet.jpg"
+                mobileImage="/Promo_banner02_mobile.jpg"
+                link="https://amzn.to/42z0XFR"
+                alt="Casa promo banner 02"
+                categorySlug="brasil-casa"
+                bannerId="promo-02"
+              />
             </div>
           </div>
         </div>
@@ -645,58 +575,40 @@ const BrasilCasa = () => {
           <div className="my-12">
             {/* Desktop: Two columns */}
             <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-              <a 
-                href="https://s.shopee.com.br/4VThmrhENE" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-              >
-                <img 
-                  src="/Small_banner09.jpg"
-                  alt="Small banner 09"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-              <a 
-                href="https://s.shopee.com.br/3VbAbbWUnx" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-              >
-                <img 
-                  src="/Small_banner10.jpg"
-                  alt="Small banner 10"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategorySmallBanner
+                image="/Small_banner09.jpg"
+                link="https://s.shopee.com.br/4VThmrhENE"
+                alt="Small banner 09"
+                categorySlug="brasil-casa"
+                bannerId="small-09"
+                className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              />
+              <CategorySmallBanner
+                image="/Small_banner10.jpg"
+                link="https://s.shopee.com.br/3VbAbbWUnx"
+                alt="Small banner 10"
+                categorySlug="brasil-casa"
+                bannerId="small-10"
+                className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+              />
             </div>
             
             {/* Mobile: Stacked */}
             <div className="md:hidden space-y-12">
-              <a 
-                href="https://s.shopee.com.br/4VThmrhENE" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                <img 
-                  src="/Small_banner09.jpg"
-                  alt="Small banner 09"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-              <a 
-                href="https://s.shopee.com.br/3VbAbbWUnx" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="relative group cursor-pointer overflow-hidden rounded-lg block"
-              >
-                <img 
-                  src="/Small_banner10.jpg"
-                  alt="Small banner 10"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
+              <CategorySmallBanner
+                image="/Small_banner09.jpg"
+                link="https://s.shopee.com.br/4VThmrhENE"
+                alt="Small banner 09"
+                categorySlug="brasil-casa"
+                bannerId="small-09-mobile"
+              />
+              <CategorySmallBanner
+                image="/Small_banner10.jpg"
+                link="https://s.shopee.com.br/3VbAbbWUnx"
+                alt="Small banner 10"
+                categorySlug="brasil-casa"
+                bannerId="small-10-mobile"
+              />
             </div>
          </div>
         </div>

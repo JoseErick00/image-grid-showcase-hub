@@ -402,58 +402,40 @@ const BrasilSaude = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/8zwjR9RBxD" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/48EVTDE" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://s.shopee.com.br/8zwjR9RBxD"
+              alt="Small banner 03"
+              categorySlug="brasil-saude"
+              bannerId="small-03"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://amzn.to/48EVTDE"
+              alt="Small banner 04"
+              categorySlug="brasil-saude"
+              bannerId="small-04"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/8zwjR9RBxD" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner03}
-                alt="Small banner 03"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/48EVTDE" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner04}
-                alt="Small banner 04"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner03}
+              link="https://s.shopee.com.br/8zwjR9RBxD"
+              alt="Small banner 03"
+              categorySlug="brasil-saude"
+              bannerId="small-03-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner04}
+              link="https://amzn.to/48EVTDE"
+              alt="Small banner 04"
+              categorySlug="brasil-saude"
+              bannerId="small-04-mobile"
+            />
           </div>
         </div>
 
@@ -487,58 +469,40 @@ const BrasilSaude = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/4hgzFdg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600986683012" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://amzn.to/4hgzFdg"
+              alt="Small banner 05"
+              categorySlug="brasil-saude"
+              bannerId="small-05"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600986683012"
+              alt="Small banner 06"
+              categorySlug="brasil-saude"
+              bannerId="small-06"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/4hgzFdg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner05}
-                alt="Small banner 05"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600986683012" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner06}
-                alt="Small banner 06"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner05}
+              link="https://amzn.to/4hgzFdg"
+              alt="Small banner 05"
+              categorySlug="brasil-saude"
+              bannerId="small-05-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner06}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600986683012"
+              alt="Small banner 06"
+              categorySlug="brasil-saude"
+              bannerId="small-06-mobile"
+            />
           </div>
         </div>
 
@@ -564,58 +528,40 @@ const BrasilSaude = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.click.aliexpress.com/e/_c4ovaLWn" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/1Vqie4iOmg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://s.click.aliexpress.com/e/_c4ovaLWn"
+              alt="Small banner 07"
+              categorySlug="brasil-saude"
+              bannerId="small-07"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://s.shopee.com.br/1Vqie4iOmg"
+              alt="Small banner 08"
+              categorySlug="brasil-saude"
+              bannerId="small-08"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.click.aliexpress.com/e/_c4ovaLWn" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner07}
-                alt="Small banner 07"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.shopee.com.br/1Vqie4iOmg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner08}
-                alt="Small banner 08"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner07}
+              link="https://s.click.aliexpress.com/e/_c4ovaLWn"
+              alt="Small banner 07"
+              categorySlug="brasil-saude"
+              bannerId="small-07-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner08}
+              link="https://s.shopee.com.br/1Vqie4iOmg"
+              alt="Small banner 08"
+              categorySlug="brasil-saude"
+              bannerId="small-08-mobile"
+            />
           </div>
         </div>
 
@@ -633,31 +579,15 @@ const BrasilSaude = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/47fo7m5" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={promoBanner02}
-                alt="Saude promo banner 02 - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={promoBanner02Tablet}
-                alt="Saude promo banner 02 - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={promoBanner02Mobile}
-                alt="Saude promo banner 02 - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={promoBanner02}
+              tabletImage={promoBanner02Tablet}
+              mobileImage={promoBanner02Mobile}
+              link="https://amzn.to/47fo7m5"
+              alt="Saude promo banner 02"
+              categorySlug="brasil-saude"
+              bannerId="promo-02"
+            />
           </div>
         </div>
       </div>
@@ -667,58 +597,40 @@ const BrasilSaude = () => {
         <div className="my-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://amzn.to/3JmeXvY" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner09}
-                alt="Small banner 09"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/3L3SeFs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner10}
-                alt="Small banner 10"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner09}
+              link="https://amzn.to/3JmeXvY"
+              alt="Small banner 09"
+              categorySlug="brasil-saude"
+              bannerId="small-09"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner10}
+              link="https://amzn.to/3L3SeFs"
+              alt="Small banner 10"
+              categorySlug="brasil-saude"
+              bannerId="small-10"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://amzn.to/3JmeXvY" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner09}
-                alt="Small banner 09"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://amzn.to/3L3SeFs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner10}
-                alt="Small banner 10"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner09}
+              link="https://amzn.to/3JmeXvY"
+              alt="Small banner 09"
+              categorySlug="brasil-saude"
+              bannerId="small-09-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner10}
+              link="https://amzn.to/3L3SeFs"
+              alt="Small banner 10"
+              categorySlug="brasil-saude"
+              bannerId="small-10-mobile"
+            />
           </div>
         </div>
       </div>
