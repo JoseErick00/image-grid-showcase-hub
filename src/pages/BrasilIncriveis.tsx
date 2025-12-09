@@ -331,31 +331,15 @@ const BrasilIncriveis = () => {
         {/* Promo Banner 01 */}
         <div className="mt-5 mb-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/4oijqP1"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={promoBanner}
-                alt="Incríveis promo banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={promoBannerTablet}
-                alt="Incríveis promo banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={promoBannerMobile}
-                alt="Incríveis promo banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={promoBanner}
+              tabletImage={promoBannerTablet}
+              mobileImage={promoBannerMobile}
+              link="https://amzn.to/4oijqP1"
+              alt="Incríveis promo banner"
+              categorySlug="brasil-incriveis"
+              bannerId="promo-01"
+            />
           </div>
         </div>
         
@@ -363,58 +347,40 @@ const BrasilIncriveis = () => {
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/9Usq4oWcNx" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.shopee.com.br/9Usq4oWcNx"
+              alt="Small banner 01"
+              categorySlug="brasil-incriveis"
+              bannerId="small-01"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369"
+              alt="Small banner 02"
+              categorySlug="brasil-incriveis"
+              bannerId="small-02"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/9Usq4oWcNx" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.shopee.com.br/9Usq4oWcNx"
+              alt="Small banner 01"
+              categorySlug="brasil-incriveis"
+              bannerId="small-01-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369"
+              alt="Small banner 02"
+              categorySlug="brasil-incriveis"
+              bannerId="small-02-mobile"
+            />
           </div>
         </div>
 
@@ -494,31 +460,15 @@ const BrasilIncriveis = () => {
         {/* Large Banner - Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={middleBanner}
-                alt="Incríveis middle banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={middleBannerTablet}
-                alt="Incríveis middle banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={middleBannerMobile}
-                alt="Incríveis middle banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={middleBanner}
+              tabletImage={middleBannerTablet}
+              mobileImage={middleBannerMobile}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544"
+              alt="Incríveis middle banner"
+              categorySlug="brasil-incriveis"
+              bannerId="middle"
+            />
           </div>
         </div>
 

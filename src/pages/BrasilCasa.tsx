@@ -314,89 +314,55 @@ const BrasilCasa = () => {
         {/* Promo Banner 01 */}
         <div className="mt-5 mb-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/4gyzdXk" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src="/brasil/casa/promo_banner.jpg"
-                alt="Casa promo banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src="/brasil/casa/promo_banner_tablet.jpg"
-                alt="Casa promo banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src="/brasil/casa/promo_banner_mobile.jpg"
-                alt="Casa promo banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage="/brasil/casa/promo_banner.jpg"
+              tabletImage="/brasil/casa/promo_banner_tablet.jpg"
+              mobileImage="/brasil/casa/promo_banner_mobile.jpg"
+              link="https://amzn.to/4gyzdXk"
+              alt="Casa promo banner"
+              categorySlug="brasil-casa"
+              bannerId="promo-01"
+            />
           </div>
         </div>
         {/* Small Banner 01 & 02 */}
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/qaNROYO3R" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner01.jpg"
-                alt="Small banner 01"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src="/brasil/casa/small_banner02.jpg"
-                alt="Small banner 02"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner01.jpg"
+              link="https://s.shopee.com.br/qaNROYO3R"
+              alt="Small banner 01"
+              categorySlug="brasil-casa"
+              bannerId="small-01"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner02.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341"
+              alt="Small banner 02"
+              categorySlug="brasil-casa"
+              bannerId="small-02"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/qaNROYO3R" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner01.jpg"
-                alt="Small banner 01"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src="/brasil/casa/small_banner02.jpg"
-                alt="Small banner 02"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner01.jpg"
+              link="https://s.shopee.com.br/qaNROYO3R"
+              alt="Small banner 01"
+              categorySlug="brasil-casa"
+              bannerId="small-01-mobile"
+            />
+            <CategorySmallBanner
+              image="/brasil/casa/small_banner02.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341"
+              alt="Small banner 02"
+              categorySlug="brasil-casa"
+              bannerId="small-02-mobile"
+            />
           </div>
         </div>
 
@@ -476,31 +442,15 @@ const BrasilCasa = () => {
         {/* Large Banner - Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271111162" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src="/middle_banner.jpg"
-                alt="Casa middle banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src="/middle_banner_tablet.jpg"
-                alt="Casa middle banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src="/middle_banner_mobile.jpg"
-                alt="Casa middle banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage="/middle_banner.jpg"
+              tabletImage="/middle_banner_tablet.jpg"
+              mobileImage="/middle_banner_mobile.jpg"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271111162"
+              alt="Casa middle banner"
+              categorySlug="brasil-casa"
+              bannerId="middle"
+            />
           </div>
         </div>
 

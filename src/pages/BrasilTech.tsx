@@ -2,6 +2,8 @@ import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
+import CategoryPromoBanner from "@/components/CategoryPromoBanner";
+import CategorySmallBanner from "@/components/CategorySmallBanner";
 import promoBanner from "@/assets/tech/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/tech/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/tech/Promo_banner_tablet.jpg";
@@ -550,31 +552,15 @@ const BrasilTech = () => {
         {/* Promo Banner 01 */}
         <div className="mt-5 mb-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://amzn.to/4nFADlB"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={promoBanner}
-                alt="Tech promo banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={promoBannerTablet}
-                alt="Tech promo banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={promoBannerMobile}
-                alt="Tech promo banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={promoBanner}
+              tabletImage={promoBannerTablet}
+              mobileImage={promoBannerMobile}
+              link="https://amzn.to/4nFADlB"
+              alt="Tech promo banner"
+              categorySlug="brasil-tech"
+              bannerId="promo-01"
+            />
           </div>
         </div>
         
@@ -582,58 +568,40 @@ const BrasilTech = () => {
         <div className="mb-12">
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
-            <a 
-              href="https://s.shopee.com.br/5ffySqBnQh" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.click.aliexpress.com/e/_c4NbxkKj" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.shopee.com.br/5ffySqBnQh"
+              alt="Small banner 01"
+              categorySlug="brasil-tech"
+              bannerId="small-01"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://s.click.aliexpress.com/e/_c4NbxkKj"
+              alt="Small banner 02"
+              categorySlug="brasil-tech"
+              bannerId="small-02"
+              className="lg:h-[300px] lg:max-w-[540px] lg:mx-auto"
+            />
           </div>
           
           {/* Mobile: Stacked */}
           <div className="md:hidden space-y-12">
-            <a 
-              href="https://s.shopee.com.br/5ffySqBnQh" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner01}
-                alt="Small banner 01"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
-            <a 
-              href="https://s.click.aliexpress.com/e/_c4NbxkKj" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              <img 
-                src={smallBanner02}
-                alt="Small banner 02"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategorySmallBanner
+              image={smallBanner01}
+              link="https://s.shopee.com.br/5ffySqBnQh"
+              alt="Small banner 01"
+              categorySlug="brasil-tech"
+              bannerId="small-01-mobile"
+            />
+            <CategorySmallBanner
+              image={smallBanner02}
+              link="https://s.click.aliexpress.com/e/_c4NbxkKj"
+              alt="Small banner 02"
+              categorySlug="brasil-tech"
+              bannerId="small-02-mobile"
+            />
           </div>
         </div>
 
@@ -713,31 +681,15 @@ const BrasilTech = () => {
         {/* Large Banner - Middle Banner */}
         <div className="my-12 flex justify-center">
           <div className="w-full max-w-[1200px]">
-            <a 
-              href="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer overflow-hidden rounded-lg block"
-            >
-              {/* Desktop banner */}
-              <img 
-                src={middleBanner}
-                alt="Tech middle banner - desktop"
-                className="hidden lg:block w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Tablet banner */}
-              <img 
-                src={middleBannerTablet}
-                alt="Tech middle banner - tablet"
-                className="hidden md:block lg:hidden w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {/* Mobile banner */}
-              <img 
-                src={middleBannerMobile}
-                alt="Tech middle banner - mobile"
-                className="md:hidden w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </a>
+            <CategoryPromoBanner
+              desktopImage={middleBanner}
+              tabletImage={middleBannerTablet}
+              mobileImage={middleBannerMobile}
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544"
+              alt="Tech middle banner"
+              categorySlug="brasil-tech"
+              bannerId="middle"
+            />
           </div>
         </div>
 
