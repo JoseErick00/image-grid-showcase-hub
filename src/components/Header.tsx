@@ -92,14 +92,14 @@ const Header = () => {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center py-4 md:py-4 h-[150px] md:h-auto justify-center">
+        <div className="flex flex-col items-center py-2 md:py-3 h-auto justify-center">
           {/* Logo */}
-          <div className="relative w-full flex justify-center items-center mb-4">
+          <div className="relative w-full flex justify-center items-center mb-2">
             <Link to={logoLink} className="flex items-center justify-center">
               <img 
-                src={isBrasilPage ? "/lovable-uploads/Logo_png.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
+                src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
                 alt="i.need" 
-                className="w-[200px] h-[150px] object-contain" 
+                className={isBrasilPage ? "w-[240px] h-[100px] object-contain" : "w-[200px] h-[150px] object-contain"}
               />
             </Link>
             

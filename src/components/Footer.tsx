@@ -46,9 +46,9 @@ const Footer = () => {
         <div className="text-center mb-12">
           <div className="flex justify-center items-center space-x-3 mb-6">
             <img 
-              src={isBrasilPage ? "/lovable-uploads/Logo_png.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
+              src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
               alt="i.need" 
-              className="w-[350px] h-[150px] object-contain" 
+              className={isBrasilPage ? "w-[288px] h-[120px] object-contain" : "w-[350px] h-[150px] object-contain"}
             />
           </div>
           
