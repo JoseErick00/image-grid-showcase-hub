@@ -25,6 +25,7 @@ export interface ResponsiveBanner {
   tablet: string;
   mobile: string;
   link: string;
+  originalId?: string; // ID for engagement tracking (same as original banner)
 }
 
 // Function to detect platform from affiliate link
@@ -64,18 +65,21 @@ const allCampaigns = [
   selTimeCampoData,
 ];
 
-// Extract all promo banners from campaigns with their affiliate links
+// Extract all promo banners from campaigns with their affiliate links and original IDs
 export const getAllPromoBanners = (): ResponsiveBanner[] => {
   const banners: ResponsiveBanner[] = [];
   
   allCampaigns.forEach(campaign => {
     campaign.sections.forEach(section => {
       if (section.promoBanner) {
+        // Generate the same ID used in the original campaign pages
+        const originalId = `banner-${campaign.campaignSlug}-${section.id}`;
         banners.push({
           desktop: section.promoBanner.desktop,
           tablet: section.promoBanner.tablet,
           mobile: section.promoBanner.mobile,
           link: section.promoBanner.link,
+          originalId,
         });
       }
     });
