@@ -1,45 +1,23 @@
 // Reusable banners from categories and campaigns for store pages
-import Promo_banner from '@/assets/Promo_banner.jpg';
-import Promo_banner_tablet from '@/assets/Promo_banner_tablet.jpg';
-import Promo_banner_mobile from '@/assets/Promo_banner_mobile.jpg';
-import Promo_banner02 from '@/assets/Promo_banner02.jpg';
-import Promo_banner02_tablet from '@/assets/Promo_banner02_tablet.jpg';
-import Promo_banner02_mobile from '@/assets/Promo_banner02_mobile.jpg';
-import Promo_banner_Inc from '@/assets/Promo_banner_Inc.jpg';
-import Promo_banner_tabletInc from '@/assets/Promo_banner_tabletInc.jpg';
-import Promo_banner_mobileInc from '@/assets/Promo_banner_mobileInc.jpg';
-import Promo_banner02_Inc from '@/assets/Promo_banner02_Inc.jpg';
-import Promo_banner02_tabletInc from '@/assets/Promo_banner02_tabletInc.jpg';
-import Promo_banner02_mobileInc from '@/assets/Promo_banner02_mobileInc.jpg';
-import middle_banner from '@/assets/middle_banner.jpg';
-import middle_banner_tablet from '@/assets/middle_banner_tablet.jpg';
-import middle_banner_mobile from '@/assets/middle_banner_mobile.jpg';
-import middle_banner_Inc from '@/assets/middle_banner_Inc.jpg';
-import middle_banner_tabletInc from '@/assets/middle_banner_tabletInc.jpg';
-import middle_banner_mobileInc from '@/assets/middle_banner_mobileInc.jpg';
-
-// Small banners
-import smallBanner01 from '@/assets/Small_banner01.jpg';
-import smallBanner02 from '@/assets/Small_banner02.jpg';
-import smallBanner03 from '@/assets/Small_banner03.jpg';
-import smallBanner04 from '@/assets/Small_banner04.jpg';
-import smallBanner05 from '@/assets/Small_banner05.jpg';
-import smallBanner06 from '@/assets/Small_banner06.jpg';
-import smallBanner07 from '@/assets/Small_banner07.jpg';
-import smallBanner08 from '@/assets/Small_banner08.jpg';
-import smallBanner09 from '@/assets/Small_banner09.jpg';
-import smallBanner10 from '@/assets/Small_banner10.jpg';
-import smallBannerInc01 from '@/assets/Small_banner_Inc01.jpg';
-import smallBannerInc02 from '@/assets/Small_banner_Inc02.jpg';
-import smallBannerInc03 from '@/assets/Small_banner_Inc03.jpg';
-import smallBannerInc04 from '@/assets/Small_banner_Inc04.jpg';
-import smallBannerInc05 from '@/assets/Small_banner_Inc05.jpg';
-import smallBannerInc06 from '@/assets/Small_banner_Inc06.jpg';
-import smallBannerInc07 from '@/assets/Small_banner_Inc07.jpg';
-import smallBannerInc08 from '@/assets/Small_banner_Inc08.jpg';
-import smallBannerInc09 from '@/assets/Small_banner_Inc09.jpg';
-import smallBannerInc10 from '@/assets/Small_banner_Inc10.jpg';
-
+import { selAcademiaData } from '@/pages/campaigns/data/selAcademiaData';
+import { selAcampamentosData } from '@/pages/campaigns/data/selAcampamentosData';
+import { selAquaticosData } from '@/pages/campaigns/data/selAquaticosData';
+import { selBanheiroData } from '@/pages/campaigns/data/selBanheiroData';
+import { selCalcadosFemininosData } from '@/pages/campaigns/data/selCalcadosFemininosData';
+import { selCalcadosMasculinosData } from '@/pages/campaigns/data/selCalcadosMasculinosData';
+import { selCorpoData } from '@/pages/campaigns/data/selCorpoData';
+import { selCorredoresData } from '@/pages/campaigns/data/selCorredoresData';
+import { selCozinhaData } from '@/pages/campaigns/data/selCozinhaData';
+import { selCremesGringosData } from '@/pages/campaigns/data/selCremesGringosData';
+import { selCuidadoRostoData } from '@/pages/campaigns/data/selCuidadoRostoData';
+import { selIncriveis01Data } from '@/pages/campaigns/data/selIncriveis01Data';
+import { selIncriveis02Data } from '@/pages/campaigns/data/selIncriveis02Data';
+import { selIncriveis03Data } from '@/pages/campaigns/data/selIncriveis03Data';
+import { selIncriveis04Data } from '@/pages/campaigns/data/selIncriveis04Data';
+import { selPraiaData } from '@/pages/campaigns/data/selPraiaData';
+import { selQuartoData } from '@/pages/campaigns/data/selQuartoData';
+import { selSalaData } from '@/pages/campaigns/data/selSalaData';
+import { selTimeCampoData } from '@/pages/campaigns/data/selTimeCampoData';
 import { type Platform } from '@/utils/platformLogos';
 
 export interface ResponsiveBanner {
@@ -49,80 +27,78 @@ export interface ResponsiveBanner {
   link: string;
 }
 
-// Promo banners (large, full-width)
-export const promoBanners: ResponsiveBanner[] = [
-  {
-    desktop: Promo_banner,
-    tablet: Promo_banner_tablet,
-    mobile: Promo_banner_mobile,
-    link: "#",
-  },
-  {
-    desktop: Promo_banner02,
-    tablet: Promo_banner02_tablet,
-    mobile: Promo_banner02_mobile,
-    link: "#",
-  },
-  {
-    desktop: Promo_banner_Inc,
-    tablet: Promo_banner_tabletInc,
-    mobile: Promo_banner_mobileInc,
-    link: "#",
-  },
-  {
-    desktop: Promo_banner02_Inc,
-    tablet: Promo_banner02_tabletInc,
-    mobile: Promo_banner02_mobileInc,
-    link: "#",
-  },
+// Function to detect platform from affiliate link
+export const detectPlatformFromLink = (link: string): Platform | null => {
+  if (link.includes('shopee.com') || link.includes('s.shopee')) {
+    return 'shopee';
+  } else if (link.includes('aliexpress.com') || link.includes('s.click.aliexpress')) {
+    return 'aliexpress';
+  } else if (link.includes('amzn.to') || link.includes('amazon.com')) {
+    return 'amazon';
+  } else if (link.includes('alibaba.com') || link.includes('offer.alibaba')) {
+    return 'alibaba';
+  }
+  return null;
+};
+
+// All campaign data files
+const allCampaigns = [
+  selAcademiaData,
+  selAcampamentosData,
+  selAquaticosData,
+  selBanheiroData,
+  selCalcadosFemininosData,
+  selCalcadosMasculinosData,
+  selCorpoData,
+  selCorredoresData,
+  selCozinhaData,
+  selCremesGringosData,
+  selCuidadoRostoData,
+  selIncriveis01Data,
+  selIncriveis02Data,
+  selIncriveis03Data,
+  selIncriveis04Data,
+  selPraiaData,
+  selQuartoData,
+  selSalaData,
+  selTimeCampoData,
 ];
 
-// Middle banners (medium-size)
-export const middleBanners: ResponsiveBanner[] = [
-  {
-    desktop: middle_banner,
-    tablet: middle_banner_tablet,
-    mobile: middle_banner_mobile,
-    link: "#",
-  },
-  {
-    desktop: middle_banner_Inc,
-    tablet: middle_banner_tabletInc,
-    mobile: middle_banner_mobileInc,
-    link: "#",
-  },
-];
+// Extract all promo banners from campaigns with their affiliate links
+export const getAllPromoBanners = (): ResponsiveBanner[] => {
+  const banners: ResponsiveBanner[] = [];
+  
+  allCampaigns.forEach(campaign => {
+    campaign.sections.forEach(section => {
+      if (section.promoBanner) {
+        banners.push({
+          desktop: section.promoBanner.desktop,
+          tablet: section.promoBanner.tablet,
+          mobile: section.promoBanner.mobile,
+          link: section.promoBanner.link,
+        });
+      }
+    });
+  });
+  
+  return banners;
+};
 
-// Small banners (for pairs)
-export const smallBanners: string[] = [
-  smallBanner01,
-  smallBanner02,
-  smallBanner03,
-  smallBanner04,
-  smallBanner05,
-  smallBanner06,
-  smallBanner07,
-  smallBanner08,
-  smallBanner09,
-  smallBanner10,
-  smallBannerInc01,
-  smallBannerInc02,
-  smallBannerInc03,
-  smallBannerInc04,
-  smallBannerInc05,
-  smallBannerInc06,
-  smallBannerInc07,
-  smallBannerInc08,
-  smallBannerInc09,
-  smallBannerInc10,
-];
+// Get promo banners filtered by platform (detected from affiliate link)
+export const getPromoBannersByPlatform = (platform: Platform): ResponsiveBanner[] => {
+  return getAllPromoBanners().filter(banner => detectPlatformFromLink(banner.link) === platform);
+};
 
 // Store configuration per platform
 export interface StoreConfig {
   platform: Platform;
   name: string;
   slug: string;
-  heroColor: string;
+  heroDesktop: string;
+  heroTablet: string;
+  heroMobile: string;
+  title: string;
+  subtitle: string;
   description: string;
 }
 
@@ -131,44 +107,58 @@ export const storeConfigs: Record<Platform, StoreConfig> = {
     platform: 'shopee',
     name: 'Shopee',
     slug: 'shopee',
-    heroColor: '#EE4D2D',
+    heroDesktop: '/images/stores/shopee-hero-desktop.jpg',
+    heroTablet: '/images/stores/shopee-hero-tablet.jpg',
+    heroMobile: '/images/stores/shopee-hero-mobile.jpg',
+    title: 'Os melhores achados da Shopee estão aqui!',
+    subtitle: 'Produtos incríveis com preços imbatíveis e frete grátis para todo o Brasil!',
     description: 'Os melhores achados da Shopee com preços incríveis e frete grátis!',
   },
   aliexpress: {
     platform: 'aliexpress',
     name: 'AliExpress',
     slug: 'aliexpress',
-    heroColor: '#E43225',
+    heroDesktop: '/images/stores/aliexpress-hero-desktop.jpg',
+    heroTablet: '/images/stores/aliexpress-hero-tablet.jpg',
+    heroMobile: '/images/stores/aliexpress-hero-mobile.jpg',
+    title: 'Os melhores achados do AliExpress estão aqui!',
+    subtitle: 'Produtos exclusivos direto da China com os melhores preços do mercado!',
     description: 'Produtos exclusivos do AliExpress com preços que você não encontra em outro lugar!',
   },
   amazon: {
     platform: 'amazon',
     name: 'Amazon',
     slug: 'amazon',
-    heroColor: '#FF9900',
+    heroDesktop: '/images/stores/amazon-hero-desktop.jpg',
+    heroTablet: '/images/stores/amazon-hero-tablet.jpg',
+    heroMobile: '/images/stores/amazon-hero-mobile.jpg',
+    title: 'Os melhores achados da Amazon estão aqui!',
+    subtitle: 'Produtos de qualidade com entrega rápida e garantia Amazon Prime!',
     description: 'Os melhores produtos da Amazon com entrega rápida e garantia!',
   },
   alibaba: {
     platform: 'alibaba',
     name: 'Alibaba',
     slug: 'alibaba',
-    heroColor: '#FF6A00',
+    heroDesktop: '/images/stores/alibaba-hero-desktop.jpg',
+    heroTablet: '/images/stores/alibaba-hero-tablet.jpg',
+    heroMobile: '/images/stores/alibaba-hero-mobile.jpg',
+    title: 'Os melhores achados do Alibaba estão aqui!',
+    subtitle: 'Produtos direto da fonte com preços de fábrica para você!',
     description: 'Produtos direto da fonte com os melhores preços do Alibaba!',
   },
 };
 
-// Get banner for a specific section (rotates through available banners)
-export const getBannerForSection = (sectionIndex: number, type: 'promo' | 'middle' | 'small'): ResponsiveBanner | string[] => {
-  if (type === 'promo') {
-    return promoBanners[sectionIndex % promoBanners.length];
-  } else if (type === 'middle') {
-    return middleBanners[sectionIndex % middleBanners.length];
-  } else {
-    // Return pair of small banners
-    const startIndex = (sectionIndex * 2) % smallBanners.length;
-    return [
-      smallBanners[startIndex],
-      smallBanners[(startIndex + 1) % smallBanners.length],
-    ];
+// Get banner for a specific section based on platform
+export const getBannerForSection = (
+  platform: Platform,
+  sectionIndex: number
+): ResponsiveBanner | null => {
+  const platformBanners = getPromoBannersByPlatform(platform);
+  
+  if (platformBanners.length === 0) {
+    return null;
   }
+  
+  return platformBanners[sectionIndex % platformBanners.length];
 };
