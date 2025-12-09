@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useStoreProducts } from '@/hooks/useStoreProducts';
-import { storeConfigs, getBannerForSection, type ResponsiveBanner } from '@/config/storeBanners';
-import { platformLogos, type Platform } from '@/utils/platformLogos';
+import { storeConfigs, type ResponsiveBanner } from '@/config/storeBanners';
+import { type Platform } from '@/utils/platformLogos';
 import CampaignProductCard from '@/components/campaigns/CampaignProductCard';
+import CampaignHeroBanner from '@/components/campaigns/CampaignHeroBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import LikeButton from '@/components/ui/LikeButton';
@@ -43,115 +44,76 @@ const StorePage = () => {
         keywords={`${storeConfig.name}, achados, produtos, compras online, ${storeConfig.name} Brasil`}
       />
       
-      {/* Hero Banner */}
-      <div 
-        className="w-full py-16 md:py-24 relative overflow-hidden"
-        style={{ backgroundColor: storeConfig.heroColor }}
-      >
-        <div className="container mx-auto px-4 flex flex-col items-center justify-center text-center">
-          <img 
-            src={platformLogos[platformKey]} 
-            alt={storeConfig.name}
-            className="h-16 md:h-24 w-auto mb-6 object-contain bg-white p-3 rounded-xl shadow-lg"
-          />
-          <h1 className="text-3xl md:text-5xl font-omne-semibold text-white mb-4 drop-shadow-lg">
-            Loja {storeConfig.name}
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl">
-            {storeConfig.description}
-          </p>
-          <div className="mt-6 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full">
-            <span className="text-white font-omne-medium">
-              {totalProducts} produtos encontrados
-            </span>
-          </div>
-        </div>
+      {/* Hero Banner - Same style as campaign pages */}
+      <CampaignHeroBanner
+        desktop={storeConfig.heroDesktop}
+        tablet={storeConfig.heroTablet}
+        mobile={storeConfig.heroMobile}
+        alt={`Hero Banner - Loja ${storeConfig.name}`}
+      />
+      
+      {/* Title and Subtitle - Same style as campaign pages */}
+      <div className="text-center py-8 md:py-12 max-w-[960px] md:max-w-[840px] mx-auto px-4">
+        <h1 className="font-omne-semibold text-2xl md:text-4xl text-foreground mb-4">
+          {storeConfig.title}
+        </h1>
+        <p className="font-omne-regular text-lg md:text-xl text-muted-foreground">
+          {storeConfig.subtitle}
+        </p>
       </div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 py-8">
-        {/* Page Title */}
-        <div className="text-center mb-8 max-w-[960px] md:max-w-[840px] mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-omne-semibold text-foreground mb-2">
-            Os melhores achados da {storeConfig.name}
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Página {currentPage} de {totalPages}
-          </p>
-        </div>
-        
+      <div className="container mx-auto px-4 py-4">
         {/* Sections with banners and products */}
-        {sections.map((section, sectionIndex) => {
-          const banner = getBannerForSection(sectionIndex + (currentPage - 1) * 6, section.bannerType);
-          
-          return (
-            <section key={section.id} className="mb-16 max-w-[1200px] mx-auto">
-              {/* Banner */}
-              {section.bannerType === 'small' && Array.isArray(banner) ? (
-                // Small banner pair
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  {(banner as string[]).map((bannerImg, idx) => (
-                    <div key={idx} className="relative rounded-lg overflow-hidden group">
-                      <img 
-                        src={bannerImg} 
-                        alt={`Banner promocional ${idx + 1}`}
-                        className="w-full h-[150px] md:h-[200px] object-cover group-hover:opacity-90 transition-opacity"
-                        loading="lazy"
-                      />
-                      <div className="absolute bottom-2 right-2 flex flex-col gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
-                        <LikeButton productId={`store-${platform}-small-${section.id}-${idx}`} compact />
-                        <ShareButton
-                          productId={`store-${platform}-small-${section.id}-${idx}`}
-                          shareData={{ title: 'Promoção iNeed', text: 'Confira!', url: window.location.href }}
-                          variant="compact"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                // Promo or middle banner
-                <div className="relative w-full mb-8 rounded-lg overflow-hidden group">
-                  <a href="#" className="block w-full">
-                    <picture>
-                      <source media="(min-width: 1024px)" srcSet={(banner as ResponsiveBanner).desktop} />
-                      <source media="(min-width: 640px)" srcSet={(banner as ResponsiveBanner).tablet} />
-                      <img
-                        src={(banner as ResponsiveBanner).mobile}
-                        alt={`Banner promocional - Seção ${sectionIndex + 1}`}
-                        className="w-full h-[300px] sm:h-[400px] lg:h-[400px] object-cover group-hover:opacity-90 transition-opacity"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </a>
-                  <div className="absolute bottom-4 right-4 flex flex-col gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
-                    <LikeButton productId={`store-${platform}-banner-${section.id}`} compact />
-                    <ShareButton
-                      productId={`store-${platform}-banner-${section.id}`}
-                      shareData={{ title: 'Promoção iNeed', text: 'Confira esta promoção!', url: window.location.href }}
-                      variant="compact"
+        {sections.map((section, sectionIndex) => (
+          <section key={section.id} className="mb-16 max-w-[1200px] mx-auto">
+            {/* Banner - Only show if there's a platform-specific banner */}
+            {section.banner && (
+              <div className="relative w-full mb-8 rounded-lg overflow-hidden group">
+                <a 
+                  href={section.banner.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-lg overflow-hidden"
+                >
+                  <picture>
+                    <source media="(min-width: 1024px)" srcSet={section.banner.desktop} />
+                    <source media="(min-width: 640px)" srcSet={section.banner.tablet} />
+                    <img
+                      src={section.banner.mobile}
+                      alt={`Banner promocional - Seção ${sectionIndex + 1}`}
+                      className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity"
+                      loading="lazy"
                     />
-                  </div>
-                </div>
-              )}
-              
-              {/* Product Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                {section.products.map((product, index) => (
-                  <CampaignProductCard
-                    key={`${product.link}-${index}`}
-                    image={product.image}
-                    label={product.label}
-                    link={product.link}
-                    platform={product.platform}
-                    stamp={product.stamp}
-                    position={index + 1}
+                  </picture>
+                </a>
+                <div className="absolute bottom-4 right-4 flex flex-col gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                  <LikeButton productId={`store-${platform}-banner-${section.id}`} compact />
+                  <ShareButton
+                    productId={`store-${platform}-banner-${section.id}`}
+                    shareData={{ title: 'Promoção iNeed', text: 'Confira esta promoção!', url: section.banner.link }}
+                    variant="compact"
                   />
-                ))}
+                </div>
               </div>
-            </section>
-          );
-        })}
+            )}
+            
+            {/* Product Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              {section.products.map((product, index) => (
+                <CampaignProductCard
+                  key={`${product.link}-${index}`}
+                  image={product.image}
+                  label={product.label}
+                  link={product.link}
+                  platform={product.platform}
+                  stamp={product.stamp}
+                  position={index + 1}
+                />
+              ))}
+            </div>
+          </section>
+        ))}
         
         {/* Pagination */}
         {totalPages > 1 && (
@@ -160,7 +122,7 @@ const StorePage = () => {
               variant="outline"
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={!hasPreviousPage}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 text-foreground"
             >
               <ChevronLeft size={20} />
               Anterior
@@ -173,7 +135,7 @@ const StorePage = () => {
                   variant={pageNum === currentPage ? "default" : "outline"}
                   size="sm"
                   onClick={() => handlePageChange(pageNum)}
-                  className="w-10 h-10"
+                  className={`w-10 h-10 ${pageNum !== currentPage ? 'text-foreground' : ''}`}
                 >
                   {pageNum}
                 </Button>
@@ -184,7 +146,7 @@ const StorePage = () => {
               variant="outline"
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={!hasNextPage}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 text-foreground"
             >
               Próximo
               <ChevronRight size={20} />
@@ -192,10 +154,17 @@ const StorePage = () => {
           </div>
         )}
         
+        {/* Page info */}
+        <div className="text-center mb-8">
+          <p className="text-muted-foreground">
+            Página {currentPage} de {totalPages} • {totalProducts} produtos
+          </p>
+        </div>
+        
         {/* Back button */}
         <div className="flex justify-center mt-8 mb-16">
           <Link to="/brasil">
-            <Button variant="outline" className="flex items-center gap-2">
+            <Button variant="outline" className="flex items-center gap-2 text-foreground">
               <ArrowLeft size={20} />
               Voltar para Brasil
             </Button>
