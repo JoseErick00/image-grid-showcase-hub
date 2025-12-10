@@ -1,28 +1,7 @@
 // Centralized configuration for category banners
 // These banners are displayed in the main category pages and reused in campaign footer grids
 
-// Casa banner imports
-import casaPromoBanner from "@/assets/casa/promo_banner.jpg";
-import casaPromoBannerTablet from "@/assets/casa/promo_banner_tablet.jpg";
-import casaPromoBannerMobile from "@/assets/casa/promo_banner_mobile.jpg";
-import casaPromoBanner02 from "@/assets/casa/Promo_banner02.jpg";
-import casaPromoBanner02Tablet from "@/assets/casa/Promo_banner02_tablet.jpg";
-import casaPromoBanner02Mobile from "@/assets/casa/Promo_banner02_mobile.jpg";
-import casaMiddleBanner from "@/assets/casa/middle_banner.jpg";
-import casaMiddleBannerTablet from "@/assets/casa/middle_banner_tablet.jpg";
-import casaMiddleBannerMobile from "@/assets/casa/middle_banner_mobile.jpg";
-import casaSmallBanner01 from "@/assets/casa/Small_banner01.jpg";
-import casaSmallBanner02 from "@/assets/casa/Small_banner02.jpg";
-import casaSmallBanner03 from "@/assets/casa/Small_banner03.jpg";
-import casaSmallBanner04 from "@/assets/casa/Small_banner04.jpg";
-import casaSmallBanner05 from "@/assets/casa/Small_banner05.jpg";
-import casaSmallBanner06 from "@/assets/casa/Small_banner06.jpg";
-import casaSmallBanner07 from "@/assets/casa/Small_banner07.jpg";
-import casaSmallBanner08 from "@/assets/casa/Small_banner08.jpg";
-import casaSmallBanner09 from "@/assets/casa/Small_banner09.jpg";
-import casaSmallBanner10 from "@/assets/casa/Small_banner10.jpg";
-
-// Saude banner imports
+// Saude banner imports (from src/assets/saude/)
 import saudePromoBanner from "@/assets/saude/Promo_banner.jpg";
 import saudePromoBannerTablet from "@/assets/saude/Promo_banner_tablet.jpg";
 import saudePromoBannerMobile from "@/assets/saude/Promo_banner_mobile.jpg";
@@ -71,77 +50,77 @@ export const categoryBannersConfig: Record<string, CategoryBannersConfig> = {
     categoryName: 'Casa',
     promoBanners: [
       {
-        desktop: casaPromoBanner,
-        tablet: casaPromoBannerTablet,
-        mobile: casaPromoBannerMobile,
+        desktop: '/brasil/casa/promo_banner.jpg',
+        tablet: '/brasil/casa/promo_banner_tablet.jpg',
+        mobile: '/brasil/casa/promo_banner_mobile.jpg',
         link: 'https://amzn.to/4gyzdXk',
         bannerId: 'promo-01',
       },
       {
-        desktop: casaPromoBanner02,
-        tablet: casaPromoBanner02Tablet,
-        mobile: casaPromoBanner02Mobile,
+        desktop: '/Promo_banner02.jpg',
+        tablet: '/Promo_banner02_tablet.jpg',
+        mobile: '/Promo_banner02_mobile.jpg',
         link: 'https://amzn.to/42z0XFR',
         bannerId: 'promo-02',
       },
     ],
     middleBanners: [
       {
-        desktop: casaMiddleBanner,
-        tablet: casaMiddleBannerTablet,
-        mobile: casaMiddleBannerMobile,
+        desktop: '/middle_banner.jpg',
+        tablet: '/middle_banner_tablet.jpg',
+        mobile: '/middle_banner_mobile.jpg',
         link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601271111162',
         bannerId: 'middle',
       },
     ],
     smallBanners: [
       {
-        image: casaSmallBanner01,
+        image: '/brasil/casa/small_banner01.jpg',
         link: 'https://s.shopee.com.br/qaNROYO3R',
         bannerId: 'small-01',
       },
       {
-        image: casaSmallBanner02,
+        image: '/brasil/casa/small_banner02.jpg',
         link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600470903341',
         bannerId: 'small-02',
       },
       {
-        image: casaSmallBanner03,
+        image: '/brasil/casa/small_banner03.jpg',
         link: 'https://s.shopee.com.br/8fJEnXMXHX',
         bannerId: 'small-03',
       },
       {
-        image: casaSmallBanner04,
+        image: '/brasil/casa/small_banner04.jpg',
         link: 'https://amzn.to/4mDelQm',
         bannerId: 'small-04',
       },
       {
-        image: casaSmallBanner05,
+        image: '/brasil/casa/small_banner05.jpg',
         link: 'https://amzn.to/428TnRX',
         bannerId: 'small-05',
       },
       {
-        image: casaSmallBanner06,
+        image: '/brasil/casa/small_banner06.jpg',
         link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600621807537',
         bannerId: 'small-06',
       },
       {
-        image: casaSmallBanner07,
+        image: '/brasil/casa/small_banner07.jpg',
         link: 'https://amzn.to/48ySI01',
         bannerId: 'small-07',
       },
       {
-        image: casaSmallBanner08,
+        image: '/brasil/casa/small_banner08.jpg',
         link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601425884330',
         bannerId: 'small-08',
       },
       {
-        image: casaSmallBanner09,
+        image: '/brasil/casa/small_banner09.jpg',
         link: 'https://s.shopee.com.br/4VThmrhENE',
         bannerId: 'small-09',
       },
       {
-        image: casaSmallBanner10,
+        image: '/brasil/casa/small_banner10.jpg',
         link: 'https://s.shopee.com.br/3VbAbbWUnx',
         bannerId: 'small-10',
       },
