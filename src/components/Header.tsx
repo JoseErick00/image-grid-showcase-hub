@@ -54,10 +54,15 @@ const Header = () => {
     { name: "Indonesia", href: "/indonesia", flag: "/lovable-uploads/0aa41bc5-2fa9-4922-af43-b13dc3921c31.png" },
   ];
 
-  const infoPages = [
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
+  const infoPages = isBrasilPage 
+    ? [
+        { name: "Sobre a iNeed", href: "/brasil/sobre" },
+        { name: "Contato", href: "/contact" },
+      ]
+    : [
+        { name: "About Us", href: "/about" },
+        { name: "Contact", href: "/contact" },
+      ];
 
   const casaPages = [
     { name: "Coisas legais para Casa", href: "/brasil/casa" },
