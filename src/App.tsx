@@ -13,6 +13,7 @@ import Health from "./pages/Health";
 import Home from "./pages/Home";
 import BestSellers from "./pages/BestSellers";
 import About from "./pages/About";
+import AboutBrasil from "./pages/AboutBrasil";
 import Contact from "./pages/Contact";
 import USA from "./pages/USA";
 import UnitedKingdom from "./pages/UnitedKingdom";
@@ -80,6 +81,7 @@ const App = () => (
             <Route path="brasil/incriveis" element={<BrasilIncriveis />} />
             <Route path="brasil/tech" element={<BrasilTech />} />
             <Route path="brasil/kids" element={<BrasilKids />} />
+            <Route path="brasil/sobre" element={<AboutBrasil />} />
             <Route path="brasil/casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
             <Route path="brasil/casa/sel-sala" element={<BrasilCasaSelSala />} />
             <Route path="brasil/casa/sel-quarto" element={<BrasilCasaSelQuarto />} />
