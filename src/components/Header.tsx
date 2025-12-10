@@ -112,7 +112,7 @@ const Header = () => {
               <img 
                 src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
                 alt="i.need" 
-                className={isBrasilPage ? "w-[240px] h-[100px] object-contain" : "w-[200px] h-[150px] object-contain"}
+                className={isBrasilPage ? "w-[190px] h-[79px] md:w-[240px] md:h-[100px] object-contain" : "w-[200px] h-[150px] object-contain"}
               />
             </Link>
             
