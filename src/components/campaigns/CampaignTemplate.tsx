@@ -8,6 +8,7 @@ import TrustBadges from '@/components/TrustBadges';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { type Platform } from '@/utils/platformLogos';
+import CategoryBannerGrid from './CategoryBannerGrid';
 
 interface NavButton {
   label: string;
@@ -35,6 +36,7 @@ interface Section {
 
 export interface CampaignConfig {
   campaignSlug?: string;
+  category?: 'casa' | 'saude' | 'incriveis' | 'esportes' | 'tech' | 'kids';
   pageTitle: string;
   pageSubtitle: string;
   heroBanner: {
@@ -232,6 +234,9 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
               {config.backLink?.label || "Voltar para Brasil Casa"}
             </Link>
           </Button>
+
+          {/* Category Banner Grid */}
+          {config.category && <CategoryBannerGrid category={config.category} />}
         </div>
       </div>
     </div>
