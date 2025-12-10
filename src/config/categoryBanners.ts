@@ -105,5 +105,86 @@ export const categoryBannersConfig: Record<string, CategoryBannersConfig> = {
       },
     ],
   },
-  // Add other categories here (saude, incriveis, esportes, tech, kids)
+  saude: {
+    categorySlug: 'brasil-saude',
+    categoryName: 'Saúde',
+    promoBanners: [
+      {
+        desktop: '/assets/saude/Promo_banner.jpg',
+        tablet: '/assets/saude/Promo_banner_tablet.jpg',
+        mobile: '/assets/saude/Promo_banner_mobile.jpg',
+        link: 'https://s.shopee.com.br/30fWEgYwuy',
+        bannerId: 'promo-01',
+      },
+      {
+        desktop: '/assets/saude/Promo_banner02.jpg',
+        tablet: '/assets/saude/Promo_banner02_tablet.jpg',
+        mobile: '/assets/saude/Promo_banner02_mobile.jpg',
+        link: 'https://amzn.to/47fo7m5',
+        bannerId: 'promo-02',
+      },
+    ],
+    middleBanners: [
+      {
+        desktop: '/assets/saude/middle_banner.jpg',
+        tablet: '/assets/saude/middle_banner_tablet.jpg',
+        mobile: '/assets/saude/middle_banner_mobile.jpg',
+        link: 'https://amzn.to/4nsoy2A',
+        bannerId: 'middle',
+      },
+    ],
+    smallBanners: [
+      {
+        image: '/assets/saude/Small_banner01.jpg',
+        link: 'https://amzn.to/4ncCP2U',
+        bannerId: 'small-01',
+      },
+      {
+        image: '/assets/saude/Small_banner02.jpg',
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617',
+        bannerId: 'small-02',
+      },
+      {
+        image: '/assets/saude/Small_banner03.jpg',
+        link: 'https://s.shopee.com.br/8zwjR9RBxD',
+        bannerId: 'small-03',
+      },
+      {
+        image: '/assets/saude/Small_banner04.jpg',
+        link: 'https://amzn.to/48EVTDE',
+        bannerId: 'small-04',
+      },
+      {
+        image: '/assets/saude/Small_banner05.jpg',
+        link: 'https://amzn.to/4hgzFdg',
+        bannerId: 'small-05',
+      },
+      {
+        image: '/assets/saude/Small_banner06.jpg',
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600986683012',
+        bannerId: 'small-06',
+      },
+      {
+        image: '/assets/saude/Small_banner07.jpg',
+        link: 'https://s.click.aliexpress.com/e/_c4ovaLWn',
+        bannerId: 'small-07',
+      },
+      {
+        image: '/assets/saude/Small_banner08.jpg',
+        link: 'https://s.shopee.com.br/1Vqie4iOmg',
+        bannerId: 'small-08',
+      },
+      {
+        image: '/assets/saude/Small_banner09.jpg',
+        link: 'https://amzn.to/3JmeXvY',
+        bannerId: 'small-09',
+      },
+      {
+        image: '/assets/saude/Small_banner10.jpg',
+        link: 'https://amzn.to/3L3SeFs',
+        bannerId: 'small-10',
+      },
+    ],
+  },
+  // Add other categories here (incriveis, esportes, tech, kids)
 };
