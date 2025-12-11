@@ -12,9 +12,10 @@ interface CampaignProductCardProps {
   platform: Platform;
   stamp?: string;
   position?: number;
+  hideCallToAction?: boolean;
 }
 
-const CampaignProductCard = ({ image, label, link, platform, stamp, position }: CampaignProductCardProps) => {
+const CampaignProductCard = ({ image, label, link, platform, stamp, position, hideCallToAction = false }: CampaignProductCardProps) => {
   const productId = generateProductId(link);
 
   const handleProductClick = () => {
@@ -72,21 +73,23 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position }: 
           />
         </div>
         
-        <Button
-          size="sm"
-          className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
-          asChild
-        >
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleProductClick}
+        {!hideCallToAction && (
+          <Button
+            size="sm"
+            className="w-full bg-[#171717] text-white hover:bg-[#171717]/90"
+            asChild
           >
-            <span className="hidden md:inline">Eita, eu quero também!</span>
-            <span className="md:hidden">Eu quero!</span>
-          </a>
-        </Button>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleProductClick}
+            >
+              <span className="hidden md:inline">Eita, eu quero também!</span>
+              <span className="md:hidden">Eu quero!</span>
+            </a>
+          </Button>
+        )}
       </div>
     </div>
   );
