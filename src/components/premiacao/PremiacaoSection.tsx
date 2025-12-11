@@ -85,8 +85,8 @@ const PremiacaoSection = ({
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-0 md:-left-4" />
-          <CarouselNext className="right-0 md:-right-4" />
+          <CarouselPrevious className="left-0 md:-left-6 h-12 w-12 bg-[#171717] text-white hover:bg-[#171717]/80 border-none" />
+          <CarouselNext className="right-0 md:-right-6 h-12 w-12 bg-[#171717] text-white hover:bg-[#171717]/80 border-none" />
         </Carousel>
       </div>
     </section>
