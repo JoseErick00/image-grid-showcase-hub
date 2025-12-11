@@ -1,6 +1,13 @@
 import CampaignProductCard from '@/components/campaigns/CampaignProductCard';
 import { type Platform } from '@/utils/platformLogos';
 import { type PremiacaoProduct } from '@/pages/campaigns/data/premiacaoData';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 interface PremiacaoSectionProps {
   id: string;
@@ -55,18 +62,32 @@ const PremiacaoSection = ({
         {description}
       </p>
 
-      {/* Product Grid - 3 columns like campaign pages */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-        {products.map((product, index) => (
-          <CampaignProductCard
-            key={index}
-            image={product.image}
-            label={product.label}
-            link={product.link}
-            platform={product.platform as Platform}
-            position={index + 1}
-          />
-        ))}
+      {/* Product Carousel - 3 per slide desktop, 2 per slide mobile */}
+      <div className="px-4 md:px-12">
+        <Carousel
+          opts={{
+            align: 'start',
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {products.map((product, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
+                <CampaignProductCard
+                  image={product.image}
+                  label={product.label}
+                  link={product.link}
+                  platform={product.platform as Platform}
+                  position={index + 1}
+                  hideCallToAction
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-0 md:-left-4" />
+          <CarouselNext className="right-0 md:-right-4" />
+        </Carousel>
       </div>
     </section>
   );
