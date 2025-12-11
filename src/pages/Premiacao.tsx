@@ -85,7 +85,7 @@ const Premiacao = () => {
           </h1>
         </div>
 
-        {/* Coin Images Grid - 420x200px */}
+        {/* Coin Images Grid - 420x200px desktop, responsive mobile/tablet */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 max-w-4xl mx-auto">
           {/* +1 Produto Image */}
           <div className="flex flex-col items-center">
@@ -93,9 +93,7 @@ const Premiacao = () => {
               <img
                 src={imgProduto}
                 alt="Ganhe +1 moeda compartilhando"
-                width={420}
-                height={200}
-                className="w-[420px] h-[200px] object-cover"
+                className="w-full max-w-[420px] h-auto object-contain"
               />
             </div>
             <p className="font-omne-medium text-base md:text-lg text-center" style={{ color: '#171717' }}>
@@ -109,9 +107,7 @@ const Premiacao = () => {
               <img
                 src={imgApp}
                 alt="Ganhe +10 moedas indicando amigos"
-                width={420}
-                height={200}
-                className="w-[420px] h-[200px] object-cover"
+                className="w-full max-w-[420px] h-auto object-contain"
               />
             </div>
             <p className="font-omne-medium text-base md:text-lg text-center" style={{ color: '#171717' }}>

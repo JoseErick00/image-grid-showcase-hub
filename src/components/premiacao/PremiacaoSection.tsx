@@ -21,19 +21,17 @@ const PremiacaoSection = ({
 }: PremiacaoSectionProps) => {
   return (
     <section id={id} className="py-8 md:py-12">
-      {/* Section Image - 600x205px */}
-      <div className="flex justify-center mb-6">
+      {/* Section Image - 600x250px desktop, responsive mobile/tablet */}
+      <div className="flex justify-center mb-6 px-4">
         <div className="rounded-lg overflow-hidden">
           {sectionImage ? (
             <img 
               src={sectionImage} 
               alt={title} 
-              width={600}
-              height={205}
-              className="w-[600px] h-[205px] object-cover"
+              className="w-full max-w-[600px] h-auto object-contain"
             />
           ) : (
-            <div className="w-[600px] h-[205px] bg-muted/30 rounded-lg flex items-center justify-center border border-border">
+            <div className="w-full max-w-[600px] h-[250px] bg-muted/30 rounded-lg flex items-center justify-center border border-border">
               <span className="text-muted-foreground font-omne-regular text-sm">
                 Imagem em breve
               </span>
