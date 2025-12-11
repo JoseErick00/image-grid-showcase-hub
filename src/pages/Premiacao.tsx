@@ -16,6 +16,19 @@ import heroMobile from '@/assets/premiacao/hero-mobile.jpg';
 import imgProduto from '@/assets/premiacao/img_1produto.jpg';
 import imgApp from '@/assets/premiacao/img_10app.jpg';
 
+// Import section profile images
+import perfilColegas from '@/assets/premiacao/perfil_colegas.jpg';
+import perfilAmigos from '@/assets/premiacao/perfil_amigos.jpg';
+import perfilFamilia from '@/assets/premiacao/perfil_familia.jpg';
+import perfilSocios from '@/assets/premiacao/perfil_socios.jpg';
+
+const sectionImages: Record<string, string> = {
+  'colegas': perfilColegas,
+  'amigos': perfilAmigos,
+  'familia': perfilFamilia,
+  'socios': perfilSocios,
+};
+
 // Import sections data
 import { premiacaoSections } from './campaigns/data/premiacaoData';
 
@@ -72,7 +85,7 @@ const Premiacao = () => {
           </h1>
         </div>
 
-        {/* Coin Images Grid - Natural sizing */}
+        {/* Coin Images Grid - 420x200px */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 max-w-4xl mx-auto">
           {/* +1 Produto Image */}
           <div className="flex flex-col items-center">
@@ -80,7 +93,9 @@ const Premiacao = () => {
               <img
                 src={imgProduto}
                 alt="Ganhe +1 moeda compartilhando"
-                className="w-auto h-auto"
+                width={420}
+                height={200}
+                className="w-[420px] h-[200px] object-cover"
               />
             </div>
             <p className="font-omne-medium text-base md:text-lg text-center" style={{ color: '#171717' }}>
@@ -94,7 +109,9 @@ const Premiacao = () => {
               <img
                 src={imgApp}
                 alt="Ganhe +10 moedas indicando amigos"
-                className="w-auto h-auto"
+                width={420}
+                height={200}
+                className="w-[420px] h-[200px] object-cover"
               />
             </div>
             <p className="font-omne-medium text-base md:text-lg text-center" style={{ color: '#171717' }}>
@@ -171,6 +188,7 @@ const Premiacao = () => {
               subtitle={section.subtitle}
               description={section.description}
               products={section.products}
+              sectionImage={sectionImages[section.id]}
             />
           </div>
         ))}

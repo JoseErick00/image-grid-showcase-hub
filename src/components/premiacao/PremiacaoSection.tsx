@@ -8,7 +8,7 @@ interface PremiacaoSectionProps {
   subtitle: string;
   description: string;
   products: PremiacaoProduct[];
-  placeholderImage?: string;
+  sectionImage?: string;
 }
 
 const PremiacaoSection = ({ 
@@ -17,21 +17,23 @@ const PremiacaoSection = ({
   subtitle, 
   description, 
   products,
-  placeholderImage 
+  sectionImage 
 }: PremiacaoSectionProps) => {
   return (
     <section id={id} className="py-8 md:py-12">
-      {/* Section Placeholder Image */}
+      {/* Section Image - 600x205px */}
       <div className="flex justify-center mb-6">
         <div className="rounded-lg overflow-hidden">
-          {placeholderImage ? (
+          {sectionImage ? (
             <img 
-              src={placeholderImage} 
+              src={sectionImage} 
               alt={title} 
-              className="w-auto h-auto"
+              width={600}
+              height={205}
+              className="w-[600px] h-[205px] object-cover"
             />
           ) : (
-            <div className="w-[300px] h-[150px] bg-muted/30 rounded-lg flex items-center justify-center border border-border">
+            <div className="w-[600px] h-[205px] bg-muted/30 rounded-lg flex items-center justify-center border border-border">
               <span className="text-muted-foreground font-omne-regular text-sm">
                 Imagem em breve
               </span>
