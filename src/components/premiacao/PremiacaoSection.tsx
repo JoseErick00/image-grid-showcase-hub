@@ -9,13 +9,18 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
+interface SectionImage {
+  desktop: string;
+  mobile: string;
+}
+
 interface PremiacaoSectionProps {
   id: string;
   title: string;
   subtitle: string;
   description: string;
   products: PremiacaoProduct[];
-  sectionImage?: string;
+  sectionImage?: SectionImage;
 }
 
 const PremiacaoSection = ({ 
@@ -28,15 +33,24 @@ const PremiacaoSection = ({
 }: PremiacaoSectionProps) => {
   return (
     <section id={id} className="py-8 md:py-12">
-      {/* Section Image - 600x250px desktop, responsive mobile/tablet */}
+      {/* Section Image - responsive desktop/mobile */}
       <div className="flex justify-center mb-6 px-4">
         <div className="rounded-lg overflow-hidden">
           {sectionImage ? (
-            <img 
-              src={sectionImage} 
-              alt={title} 
-              className="w-full max-w-[600px] h-auto object-contain"
-            />
+            <>
+              {/* Desktop image */}
+              <img 
+                src={sectionImage.desktop} 
+                alt={title} 
+                className="hidden md:block w-full max-w-[600px] h-auto object-contain"
+              />
+              {/* Mobile image */}
+              <img 
+                src={sectionImage.mobile} 
+                alt={title} 
+                className="block md:hidden w-full max-w-[400px] h-auto object-contain"
+              />
+            </>
           ) : (
             <div className="w-full max-w-[600px] h-[250px] bg-muted/30 rounded-lg flex items-center justify-center border border-border">
               <span className="text-muted-foreground font-omne-regular text-sm">

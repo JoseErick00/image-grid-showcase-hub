@@ -16,17 +16,23 @@ import heroMobile from '@/assets/premiacao/hero-mobile.jpg';
 import imgProduto from '@/assets/premiacao/img_1produto.jpg';
 import imgApp from '@/assets/premiacao/img_10app.jpg';
 
-// Import section profile images
-import perfilColegas from '@/assets/premiacao/perfil_colegas.jpg';
-import perfilAmigos from '@/assets/premiacao/perfil_amigos.jpg';
-import perfilFamilia from '@/assets/premiacao/perfil_familia.jpg';
-import perfilSocios from '@/assets/premiacao/perfil_socios.jpg';
+// Import section profile images - desktop
+import perfilColegasDesktop from '@/assets/premiacao/perfis_colegas.jpg';
+import perfilAmigosDesktop from '@/assets/premiacao/perfis_amigos.jpg';
+import perfilFamiliaDesktop from '@/assets/premiacao/perfis_familia.jpg';
+import perfilSociosDesktop from '@/assets/premiacao/perfis_socios.jpg';
 
-const sectionImages: Record<string, string> = {
-  'colegas': perfilColegas,
-  'amigos': perfilAmigos,
-  'familia': perfilFamilia,
-  'socios': perfilSocios,
+// Import section profile images - mobile
+import perfilColegasMobile from '@/assets/premiacao/perfis_colegas_mobile.jpg';
+import perfilAmigosMobile from '@/assets/premiacao/perfis_amigos_mobile.jpg';
+import perfilFamiliaMobile from '@/assets/premiacao/perfis_familia_mobile.jpg';
+import perfilSociosMobile from '@/assets/premiacao/perfis_socios_mobile.jpg';
+
+const sectionImages: Record<string, { desktop: string; mobile: string }> = {
+  'colegas': { desktop: perfilColegasDesktop, mobile: perfilColegasMobile },
+  'amigos': { desktop: perfilAmigosDesktop, mobile: perfilAmigosMobile },
+  'familia': { desktop: perfilFamiliaDesktop, mobile: perfilFamiliaMobile },
+  'socios': { desktop: perfilSociosDesktop, mobile: perfilSociosMobile },
 };
 
 // Import sections data
