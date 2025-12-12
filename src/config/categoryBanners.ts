@@ -3,6 +3,27 @@
 
 // Saude banner imports (from src/assets/saude/)
 import saudePromoBanner from "@/assets/saude/Promo_banner.jpg";
+
+// Esportes banner imports (from src/assets/brasil-esportes/)
+import esportesPromoBanner from "@/assets/brasil-esportes/Promo_banner.jpg";
+import esportesPromoBannerTablet from "@/assets/brasil-esportes/Promo_banner_tablet.jpg";
+import esportesPromoBannerMobile from "@/assets/brasil-esportes/Promo_banner_mobile.jpg";
+import esportesPromoBanner02 from "@/assets/brasil-esportes/Promo_banner02.jpg";
+import esportesPromoBanner02Tablet from "@/assets/brasil-esportes/Promo_banner02_tablet.jpg";
+import esportesPromoBanner02Mobile from "@/assets/brasil-esportes/Promo_banner02_mobile.jpg";
+import esportesMiddleBanner from "@/assets/brasil-esportes/middle_banner.jpg";
+import esportesMiddleBannerTablet from "@/assets/brasil-esportes/middle_banner_tablet.jpg";
+import esportesMiddleBannerMobile from "@/assets/brasil-esportes/middle_banner_mobile.jpg";
+import esportesSmallBanner01 from "@/assets/brasil-esportes/Small_banner01.jpg";
+import esportesSmallBanner02 from "@/assets/brasil-esportes/Small_banner02.jpg";
+import esportesSmallBanner03 from "@/assets/brasil-esportes/Small_banner03.jpg";
+import esportesSmallBanner04 from "@/assets/brasil-esportes/Small_banner04.jpg";
+import esportesSmallBanner05 from "@/assets/brasil-esportes/Small_banner05.jpg";
+import esportesSmallBanner06 from "@/assets/brasil-esportes/Small_banner06.jpg";
+import esportesSmallBanner07 from "@/assets/brasil-esportes/Small_banner07.jpg";
+import esportesSmallBanner08 from "@/assets/brasil-esportes/Small_banner08.jpg";
+import esportesSmallBanner09 from "@/assets/brasil-esportes/Small_banner09.jpg";
+import esportesSmallBanner10 from "@/assets/brasil-esportes/Small_banner10.jpg";
 import saudePromoBannerTablet from "@/assets/saude/Promo_banner_tablet.jpg";
 import saudePromoBannerMobile from "@/assets/saude/Promo_banner_mobile.jpg";
 import saudePromoBanner02 from "@/assets/saude/Promo_banner02.jpg";
@@ -207,5 +228,86 @@ export const categoryBannersConfig: Record<string, CategoryBannersConfig> = {
       },
     ],
   },
-  // Add other categories here (incriveis, esportes, tech, kids)
+  esportes: {
+    categorySlug: 'brasil-esportes',
+    categoryName: 'Esportes',
+    promoBanners: [
+      {
+        desktop: esportesPromoBanner,
+        tablet: esportesPromoBannerTablet,
+        mobile: esportesPromoBannerMobile,
+        link: 'https://s.click.aliexpress.com/e/_c4cwqPUj',
+        bannerId: 'promo-01',
+      },
+      {
+        desktop: esportesPromoBanner02,
+        tablet: esportesPromoBanner02Tablet,
+        mobile: esportesPromoBanner02Mobile,
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600217877049',
+        bannerId: 'promo-02',
+      },
+    ],
+    middleBanners: [
+      {
+        desktop: esportesMiddleBanner,
+        tablet: esportesMiddleBannerTablet,
+        mobile: esportesMiddleBannerMobile,
+        link: 'https://s.shopee.com.br/6psKueTPOu',
+        bannerId: 'middle',
+      },
+    ],
+    smallBanners: [
+      {
+        image: esportesSmallBanner01,
+        link: 'https://s.click.aliexpress.com/e/_c3nLhzfZ',
+        bannerId: 'small-01',
+      },
+      {
+        image: esportesSmallBanner02,
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617',
+        bannerId: 'small-02',
+      },
+      {
+        image: esportesSmallBanner03,
+        link: 'https://s.shopee.com.br/2g2lxBa1XI',
+        bannerId: 'small-03',
+      },
+      {
+        image: esportesSmallBanner04,
+        link: 'https://amzn.to/48EVTDE',
+        bannerId: 'small-04',
+      },
+      {
+        image: esportesSmallBanner05,
+        link: 'https://amzn.to/4hgzFdg',
+        bannerId: 'small-05',
+      },
+      {
+        image: esportesSmallBanner06,
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601402999567',
+        bannerId: 'small-06',
+      },
+      {
+        image: esportesSmallBanner07,
+        link: 'https://amzn.to/47M9LuL',
+        bannerId: 'small-07',
+      },
+      {
+        image: esportesSmallBanner08,
+        link: 'https://s.shopee.com.br/qbESdxD7m',
+        bannerId: 'small-08',
+      },
+      {
+        image: esportesSmallBanner09,
+        link: 'https://amzn.to/3JmeXvY',
+        bannerId: 'small-09',
+      },
+      {
+        image: esportesSmallBanner10,
+        link: 'https://s.click.aliexpress.com/e/_c2wZo71N',
+        bannerId: 'small-10',
+      },
+    ],
+  },
+  // Add other categories here (incriveis, tech, kids)
 };
