@@ -2,6 +2,7 @@ import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selTimeCampoData: CampaignConfig = {
   campaignSlug: "sel-time-campo",
+  category: "esportes",
   pageTitle: "Seleção - Time em Campo",
   pageSubtitle: "Os melhores produtos para futebol, vôlei e esportes de equipe!",
   heroBanner: {
