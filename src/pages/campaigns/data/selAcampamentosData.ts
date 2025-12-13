@@ -2,6 +2,7 @@ import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selAcampamentosData: CampaignConfig = {
   campaignSlug: "sel-acampamentos",
+  category: "incriveis",
   pageTitle: "Seleção para acampamentos",
   pageSubtitle: "Tudo que você precisa para uma aventura ao ar livre perfeita!",
   heroBanner: {
