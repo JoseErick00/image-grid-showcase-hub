@@ -187,13 +187,13 @@ const MailchimpSubscription = () => {
               target="_blank"
             >
               <div id="mc_embed_signup_scroll">
-                <h2>Receive the latest discoveries by email.</h2>
+                <h2>Receba os últimos achados por e-mail.</h2>
                 <div className="indicates-required">
-                  <span className="asterisk">*</span> indicates required
+                  <span className="asterisk">*</span> indica campo obrigatório
                 </div>
                 <div className="mc-field-group">
                   <label htmlFor="mce-EMAIL">
-                    Email Address <span className="asterisk">*</span>
+                    Endereço de E-mail <span className="asterisk">*</span>
                   </label>
                   <input 
                     type="email" 
@@ -222,7 +222,7 @@ const MailchimpSubscription = () => {
                       name="subscribe" 
                       id="mc-embedded-subscribe" 
                       className="button" 
-                      value="Subscribe" 
+                      value="Inscrever-se" 
                     />
                     <p style={{ margin: '0px auto' }}>
                       <a 

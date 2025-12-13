@@ -58,7 +58,7 @@ const Header = () => {
   const infoPages = isBrasilPage 
     ? [
         { name: "Sobre a iNeed", href: "/brasil/sobre" },
-        { name: "Contato", href: "/contact" },
+        { name: "Contato", href: "/brasil/contato" },
       ]
     : [
         { name: "About Us", href: "/about" },
