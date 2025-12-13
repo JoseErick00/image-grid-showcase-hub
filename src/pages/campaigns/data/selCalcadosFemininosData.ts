@@ -2,6 +2,7 @@ import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selCalcadosFemininosData: CampaignConfig = {
   campaignSlug: "sel-calcados-femininos",
+  category: "incriveis",
   pageTitle: "Os calçados femininos mais bacanas da Shopee, Amazon, Alibaba e AliExpress, estão aqui!",
   pageSubtitle: "Aproveite a seleção de calçados 'bacanérrimos' que você só encontra aqui na iNeed. Encontre calçados para tudo e para todas!",
   heroBanner: {

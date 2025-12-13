@@ -24,6 +24,27 @@ import esportesSmallBanner07 from "@/assets/brasil-esportes/Small_banner07.jpg";
 import esportesSmallBanner08 from "@/assets/brasil-esportes/Small_banner08.jpg";
 import esportesSmallBanner09 from "@/assets/brasil-esportes/Small_banner09.jpg";
 import esportesSmallBanner10 from "@/assets/brasil-esportes/Small_banner10.jpg";
+
+// Incriveis banner imports (from src/assets/)
+import incriveisPromoBanner from "@/assets/Promo_banner_Inc.jpg";
+import incriveisPromoBannerTablet from "@/assets/Promo_banner_tabletInc.jpg";
+import incriveisPromoBannerMobile from "@/assets/Promo_banner_mobileInc.jpg";
+import incriveisPromoBanner02 from "@/assets/Promo_banner02_Inc.jpg";
+import incriveisPromoBanner02Tablet from "@/assets/Promo_banner02_tabletInc.jpg";
+import incriveisPromoBanner02Mobile from "@/assets/Promo_banner02_mobileInc.jpg";
+import incriveisMiddleBanner from "@/assets/middle_banner_Inc.jpg";
+import incriveisMiddleBannerTablet from "@/assets/middle_banner_tabletInc.jpg";
+import incriveisMiddleBannerMobile from "@/assets/middle_banner_mobileInc.jpg";
+import incriveisSmallBanner01 from "@/assets/Small_banner_Inc01.jpg";
+import incriveisSmallBanner02 from "@/assets/Small_banner_Inc02.jpg";
+import incriveisSmallBanner03 from "@/assets/Small_banner_Inc03.jpg";
+import incriveisSmallBanner04 from "@/assets/Small_banner_Inc04.jpg";
+import incriveisSmallBanner05 from "@/assets/Small_banner_Inc05.jpg";
+import incriveisSmallBanner06 from "@/assets/Small_banner_Inc06.jpg";
+import incriveisSmallBanner07 from "@/assets/Small_banner_Inc07.jpg";
+import incriveisSmallBanner08 from "@/assets/Small_banner_Inc08.jpg";
+import incriveisSmallBanner09 from "@/assets/Small_banner_Inc09.jpg";
+import incriveisSmallBanner10 from "@/assets/Small_banner_Inc10.jpg";
 import saudePromoBannerTablet from "@/assets/saude/Promo_banner_tablet.jpg";
 import saudePromoBannerMobile from "@/assets/saude/Promo_banner_mobile.jpg";
 import saudePromoBanner02 from "@/assets/saude/Promo_banner02.jpg";
@@ -309,5 +330,86 @@ export const categoryBannersConfig: Record<string, CategoryBannersConfig> = {
       },
     ],
   },
-  // Add other categories here (incriveis, tech, kids)
+  incriveis: {
+    categorySlug: 'brasil-incriveis',
+    categoryName: 'Incríveis',
+    promoBanners: [
+      {
+        desktop: incriveisPromoBanner,
+        tablet: incriveisPromoBannerTablet,
+        mobile: incriveisPromoBannerMobile,
+        link: 'https://amzn.to/4oijqP1',
+        bannerId: 'promo-01',
+      },
+      {
+        desktop: incriveisPromoBanner02,
+        tablet: incriveisPromoBanner02Tablet,
+        mobile: incriveisPromoBanner02Mobile,
+        link: 'https://amzn.to/48z1r2x',
+        bannerId: 'promo-02',
+      },
+    ],
+    middleBanners: [
+      {
+        desktop: incriveisMiddleBanner,
+        tablet: incriveisMiddleBannerTablet,
+        mobile: incriveisMiddleBannerMobile,
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600552723544',
+        bannerId: 'middle',
+      },
+    ],
+    smallBanners: [
+      {
+        image: incriveisSmallBanner01,
+        link: 'https://s.shopee.com.br/9Usq4oWcNx',
+        bannerId: 'small-01',
+      },
+      {
+        image: incriveisSmallBanner02,
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601441336369',
+        bannerId: 'small-02',
+      },
+      {
+        image: incriveisSmallBanner03,
+        link: 'https://amzn.to/48uWOX4',
+        bannerId: 'small-03',
+      },
+      {
+        image: incriveisSmallBanner04,
+        link: 'https://s.shopee.com.br/8zwZih2PKR',
+        bannerId: 'small-04',
+      },
+      {
+        image: incriveisSmallBanner05,
+        link: 'https://s.shopee.com.br/7V7dZJmkS0',
+        bannerId: 'small-05',
+      },
+      {
+        image: incriveisSmallBanner06,
+        link: 'https://amzn.to/4nQ8b0I',
+        bannerId: 'small-06',
+      },
+      {
+        image: incriveisSmallBanner07,
+        link: 'https://amzn.to/46PWJfn',
+        bannerId: 'small-07',
+      },
+      {
+        image: incriveisSmallBanner08,
+        link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601234247078',
+        bannerId: 'small-08',
+      },
+      {
+        image: incriveisSmallBanner09,
+        link: 'https://amzn.to/3VIO5ZV',
+        bannerId: 'small-09',
+      },
+      {
+        image: incriveisSmallBanner10,
+        link: 'https://s.shopee.com.br/qayQGnvXU',
+        bannerId: 'small-10',
+      },
+    ],
+  },
+  // Add other categories here (tech, kids)
 };
