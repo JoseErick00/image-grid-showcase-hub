@@ -491,40 +491,6 @@ const BrasilEsportes = () => {
           </div>
         </div>
 
-        {/* Navigation Menu */}
-        <div className="mt-16 mb-8">
-          <h2 className="font-omne-medium text-xl md:text-2xl text-foreground text-center mb-8 px-4">
-            Nossas Coleções de Esportes:
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4">
-            {/* Coisas legais - Esportes */}
-            <a
-              href="/brasil/esportes"
-              className="flex flex-col items-center justify-center hover:opacity-80 transition-opacity duration-300 bg-muted rounded-lg p-8 min-h-[150px]"
-            >
-              <h3 className="font-omne-medium text-lg md:text-xl text-white text-center">
-                Coisas legais - Esportes
-              </h3>
-              <p className="font-omne-regular text-sm md:text-base text-white/80 text-center mt-2">
-                Confira nossa seleção completa
-              </p>
-            </a>
-
-            {/* Seleção para Academia */}
-            <a
-              href="/brasil/esportes/sel-academia"
-              className="flex flex-col items-center justify-center hover:opacity-80 transition-opacity duration-300 bg-muted rounded-lg p-8 min-h-[150px]"
-            >
-              <h3 className="font-omne-medium text-lg md:text-xl text-white text-center">
-                Seleção para Academia
-              </h3>
-              <p className="font-omne-regular text-sm md:text-base text-white/80 text-center mt-2">
-                Os melhores produtos para seu treino
-              </p>
-            </a>
-          </div>
-        </div>
 
 
         <div className="mt-16 mb-8">
