@@ -11,6 +11,7 @@ const Header = () => {
   const [esportesDropdownOpen, setEsportesDropdownOpen] = useState(false);
   const [saudeDropdownOpen, setSaudeDropdownOpen] = useState(false);
   const [incriveisDropdownOpen, setIncriveisDropdownOpen] = useState(false);
+  const [techDropdownOpen, setTechDropdownOpen] = useState(false);
   const [lojasDropdownOpen, setLojasDropdownOpen] = useState(false);
   const location = useLocation();
 
@@ -98,6 +99,11 @@ const Header = () => {
     { name: "Seleção - Calçados Masculinos", href: "/brasil/incriveis/sel-calcados-masculinos" },
     { name: "Seleção para acampamentos", href: "/brasil/incriveis/sel-acampamentos" },
     { name: "Seleção amantes de Praia", href: "/brasil/incriveis/sel-praia" },
+  ];
+
+  const techPages = [
+    { name: "Coisas legais de Tech", href: "/brasil/tech" },
+    { name: "Seleção Fones de Ouvido", href: "/brasil/tech/sel-fones-ouvido" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -351,6 +357,60 @@ const Header = () => {
                             to={page.href}
                             className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
                             onClick={() => setIncriveisDropdownOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              // Check if this is the Tech item for Brasil and should have a dropdown
+              if (item.name === "Tech" && isBrasilPage) {
+                return (
+                  <div 
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setTechDropdownOpen(true)}
+                    onMouseLeave={() => setTechDropdownOpen(false)}
+                  >
+                    <button
+                      className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
+                        isActive(item.href) || location.pathname.startsWith('/brasil/tech/')
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-white"
+                      }`}
+                      onClick={() => setTechDropdownOpen((prev) => !prev)}
+                      onMouseEnter={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/tech/')) {
+                          e.currentTarget.style.backgroundColor = getHoverColor(item.name);
+                          e.currentTarget.style.color = "white";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/tech/')) {
+                          e.currentTarget.style.backgroundColor = "";
+                          e.currentTarget.style.color = "";
+                        }
+                      }}
+                    >
+                      {item.name}
+                      <ChevronDown size={16} />
+                    </button>
+                    {techDropdownOpen && (
+                      <div 
+                        className="absolute top-full left-0 mt-0 bg-background border border-border rounded-md shadow-lg py-2 min-w-[200px] z-50"
+                        onMouseEnter={() => setTechDropdownOpen(true)}
+                        onMouseLeave={() => setTechDropdownOpen(false)}
+                      >
+                        {techPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
+                            onClick={() => setTechDropdownOpen(false)}
                           >
                             {page.name}
                           </Link>
@@ -672,6 +732,47 @@ const Header = () => {
                             }`}
                             style={{
                               backgroundColor: isActive(page.href) ? "" : "#5cc801"
+                            }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {page.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                // Tech dropdown for mobile Brasil navigation
+                if (item.name === "Tech" && isBrasilPage) {
+                  return (
+                    <div key={item.name} className="px-2 py-1">
+                      <Link
+                        to={item.href}
+                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white block ${
+                          isActive(item.href) || location.pathname.startsWith('/brasil/tech/')
+                            ? "text-primary"
+                            : ""
+                        }`}
+                        style={{
+                          backgroundColor: isActive(item.href) || location.pathname.startsWith('/brasil/tech/') ? "" : getHoverColor(item.name)
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                        {techPages.map((page) => (
+                          <Link
+                            key={page.name}
+                            to={page.href}
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                              isActive(page.href)
+                                ? "text-primary"
+                                : ""
+                            }`}
+                            style={{
+                              backgroundColor: isActive(page.href) ? "" : "#03bfc0"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
