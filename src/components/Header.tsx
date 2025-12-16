@@ -43,7 +43,7 @@ const Header = () => {
     { name: "AliExpress", href: "/brasil/lojas/aliexpress", color: "#E43225" },
     { name: "Amazon", href: "/brasil/lojas/amazon", color: "#FF9900" },
     { name: "Alibaba", href: "/brasil/lojas/alibaba", color: "#FF6A00" },
-    { name: "Premiação iNeed", href: "/brasil/premios", color: "#FFD700" },
+    { name: "Premiação iNeed", href: "/brasil/premios", color: "" },
   ];
 
   const navigation = isBrasilPage ? brasilNavigation : defaultNavigation;
@@ -403,8 +403,10 @@ const Header = () => {
                           <Link
                             key={page.name}
                             to={page.href}
-                            className="block px-4 py-2 text-sm font-omne-regular text-white hover:opacity-80 transition-colors"
-                            style={{ backgroundColor: page.color }}
+                            className={`block px-4 py-2 text-sm font-omne-regular hover:opacity-80 transition-colors ${
+                              page.color ? "text-white" : "text-foreground bg-muted/30 hover:bg-muted"
+                            }`}
+                            style={page.color ? { backgroundColor: page.color } : undefined}
                             onClick={() => setLojasDropdownOpen(false)}
                           >
                             {page.name}
@@ -696,13 +698,13 @@ const Header = () => {
                           <Link
                             key={page.name}
                             to={page.href}
-                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
                                 ? "text-primary"
-                                : ""
+                                : page.color ? "text-white" : "text-foreground"
                             }`}
                             style={{
-                              backgroundColor: isActive(page.href) ? "" : page.color
+                              backgroundColor: isActive(page.href) ? "" : (page.color || undefined)
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
