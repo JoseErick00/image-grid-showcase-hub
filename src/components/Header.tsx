@@ -146,7 +146,7 @@ const Header = () => {
                   "Saúde": "#d8ad00",
                   "Incríveis": "#5cc801",
                   "Brinquedos": "#8254d0",
-                  "+ Lojas": "#0ea5e9",
+                  "+ Lojas": "#575757",
                 };
                 return colors[name] || "#fbfbfb";
               };
