@@ -104,6 +104,7 @@ const Header = () => {
   const techPages = [
     { name: "Coisas legais de Tech", href: "/brasil/tech" },
     { name: "Seleção Fones de Ouvido", href: "/brasil/tech/sel-fones-ouvido" },
+    { name: "Seleção de Tradutores", href: "/brasil/tech/sel-tradutores" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
