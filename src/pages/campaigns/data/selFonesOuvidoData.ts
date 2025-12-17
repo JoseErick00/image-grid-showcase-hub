@@ -2,7 +2,7 @@ import { type CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 
 export const selFonesOuvidoData: CampaignConfig = {
   campaignSlug: "sel-fones-ouvido",
-  category: "tech",
+  // category: "tech", // Descomentrar quando tiver as imagens de banners em src/assets/tech/
   pageTitle: "Os melhores fones de ouvido estão aqui!",
   pageSubtitle: "Uma seleção especial de fones de ouvido para todos os estilos: gamers, esportistas, audiophiles e uso diário!",
   heroBanner: {
