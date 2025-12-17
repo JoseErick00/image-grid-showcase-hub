@@ -64,6 +64,27 @@ import saudeSmallBanner08 from "@/assets/saude/Small_banner08.jpg";
 import saudeSmallBanner09 from "@/assets/saude/Small_banner09.jpg";
 import saudeSmallBanner10 from "@/assets/saude/Small_banner10.jpg";
 
+// Tech banner imports (from src/assets/tech/)
+import techPromoBanner from "@/assets/tech/Promo_banner.jpg";
+import techPromoBannerTablet from "@/assets/tech/Promo_banner_tablet.jpg";
+import techPromoBannerMobile from "@/assets/tech/Promo_banner_mobile.jpg";
+import techPromoBanner02 from "@/assets/tech/Promo_banner02.jpg";
+import techPromoBanner02Tablet from "@/assets/tech/Promo_banner02_tablet.jpg";
+import techPromoBanner02Mobile from "@/assets/tech/Promo_banner02_mobile.jpg";
+import techMiddleBanner from "@/assets/tech/middle_banner.jpg";
+import techMiddleBannerTablet from "@/assets/tech/middle_banner_tablet.jpg";
+import techMiddleBannerMobile from "@/assets/tech/middle_banner_mobile.jpg";
+import techSmallBanner01 from "@/assets/tech/Small_banner01.jpg";
+import techSmallBanner02 from "@/assets/tech/Small_banner02.jpg";
+import techSmallBanner03 from "@/assets/tech/Small_banner03.jpg";
+import techSmallBanner04 from "@/assets/tech/Small_banner04.jpg";
+import techSmallBanner05 from "@/assets/tech/Small_banner05.jpg";
+import techSmallBanner06 from "@/assets/tech/Small_banner06.jpg";
+import techSmallBanner07 from "@/assets/tech/Small_banner07.jpg";
+import techSmallBanner08 from "@/assets/tech/Small_banner08.jpg";
+import techSmallBanner09 from "@/assets/tech/Small_banner09.jpg";
+import techSmallBanner10 from "@/assets/tech/Small_banner10.jpg";
+
 export interface PromoBanner {
   desktop: string;
   tablet: string;
@@ -411,6 +432,86 @@ export const categoryBannersConfig: Record<string, CategoryBannersConfig> = {
       },
     ],
   },
-  // tech: {} - Adicionar quando tiver as imagens em src/assets/tech/
+  tech: {
+    categorySlug: 'brasil-tech',
+    categoryName: 'Tech',
+    promoBanners: [
+      {
+        desktop: techPromoBanner,
+        tablet: techPromoBannerTablet,
+        mobile: techPromoBannerMobile,
+        link: '#',
+        bannerId: 'promo-01',
+      },
+      {
+        desktop: techPromoBanner02,
+        tablet: techPromoBanner02Tablet,
+        mobile: techPromoBanner02Mobile,
+        link: '#',
+        bannerId: 'promo-02',
+      },
+    ],
+    middleBanners: [
+      {
+        desktop: techMiddleBanner,
+        tablet: techMiddleBannerTablet,
+        mobile: techMiddleBannerMobile,
+        link: '#',
+        bannerId: 'middle',
+      },
+    ],
+    smallBanners: [
+      {
+        image: techSmallBanner01,
+        link: '#',
+        bannerId: 'small-01',
+      },
+      {
+        image: techSmallBanner02,
+        link: '#',
+        bannerId: 'small-02',
+      },
+      {
+        image: techSmallBanner03,
+        link: '#',
+        bannerId: 'small-03',
+      },
+      {
+        image: techSmallBanner04,
+        link: '#',
+        bannerId: 'small-04',
+      },
+      {
+        image: techSmallBanner05,
+        link: '#',
+        bannerId: 'small-05',
+      },
+      {
+        image: techSmallBanner06,
+        link: '#',
+        bannerId: 'small-06',
+      },
+      {
+        image: techSmallBanner07,
+        link: '#',
+        bannerId: 'small-07',
+      },
+      {
+        image: techSmallBanner08,
+        link: '#',
+        bannerId: 'small-08',
+      },
+      {
+        image: techSmallBanner09,
+        link: '#',
+        bannerId: 'small-09',
+      },
+      {
+        image: techSmallBanner10,
+        link: '#',
+        bannerId: 'small-10',
+      },
+    ],
+  },
   // kids: {} - Adicionar quando tiver as imagens
 };
