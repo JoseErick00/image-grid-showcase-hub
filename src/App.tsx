@@ -48,6 +48,7 @@ import BrasilIncriveisSelIncriveis04 from "./pages/campaigns/BrasilIncriveisSelI
 import BrasilIncriveisSelCalcadosFemininos from "./pages/campaigns/BrasilIncriveisSelCalcadosFemininos";
 import BrasilIncriveisSelCalcadosMasculinos from "./pages/campaigns/BrasilIncriveisSelCalcadosMasculinos";
 import BrasilTechSelFonesOuvido from "./pages/campaigns/BrasilTechSelFonesOuvido";
+import BrasilTechSelTradutores from "./pages/campaigns/BrasilTechSelTradutores";
 import DynamicCampaignPage from "./pages/campaigns/DynamicCampaignPage";
 import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
 import StorePage from "./pages/lojas/StorePage";
@@ -84,6 +85,7 @@ const App = () => (
             <Route path="brasil/incriveis" element={<BrasilIncriveis />} />
             <Route path="brasil/tech" element={<BrasilTech />} />
             <Route path="brasil/tech/sel-fones-ouvido" element={<BrasilTechSelFonesOuvido />} />
+            <Route path="brasil/tech/sel-tradutores" element={<BrasilTechSelTradutores />} />
             <Route path="brasil/kids" element={<BrasilKids />} />
             <Route path="brasil/sobre" element={<AboutBrasil />} />
             <Route path="brasil/contato" element={<ContatoBrasil />} />
