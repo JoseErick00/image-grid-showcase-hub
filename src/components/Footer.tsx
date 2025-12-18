@@ -27,8 +27,8 @@ const Footer = () => {
     { name: "Incríveis", href: "/brasil/incriveis" },
     { name: "Tecnologia", href: "/brasil/tech" },
     { name: "Brinquedos", href: "/brasil/kids" },
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Sobre Nós", href: "/brasil/sobre" },
+    { name: "Contato", href: "/brasil/contato" },
   ];
 
   const currentFooterLinks = isBrasilPage ? brasilFooterLinks : footerLinks;
