@@ -17,16 +17,16 @@ import imgProduto from '@/assets/premiacao/img_1produto.jpg';
 import imgApp from '@/assets/premiacao/img_10app.jpg';
 
 // Import section profile images - desktop
-import perfilColegasDesktop from '@/assets/premiacao/perfis_colegas.jpg';
-import perfilAmigosDesktop from '@/assets/premiacao/perfis_amigos.jpg';
-import perfilFamiliaDesktop from '@/assets/premiacao/perfis_familia.jpg';
-import perfilSociosDesktop from '@/assets/premiacao/perfis_socios.jpg';
+import perfilColegasDesktop from '@/assets/premiacao/perfil-colegas-desktop.jpg';
+import perfilAmigosDesktop from '@/assets/premiacao/perfil-amigos-desktop.jpg';
+import perfilFamiliaDesktop from '@/assets/premiacao/perfil-familia-desktop.jpg';
+import perfilSociosDesktop from '@/assets/premiacao/perfil-socios-desktop.jpg';
 
 // Import section profile images - mobile
-import perfilColegasMobile from '@/assets/premiacao/perfis_colegas_mobile.jpg';
-import perfilAmigosMobile from '@/assets/premiacao/perfis_amigos_mobile.jpg';
-import perfilFamiliaMobile from '@/assets/premiacao/perfis_familia_mobile.jpg';
-import perfilSociosMobile from '@/assets/premiacao/perfis_socios_mobile.jpg';
+import perfilColegasMobile from '@/assets/premiacao/perfil-colegas-mobile.jpg';
+import perfilAmigosMobile from '@/assets/premiacao/perfil-amigos-mobile.jpg';
+import perfilFamiliaMobile from '@/assets/premiacao/perfil-familia-mobile.jpg';
+import perfilSociosMobile from '@/assets/premiacao/perfil-socios-mobile.jpg';
 
 const sectionImages: Record<string, { desktop: string; mobile: string }> = {
   'colegas': { desktop: perfilColegasDesktop, mobile: perfilColegasMobile },
