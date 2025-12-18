@@ -2,6 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -470,7 +471,14 @@ const Header = () => {
                             style={page.color ? { backgroundColor: page.color } : undefined}
                             onClick={() => setLojasDropdownOpen(false)}
                           >
-                            {page.name}
+                            {page.name === "Premiação iNeed" ? (
+                              <span className="flex items-center gap-2">
+                                <img src={premiacaoCoinIcon} alt="" className="w-5 h-5" />
+                                {page.name}
+                              </span>
+                            ) : (
+                              page.name
+                            )}
                           </Link>
                         ))}
                       </div>
@@ -810,7 +818,14 @@ const Header = () => {
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            {page.name}
+                            {page.name === "Premiação iNeed" ? (
+                              <span className="flex items-center gap-2">
+                                <img src={premiacaoCoinIcon} alt="" className="w-5 h-5" />
+                                {page.name}
+                              </span>
+                            ) : (
+                              page.name
+                            )}
                           </Link>
                         ))}
                       </div>
