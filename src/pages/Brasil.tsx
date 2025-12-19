@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import TrustBadges from "@/components/TrustBadges";
+import MailchimpSubscription from "@/components/MailchimpSubscription";
 
 // Import banner images
 import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
@@ -176,6 +177,11 @@ const Brasil = () => {
             </a>
           ))}
         </div>
+
+        {/* Category Label */}
+        <h2 className="font-omne-medium text-xl md:text-2xl text-foreground mt-10">
+          Encontre por categoria:
+        </h2>
       </div>
 
       {/* Category Grid Menu - Now AFTER title */}
@@ -233,6 +239,9 @@ const Brasil = () => {
 
       {/* Trust Badges */}
       <TrustBadges />
+
+      {/* Mailchimp Subscription */}
+      <MailchimpSubscription />
 
       {/* Browse Message */}
       <div className="text-center py-8">
