@@ -1,5 +1,16 @@
-import CategoryGrid from "@/components/CategoryGrid";
+import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
+import TrustBadges from "@/components/TrustBadges";
+
+// Import banner images
+import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
+import bannerMobile from "@/assets/brasil/banner-mobile.jpg";
+
+// Import platform logos
+import logoShopee from "@/assets/brasil/logo-shopee.png";
+import logoAmazon from "@/assets/brasil/logo-amazon.png";
+import logoAliexpress from "@/assets/brasil/logo-aliexpress.png";
+import logoAlibaba from "@/assets/brasil/logo-alibaba.png";
 
 const Brasil = () => {
   const isMobile = useIsMobile();
@@ -32,6 +43,54 @@ const Brasil = () => {
     }
   };
 
+  // Platform logos data
+  const platformLogos = [
+    { src: logoShopee, alt: "Shopee", href: "https://shopee.com.br" },
+    { src: logoAmazon, alt: "Amazon", href: "https://amazon.com.br" },
+    { src: logoAliexpress, alt: "AliExpress", href: "https://aliexpress.com" },
+    { src: logoAlibaba, alt: "Alibaba", href: "https://alibaba.com" },
+  ];
+
+  // Category data with links
+  const categories = [
+    { 
+      image: "/assets/categoria-casa.jpg", 
+      alt: "Casa", 
+      link: "/brasil/casa",
+      description: "A vida inteligente começa em casa."
+    },
+    { 
+      image: "/assets/categoria-esportes.jpg", 
+      alt: "Esportes", 
+      link: "/brasil/esportes",
+      description: "Gadgets legais. Movimentos mais inteligentes."
+    },
+    { 
+      image: "/assets/categoria-saude.jpg", 
+      alt: "Saúde", 
+      link: "/brasil/saude",
+      description: "Autocuidado mais inteligente."
+    },
+    { 
+      image: "/assets/categoria-incriveis.jpg", 
+      alt: "Incríveis", 
+      link: "/brasil/incriveis",
+      description: "De \"O que é isso?\" para \"Eu preciso disso\"."
+    },
+    { 
+      image: "/assets/categoria-tech.jpg", 
+      alt: "Tech", 
+      link: "/brasil/tech",
+      description: "Sua dose diária de tecnologia de ponta."
+    },
+    { 
+      image: "/assets/categoria-brinquedos.jpg", 
+      alt: "Brinquedos", 
+      link: "/brasil/kids",
+      description: "Brinquedos legais, achados inteligentes, diversão sem fim."
+    },
+  ];
+
   // Brasil products placeholder - same structure as other category pages
   const brasilProducts = [
     {
@@ -62,121 +121,88 @@ const Brasil = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Main Banner */}
       <div 
         className="w-full h-[400px] flex items-center justify-center"
         style={{
-          backgroundColor: '#d01e23', // You can change this to match Brasil theme colors
+          backgroundColor: '#057c31',
         }}
       >
         {/* Desktop banner */}
         <img 
-          src="/brazil-banner-desktop.jpg"
+          src={bannerDesktop}
           alt="Brasil Products Banner"
           className="hidden lg:block max-h-full object-contain"
           style={{ width: '1200px' }}
         />
         {/* Tablet banner */}
         <img 
-          src="/brazil-banner-desktop.jpg"
+          src={bannerDesktop}
           alt="Brasil Products Banner"
           className="hidden md:block lg:hidden w-full h-full object-cover"
         />
         {/* Mobile banner */}
         <img 
-          src={isMobile ? "/brazil-banner-mobile.jpg" : "/brazil-banner-desktop.jpg"}
+          src={isMobile ? bannerMobile : bannerDesktop}
           alt="Brasil Products Banner Mobile"
           className="md:hidden w-full h-full object-cover"
         />
       </div>
 
-      {/* Category Grid Menu */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Casa */}
-          <div className="text-center">
-            <img 
-              src="/assets/categoria-casa.jpg" 
-              alt="Casa" 
-              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
-              A vida inteligente começa em casa.
-            </p>
-          </div>
+      {/* Title and Subtitle - Now BEFORE categories */}
+      <div className="text-center py-12">
+        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[80%] mx-auto">
+          Encontre os achados mais bacanas da internet!
+        </h1>
+        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[80%] mx-auto px-4">
+          Links seguros e curados para comprar sem preocupações!
+        </p>
 
-          {/* Esportes */}
-          <div className="text-center">
-            <img 
-              src="/assets/categoria-esportes.jpg" 
-              alt="Esportes" 
-              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
-              Gadgets legais. Movimentos mais inteligentes.
-            </p>
-          </div>
-
-          {/* Saude */}
-          <div className="text-center">
-            <img 
-              src="/assets/categoria-saude.jpg" 
-              alt="Saúde" 
-              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
-              Autocuidado mais inteligente.
-            </p>
-          </div>
-
-          {/* Incriveis */}
-          <div className="text-center">
-            <img 
-              src="/assets/categoria-incriveis.jpg" 
-              alt="Incríveis" 
-              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
-              De "O que é isso?" para "Eu preciso disso".
-            </p>
-          </div>
-
-          {/* Tech */}
-          <div className="text-center">
-            <img 
-              src="/assets/categoria-tech.jpg" 
-              alt="Tech" 
-              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
-              Sua dose diária de tecnologia de ponta.
-            </p>
-          </div>
-
-          {/* Brinquedos */}
-          <div className="text-center">
-            <img 
-              src="/assets/categoria-brinquedos.jpg" 
-              alt="Brinquedos" 
-              className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-            />
-            <p className="font-omne-regular text-sm text-muted-foreground mt-2">
-              Brinquedos legais, achados inteligentes, diversão sem fim.
-            </p>
-          </div>
+        {/* Platform Logos */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto mt-8 px-4">
+          {platformLogos.map((logo, index) => (
+            <a
+              key={index}
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center p-4 rounded-lg hover:opacity-80 transition-opacity"
+            >
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                className="h-8 md:h-10 object-contain"
+              />
+            </a>
+          ))}
         </div>
       </div>
 
-      {/* Title and Subtitle */}
-      <div className="text-center py-12">
-        <h1 className="font-omne-medium text-2xl md:text-5xl text-foreground mb-6 max-w-[80%] mx-auto">
-          Produtos do Brasil
-        </h1>
-        <p className="font-omne-regular text-base md:text-lg text-muted-foreground max-w-[80%] mx-auto px-4">
-          Seleção incrível de produtos do Brasil!
-        </p>
+      {/* Category Grid Menu - Now AFTER title */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categories.map((category, index) => (
+            <Link 
+              key={index}
+              to={category.link}
+              className="text-center block"
+            >
+              <img 
+                src={category.image} 
+                alt={category.alt} 
+                className="w-full aspect-[18/10] object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              />
+              <p className="font-omne-regular text-sm text-muted-foreground mt-2">
+                {category.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </div>
 
-        {/* Social Media Icons */}
-        <div className="flex justify-center items-center gap-8 mt-8">
+      {/* Social Media Icons */}
+      <div className="text-center py-8">
+        <div className="flex justify-center items-center gap-8">
           <a 
             href="https://www.instagram.com/ineed_stores" 
             target="_blank" 
@@ -203,13 +229,16 @@ const Brasil = () => {
             <p className="font-omne-regular text-sm text-muted-foreground">Envie para um amigo!</p>
           </button>
         </div>
+      </div>
 
-        {/* Browse Message */}
-        <div className="text-center mt-8">
-          <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
-            Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
-          </p>
-        </div>
+      {/* Trust Badges */}
+      <TrustBadges />
+
+      {/* Browse Message */}
+      <div className="text-center py-8">
+        <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
+          Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
+        </p>
       </div>
 
       {/* Products Grid */}
