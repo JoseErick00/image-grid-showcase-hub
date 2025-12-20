@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import TrustBadges from "@/components/TrustBadges";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import GamificationPromoBanner from "@/components/GamificationPromoBanner";
 
 // Import banner images
 import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
@@ -242,6 +243,11 @@ const Brasil = () => {
 
       {/* Mailchimp Subscription */}
       <MailchimpSubscription />
+
+      {/* Gamification Promo Banner */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <GamificationPromoBanner bannerNumber="01" />
+      </div>
 
       {/* Browse Message */}
       <div className="text-center py-8">
