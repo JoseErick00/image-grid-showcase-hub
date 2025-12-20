@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import LikeButton from "@/components/ui/LikeButton";
-import ShareButton from "@/components/ui/ShareButton";
 
 // Import banner images for each banner number
 import banner01Desktop from "@/assets/gamification/banner_01_desktop.jpg";
@@ -31,47 +29,19 @@ const GamificationPromoBanner = ({ bannerNumber, className = "" }: GamificationP
     return null;
   }
 
-  const productId = `gamification-banner-${bannerNumber}`;
-  const shareData = {
-    title: "Compartilhe o App para ganhar +mais!",
-    text: "Confira como ganhar prêmios compartilhando o iNeed Stores!",
-    url: `${window.location.origin}/brasil/premiacao`,
-  };
-
   return (
-    <div className={`relative w-full group ${className}`}>
+    <div className={`relative w-full ${className}`}>
       <Link to="/brasil/premiacao" className="block overflow-hidden rounded-lg">
-        {/* Desktop Image */}
         <picture>
           <source media="(min-width: 1024px)" srcSet={images.desktop} />
           <source media="(min-width: 768px)" srcSet={images.tablet} />
           <img
             src={images.mobile}
             alt="Compartilhe o App para ganhar +mais!"
-            className="w-full h-auto object-cover rounded-lg"
+            className="w-full h-auto object-cover rounded-lg hover:scale-105 transition-transform duration-300"
           />
         </picture>
       </Link>
-
-      {/* Like and Share buttons overlay */}
-      <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
-        <LikeButton productId={productId} compact />
-        <ShareButton
-          productId={productId}
-          shareData={shareData}
-          variant="compact"
-        />
-      </div>
-
-      {/* Mobile: Always visible buttons */}
-      <div className="absolute bottom-4 right-4 flex gap-2 md:hidden">
-        <LikeButton productId={productId} compact />
-        <ShareButton
-          productId={productId}
-          shareData={shareData}
-          variant="compact"
-        />
-      </div>
     </div>
   );
 };
