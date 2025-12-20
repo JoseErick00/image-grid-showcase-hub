@@ -40,7 +40,7 @@ const GamificationPromoBanner = ({ bannerNumber, className = "" }: GamificationP
 
   return (
     <div className={`relative w-full group ${className}`}>
-      <Link to="/brasil/premiacao" className="block">
+      <Link to="/brasil/premiacao" className="block overflow-hidden rounded-lg">
         {/* Desktop Image */}
         <picture>
           <source media="(min-width: 1024px)" srcSet={images.desktop} />
@@ -48,7 +48,7 @@ const GamificationPromoBanner = ({ bannerNumber, className = "" }: GamificationP
           <img
             src={images.mobile}
             alt="Compartilhe o App para ganhar +mais!"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover rounded-lg"
           />
         </picture>
       </Link>
