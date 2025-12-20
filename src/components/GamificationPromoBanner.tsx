@@ -31,7 +31,7 @@ const GamificationPromoBanner = ({ bannerNumber, className = "" }: GamificationP
 
   return (
     <div className={`relative w-full ${className}`}>
-      <Link to="/brasil/premiacao" className="block overflow-hidden rounded-lg">
+      <Link to="/brasil/premios" className="block overflow-hidden rounded-lg">
         <picture>
           <source media="(min-width: 1024px)" srcSet={images.desktop} />
           <source media="(min-width: 768px)" srcSet={images.tablet} />
