@@ -3,6 +3,7 @@ import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 export const selQuartoData: CampaignConfig = {
   campaignSlug: "sel-quarto",
   category: "casa",
+  gamificationBanner: "08",
   pageTitle: "Seleção para o Quarto",
   pageSubtitle: "Descubra os melhores achados para deixar seu quarto ainda mais aconchegante!",
   

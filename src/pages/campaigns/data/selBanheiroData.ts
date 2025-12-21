@@ -3,6 +3,7 @@ import { CampaignConfig } from '@/components/campaigns/CampaignTemplate';
 export const selBanheiroData: CampaignConfig = {
   campaignSlug: "sel-banheiro",
   category: "casa",
+  gamificationBanner: "06",
   pageTitle: "Seleção para o Banheiro",
   pageSubtitle: "Encontre produtos incríveis para deixar seu banheiro mais funcional e estiloso!",
   
