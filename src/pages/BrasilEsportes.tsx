@@ -774,7 +774,7 @@ const BrasilEsportes = () => {
 
         <SectionSpacer size="lg" />
         
-        <GamificationPromoBanner bannerNumber="01" />
+        <GamificationPromoBanner bannerNumber="10" />
 
         <SectionSpacer size="lg" />
 
