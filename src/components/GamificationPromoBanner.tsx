@@ -13,6 +13,15 @@ import banner03Mobile from "@/assets/gamification/banner_03_mobile.jpg";
 import banner04Desktop from "@/assets/gamification/banner_04_desktop.jpg";
 import banner04Tablet from "@/assets/gamification/banner_04_tablet.jpg";
 import banner04Mobile from "@/assets/gamification/banner_04_mobile.jpg";
+import banner05Desktop from "@/assets/gamification/banner_05_desktop.jpg";
+import banner05Tablet from "@/assets/gamification/banner_05_tablet.jpg";
+import banner05Mobile from "@/assets/gamification/banner_05_mobile.jpg";
+import banner06Desktop from "@/assets/gamification/banner_06_desktop.jpg";
+import banner06Tablet from "@/assets/gamification/banner_06_tablet.jpg";
+import banner06Mobile from "@/assets/gamification/banner_06_mobile.jpg";
+import banner07Desktop from "@/assets/gamification/banner_07_desktop.jpg";
+import banner07Tablet from "@/assets/gamification/banner_07_tablet.jpg";
+import banner07Mobile from "@/assets/gamification/banner_07_mobile.jpg";
 
 // Banner images mapping - add new banners here
 const bannerImages: Record<string, { desktop: string; tablet: string; mobile: string }> = {
@@ -35,6 +44,21 @@ const bannerImages: Record<string, { desktop: string; tablet: string; mobile: st
     desktop: banner04Desktop,
     tablet: banner04Tablet,
     mobile: banner04Mobile,
+  },
+  "05": {
+    desktop: banner05Desktop,
+    tablet: banner05Tablet,
+    mobile: banner05Mobile,
+  },
+  "06": {
+    desktop: banner06Desktop,
+    tablet: banner06Tablet,
+    mobile: banner06Mobile,
+  },
+  "07": {
+    desktop: banner07Desktop,
+    tablet: banner07Tablet,
+    mobile: banner07Mobile,
   },
 };
 
