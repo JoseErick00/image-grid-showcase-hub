@@ -1,5 +1,7 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import GamificationPromoBanner from "@/components/GamificationPromoBanner";
+import SectionSpacer from "@/components/SectionSpacer";
 import PushPhrase from "@/components/PushPhrase";
 import CategoryPromoBanner from "@/components/CategoryPromoBanner";
 import CategorySmallBanner from "@/components/CategorySmallBanner";
@@ -770,8 +772,14 @@ const BrasilEsportes = () => {
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
 
+        <SectionSpacer size="lg" />
+        
+        <GamificationPromoBanner bannerNumber="01" />
+
+        <SectionSpacer size="lg" />
+
         {/* Small Banner 07 & 08 */}
-        <div className="my-12">
+        <div>
           {/* Desktop: Two columns */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <CategorySmallBanner
