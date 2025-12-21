@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import GamificationPromoBanner from "@/components/GamificationPromoBanner";
 
 const Incredibles = () => {
   const handleShare = async () => {
@@ -372,6 +373,9 @@ const Incredibles = () => {
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
+
+        {/* Gamification Promo Banner */}
+        <GamificationPromoBanner bannerNumber="05" className="my-12" />
 
         {/* Remaining items */}
         <CategoryGrid 

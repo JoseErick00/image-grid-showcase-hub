@@ -1,5 +1,6 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import GamificationPromoBanner from "@/components/GamificationPromoBanner";
 import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
 import CategoryPromoBanner from "@/components/CategoryPromoBanner";
@@ -493,6 +494,9 @@ const BrasilCasa = () => {
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
+
+        {/* Gamification Promo Banner */}
+        <GamificationPromoBanner bannerNumber="06" className="my-12" />
 
         {/* Remaining items */}
         <CategoryGrid 
