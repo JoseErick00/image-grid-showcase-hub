@@ -518,7 +518,7 @@ const BrasilKids = () => {
 
         <SectionSpacer size="lg" />
         
-        <GamificationPromoBanner bannerNumber="03" />
+        <GamificationPromoBanner bannerNumber="09" />
 
         <SectionSpacer size="lg" />
 
