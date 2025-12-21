@@ -1,5 +1,7 @@
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
+import GamificationPromoBanner from "@/components/GamificationPromoBanner";
+import SectionSpacer from "@/components/SectionSpacer";
 import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
 import CategoryPromoBanner from "@/components/CategoryPromoBanner";
@@ -734,6 +736,12 @@ const BrasilTech = () => {
 
         {/* Mailchimp Subscription */}
         <MailchimpSubscription />
+
+        <SectionSpacer size="lg" />
+        
+        <GamificationPromoBanner bannerNumber="02" />
+
+        <SectionSpacer size="lg" />
 
         {/* Items 19-30 */}
         <CategoryGrid 
