@@ -22,6 +22,15 @@ import banner06Mobile from "@/assets/gamification/banner_06_mobile.jpg";
 import banner07Desktop from "@/assets/gamification/banner_07_desktop.jpg";
 import banner07Tablet from "@/assets/gamification/banner_07_tablet.jpg";
 import banner07Mobile from "@/assets/gamification/banner_07_mobile.jpg";
+import banner08Desktop from "@/assets/gamification/banner_08_desktop.jpg";
+import banner08Tablet from "@/assets/gamification/banner_08_tablet.jpg";
+import banner08Mobile from "@/assets/gamification/banner_08_mobile.jpg";
+import banner09Desktop from "@/assets/gamification/banner_09_desktop.jpg";
+import banner09Tablet from "@/assets/gamification/banner_09_tablet.jpg";
+import banner09Mobile from "@/assets/gamification/banner_09_mobile.jpg";
+import banner10Desktop from "@/assets/gamification/banner_10_desktop.jpg";
+import banner10Tablet from "@/assets/gamification/banner_10_tablet.jpg";
+import banner10Mobile from "@/assets/gamification/banner_10_mobile.jpg";
 
 interface BannerImage {
   desktop: string;
@@ -65,6 +74,21 @@ const bannerImages: Record<string, BannerImage> = {
     desktop: banner07Desktop,
     tablet: banner07Tablet,
     mobile: banner07Mobile,
+  },
+  "08": {
+    desktop: banner08Desktop,
+    tablet: banner08Tablet,
+    mobile: banner08Mobile,
+  },
+  "09": {
+    desktop: banner09Desktop,
+    tablet: banner09Tablet,
+    mobile: banner09Mobile,
+  },
+  "10": {
+    desktop: banner10Desktop,
+    tablet: banner10Tablet,
+    mobile: banner10Mobile,
   },
 };
 
