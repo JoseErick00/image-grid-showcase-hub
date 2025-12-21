@@ -4,6 +4,15 @@ import { Link } from "react-router-dom";
 import banner01Desktop from "@/assets/gamification/banner_01_desktop.jpg";
 import banner01Tablet from "@/assets/gamification/banner_01_tablet.jpg";
 import banner01Mobile from "@/assets/gamification/banner_01_mobile.jpg";
+import banner02Desktop from "@/assets/gamification/banner_02_desktop.jpg";
+import banner02Tablet from "@/assets/gamification/banner_02_tablet.jpg";
+import banner02Mobile from "@/assets/gamification/banner_02_mobile.jpg";
+import banner03Desktop from "@/assets/gamification/banner_03_desktop.jpg";
+import banner03Tablet from "@/assets/gamification/banner_03_tablet.jpg";
+import banner03Mobile from "@/assets/gamification/banner_03_mobile.jpg";
+import banner04Desktop from "@/assets/gamification/banner_04_desktop.jpg";
+import banner04Tablet from "@/assets/gamification/banner_04_tablet.jpg";
+import banner04Mobile from "@/assets/gamification/banner_04_mobile.jpg";
 
 // Banner images mapping - add new banners here
 const bannerImages: Record<string, { desktop: string; tablet: string; mobile: string }> = {
@@ -12,8 +21,21 @@ const bannerImages: Record<string, { desktop: string; tablet: string; mobile: st
     tablet: banner01Tablet,
     mobile: banner01Mobile,
   },
-  // Future banners will be added here:
-  // "02": { desktop: banner02Desktop, tablet: banner02Tablet, mobile: banner02Mobile },
+  "02": {
+    desktop: banner02Desktop,
+    tablet: banner02Tablet,
+    mobile: banner02Mobile,
+  },
+  "03": {
+    desktop: banner03Desktop,
+    tablet: banner03Tablet,
+    mobile: banner03Mobile,
+  },
+  "04": {
+    desktop: banner04Desktop,
+    tablet: banner04Tablet,
+    mobile: banner04Mobile,
+  },
 };
 
 interface GamificationPromoBannerProps {
