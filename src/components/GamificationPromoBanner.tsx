@@ -106,7 +106,7 @@ function GamificationPromoBanner({ bannerNumber, className = "" }: GamificationP
   }
 
   return (
-    <div className={`relative w-full ${className}`}>
+    <div className={`relative w-full max-w-[1200px] mx-auto ${className}`}>
       <Link to="/brasil/premios" className="block overflow-hidden rounded-lg">
         <picture>
           <source media="(min-width: 1024px)" srcSet={images.desktop} />
