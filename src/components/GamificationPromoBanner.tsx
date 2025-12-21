@@ -23,8 +23,14 @@ import banner07Desktop from "@/assets/gamification/banner_07_desktop.jpg";
 import banner07Tablet from "@/assets/gamification/banner_07_tablet.jpg";
 import banner07Mobile from "@/assets/gamification/banner_07_mobile.jpg";
 
+interface BannerImage {
+  desktop: string;
+  tablet: string;
+  mobile: string;
+}
+
 // Banner images mapping - add new banners here
-const bannerImages: Record<string, { desktop: string; tablet: string; mobile: string }> = {
+const bannerImages: Record<string, BannerImage> = {
   "01": {
     desktop: banner01Desktop,
     tablet: banner01Tablet,
@@ -67,11 +73,11 @@ interface GamificationPromoBannerProps {
   className?: string;
 }
 
-const GamificationPromoBanner = ({ bannerNumber, className = "" }: GamificationPromoBannerProps) => {
+function GamificationPromoBanner({ bannerNumber, className = "" }: GamificationPromoBannerProps) {
   const images = bannerImages[bannerNumber];
   
   if (!images) {
-    console.warn(`GamificationPromoBanner: Banner number "${bannerNumber}" not found`);
+    console.warn("GamificationPromoBanner: Banner number not found:", bannerNumber);
     return null;
   }
 
@@ -83,13 +89,13 @@ const GamificationPromoBanner = ({ bannerNumber, className = "" }: GamificationP
           <source media="(min-width: 768px)" srcSet={images.tablet} />
           <img
             src={images.mobile}
-            alt="Compartilhe o App para ganhar +mais!"
+            alt="Compartilhe o App para ganhar mais!"
             className="w-full h-auto object-cover rounded-lg hover:scale-105 transition-transform duration-300"
           />
         </picture>
       </Link>
     </div>
   );
-};
+}
 
 export default GamificationPromoBanner;
