@@ -9,6 +9,8 @@ import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { type Platform } from '@/utils/platformLogos';
 import CategoryBannerGrid from './CategoryBannerGrid';
+import GamificationPromoBanner from '@/components/GamificationPromoBanner';
+import SectionSpacer from '@/components/SectionSpacer';
 
 interface NavButton {
   label: string;
@@ -58,6 +60,7 @@ export interface CampaignConfig {
     ogImage?: string;
     structuredData?: object;
   };
+  gamificationBanner?: string;
 }
 
 interface CampaignTemplateProps {
@@ -183,6 +186,14 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
               products={section.products}
               campaignSlug={config.campaignSlug}
             />
+            
+            {/* Gamification Banner - After Section 1 */}
+            {index === 0 && config.gamificationBanner && (
+              <>
+                <SectionSpacer size="lg" />
+                <GamificationPromoBanner bannerNumber={config.gamificationBanner} />
+              </>
+            )}
           </div>
         ))}
 
