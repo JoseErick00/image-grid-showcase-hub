@@ -50,6 +50,7 @@ export const selAquaticosData: CampaignConfig = {
     { label: "Pranchas e +", targetId: "section2" },
     { label: "Vai + fundo!", targetId: "section3" },
   ],
+  gamificationBanner: "10",
   sections: [
     {
       id: "section1",

@@ -50,6 +50,7 @@ export const selTimeCampoData: CampaignConfig = {
     { label: "Queremos!", targetId: "section2" },
     { label: "+ Novidades", targetId: "section3" },
   ],
+  gamificationBanner: "10",
   sections: [
     {
       id: "section1",
