@@ -50,6 +50,7 @@ export const selAcademiaData: CampaignConfig = {
     { label: "Acessórios", targetId: "section2" },
     { label: "+ Achados", targetId: "section3" },
   ],
+  gamificationBanner: "10",
   sections: [
     {
       id: "section1",
