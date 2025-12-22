@@ -195,6 +195,16 @@ const Premiacao = () => {
           </div>
         ))}
 
+        {/* Prize Rules Box */}
+        <div className="max-w-3xl mx-auto my-12 px-4">
+          <div className="bg-white rounded-lg border border-gray-200 p-6 md:p-8 shadow-sm">
+            <ol className="list-decimal list-inside space-y-4 font-omne-regular text-base md:text-lg text-muted-foreground">
+              <li>A premiação só será válida se você tiver no mínimo 20 amigos cadastrados com seu [Código do Amigo].</li>
+              <li>Os produtos serão entregues no prazo mínimo de 1 mês a partir da data de solicitação do prêmio.</li>
+            </ol>
+          </div>
+        </div>
+
         {/* Platform Register Section */}
         <PlatformRegister />
 

@@ -1,6 +1,7 @@
 import CampaignProductCard from '@/components/campaigns/CampaignProductCard';
 import { type Platform } from '@/utils/platformLogos';
 import { type PremiacaoProduct } from '@/pages/campaigns/data/premiacaoData';
+import { Button } from '@/components/ui/button';
 import {
   Carousel,
   CarouselContent,
@@ -72,9 +73,19 @@ const PremiacaoSection = ({
       </div>
 
       {/* Section Description */}
-      <p className="font-omne-regular text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-8 px-4">
+      <p className="font-omne-regular text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-4 px-4">
         {description}
       </p>
+
+      {/* Inactive Button */}
+      <div className="flex justify-center mb-8">
+        <Button 
+          disabled 
+          className="bg-gray-400 text-white cursor-not-allowed hover:bg-gray-400"
+        >
+          Solicitar prêmio!
+        </Button>
+      </div>
 
       {/* Product Carousel - 3 per slide desktop, 2 per slide mobile */}
       <div className="px-4 md:px-12">
