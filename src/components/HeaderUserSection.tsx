@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useGamification } from "@/contexts/GamificationContext";
 import { Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 
 // Level icons
@@ -60,13 +61,15 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
         <p className={`text-muted-foreground ${variant === 'desktop' ? 'text-xs' : 'text-sm'}`}>
           Entre para ganhar nossos produtos.
         </p>
-        <Link
-          to="/auth"
-          onClick={handleLoginClick}
-          className="bg-brand-light text-brand-dark font-omne-medium px-4 py-1.5 rounded-md text-sm hover:bg-brand-light/90 transition-colors"
+        <Button
+          variant="outline"
+          className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium"
+          asChild
         >
-          Comece a ganhar!
-        </Link>
+          <Link to="/auth" onClick={handleLoginClick}>
+            Comece a ganhar!
+          </Link>
+        </Button>
       </div>
     );
   }
