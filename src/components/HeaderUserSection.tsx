@@ -55,8 +55,8 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   if (!isAuthenticated || !user) {
     return (
       <div className={`${variant === 'desktop' 
-        ? 'flex flex-col items-end gap-1' 
-        : 'border-t border-border p-4 mt-4'}`}
+        ? 'flex flex-col items-end gap-1 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm' 
+        : 'border-t border-border p-4 mt-4 bg-white/90'}`}
       >
         <p className={`text-muted-foreground ${variant === 'desktop' ? 'text-xs' : 'text-sm'}`}>
           Entre para ganhar nossos produtos.
@@ -128,7 +128,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   // Desktop variant
   return (
-    <div className="flex flex-col items-end gap-0.5">
+    <div className="flex flex-col items-end gap-0.5 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm">
       {/* Email + trocar */}
       <div className="flex items-center gap-2">
         <span className="text-xs text-muted-foreground truncate max-w-[150px]">
