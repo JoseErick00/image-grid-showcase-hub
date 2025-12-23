@@ -17,3 +17,6 @@ verify_jwt = false
 
 [functions.check-email-exists]
 verify_jwt = false
+
+[functions.instant-login]
+verify_jwt = false
