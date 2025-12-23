@@ -132,13 +132,26 @@ export function GamificationProvider({ children }: { children: ReactNode }) {
 
   const processPendingReferral = async (userId: string) => {
     const pendingCode = localStorage.getItem('pending_referral_code');
-    if (pendingCode) {
+    if (!pendingCode) return;
+
+    // Fetch user gamification to check if already referred
+    const { data: userGamification } = await supabase
+      .from("user_gamification")
+      .select("referred_by")
+      .eq("user_id", userId)
+      .maybeSingle();
+
+    // If user already has a referrer, silently clear the pending code
+    if (userGamification?.referred_by) {
       localStorage.removeItem('pending_referral_code');
-      // Small delay to ensure gamification profile is created
-      setTimeout(async () => {
-        await processReferral(pendingCode);
-      }, 2000);
+      return;
     }
+
+    localStorage.removeItem('pending_referral_code');
+    // Small delay to ensure gamification profile is created
+    setTimeout(async () => {
+      await processReferral(pendingCode);
+    }, 2000);
   };
 
   const refreshGamification = async () => {
