@@ -55,15 +55,16 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   if (!isAuthenticated || !user) {
     return (
       <div className={`${variant === 'desktop' 
-        ? 'flex flex-col items-end gap-1 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm' 
-        : 'border-t border-border p-4 mt-4 bg-white/90'}`}
+        ? 'flex flex-col items-center gap-1 rounded-lg px-4 py-2 border' 
+        : 'border-t border-border p-4 mt-4'}`}
+        style={variant === 'desktop' ? { backgroundColor: '#434343', borderColor: '#767676' } : undefined}
       >
-        <p className={`text-muted-foreground ${variant === 'desktop' ? 'text-xs' : 'text-sm'}`}>
+        <p className={`${variant === 'desktop' ? 'text-xs text-white' : 'text-sm text-muted-foreground'}`}>
           Entre para ganhar nossos produtos.
         </p>
         <Button
           variant="outline"
-          className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium"
+          className="border-white text-white hover:bg-white hover:text-[#434343] font-omne-medium"
           asChild
         >
           <Link to="/auth" onClick={handleLoginClick}>
