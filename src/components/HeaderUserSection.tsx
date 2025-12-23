@@ -129,32 +129,32 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   // Desktop variant
   return (
-    <div className="flex flex-col items-end gap-0.5 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm">
+    <div className="flex flex-col items-center gap-0.5 bg-[#434343] rounded-lg px-4 py-2 border border-[#767676]">
       {/* Email + trocar */}
-      <div className="flex items-center gap-2">
-        <span className="text-xs text-muted-foreground truncate max-w-[150px]">
+      <div className="flex items-center justify-center gap-2">
+        <span className="text-xs text-white/80 truncate max-w-[150px]">
           {userEmail}
         </span>
         <button
           onClick={handleLogout}
-          className="text-xs text-brand-light hover:underline"
+          className="text-xs text-white/60 hover:text-white hover:underline"
         >
           trocar
         </button>
       </div>
 
       {/* Stats row */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center justify-center gap-3">
         {/* Coins */}
         <div className="flex items-center gap-1">
           <img src={premiacaoCoinIcon} alt="moedas" className="w-4 h-4" />
-          <span className="text-sm font-omne-medium text-foreground">{totalCoins}</span>
+          <span className="text-sm font-omne-medium text-white">{totalCoins}</span>
         </div>
 
         {/* Referrals */}
         <div className="flex items-center gap-1">
-          <Users size={14} className="text-muted-foreground" />
-          <span className="text-sm text-foreground">{totalReferrals}</span>
+          <Users size={14} className="text-white/70" />
+          <span className="text-sm text-white">{totalReferrals}</span>
         </div>
 
         {/* Level */}
@@ -164,7 +164,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
             alt={LEVEL_LABELS[currentLevel]} 
             className="w-4 h-4"
           />
-          <span className="text-xs font-omne-medium text-foreground">
+          <span className="text-xs font-omne-medium text-white">
             {LEVEL_LABELS[currentLevel]}
           </span>
         </div>
