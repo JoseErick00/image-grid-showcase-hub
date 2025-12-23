@@ -3,6 +3,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import TrustBadges from "@/components/TrustBadges";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
+import CategoryBannerGrid from "@/components/campaigns/CategoryBannerGrid";
 
 // Import banner images
 import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
@@ -93,33 +94,6 @@ const Brasil = () => {
     },
   ];
 
-  // Brasil products placeholder - same structure as other category pages
-  const brasilProducts = [
-    {
-      id: "brasil-1",
-      title: "Product 1",
-      image: "/lovable-uploads/ba07690d-d721-48bd-8feb-dc524c00fa06.png",
-      link: "#",
-    },
-    {
-      id: "brasil-2",
-      title: "Product 2", 
-      image: "/lovable-uploads/83c147a8-9409-4947-b562-f8762431c5ac.png",
-      link: "#",
-    },
-    {
-      id: "brasil-3",
-      title: "Product 3",
-      image: "/lovable-uploads/d9a41e8b-bdcd-4b51-86a1-182c966f3cdb.png",
-      link: "#",
-    },
-    {
-      id: "brasil-4",
-      title: "Product 4",
-      image: "/lovable-uploads/c7f054b9-fb50-4d67-9a13-52d91f49a4b0.png",
-      link: "#",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -256,28 +230,9 @@ const Brasil = () => {
         </p>
       </div>
 
-      {/* Products Grid */}
+      {/* Category Banners Grid - Incriveis */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {brasilProducts.map((product) => (
-            <div key={product.id} className="text-center">
-              <img 
-                src={product.image} 
-                alt={product.title} 
-                className="w-full aspect-[3/4] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-              />
-              <h3 className="font-omne-regular text-lg text-foreground mt-4 mb-2">
-                {product.title}
-              </h3>
-              <button 
-                onClick={() => window.open(product.link, '_blank')}
-                className="px-6 py-2 bg-green-600 text-white font-omne-regular text-sm rounded-lg hover:bg-green-700 transition-colors duration-300"
-              >
-                Buy Now
-              </button>
-            </div>
-          ))}
-        </div>
+        <CategoryBannerGrid category="incriveis" />
       </div>
 
       {/* Bottom Social Section */}
