@@ -6,23 +6,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Users, Mail, Lock } from "lucide-react";
+import { Loader2, Users, Mail } from "lucide-react";
 import SEO from "@/components/SEO";
 import { z } from "zod";
 import loginStars from "@/assets/login-stars.png";
 
 const emailSchema = z.string().email("Email inválido");
-const passwordSchema = z.string().min(6, "Senha deve ter no mínimo 6 caracteres");
 const referralCodeSchema = z.string().max(8, "Código deve ter no máximo 8 caracteres").optional();
 
 export default function Auth() {
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [referralCode, setReferralCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
-  const [errors, setErrors] = useState<{ email?: string; password?: string; referralCode?: string }>({});
+  const [errors, setErrors] = useState<{ email?: string; referralCode?: string }>({});
   
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -54,26 +52,18 @@ export default function Auth() {
     const ref = searchParams.get("ref");
     if (ref) {
       setReferralCode(ref.toUpperCase());
-      setActiveTab("signup"); // Switch to signup if referral code present
+      setActiveTab("signup");
     }
   }, [searchParams]);
 
   const validateForm = (isSignup: boolean): boolean => {
-    const newErrors: { email?: string; password?: string; referralCode?: string } = {};
+    const newErrors: { email?: string; referralCode?: string } = {};
     
     try {
       emailSchema.parse(email);
     } catch (e) {
       if (e instanceof z.ZodError) {
         newErrors.email = e.errors[0].message;
-      }
-    }
-
-    try {
-      passwordSchema.parse(password);
-    } catch (e) {
-      if (e instanceof z.ZodError) {
-        newErrors.password = e.errors[0].message;
       }
     }
 
@@ -99,7 +89,7 @@ export default function Auth() {
 
       if (response.error) {
         console.error("Error checking email:", response.error);
-        return false; // Assume doesn't exist on error, let signup proceed
+        return false;
       }
 
       return response.data?.exists === true;
@@ -107,6 +97,25 @@ export default function Auth() {
       console.error("Error invoking check-email-exists:", error);
       return false;
     }
+  };
+
+  const sendMagicLink = async (includeReferral: boolean = false) => {
+    const redirectUrl = `${window.location.origin}/brasil/premios`;
+    
+    const options: { emailRedirectTo: string; data?: { referral_code_used: string | null } } = {
+      emailRedirectTo: redirectUrl,
+    };
+
+    if (includeReferral) {
+      options.data = { referral_code_used: referralCode || null };
+    }
+
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options,
+    });
+
+    return { error };
   };
 
   const handleSignup = async (e: React.FormEvent) => {
@@ -124,27 +133,20 @@ export default function Auth() {
         toast({
           variant: "destructive",
           title: "E-mail já cadastrado",
-          description: "Este e-mail já possui uma conta. Faça login ou use 'Esqueci a senha'.",
+          description: "Este e-mail já possui uma conta. Faça login na aba 'Entrar'.",
         });
         setActiveTab("login");
-        setPassword("");
         setLoading(false);
         return;
       }
 
-      // Proceed with signup
-      const redirectUrl = `${window.location.origin}/brasil/premios`;
-      
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          emailRedirectTo: redirectUrl,
-          data: {
-            referral_code_used: referralCode || null,
-          }
-        }
-      });
+      // Store referral code for processing after login
+      if (referralCode) {
+        localStorage.setItem('pending_referral_code', referralCode);
+      }
+
+      // Send magic link for new user
+      const { error } = await sendMagicLink(true);
 
       if (error) {
         toast({
@@ -153,15 +155,10 @@ export default function Auth() {
           description: error.message,
         });
       } else {
-        // Store referral code for processing after login
-        if (referralCode) {
-          localStorage.setItem('pending_referral_code', referralCode);
-        }
-        
         setEmailSent(true);
         toast({
-          title: "Cadastro realizado!",
-          description: "Verifique seu email para confirmar a conta.",
+          title: "Email enviado!",
+          description: "Verifique sua caixa de entrada para acessar.",
         });
       }
     } catch (error) {
@@ -183,33 +180,21 @@ export default function Auth() {
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
+      const { error } = await sendMagicLink(false);
 
       if (error) {
-        if (error.message.includes("Invalid login credentials")) {
-          toast({
-            variant: "destructive",
-            title: "Credenciais inválidas",
-            description: "Email ou senha incorretos. Verifique e tente novamente.",
-          });
-        } else if (error.message.includes("Email not confirmed")) {
-          toast({
-            variant: "destructive",
-            title: "Email não confirmado",
-            description: "Por favor, confirme seu email antes de fazer login.",
-          });
-        } else {
-          toast({
-            variant: "destructive",
-            title: "Erro no login",
-            description: error.message,
-          });
-        }
+        toast({
+          variant: "destructive",
+          title: "Erro no login",
+          description: error.message,
+        });
+      } else {
+        setEmailSent(true);
+        toast({
+          title: "Email enviado!",
+          description: "Verifique sua caixa de entrada para acessar.",
+        });
       }
-      // On success, onAuthStateChange will redirect
     } catch (error) {
       toast({
         variant: "destructive",
@@ -221,33 +206,10 @@ export default function Auth() {
     }
   };
 
-  const handleForgotPassword = async () => {
-    if (!email) {
-      toast({
-        variant: "destructive",
-        title: "Email necessário",
-        description: "Digite seu email para recuperar a senha.",
-      });
-      return;
-    }
-
-    try {
-      emailSchema.parse(email);
-    } catch {
-      toast({
-        variant: "destructive",
-        title: "Email inválido",
-        description: "Digite um email válido.",
-      });
-      return;
-    }
-
+  const handleResendEmail = async () => {
     setLoading(true);
-
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/auth/reset-password`,
-      });
+      const { error } = await sendMagicLink(false);
 
       if (error) {
         toast({
@@ -257,16 +219,10 @@ export default function Auth() {
         });
       } else {
         toast({
-          title: "Email enviado!",
-          description: "Verifique sua caixa de entrada para redefinir a senha.",
+          title: "Email reenviado!",
+          description: "Verifique sua caixa de entrada.",
         });
       }
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Erro",
-        description: "Ocorreu um erro inesperado.",
-      });
     } finally {
       setLoading(false);
     }
@@ -278,7 +234,7 @@ export default function Auth() {
       <div className="min-h-screen bg-gradient-to-b from-background to-muted flex items-center justify-center px-4 py-12">
         <SEO
           title="Verifique seu email | iNeed Premiação"
-          description="Um link de confirmação foi enviado para seu email."
+          description="Um link de acesso foi enviado para seu email."
         />
         
         <div className="w-full max-w-md">
@@ -290,18 +246,27 @@ export default function Auth() {
             </h1>
             
             <p className="text-muted-foreground font-omne-regular mb-6">
-              Enviamos um link de confirmação para:
+              Enviamos um link de acesso para:
               <br />
               <strong className="text-foreground">{email}</strong>
             </p>
 
             <div className="space-y-3">
+              <Button
+                variant="outline"
+                className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium"
+                onClick={handleResendEmail}
+                disabled={loading}
+              >
+                {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                Reenviar email
+              </Button>
+              
               <button
                 type="button"
                 onClick={() => {
                   setEmailSent(false);
                   setEmail("");
-                  setPassword("");
                 }}
                 className="text-sm text-muted-foreground hover:text-foreground font-omne-regular"
               >
@@ -329,6 +294,9 @@ export default function Auth() {
             <h1 className="text-2xl font-omne-semibold text-foreground">
               Participe e ganhe prêmios!
             </h1>
+            <p className="text-muted-foreground mt-2 font-omne-regular">
+              Sem necessidade de senha!
+            </p>
           </div>
 
           {/* Tabs */}
@@ -360,25 +328,6 @@ export default function Auth() {
                   )}
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="login-password" className="font-omne-regular flex items-center gap-2">
-                    <Lock size={16} className="text-muted-foreground" />
-                    Senha
-                  </Label>
-                  <Input
-                    id="login-password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="••••••"
-                    className={errors.password ? "border-destructive" : ""}
-                    required
-                  />
-                  {errors.password && (
-                    <p className="text-sm text-destructive">{errors.password}</p>
-                  )}
-                </div>
-
                 <Button
                   type="submit"
                   variant="outline"
@@ -386,17 +335,12 @@ export default function Auth() {
                   disabled={loading}
                 >
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Entrar
+                  Enviar link de acesso
                 </Button>
 
-                <button
-                  type="button"
-                  onClick={handleForgotPassword}
-                  className="w-full text-sm text-muted-foreground hover:text-foreground font-omne-regular"
-                  disabled={loading}
-                >
-                  Esqueci minha senha
-                </button>
+                <p className="text-center text-xs text-muted-foreground font-omne-regular">
+                  Você receberá um link no seu email para acessar.
+                </p>
               </form>
             </TabsContent>
 
@@ -419,25 +363,6 @@ export default function Auth() {
                   />
                   {errors.email && (
                     <p className="text-sm text-destructive">{errors.email}</p>
-                  )}
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="signup-password" className="font-omne-regular flex items-center gap-2">
-                    <Lock size={16} className="text-muted-foreground" />
-                    Senha
-                  </Label>
-                  <Input
-                    id="signup-password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Mínimo 6 caracteres"
-                    className={errors.password ? "border-destructive" : ""}
-                    required
-                  />
-                  {errors.password && (
-                    <p className="text-sm text-destructive">{errors.password}</p>
                   )}
                 </div>
 
@@ -473,6 +398,10 @@ export default function Auth() {
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Criar conta
                 </Button>
+
+                <p className="text-center text-xs text-muted-foreground font-omne-regular">
+                  Você receberá um link no seu email para confirmar.
+                </p>
               </form>
             </TabsContent>
           </Tabs>
