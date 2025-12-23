@@ -64,58 +64,21 @@ Deno.serve(async (req) => {
 
   const wh = new Webhook(hookSecret)
   
+  let verifiedPayload: {
+    user: { email: string }
+    email_data: {
+      token: string
+      token_hash: string
+      redirect_to: string
+      email_action_type: string
+    }
+  }
+
   try {
-    const {
-      user,
-      email_data: { token, token_hash, redirect_to, email_action_type },
-    } = wh.verify(payload, headers) as {
-      user: {
-        email: string
-      }
-      email_data: {
-        token: string
-        token_hash: string
-        redirect_to: string
-        email_action_type: string
-        site_url: string
-        token_new: string
-        token_hash_new: string
-      }
-    }
-
-    console.log(`Signature verified. Sending email to: ${user.email}`)
-    console.log(`Email action type: ${email_action_type}`)
-
-    const html = await renderAsync(
-      React.createElement(MagicLinkEmail, {
-        supabase_url: Deno.env.get('SUPABASE_URL') ?? '',
-        token,
-        token_hash,
-        redirect_to,
-        email_action_type,
-      })
-    )
-
-    const { data, error } = await resend.emails.send({
-      from: 'iNeed Recompensas <onboarding@resend.dev>',
-      to: [user.email],
-      subject: '✦ Seu link de acesso ao iNeed',
-      html,
-    })
-
-    if (error) {
-      console.error('Resend error:', error)
-      throw error
-    }
-
-    console.log('Email sent successfully:', data)
-
-    return new Response(JSON.stringify({}), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json', ...corsHeaders },
-    })
+    verifiedPayload = wh.verify(payload, headers) as typeof verifiedPayload
+    console.log(`Signature verified for: ${verifiedPayload.user.email}`)
   } catch (error) {
-    console.error('Error in send-auth-email:', error.name, error.message)
+    console.error('Webhook verification failed:', error.name, error.message)
     
     if (error.name === 'WebhookVerificationError') {
       console.error('Signature mismatch - verify SEND_EMAIL_HOOK_SECRET matches the Hook Secret in Supabase Auth Hooks')
@@ -124,7 +87,7 @@ Deno.serve(async (req) => {
     return new Response(
       JSON.stringify({
         error: {
-          http_code: error.code || 500,
+          http_code: 401,
           message: error.message,
         },
       }),
@@ -134,4 +97,48 @@ Deno.serve(async (req) => {
       }
     )
   }
+
+  // Send email in background to avoid timeout
+  const sendEmailTask = async () => {
+    try {
+      const { user, email_data: { token, token_hash, redirect_to, email_action_type } } = verifiedPayload
+
+      console.log(`Sending email to: ${user.email}, action: ${email_action_type}`)
+
+      const html = await renderAsync(
+        React.createElement(MagicLinkEmail, {
+          supabase_url: Deno.env.get('SUPABASE_URL') ?? '',
+          token,
+          token_hash,
+          redirect_to,
+          email_action_type,
+        })
+      )
+
+      const { data, error } = await resend.emails.send({
+        from: 'iNeed Recompensas <onboarding@resend.dev>',
+        to: [user.email],
+        subject: '✦ Seu link de acesso ao iNeed',
+        html,
+      })
+
+      if (error) {
+        console.error('Resend error:', error)
+      } else {
+        console.log('Email sent successfully:', data)
+      }
+    } catch (err) {
+      console.error('Background email error:', err)
+    }
+  }
+
+  // Queue background task and return immediately
+  EdgeRuntime.waitUntil(sendEmailTask())
+  
+  console.log('Email queued, returning 200 to Supabase')
+
+  return new Response(JSON.stringify({}), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json', ...corsHeaders },
+  })
 })
