@@ -1,10 +1,12 @@
 import { useGamification, UserLevel } from "@/contexts/GamificationContext";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
-import { Copy, Check, Users, Coins, Gift, LogOut } from "lucide-react";
-import { useState } from "react";
+import { Copy, Check, Users, Coins, Gift, LogOut, UserPlus } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import RedemptionModal from "./RedemptionModal";
 
 const LEVEL_LABELS: Record<UserLevel, string> = {
@@ -32,12 +34,51 @@ export default function UserProgressCard() {
     canRedeemCurrentLevel,
     canRedeemPreviousLevel,
     signOut,
+    processReferral,
+    refreshGamification,
   } = useGamification();
   
   const [copied, setCopied] = useState(false);
   const [showRedemptionModal, setShowRedemptionModal] = useState(false);
+  const [referralCode, setReferralCode] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [referrerCode, setReferrerCode] = useState<string | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  // Fetch referrer's code if user was referred
+  useEffect(() => {
+    const fetchReferrerCode = async () => {
+      if (gamification?.referred_by) {
+        const { data } = await supabase
+          .from("user_gamification")
+          .select("referral_code")
+          .eq("id", gamification.referred_by)
+          .maybeSingle();
+        
+        if (data?.referral_code) {
+          setReferrerCode(data.referral_code);
+        }
+      }
+    };
+    
+    fetchReferrerCode();
+  }, [gamification?.referred_by]);
+
+  const handleConnectReferral = async () => {
+    if (!referralCode.trim()) return;
+    
+    setIsSubmitting(true);
+    try {
+      const success = await processReferral(referralCode.trim().toUpperCase());
+      if (success) {
+        setReferralCode("");
+        await refreshGamification();
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!isAuthenticated) {
     return (
@@ -72,6 +113,7 @@ export default function UserProgressCard() {
 
   const levelConfig = getCurrentLevelConfig();
   const progress = getProgressPercentage();
+  const hasReferrer = !!gamification.referred_by;
 
   const copyReferralCode = async () => {
     try {
@@ -178,6 +220,34 @@ export default function UserProgressCard() {
           <p className="text-xs text-muted-foreground mt-2 font-omne-regular">
             Cada amigo que usar seu código = +10 moedas + 1 indicação!
           </p>
+          
+          {/* Referrer info or connect code */}
+          {hasReferrer ? (
+            referrerCode && (
+              <p className="text-xs text-muted-foreground mt-2 font-omne-regular">
+                Você foi indicado por: +{referrerCode}
+              </p>
+            )
+          ) : (
+            <div className="mt-3 flex gap-2">
+              <Input
+                placeholder="Código do Amigo"
+                value={referralCode}
+                onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
+                className="h-9 text-sm flex-1"
+                maxLength={10}
+              />
+              <Button
+                size="sm"
+                onClick={handleConnectReferral}
+                disabled={isSubmitting || !referralCode.trim()}
+                className="h-9 px-3"
+              >
+                <UserPlus size={16} className="mr-1" />
+                Conectar
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Redeem Button */}
