@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Gift, Users } from "lucide-react";
+import { Loader2, Users } from "lucide-react";
 import SEO from "@/components/SEO";
 import { z } from "zod";
+import loginStars from "@/assets/login-stars.png";
 
 const emailSchema = z.string().email("Email inválido");
 const referralCodeSchema = z.string().max(8, "Código deve ter no máximo 8 caracteres").optional();
@@ -166,9 +167,7 @@ export default function Auth() {
         
         <div className="w-full max-w-md">
           <div className="bg-card border border-border rounded-2xl shadow-xl p-8 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-              <Gift className="w-8 h-8 text-green-600" />
-            </div>
+            <img src={loginStars} alt="Estrelas" className="w-24 h-auto mb-4" />
             
             <h1 className="text-2xl font-omne-semibold text-foreground mb-2">
               Verifique seu email
@@ -219,9 +218,7 @@ export default function Auth() {
         <div className="bg-card border border-border rounded-2xl shadow-xl p-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-              <Gift className="w-8 h-8 text-primary" />
-            </div>
+            <img src={loginStars} alt="Estrelas" className="w-24 h-auto mb-4" />
             <h1 className="text-2xl font-omne-semibold text-foreground">
               Participe e ganhe prêmios!
             </h1>
