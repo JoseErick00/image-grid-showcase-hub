@@ -249,8 +249,7 @@ export default function Auth() {
 
             <div className="space-y-3">
               <Button
-                variant="outline"
-                className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium"
+                className="w-full bg-[#FFFFFF] border border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium shadow-sm"
                 onClick={handleResendEmail}
                 disabled={loading}
               >
@@ -326,8 +325,7 @@ export default function Auth() {
 
                 <Button
                   type="submit"
-                  variant="outline"
-                  className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium"
+                  className="w-full bg-[#FFFFFF] border border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium shadow-sm"
                   disabled={loading}
                 >
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -387,8 +385,7 @@ export default function Auth() {
 
                 <Button
                   type="submit"
-                  variant="outline"
-                  className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium"
+                  className="w-full bg-[#FFFFFF] border border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium shadow-sm"
                   disabled={loading}
                 >
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
