@@ -12,6 +12,19 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
+// Helper to check if string is valid base64
+function isValidBase64(str: string): boolean {
+  if (!str || str.length === 0) return false
+  try {
+    const base64Regex = /^[A-Za-z0-9+/]+=*$/
+    if (!base64Regex.test(str)) return false
+    atob(str)
+    return true
+  } catch {
+    return false
+  }
+}
+
 Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -22,10 +35,32 @@ Deno.serve(async (req) => {
     return new Response('Method not allowed', { status: 405, headers: corsHeaders })
   }
 
+  // Validate hook secret exists and is valid base64
+  if (!hookSecret) {
+    console.error('SEND_EMAIL_HOOK_SECRET is not configured')
+    return new Response(
+      JSON.stringify({ error: { message: 'Hook secret not configured' } }),
+      { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
+    )
+  }
+
+  if (!isValidBase64(hookSecret)) {
+    console.error('SEND_EMAIL_HOOK_SECRET is not a valid Base64 string. Copy the "Hook Secret" from Supabase Dashboard -> Authentication -> Hooks')
+    return new Response(
+      JSON.stringify({ 
+        error: { 
+          message: 'Invalid hook secret format. Must be Base64 "Hook Secret" from Supabase Auth Hooks.' 
+        } 
+      }),
+      { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
+    )
+  }
+
   const payload = await req.text()
   const headers = Object.fromEntries(req.headers)
   
   console.log('Received auth email webhook')
+  console.log('Webhook headers:', Object.keys(headers).join(', '))
 
   const wh = new Webhook(hookSecret)
   
@@ -48,7 +83,7 @@ Deno.serve(async (req) => {
       }
     }
 
-    console.log(`Sending magic link email to: ${user.email}`)
+    console.log(`Signature verified. Sending email to: ${user.email}`)
     console.log(`Email action type: ${email_action_type}`)
 
     const html = await renderAsync(
@@ -80,7 +115,12 @@ Deno.serve(async (req) => {
       headers: { 'Content-Type': 'application/json', ...corsHeaders },
     })
   } catch (error) {
-    console.error('Error in send-auth-email function:', error)
+    console.error('Error in send-auth-email:', error.name, error.message)
+    
+    if (error.name === 'WebhookVerificationError') {
+      console.error('Signature mismatch - verify SEND_EMAIL_HOOK_SECRET matches the Hook Secret in Supabase Auth Hooks')
+    }
+    
     return new Response(
       JSON.stringify({
         error: {
