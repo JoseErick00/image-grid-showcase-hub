@@ -115,6 +115,135 @@ export type Database = {
         }
         Relationships: []
       }
+      coin_transactions: {
+        Row: {
+          amount: number
+          created_at: string | null
+          description: string | null
+          id: string
+          product_id: string | null
+          redemption_id: string | null
+          referral_id: string | null
+          transaction_type: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          product_id?: string | null
+          redemption_id?: string | null
+          referral_id?: string | null
+          transaction_type: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          product_id?: string | null
+          redemption_id?: string | null
+          referral_id?: string | null
+          transaction_type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coin_transactions_redemption_id_fkey"
+            columns: ["redemption_id"]
+            isOneToOne: false
+            referencedRelation: "prize_redemptions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "coin_transactions_referral_id_fkey"
+            columns: ["referral_id"]
+            isOneToOne: false
+            referencedRelation: "referrals"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      level_config: {
+        Row: {
+          display_order: number
+          level: Database["public"]["Enums"]["user_level"]
+          max_coins: number
+          min_coins: number
+          required_referrals: number
+        }
+        Insert: {
+          display_order: number
+          level: Database["public"]["Enums"]["user_level"]
+          max_coins: number
+          min_coins: number
+          required_referrals: number
+        }
+        Update: {
+          display_order?: number
+          level?: Database["public"]["Enums"]["user_level"]
+          max_coins?: number
+          min_coins?: number
+          required_referrals?: number
+        }
+        Relationships: []
+      }
+      prize_redemptions: {
+        Row: {
+          coins_at_redemption: number
+          coins_consumed: number
+          created_at: string | null
+          id: string
+          notes: string | null
+          prize_level: Database["public"]["Enums"]["user_level"]
+          product_id: string | null
+          product_name: string | null
+          redemption_type: string
+          referrals_at_redemption: number
+          referrals_consumed: number
+          status: string
+          updated_at: string | null
+          user_id: string
+          user_level_at_redemption: Database["public"]["Enums"]["user_level"]
+        }
+        Insert: {
+          coins_at_redemption: number
+          coins_consumed?: number
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          prize_level: Database["public"]["Enums"]["user_level"]
+          product_id?: string | null
+          product_name?: string | null
+          redemption_type: string
+          referrals_at_redemption: number
+          referrals_consumed?: number
+          status?: string
+          updated_at?: string | null
+          user_id: string
+          user_level_at_redemption: Database["public"]["Enums"]["user_level"]
+        }
+        Update: {
+          coins_at_redemption?: number
+          coins_consumed?: number
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          prize_level?: Database["public"]["Enums"]["user_level"]
+          product_id?: string | null
+          product_name?: string | null
+          redemption_type?: string
+          referrals_at_redemption?: number
+          referrals_consumed?: number
+          status?: string
+          updated_at?: string | null
+          user_id?: string
+          user_level_at_redemption?: Database["public"]["Enums"]["user_level"]
+        }
+        Relationships: []
+      }
       product_likes: {
         Row: {
           created_at: string
@@ -263,15 +392,105 @@ export type Database = {
           },
         ]
       }
+      referrals: {
+        Row: {
+          coins_awarded: number
+          created_at: string | null
+          id: string
+          referral_code: string
+          referred_id: string
+          referrer_id: string
+        }
+        Insert: {
+          coins_awarded?: number
+          created_at?: string | null
+          id?: string
+          referral_code: string
+          referred_id: string
+          referrer_id: string
+        }
+        Update: {
+          coins_awarded?: number
+          created_at?: string | null
+          id?: string
+          referral_code?: string
+          referred_id?: string
+          referrer_id?: string
+        }
+        Relationships: []
+      }
+      user_gamification: {
+        Row: {
+          coins_consumed: number
+          created_at: string | null
+          current_level: Database["public"]["Enums"]["user_level"]
+          current_level_coins: number
+          current_level_referrals: number
+          id: string
+          prizes_redeemed_count: number
+          referral_code: string
+          referrals_consumed: number
+          referred_by: string | null
+          total_coins_earned: number
+          total_referrals_ever: number
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          coins_consumed?: number
+          created_at?: string | null
+          current_level?: Database["public"]["Enums"]["user_level"]
+          current_level_coins?: number
+          current_level_referrals?: number
+          id?: string
+          prizes_redeemed_count?: number
+          referral_code: string
+          referrals_consumed?: number
+          referred_by?: string | null
+          total_coins_earned?: number
+          total_referrals_ever?: number
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          coins_consumed?: number
+          created_at?: string | null
+          current_level?: Database["public"]["Enums"]["user_level"]
+          current_level_coins?: number
+          current_level_referrals?: number
+          id?: string
+          prizes_redeemed_count?: number
+          referral_code?: string
+          referrals_consumed?: number
+          referred_by?: string | null
+          total_coins_earned?: number
+          total_referrals_ever?: number
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_gamification_referred_by_fkey"
+            columns: ["referred_by"]
+            isOneToOne: false
+            referencedRelation: "user_gamification"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      generate_referral_code: { Args: never; Returns: string }
+      get_level_from_coins: {
+        Args: { total_coins: number }
+        Returns: Database["public"]["Enums"]["user_level"]
+      }
     }
     Enums: {
-      [_ in never]: never
+      user_level: "colegas" | "amigos" | "familia" | "socios"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -398,6 +617,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      user_level: ["colegas", "amigos", "familia", "socios"],
+    },
   },
 } as const

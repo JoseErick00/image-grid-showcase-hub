@@ -3,11 +3,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GamificationProvider } from "./contexts/GamificationContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Tech from "./pages/Tech";
 import Sports from "./pages/Sports";
 import Incredibles from "./pages/Incredibles";
+import Auth from "./pages/Auth";
 import Kids from "./pages/Kids";
 import Health from "./pages/Health";
 import Home from "./pages/Home";
@@ -60,12 +62,14 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <GridLayoutProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
+      <GamificationProvider>
+        <GridLayoutProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="auth" element={<Auth />} />
             <Route index element={<Index />} />
             <Route path="tech" element={<Tech />} />
             <Route path="sports" element={<Sports />} />
@@ -116,13 +120,14 @@ const App = () => (
             <Route path="search" element={<Search />} />
             {/* Dynamic campaign route - loads from Supabase */}
             <Route path="campanha/:slug" element={<DynamicCampaignPage />} />
-          </Route>
-          {/* Admin routes - fora do Layout principal */}
-          <Route path="admin/migrate" element={<MigrateCampaigns />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      </GridLayoutProvider>
+            </Route>
+            {/* Admin routes - fora do Layout principal */}
+            <Route path="admin/migrate" element={<MigrateCampaigns />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+        </GridLayoutProvider>
+      </GamificationProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
