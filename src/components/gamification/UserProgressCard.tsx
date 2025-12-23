@@ -9,6 +9,19 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import RedemptionModal from "./RedemptionModal";
 
+// Level icons
+import colegasIcon from '@/assets/levels/colegas.png';
+import amigosIcon from '@/assets/levels/amigos.png';
+import familiaIcon from '@/assets/levels/familia.png';
+import sociosIcon from '@/assets/levels/socios.png';
+
+const LEVEL_ICONS: Record<UserLevel, string> = {
+  colegas: colegasIcon,
+  amigos: amigosIcon,
+  familia: familiaIcon,
+  socios: sociosIcon,
+};
+
 const LEVEL_LABELS: Record<UserLevel, string> = {
   colegas: "Colegas",
   amigos: "Amigos",
@@ -16,12 +29,6 @@ const LEVEL_LABELS: Record<UserLevel, string> = {
   socios: "Sócios",
 };
 
-const LEVEL_COLORS: Record<UserLevel, string> = {
-  colegas: "from-blue-500 to-blue-600",
-  amigos: "from-green-500 to-green-600",
-  familia: "from-purple-500 to-purple-600",
-  socios: "from-amber-500 to-amber-600",
-};
 
 export default function UserProgressCard() {
   const {
@@ -150,11 +157,11 @@ export default function UserProgressCard() {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${LEVEL_COLORS[gamification.current_level]} flex items-center justify-center`}>
-              <span className="text-white font-omne-bold text-lg">
-                {LEVEL_LABELS[gamification.current_level].charAt(0)}
-              </span>
-            </div>
+            <img 
+              src={LEVEL_ICONS[gamification.current_level]} 
+              alt={LEVEL_LABELS[gamification.current_level]} 
+              className="w-12 h-12"
+            />
             <div>
               <p className="text-sm text-muted-foreground font-omne-regular">Nível atual</p>
               <h3 className="text-xl font-omne-semibold text-foreground">
