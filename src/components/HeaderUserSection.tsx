@@ -1,7 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useGamification } from "@/contexts/GamificationContext";
-import { Users } from "lucide-react";
+import { Users, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 
 // Level icons
@@ -30,8 +34,32 @@ interface HeaderUserSectionProps {
 }
 
 const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSectionProps) => {
-  const { isAuthenticated, user, gamification, loading, signOut } = useGamification();
+  const { isAuthenticated, user, gamification, loading, signOut, processReferral, refreshGamification } = useGamification();
   const navigate = useNavigate();
+  const { toast } = useToast();
+  
+  const [referralCode, setReferralCode] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [referrerCode, setReferrerCode] = useState<string | null>(null);
+
+  // Fetch referrer's code if user was referred
+  useEffect(() => {
+    const fetchReferrerCode = async () => {
+      if (gamification?.referred_by) {
+        const { data } = await supabase
+          .from("user_gamification")
+          .select("referral_code")
+          .eq("id", gamification.referred_by)
+          .maybeSingle();
+        
+        if (data?.referral_code) {
+          setReferrerCode(data.referral_code);
+        }
+      }
+    };
+    
+    fetchReferrerCode();
+  }, [gamification?.referred_by]);
 
   const handleLogout = async () => {
     await signOut();
@@ -41,6 +69,21 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   const handleLoginClick = () => {
     onCloseMenu?.();
+  };
+
+  const handleConnectReferral = async () => {
+    if (!referralCode.trim()) return;
+    
+    setIsSubmitting(true);
+    try {
+      const success = await processReferral(referralCode.trim().toUpperCase());
+      if (success) {
+        setReferralCode("");
+        await refreshGamification();
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (loading) {
@@ -80,6 +123,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   const totalCoins = gamification?.current_level_coins || 0;
   const totalReferrals = gamification?.current_level_referrals || 0;
   const userEmail = user.email || '';
+  const hasReferrer = !!gamification?.referred_by;
 
   if (variant === 'mobile') {
     return (
@@ -123,6 +167,33 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
             </span>
           </div>
         </div>
+
+        {/* Referrer info or connect code */}
+        {hasReferrer ? (
+          referrerCode && (
+            <p className="text-xs text-muted-foreground mt-2 text-center">
+              Você foi indicado por: +{referrerCode}
+            </p>
+          )
+        ) : (
+          <div className="mt-3 flex gap-2">
+            <Input
+              placeholder="Código do Amigo"
+              value={referralCode}
+              onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
+              className="h-8 text-xs flex-1"
+              maxLength={10}
+            />
+            <Button
+              size="sm"
+              onClick={handleConnectReferral}
+              disabled={isSubmitting || !referralCode.trim()}
+              className="h-8 px-3"
+            >
+              <UserPlus size={14} />
+            </Button>
+          </div>
+        )}
       </div>
     );
   }
@@ -169,6 +240,33 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
           </span>
         </div>
       </div>
+
+      {/* Referrer info or connect code */}
+      {hasReferrer ? (
+        referrerCode && (
+          <p className="text-xs text-white/70 mt-1 text-center">
+            Você foi indicado por: +{referrerCode}
+          </p>
+        )
+      ) : (
+        <div className="mt-1 flex gap-1 w-full">
+          <Input
+            placeholder="Código do Amigo"
+            value={referralCode}
+            onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
+            className="h-7 text-xs flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/50"
+            maxLength={10}
+          />
+          <Button
+            size="sm"
+            onClick={handleConnectReferral}
+            disabled={isSubmitting || !referralCode.trim()}
+            className="h-7 px-2 bg-white/20 hover:bg-white/30 text-white"
+          >
+            <UserPlus size={12} />
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
