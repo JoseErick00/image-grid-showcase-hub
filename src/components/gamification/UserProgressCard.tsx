@@ -49,7 +49,11 @@ export default function UserProgressCard() {
         <p className="text-muted-foreground font-omne-regular mb-4">
           Compartilhe produtos, indique amigos e ganhe prêmios incríveis!
         </p>
-        <Button onClick={() => navigate("/auth")} className="font-omne-semibold">
+        <Button
+          variant="outline"
+          className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-semibold"
+          onClick={() => navigate("/auth")}
+        >
           Entrar / Cadastrar
         </Button>
       </div>
@@ -178,7 +182,8 @@ export default function UserProgressCard() {
 
         {/* Redeem Button */}
         <Button
-          className="w-full font-omne-semibold"
+          variant="outline"
+          className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-semibold"
           disabled={!canRedeem}
           onClick={() => setShowRedemptionModal(true)}
         >
