@@ -1,8 +1,8 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
+import HeaderUserSection from "./HeaderUserSection";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,7 +115,7 @@ const Header = () => {
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center py-2 md:py-3 h-auto justify-center">
-          {/* Logo */}
+          {/* Logo + User Section Desktop */}
           <div className="relative w-full flex justify-center items-center mb-2">
             <Link to={logoLink} className="flex items-center justify-center">
               <img 
@@ -125,6 +125,12 @@ const Header = () => {
               />
             </Link>
             
+            {/* Desktop User Section - positioned absolute right */}
+            {isBrasilPage && (
+              <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2">
+                <HeaderUserSection variant="desktop" />
+              </div>
+            )}
           </div>
 
 
@@ -886,6 +892,11 @@ const Header = () => {
                   })}
                 </div>
               </div>
+
+              {/* Mobile User Section - Footer of menu */}
+              {isBrasilPage && (
+                <HeaderUserSection variant="mobile" onCloseMenu={() => setIsMenuOpen(false)} />
+              )}
             </div>
           </nav>
         )}
