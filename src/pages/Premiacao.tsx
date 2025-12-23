@@ -6,7 +6,7 @@ import PremiacaoSection from '@/components/premiacao/PremiacaoSection';
 import PlatformRegister from '@/components/campaigns/PlatformRegister';
 import TrustBadges from '@/components/TrustBadges';
 import { Button } from '@/components/ui/button';
-
+import UserProgressCard from '@/components/gamification/UserProgressCard';
 // Import hero banners
 import heroDesktop from '@/assets/premiacao/hero-desktop.jpg';
 import heroTablet from '@/assets/premiacao/hero-tablet.jpg';
@@ -84,6 +84,11 @@ const Premiacao = () => {
       />
 
       <div className="container mx-auto px-4 py-8">
+        {/* User Progress Card - Gamification */}
+        <div className="max-w-md mx-auto mb-12">
+          <UserProgressCard />
+        </div>
+
         {/* Page Title */}
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-omne-medium mb-3 max-w-[960px] md:max-w-[840px] mx-auto px-4" style={{ color: '#171717' }}>
