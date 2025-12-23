@@ -81,41 +81,54 @@ export default function Auth() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const checkEmailExists = async (emailToCheck: string): Promise<boolean> => {
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm(false)) return;
+    
+    setLoading(true);
+
     try {
-      const response = await supabase.functions.invoke("check-email-exists", {
-        body: { email: emailToCheck },
+      const redirectTo = `${window.location.origin}/brasil/premios`;
+      
+      // Call instant-login edge function
+      const response = await supabase.functions.invoke("instant-login", {
+        body: { email, redirectTo },
       });
 
       if (response.error) {
-        console.error("Error checking email:", response.error);
-        return false;
+        toast({
+          variant: "destructive",
+          title: "Erro no login",
+          description: response.error.message || "Erro ao verificar email.",
+        });
+        setLoading(false);
+        return;
       }
 
-      return response.data?.exists === true;
+      if (!response.data?.exists) {
+        toast({
+          variant: "destructive",
+          title: "Email não cadastrado",
+          description: "Este email ainda não possui uma conta. Crie uma conta na aba 'Criar conta'.",
+        });
+        setActiveTab("signup");
+        setLoading(false);
+        return;
+      }
+
+      // Redirect to the magic link URL for instant login
+      if (response.data?.loginUrl) {
+        window.location.href = response.data.loginUrl;
+      }
     } catch (error) {
-      console.error("Error invoking check-email-exists:", error);
-      return false;
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Ocorreu um erro inesperado. Tente novamente.",
+      });
+      setLoading(false);
     }
-  };
-
-  const sendMagicLink = async (includeReferral: boolean = false) => {
-    const redirectUrl = `${window.location.origin}/brasil/premios`;
-    
-    const options: { emailRedirectTo: string; data?: { referral_code_used: string | null } } = {
-      emailRedirectTo: redirectUrl,
-    };
-
-    if (includeReferral) {
-      options.data = { referral_code_used: referralCode || null };
-    }
-
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options,
-    });
-
-    return { error };
   };
 
   const handleSignup = async (e: React.FormEvent) => {
@@ -126,14 +139,16 @@ export default function Auth() {
     setLoading(true);
 
     try {
-      // Check if email already exists
-      const exists = await checkEmailExists(email);
+      // Check if email already exists using the instant-login function (it checks existence)
+      const checkResponse = await supabase.functions.invoke("check-email-exists", {
+        body: { email },
+      });
       
-      if (exists) {
+      if (checkResponse.data?.exists) {
         toast({
           variant: "destructive",
           title: "E-mail já cadastrado",
-          description: "Este e-mail já possui uma conta. Faça login na aba 'Entrar'.",
+          description: "Este e-mail já possui uma conta. Use a aba 'Entrar' para acessar instantaneamente.",
         });
         setActiveTab("login");
         setLoading(false);
@@ -145,8 +160,16 @@ export default function Auth() {
         localStorage.setItem('pending_referral_code', referralCode);
       }
 
-      // Send magic link for new user
-      const { error } = await sendMagicLink(true);
+      const redirectUrl = `${window.location.origin}/brasil/premios`;
+
+      // Send confirmation email for new user
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: redirectUrl,
+          data: { referral_code_used: referralCode || null },
+        },
+      });
 
       if (error) {
         toast({
@@ -158,41 +181,7 @@ export default function Auth() {
         setEmailSent(true);
         toast({
           title: "Email enviado!",
-          description: "Verifique sua caixa de entrada para acessar.",
-        });
-      }
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Erro",
-        description: "Ocorreu um erro inesperado. Tente novamente.",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm(false)) return;
-    
-    setLoading(true);
-
-    try {
-      const { error } = await sendMagicLink(false);
-
-      if (error) {
-        toast({
-          variant: "destructive",
-          title: "Erro no login",
-          description: error.message,
-        });
-      } else {
-        setEmailSent(true);
-        toast({
-          title: "Email enviado!",
-          description: "Verifique sua caixa de entrada para acessar.",
+          description: "Verifique sua caixa de entrada para confirmar seu email e acessar.",
         });
       }
     } catch (error) {
@@ -209,7 +198,14 @@ export default function Auth() {
   const handleResendEmail = async () => {
     setLoading(true);
     try {
-      const { error } = await sendMagicLink(false);
+      const redirectUrl = `${window.location.origin}/brasil/premios`;
+      
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: redirectUrl,
+        },
+      });
 
       if (error) {
         toast({
@@ -228,7 +224,7 @@ export default function Auth() {
     }
   };
 
-  // Email sent confirmation screen
+  // Email sent confirmation screen (only for signup)
   if (emailSent) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-background to-muted flex items-center justify-center px-4 py-12">
@@ -246,7 +242,7 @@ export default function Auth() {
             </h1>
             
             <p className="text-muted-foreground font-omne-regular mb-6">
-              Enviamos um link de acesso para:
+              Enviamos um link de confirmação para:
               <br />
               <strong className="text-foreground">{email}</strong>
             </p>
@@ -295,7 +291,7 @@ export default function Auth() {
               Participe e ganhe prêmios!
             </h1>
             <p className="text-muted-foreground mt-2 font-omne-regular">
-              Sem necessidade de senha!
+              Acesso rápido e sem senha!
             </p>
           </div>
 
@@ -306,7 +302,7 @@ export default function Auth() {
               <TabsTrigger value="signup" className="font-omne-medium">Criar conta</TabsTrigger>
             </TabsList>
 
-            {/* Login Tab */}
+            {/* Login Tab - Instant access for existing users */}
             <TabsContent value="login">
               <form onSubmit={handleLogin} className="space-y-4">
                 <div className="space-y-2">
@@ -335,16 +331,16 @@ export default function Auth() {
                   disabled={loading}
                 >
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Enviar link de acesso
+                  Entrar
                 </Button>
 
                 <p className="text-center text-xs text-muted-foreground font-omne-regular">
-                  Você receberá um link no seu email para acessar.
+                  Acesso instantâneo para emails já cadastrados.
                 </p>
               </form>
             </TabsContent>
 
-            {/* Signup Tab */}
+            {/* Signup Tab - Requires email confirmation */}
             <TabsContent value="signup">
               <form onSubmit={handleSignup} className="space-y-4">
                 <div className="space-y-2">
@@ -400,7 +396,7 @@ export default function Auth() {
                 </Button>
 
                 <p className="text-center text-xs text-muted-foreground font-omne-regular">
-                  Você receberá um link no seu email para confirmar.
+                  Você receberá um email para confirmar seu cadastro.
                 </p>
               </form>
             </TabsContent>
