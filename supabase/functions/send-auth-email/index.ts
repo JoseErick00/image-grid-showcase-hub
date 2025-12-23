@@ -5,25 +5,44 @@ import { renderAsync } from 'npm:@react-email/components@0.0.22'
 import { MagicLinkEmail } from './_templates/magic-link.tsx'
 
 const resend = new Resend(Deno.env.get('RESEND_API_KEY') as string)
-const hookSecret = Deno.env.get('SEND_EMAIL_HOOK_SECRET') as string
+const rawHookSecret = (Deno.env.get('SEND_EMAIL_HOOK_SECRET') as string) ?? ''
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-// Helper to check if string is valid base64
-function isValidBase64(str: string): boolean {
-  if (!str || str.length === 0) return false
+function normalizeBase64Secret(input: string): string {
+  // Trim and strip surrounding quotes (common copy/paste mistake)
+  let s = (input ?? '').trim()
+  if ((s.startsWith('"') && s.endsWith('"')) || (s.startsWith("'") && s.endsWith("'"))) {
+    s = s.slice(1, -1).trim()
+  }
+
+  // Convert Base64URL -> Base64
+  s = s.replace(/-/g, '+').replace(/_/g, '/')
+
+  // Add padding if missing
+  const pad = s.length % 4
+  if (pad === 2) s += '=='
+  else if (pad === 3) s += '='
+
+  return s
+}
+
+function isDecodableBase64(input: string): boolean {
+  if (!input) return false
   try {
-    const base64Regex = /^[A-Za-z0-9+/]+=*$/
-    if (!base64Regex.test(str)) return false
-    atob(str)
+    // Validate charset after normalization
+    const base64Regex = /^[A-Za-z0-9+/]+={0,2}$/
+    if (!base64Regex.test(input)) return false
+    atob(input)
     return true
   } catch {
     return false
   }
 }
+
 
 Deno.serve(async (req) => {
   // Handle CORS preflight requests
@@ -35,8 +54,8 @@ Deno.serve(async (req) => {
     return new Response('Method not allowed', { status: 405, headers: corsHeaders })
   }
 
-  // Validate hook secret exists and is valid base64
-  if (!hookSecret) {
+  // Validate hook secret exists and looks decodable
+  if (!rawHookSecret) {
     console.error('SEND_EMAIL_HOOK_SECRET is not configured')
     return new Response(
       JSON.stringify({ error: { message: 'Hook secret not configured' } }),
@@ -44,13 +63,23 @@ Deno.serve(async (req) => {
     )
   }
 
-  if (!isValidBase64(hookSecret)) {
-    console.error('SEND_EMAIL_HOOK_SECRET is not a valid Base64 string. Copy the "Hook Secret" from Supabase Dashboard -> Authentication -> Hooks')
+  const hookSecret = normalizeBase64Secret(rawHookSecret)
+
+  // Safe diagnostics (no secret value)
+  console.log(
+    `Hook secret diagnostics: len=${rawHookSecret.trim().length}, hasDash=${rawHookSecret.includes('-')}, hasUnderscore=${rawHookSecret.includes('_')}, hasWhitespace=${/\s/.test(rawHookSecret)}`
+  )
+
+  if (!isDecodableBase64(hookSecret)) {
+    console.error(
+      'SEND_EMAIL_HOOK_SECRET is not a valid Base64/Base64URL string. Copy the "Hook Secret" from Supabase Dashboard -> Authentication -> Hooks (no quotes/spaces/newlines).'
+    )
     return new Response(
-      JSON.stringify({ 
-        error: { 
-          message: 'Invalid hook secret format. Must be Base64 "Hook Secret" from Supabase Auth Hooks.' 
-        } 
+      JSON.stringify({
+        error: {
+          message:
+            'Invalid hook secret format. Paste the Base64 "Hook Secret" from Supabase Auth Hooks (no quotes/spaces/newlines).',
+        },
       }),
       { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
     )
