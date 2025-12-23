@@ -167,7 +167,7 @@ export default function Auth() {
         
         <div className="w-full max-w-md">
           <div className="bg-card border border-border rounded-2xl shadow-xl p-8 text-center">
-            <img src={loginStars} alt="Estrelas" className="w-24 h-auto mb-4" />
+            <img src={loginStars} alt="Estrelas" className="w-72 h-auto mb-4 mx-auto" />
             
             <h1 className="text-2xl font-omne-semibold text-foreground mb-2">
               Verifique seu email
@@ -218,7 +218,7 @@ export default function Auth() {
         <div className="bg-card border border-border rounded-2xl shadow-xl p-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <img src={loginStars} alt="Estrelas" className="w-24 h-auto mb-4" />
+            <img src={loginStars} alt="Estrelas" className="w-72 h-auto mb-4 mx-auto" />
             <h1 className="text-2xl font-omne-semibold text-foreground">
               Participe e ganhe prêmios!
             </h1>
