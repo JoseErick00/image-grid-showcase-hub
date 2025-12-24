@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useGamification } from "@/contexts/GamificationContext";
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NotificationToggle } from "@/components/NotificationToggle";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 
 // Level icons
@@ -85,8 +86,9 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   if (variant === 'mobile') {
     return (
       <div className="flex flex-col items-center text-center p-4 bg-muted/20">
-        {/* Email + trocar */}
+        {/* Email + trocar + Notification */}
         <div className="flex items-center justify-center gap-2 mb-3">
+          <NotificationToggle variant="compact" />
           <span className="text-xs text-muted-foreground truncate max-w-[180px]">
             {userEmail}
           </span>
@@ -137,19 +139,23 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   // Desktop variant
   return (
-    <div className="flex flex-col items-center gap-0.5 bg-[#434343] rounded-lg px-4 py-2 border border-[#767676]">
-      {/* Email + trocar */}
-      <div className="flex items-center justify-center gap-2">
-        <span className="text-xs text-white/80 truncate max-w-[150px]">
-          {userEmail}
-        </span>
-        <button
-          onClick={handleLogout}
-          className="text-xs text-white/60 hover:text-white hover:underline"
-        >
-          trocar
-        </button>
-      </div>
+    <div className="flex items-center gap-2">
+      {/* Notification Toggle */}
+      <NotificationToggle variant="compact" className="text-white hover:bg-white/10" />
+      
+      <div className="flex flex-col items-center gap-0.5 bg-[#434343] rounded-lg px-4 py-2 border border-[#767676]">
+        {/* Email + trocar */}
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-xs text-white/80 truncate max-w-[150px]">
+            {userEmail}
+          </span>
+          <button
+            onClick={handleLogout}
+            className="text-xs text-white/60 hover:text-white hover:underline"
+          >
+            trocar
+          </button>
+        </div>
 
       {/* Stats row */}
       <div className="flex items-center justify-center gap-3">
@@ -184,6 +190,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
           {referralCode}
         </p>
       )}
+      </div>
     </div>
   );
 };
