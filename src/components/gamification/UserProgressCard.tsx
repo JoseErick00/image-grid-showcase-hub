@@ -164,7 +164,7 @@ export default function UserProgressCard() {
             />
             <div>
               <p className="text-sm text-muted-foreground font-omne-regular">Nível atual</p>
-              <h3 className="text-xl font-omne-semibold text-foreground">
+              <h3 className="text-2xl font-omne-bold text-foreground">
                 {LEVEL_LABELS[gamification.current_level]}
               </h3>
             </div>
@@ -181,7 +181,7 @@ export default function UserProgressCard() {
               <Coins className="w-4 h-4 text-amber-500" />
               <span className="text-sm text-muted-foreground font-omne-regular">Moedas</span>
             </div>
-            <p className="text-2xl font-omne-bold text-foreground">
+            <p className="text-3xl font-omne-bold text-foreground">
               {gamification.current_level_coins}
               <span className="text-sm text-muted-foreground font-omne-regular">
                 /{levelConfig?.max_coins}
@@ -193,7 +193,7 @@ export default function UserProgressCard() {
               <Users className="w-4 h-4 text-blue-500" />
               <span className="text-sm text-muted-foreground font-omne-regular">Indicados</span>
             </div>
-            <p className="text-2xl font-omne-bold text-foreground">
+            <p className="text-3xl font-omne-bold text-foreground">
               {gamification.current_level_referrals}
               <span className="text-sm text-muted-foreground font-omne-regular">
                 /{levelConfig?.required_referrals}
@@ -217,7 +217,7 @@ export default function UserProgressCard() {
             Seu código de indicação
           </p>
           <div className="flex items-center gap-2">
-            <code className="flex-1 bg-background rounded-lg px-4 py-2 font-mono text-lg text-foreground">
+            <code className="flex-1 bg-background rounded-lg px-4 py-2 font-mono text-lg font-bold text-foreground">
               {gamification.referral_code}
             </code>
             <Button variant="outline" size="icon" onClick={copyReferralCode}>
@@ -257,16 +257,26 @@ export default function UserProgressCard() {
           )}
         </div>
 
-        {/* Redeem Button */}
-        <Button
-          variant="outline"
-          className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-semibold"
-          disabled={!canRedeem}
-          onClick={() => setShowRedemptionModal(true)}
-        >
-          <Gift className="w-4 h-4 mr-2" />
-          {canRedeem ? "Solicitar Prêmio" : "Continue compartilhando!"}
-        </Button>
+        {/* Redeem Button or Continue Button */}
+        {canRedeem ? (
+          <Button
+            variant="outline"
+            className="w-full border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-semibold"
+            onClick={() => setShowRedemptionModal(true)}
+          >
+            <Gift className="w-4 h-4 mr-2" />
+            Solicitar Prêmio
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            className="w-full border-white text-white bg-transparent hover:bg-white/10 font-omne-semibold"
+            onClick={() => navigate("/brasil")}
+          >
+            <Gift className="w-4 h-4 mr-2" />
+            Continue compartilhando!
+          </Button>
+        )}
         
         {!canRedeem && (
           <p className="text-xs text-center text-muted-foreground mt-2 font-omne-regular">
