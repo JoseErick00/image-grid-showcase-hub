@@ -571,12 +571,12 @@ const Header = () => {
           )}
 
           {/* Mobile menu button */}
-          <div className="md:hidden absolute top-4 right-4">
+          <div className="md:hidden absolute top-1/2 -translate-y-1/2 right-4">
             <button
               className="p-2 text-muted-foreground hover:text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -587,7 +587,7 @@ const Header = () => {
             
             {/* Mobile User Section - After header */}
             {isBrasilPage && (
-              <div className="px-4 pb-4 border-b border-border mb-4">
+              <div className="pt-0 pb-4 border-b border-border mb-4 flex flex-col items-center text-center">
                 <HeaderUserSection variant="mobile" onCloseMenu={() => setIsMenuOpen(false)} />
               </div>
             )}

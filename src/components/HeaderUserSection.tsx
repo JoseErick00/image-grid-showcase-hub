@@ -56,10 +56,10 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
     return (
       <div className={`${variant === 'desktop' 
         ? 'flex flex-col items-center gap-1 rounded-lg px-4 py-2 border' 
-        : 'border-t border-border p-4 mt-4'}`}
+        : 'flex flex-col items-center gap-3 p-4'}`}
         style={variant === 'desktop' ? { backgroundColor: '#434343', borderColor: '#767676' } : undefined}
       >
-        <p className={`${variant === 'desktop' ? 'text-xs text-white' : 'text-sm text-muted-foreground'}`}>
+        <p className={`${variant === 'desktop' ? 'text-xs text-white' : 'text-sm text-muted-foreground text-center'}`}>
           Entre para ganhar nossos produtos.
         </p>
         <Button
@@ -84,9 +84,9 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   if (variant === 'mobile') {
     return (
-      <div className="border-t border-border p-4 mt-4 bg-muted/20">
+      <div className="flex flex-col items-center text-center p-4 bg-muted/20">
         {/* Email + trocar */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-center gap-2 mb-3">
           <span className="text-xs text-muted-foreground truncate max-w-[180px]">
             {userEmail}
           </span>
@@ -99,7 +99,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
         </div>
 
         {/* Stats row */}
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center justify-center gap-4">
           {/* Coins */}
           <div className="flex items-center gap-1">
             <img src={premiacaoCoinIcon} alt="moedas" className="w-4 h-4" />
@@ -127,7 +127,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
         {/* User's referral code */}
         {referralCode && (
-          <p className="text-sm font-omne-semibold text-foreground mt-2 text-center">
+          <p className="text-sm font-omne-semibold text-foreground mt-3 text-center">
             Código: {referralCode}
           </p>
         )}
