@@ -224,14 +224,14 @@ const Brasil = () => {
       </div>
 
       {/* Browse Message */}
-      <div className="text-center py-8">
-        <p className="font-omne-regular text-lg md:text-xl" style={{ color: '#ffffff' }}>
+      <div className="text-center py-4">
+        <p className="font-omne-regular text-lg md:text-xl text-foreground">
           Navegue pelos nossos achados e clique para comprar na plataforma! Aproveite!
         </p>
       </div>
 
       {/* Category Banners Grid - Incriveis */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <CategoryBannerGrid category="incriveis" />
       </div>
 
