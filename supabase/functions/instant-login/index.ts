@@ -63,8 +63,8 @@ Deno.serve(async (req) => {
 
     if (!userExists) {
       return new Response(
-        JSON.stringify({ exists: false, error: 'Email não cadastrado. Crie uma conta primeiro.' }),
-        { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ exists: false, message: 'Email não cadastrado. Crie uma conta primeiro.' }),
+        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
