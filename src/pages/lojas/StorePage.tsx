@@ -10,6 +10,7 @@ import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import LikeButton from '@/components/ui/LikeButton';
 import ShareButton from '@/components/ui/ShareButton';
+import { useGridLayout } from '@/hooks/useGridLayout';
 
 const StorePage = () => {
   const { platform } = useParams<{ platform: string }>();
@@ -24,6 +25,7 @@ const StorePage = () => {
   const storeConfig = storeConfigs[platformKey];
   
   const { sections, totalProducts, totalPages, hasNextPage, hasPreviousPage } = useStoreProducts(platformKey, currentPage);
+  const { isCompactMode } = useGridLayout();
   
   if (!storeConfig) {
     return (
@@ -104,7 +106,11 @@ const StorePage = () => {
             )}
             
             {/* Product Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div className={`grid gap-6 ${
+              isCompactMode 
+                ? 'grid-cols-2 md:grid-cols-3' 
+                : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+            }`}>
               {section.products.map((product, index) => (
                 <CampaignProductCard
                   key={`${product.link}-${index}`}
@@ -127,7 +133,7 @@ const StorePage = () => {
               variant="outline"
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={!hasPreviousPage}
-              className="flex items-center gap-2 text-foreground"
+              className="flex items-center gap-2 bg-white text-black border-black hover:bg-black hover:text-white disabled:opacity-50"
             >
               <ChevronLeft size={20} />
               Anterior
@@ -140,7 +146,7 @@ const StorePage = () => {
                   variant={pageNum === currentPage ? "default" : "outline"}
                   size="sm"
                   onClick={() => handlePageChange(pageNum)}
-                  className={`w-10 h-10 ${pageNum !== currentPage ? 'text-foreground' : ''}`}
+                  className={`w-10 h-10 ${pageNum === currentPage ? 'bg-black text-white border-black' : 'bg-white text-black border-black hover:bg-black hover:text-white'}`}
                 >
                   {pageNum}
                 </Button>
@@ -151,7 +157,7 @@ const StorePage = () => {
               variant="outline"
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={!hasNextPage}
-              className="flex items-center gap-2 text-foreground"
+              className="flex items-center gap-2 bg-white text-black border-black hover:bg-black hover:text-white disabled:opacity-50"
             >
               Próximo
               <ChevronRight size={20} />

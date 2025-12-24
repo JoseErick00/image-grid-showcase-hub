@@ -8,8 +8,14 @@ const GridLayoutToggle = () => {
   const location = useLocation();
   const isBrasilPage = location.pathname.startsWith('/brasil');
 
+  // Pages where the Lupa button should NOT appear
+  const excludedPaths = ['/brasil', '/brasil/premios', '/brasil/sobre', '/brasil/contato'];
+  const shouldShow = !excludedPaths.includes(location.pathname);
+
+  if (!shouldShow) return null;
+
   return (
-    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2">
+    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2">
       <Button
         variant="secondary"
         size="icon"
