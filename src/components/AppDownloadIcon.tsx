@@ -19,7 +19,7 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
   // Share function for logged in users
   const handleShare = async () => {
     const referralCode = gamification?.referral_code || '';
-    const shareMessage = `O aplicativo mais bacana do Brasil! Você é meu indicado, use meu Código: +${referralCode}`;
+    const shareMessage = `O aplicativo mais bacana do Brasil! Você é meu indicado, use meu Código: ${referralCode}`;
     const shareUrl = window.location.origin + '/brasil';
     
     const shareData = {
