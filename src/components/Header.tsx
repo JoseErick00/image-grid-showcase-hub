@@ -583,28 +583,35 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border max-h-[70vh] overflow-y-auto">
+          <nav className="md:hidden py-4 border-t border-border fixed inset-x-0 top-[95px] bottom-0 bg-background z-50 overflow-y-auto">
             
-            <div className="flex flex-col space-y-3">
+            {/* Mobile User Section - After header */}
+            {isBrasilPage && (
+              <div className="px-4 pb-4 border-b border-border mb-4">
+                <HeaderUserSection variant="mobile" onCloseMenu={() => setIsMenuOpen(false)} />
+              </div>
+            )}
+            
+            <div className="flex flex-col space-y-3 px-4">
               {navigation.map((item) => {
                 const getHoverColor = (name: string) => {
                   const colors: { [key: string]: string } = {
                     "All": "#575757",
-                    "Tech": "#03bfc0", 
+                    "Tech": "#009fa0", 
                     "Sports": "#ed5603",
-                    "Incredibles": "#5cc801",
+                    "Incredibles": "#469a00",
                     "Kids": "#8254d0",
-                    "Health": "#d8ad00",
+                    "Health": "#b29009",
                     "Home": "#bf0100",
                     "Best Sellers": "#575757",
-                    // Brasil navigation colors
+                    // Brasil navigation colors - darker tones for legibility
                     "Todas": "#575757",
                     "Casa": "#bf0100",
                     "Esportes": "#ed5603",
-                    "Saúde": "#d8ad00",
-                    "Incríveis": "#5cc801",
+                    "Saúde": "#b29009",
+                    "Incríveis": "#469a00",
                     "Brinquedos": "#8254d0",
-                    "+ Lojas": "#0ea5e9",
+                    "+ Lojas": "#575757",
                   };
                   return colors[name] || "#fbfbfb";
                 };
@@ -720,7 +727,7 @@ const Header = () => {
                                 : ""
                             }`}
                             style={{
-                              backgroundColor: isActive(page.href) ? "" : "#d8ad00"
+                              backgroundColor: isActive(page.href) ? "" : "#b29009"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -761,7 +768,7 @@ const Header = () => {
                                 : ""
                             }`}
                             style={{
-                              backgroundColor: isActive(page.href) ? "" : "#5cc801"
+                              backgroundColor: isActive(page.href) ? "" : "#469a00"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -802,7 +809,7 @@ const Header = () => {
                                 : ""
                             }`}
                             style={{
-                              backgroundColor: isActive(page.href) ? "" : "#03bfc0"
+                              backgroundColor: isActive(page.href) ? "" : "#009fa0"
                             }}
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -833,7 +840,7 @@ const Header = () => {
                               isActive(page.href)
                                 ? "text-primary"
                                 : page.color ? "text-white" : "text-foreground"
-                            }`}
+                            } ${page.name === "Premiação iNeed" ? "border border-white" : ""}`}
                             style={{
                               backgroundColor: isActive(page.href) ? "" : (page.color || undefined)
                             }}
@@ -875,43 +882,29 @@ const Header = () => {
               
 
               {/* ineed Info Mobile */}
-              <div className="px-2 py-1">
+              <div className="py-1">
                 <div className="font-omne-regular text-sm text-foreground font-medium mb-2">ineed Info</div>
                 <div className="flex flex-col space-y-3 pl-4">
-                  {infoPages.map((page) => {
-                    const getInfoHoverColor = (name: string) => {
-                      const colors: { [key: string]: string } = {
-                        "About Us": "#575757",
-                        "Contact": "#575757",
-                      };
-                      return colors[name] || "#fbfbfb";
-                    };
-
-                    return (
-                      <Link
-                        key={page.name}
-                        to={page.href}
-                        className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
-                          isActive(page.href)
-                            ? "text-primary"
-                            : ""
-                        }`}
-                        style={{
-                          backgroundColor: isActive(page.href) ? "" : getInfoHoverColor(page.name)
-                        }}
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {page.name}
-                      </Link>
-                    );
-                  })}
+                  {infoPages.map((page) => (
+                    <Link
+                      key={page.name}
+                      to={page.href}
+                      className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                        isActive(page.href)
+                          ? "text-primary"
+                          : ""
+                      }`}
+                      style={{
+                        backgroundColor: isActive(page.href) ? "" : "#575757"
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {page.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
-              {/* Mobile User Section - Footer of menu */}
-              {isBrasilPage && (
-                <HeaderUserSection variant="mobile" onCloseMenu={() => setIsMenuOpen(false)} />
-              )}
             </div>
           </nav>
         )}
