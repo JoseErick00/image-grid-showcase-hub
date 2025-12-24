@@ -3,6 +3,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 import HeaderUserSection from "./HeaderUserSection";
+import AppDownloadIcon from "./AppDownloadIcon";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -117,6 +118,13 @@ const Header = () => {
         <div className="flex flex-col items-center py-2 md:py-3 h-auto justify-center">
           {/* Logo + User Section Desktop */}
           <div className="relative w-full flex justify-center items-center mb-2">
+            {/* App Download Icon - Left side (Desktop) */}
+            {isBrasilPage && (
+              <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2">
+                <AppDownloadIcon variant="desktop" />
+              </div>
+            )}
+            
             <Link to={logoLink} className="flex items-center justify-center">
               <img 
                 src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
@@ -554,6 +562,13 @@ const Header = () => {
               )}
             </div>
           </nav>
+
+          {/* Mobile App Download Icon - Left side */}
+          {isBrasilPage && (
+            <div className="md:hidden absolute top-4 left-4">
+              <AppDownloadIcon variant="mobile" />
+            </div>
+          )}
 
           {/* Mobile menu button */}
           <div className="md:hidden absolute top-4 right-4">
