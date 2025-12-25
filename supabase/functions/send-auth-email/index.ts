@@ -7,9 +7,17 @@ import { MagicLinkEmail } from './_templates/magic-link.tsx'
 const resend = new Resend(Deno.env.get('RESEND_API_KEY') as string)
 const hookSecret = Deno.env.get('SEND_EMAIL_HOOK_SECRET') as string
 
+// Extract the secret part - Supabase format is "v1,whsec_..." but the library expects just "whsec_..."
+let secretToUse = hookSecret
+if (hookSecret && hookSecret.startsWith('v1,')) {
+  secretToUse = hookSecret.split(',')[1]
+  console.log('Extracted secret from Supabase format (removed v1, prefix)')
+}
+
 console.log('send-auth-email function started')
 console.log('RESEND_API_KEY exists:', !!Deno.env.get('RESEND_API_KEY'))
-console.log('SEND_EMAIL_HOOK_SECRET exists:', !!Deno.env.get('SEND_EMAIL_HOOK_SECRET'))
+console.log('SEND_EMAIL_HOOK_SECRET exists:', !!hookSecret)
+console.log('Secret format valid:', !!secretToUse && secretToUse.startsWith('whsec_'))
 
 Deno.serve(async (req) => {
   console.log('Received request:', req.method)
@@ -23,7 +31,7 @@ Deno.serve(async (req) => {
   console.log('Payload received, length:', payload.length)
   
   const headers = Object.fromEntries(req.headers)
-  const wh = new Webhook(hookSecret)
+  const wh = new Webhook(secretToUse)
   
   try {
     console.log('Verifying webhook signature...')
