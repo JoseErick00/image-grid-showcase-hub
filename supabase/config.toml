@@ -12,8 +12,8 @@ verify_jwt = false
 [functions.redeem-prize]
 verify_jwt = false
 
-# [functions.send-auth-email] - DISABLED: Using Office 365 SMTP instead
-# verify_jwt = false
+[functions.send-auth-email]
+verify_jwt = false
 
 [functions.check-email-exists]
 verify_jwt = false
