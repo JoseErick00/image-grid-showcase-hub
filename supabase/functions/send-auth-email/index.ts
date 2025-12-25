@@ -1,8 +1,5 @@
-import React from 'npm:react@18.3.1'
-import { Webhook } from 'https://esm.sh/standardwebhooks@1.0.0'
 import { Resend } from 'npm:resend@4.0.0'
-import { renderAsync } from 'npm:@react-email/components@0.0.22'
-import { MagicLinkEmail } from './_templates/magic-link.tsx'
+import { Webhook } from 'https://esm.sh/standardwebhooks@1.0.0'
 
 const resend = new Resend(Deno.env.get('RESEND_API_KEY') as string)
 const hookSecret = Deno.env.get('SEND_EMAIL_HOOK_SECRET') as string
@@ -11,81 +8,87 @@ const hookSecret = Deno.env.get('SEND_EMAIL_HOOK_SECRET') as string
 let secretToUse = hookSecret
 if (hookSecret && hookSecret.startsWith('v1,')) {
   secretToUse = hookSecret.split(',')[1]
-  console.log('Extracted secret from Supabase format (removed v1, prefix)')
 }
 
 console.log('send-auth-email function started')
-console.log('RESEND_API_KEY exists:', !!Deno.env.get('RESEND_API_KEY'))
-console.log('SEND_EMAIL_HOOK_SECRET exists:', !!hookSecret)
-console.log('Secret format valid:', !!secretToUse && secretToUse.startsWith('whsec_'))
 
 Deno.serve(async (req) => {
-  console.log('Received request:', req.method)
-  
   if (req.method !== 'POST') {
-    console.log('Method not allowed:', req.method)
     return new Response('Method not allowed', { status: 405 })
   }
 
   const payload = await req.text()
-  console.log('Payload received, length:', payload.length)
-  
   const headers = Object.fromEntries(req.headers)
   const wh = new Webhook(secretToUse)
   
   try {
-    console.log('Verifying webhook signature...')
     const {
       user,
       email_data: { token, token_hash, redirect_to, email_action_type },
     } = wh.verify(payload, headers) as {
-      user: {
-        email: string
-      }
+      user: { email: string }
       email_data: {
         token: string
         token_hash: string
         redirect_to: string
         email_action_type: string
-        site_url: string
-        token_new: string
-        token_hash_new: string
       }
     }
 
-    console.log('Webhook verified successfully')
-    console.log('User email:', user.email)
-    console.log('Email action type:', email_action_type)
-    console.log('Redirect to:', redirect_to)
+    console.log('Sending email to:', user.email, 'type:', email_action_type)
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? 'https://uwzsmfoxjfexodgblzfk.supabase.co'
-    
-    console.log('Rendering email template...')
-    const html = await renderAsync(
-      React.createElement(MagicLinkEmail, {
-        supabase_url: supabaseUrl,
-        token,
-        token_hash,
-        redirect_to,
-        email_action_type,
-      })
-    )
-    console.log('Email template rendered successfully')
+    const verifyLink = `${supabaseUrl}/auth/v1/verify?token=${token_hash}&type=${email_action_type}&redirect_to=${redirect_to}`
 
     // Determine subject based on action type
     let subject = 'Acesse sua conta iNeed Stores'
+    let actionText = 'acessar sua conta'
     if (email_action_type === 'signup') {
       subject = 'Confirme seu cadastro - iNeed Stores'
+      actionText = 'confirmar seu cadastro'
     } else if (email_action_type === 'recovery') {
       subject = 'Recupere sua senha - iNeed Stores'
-    } else if (email_action_type === 'magiclink') {
-      subject = 'Link de acesso - iNeed Stores'
+      actionText = 'recuperar sua senha'
     }
 
-    console.log('Sending email via Resend...')
-    console.log('Subject:', subject)
-    
-    const { data, error } = await resend.emails.send({
+    // Use plain HTML instead of React for faster rendering
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: #0a0a0a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0;">
+  <div style="max-width: 480px; margin: 0 auto; padding: 40px 24px;">
+    <h1 style="color: #ffffff; font-size: 28px; font-weight: bold; text-align: center; margin: 0 0 24px 0;">🛒 iNeed Stores</h1>
+    <p style="color: #e5e5e5; font-size: 16px; line-height: 24px; text-align: center; margin: 0 0 24px 0;">
+      Olá! Clique no botão abaixo para ${actionText}:
+    </p>
+    <div style="text-align: center; margin: 0 0 24px 0;">
+      <a href="${verifyLink}" target="_blank" style="background-color: #22c55e; border-radius: 8px; color: #ffffff; display: inline-block; font-size: 16px; font-weight: 600; text-decoration: none; padding: 14px 24px;">
+        Acessar minha conta
+      </a>
+    </div>
+    <p style="color: #a3a3a3; font-size: 14px; text-align: center; margin: 24px 0 14px 0;">
+      Ou copie e cole este código de acesso temporário:
+    </p>
+    <div style="background-color: #171717; border: 1px solid #262626; border-radius: 8px; padding: 16px; text-align: center;">
+      <code style="color: #22c55e; font-size: 24px; font-weight: bold; letter-spacing: 4px;">${token}</code>
+    </div>
+    <p style="color: #ababab; font-size: 14px; text-align: center; margin: 24px 0 16px 0;">
+      Se você não solicitou este acesso, pode ignorar este email com segurança.
+    </p>
+    <div style="border-top: 1px solid #262626; margin-top: 32px; padding-top: 24px; text-align: center;">
+      <p style="color: #525252; font-size: 12px; margin: 0;">
+        <a href="https://ineedstores.com" target="_blank" style="color: #898989; text-decoration: underline;">iNeed Stores</a> – As melhores ofertas para você!
+      </p>
+    </div>
+  </div>
+</body>
+</html>`
+
+    const { error } = await resend.emails.send({
       from: 'iNeed Stores <noreply@ineedstores.com>',
       to: [user.email],
       subject,
@@ -97,31 +100,18 @@ Deno.serve(async (req) => {
       throw error
     }
     
-    console.log('Email sent successfully:', JSON.stringify(data))
+    console.log('Email sent successfully')
     
   } catch (error) {
-    console.error('Error in send-auth-email function:', error)
-    console.error('Error message:', error.message)
-    console.error('Error stack:', error.stack)
-    
+    console.error('Error:', error.message)
     return new Response(
-      JSON.stringify({
-        error: {
-          http_code: error.code || 500,
-          message: error.message,
-        },
-      }),
-      {
-        status: 401,
-        headers: { 'Content-Type': 'application/json' },
-      }
+      JSON.stringify({ error: { http_code: 500, message: error.message } }),
+      { status: 401, headers: { 'Content-Type': 'application/json' } }
     )
   }
 
-  const responseHeaders = new Headers()
-  responseHeaders.set('Content-Type', 'application/json')
   return new Response(JSON.stringify({}), {
     status: 200,
-    headers: responseHeaders,
+    headers: { 'Content-Type': 'application/json' },
   })
 })
