@@ -38,16 +38,21 @@ Deno.serve(async (req) => {
     console.log('Sending email to:', user.email, 'type:', email_action_type)
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? 'https://uwzsmfoxjfexodgblzfk.supabase.co'
-    const verifyLink = `${supabaseUrl}/auth/v1/verify?token=${token_hash}&type=${email_action_type}&redirect_to=${redirect_to}`
+    const redirectUrl = redirect_to || 'https://www.ineedstores.com/brasil/premios'
+    const verifyLink = `${supabaseUrl}/auth/v1/verify?token=${token_hash}&type=${email_action_type}&redirect_to=${redirectUrl}`
 
-    // Determine subject based on action type
-    let subject = 'Acesse sua conta iNeed Stores'
+    // Determine subject and button text based on action type
+    let subject = 'Acesse sua conta - iNeed Stores'
+    let buttonText = 'Acessar minha conta'
     let actionText = 'acessar sua conta'
+    
     if (email_action_type === 'signup') {
       subject = 'Confirme seu cadastro - iNeed Stores'
+      buttonText = 'Confirmar meu cadastro'
       actionText = 'confirmar seu cadastro'
     } else if (email_action_type === 'recovery') {
       subject = 'Recupere sua senha - iNeed Stores'
+      buttonText = 'Recuperar minha senha'
       actionText = 'recuperar sua senha'
     }
 
@@ -67,21 +72,15 @@ Deno.serve(async (req) => {
     </p>
     <div style="text-align: center; margin: 0 0 24px 0;">
       <a href="${verifyLink}" target="_blank" style="background-color: #22c55e; border-radius: 8px; color: #ffffff; display: inline-block; font-size: 16px; font-weight: 600; text-decoration: none; padding: 14px 24px;">
-        Acessar minha conta
+        ${buttonText}
       </a>
-    </div>
-    <p style="color: #a3a3a3; font-size: 14px; text-align: center; margin: 24px 0 14px 0;">
-      Ou copie e cole este código de acesso temporário:
-    </p>
-    <div style="background-color: #171717; border: 1px solid #262626; border-radius: 8px; padding: 16px; text-align: center;">
-      <code style="color: #22c55e; font-size: 24px; font-weight: bold; letter-spacing: 4px;">${token}</code>
     </div>
     <p style="color: #ababab; font-size: 14px; text-align: center; margin: 24px 0 16px 0;">
       Se você não solicitou este acesso, pode ignorar este email com segurança.
     </p>
     <div style="border-top: 1px solid #262626; margin-top: 32px; padding-top: 24px; text-align: center;">
       <p style="color: #525252; font-size: 12px; margin: 0;">
-        <a href="https://ineedstores.com" target="_blank" style="color: #898989; text-decoration: underline;">iNeed Stores</a> – As melhores ofertas para você!
+        <a href="https://www.ineedstores.com" target="_blank" style="color: #898989; text-decoration: underline;">iNeed Stores</a> – As melhores ofertas para você!
       </p>
     </div>
   </div>
