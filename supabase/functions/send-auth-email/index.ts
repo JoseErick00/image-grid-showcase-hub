@@ -38,7 +38,8 @@ Deno.serve(async (req) => {
     console.log('Sending email to:', user.email, 'type:', email_action_type)
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? 'https://uwzsmfoxjfexodgblzfk.supabase.co'
-    const redirectUrl = redirect_to || 'https://www.ineedstores.com/brasil/premios'
+    // Default redirect to Brazilian domain - the main app domain
+    const redirectUrl = redirect_to || 'https://www.ineedbrasil.com.br/premios'
     const verifyLink = `${supabaseUrl}/auth/v1/verify?token=${token_hash}&type=${email_action_type}&redirect_to=${redirectUrl}`
 
     // Determine subject and button text based on action type

@@ -10,6 +10,7 @@ import { Loader2, Users, Mail } from "lucide-react";
 import SEO from "@/components/SEO";
 import { z } from "zod";
 import loginStars from "@/assets/login-stars.png";
+import { getAuthRedirectUrl, isBrasilDomain } from "@/hooks/useCurrentDomain";
 
 const emailSchema = z.string().email("Email inválido");
 const referralCodeSchema = z.string().max(8, "Código deve ter no máximo 8 caracteres").optional();
@@ -26,12 +27,18 @@ export default function Auth() {
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
 
+  // Get the correct redirect route based on domain
+  const getRedirectRoute = () => {
+    const onBrasilDomain = isBrasilDomain();
+    return onBrasilDomain ? '/premios' : '/brasil/premios';
+  };
+
   // Check if user is already logged in
   useEffect(() => {
     const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        const redirectTo = searchParams.get("redirect") || "/brasil/premios";
+        const redirectTo = searchParams.get("redirect") || getRedirectRoute();
         navigate(redirectTo);
       }
     };
@@ -39,7 +46,7 @@ export default function Auth() {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (session) {
-        const redirectTo = searchParams.get("redirect") || "/brasil/premios";
+        const redirectTo = searchParams.get("redirect") || getRedirectRoute();
         navigate(redirectTo);
       }
     });
@@ -89,7 +96,7 @@ export default function Auth() {
     setLoading(true);
 
     try {
-      const redirectTo = `${window.location.origin}/brasil/premios`;
+      const redirectTo = getAuthRedirectUrl();
       
       // Call instant-login edge function
       const response = await supabase.functions.invoke("instant-login", {
@@ -160,7 +167,7 @@ export default function Auth() {
         localStorage.setItem('pending_referral_code', referralCode);
       }
 
-      const redirectUrl = `${window.location.origin}/brasil/premios`;
+      const redirectUrl = getAuthRedirectUrl();
 
       // Send confirmation email for new user
       const { error } = await supabase.auth.signInWithOtp({
@@ -198,7 +205,7 @@ export default function Auth() {
   const handleResendEmail = async () => {
     setLoading(true);
     try {
-      const redirectUrl = `${window.location.origin}/brasil/premios`;
+      const redirectUrl = getAuthRedirectUrl();
       
       const { error } = await supabase.auth.signInWithOtp({
         email,
