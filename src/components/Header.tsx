@@ -4,6 +4,7 @@ import { useState } from "react";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 import HeaderUserSection from "./HeaderUserSection";
 import AppDownloadIcon from "./AppDownloadIcon";
+import { isBrasilDomain } from "@/hooks/useCurrentDomain";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,12 @@ const Header = () => {
   const [lojasDropdownOpen, setLojasDropdownOpen] = useState(false);
   const location = useLocation();
 
-  const isBrasilPage = location.pathname.startsWith('/brasil');
+  // Detect if on Brazilian domain or Brasil route
+  const onBrasilDomain = isBrasilDomain();
+  const isBrasilPage = onBrasilDomain || location.pathname.startsWith('/brasil');
+  
+  // Route prefix - empty on Brazilian domain, '/brasil' on USA domain
+  const brasilPrefix = onBrasilDomain ? '' : '/brasil';
 
   const defaultNavigation = [
     { name: "All", href: "/" },
@@ -31,22 +37,24 @@ const Header = () => {
   ];
 
   const brasilNavigation = [
-    { name: "Todas", href: "/brasil" },
-    { name: "Casa", href: "/brasil/casa" },
-    { name: "Esportes", href: "/brasil/esportes" },
-    { name: "Saúde", href: "/brasil/saude" },
-    { name: "Incríveis", href: "/brasil/incriveis" },
-    { name: "Tech", href: "/brasil/tech" },
-    { name: "Brinquedos", href: "/brasil/kids" },
-    { name: "+ Lojas", href: "/brasil/lojas" },
+    { name: "Todas", href: `${brasilPrefix}` || '/' },
+    { name: "Casa", href: `${brasilPrefix}/casa` },
+    { name: "Esportes", href: `${brasilPrefix}/esportes` },
+    { name: "Saúde", href: `${brasilPrefix}/saude` },
+    { name: "Incríveis", href: `${brasilPrefix}/incriveis` },
+    { name: "Tech", href: `${brasilPrefix}/tech` },
+    { name: "Brinquedos", href: `${brasilPrefix}/kids` },
+    { name: "+ Lojas", href: `${brasilPrefix}/lojas` },
   ];
 
   const lojasPages = [
-    { name: "Shopee", href: "/brasil/lojas/shopee", color: "#EE4D2D" },
-    { name: "AliExpress", href: "/brasil/lojas/aliexpress", color: "#E43225" },
-    { name: "Amazon", href: "/brasil/lojas/amazon", color: "#FF9900" },
-    { name: "Alibaba", href: "/brasil/lojas/alibaba", color: "#FF6A00" },
-    { name: "Premiação iNeed", href: "/brasil/premios", color: "" },
+    { name: "Shopee", href: `${brasilPrefix}/lojas/shopee`, color: "#EE4D2D" },
+    { name: "AliExpress", href: `${brasilPrefix}/lojas/aliexpress`, color: "#E43225" },
+    { name: "Amazon", href: `${brasilPrefix}/lojas/amazon`, color: "#FF9900" },
+    { name: "Alibaba", href: `${brasilPrefix}/lojas/alibaba`, color: "#FF6A00" },
+    { name: "Premiação iNeed", href: `${brasilPrefix}/premios`, color: "" },
+    // Cross-link to USA catalog
+    { name: "Catálogo USA", href: onBrasilDomain ? "/usa" : "https://www.ineedstores.com", color: "#3B5998", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png", isExternal: !onBrasilDomain },
   ];
 
   const navigation = isBrasilPage ? brasilNavigation : defaultNavigation;
@@ -60,57 +68,59 @@ const Header = () => {
 
   const infoPages = isBrasilPage 
     ? [
-        { name: "Sobre a iNeed", href: "/brasil/sobre" },
-        { name: "Contato", href: "/brasil/contato" },
+        { name: "Sobre a iNeed", href: `${brasilPrefix}/sobre` },
+        { name: "Contato", href: `${brasilPrefix}/contato` },
       ]
     : [
         { name: "About Us", href: "/about" },
         { name: "Contact", href: "/contact" },
+        // Cross-link to Brasil App
+        { name: "iNeed Brazil App", href: "https://www.ineedbrasil.com.br", flag: "/lovable-uploads/515d52d2-28f4-4483-aca5-7070e4ea8fb5.png", isExternal: true },
       ];
 
   const casaPages = [
-    { name: "Coisas legais para Casa", href: "/brasil/casa" },
-    { name: "Seleção para Sala", href: "/brasil/casa/sel-sala" },
-    { name: "Seleção para Cozinha", href: "/brasil/casa/sel-cozinha" },
-    { name: "Seleção para o Quarto", href: "/brasil/casa/sel-quarto" },
-    { name: "Seleção para o Banheiro", href: "/brasil/casa/sel-banheiro" },
+    { name: "Coisas legais para Casa", href: `${brasilPrefix}/casa` },
+    { name: "Seleção para Sala", href: `${brasilPrefix}/casa/sel-sala` },
+    { name: "Seleção para Cozinha", href: `${brasilPrefix}/casa/sel-cozinha` },
+    { name: "Seleção para o Quarto", href: `${brasilPrefix}/casa/sel-quarto` },
+    { name: "Seleção para o Banheiro", href: `${brasilPrefix}/casa/sel-banheiro` },
   ];
 
   const esportesPages = [
-    { name: "Coisas legais - Esportes", href: "/brasil/esportes" },
-    { name: "Seleção para Academia", href: "/brasil/esportes/sel-academia" },
-    { name: "Seleção para Corredores", href: "/brasil/esportes/sel-corredores" },
-    { name: "Seleção - Aquáticos", href: "/brasil/esportes/sel-aquaticos" },
-    { name: "Seleção - Time em Campo", href: "/brasil/esportes/sel-time-campo" },
+    { name: "Coisas legais - Esportes", href: `${brasilPrefix}/esportes` },
+    { name: "Seleção para Academia", href: `${brasilPrefix}/esportes/sel-academia` },
+    { name: "Seleção para Corredores", href: `${brasilPrefix}/esportes/sel-corredores` },
+    { name: "Seleção - Aquáticos", href: `${brasilPrefix}/esportes/sel-aquaticos` },
+    { name: "Seleção - Time em Campo", href: `${brasilPrefix}/esportes/sel-time-campo` },
   ];
 
   const saudePages = [
-    { name: "Coisas legais para saúde", href: "/brasil/saude" },
-    { name: "Seleção - Cuidado com o rosto", href: "/brasil/saude/sel-cuidado-rosto" },
-    { name: "Seleção para o Corpo", href: "/brasil/saude/sel-corpo" },
-    { name: "Seleção de cremes 'Gringos'", href: "/brasil/saude/sel-cremes-gringos" },
+    { name: "Coisas legais para saúde", href: `${brasilPrefix}/saude` },
+    { name: "Seleção - Cuidado com o rosto", href: `${brasilPrefix}/saude/sel-cuidado-rosto` },
+    { name: "Seleção para o Corpo", href: `${brasilPrefix}/saude/sel-corpo` },
+    { name: "Seleção de cremes 'Gringos'", href: `${brasilPrefix}/saude/sel-cremes-gringos` },
   ];
 
   const incriveisPages = [
-    { name: "Achados incríveis da internet", href: "/brasil/incriveis" },
-    { name: "Seleção OS INCRÍVEIS 01", href: "/brasil/incriveis/sel-incriveis-01" },
-    { name: "Seleção OS INCRÍVEIS 02", href: "/brasil/incriveis/sel-incriveis-02" },
-    { name: "Seleção OS INCRÍVEIS 03", href: "/brasil/incriveis/sel-incriveis-03" },
-    { name: "Seleção OS INCRÍVEIS 04", href: "/brasil/incriveis/sel-incriveis-04" },
-    { name: "Seleção - Calçados Femininos", href: "/brasil/incriveis/sel-calcados-femininos" },
-    { name: "Seleção - Calçados Masculinos", href: "/brasil/incriveis/sel-calcados-masculinos" },
-    { name: "Seleção para acampamentos", href: "/brasil/incriveis/sel-acampamentos" },
-    { name: "Seleção amantes de Praia", href: "/brasil/incriveis/sel-praia" },
+    { name: "Achados incríveis da internet", href: `${brasilPrefix}/incriveis` },
+    { name: "Seleção OS INCRÍVEIS 01", href: `${brasilPrefix}/incriveis/sel-incriveis-01` },
+    { name: "Seleção OS INCRÍVEIS 02", href: `${brasilPrefix}/incriveis/sel-incriveis-02` },
+    { name: "Seleção OS INCRÍVEIS 03", href: `${brasilPrefix}/incriveis/sel-incriveis-03` },
+    { name: "Seleção OS INCRÍVEIS 04", href: `${brasilPrefix}/incriveis/sel-incriveis-04` },
+    { name: "Seleção - Calçados Femininos", href: `${brasilPrefix}/incriveis/sel-calcados-femininos` },
+    { name: "Seleção - Calçados Masculinos", href: `${brasilPrefix}/incriveis/sel-calcados-masculinos` },
+    { name: "Seleção para acampamentos", href: `${brasilPrefix}/incriveis/sel-acampamentos` },
+    { name: "Seleção amantes de Praia", href: `${brasilPrefix}/incriveis/sel-praia` },
   ];
 
   const techPages = [
-    { name: "Coisas legais de Tech", href: "/brasil/tech" },
-    { name: "Seleção Fones de Ouvido", href: "/brasil/tech/sel-fones-ouvido" },
-    { name: "Seleção de Tradutores", href: "/brasil/tech/sel-tradutores" },
+    { name: "Coisas legais de Tech", href: `${brasilPrefix}/tech` },
+    { name: "Seleção Fones de Ouvido", href: `${brasilPrefix}/tech/sel-fones-ouvido` },
+    { name: "Seleção de Tradutores", href: `${brasilPrefix}/tech/sel-tradutores` },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
-  const logoLink = isBrasilPage ? '/brasil' : '/';
+  const isActive = (path: string) => location.pathname === path || (path === '' && location.pathname === '/');
+  const logoLink = isBrasilPage ? (brasilPrefix || '/') : '/';
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
