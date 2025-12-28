@@ -70,11 +70,13 @@ const Header = () => {
     ? [
         { name: "Sobre a iNeed", href: `${brasilPrefix}/sobre` },
         { name: "Contato", href: `${brasilPrefix}/contato` },
+        // Cross-link to USA catalog with flag
+        { name: "Catálogo USA", href: "https://www.ineedstores.com", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png", isExternal: true },
       ]
     : [
         { name: "About Us", href: "/about" },
         { name: "Contact", href: "/contact" },
-        // Cross-link to Brasil App
+        // Cross-link to Brasil App with flag
         { name: "iNeed Brazil App", href: "https://www.ineedbrasil.com.br", flag: "/lovable-uploads/515d52d2-28f4-4483-aca5-7070e4ea8fb5.png", isExternal: true },
       ];
 
@@ -121,6 +123,12 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path || (path === '' && location.pathname === '/');
   const logoLink = isBrasilPage ? (brasilPrefix || '/') : '/';
+  
+  // Helper to check if current path starts with a category (works with or without /brasil/ prefix)
+  const isInCategory = (category: string) => {
+    const categoryPath = `${brasilPrefix}/${category}`;
+    return location.pathname.startsWith(`${categoryPath}/`) || location.pathname === categoryPath;
+  };
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
@@ -188,19 +196,19 @@ const Header = () => {
                   >
                     <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
-                        isActive(item.href) || location.pathname.startsWith('/brasil/casa/')
+                        isActive(item.href) || isInCategory('casa')
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
                       onClick={() => setCasaDropdownOpen((prev) => !prev)}
                       onMouseEnter={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/casa/')) {
+                        if (!isActive(item.href) && !isInCategory('casa')) {
                           e.currentTarget.style.backgroundColor = getHoverColor(item.name);
                           e.currentTarget.style.color = "white";
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/casa/')) {
+                        if (!isActive(item.href) && !isInCategory('casa')) {
                           e.currentTarget.style.backgroundColor = "";
                           e.currentTarget.style.color = "";
                         }
@@ -242,19 +250,19 @@ const Header = () => {
                   >
                     <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
-                        isActive(item.href) || location.pathname.startsWith('/brasil/esportes/')
+                        isActive(item.href) || isInCategory('esportes')
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
                       onClick={() => setEsportesDropdownOpen((prev) => !prev)}
                       onMouseEnter={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/esportes/')) {
+                        if (!isActive(item.href) && !isInCategory('esportes')) {
                           e.currentTarget.style.backgroundColor = getHoverColor(item.name);
                           e.currentTarget.style.color = "white";
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/esportes/')) {
+                        if (!isActive(item.href) && !isInCategory('esportes')) {
                           e.currentTarget.style.backgroundColor = "";
                           e.currentTarget.style.color = "";
                         }
@@ -296,19 +304,19 @@ const Header = () => {
                   >
                     <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
-                        isActive(item.href) || location.pathname.startsWith('/brasil/saude/')
+                        isActive(item.href) || isInCategory('saude')
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
                       onClick={() => setSaudeDropdownOpen((prev) => !prev)}
                       onMouseEnter={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/saude/')) {
+                        if (!isActive(item.href) && !isInCategory('saude')) {
                           e.currentTarget.style.backgroundColor = getHoverColor(item.name);
                           e.currentTarget.style.color = "white";
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/saude/')) {
+                        if (!isActive(item.href) && !isInCategory('saude')) {
                           e.currentTarget.style.backgroundColor = "";
                           e.currentTarget.style.color = "";
                         }
@@ -350,19 +358,19 @@ const Header = () => {
                   >
                     <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
-                        isActive(item.href) || location.pathname.startsWith('/brasil/incriveis/')
+                        isActive(item.href) || isInCategory('incriveis')
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
                       onClick={() => setIncriveisDropdownOpen((prev) => !prev)}
                       onMouseEnter={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/incriveis/')) {
+                        if (!isActive(item.href) && !isInCategory('incriveis')) {
                           e.currentTarget.style.backgroundColor = getHoverColor(item.name);
                           e.currentTarget.style.color = "white";
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/incriveis/')) {
+                        if (!isActive(item.href) && !isInCategory('incriveis')) {
                           e.currentTarget.style.backgroundColor = "";
                           e.currentTarget.style.color = "";
                         }
@@ -404,19 +412,19 @@ const Header = () => {
                   >
                     <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
-                        isActive(item.href) || location.pathname.startsWith('/brasil/tech/')
+                        isActive(item.href) || isInCategory('tech')
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
                       onClick={() => setTechDropdownOpen((prev) => !prev)}
                       onMouseEnter={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/tech/')) {
+                        if (!isActive(item.href) && !isInCategory('tech')) {
                           e.currentTarget.style.backgroundColor = getHoverColor(item.name);
                           e.currentTarget.style.color = "white";
                         }
                       }}
                       onMouseLeave={(e) => {
-                        if (!isActive(item.href) && !location.pathname.startsWith('/brasil/tech/')) {
+                        if (!isActive(item.href) && !isInCategory('tech')) {
                           e.currentTarget.style.backgroundColor = "";
                           e.currentTarget.style.color = "";
                         }
@@ -458,7 +466,7 @@ const Header = () => {
                   >
                     <button
                       className={`font-omne-regular text-sm px-3 py-2 rounded transition-all duration-200 flex items-center gap-1 ${
-                        location.pathname.startsWith('/brasil/lojas/')
+                        isInCategory('lojas')
                           ? "text-primary"
                           : "text-muted-foreground hover:text-white"
                       }`}
@@ -559,14 +567,30 @@ const Header = () => {
                   onMouseLeave={() => setInfoDropdownOpen(false)}
                 >
                   {infoPages.map((page) => (
-                    <Link
-                      key={page.name}
-                      to={page.href}
-                      className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
-                      onClick={() => setInfoDropdownOpen(false)}
-                    >
-                      {page.name}
-                    </Link>
+                    page.isExternal ? (
+                      <a
+                        key={page.name}
+                        href={page.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
+                        onClick={() => setInfoDropdownOpen(false)}
+                      >
+                        {page.flag && (
+                          <img src={page.flag} alt="" className="w-5 h-5 rounded-sm object-cover" />
+                        )}
+                        {page.name}
+                      </a>
+                    ) : (
+                      <Link
+                        key={page.name}
+                        to={page.href}
+                        className="block px-4 py-2 text-sm font-omne-regular text-foreground bg-muted/30 hover:bg-muted hover:text-foreground transition-colors"
+                        onClick={() => setInfoDropdownOpen(false)}
+                      >
+                        {page.name}
+                      </Link>
+                    )
                   ))}
                 </div>
               )}
@@ -633,12 +657,12 @@ const Header = () => {
                       <Link
                         to={item.href}
                         className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white block ${
-                          isActive(item.href) || location.pathname.startsWith('/brasil/casa/')
+                          isActive(item.href) || isInCategory('casa')
                             ? "text-primary"
                             : ""
                         }`}
                         style={{
-                          backgroundColor: isActive(item.href) || location.pathname.startsWith('/brasil/casa/') ? "" : getHoverColor(item.name)
+                          backgroundColor: isActive(item.href) || isInCategory('casa') ? "" : getHoverColor(item.name)
                         }}
                         onClick={() => setIsMenuOpen(false)}
                       >

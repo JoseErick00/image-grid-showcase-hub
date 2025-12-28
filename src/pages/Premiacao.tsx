@@ -7,6 +7,7 @@ import PlatformRegister from '@/components/campaigns/PlatformRegister';
 import TrustBadges from '@/components/TrustBadges';
 import { Button } from '@/components/ui/button';
 import UserProgressCard from '@/components/gamification/UserProgressCard';
+import { useBrasilRoute, isBrasilDomain } from '@/hooks/useCurrentDomain';
 // Import hero banners
 import heroDesktop from '@/assets/premiacao/hero-desktop.jpg';
 import heroTablet from '@/assets/premiacao/hero-tablet.jpg';
@@ -39,6 +40,11 @@ const sectionImages: Record<string, { desktop: string; mobile: string }> = {
 import { premiacaoSections } from './campaigns/data/premiacaoData';
 
 const Premiacao = () => {
+  const routes = useBrasilRoute();
+  const onBrasilDomain = isBrasilDomain();
+  const canonicalUrl = onBrasilDomain 
+    ? 'https://www.ineedbrasil.com.br/premios' 
+    : 'https://www.ineedstores.com/brasil/premios';
   const handleShare = async () => {
     try {
       const url = window.location.href;
@@ -72,7 +78,7 @@ const Premiacao = () => {
         title="Premiação iNeed - Ganhe Produtos Compartilhando"
         description="Participe da premiação iNeed! Compartilhe produtos e indique amigos para ganhar moedas e trocar por prêmios incríveis da nossa loja."
         keywords="premiação, prêmios, moedas, compartilhar, indicar amigos, ganhar produtos, iNeed, loja de presentes, gadgets"
-        canonicalUrl="https://ineedstore.com.br/brasil/premios"
+        canonicalUrl={canonicalUrl}
       />
 
       {/* Hero Banner */}
@@ -253,7 +259,7 @@ const Premiacao = () => {
             className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
             asChild
           >
-            <Link to="/brasil" className="flex items-center gap-2">
+            <Link to={routes.home} className="flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
               Voltar para Brasil
             </Link>

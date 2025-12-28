@@ -103,18 +103,18 @@ export function useCurrentDomain(): DomainConfig {
  * Get the correct route for Brasil pages based on current domain
  */
 export function useBrasilRoute() {
-  const { isBrasil } = useCurrentDomain();
-  const hostname = window.location.hostname;
-  const isBrasilDomain = BRASIL_DOMAINS.some(domain => 
+  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const isBrasilDomainCheck = BRASIL_DOMAINS.some(domain => 
     hostname === domain || hostname.endsWith(`.${domain}`)
   );
   
   return useMemo(() => {
     // On Brazilian domain, routes don't need /brasil/ prefix
-    const prefix = isBrasilDomain ? '' : '/brasil';
+    const prefix = isBrasilDomainCheck ? '' : '/brasil';
     
     return {
       prefix,
+      isBrasilDomain: isBrasilDomainCheck,
       home: prefix || '/',
       casa: `${prefix}/casa`,
       esportes: `${prefix}/esportes`,
@@ -129,7 +129,18 @@ export function useBrasilRoute() {
       lojas: (platform: string) => `${prefix}/lojas/${platform}`,
       campanha: (category: string, slug: string) => `${prefix}/${category}/${slug}`,
     };
-  }, [isBrasilDomain]);
+  }, [isBrasilDomainCheck]);
+}
+
+/**
+ * Get prefix for Brasil routes (non-hook version for use in components)
+ */
+export function getBrasilPrefix(): string {
+  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const isBrasilDomainCheck = BRASIL_DOMAINS.some(domain => 
+    hostname === domain || hostname.endsWith(`.${domain}`)
+  );
+  return isBrasilDomainCheck ? '' : '/brasil';
 }
 
 /**

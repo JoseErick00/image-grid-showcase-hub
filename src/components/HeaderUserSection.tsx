@@ -4,6 +4,7 @@ import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NotificationToggle } from "@/components/NotificationToggle";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
+import { useBrasilRoute } from "@/hooks/useCurrentDomain";
 
 // Level icons
 import colegasIcon from '@/assets/levels/colegas.png';
@@ -33,11 +34,12 @@ interface HeaderUserSectionProps {
 const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSectionProps) => {
   const { isAuthenticated, user, gamification, loading, signOut } = useGamification();
   const navigate = useNavigate();
+  const routes = useBrasilRoute();
 
   const handleLogout = async () => {
     await signOut();
     onCloseMenu?.();
-    navigate('/auth');
+    navigate(routes.auth);
   };
 
   const handleLoginClick = () => {
@@ -68,7 +70,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
           className="border-white text-white hover:bg-white hover:text-[#434343] font-omne-medium"
           asChild
         >
-          <Link to="/auth" onClick={handleLoginClick}>
+          <Link to={routes.auth} onClick={handleLoginClick}>
             Comece a ganhar!
           </Link>
         </Button>

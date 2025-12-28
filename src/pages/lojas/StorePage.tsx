@@ -11,8 +11,10 @@ import { Button } from '@/components/ui/button';
 import LikeButton from '@/components/ui/LikeButton';
 import ShareButton from '@/components/ui/ShareButton';
 import { useGridLayout } from '@/hooks/useGridLayout';
+import { useBrasilRoute } from '@/hooks/useCurrentDomain';
 
 const StorePage = () => {
+  const routes = useBrasilRoute();
   const { platform } = useParams<{ platform: string }>();
   const [currentPage, setCurrentPage] = useState(1);
   
@@ -174,7 +176,7 @@ const StorePage = () => {
         
         {/* Back button */}
         <div className="flex justify-center mt-8 mb-16">
-          <Link to="/brasil">
+          <Link to={routes.home}>
             <Button variant="outline" className="flex items-center gap-2 text-foreground">
               <ArrowLeft size={20} />
               Voltar para Brasil

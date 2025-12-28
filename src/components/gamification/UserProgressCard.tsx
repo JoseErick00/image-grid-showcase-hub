@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import RedemptionModal from "./RedemptionModal";
+import { useBrasilRoute } from "@/hooks/useCurrentDomain";
 
 // Level icons
 import colegasIcon from '@/assets/levels/colegas.png';
@@ -52,6 +53,7 @@ export default function UserProgressCard() {
   const [referrerCode, setReferrerCode] = useState<string | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
+  const routes = useBrasilRoute();
 
   // Fetch referrer's code if user was referred
   useEffect(() => {
@@ -100,7 +102,7 @@ export default function UserProgressCard() {
         <Button
           variant="outline"
           className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-semibold"
-          onClick={() => navigate("/auth")}
+          onClick={() => navigate(routes.auth)}
         >
           Entrar / Cadastrar
         </Button>
@@ -271,7 +273,7 @@ export default function UserProgressCard() {
           <Button
             variant="outline"
             className="w-full border-white text-white bg-transparent hover:bg-white/10 font-omne-semibold"
-            onClick={() => navigate("/brasil")}
+            onClick={() => navigate(routes.home)}
           >
             <Gift className="w-4 h-4 mr-2" />
             Continue compartilhando!

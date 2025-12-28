@@ -2,11 +2,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mail, Phone, Facebook, Instagram, Twitter } from "lucide-react";
 import ContactForm from "./ContactForm";
+import { useBrasilRoute, isBrasilDomain } from "@/hooks/useCurrentDomain";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
-  const isBrasilPage = location.pathname.startsWith('/brasil');
+  const routes = useBrasilRoute();
+  const onBrasilDomain = isBrasilDomain();
+  const isBrasilPage = onBrasilDomain || location.pathname.startsWith('/brasil');
 
   const footerLinks = [
     { name: "Home", href: "/" },
@@ -21,14 +24,14 @@ const Footer = () => {
   ];
 
   const brasilFooterLinks = [
-    { name: "Casa", href: "/brasil/casa" },
-    { name: "Esportes", href: "/brasil/esportes" },
-    { name: "Saúde", href: "/brasil/saude" },
-    { name: "Incríveis", href: "/brasil/incriveis" },
-    { name: "Tecnologia", href: "/brasil/tech" },
-    { name: "Brinquedos", href: "/brasil/kids" },
-    { name: "Sobre Nós", href: "/brasil/sobre" },
-    { name: "Contato", href: "/brasil/contato" },
+    { name: "Casa", href: routes.casa },
+    { name: "Esportes", href: routes.esportes },
+    { name: "Saúde", href: routes.saude },
+    { name: "Incríveis", href: routes.incriveis },
+    { name: "Tecnologia", href: routes.tech },
+    { name: "Brinquedos", href: routes.kids },
+    { name: "Sobre Nós", href: routes.sobre },
+    { name: "Contato", href: routes.contato },
   ];
 
   const currentFooterLinks = isBrasilPage ? brasilFooterLinks : footerLinks;
