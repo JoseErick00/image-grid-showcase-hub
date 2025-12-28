@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useBrasilRoute } from "@/hooks/useCurrentDomain";
 
 // Import banner images for each banner number
 import banner01Desktop from "@/assets/gamification/banner_01_desktop.jpg";
@@ -99,6 +100,7 @@ interface GamificationPromoBannerProps {
 
 function GamificationPromoBanner({ bannerNumber, className = "" }: GamificationPromoBannerProps) {
   const images = bannerImages[bannerNumber];
+  const routes = useBrasilRoute();
   
   if (!images) {
     console.warn("GamificationPromoBanner: Banner number not found:", bannerNumber);
@@ -107,7 +109,7 @@ function GamificationPromoBanner({ bannerNumber, className = "" }: GamificationP
 
   return (
     <div className={`relative w-full max-w-[1200px] mx-auto ${className}`}>
-      <Link to="/brasil/premios" className="block overflow-hidden rounded-lg">
+      <Link to={routes.premios} className="block overflow-hidden rounded-lg">
         <picture>
           <source media="(min-width: 1024px)" srcSet={images.desktop} />
           <source media="(min-width: 768px)" srcSet={images.tablet} />
