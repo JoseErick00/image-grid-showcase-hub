@@ -11,6 +11,7 @@ import { type Platform } from '@/utils/platformLogos';
 import CategoryBannerGrid from './CategoryBannerGrid';
 import GamificationPromoBanner from '@/components/GamificationPromoBanner';
 import SectionSpacer from '@/components/SectionSpacer';
+import { useBrasilRoute } from '@/hooks/useCurrentDomain';
 
 interface NavButton {
   label: string;
@@ -68,6 +69,29 @@ interface CampaignTemplateProps {
 }
 
 const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
+  const routes = useBrasilRoute();
+
+  const normalizeBrasilLink = (url: string) => {
+    if (!url) return routes.casa;
+    if (/^https?:\/\//i.test(url)) return url;
+
+    // On Brazilian domain: strip '/brasil' prefix
+    if (routes.prefix === '') {
+      return url.replace(/^\/brasil(\/|$)/, '/');
+    }
+
+    // On USA domain: ensure '/brasil' prefix for Brasil routes
+    if (routes.prefix === '/brasil') {
+      if (url === '/') return '/brasil';
+      if (url.startsWith('/brasil')) return url;
+      return `/brasil${url.startsWith('/') ? url : `/${url}`}`;
+    }
+
+    return url;
+  };
+
+  const backHref = normalizeBrasilLink(config.backLink?.url || routes.casa);
+
   const handleShare = async () => {
     try {
       const url = window.location.href;
@@ -240,9 +264,9 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
             className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white"
             asChild
           >
-            <Link to={config.backLink?.url || "/brasil/casa"} className="flex items-center gap-2">
+            <Link to={backHref} className="flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
-              {config.backLink?.label || "Voltar para Brasil Casa"}
+              {config.backLink?.label || "Voltar"}
             </Link>
           </Button>
 
