@@ -4,6 +4,7 @@ import TrustBadges from "@/components/TrustBadges";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
 import CategoryBannerGrid from "@/components/campaigns/CategoryBannerGrid";
+import { useBrasilRoute } from "@/hooks/useCurrentDomain";
 
 // Import banner images
 import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
@@ -17,6 +18,8 @@ import logoAlibaba from "@/assets/brasil/logo-alibaba.png";
 
 const Brasil = () => {
   const isMobile = useIsMobile();
+  const routes = useBrasilRoute();
+
   const handleShare = async () => {
     try {
       const url = window.location.href;
@@ -56,40 +59,40 @@ const Brasil = () => {
 
   // Category data with links
   const categories = [
-    { 
-      image: "/assets/categoria-casa.jpg", 
-      alt: "Casa", 
-      link: "/brasil/casa",
+    {
+      image: "/assets/categoria-casa.jpg",
+      alt: "Casa",
+      link: routes.casa,
       description: "A vida inteligente começa em casa."
     },
-    { 
-      image: "/assets/categoria-esportes.jpg", 
-      alt: "Esportes", 
-      link: "/brasil/esportes",
+    {
+      image: "/assets/categoria-esportes.jpg",
+      alt: "Esportes",
+      link: routes.esportes,
       description: "Gadgets legais. Movimentos mais inteligentes."
     },
-    { 
-      image: "/assets/categoria-saude.jpg", 
-      alt: "Saúde", 
-      link: "/brasil/saude",
+    {
+      image: "/assets/categoria-saude.jpg",
+      alt: "Saúde",
+      link: routes.saude,
       description: "Autocuidado mais inteligente."
     },
-    { 
-      image: "/assets/categoria-incriveis.jpg", 
-      alt: "Incríveis", 
-      link: "/brasil/incriveis",
+    {
+      image: "/assets/categoria-incriveis.jpg",
+      alt: "Incríveis",
+      link: routes.incriveis,
       description: "De \"O que é isso?\" para \"Eu preciso disso\"."
     },
-    { 
-      image: "/assets/categoria-tech.jpg", 
-      alt: "Tech", 
-      link: "/brasil/tech",
+    {
+      image: "/assets/categoria-tech.jpg",
+      alt: "Tech",
+      link: routes.tech,
       description: "Sua dose diária de tecnologia de ponta."
     },
-    { 
-      image: "/assets/categoria-brinquedos.jpg", 
-      alt: "Brinquedos", 
-      link: "/brasil/kids",
+    {
+      image: "/assets/categoria-brinquedos.jpg",
+      alt: "Brinquedos",
+      link: routes.kids,
       description: "Brinquedos legais, achados inteligentes, diversão sem fim."
     },
   ];
