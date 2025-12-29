@@ -53,8 +53,6 @@ const Header = () => {
     { name: "Amazon", href: `${brasilPrefix}/lojas/amazon`, color: "#FF9900" },
     { name: "Alibaba", href: `${brasilPrefix}/lojas/alibaba`, color: "#FF6A00" },
     { name: "Premiação iNeed", href: `${brasilPrefix}/premios`, color: "" },
-    // Cross-link to USA catalog
-    { name: "Catálogo USA", href: onBrasilDomain ? "/usa" : "https://www.ineedstores.com", color: "#3B5998", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png", isExternal: !onBrasilDomain },
   ];
 
   const navigation = isBrasilPage ? brasilNavigation : defaultNavigation;
@@ -71,7 +69,7 @@ const Header = () => {
         { name: "Sobre a iNeed", href: `${brasilPrefix}/sobre` },
         { name: "Contato", href: `${brasilPrefix}/contato` },
         // Cross-link to USA catalog with flag
-        { name: "Catálogo USA", href: "https://www.ineedstores.com", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png", isExternal: true },
+        { name: "Catálogo Internacional", href: "https://www.ineedstores.com", flag: "/lovable-uploads/f1c4acf5-a397-42d8-bdbb-63ea2ef51d54.png", isExternal: true },
       ]
     : [
         { name: "About Us", href: "/about" },
