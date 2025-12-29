@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => ({
         display: 'standalone',
         orientation: 'portrait',
         scope: '/',
-        start_url: '/brasil',
+        start_url: '/',
         icons: [
           {
             src: 'pwa-192x192.png',
