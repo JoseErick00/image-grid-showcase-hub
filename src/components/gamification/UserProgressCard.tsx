@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import RedemptionModal from "./RedemptionModal";
 import { useBrasilRoute } from "@/hooks/useCurrentDomain";
+import loginStars from "@/assets/login-stars.png";
 
 // Level icons
 import colegasIcon from '@/assets/levels/colegas.png';
@@ -92,16 +93,15 @@ export default function UserProgressCard() {
   if (!isAuthenticated) {
     return (
       <div className="bg-card border border-border rounded-2xl p-6 text-center">
-        <Gift className="w-12 h-12 text-primary mx-auto mb-4" />
+        <img src={loginStars} alt="Estrelas" className="w-16 h-auto mx-auto mb-4" />
         <h3 className="text-lg font-omne-semibold text-foreground mb-2">
-          Participe do Programa de Premiação
+          Ganhe os pontos antes que seus amigos descubram! Seja o primeiro!
         </h3>
         <p className="text-muted-foreground font-omne-regular mb-4">
           Compartilhe produtos, indique amigos e ganhe prêmios incríveis!
         </p>
         <Button
-          variant="outline"
-          className="border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-semibold"
+          className="bg-white text-[#171717] hover:bg-white/90 font-omne-semibold border-none"
           onClick={() => navigate(routes.auth)}
         >
           Entrar / Cadastrar
