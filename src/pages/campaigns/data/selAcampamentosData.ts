@@ -126,7 +126,7 @@ export const selAcampamentosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-acampamentos-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-acampamentos-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-acampamentos-promo2-mobile.jpg",
-        link: "https://s.shopee.com.br/9zqDAw613T"
+        link: "https://amzn.to/48BdRGr"
       },
       products: [
         {
