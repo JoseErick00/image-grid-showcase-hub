@@ -177,7 +177,10 @@ const StorePage = () => {
         {/* Back button */}
         <div className="flex justify-center mt-8 mb-16">
           <Link to={routes.home}>
-            <Button variant="outline" className="flex items-center gap-2 text-foreground">
+            <Button 
+              variant="outline"
+              className="flex items-center gap-2 bg-white text-black border-black hover:bg-black hover:text-white"
+            >
               <ArrowLeft size={20} />
               Voltar para Brasil
             </Button>
