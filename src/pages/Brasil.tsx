@@ -5,6 +5,7 @@ import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
 import CategoryBannerGrid from "@/components/campaigns/CategoryBannerGrid";
 import { useBrasilRoute } from "@/hooks/useCurrentDomain";
+import { usePageHints } from "@/hooks/usePageHints";
 
 // Import banner images
 import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
@@ -19,6 +20,13 @@ import logoAlibaba from "@/assets/brasil/logo-alibaba.png";
 const Brasil = () => {
   const isMobile = useIsMobile();
   const routes = useBrasilRoute();
+
+  // Configure page hints
+  usePageHints({
+    header: "Compartilhe o app e ganhe moedas!",
+    lupa: null, // Lupa não aparece na página principal
+    footer: "Obrigado por visitar! Volte sempre!"
+  });
 
   const handleShare = async () => {
     try {

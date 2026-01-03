@@ -3,6 +3,8 @@ import { useGamification } from "@/contexts/GamificationContext";
 import { usePWAInstall } from "@/hooks/usePWAInstall";
 import appIcon from "@/assets/app-icon.png";
 import { toast } from "sonner";
+import HintBalloon from "./HintBalloon";
+import { useHintBalloon } from "@/contexts/HintBalloonContext";
 
 interface AppDownloadIconProps {
   variant?: 'desktop' | 'mobile';
@@ -11,13 +13,21 @@ interface AppDownloadIconProps {
 const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
   const { isAuthenticated, gamification } = useGamification();
   const { isInstallable, isInstalled, promptInstall, needsManualInstall } = usePWAInstall();
+  const { pageHints, dismissHint, isHintDismissed } = useHintBalloon();
   
   const iconSize = variant === 'desktop' ? 'w-[60px] h-[60px]' : 'w-[40px] h-[40px]';
   const buttonSize = variant === 'desktop' ? 'w-6 h-6' : 'w-5 h-5';
   const iconButtonSize = variant === 'desktop' ? 14 : 12;
+
+  const showHeaderHint = pageHints.header && !isHintDismissed('header');
   
   // Share function for logged in users
   const handleShare = async () => {
+    // Dismiss hint when user interacts
+    if (showHeaderHint) {
+      dismissHint('header');
+    }
+
     const referralCode = gamification?.referral_code || '';
     const shareMessage = `O aplicativo mais bacana do Brasil! Você é meu indicado, use meu Código: ${referralCode}`;
     const shareUrl = window.location.origin;
@@ -52,6 +62,11 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
 
   // Install function for non-logged users
   const handleInstall = async () => {
+    // Dismiss hint when user interacts
+    if (showHeaderHint) {
+      dismissHint('header');
+    }
+
     if (isInstalled) {
       toast.info("O app já está instalado!");
       return;
@@ -117,6 +132,16 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
           >
             <Download size={iconButtonSize} className="text-white" />
           </div>
+        )}
+
+        {/* Hint Balloon for header */}
+        {showHeaderHint && (
+          <HintBalloon
+            message={pageHints.header!}
+            position="right"
+            onDismiss={() => dismissHint('header')}
+            delay={2000}
+          />
         )}
       </div>
       
