@@ -1,8 +1,9 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { Mail, Phone, Facebook, Instagram, Twitter } from "lucide-react";
 import ContactForm from "./ContactForm";
 import { useBrasilRoute, isBrasilDomain } from "@/hooks/useCurrentDomain";
+import HintBalloon from "./HintBalloon";
+import { useHintBalloon } from "@/contexts/HintBalloonContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,6 +11,9 @@ const Footer = () => {
   const routes = useBrasilRoute();
   const onBrasilDomain = isBrasilDomain();
   const isBrasilPage = onBrasilDomain || location.pathname.startsWith('/brasil');
+  const { pageHints, dismissHint, isHintDismissed } = useHintBalloon();
+
+  const showFooterHint = pageHints.footer && !isHintDismissed('footer');
 
   const footerLinks = [
     { name: "Home", href: "/" },
@@ -47,12 +51,27 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Logo and Contact Info */}
         <div className="text-center mb-12">
-          <div className="flex justify-center items-center space-x-3 mb-6">
-            <img 
-              src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
-              alt="i.need" 
-              className={isBrasilPage ? "w-[288px] h-[120px] object-contain" : "w-[350px] h-[150px] object-contain"}
-            />
+          <div className="flex justify-center items-center space-x-3 mb-6 relative">
+            <button
+              onClick={() => showFooterHint && dismissHint('footer')}
+              className="relative"
+            >
+              <img 
+                src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
+                alt="i.need" 
+                className={isBrasilPage ? "w-[288px] h-[120px] object-contain" : "w-[350px] h-[150px] object-contain"}
+              />
+              
+              {/* Hint Balloon for footer */}
+              {showFooterHint && (
+                <HintBalloon
+                  message={pageHints.footer!}
+                  position="top"
+                  onDismiss={() => dismissHint('footer')}
+                  delay={3000}
+                />
+              )}
+            </button>
           </div>
           
           <div className="w-[90%] md:w-[60%] mx-auto text-center mb-8">
