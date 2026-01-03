@@ -2,15 +2,35 @@ import { LayoutGrid, Grid3X3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useGridLayout } from '@/hooks/useGridLayout';
 import { useLocation } from 'react-router-dom';
+import { isBrasilDomain } from '@/hooks/useCurrentDomain';
 
 const GridLayoutToggle = () => {
   const { isCompactMode, toggleLayout } = useGridLayout();
   const location = useLocation();
-  const isBrasilPage = location.pathname.startsWith('/brasil');
+  const onBrasilDomain = isBrasilDomain();
+  const isBrasilPage = onBrasilDomain || location.pathname.startsWith('/brasil');
+  
+  // Route prefix for Brasil pages
+  const brasilPrefix = onBrasilDomain ? '' : '/brasil';
 
-  // Pages where the Lupa button should NOT appear
-  const excludedPaths = ['/brasil', '/brasil/premios', '/brasil/sobre', '/brasil/contato'];
-  const shouldShow = !excludedPaths.includes(location.pathname);
+  // Pages where the button should NOT appear (main pages)
+  const excludedPaths = isBrasilPage 
+    ? [
+        brasilPrefix || '/',          // Todas (Principal)
+        `${brasilPrefix}/premios`,    // Premiação
+        `${brasilPrefix}/sobre`,      // Sobre
+        `${brasilPrefix}/contato`,    // Contato
+      ]
+    : [
+        '/',                          // Main index
+        '/about',                     // About
+        '/contact',                   // Contact
+      ];
+
+  // Also check for exact match on root for Brasil domain
+  const currentPath = location.pathname;
+  const shouldShow = !excludedPaths.includes(currentPath) && 
+                     !(onBrasilDomain && currentPath === '/');
 
   if (!shouldShow) return null;
 

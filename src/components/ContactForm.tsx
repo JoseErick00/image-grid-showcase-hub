@@ -77,7 +77,7 @@ const ContactForm = () => {
       <Input
         type="email"
         name="email"
-        placeholder={isBrasilPage ? "Seu Email" : "Your Email"}
+        placeholder={isBrasilPage ? "Seu E-mail" : "Your Email"}
         value={formData.email}
         onChange={handleChange}
         required

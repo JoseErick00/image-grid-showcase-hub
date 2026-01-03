@@ -20,7 +20,7 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
   const handleShare = async () => {
     const referralCode = gamification?.referral_code || '';
     const shareMessage = `O aplicativo mais bacana do Brasil! Você é meu indicado, use meu Código: ${referralCode}`;
-    const shareUrl = window.location.origin + '/brasil';
+    const shareUrl = window.location.origin;
     
     const shareData = {
       title: 'iNeed - Baixe o App!',
