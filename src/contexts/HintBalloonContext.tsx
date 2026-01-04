@@ -16,36 +16,10 @@ interface HintBalloonContextType {
 
 const HintBalloonContext = createContext<HintBalloonContextType | undefined>(undefined);
 
-const STORAGE_PREFIX = 'ineed_hint_';
-
 export const HintBalloonProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [pageHints, setPageHintsState] = useState<PageHints>({});
-  const [dismissedHints, setDismissedHints] = useState<Set<string>>(() => {
-    // Load dismissed hints from localStorage on mount
-    const dismissed = new Set<string>();
-    try {
-      const stored = localStorage.getItem(`${STORAGE_PREFIX}dismissed`);
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        parsed.forEach((id: string) => dismissed.add(id));
-      }
-    } catch {
-      // Ignore localStorage errors
-    }
-    return dismissed;
-  });
-
-  // Persist dismissed hints to localStorage
-  useEffect(() => {
-    try {
-      localStorage.setItem(
-        `${STORAGE_PREFIX}dismissed`,
-        JSON.stringify(Array.from(dismissedHints))
-      );
-    } catch {
-      // Ignore localStorage errors
-    }
-  }, [dismissedHints]);
+  // Session-only dismissed hints (resets on page reload)
+  const [dismissedHints, setDismissedHints] = useState<Set<string>>(new Set());
 
   const setPageHints = useCallback((hints: PageHints) => {
     setPageHintsState(hints);
@@ -65,11 +39,6 @@ export const HintBalloonProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   const resetHints = useCallback(() => {
     setDismissedHints(new Set());
-    try {
-      localStorage.removeItem(`${STORAGE_PREFIX}dismissed`);
-    } catch {
-      // Ignore localStorage errors
-    }
   }, []);
 
   return (

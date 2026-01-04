@@ -77,7 +77,7 @@ const HintBalloon: React.FC<HintBalloonProps> = ({
         className
       )}
     >
-      <div className="relative bg-white/90 backdrop-blur-sm border border-[#171717] text-[#171717] px-3 py-1.5 rounded-md shadow-md max-w-[280px] text-xs font-medium leading-tight animate-subtle-pulse">
+      <div className="relative bg-white/90 backdrop-blur-sm border border-[#171717] text-[#171717] px-4 py-2 rounded-md shadow-md min-w-[180px] max-w-[320px] text-xs font-medium leading-tight animate-subtle-pulse whitespace-nowrap">
         {/* Arrow */}
         <div
           className={cn(
