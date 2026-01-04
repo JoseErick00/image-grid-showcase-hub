@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useHintBalloon, PageHints } from '@/contexts/HintBalloonContext';
 
 /**
@@ -13,15 +13,22 @@ import { useHintBalloon, PageHints } from '@/contexts/HintBalloonContext';
  */
 export const usePageHints = (hints: PageHints) => {
   const { setPageHints } = useHintBalloon();
+  
+  // Memoize hints to avoid unnecessary updates
+  const memoizedHints = useMemo(() => ({
+    header: hints.header,
+    lupa: hints.lupa,
+    footer: hints.footer,
+  }), [hints.header, hints.lupa, hints.footer]);
 
   useEffect(() => {
-    setPageHints(hints);
+    setPageHints(memoizedHints);
 
     // Clear hints when component unmounts
     return () => {
       setPageHints({});
     };
-  }, [hints.header, hints.lupa, hints.footer, setPageHints]);
+  }, [memoizedHints, setPageHints]);
 };
 
 export default usePageHints;
