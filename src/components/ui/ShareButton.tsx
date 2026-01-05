@@ -5,6 +5,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { useGamification } from '@/contexts/GamificationContext';
+import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 interface ShareButtonProps {
   productId: string;
   shareData: {
@@ -83,8 +84,14 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
       } else {
         await navigator.clipboard.writeText(shareData.url);
         toast({
-          title: "Link copiado!",
+          title: (
+            <span className="flex items-center gap-2">
+              <img src={premiacaoCoinIcon} alt="moedas" className="w-5 h-5" />
+              Link copiado!
+            </span>
+          ) as any,
           description: "O link foi copiado para a área de transferência.",
+          variant: "coin" as any,
         });
         shareSucceeded = true;
         await incrementShareCount();
@@ -94,8 +101,14 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
         try {
           await navigator.clipboard.writeText(shareData.url);
           toast({
-            title: "Link copiado!",
+            title: (
+              <span className="flex items-center gap-2">
+                <img src={premiacaoCoinIcon} alt="moedas" className="w-5 h-5" />
+                Link copiado!
+              </span>
+            ) as any,
             description: "O link foi copiado para a área de transferência.",
+            variant: "coin" as any,
           });
           shareSucceeded = true;
           await incrementShareCount();
