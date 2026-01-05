@@ -5,11 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { isBrasilDomain } from "@/hooks/useCurrentDomain";
 
 const ContactForm = () => {
   const { toast } = useToast();
   const location = useLocation();
-  const isBrasilPage = location.pathname.startsWith('/brasil');
+  const onBrasilDomain = isBrasilDomain();
+  const isBrasilPage = onBrasilDomain || location.pathname.startsWith('/brasil');
   
   const [formData, setFormData] = useState({
     name: "",
