@@ -159,7 +159,8 @@ const MailchimpSubscription = () => {
               #mc_embed_signup .indicates-required {
                 margin-bottom: 1rem;
                 font-size: 0.875rem;
-                color: hsl(var(--muted-foreground));
+                color: hsl(var(--brand-light));
+                text-align: left;
               }
               #mc_embed_signup .asterisk {
                 color: hsl(var(--destructive));
@@ -189,7 +190,7 @@ const MailchimpSubscription = () => {
               <div id="mc_embed_signup_scroll">
                 <h2>Receba os últimos achados por e-mail.</h2>
                 <div className="indicates-required">
-                  <span className="asterisk">*</span> indica campo obrigatório
+                  <span className="asterisk">*</span> Ganhe +10 moeda$
                 </div>
                 <div className="mc-field-group">
                   <label htmlFor="mce-EMAIL">
