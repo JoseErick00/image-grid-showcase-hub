@@ -15,13 +15,13 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' && componentTagger(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png', 'splash-logo.jpg', 'splash-*.jpg'],
       manifest: {
         name: 'iNeed - O aplicativo mais bacana do Brasil',
         short_name: 'iNeed',
         description: 'Descubra ofertas incríveis e ganhe prêmios compartilhando com amigos!',
-        theme_color: '#1a1a1a',
-        background_color: '#1a1a1a',
+        theme_color: '#ffffff',
+        background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait',
         scope: '/',
