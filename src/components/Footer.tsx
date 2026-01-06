@@ -76,13 +76,16 @@ const Footer = () => {
           
           <div className="w-[90%] md:w-[60%] mx-auto text-center mb-8">
             <h2 className="font-omne-medium text-2xl mb-4 text-foreground">
-              {isBrasilPage ? "A melhor seleção de coisas legais da Internet:" : "The Internet's Coolest Corner for Cool Stuff"}
+              {isBrasilPage ? "O que você encontra na iNeed:" : "The Internet's Coolest Corner for Cool Stuff"}
             </h2>
             <p className="font-omne-regular text-muted-foreground leading-relaxed">
-              {isBrasilPage ? "Na iNeed, não vendemos o comum — exibimos o extraordinário. Nossa missão é simples: encontrar os produtos mais incríveis, bonitos, inteligentes e simplesmente descolados que circulam por plataformas como Amazon, Shopee, Alibaba, AliExpress, Temu e eBay e reuni-los em uma coleção maravilhosa, útil e divertida." : "At ineed, we don't sell ordinary—we showcase extraordinary. Our mission is simple: find the most awesome, beautiful, clever, and just plain cool products floating around platforms like Amazon, Shopee, Alibaba, AliExpress, Temu, and eBay, and bring them together in one jaw-dropping online collection."}
+              {isBrasilPage ? "Garimpamos a Amazon, Shopee, Alibaba, AliExpress, e trazemos os achados mais bem avaliados catalogados em coleções incríveis, úteis e divertidas." : "At ineed, we don't sell ordinary—we showcase extraordinary. Our mission is simple: find the most awesome, beautiful, clever, and just plain cool products floating around platforms like Amazon, Shopee, Alibaba, AliExpress, Temu, and eBay, and bring them together in one jaw-dropping online collection."}
             </p>
             <p className="font-omne-regular text-muted-foreground leading-relaxed mt-4">
-              {isBrasilPage ? "De gadgets alucinantes a produtos para casa, achados infantis divertidos e tudo o mais — nós facilitamos a sua busca nas plataformas e trazemos o melhor de cada uma delas." : "From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered."}
+              {isBrasilPage ? "Achados para sua casa, achados de saúde, achados e brinquedos infantis, achados de tecnologia, achados esportivos, mini projetores, smartwatch, smartglasses, smartrings, máscaras cosplays, sistemas hidropônicos, microfones para celulares, celulares, lancheiras elétricas, robôs, mini bombas de ar, telescópios, sorveteiras, minicâmeras, microscópios, impressoras 3D, tradutores, monitores, cafeteira portátil, games, scooters aquáticas, carregadores magnéticos, mochilas, tênis com placa de carbono, óculos de realidade aumentada, fones de ouvido, minicelulares." : "From mind-blowing gadgets to home upgrades, quirky kids' finds, and everything in between—we've got your scroll-fix covered."}
+            </p>
+            <p className="font-omne-regular text-muted-foreground leading-relaxed mt-4">
+              {isBrasilPage ? "Quase todos os produtos e presentes legais da internet estão aqui. Se o produto for novidade, interessante, estiloso e útil, com certeza vai estar na nossa seleção! iNeed garante que você vai ENCONTRAR e DESCOBRIR sua próxima compra online!" : ""}
             </p>
           </div>
         </div>
