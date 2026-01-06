@@ -1,4 +1,20 @@
+import AppDownloadIcon from "@/components/AppDownloadIcon";
+
+// Import platform logos
+import logoShopee from "@/assets/brasil/logo-shopee.png";
+import logoAmazon from "@/assets/brasil/logo-amazon.png";
+import logoAliexpress from "@/assets/brasil/logo-aliexpress.png";
+import logoAlibaba from "@/assets/brasil/logo-alibaba.png";
+
 const AboutBrasil = () => {
+  // Platform logos data
+  const platformLogos = [
+    { src: logoShopee, alt: "Shopee", href: "https://shopee.com.br" },
+    { src: logoAmazon, alt: "Amazon", href: "https://amazon.com.br" },
+    { src: logoAliexpress, alt: "AliExpress", href: "https://aliexpress.com" },
+    { src: logoAlibaba, alt: "Alibaba", href: "https://alibaba.com" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Banner Section */}
@@ -25,27 +41,58 @@ const AboutBrasil = () => {
               Bem-vindo à iNeed – Loja Vitrine
             </h1>
           </div>
-          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto">
-            O Cantinho Mais Legal da Internet para Coisas Incríveis - Seu destino principal para descobrir os melhores produtos em todas as plataformas de e-commerce
+          <p className="font-omne-regular text-base md:text-xl text-muted-foreground max-w-[85%] md:max-w-[85%] mx-auto mb-8">
+            A loja de achados mais legal da Internet brasileira! Aqui você vai encontrar e descobrir os melhores achados e os produtos mais incríveis, garimpados e selecionados nas principais plataformas de e-commerce do mundo.
           </p>
+          
+          {/* Platform Logos */}
+          <div className="flex justify-center items-center gap-4 md:gap-8">
+            {platformLogos.map((logo, index) => (
+              <a
+                key={index}
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-110"
+              >
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className="h-8 md:h-12 w-auto object-contain"
+                />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Main Content */}
         <div className="space-y-12">
           {/* We showcase extraordinary */}
           <section>
-            <h2 className="font-omne-medium text-2xl text-foreground mb-6">Exibimos o extraordinário</h2>
+            <h2 className="font-omne-medium text-2xl text-foreground mb-6">A melhor seleção de produtos bacanas do brasil!</h2>
             <p className="font-omne-regular text-muted-foreground leading-relaxed mb-4">
-              Na iNeed, não vendemos o comum—exibimos o extraordinário. Nossa missão é simples: encontrar os produtos mais incríveis, bonitos, inteligentes e simplesmente legais em plataformas como Amazon, Shopee, Alibaba, AliExpress, Temu e eBay, e reuni-los em uma coleção online impressionante.
+              Nós entregamos o que há de mais novo no mundo e muito estilo — monitoramos e garimpamos os produtos mais legais que estão bombando na Shopee, Alibaba, Aliexpress e Amazon. Nosso trabalho é encontrar os produtos mais incríveis, bonitos, inteligentes e simplesmente legais com aquele precinho camarada e reuni-los em uma coleção online impressionante. Todos os produtos são selecionados com base nas avaliações e garantias de entrega!
             </p>
-            <p className="font-omne-regular text-muted-foreground leading-relaxed">
-              De gadgets incríveis a upgrades para casa, achados divertidos para crianças e tudo mais—temos sua dose de descobertas garantida.
+            <p className="font-omne-regular text-muted-foreground leading-relaxed mb-4">
+              Aqui você encontra todos os tipos de achados, de bugigangas incríveis a upgrades de móveis e eletrônicos para casa, achados divertidos e brinquedos para crianças, tênis, suplementos e acessórios esportivos, produtos de beleza e dispositivos de saúde, presentes bonitos e especiais, achados interessantes, desnecessários porém bacanas, achados de tecnologia! Você vai encontrar tudo mais e um pouquinho! ;)
             </p>
+            <p className="font-omne-regular text-muted-foreground leading-relaxed mb-6">
+              Baixe nosso aplicativo, conecte seu e-mail e comece a concorrer aos produtos da loja! (Saiba mais na página de premiação)
+              A iNeed garante que você vai ENCONTRAR e DESCOBRIR sua próxima compra online!
+            </p>
+
+            {/* App Download Container */}
+            <div className="flex flex-col items-center justify-center bg-card rounded-lg p-6 border border-border">
+              <AppDownloadIcon variant="desktop" />
+              <p className="font-omne-regular text-muted-foreground text-center mt-4">
+                Baixe o nosso aplicativo, conecte seu e-mail e comece a buscar seus prêmios!
+              </p>
+            </div>
           </section>
 
           {/* Your Happy Places */}
           <section>
-            <h2 className="font-omne-medium text-2xl text-foreground mb-8">Seus Lugares Felizes</h2>
+            <h2 className="font-omne-medium text-2xl text-foreground mb-8">Divirta-se navegando mais fácil por nossas categorias!</h2>
             
             {/* Home Section */}
             <div className="mb-8">
