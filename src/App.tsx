@@ -26,6 +26,7 @@ import Layout from "./components/Layout";
 import DynamicCampaignPage from "./pages/campaigns/DynamicCampaignPage";
 import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
+import BrasilDomainRedirect from "./components/BrasilDomainRedirect";
 
 // Brasil pages (for both domains)
 import Brasil from "./pages/Brasil";
@@ -154,41 +155,9 @@ const App = () => {
                       <Route path="indonesia" element={<Indonesia />} />
                       <Route path="search" element={<Search />} />
                       
-                      {/* Brasil routes with /brasil/ prefix on USA domain */}
-                      <Route path="brasil" element={<Brasil />} />
-                      <Route path="brasil/casa" element={<BrasilCasa />} />
-                      <Route path="brasil/esportes" element={<BrasilEsportes />} />
-                      <Route path="brasil/saude" element={<BrasilSaude />} />
-                      <Route path="brasil/incriveis" element={<BrasilIncriveis />} />
-                      <Route path="brasil/tech" element={<BrasilTech />} />
-                      <Route path="brasil/kids" element={<BrasilKids />} />
-                      <Route path="brasil/sobre" element={<AboutBrasil />} />
-                      <Route path="brasil/contato" element={<ContatoBrasil />} />
-                      <Route path="brasil/premios" element={<Premiacao />} />
-                      <Route path="brasil/lojas/:platform" element={<StorePage />} />
-                      
-                      {/* Campaign routes with prefix */}
-                      <Route path="brasil/casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
-                      <Route path="brasil/casa/sel-sala" element={<BrasilCasaSelSala />} />
-                      <Route path="brasil/casa/sel-quarto" element={<BrasilCasaSelQuarto />} />
-                      <Route path="brasil/casa/sel-banheiro" element={<BrasilCasaSelBanheiro />} />
-                      <Route path="brasil/esportes/sel-academia" element={<BrasilEsportesSelAcademia />} />
-                      <Route path="brasil/esportes/sel-corredores" element={<BrasilEsportesSelCorredores />} />
-                      <Route path="brasil/esportes/sel-aquaticos" element={<BrasilEsportesSelAquaticos />} />
-                      <Route path="brasil/esportes/sel-time-campo" element={<BrasilEsportesSelTimeCampo />} />
-                      <Route path="brasil/saude/sel-cuidado-rosto" element={<BrasilSaudeSelCuidadoRosto />} />
-                      <Route path="brasil/saude/sel-corpo" element={<BrasilSaudeSelCorpo />} />
-                      <Route path="brasil/saude/sel-cremes-gringos" element={<BrasilSaudeSelCremesGringos />} />
-                      <Route path="brasil/incriveis/sel-acampamentos" element={<BrasilIncriveisSelAcampamentos />} />
-                      <Route path="brasil/incriveis/sel-praia" element={<BrasilIncriveisSelPraia />} />
-                      <Route path="brasil/incriveis/sel-incriveis-01" element={<BrasilIncriveisSelIncriveis01 />} />
-                      <Route path="brasil/incriveis/sel-incriveis-02" element={<BrasilIncriveisSelIncriveis02 />} />
-                      <Route path="brasil/incriveis/sel-incriveis-03" element={<BrasilIncriveisSelIncriveis03 />} />
-                      <Route path="brasil/incriveis/sel-incriveis-04" element={<BrasilIncriveisSelIncriveis04 />} />
-                      <Route path="brasil/incriveis/sel-calcados-femininos" element={<BrasilIncriveisSelCalcadosFemininos />} />
-                      <Route path="brasil/incriveis/sel-calcados-masculinos" element={<BrasilIncriveisSelCalcadosMasculinos />} />
-                      <Route path="brasil/tech/sel-fones-ouvido" element={<BrasilTechSelFonesOuvido />} />
-                      <Route path="brasil/tech/sel-tradutores" element={<BrasilTechSelTradutores />} />
+                      {/* Redirect all /brasil/* routes to ineedbrasil.com.br on USA domain */}
+                      <Route path="brasil/*" element={<BrasilDomainRedirect />} />
+                      <Route path="brasil" element={<BrasilDomainRedirect />} />
                       
                       {/* Dynamic campaign route */}
                       <Route path="campanha/:slug" element={<DynamicCampaignPage />} />
