@@ -1,9 +1,26 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
+// Category color mapping for hint balloons
+export const CATEGORY_COLORS: Record<string, string> = {
+  casa: '#d01e23',
+  esportes: '#f06927',
+  saude: '#f9c90c',
+  incriveis: '#5ebb47',
+  tech: '#30bdbe',
+  kids: '#856cb0',
+  default: '#171717',
+};
+
+export const getCategoryColor = (category?: string): string => {
+  if (!category) return CATEGORY_COLORS.default;
+  return CATEGORY_COLORS[category.toLowerCase()] || CATEGORY_COLORS.default;
+};
+
 export interface PageHints {
   header?: string | null;
   lupa?: string | null;
   footer?: string | null;
+  borderColor?: string;
 }
 
 interface HintBalloonContextType {

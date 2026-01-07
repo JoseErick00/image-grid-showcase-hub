@@ -6,6 +6,8 @@ import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
 import CategoryPromoBanner from "@/components/CategoryPromoBanner";
 import CategorySmallBanner from "@/components/CategorySmallBanner";
+import { usePageHints } from "@/hooks/usePageHints";
+import { CATEGORY_COLORS } from "@/contexts/HintBalloonContext";
 import promoBanner from "@/assets/tech/Promo_banner.jpg";
 import promoBannerMobile from "@/assets/tech/Promo_banner_mobile.jpg";
 import promoBannerTablet from "@/assets/tech/Promo_banner_tablet.jpg";
@@ -51,6 +53,14 @@ import logoAliexpress from "@/assets/platform-logos/logo_aliexpress.png";
 import logoAlibaba from "@/assets/platform-logos/logo_alibaba.png";
 
 const BrasilTech = () => {
+  // Configure page hints with category color
+  usePageHints({
+    header: "Compartilhe e ganhe moedas!",
+    lupa: "Clique para ampliar as imagens",
+    footer: "Gostou? Envie para um amigo!",
+    borderColor: CATEGORY_COLORS.tech,
+  });
+
   const handleShare = async () => {
     try {
       const url = window.location.href;

@@ -19,7 +19,8 @@ export const usePageHints = (hints: PageHints) => {
     header: hints.header,
     lupa: hints.lupa,
     footer: hints.footer,
-  }), [hints.header, hints.lupa, hints.footer]);
+    borderColor: hints.borderColor,
+  }), [hints.header, hints.lupa, hints.footer, hints.borderColor]);
 
   useEffect(() => {
     setPageHints(memoizedHints);

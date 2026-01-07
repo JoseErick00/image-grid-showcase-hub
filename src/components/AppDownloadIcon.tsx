@@ -141,6 +141,7 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
             position="right"
             onDismiss={() => dismissHint('header')}
             delay={2000}
+            borderColor={pageHints.borderColor}
           />
         )}
       </div>

@@ -69,6 +69,7 @@ const Footer = () => {
                   position="top"
                   onDismiss={() => dismissHint('footer')}
                   delay={3000}
+                  borderColor={pageHints.borderColor}
                 />
               )}
             </button>
