@@ -6,6 +6,8 @@ import PushPhrase from "@/components/PushPhrase";
 import TrustBadges from "@/components/TrustBadges";
 import CategoryPromoBanner from "@/components/CategoryPromoBanner";
 import CategorySmallBanner from "@/components/CategorySmallBanner";
+import { usePageHints } from "@/hooks/usePageHints";
+import { CATEGORY_COLORS } from "@/contexts/HintBalloonContext";
 import homeCategoryImage from "@/assets/home-category.jpg";
 import casa01 from "@/assets/casa_01.jpg";
 import casa02 from "@/assets/casa_02.jpg";
@@ -63,6 +65,14 @@ import logoAliexpress from "@/assets/platform-logos/logo_aliexpress.png";
 import logoAlibaba from "@/assets/platform-logos/logo_alibaba.png";
 
 const BrasilCasa = () => {
+  // Configure page hints with category color
+  usePageHints({
+    header: "Compartilhe e ganhe moedas!",
+    lupa: "Clique para ampliar as imagens",
+    footer: "Gostou? Envie para um amigo!",
+    borderColor: CATEGORY_COLORS.casa,
+  });
+
   const handleShare = async () => {
     try {
       const url = window.location.href;

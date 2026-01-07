@@ -13,6 +13,7 @@ import GamificationPromoBanner from '@/components/GamificationPromoBanner';
 import SectionSpacer from '@/components/SectionSpacer';
 import { useBrasilRoute } from '@/hooks/useCurrentDomain';
 import { usePageHints } from '@/hooks/usePageHints';
+import { getCategoryColor } from '@/contexts/HintBalloonContext';
 
 interface NavButton {
   label: string;
@@ -72,11 +73,12 @@ interface CampaignTemplateProps {
 const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
   const routes = useBrasilRoute();
 
-  // Configure page hints for campaign pages
+  // Configure page hints for campaign pages with category color
   usePageHints({
     header: "Salve seus produtos favoritos!",
     lupa: "Clique na lupa para aumentar as imagens",
-    footer: "Gostou da seleção? Envie para um amigo!"
+    footer: "Gostou da seleção? Envie para um amigo!",
+    borderColor: getCategoryColor(config.category),
   });
 
   const normalizeBrasilLink = (url: string) => {

@@ -6,6 +6,7 @@ import GamificationPromoBanner from "@/components/GamificationPromoBanner";
 import CategoryBannerGrid from "@/components/campaigns/CategoryBannerGrid";
 import { useBrasilRoute } from "@/hooks/useCurrentDomain";
 import { usePageHints } from "@/hooks/usePageHints";
+import { CATEGORY_COLORS } from "@/contexts/HintBalloonContext";
 
 // Import banner images
 import bannerDesktop from "@/assets/brasil/banner-desktop.jpg";
@@ -25,7 +26,8 @@ const Brasil = () => {
   usePageHints({
     header: "Compartilhe o app e ganhe moedas!",
     lupa: null, // Lupa não aparece na página principal
-    footer: "Obrigado por visitar! Volte sempre!"
+    footer: "Obrigado por visitar! Volte sempre!",
+    borderColor: CATEGORY_COLORS.default,
   });
 
   const handleShare = async () => {

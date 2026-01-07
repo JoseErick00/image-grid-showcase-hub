@@ -79,6 +79,7 @@ const GridLayoutToggle = () => {
             position="left"
             onDismiss={() => dismissHint('lupa')}
             delay={2500}
+            borderColor={pageHints.borderColor}
           />
         )}
       </div>
