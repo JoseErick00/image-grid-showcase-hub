@@ -8,6 +8,7 @@ interface HintBalloonProps {
   delay?: number;
   autoHideDuration?: number;
   className?: string;
+  borderColor?: string;
 }
 
 const HintBalloon: React.FC<HintBalloonProps> = ({
@@ -17,6 +18,7 @@ const HintBalloon: React.FC<HintBalloonProps> = ({
   delay = 1500,
   autoHideDuration = 15000,
   className,
+  borderColor = '#171717',
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHiding, setIsHiding] = useState(false);
@@ -61,11 +63,27 @@ const HintBalloon: React.FC<HintBalloonProps> = ({
     right: 'left-full top-1/2 -translate-y-1/2 ml-2',
   };
 
-  const arrowClasses = {
-    top: 'top-full left-1/2 -translate-x-1/2 border-l-transparent border-r-transparent border-b-transparent border-t-[#171717]',
-    bottom: 'bottom-full left-1/2 -translate-x-1/2 border-l-transparent border-r-transparent border-t-transparent border-b-[#171717]',
-    left: 'left-full top-1/2 -translate-y-1/2 border-t-transparent border-b-transparent border-r-transparent border-l-[#171717]',
-    right: 'right-full top-1/2 -translate-y-1/2 border-t-transparent border-b-transparent border-l-transparent border-r-[#171717]',
+  const getArrowStyle = () => {
+    const baseStyle = { borderWidth: '5px' };
+    switch (position) {
+      case 'top':
+        return { ...baseStyle, borderColor: `${borderColor} transparent transparent transparent` };
+      case 'bottom':
+        return { ...baseStyle, borderColor: `transparent transparent ${borderColor} transparent` };
+      case 'left':
+        return { ...baseStyle, borderColor: `transparent transparent transparent ${borderColor}` };
+      case 'right':
+        return { ...baseStyle, borderColor: `transparent ${borderColor} transparent transparent` };
+      default:
+        return baseStyle;
+    }
+  };
+
+  const arrowPositionClasses = {
+    top: 'top-full left-1/2 -translate-x-1/2',
+    bottom: 'bottom-full left-1/2 -translate-x-1/2',
+    left: 'left-full top-1/2 -translate-y-1/2',
+    right: 'right-full top-1/2 -translate-y-1/2',
   };
 
   return (
@@ -77,13 +95,17 @@ const HintBalloon: React.FC<HintBalloonProps> = ({
         className
       )}
     >
-      <div className="relative bg-white/90 backdrop-blur-sm border border-[#171717] text-[#171717] px-4 py-2 rounded-md shadow-md min-w-[180px] max-w-[320px] text-xs font-medium leading-tight animate-subtle-pulse whitespace-nowrap">
+      <div 
+        className="relative bg-white/90 backdrop-blur-sm text-[#171717] px-4 py-2 rounded-md shadow-md min-w-[180px] max-w-[320px] text-xs font-medium leading-tight animate-subtle-pulse whitespace-nowrap"
+        style={{ border: `1px solid ${borderColor}` }}
+      >
         {/* Arrow */}
         <div
           className={cn(
-            'absolute w-0 h-0 border-[5px]',
-            arrowClasses[position]
+            'absolute w-0 h-0',
+            arrowPositionClasses[position]
           )}
+          style={getArrowStyle()}
         />
         
         {/* Content */}
