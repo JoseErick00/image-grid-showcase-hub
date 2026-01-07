@@ -124,7 +124,19 @@ export default function Auth() {
         return;
       }
 
-      // Redirect to the magic link URL for instant login
+      // Check if email is confirmed - prevent login with unconfirmed emails
+      if (response.data?.exists && response.data?.confirmed === false) {
+        toast({
+          variant: "default",
+          title: "Email não confirmado",
+          description: "Por favor, confirme seu email primeiro. Verifique sua caixa de entrada ou clique abaixo para reenviar.",
+        });
+        setEmailSent(true);
+        setLoading(false);
+        return;
+      }
+
+      // Redirect to the magic link URL for instant login (only for confirmed emails)
       if (response.data?.loginUrl) {
         window.location.href = response.data.loginUrl;
       }
