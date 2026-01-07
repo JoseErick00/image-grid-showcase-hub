@@ -57,18 +57,31 @@ Deno.serve(async (req) => {
       );
     }
 
-    const userExists = users.users.some(
-      (user) => user.email?.toLowerCase() === email.toLowerCase()
+    const user = users.users.find(
+      (u) => u.email?.toLowerCase() === email.toLowerCase()
     );
 
-    if (!userExists) {
+    if (!user) {
       return new Response(
         JSON.stringify({ exists: false, message: 'Email não cadastrado. Crie uma conta primeiro.' }),
         { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
-    // Generate magic link for instant login
+    // Check if email is confirmed - CRITICAL for preventing fake accounts
+    if (!user.email_confirmed_at) {
+      console.log('Email not confirmed for:', email);
+      return new Response(
+        JSON.stringify({ 
+          exists: true, 
+          confirmed: false, 
+          message: 'Por favor, confirme seu email primeiro. Verifique sua caixa de entrada.' 
+        }),
+        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Generate magic link for instant login (only for confirmed emails)
     const { data: linkData, error: linkError } = await supabase.auth.admin.generateLink({
       type: 'magiclink',
       email: email,
