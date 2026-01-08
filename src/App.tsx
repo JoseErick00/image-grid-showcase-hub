@@ -40,6 +40,7 @@ import BrasilKids from "./pages/BrasilKids";
 import AboutBrasil from "./pages/AboutBrasil";
 import ContatoBrasil from "./pages/ContatoBrasil";
 import Premiacao from "./pages/Premiacao";
+import Favoritos from "./pages/Favoritos";
 import StorePage from "./pages/lojas/StorePage";
 
 // Brasil campaign pages
@@ -105,6 +106,7 @@ const App = () => {
                       <Route path="sobre" element={<AboutBrasil />} />
                       <Route path="contato" element={<ContatoBrasil />} />
                       <Route path="premios" element={<Premiacao />} />
+                      <Route path="favoritos" element={<Favoritos />} />
                       <Route path="lojas/:platform" element={<StorePage />} />
                       
                       {/* Campaign routes - Brasil domain */}
