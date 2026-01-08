@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { platformLogos, type Platform } from '@/utils/platformLogos';
 import { trackProductClick } from '@/utils/analytics';
 import { generateProductId } from '@/utils/productHash';
-import LikeButton from '@/components/ui/LikeButton';
+import LikeButton, { type ProductData } from '@/components/ui/LikeButton';
 import ShareButton from '@/components/ui/ShareButton';
 
 interface CampaignProductCardProps {
@@ -13,9 +13,19 @@ interface CampaignProductCardProps {
   stamp?: string;
   position?: number;
   hideCallToAction?: boolean;
+  category?: string;
 }
 
-const CampaignProductCard = ({ image, label, link, platform, stamp, position, hideCallToAction = false }: CampaignProductCardProps) => {
+const CampaignProductCard = ({ 
+  image, 
+  label, 
+  link, 
+  platform, 
+  stamp, 
+  position, 
+  hideCallToAction = false,
+  category = 'incriveis'
+}: CampaignProductCardProps) => {
   const productId = generateProductId(link);
 
   const handleProductClick = () => {
@@ -26,6 +36,15 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position, hi
     title: label,
     text: 'Olha que legal eu achei na iNeed!',
     url: link,
+  };
+
+  // Product data for favorites
+  const productData: ProductData = {
+    image,
+    label,
+    link,
+    platform,
+    category,
   };
 
   return (
@@ -45,7 +64,7 @@ const CampaignProductCard = ({ image, label, link, platform, stamp, position, hi
         
         {/* Like/Share buttons overlay */}
         <div className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
-          <LikeButton productId={productId} compact />
+          <LikeButton productId={productId} productData={productData} compact />
           <ShareButton
             productId={productId}
             shareData={shareData}

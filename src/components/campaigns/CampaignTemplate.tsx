@@ -219,6 +219,7 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
               promoBanner={section.promoBanner}
               products={section.products}
               campaignSlug={config.campaignSlug}
+              category={config.category}
             />
             
             {/* Gamification Banner - After Section 1 */}

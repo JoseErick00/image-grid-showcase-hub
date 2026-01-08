@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useGamification } from "@/contexts/GamificationContext";
-import { Users } from "lucide-react";
+import { Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NotificationToggle } from "@/components/NotificationToggle";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 import { useBrasilRoute } from "@/hooks/useCurrentDomain";
+import { useFavoritesCount } from "@/hooks/useFavorites";
 
 // Level icons
 import colegasIcon from '@/assets/levels/colegas.png';
@@ -35,6 +36,7 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   const { isAuthenticated, user, gamification, loading, signOut } = useGamification();
   const navigate = useNavigate();
   const routes = useBrasilRoute();
+  const favoritesCount = useFavoritesCount();
 
   const handleLogout = async () => {
     await signOut();
@@ -87,54 +89,70 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   if (variant === 'mobile') {
     return (
-      <div className="flex flex-col items-center text-center p-4 bg-muted/20">
-        {/* Email + trocar + Notification */}
-        <div className="flex items-center justify-center gap-2 mb-3">
-          <NotificationToggle variant="compact" />
-          <span className="text-xs text-muted-foreground truncate max-w-[180px]">
-            {userEmail}
-          </span>
-          <button
-            onClick={handleLogout}
-            className="text-xs text-brand-light hover:underline"
+      <div className="flex items-start gap-3 p-4 bg-muted/20">
+        {/* Left side icons */}
+        <div className="flex flex-col gap-2">
+          <Link 
+            to="/favoritos" 
+            onClick={onCloseMenu}
+            className="flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-border hover:bg-muted transition-colors"
           >
-            trocar
-          </button>
+            <Heart className={`w-5 h-5 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-muted-foreground'}`} />
+          </Link>
+          <div className="flex items-center justify-center w-10 h-10">
+            <NotificationToggle variant="compact" />
+          </div>
         </div>
 
-        {/* Stats row */}
-        <div className="flex items-center justify-center gap-4">
-          {/* Coins */}
-          <div className="flex items-center gap-1">
-            <img src={premiacaoCoinIcon} alt="moedas" className="w-4 h-4" />
-            <span className="text-sm font-omne-medium text-foreground">{totalCoins}</span>
-          </div>
-
-          {/* Referrals */}
-          <div className="flex items-center gap-1">
-            <Users size={14} className="text-muted-foreground" />
-            <span className="text-sm text-foreground">{totalReferrals}</span>
-          </div>
-
-          {/* Level */}
-          <div className="flex items-center gap-1">
-            <img 
-              src={LEVEL_ICONS[currentLevel]} 
-              alt={LEVEL_LABELS[currentLevel]} 
-              className="w-5 h-5"
-            />
-            <span className="text-sm font-omne-medium text-foreground">
-              {LEVEL_LABELS[currentLevel]}
+        {/* User info box */}
+        <div className="flex-1 flex flex-col items-center text-center">
+          {/* Email + trocar */}
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-xs text-muted-foreground truncate max-w-[180px]">
+              {userEmail}
             </span>
+            <button
+              onClick={handleLogout}
+              className="text-xs text-brand-light hover:underline"
+            >
+              trocar
+            </button>
           </div>
-        </div>
 
-        {/* User's referral code */}
-        {referralCode && (
-          <p className="text-sm font-omne-semibold text-foreground mt-3 text-center">
-            Código: {referralCode}
-          </p>
-        )}
+          {/* Stats row */}
+          <div className="flex items-center justify-center gap-4">
+            {/* Coins */}
+            <div className="flex items-center gap-1">
+              <img src={premiacaoCoinIcon} alt="moedas" className="w-4 h-4" />
+              <span className="text-sm font-omne-medium text-foreground">{totalCoins}</span>
+            </div>
+
+            {/* Referrals */}
+            <div className="flex items-center gap-1">
+              <Users size={14} className="text-muted-foreground" />
+              <span className="text-sm text-foreground">{totalReferrals}</span>
+            </div>
+
+            {/* Level */}
+            <div className="flex items-center gap-1">
+              <img 
+                src={LEVEL_ICONS[currentLevel]} 
+                alt={LEVEL_LABELS[currentLevel]} 
+                className="w-5 h-5"
+              />
+              <span className="text-sm font-omne-medium text-foreground">
+                {LEVEL_LABELS[currentLevel]}
+              </span>
+            </div>
+          </div>
+
+          {/* User's referral code */}
+          {referralCode && (
+            <p className="text-sm font-omne-semibold text-foreground mt-3 text-center">
+              Código: {referralCode}
+            </p>
+          )}
+        </div>
       </div>
     );
   }
@@ -142,6 +160,15 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   // Desktop variant
   return (
     <div className="flex items-center gap-2">
+      {/* Favorites Link */}
+      <Link 
+        to="/favoritos"
+        className="flex items-center justify-center w-9 h-9 rounded-lg hover:bg-white/10 transition-colors"
+        title="Meus Favoritos"
+      >
+        <Heart className={`w-5 h-5 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-white'}`} />
+      </Link>
+      
       {/* Notification Toggle */}
       <NotificationToggle variant="compact" className="text-white hover:bg-white/10" />
       

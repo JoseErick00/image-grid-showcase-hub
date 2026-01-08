@@ -23,9 +23,10 @@ interface CampaignSectionProps {
   promoBanner: PromoBanner;
   products: Product[];
   campaignSlug?: string;
+  category?: string;
 }
 
-const CampaignSection = ({ id, promoBanner, products, campaignSlug }: CampaignSectionProps) => {
+const CampaignSection = ({ id, promoBanner, products, campaignSlug, category }: CampaignSectionProps) => {
   const { isCompactMode } = useGridLayout();
 
   const bannerProductId = campaignSlug ? `banner-${campaignSlug}-${id}` : `banner-${id}`;
@@ -83,6 +84,7 @@ const CampaignSection = ({ id, promoBanner, products, campaignSlug }: CampaignSe
             platform={product.platform}
             stamp={product.stamp}
             position={index + 1}
+            category={category}
           />
         ))}
       </div>
