@@ -53,6 +53,7 @@ const Header = () => {
     { name: "Amazon", href: `${brasilPrefix}/lojas/amazon`, color: "#FF9900" },
     { name: "Alibaba", href: `${brasilPrefix}/lojas/alibaba`, color: "#FF6A00" },
     { name: "Premiação iNeed", href: `${brasilPrefix}/premios`, color: "" },
+    { name: "Sobre as Lojas", href: `${brasilPrefix}/sobre-lojas`, color: "#666666" },
   ];
 
   const navigation = isBrasilPage ? brasilNavigation : defaultNavigation;

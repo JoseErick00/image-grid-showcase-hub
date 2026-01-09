@@ -42,6 +42,7 @@ import ContatoBrasil from "./pages/ContatoBrasil";
 import Premiacao from "./pages/Premiacao";
 import Favoritos from "./pages/Favoritos";
 import StorePage from "./pages/lojas/StorePage";
+import SobreLojas from "./pages/SobreLojas";
 
 // Brasil campaign pages
 import BrasilCasaSelCozinha from "./pages/campaigns/BrasilCasaSelCozinha";
@@ -108,6 +109,7 @@ const App = () => {
                       <Route path="premios" element={<Premiacao />} />
                       <Route path="favoritos" element={<Favoritos />} />
                       <Route path="lojas/:platform" element={<StorePage />} />
+                      <Route path="sobre-lojas" element={<SobreLojas />} />
                       
                       {/* Campaign routes - Brasil domain */}
                       <Route path="casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
