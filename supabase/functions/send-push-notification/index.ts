@@ -31,7 +31,18 @@ serve(async (req) => {
     }
 
     // Configure web-push with VAPID details
-    webpush.setVapidDetails(vapidSubject, vapidPublicKey, vapidPrivateKey);
+    try {
+      webpush.setVapidDetails(vapidSubject, vapidPublicKey, vapidPrivateKey);
+    } catch (e) {
+      // IMPORTANT: never leak secret values (like VAPID_SUBJECT) back to the client
+      console.error('Invalid VAPID_SUBJECT configured:', e);
+      return new Response(
+        JSON.stringify({
+          error: 'VAPID_SUBJECT inválido. Use uma URL (https://...) ou um email no formato mailto:email@dominio.com',
+        }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
 
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
@@ -166,9 +177,10 @@ serve(async (req) => {
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   } catch (error) {
+    // IMPORTANT: do not leak internal error messages / env values to the client
     console.error('Error in send-push-notification:', error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: 'Erro interno ao enviar notificação push' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
