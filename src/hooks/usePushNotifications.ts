@@ -78,27 +78,38 @@ export function usePushNotifications() {
     try {
       // Request notification permission
       const permission = await Notification.requestPermission();
+      console.log('Notification permission:', permission);
+      
       if (permission !== 'granted') {
+        console.log('Permission not granted:', permission);
         setState(prev => ({ ...prev, isLoading: false, permission }));
         return false;
       }
 
       // Get VAPID public key from edge function
+      console.log('Fetching VAPID key...');
       const vapidResponse = await fetch(VAPID_PUBLIC_KEY_ENDPOINT);
       if (!vapidResponse.ok) {
+        const errorText = await vapidResponse.text();
+        console.error('Failed to fetch VAPID key:', vapidResponse.status, errorText);
         throw new Error('Failed to fetch VAPID key');
       }
       const { publicKey } = await vapidResponse.json();
+      console.log('VAPID key received');
 
       // Register service worker if not already registered
+      console.log('Getting service worker registration...');
       const registration = await navigator.serviceWorker.ready;
+      console.log('Service worker ready');
 
       // Subscribe to push
       const applicationServerKey = urlBase64ToUint8Array(publicKey);
+      console.log('Subscribing to push manager...');
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: applicationServerKey.buffer as ArrayBuffer,
       });
+      console.log('Push subscription created:', subscription.endpoint.substring(0, 50) + '...');
 
       // Get subscription keys
       const p256dh = subscription.getKey('p256dh');
@@ -116,6 +127,7 @@ export function usePushNotifications() {
 
       // Get current user session
       const { data: { session } } = await supabase.auth.getSession();
+      console.log('Saving subscription to database...');
 
       // Save subscription to database
       const { error } = await supabase.from('push_subscriptions').upsert({
@@ -132,6 +144,8 @@ export function usePushNotifications() {
         console.error('Error saving subscription:', error);
         throw error;
       }
+
+      console.log('Subscription saved successfully');
 
       setState({
         isSupported: true,
