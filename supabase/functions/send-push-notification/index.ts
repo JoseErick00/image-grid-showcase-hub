@@ -1,46 +1,11 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import webpush from "npm:web-push@3.6.7";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
-
-// Web Push library for Deno
-async function sendWebPush(
-  subscription: { endpoint: string; p256dh: string; auth: string },
-  payload: string,
-  vapidPublicKey: string,
-  vapidPrivateKey: string,
-  vapidSubject: string
-): Promise<Response> {
-  // Import web-push compatible module
-  const encoder = new TextEncoder();
-  
-  // Create JWT for VAPID
-  const header = { alg: 'ES256', typ: 'JWT' };
-  const now = Math.floor(Date.now() / 1000);
-  const claims = {
-    aud: new URL(subscription.endpoint).origin,
-    exp: now + 12 * 60 * 60, // 12 hours
-    sub: vapidSubject,
-  };
-
-  // For web push, we need to use the web-push library approach
-  // Since Deno doesn't have native web-push, we'll use a simpler HTTP approach
-  
-  const response = await fetch(subscription.endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/octet-stream',
-      'Content-Encoding': 'aes128gcm',
-      'TTL': '86400',
-    },
-    body: payload,
-  });
-
-  return response;
-}
 
 serve(async (req) => {
   // Handle CORS preflight
@@ -65,26 +30,64 @@ serve(async (req) => {
       );
     }
 
+    // Configure web-push with VAPID details
+    webpush.setVapidDetails(vapidSubject, vapidPublicKey, vapidPrivateKey);
+
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Get a random active product
-    const { data: products, error: productError } = await supabase
-      .from('products')
-      .select('*')
-      .eq('is_active', true)
-      .limit(50);
-
-    if (productError || !products || products.length === 0) {
-      console.error('Error fetching products:', productError);
-      return new Response(
-        JSON.stringify({ error: 'No products found' }),
-        { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+    // Parse request body for custom notification (optional)
+    let customPayload = null;
+    try {
+      const body = await req.json();
+      if (body.title && body.body) {
+        customPayload = body;
+      }
+    } catch {
+      // No body or invalid JSON - use random product
     }
 
-    // Select a random product
-    const randomProduct = products[Math.floor(Math.random() * products.length)];
-    console.log('Selected product:', randomProduct.label);
+    let notificationPayload: string;
+
+    if (customPayload) {
+      // Use custom payload
+      notificationPayload = JSON.stringify({
+        title: customPayload.title,
+        body: customPayload.body,
+        image: customPayload.image,
+        url: customPayload.url || '/',
+        productId: customPayload.productId,
+        platform: customPayload.platform,
+      });
+      console.log('Using custom notification payload');
+    } else {
+      // Get a random active product
+      const { data: products, error: productError } = await supabase
+        .from('products')
+        .select('*')
+        .eq('is_active', true)
+        .limit(50);
+
+      if (productError || !products || products.length === 0) {
+        console.error('Error fetching products:', productError);
+        return new Response(
+          JSON.stringify({ error: 'No products found' }),
+          { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
+      // Select a random product
+      const randomProduct = products[Math.floor(Math.random() * products.length)];
+      console.log('Selected product:', randomProduct.label);
+
+      notificationPayload = JSON.stringify({
+        title: '🔥 Oferta da Semana - iNeed',
+        body: randomProduct.label,
+        image: randomProduct.image_url,
+        url: randomProduct.affiliate_link,
+        productId: randomProduct.id,
+        platform: randomProduct.platform,
+      });
+    }
 
     // Get all active subscriptions
     const { data: subscriptions, error: subError } = await supabase
@@ -110,49 +113,33 @@ serve(async (req) => {
 
     console.log(`Sending notifications to ${subscriptions.length} subscribers`);
 
-    // Prepare notification payload
-    const notificationPayload = JSON.stringify({
-      title: '🔥 Oferta da Semana - iNeed',
-      body: randomProduct.label,
-      image: randomProduct.image_url,
-      url: randomProduct.affiliate_link,
-      productId: randomProduct.id,
-      platform: randomProduct.platform,
-    });
-
     let successCount = 0;
     let failCount = 0;
     const failedEndpoints: string[] = [];
 
-    // Send to each subscription using web-push compatible approach
+    // Send to each subscription using web-push
     for (const sub of subscriptions) {
       try {
-        // Use the web-push API endpoint directly
-        // Note: This is a simplified approach - for production, use a proper web-push library
-        const response = await fetch(sub.endpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'text/plain',
-            'TTL': '86400',
+        const pushSubscription = {
+          endpoint: sub.endpoint,
+          keys: {
+            p256dh: sub.p256dh,
+            auth: sub.auth,
           },
-          body: notificationPayload,
-        });
+        };
 
-        if (response.ok || response.status === 201) {
-          successCount++;
-          console.log(`Notification sent to: ${sub.endpoint.substring(0, 50)}...`);
-        } else if (response.status === 410 || response.status === 404) {
+        await webpush.sendNotification(pushSubscription, notificationPayload);
+        successCount++;
+        console.log(`Notification sent to: ${sub.endpoint.substring(0, 50)}...`);
+      } catch (error: any) {
+        if (error.statusCode === 410 || error.statusCode === 404) {
           // Subscription is no longer valid
           failedEndpoints.push(sub.endpoint);
-          failCount++;
           console.log(`Subscription expired: ${sub.endpoint.substring(0, 50)}...`);
         } else {
-          failCount++;
-          console.error(`Failed to send to ${sub.endpoint.substring(0, 50)}...: ${response.status}`);
+          console.error(`Failed to send to ${sub.endpoint.substring(0, 50)}...:`, error.message || error);
         }
-      } catch (error) {
         failCount++;
-        console.error(`Error sending to ${sub.endpoint.substring(0, 50)}...:`, error);
       }
     }
 
@@ -167,7 +154,6 @@ serve(async (req) => {
 
     const result = {
       message: 'Push notifications sent',
-      product: randomProduct.label,
       sent: successCount,
       failed: failCount,
       total: subscriptions.length,
