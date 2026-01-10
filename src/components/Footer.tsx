@@ -113,8 +113,8 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center">
-            <p className="font-omne-regular text-sm text-muted-foreground">
-              © {currentYear} i.need. {isBrasilPage ? "Todos os direitos reservados." : "All rights reserved."}
+            <p className="font-omne-regular text-xs text-muted-foreground text-left">
+              © {currentYear} iNeed. {isBrasilPage ? "Todos os direitos reservados." : "All rights reserved."}
             </p>
           </div>
         </div>
