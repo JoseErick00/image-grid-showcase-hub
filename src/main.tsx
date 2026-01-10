@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.tsx'
 import './index.css'
-import { GridLayoutProvider } from './hooks/useGridLayout'
+
 import { HintBalloonProvider } from './contexts/HintBalloonContext'
 
 // In Lovable preview/dev, a previously-installed PWA service worker can cache old bundles
@@ -34,9 +34,7 @@ const removeSplashScreen = () => {
 createRoot(document.getElementById("root")!).render(
   <HelmetProvider>
     <HintBalloonProvider>
-      <GridLayoutProvider>
-        <App />
-      </GridLayoutProvider>
+      <App />
     </HintBalloonProvider>
   </HelmetProvider>
 );
