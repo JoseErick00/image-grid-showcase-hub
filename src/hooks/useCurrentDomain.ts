@@ -15,14 +15,17 @@ export interface DomainConfig {
 
 // Domain configurations
 const BRASIL_DOMAINS = [
-  'ineedbrasil.com.br',
-  'www.ineedbrasil.com.br',
+  "ineedbrasil.com.br",
+  "www.ineedbrasil.com.br",
 ];
 
 const USA_DOMAINS = [
-  'ineedstores.com',
-  'www.ineedstores.com',
+  "ineedstores.com",
+  "www.ineedstores.com",
 ];
+
+// In Lovable preview / local dev we want Brasil to be the default experience.
+const DEV_PREVIEW_HOSTS = ["localhost", "127.0.0.1"];
 
 /**
  * Hook to detect current domain and return appropriate configuration
@@ -148,8 +151,14 @@ export function getBrasilPrefix(): string {
  */
 export function isBrasilDomain(): boolean {
   const hostname = window.location.hostname;
-  return BRASIL_DOMAINS.some(domain => 
-    hostname === domain || hostname.endsWith(`.${domain}`)
+
+  // Treat Lovable preview + local dev as Brasil by default
+  if (hostname.endsWith(".lovable.app") || DEV_PREVIEW_HOSTS.includes(hostname)) {
+    return true;
+  }
+
+  return BRASIL_DOMAINS.some(
+    (domain) => hostname === domain || hostname.endsWith(`.${domain}`)
   );
 }
 

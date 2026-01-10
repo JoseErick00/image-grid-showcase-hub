@@ -14,55 +14,67 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
     VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png', 'splash-logo.jpg', 'splash-*.jpg'],
+      // Important: service worker caching can make the Lovable preview look "stuck".
+      // Disable SW in dev/preview; keep it enabled for production builds.
+      devOptions: {
+        enabled: mode === "production",
+      },
+      registerType: "autoUpdate",
+      includeAssets: [
+        "favicon.ico",
+        "apple-touch-icon.png",
+        "pwa-192x192.png",
+        "pwa-512x512.png",
+        "splash-logo.jpg",
+        "splash-*.jpg",
+      ],
       manifest: {
-        name: 'iNeed - O aplicativo mais bacana do Brasil',
-        short_name: 'iNeed',
-        description: 'Descubra ofertas incríveis e ganhe prêmios compartilhando com amigos!',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
-        display: 'standalone',
-        orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
+        name: "iNeed - O aplicativo mais bacana do Brasil",
+        short_name: "iNeed",
+        description: "Descubra ofertas incríveis e ganhe prêmios compartilhando com amigos!",
+        theme_color: "#ffffff",
+        background_color: "#ffffff",
+        display: "standalone",
+        orientation: "portrait",
+        scope: "/",
+        start_url: "/",
         icons: [
           {
-            src: '/app-icon.png',
-            sizes: '192x192',
-            type: 'image/png'
+            src: "/app-icon.png",
+            sizes: "192x192",
+            type: "image/png",
           },
           {
-            src: '/app-icon.png',
-            sizes: '512x512',
-            type: 'image/png'
+            src: "/app-icon.png",
+            sizes: "512x512",
+            type: "image/png",
           },
           {
-            src: '/app-icon.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
-        ]
+            src: "/app-icon.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+        ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg,jpeg}'],
-        importScripts: ['/sw-push.js'],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,jpg,jpeg}"],
+        importScripts: ["/sw-push.js"],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/.*\.supabase\.co\/.*/i,
-            handler: 'NetworkFirst',
+            handler: "NetworkFirst",
             options: {
-              cacheName: 'supabase-cache',
+              cacheName: "supabase-cache",
               expiration: {
                 maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 // 24 hours
-              }
-            }
-          }
-        ]
-      }
-    })
+                maxAgeSeconds: 60 * 60 * 24, // 24 hours
+              },
+            },
+          },
+        ],
+      },
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {

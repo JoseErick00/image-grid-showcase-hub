@@ -43,6 +43,12 @@ All colors MUST be HSL.
     --brand-dark: 0 0% 9.2%; /* #171717 */
     --brand-light: 0 0% 96.9%; /* #f7f7f7 */
     --brand-mid: 0 0% 21.6%; /* #373737 */
+
+    /* Platform colors (HSL) */
+    --platform-amazon: 36 100% 50%;
+    --platform-shopee: 10 85% 56%;
+    --platform-aliexpress: 4 78% 52%;
+    --platform-alibaba: 25 100% 50%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-dark)), hsl(var(--brand-mid)));
