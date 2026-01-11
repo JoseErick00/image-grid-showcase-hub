@@ -25,6 +25,7 @@ import Search from "./pages/Search";
 import Layout from "./components/Layout";
 import DynamicCampaignPage from "./pages/campaigns/DynamicCampaignPage";
 import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
+import AdminMetrics from "./pages/admin/AdminMetrics";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 import BrasilDomainRedirect from "./components/BrasilDomainRedirect";
 
@@ -171,6 +172,7 @@ const App = () => {
                 
                 {/* Admin routes - outside main Layout */}
                 <Route path="admin/migrate" element={<MigrateCampaigns />} />
+                <Route path="admin/metricas" element={<AdminMetrics />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
