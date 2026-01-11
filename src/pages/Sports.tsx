@@ -202,7 +202,7 @@ const Sports = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center items-center gap-8 mt-8">
           <a 
-            href="https://www.instagram.com/ineed_stores" 
+            href="https://www.instagram.com/ineed_brasil" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
@@ -555,7 +555,7 @@ const Sports = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center items-center gap-8">
           <a 
-            href="https://www.instagram.com/ineed_stores" 
+            href="https://www.instagram.com/ineed_brasil" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
