@@ -10,6 +10,42 @@ import { X, Share, MoreVertical, Copy, ExternalLink, Download, CheckCircle2 } fr
 import popupHeader from "@/assets/pwa/popup_header.jpg";
 import { toast } from "sonner";
 
+// PWA Install Analytics tracking
+type PwaEventAction = 
+  | 'modal_opened'
+  | 'share_button_clicked'
+  | 'install_button_clicked'
+  | 'ok_understood_clicked'
+  | 'copy_link_clicked'
+  | 'modal_closed'
+  | 'install_success'
+  | 'install_dismissed';
+
+type PwaPlatformType = 'ios' | 'android' | 'desktop' | 'unknown';
+
+const trackPwaEvent = (action: PwaEventAction, data?: {
+  platform?: PwaPlatformType;
+  isInAppBrowser?: boolean;
+  inAppBrowserName?: string | null;
+  shareSupported?: boolean;
+  installPromptAvailable?: boolean;
+}) => {
+  // Google Analytics 4 event
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'pwa_install', {
+      action,
+      platform: data?.platform || 'unknown',
+      in_app_browser: data?.isInAppBrowser || false,
+      in_app_browser_name: data?.inAppBrowserName || null,
+      share_supported: data?.shareSupported || false,
+      install_prompt_available: data?.installPromptAvailable || false,
+    });
+  }
+
+  // Console log for debugging/development
+  console.log('📱 PWA Event:', action, data);
+};
+
 interface PwaInstallDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -75,7 +111,34 @@ const PwaInstallDialog = ({
     setShareSupported(typeof navigator.share === 'function');
   }, [open]);
 
+  // Helper to get platform type for tracking
+  const getPlatformType = (): PwaPlatformType => {
+    if (platform.isIOS) return 'ios';
+    if (platform.isAndroid) return 'android';
+    if (platform.isDesktop) return 'desktop';
+    return 'unknown';
+  };
+
+  // Track modal opened when dialog opens
+  useEffect(() => {
+    if (open) {
+      trackPwaEvent('modal_opened', {
+        platform: getPlatformType(),
+        isInAppBrowser: !!inAppBrowser,
+        inAppBrowserName: inAppBrowser,
+        shareSupported,
+        installPromptAvailable: isInstallable,
+      });
+    }
+  }, [open]);
+
   const handleOpenShare = async () => {
+    trackPwaEvent('share_button_clicked', {
+      platform: getPlatformType(),
+      isInAppBrowser: !!inAppBrowser,
+      shareSupported,
+    });
+
     try {
       await navigator.share({
         title: 'iNeed - O aplicativo mais bacana do Brasil',
@@ -90,6 +153,11 @@ const PwaInstallDialog = ({
   };
 
   const handleCopyLink = async () => {
+    trackPwaEvent('copy_link_clicked', {
+      platform: getPlatformType(),
+      isInAppBrowser: !!inAppBrowser,
+    });
+
     try {
       await navigator.clipboard.writeText(window.location.origin);
       toast.success("Link copiado! Cole no Safari ou Chrome para instalar.");
@@ -99,12 +167,20 @@ const PwaInstallDialog = ({
   };
 
   const handleInstallNow = async () => {
+    trackPwaEvent('install_button_clicked', {
+      platform: getPlatformType(),
+      installPromptAvailable: isInstallable,
+    });
+
     if (onInstallClick) {
       setIsInstalling(true);
       try {
         const success = await onInstallClick();
         if (success) {
+          trackPwaEvent('install_success', { platform: getPlatformType() });
           onOpenChange(false);
+        } else {
+          trackPwaEvent('install_dismissed', { platform: getPlatformType() });
         }
       } finally {
         setIsInstalling(false);
@@ -113,6 +189,18 @@ const PwaInstallDialog = ({
   };
 
   const handleClose = () => {
+    trackPwaEvent('modal_closed', {
+      platform: getPlatformType(),
+      isInAppBrowser: !!inAppBrowser,
+    });
+    onOpenChange(false);
+  };
+
+  const handleOkUnderstood = () => {
+    trackPwaEvent('ok_understood_clicked', {
+      platform: getPlatformType(),
+      isInAppBrowser: !!inAppBrowser,
+    });
     onOpenChange(false);
   };
 
@@ -144,7 +232,7 @@ const PwaInstallDialog = ({
               O iNeed já está na sua tela inicial. Aproveite!
             </p>
             <Button 
-              onClick={handleClose}
+              onClick={handleOkUnderstood}
               className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
             >
               Ok, entendi!
@@ -210,7 +298,7 @@ const PwaInstallDialog = ({
                 Copiar link
               </Button>
               <Button 
-                onClick={handleClose}
+                onClick={handleOkUnderstood}
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
               >
                 Ok, entendi!
@@ -282,7 +370,7 @@ const PwaInstallDialog = ({
                 </Button>
               )}
               <Button 
-                onClick={handleClose}
+                onClick={handleOkUnderstood}
                 variant={shareSupported ? "outline" : "default"}
                 className={shareSupported 
                   ? "w-full border-gray-300 text-gray-700 font-semibold py-3" 
@@ -397,7 +485,7 @@ const PwaInstallDialog = ({
             </p>
 
             <Button 
-              onClick={handleClose}
+              onClick={handleOkUnderstood}
               className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
             >
               Ok, entendi!
@@ -459,7 +547,7 @@ const PwaInstallDialog = ({
           </div>
 
           <Button 
-            onClick={handleClose}
+            onClick={handleOkUnderstood}
             variant={isInstallable ? "outline" : "default"}
             className={isInstallable 
               ? "w-full border-gray-300 text-gray-700 font-semibold py-3" 
