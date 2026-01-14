@@ -70,27 +70,34 @@ const detectInAppBrowser = (): string | null => {
   return null;
 };
 
-// Detect platform
+// Detect platform - more accurate detection
 const detectPlatform = () => {
-  const ua = navigator.userAgent;
-  const isIOS = /iPad|iPhone|iPod/.test(ua) && !(window as any).MSStream;
-  const isAndroid = /Android/i.test(ua);
-  const isMac = /Macintosh|MacIntel|MacPPC|Mac68K/.test(ua);
-  const isWindows = /Win32|Win64|Windows|WinCE/.test(ua);
+  const ua = navigator.userAgent.toLowerCase();
+  
+  // iOS detection - must check first and be exclusive
+  const isIOS = /iphone|ipad|ipod/.test(ua) && !(window as any).MSStream;
+  
+  // Android detection - only if NOT iOS
+  const isAndroid = !isIOS && /android/.test(ua);
+  
+  const isMac = /macintosh|macintel|macppc|mac68k/.test(ua);
+  const isWindows = /win32|win64|windows|wince/.test(ua);
+  
+  // Desktop is only true if NOT mobile
+  const isMobile = isIOS || isAndroid;
+  const isDesktop = !isMobile;
+  
+  // Debug log for troubleshooting
+  console.log('🔍 Platform detection:', { ua: navigator.userAgent, isIOS, isAndroid, isMobile, isDesktop });
   
   return {
     isIOS,
     isAndroid,
-    isMobile: isIOS || isAndroid,
-    isDesktop: !isIOS && !isAndroid,
+    isMobile,
+    isDesktop,
     isMac,
     isWindows,
   };
-};
-
-// Check if Safari browser
-const isSafari = () => {
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 };
 
 const PwaInstallDialog = ({
@@ -310,8 +317,8 @@ const PwaInstallDialog = ({
     );
   }
 
-  // iOS / Safari instructions
-  if (platform.isIOS || (platform.isMobile && isSafari())) {
+  // iOS instructions - ONLY for iOS devices
+  if (platform.isIOS) {
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="max-w-[95vw] sm:max-w-md p-0 gap-0 border-0 overflow-hidden bg-[#ecf0ea]">
@@ -386,8 +393,8 @@ const PwaInstallDialog = ({
     );
   }
 
-  // Android with native install prompt available
-  if (platform.isAndroid && isInstallable) {
+  // Android with native install prompt available - prioritize native install
+  if (isInstallable && (platform.isAndroid || platform.isMobile)) {
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="max-w-[95vw] sm:max-w-md p-0 gap-0 border-0 overflow-hidden bg-[#ecf0ea]">
@@ -435,8 +442,8 @@ const PwaInstallDialog = ({
     );
   }
 
-  // Android without native install or generic mobile
-  if (platform.isAndroid || platform.isMobile) {
+  // Android without native install (fallback instructions)
+  if (platform.isAndroid) {
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="max-w-[95vw] sm:max-w-md p-0 gap-0 border-0 overflow-hidden bg-[#ecf0ea]">
