@@ -146,6 +146,17 @@ const PwaInstallDialog = ({
       shareSupported,
     });
 
+    // On iOS, navigator.share() does NOT open the Safari share menu with "Add to Home Screen"
+    // It only shares content. We need to show instructions instead.
+    if (platform.isIOS) {
+      toast.info(
+        "Toque no ícone de Compartilhar (↑) na barra do Safari para ver 'Adicionar à Tela de Início'",
+        { duration: 5000 }
+      );
+      return;
+    }
+
+    // For non-iOS, try share API
     try {
       await navigator.share({
         title: 'iNeed - O aplicativo mais bacana do Brasil',
@@ -367,22 +378,15 @@ const PwaInstallDialog = ({
             </p>
 
             <div className="flex flex-col gap-3">
-              {shareSupported && (
-                <Button 
-                  onClick={handleOpenShare}
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3"
-                >
-                  <Share className="mr-2 h-4 w-4" />
-                  Abrir Compartilhar
-                </Button>
-              )}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-2">
+                <p className="text-sm text-blue-700 text-center flex items-center justify-center gap-2">
+                  <span className="text-lg">⬆️</span>
+                  <span>Procure o ícone <strong>Compartilhar</strong> na barra inferior do Safari</span>
+                </p>
+              </div>
               <Button 
                 onClick={handleOkUnderstood}
-                variant={shareSupported ? "outline" : "default"}
-                className={shareSupported 
-                  ? "w-full border-gray-300 text-gray-700 font-semibold py-3" 
-                  : "w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
-                }
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
               >
                 Ok, entendi!
               </Button>
