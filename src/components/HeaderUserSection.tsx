@@ -159,20 +159,23 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
 
   // Desktop variant
   return (
-    <div className="flex items-center gap-2">
-      {/* Favorites Link */}
-      <Link 
-        to="/favoritos"
-        className="flex items-center justify-center w-9 h-9 rounded-lg hover:bg-white/10 transition-colors"
-        title="Meus Favoritos"
-      >
-        <Heart className={`w-5 h-5 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-white'}`} />
-      </Link>
+    <div className="flex items-center gap-3 bg-[#434343] rounded-lg px-4 py-2 border border-[#767676]">
+      {/* Left side icons - same as mobile */}
+      <div className="flex flex-col gap-1.5">
+        <Link 
+          to="/favoritos"
+          className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+          title="Meus Favoritos"
+        >
+          <Heart className={`w-4 h-4 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-white'}`} />
+        </Link>
+        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10">
+          <NotificationToggle variant="compact" className="text-white" />
+        </div>
+      </div>
       
-      {/* Notification Toggle */}
-      <NotificationToggle variant="compact" className="text-white hover:bg-white/10" />
-      
-      <div className="flex flex-col items-center gap-0.5 bg-[#434343] rounded-lg px-4 py-2 border border-[#767676]">
+      {/* User info */}
+      <div className="flex flex-col items-center gap-0.5">
         {/* Email + trocar */}
         <div className="flex items-center justify-center gap-2">
           <span className="text-xs text-white/80 truncate max-w-[150px]">
@@ -186,39 +189,39 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
           </button>
         </div>
 
-      {/* Stats row */}
-      <div className="flex items-center justify-center gap-3">
-        {/* Coins */}
-        <div className="flex items-center gap-1">
-          <img src={premiacaoCoinIcon} alt="moedas" className="w-4 h-4" />
-          <span className="text-sm font-omne-medium text-white">{totalCoins}</span>
+        {/* Stats row */}
+        <div className="flex items-center justify-center gap-3">
+          {/* Coins */}
+          <div className="flex items-center gap-1">
+            <img src={premiacaoCoinIcon} alt="moedas" className="w-4 h-4" />
+            <span className="text-sm font-omne-medium text-white">{totalCoins}</span>
+          </div>
+
+          {/* Referrals */}
+          <div className="flex items-center gap-1">
+            <Users size={14} className="text-white/70" />
+            <span className="text-sm text-white">{totalReferrals}</span>
+          </div>
+
+          {/* Level */}
+          <div className="flex items-center gap-1">
+            <img 
+              src={LEVEL_ICONS[currentLevel]} 
+              alt={LEVEL_LABELS[currentLevel]} 
+              className="w-4 h-4"
+            />
+            <span className="text-xs font-omne-medium text-white">
+              {LEVEL_LABELS[currentLevel]}
+            </span>
+          </div>
         </div>
 
-        {/* Referrals */}
-        <div className="flex items-center gap-1">
-          <Users size={14} className="text-white/70" />
-          <span className="text-sm text-white">{totalReferrals}</span>
-        </div>
-
-        {/* Level */}
-        <div className="flex items-center gap-1">
-          <img 
-            src={LEVEL_ICONS[currentLevel]} 
-            alt={LEVEL_LABELS[currentLevel]} 
-            className="w-4 h-4"
-          />
-          <span className="text-xs font-omne-medium text-white">
-            {LEVEL_LABELS[currentLevel]}
-          </span>
-        </div>
-      </div>
-
-      {/* User's referral code - highlighted */}
-      {referralCode && (
-        <p className="text-base font-omne-bold text-white mt-1">
-          {referralCode}
-        </p>
-      )}
+        {/* User's referral code - highlighted */}
+        {referralCode && (
+          <p className="text-base font-omne-bold text-white mt-1">
+            {referralCode}
+          </p>
+        )}
       </div>
     </div>
   );
