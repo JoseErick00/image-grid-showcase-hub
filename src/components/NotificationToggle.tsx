@@ -46,12 +46,12 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
         className={className}
         title={isSubscribed ? 'Desativar notificações' : 'Ativar notificações'}
       >
-        {isLoading ? (
-          <Loader2 className="h-5 w-5 animate-spin" />
+      {isLoading ? (
+          <Loader2 className="h-4 w-4 animate-spin text-white" />
         ) : isSubscribed ? (
-          <Bell className="h-5 w-5 text-primary" />
+          <Bell className="h-4 w-4 text-yellow-400 fill-yellow-400" />
         ) : (
-          <BellOff className="h-5 w-5 text-muted-foreground" />
+          <Bell className="h-4 w-4 text-white" />
         )}
       </Button>
     );
