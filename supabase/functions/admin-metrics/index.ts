@@ -16,6 +16,38 @@ Deno.serve(async (req) => {
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+    // Check if this is a push stats request
+    let requestBody = null;
+    try {
+      requestBody = await req.json();
+    } catch {
+      // No body or invalid JSON - continue with full metrics
+    }
+
+    if (requestBody?.action === "push-stats") {
+      // Fetch push subscription stats
+      const { data: allSubs, error: subsError } = await supabase
+        .from("push_subscriptions")
+        .select("is_active");
+
+      if (subsError) throw subsError;
+
+      const total = allSubs?.length || 0;
+      const active = allSubs?.filter(s => s.is_active).length || 0;
+      const inactive = total - active;
+
+      return new Response(
+        JSON.stringify({
+          success: true,
+          pushStats: { total, active, inactive },
+        }),
+        {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 200,
+        }
+      );
+    }
+
     // Fetch all user gamification data
     const { data: users, error: usersError } = await supabase
       .from("user_gamification")
