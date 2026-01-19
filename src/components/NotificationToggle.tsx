@@ -59,7 +59,7 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
         size="icon"
         onClick={handleToggle}
         disabled={isProcessing}
-        className={className}
+        className={`${className} relative`}
         title={isSubscribed ? 'Desativar notificações (-20 moedas)' : 'Ativar notificações (+20 moedas)'}
       >
         {isProcessing ? (
@@ -67,7 +67,12 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
         ) : isSubscribed ? (
           <Bell className="h-4 w-4 text-yellow-400 fill-yellow-400" />
         ) : (
-          <Bell className="h-4 w-4 text-white" />
+          <>
+            <Bell className="h-4 w-4 text-white" />
+            <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-bold px-1 rounded-full animate-pulse">
+              +20
+            </span>
+          </>
         )}
       </Button>
     );
