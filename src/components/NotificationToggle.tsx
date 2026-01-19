@@ -1,6 +1,8 @@
 import { Bell, BellOff, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { usePushNotifications } from '@/hooks/usePushNotifications';
+import { useNotificationBonus } from '@/hooks/useNotificationBonus';
+import { useGamification } from '@/contexts/GamificationContext';
 import { toast } from 'sonner';
 
 interface NotificationToggleProps {
@@ -10,19 +12,31 @@ interface NotificationToggleProps {
 
 export function NotificationToggle({ variant = 'default', className }: NotificationToggleProps) {
   const { isSupported, isSubscribed, isLoading, permission, subscribe, unsubscribe } = usePushNotifications();
+  const { applyBonus, removeBonus, isLoading: bonusLoading } = useNotificationBonus();
+  const { user, refreshGamification } = useGamification();
 
   const handleToggle = async () => {
     if (isSubscribed) {
       const success = await unsubscribe();
       if (success) {
-        toast.success('Notificações desativadas');
+        // Remove bonus when unsubscribing
+        if (user) {
+          await removeBonus(user.id);
+          await refreshGamification();
+        }
+        toast.success('Notificações desativadas (-20 moedas)');
       } else {
         toast.error('Erro ao desativar notificações');
       }
     } else {
       const success = await subscribe();
       if (success) {
-        toast.success('Notificações ativadas! Você receberá ofertas semanais.');
+        // Apply bonus when subscribing
+        if (user) {
+          await applyBonus(user.id);
+          await refreshGamification();
+        }
+        toast.success('Notificações ativadas! +20 moedas adicionadas! 🎉');
       } else if (permission === 'denied') {
         toast.error('Permissão de notificações bloqueada. Habilite nas configurações do navegador.');
       } else {
@@ -36,17 +50,19 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
     return null;
   }
 
+  const isProcessing = isLoading || bonusLoading;
+
   if (variant === 'compact') {
     return (
       <Button
         variant="ghost"
         size="icon"
         onClick={handleToggle}
-        disabled={isLoading}
+        disabled={isProcessing}
         className={className}
-        title={isSubscribed ? 'Desativar notificações' : 'Ativar notificações'}
+        title={isSubscribed ? 'Desativar notificações (-20 moedas)' : 'Ativar notificações (+20 moedas)'}
       >
-      {isLoading ? (
+        {isProcessing ? (
           <Loader2 className="h-4 w-4 animate-spin text-white" />
         ) : isSubscribed ? (
           <Bell className="h-4 w-4 text-yellow-400 fill-yellow-400" />
@@ -61,10 +77,10 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
     <Button
       variant={isSubscribed ? 'secondary' : 'default'}
       onClick={handleToggle}
-      disabled={isLoading}
+      disabled={isProcessing}
       className={className}
     >
-      {isLoading ? (
+      {isProcessing ? (
         <>
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
           Carregando...
@@ -77,7 +93,7 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
       ) : (
         <>
           <BellOff className="h-4 w-4 mr-2" />
-          Ativar Notificações
+          Ativar Notificações (+20)
         </>
       )}
     </Button>
