@@ -175,6 +175,12 @@ const App = () => {
                 <Route path="admin/migrate" element={<MigrateCampaigns />} />
                 <Route path="admin/metricas" element={<AdminMetrics />} />
                 <Route path="admin/notificacoes" element={<AdminNotifications />} />
+                
+                {/* Admin routes with /brasil prefix for Brazilian domain users */}
+                <Route path="brasil/admin/migrate" element={<MigrateCampaigns />} />
+                <Route path="brasil/admin/metricas" element={<AdminMetrics />} />
+                <Route path="brasil/admin/notificacoes" element={<AdminNotifications />} />
+                
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
