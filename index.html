@@ -45,14 +45,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Omnes:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RTW2FS8RB"></script>
+    <!-- Google tag (gtag.js) - Dynamic per domain -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-1RTW2FS8RB');
+      (function() {
+        // Define GA4 IDs for each domain
+        var GA_ID_BRASIL = 'G-NMVPD8GQCP';
+        var GA_ID_USA = 'G-1RTW2FS8RB';
+        
+        // Detect current domain
+        var hostname = window.location.hostname;
+        var isBrasil = hostname.indexOf('ineedbrasil.com.br') !== -1 || 
+                       hostname.indexOf('lovable.app') !== -1 ||
+                       hostname === 'localhost';
+        
+        // Select appropriate GA ID
+        var GA_ID = isBrasil ? GA_ID_BRASIL : GA_ID_USA;
+        
+        // Load gtag.js dynamically
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(script);
+        
+        // Initialize dataLayer and gtag
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        
+        // Configure cross-domain tracking (linker)
+        gtag('set', 'linker', {
+          'domains': ['ineedbrasil.com.br', 'www.ineedbrasil.com.br', 'ineedstores.com', 'www.ineedstores.com']
+        });
+        
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      })();
     </script>
 
     <!-- Ahrefs Analytics -->
