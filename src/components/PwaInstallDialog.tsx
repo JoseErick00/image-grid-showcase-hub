@@ -6,8 +6,9 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { X, Share, MoreVertical, Copy, ExternalLink, Download, CheckCircle2 } from "lucide-react";
+import { X, Share, MoreVertical, ExternalLink, Download, CheckCircle2 } from "lucide-react";
 import popupHeader from "@/assets/pwa/popup_header.jpg";
+import popupHeaderSocialMedia from "@/assets/popup_header_redessociais.jpg";
 import { toast } from "sonner";
 
 // PWA Install Analytics tracking
@@ -170,18 +171,30 @@ const PwaInstallDialog = ({
     }
   };
 
-  const handleCopyLink = async () => {
+  const handleOpenInBrowser = () => {
     trackPwaEvent('copy_link_clicked', {
       platform: getPlatformType(),
       isInAppBrowser: !!inAppBrowser,
     });
 
-    try {
-      await navigator.clipboard.writeText(window.location.origin);
-      toast.success("Link copiado! Cole no Safari ou Chrome para instalar.");
-    } catch {
-      toast.error("Não foi possível copiar o link");
+    // Try to open in default browser using intent URL schemes
+    const currentUrl = window.location.href;
+    
+    if (platform.isAndroid) {
+      // Android: Use intent:// scheme to open in Chrome or default browser
+      const intentUrl = `intent://${currentUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=com.android.chrome;end`;
+      window.location.href = intentUrl;
+    } else if (platform.isIOS) {
+      // iOS: Use x-safari-https:// or just window.open with _system
+      // Unfortunately iOS doesn't have a reliable way to force Safari from in-app browser
+      // Best fallback is to open the URL which some in-app browsers handle
+      window.open(currentUrl, '_blank');
+    } else {
+      // Fallback: just try to open in new window
+      window.open(currentUrl, '_blank');
     }
+    
+    toast.success(`Abrindo no ${platform.isIOS ? 'Safari' : 'navegador'}...`);
   };
 
   const handleInstallNow = async () => {
@@ -267,7 +280,7 @@ const PwaInstallDialog = ({
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="max-w-[95vw] sm:max-w-md p-0 gap-0 border-0 overflow-hidden bg-[#ecf0ea]">
           <div className="relative">
-            <img src={popupHeader} alt="iNeed App" className="w-full h-auto" />
+            <img src={popupHeaderSocialMedia} alt="iNeed App" className="w-full h-auto" />
             <button
               onClick={handleClose}
               className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors"
@@ -308,16 +321,16 @@ const PwaInstallDialog = ({
 
             <div className="flex flex-col gap-3">
               <Button 
-                onClick={handleCopyLink}
-                variant="outline"
-                className="w-full border-gray-300 text-gray-700 font-semibold py-3"
+                onClick={handleOpenInBrowser}
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
               >
-                <Copy className="mr-2 h-4 w-4" />
-                Copiar link
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Abrir no {platform.isIOS ? 'Safari' : 'Chrome'}
               </Button>
               <Button 
                 onClick={handleOkUnderstood}
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
+                variant="outline"
+                className="w-full border-gray-300 text-gray-700 font-semibold py-3"
               >
                 Ok, entendi!
               </Button>
