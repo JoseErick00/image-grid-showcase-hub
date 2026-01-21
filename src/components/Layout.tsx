@@ -7,12 +7,16 @@ import { NotificationPromptDialog } from "./NotificationPromptDialog";
 import { useFirstLoginNotificationPrompt } from "@/hooks/useFirstLoginNotificationPrompt";
 import { useNotificationBonus } from "@/hooks/useNotificationBonus";
 import { useGamification } from "@/contexts/GamificationContext";
+import { useUTMTracking } from "@/hooks/useAffiliateTracking";
 
 const Layout = () => {
   const location = useLocation();
   const { showPrompt, setShowPrompt, dismissPrompt } = useFirstLoginNotificationPrompt();
   const { applyBonus } = useNotificationBonus();
   const { user, refreshGamification } = useGamification();
+  
+  // Track UTM parameters for conversion tracking
+  useUTMTracking();
 
   useEffect(() => {
     window.scrollTo(0, 0);

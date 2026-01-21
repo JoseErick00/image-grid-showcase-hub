@@ -4,7 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus } from "lucide-react";
+import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick } from "lucide-react";
+import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 
 interface MetricsData {
   summary: {
@@ -70,11 +71,14 @@ interface MetricsData {
 
 const AdminMetrics = () => {
   const [metrics, setMetrics] = useState<MetricsData | null>(null);
+  const [affiliateMetrics, setAffiliateMetrics] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [affiliateLoading, setAffiliateLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchMetrics();
+    fetchAffiliateMetrics();
   }, []);
 
   const fetchMetrics = async () => {
@@ -91,6 +95,22 @@ const AdminMetrics = () => {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchAffiliateMetrics = async () => {
+    try {
+      setAffiliateLoading(true);
+      const { data, error } = await supabase.functions.invoke("affiliate-metrics");
+      
+      if (error) throw error;
+      if (!data.success) throw new Error(data.error);
+      
+      setAffiliateMetrics(data.data);
+    } catch (err: any) {
+      console.error("Error fetching affiliate metrics:", err);
+    } finally {
+      setAffiliateLoading(false);
     }
   };
 
@@ -257,14 +277,30 @@ const AdminMetrics = () => {
           </CardContent>
         </Card>
 
-        <Tabs defaultValue="users" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 h-auto">
+        <Tabs defaultValue="affiliates" className="space-y-4">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-6 h-auto">
+            <TabsTrigger value="affiliates" className="flex items-center gap-1">
+              <MousePointerClick className="h-3 w-3" />
+              Afiliados
+            </TabsTrigger>
             <TabsTrigger value="users">Usuários</TabsTrigger>
             <TabsTrigger value="favorites">Favoritos</TabsTrigger>
             <TabsTrigger value="shares">Compartilhamentos</TabsTrigger>
             <TabsTrigger value="referrals">Indicações</TabsTrigger>
             <TabsTrigger value="redemptions">Resgates</TabsTrigger>
           </TabsList>
+
+          <TabsContent value="affiliates">
+            {affiliateLoading ? (
+              <div className="text-center py-8">Carregando métricas de afiliados...</div>
+            ) : affiliateMetrics ? (
+              <AffiliateMetricsSection metrics={affiliateMetrics} />
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                Nenhum dado de afiliados disponível ainda.
+              </div>
+            )}
+          </TabsContent>
 
           <TabsContent value="users" className="space-y-4">
             <Card>
