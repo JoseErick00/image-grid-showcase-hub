@@ -1,6 +1,7 @@
 import LikeButton from '@/components/ui/LikeButton';
 import ShareButton from '@/components/ui/ShareButton';
 import { generateProductId } from '@/utils/productHash';
+import { trackBannerClick } from '@/utils/analytics';
 
 interface CategorySmallBannerProps {
   image: string;
@@ -27,6 +28,14 @@ const CategorySmallBanner = ({
     url: link,
   };
 
+  const handleBannerClick = () => {
+    trackBannerClick({
+      link,
+      bannerId: `${categorySlug}-${bannerId}`,
+      bannerType: 'small',
+    });
+  };
+
   return (
     <div className={`relative group cursor-pointer overflow-hidden rounded-lg ${className}`}>
       <a
@@ -34,6 +43,7 @@ const CategorySmallBanner = ({
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full h-full"
+        onClick={handleBannerClick}
       >
         <img
           src={image}
