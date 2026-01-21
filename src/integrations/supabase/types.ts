@@ -517,6 +517,42 @@ export type Database = {
         }
         Relationships: []
       }
+      pwa_install_events: {
+        Row: {
+          browser: string | null
+          created_at: string | null
+          event_type: string
+          id: string
+          in_app_browser_name: string | null
+          is_in_app_browser: boolean | null
+          platform: string | null
+          session_id: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          browser?: string | null
+          created_at?: string | null
+          event_type: string
+          id?: string
+          in_app_browser_name?: string | null
+          is_in_app_browser?: boolean | null
+          platform?: string | null
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          browser?: string | null
+          created_at?: string | null
+          event_type?: string
+          id?: string
+          in_app_browser_name?: string | null
+          is_in_app_browser?: boolean | null
+          platform?: string | null
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       referrals: {
         Row: {
           coins_awarded: number
