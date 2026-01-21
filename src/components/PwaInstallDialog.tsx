@@ -10,42 +10,9 @@ import { X, Share, MoreVertical, ExternalLink, Download, CheckCircle2 } from "lu
 import popupHeader from "@/assets/pwa/popup_header.jpg";
 import popupHeaderSocialMedia from "@/assets/popup_header_redessociais.jpg";
 import { toast } from "sonner";
-
-// PWA Install Analytics tracking
-type PwaEventAction = 
-  | 'modal_opened'
-  | 'share_button_clicked'
-  | 'install_button_clicked'
-  | 'ok_understood_clicked'
-  | 'copy_link_clicked'
-  | 'modal_closed'
-  | 'install_success'
-  | 'install_dismissed';
+import { trackPwaEvent } from "@/hooks/usePwaTracking";
 
 type PwaPlatformType = 'ios' | 'android' | 'desktop' | 'unknown';
-
-const trackPwaEvent = (action: PwaEventAction, data?: {
-  platform?: PwaPlatformType;
-  isInAppBrowser?: boolean;
-  inAppBrowserName?: string | null;
-  shareSupported?: boolean;
-  installPromptAvailable?: boolean;
-}) => {
-  // Google Analytics 4 event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'pwa_install', {
-      action,
-      platform: data?.platform || 'unknown',
-      in_app_browser: data?.isInAppBrowser || false,
-      in_app_browser_name: data?.inAppBrowserName || null,
-      share_supported: data?.shareSupported || false,
-      install_prompt_available: data?.installPromptAvailable || false,
-    });
-  }
-
-  // Console log for debugging/development
-  console.log('📱 PWA Event:', action, data);
-};
 
 interface PwaInstallDialogProps {
   open: boolean;
@@ -145,6 +112,19 @@ const PwaInstallDialog = ({
     setShareSupported(typeof navigator.share === 'function');
   }, [open]);
 
+  // Track modal opened when dialog opens
+  useEffect(() => {
+    if (open) {
+      const platformType = platform.isIOS ? 'ios' : platform.isAndroid ? 'android' : 'desktop';
+      trackPwaEvent({
+        eventType: isInstalled ? 'already_installed_shown' : 'modal_opened',
+        platform: platformType,
+        isInAppBrowser: !!inAppBrowser,
+        inAppBrowserName: inAppBrowser || undefined,
+      });
+    }
+  }, [open, platform.isIOS, platform.isAndroid, inAppBrowser, isInstalled]);
+
   // Helper to get platform type for tracking
   const getPlatformType = (): PwaPlatformType => {
     if (platform.isIOS) return 'ios';
@@ -153,24 +133,11 @@ const PwaInstallDialog = ({
     return 'unknown';
   };
 
-  // Track modal opened when dialog opens
-  useEffect(() => {
-    if (open) {
-      trackPwaEvent('modal_opened', {
-        platform: getPlatformType(),
-        isInAppBrowser: !!inAppBrowser,
-        inAppBrowserName: inAppBrowser,
-        shareSupported,
-        installPromptAvailable: isInstallable,
-      });
-    }
-  }, [open]);
-
   const handleOpenShare = async () => {
-    trackPwaEvent('share_button_clicked', {
+    trackPwaEvent({
+      eventType: 'share_clicked',
       platform: getPlatformType(),
       isInAppBrowser: !!inAppBrowser,
-      shareSupported,
     });
 
     // On iOS, navigator.share() does NOT open the Safari share menu with "Add to Home Screen"
@@ -198,9 +165,11 @@ const PwaInstallDialog = ({
   };
 
   const handleOpenInBrowser = () => {
-    trackPwaEvent('copy_link_clicked', {
+    trackPwaEvent({
+      eventType: 'open_in_browser_clicked',
       platform: getPlatformType(),
       isInAppBrowser: !!inAppBrowser,
+      inAppBrowserName: inAppBrowser || undefined,
     });
 
     // Try to open in default browser using intent URL schemes
@@ -224,9 +193,9 @@ const PwaInstallDialog = ({
   };
 
   const handleInstallNow = async () => {
-    trackPwaEvent('install_button_clicked', {
+    trackPwaEvent({
+      eventType: 'install_button_clicked',
       platform: getPlatformType(),
-      installPromptAvailable: isInstallable,
     });
 
     if (onInstallClick) {
@@ -234,10 +203,16 @@ const PwaInstallDialog = ({
       try {
         const success = await onInstallClick();
         if (success) {
-          trackPwaEvent('install_success', { platform: getPlatformType() });
+          trackPwaEvent({
+            eventType: 'install_success',
+            platform: getPlatformType(),
+          });
           onOpenChange(false);
         } else {
-          trackPwaEvent('install_dismissed', { platform: getPlatformType() });
+          trackPwaEvent({
+            eventType: 'install_dismissed',
+            platform: getPlatformType(),
+          });
         }
       } finally {
         setIsInstalling(false);
@@ -246,7 +221,8 @@ const PwaInstallDialog = ({
   };
 
   const handleClose = () => {
-    trackPwaEvent('modal_closed', {
+    trackPwaEvent({
+      eventType: 'modal_closed',
       platform: getPlatformType(),
       isInAppBrowser: !!inAppBrowser,
     });
@@ -254,7 +230,8 @@ const PwaInstallDialog = ({
   };
 
   const handleOkUnderstood = () => {
-    trackPwaEvent('ok_understood_clicked', {
+    trackPwaEvent({
+      eventType: 'ok_understood_clicked',
       platform: getPlatformType(),
       isInAppBrowser: !!inAppBrowser,
     });

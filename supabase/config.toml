@@ -29,3 +29,6 @@ verify_jwt = false
 
 [functions.migrate-selected-products]
 verify_jwt = false
+
+[functions.pwa-metrics]
+verify_jwt = false

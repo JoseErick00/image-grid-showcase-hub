@@ -4,8 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick } from "lucide-react";
+import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone } from "lucide-react";
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
+import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 
 interface MetricsData {
   summary: {
@@ -278,10 +279,14 @@ const AdminMetrics = () => {
         </Card>
 
         <Tabs defaultValue="affiliates" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-6 h-auto">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 h-auto">
             <TabsTrigger value="affiliates" className="flex items-center gap-1">
               <MousePointerClick className="h-3 w-3" />
               Afiliados
+            </TabsTrigger>
+            <TabsTrigger value="pwa" className="flex items-center gap-1">
+              <Smartphone className="h-3 w-3" />
+              PWA
             </TabsTrigger>
             <TabsTrigger value="users">Usuários</TabsTrigger>
             <TabsTrigger value="favorites">Favoritos</TabsTrigger>
@@ -300,6 +305,10 @@ const AdminMetrics = () => {
                 Nenhum dado de afiliados disponível ainda.
               </div>
             )}
+          </TabsContent>
+
+          <TabsContent value="pwa">
+            <PwaMetricsSection />
           </TabsContent>
 
           <TabsContent value="users" className="space-y-4">
