@@ -73,31 +73,57 @@ const detectInAppBrowser = (): string | null => {
 
 // Detect platform - more accurate detection
 const detectPlatform = () => {
-  const ua = navigator.userAgent.toLowerCase();
+  const ua = navigator.userAgent;
+  const uaLower = ua.toLowerCase();
   
-  // iOS detection - must check first and be exclusive
-  const isIOS = /iphone|ipad|ipod/.test(ua) && !(window as any).MSStream;
+  // iOS detection - check for iPhone, iPad, iPod
+  // Also check for Mac with touch support (iPad with desktop mode)
+  const isIPhone = /iPhone/i.test(ua);
+  const isIPad = /iPad/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isIPod = /iPod/i.test(ua);
+  const isIOS = (isIPhone || isIPad || isIPod) && !(window as any).MSStream;
   
-  // Android detection - only if NOT iOS
-  const isAndroid = !isIOS && /android/.test(ua);
+  // Android detection - look for "Android" in user agent
+  // Must NOT be iOS (some user agents can be confusing)
+  const hasAndroid = /android/i.test(ua);
+  const isAndroid = hasAndroid && !isIOS;
   
-  const isMac = /macintosh|macintel|macppc|mac68k/.test(ua);
-  const isWindows = /win32|win64|windows|wince/.test(ua);
+  // Check for Chrome on Android specifically
+  const isChromeAndroid = isAndroid && /chrome/i.test(ua) && !/edge|edg/i.test(ua);
   
-  // Desktop is only true if NOT mobile
+  // Mac and Windows detection
+  const isMac = /macintosh|mac os x/i.test(ua) && !isIOS;
+  const isWindows = /windows/i.test(ua);
+  const isLinux = /linux/i.test(ua) && !isAndroid;
+  
+  // Mobile detection
   const isMobile = isIOS || isAndroid;
   const isDesktop = !isMobile;
   
   // Debug log for troubleshooting
-  console.log('🔍 Platform detection:', { ua: navigator.userAgent, isIOS, isAndroid, isMobile, isDesktop });
+  console.log('🔍 Platform detection:', { 
+    ua, 
+    isIOS, 
+    isAndroid, 
+    isChromeAndroid,
+    isMobile, 
+    isDesktop,
+    isIPhone,
+    isIPad,
+    hasAndroid,
+    platform: navigator.platform,
+    maxTouchPoints: navigator.maxTouchPoints
+  });
   
   return {
     isIOS,
     isAndroid,
+    isChromeAndroid,
     isMobile,
     isDesktop,
     isMac,
     isWindows,
+    isLinux,
   };
 };
 
