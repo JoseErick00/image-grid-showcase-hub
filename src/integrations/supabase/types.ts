@@ -14,6 +14,98 @@ export type Database = {
   }
   public: {
     Tables: {
+      affiliate_clicks: {
+        Row: {
+          affiliate_link: string
+          banner_id: string | null
+          click_type: string
+          created_at: string
+          id: string
+          item_name: string | null
+          page_url: string | null
+          platform: string
+          referrer: string | null
+          session_id: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          affiliate_link: string
+          banner_id?: string | null
+          click_type?: string
+          created_at?: string
+          id?: string
+          item_name?: string | null
+          page_url?: string | null
+          platform: string
+          referrer?: string | null
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          affiliate_link?: string
+          banner_id?: string | null
+          click_type?: string
+          created_at?: string
+          id?: string
+          item_name?: string | null
+          page_url?: string | null
+          platform?: string
+          referrer?: string | null
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
+      affiliate_conversions: {
+        Row: {
+          created_at: string
+          id: string
+          original_click_id: string | null
+          page_url: string | null
+          session_id: string | null
+          user_agent: string | null
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          original_click_id?: string | null
+          page_url?: string | null
+          session_id?: string | null
+          user_agent?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          original_click_id?: string | null
+          page_url?: string | null
+          session_id?: string | null
+          user_agent?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "affiliate_conversions_original_click_id_fkey"
+            columns: ["original_click_id"]
+            isOneToOne: false
+            referencedRelation: "affiliate_clicks"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       campaigns: {
         Row: {
           category_id: string
