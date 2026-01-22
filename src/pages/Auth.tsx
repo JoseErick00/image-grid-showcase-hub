@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import { z } from "zod";
 import loginStars from "@/assets/login-stars.png";
 import { getAuthRedirectUrl, isBrasilDomain } from "@/hooks/useCurrentDomain";
+import EmailConfirmationModal from "@/components/EmailConfirmationModal";
 
 const emailSchema = z.string().email("Email inválido");
 const referralCodeSchema = z.string().max(8, "Código deve ter no máximo 8 caracteres").optional();
@@ -20,7 +21,7 @@ export default function Auth() {
   const [email, setEmail] = useState("");
   const [referralCode, setReferralCode] = useState("");
   const [loading, setLoading] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const [errors, setErrors] = useState<{ email?: string; referralCode?: string }>({});
   
   const navigate = useNavigate();
@@ -129,9 +130,9 @@ export default function Auth() {
         toast({
           variant: "default",
           title: "Email não confirmado",
-          description: "Por favor, confirme seu email primeiro. Verifique sua caixa de entrada ou clique abaixo para reenviar.",
+          description: "Por favor, confirme seu email primeiro. Verifique sua caixa de entrada.",
         });
-        setEmailSent(true);
+        setShowEmailModal(true);
         setLoading(false);
         return;
       }
@@ -197,10 +198,10 @@ export default function Auth() {
           description: error.message,
         });
       } else {
-        setEmailSent(true);
+        setShowEmailModal(true);
         toast({
           title: "Email enviado!",
-          description: "Verifique sua caixa de entrada para confirmar seu email e acessar.",
+          description: "Verifique sua caixa de entrada para confirmar seu email.",
         });
       }
     } catch (error) {
@@ -243,55 +244,14 @@ export default function Auth() {
     }
   };
 
-  // Email sent confirmation screen (only for signup)
-  if (emailSent) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted flex items-center justify-center px-4 py-12">
-        <SEO
-          title="Verifique seu email | iNeed Premiação"
-          description="Um link de acesso foi enviado para seu email."
-        />
-        
-        <div className="w-full max-w-md">
-          <div className="bg-card border border-border rounded-2xl shadow-xl p-8 text-center">
-            <img src={loginStars} alt="Estrelas" className="w-72 h-auto mb-4 mx-auto" />
-            
-            <h1 className="text-2xl font-omne-semibold text-foreground mb-2">
-              Verifique seu email
-            </h1>
-            
-            <p className="text-muted-foreground font-omne-regular mb-6">
-              Enviamos um link de confirmação para:
-              <br />
-              <strong className="text-foreground">{email}</strong>
-            </p>
+  const handleCloseModalAndReset = () => {
+    setShowEmailModal(false);
+    setEmail("");
+  };
 
-            <div className="space-y-3">
-              <Button
-                className="w-full bg-[#FFFFFF] border border-[#171717] text-[#171717] hover:bg-[#171717] hover:text-white font-omne-medium shadow-sm"
-                onClick={handleResendEmail}
-                disabled={loading}
-              >
-                {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                Reenviar email
-              </Button>
-              
-              <button
-                type="button"
-                onClick={() => {
-                  setEmailSent(false);
-                  setEmail("");
-                }}
-                className="text-sm text-muted-foreground hover:text-foreground font-omne-regular"
-              >
-                Usar outro email
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const handleResendFromModal = async () => {
+    await handleResendEmail();
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted flex items-center justify-center px-4 py-12">
@@ -424,6 +384,16 @@ export default function Auth() {
           Ao continuar, você concorda com nossos termos de uso e política de privacidade.
         </p>
       </div>
+
+      {/* Email Confirmation Modal */}
+      <EmailConfirmationModal
+        open={showEmailModal}
+        onOpenChange={setShowEmailModal}
+        email={email}
+        onResendEmail={handleResendFromModal}
+        onUseAnotherEmail={handleCloseModalAndReset}
+        isLoading={loading}
+      />
     </div>
   );
 }
