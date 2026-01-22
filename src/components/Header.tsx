@@ -665,19 +665,16 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
-                      <div className="flex flex-col space-y-3 pl-4 mt-2">
-                        {casaPages.map((page) => (
+                      <div className="flex flex-col space-y-2 pl-4 mt-2">
+                        {casaPages.slice(1).map((page) => (
                           <Link
                             key={page.name}
                             to={page.href}
-                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
-                                ? "text-primary"
-                                : ""
+                                ? "text-primary bg-transparent"
+                                : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
                             }`}
-                            style={{
-                              backgroundColor: isActive(page.href) ? "" : "#bf0100"
-                            }}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {page.name}
@@ -706,19 +703,16 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
-                      <div className="flex flex-col space-y-3 pl-4 mt-2">
-                        {esportesPages.map((page) => (
+                      <div className="flex flex-col space-y-2 pl-4 mt-2">
+                        {esportesPages.slice(1).map((page) => (
                           <Link
                             key={page.name}
                             to={page.href}
-                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
-                                ? "text-primary"
-                                : ""
+                                ? "text-primary bg-transparent"
+                                : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
                             }`}
-                            style={{
-                              backgroundColor: isActive(page.href) ? "" : "#ed5603"
-                            }}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {page.name}
@@ -747,19 +741,16 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
-                      <div className="flex flex-col space-y-3 pl-4 mt-2">
-                        {saudePages.map((page) => (
+                      <div className="flex flex-col space-y-2 pl-4 mt-2">
+                        {saudePages.slice(1).map((page) => (
                           <Link
                             key={page.name}
                             to={page.href}
-                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
-                                ? "text-primary"
-                                : ""
+                                ? "text-primary bg-transparent"
+                                : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
                             }`}
-                            style={{
-                              backgroundColor: isActive(page.href) ? "" : "#b29009"
-                            }}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {page.name}
@@ -788,19 +779,16 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
-                      <div className="flex flex-col space-y-3 pl-4 mt-2">
-                        {incriveisPages.map((page) => (
+                      <div className="flex flex-col space-y-2 pl-4 mt-2">
+                        {incriveisPages.slice(1).map((page) => (
                           <Link
                             key={page.name}
                             to={page.href}
-                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
-                                ? "text-primary"
-                                : ""
+                                ? "text-primary bg-transparent"
+                                : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
                             }`}
-                            style={{
-                              backgroundColor: isActive(page.href) ? "" : "#469a00"
-                            }}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {page.name}
@@ -829,19 +817,16 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
-                      <div className="flex flex-col space-y-3 pl-4 mt-2">
-                        {techPages.map((page) => (
+                      <div className="flex flex-col space-y-2 pl-4 mt-2">
+                        {techPages.slice(1).map((page) => (
                           <Link
                             key={page.name}
                             to={page.href}
-                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                            className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
-                                ? "text-primary"
-                                : ""
+                                ? "text-primary bg-transparent"
+                                : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
                             }`}
-                            style={{
-                              backgroundColor: isActive(page.href) ? "" : "#009fa0"
-                            }}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {page.name}
@@ -862,19 +847,16 @@ const Header = () => {
                       >
                         {item.name}
                       </div>
-                      <div className="flex flex-col space-y-3 pl-4 mt-2">
+                      <div className="flex flex-col space-y-2 pl-4 mt-2">
                         {lojasPages.map((page) => (
                           <Link
                             key={page.name}
                             to={page.href}
                             className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                               isActive(page.href)
-                                ? "text-primary"
-                                : page.color ? "text-white" : "text-foreground"
-                            } ${page.name === "Premiação iNeed" ? "border border-white" : ""}`}
-                            style={{
-                              backgroundColor: isActive(page.href) ? "" : (page.color || undefined)
-                            }}
+                                ? "text-primary bg-transparent"
+                                : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
+                            } ${page.name === "Premiação iNeed" ? "border border-border" : ""}`}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {page.name === "Premiação iNeed" ? (
@@ -915,19 +897,16 @@ const Header = () => {
               {/* ineed Info Mobile */}
               <div className="py-1">
                 <div className="font-omne-regular text-sm text-foreground font-medium mb-2">ineed Info</div>
-                <div className="flex flex-col space-y-3 pl-4">
+                <div className="flex flex-col space-y-2 pl-4">
                   {infoPages.map((page) => (
                     <Link
                       key={page.name}
                       to={page.href}
-                      className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 text-white ${
+                      className={`font-omne-regular px-2 py-1 rounded transition-colors duration-200 ${
                         isActive(page.href)
-                          ? "text-primary"
-                          : ""
+                          ? "text-primary bg-transparent"
+                          : "text-muted-foreground bg-secondary/50 hover:bg-secondary"
                       }`}
-                      style={{
-                        backgroundColor: isActive(page.href) ? "" : "#575757"
-                      }}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {page.name}
