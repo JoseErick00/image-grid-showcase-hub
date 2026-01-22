@@ -61,10 +61,10 @@ const Brasil = () => {
 
   // Platform logos data
   const platformLogos = [
-    { src: logoShopee, alt: "Shopee", href: "https://shopee.com.br" },
-    { src: logoAmazon, alt: "Amazon", href: "https://amazon.com.br" },
-    { src: logoAliexpress, alt: "AliExpress", href: "https://aliexpress.com" },
-    { src: logoAlibaba, alt: "Alibaba", href: "https://alibaba.com" },
+    { src: logoShopee, alt: "Shopee", href: "https://s.shopee.com.br/30fFqSTEDW" },
+    { src: logoAmazon, alt: "Amazon", href: "https://amzn.to/3KOv1Hs" },
+    { src: logoAliexpress, alt: "AliExpress", href: "https://s.click.aliexpress.com/e/_c2u6wfU3" },
+    { src: logoAlibaba, alt: "Alibaba", href: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600201202643" },
   ];
 
   // Category data with links
