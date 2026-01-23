@@ -5,6 +5,8 @@ import { supabase } from '@/integrations/supabase/client';
 import { cn } from '@/lib/utils';
 import { useGamification } from '@/contexts/GamificationContext';
 import { useToast } from '@/hooks/use-toast';
+import HintBalloon from '@/components/HintBalloon';
+import { useHintBalloon } from '@/contexts/HintBalloonContext';
 
 export interface ProductData {
   image: string;
@@ -19,16 +21,19 @@ interface LikeButtonProps {
   productData?: ProductData;
   className?: string;
   compact?: boolean;
+  showHint?: boolean;
 }
 
-const LikeButton = ({ productId, productData, className, compact = false }: LikeButtonProps) => {
+const LikeButton = ({ productId, productData, className, compact = false, showHint = false }: LikeButtonProps) => {
   const [likeCount, setLikeCount] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const isProcessing = useRef(false);
   const { user, isAuthenticated } = useGamification();
   const { toast } = useToast();
+  const { pageHints, dismissHint, isHintDismissed } = useHintBalloon();
 
+  const shouldShowHint = showHint && pageHints.favorites && !isHintDismissed('favorites');
   const storageKey = `liked_${productId}`;
 
   useEffect(() => {
@@ -158,27 +163,38 @@ const LikeButton = ({ productId, productData, className, compact = false }: Like
 
   if (compact) {
     return (
-      <button
-        className={cn(
-          "flex items-center justify-center gap-1 w-12 h-12 rounded-md text-xs font-medium transition-all duration-200",
-          "bg-white/70 backdrop-blur-sm border border-[#171717]",
-          hasLiked 
-            ? "text-red-500" 
-            : "text-[#171717] hover:bg-white/90",
-          isAnimating && "scale-110",
-          className
-        )}
-        onClick={handleLike}
-        disabled={hasLiked}
-      >
-        <Heart 
+      <div className="relative">
+        <button
           className={cn(
-            "h-4 w-4 transition-all duration-200",
-            hasLiked && "fill-red-500 text-red-500"
-          )} 
-        />
-        <span>{likeCount}</span>
-      </button>
+            "flex items-center justify-center gap-1 w-12 h-12 rounded-md text-xs font-medium transition-all duration-200",
+            "bg-white/70 backdrop-blur-sm border border-[#171717]",
+            hasLiked 
+              ? "text-red-500" 
+              : "text-[#171717] hover:bg-white/90",
+            isAnimating && "scale-110",
+            className
+          )}
+          onClick={handleLike}
+          disabled={hasLiked}
+        >
+          <Heart 
+            className={cn(
+              "h-4 w-4 transition-all duration-200",
+              hasLiked && "fill-red-500 text-red-500"
+            )} 
+          />
+          <span>{likeCount}</span>
+        </button>
+        {shouldShowHint && (
+          <HintBalloon
+            message={pageHints.favorites!}
+            position="left"
+            onDismiss={() => dismissHint('favorites')}
+            delay={2500}
+            borderColor={pageHints.borderColor}
+          />
+        )}
+      </div>
     );
   }
 
