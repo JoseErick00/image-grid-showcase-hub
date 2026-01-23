@@ -14,6 +14,7 @@ interface CampaignProductCardProps {
   position?: number;
   hideCallToAction?: boolean;
   category?: string;
+  isFirstProduct?: boolean;
 }
 
 const CampaignProductCard = ({ 
@@ -24,7 +25,8 @@ const CampaignProductCard = ({
   stamp, 
   position, 
   hideCallToAction = false,
-  category = 'incriveis'
+  category = 'incriveis',
+  isFirstProduct = false
 }: CampaignProductCardProps) => {
   const productId = generateProductId(link);
 
@@ -64,7 +66,7 @@ const CampaignProductCard = ({
         
         {/* Like/Share buttons overlay */}
         <div className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
-          <LikeButton productId={productId} productData={productData} compact />
+          <LikeButton productId={productId} productData={productData} compact showHint={isFirstProduct} />
           <ShareButton
             productId={productId}
             shareData={shareData}

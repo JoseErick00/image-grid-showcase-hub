@@ -6,8 +6,6 @@ import { NotificationToggle } from "@/components/NotificationToggle";
 import premiacaoCoinIcon from '@/assets/premiacao-coin.png';
 import { useBrasilRoute } from "@/hooks/useCurrentDomain";
 import { useFavoritesCount } from "@/hooks/useFavorites";
-import HintBalloon from "./HintBalloon";
-import { useHintBalloon } from "@/contexts/HintBalloonContext";
 
 // Level icons
 import colegasIcon from '@/assets/levels/colegas.png';
@@ -39,9 +37,6 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
   const navigate = useNavigate();
   const routes = useBrasilRoute();
   const favoritesCount = useFavoritesCount();
-  const { pageHints, dismissHint, isHintDismissed } = useHintBalloon();
-
-  const showFavoritesHint = pageHints.favorites && !isHintDismissed('favorites');
 
   const handleLogout = async () => {
     await signOut();
@@ -97,27 +92,13 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
       <div className="flex items-start gap-3 p-4 bg-muted/20">
         {/* Left side icons */}
         <div className="flex flex-col gap-2">
-          <div className="relative">
-            <Link 
-              to="/favoritos" 
-              onClick={() => {
-                if (showFavoritesHint) dismissHint('favorites');
-                onCloseMenu?.();
-              }}
-              className="flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-border hover:bg-muted transition-colors"
-            >
-              <Heart className={`w-5 h-5 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-muted-foreground'}`} />
-            </Link>
-            {showFavoritesHint && (
-              <HintBalloon
-                message={pageHints.favorites!}
-                position="right"
-                onDismiss={() => dismissHint('favorites')}
-                delay={2500}
-                borderColor={pageHints.borderColor}
-              />
-            )}
-          </div>
+          <Link 
+            to="/favoritos" 
+            onClick={() => onCloseMenu?.()}
+            className="flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-border hover:bg-muted transition-colors"
+          >
+            <Heart className={`w-5 h-5 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-muted-foreground'}`} />
+          </Link>
           <div className="flex items-center justify-center w-10 h-10">
             <NotificationToggle variant="compact" />
           </div>
@@ -181,25 +162,13 @@ const HeaderUserSection = ({ variant = 'desktop', onCloseMenu }: HeaderUserSecti
     <div className="flex items-center gap-3 bg-[#434343] rounded-lg px-4 py-2 border border-[#767676]">
       {/* Left side icons - same as mobile */}
       <div className="flex flex-col gap-1.5">
-        <div className="relative">
-          <Link 
-            to="/favoritos"
-            onClick={() => showFavoritesHint && dismissHint('favorites')}
-            className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
-            title="Meus Favoritos"
-          >
-            <Heart className={`w-4 h-4 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-white'}`} />
-          </Link>
-          {showFavoritesHint && (
-            <HintBalloon
-              message={pageHints.favorites!}
-              position="left"
-              onDismiss={() => dismissHint('favorites')}
-              delay={2500}
-              borderColor={pageHints.borderColor}
-            />
-          )}
-        </div>
+        <Link 
+          to="/favoritos"
+          className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+          title="Meus Favoritos"
+        >
+          <Heart className={`w-4 h-4 ${favoritesCount > 0 ? 'text-red-500 fill-red-500' : 'text-white'}`} />
+        </Link>
         <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10">
           <NotificationToggle variant="compact" className="text-white" />
         </div>

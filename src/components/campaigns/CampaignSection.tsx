@@ -85,6 +85,7 @@ const CampaignSection = ({ id, promoBanner, products, campaignSlug, category }: 
             stamp={product.stamp}
             position={index + 1}
             category={category}
+            isFirstProduct={index === 0}
           />
         ))}
       </div>
