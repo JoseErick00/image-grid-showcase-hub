@@ -4,9 +4,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar } from "lucide-react";
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
+
+type PeriodOption = "7" | "30" | "90" | "365" | "all";
+
+const PERIOD_OPTIONS: { value: PeriodOption; label: string }[] = [
+  { value: "7", label: "Últimos 7 dias" },
+  { value: "30", label: "Últimos 30 dias" },
+  { value: "90", label: "Últimos 90 dias" },
+  { value: "365", label: "Último ano" },
+  { value: "all", label: "Todo o período" },
+];
 
 interface MetricsData {
   summary: {
@@ -76,16 +87,20 @@ const AdminMetrics = () => {
   const [loading, setLoading] = useState(true);
   const [affiliateLoading, setAffiliateLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedPeriod, setSelectedPeriod] = useState<PeriodOption>("30");
 
   useEffect(() => {
     fetchMetrics();
     fetchAffiliateMetrics();
-  }, []);
+  }, [selectedPeriod]);
 
   const fetchMetrics = async () => {
     try {
       setLoading(true);
-      const { data, error } = await supabase.functions.invoke("admin-metrics");
+      const days = selectedPeriod === "all" ? null : parseInt(selectedPeriod);
+      const { data, error } = await supabase.functions.invoke("admin-metrics", {
+        body: { days }
+      });
       
       if (error) throw error;
       if (!data.success) throw new Error(data.error);
@@ -102,7 +117,10 @@ const AdminMetrics = () => {
   const fetchAffiliateMetrics = async () => {
     try {
       setAffiliateLoading(true);
-      const { data, error } = await supabase.functions.invoke("affiliate-metrics");
+      const days = selectedPeriod === "all" ? null : parseInt(selectedPeriod);
+      const { data, error } = await supabase.functions.invoke("affiliate-metrics", {
+        body: { days }
+      });
       
       if (error) throw error;
       if (!data.success) throw new Error(data.error);
@@ -113,6 +131,11 @@ const AdminMetrics = () => {
     } finally {
       setAffiliateLoading(false);
     }
+  };
+
+  const getPeriodLabel = () => {
+    const option = PERIOD_OPTIONS.find(o => o.value === selectedPeriod);
+    return option?.label || "Período";
   };
 
   const formatDate = (dateString: string) => {
@@ -156,7 +179,26 @@ const AdminMetrics = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-gray-800">📊 Métricas do Projeto</h1>
+        {/* Header with period selector */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+          <h1 className="text-3xl font-bold text-gray-800">📊 Métricas do Projeto</h1>
+          
+          <div className="flex items-center gap-2">
+            <Calendar className="h-5 w-5 text-gray-500" />
+            <Select value={selectedPeriod} onValueChange={(value: PeriodOption) => setSelectedPeriod(value)}>
+              <SelectTrigger className="w-[180px] bg-white">
+                <SelectValue placeholder="Selecione o período" />
+              </SelectTrigger>
+              <SelectContent>
+                {PERIOD_OPTIONS.map((option) => (
+                  <SelectItem key={option.value} value={option.value}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
 
         {/* Summary Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
