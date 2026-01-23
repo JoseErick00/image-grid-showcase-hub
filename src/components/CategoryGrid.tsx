@@ -22,6 +22,7 @@ interface CategoryGridProps {
   buttonColor?: string;
   showButton?: boolean;
   labelTextColor?: string;
+  category?: string;
 }
 
 const CategoryGrid = ({ 
@@ -31,7 +32,8 @@ const CategoryGrid = ({
   aspectRatio = "square",
   buttonColor = "#1e40af",
   showButton = true,
-  labelTextColor = "#ffffff"
+  labelTextColor = "#ffffff",
+  category = "category"
 }: CategoryGridProps) => {
   const { isCompactMode } = useGridLayout();
   const isMobile = useIsMobile();
@@ -74,9 +76,19 @@ const CategoryGrid = ({
       )}
       
       <div className={`grid ${gridClass} gap-6`}>
-        {items.map((item) => {
+        {items.map((item, index) => {
           const isRevealed = revealedItems.has(item.id);
           const productId = generateProductId(item.link);
+          const isFirstProduct = index === 0;
+          
+          // Prepare productData for favorites
+          const productData = {
+            image: item.image,
+            label: item.title,
+            link: item.link,
+            platform: 'category',
+            category: category,
+          };
           
           return (
             <div
@@ -95,7 +107,12 @@ const CategoryGrid = ({
                 
                 {/* Like/Share buttons overlay - always visible */}
                 <div className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
-                  <LikeButton productId={productId} compact />
+                  <LikeButton 
+                    productId={productId} 
+                    productData={productData}
+                    compact 
+                    showHint={isFirstProduct}
+                  />
                   <ShareButton
                     productId={productId}
                     shareData={getShareData(item)}
