@@ -22,7 +22,9 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
   const buttonSize = variant === 'desktop' ? 'w-6 h-6' : 'w-5 h-5';
   const iconButtonSize = variant === 'desktop' ? 14 : 12;
 
-  const showHeaderHint = pageHints.header && !isHintDismissed('header');
+  // Determine dynamic hint text based on authentication
+  const headerHintText = isAuthenticated ? "Compartilhe o app aqui!" : "Baixe o app aqui!";
+  const showHeaderHint = pageHints.favorites && !isHintDismissed('header'); // Use favorites as trigger to show header hint
   
   // Share function for logged in users
   const handleShare = async () => {
@@ -131,7 +133,7 @@ const AppDownloadIcon = ({ variant = 'desktop' }: AppDownloadIconProps) => {
           {/* Hint Balloon for header */}
           {showHeaderHint && (
             <HintBalloon
-              message={pageHints.header!}
+              message={headerHintText}
               position="right"
               onDismiss={() => dismissHint('header')}
               delay={2000}

@@ -24,9 +24,9 @@ const Brasil = () => {
 
   // Configure page hints
   usePageHints({
-    header: "Compartilhe o app e ganhe moedas!",
+    header: null, // Gerenciado internamente pelo AppDownloadIcon
     lupa: null, // Lupa não aparece na página principal
-    footer: "Obrigado por visitar! Volte sempre!",
+    favorites: "Salve seus favoritos!",
     borderColor: CATEGORY_COLORS.default,
   });
 

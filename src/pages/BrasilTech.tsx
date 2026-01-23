@@ -55,9 +55,9 @@ import logoAlibaba from "@/assets/platform-logos/logo_alibaba.png";
 const BrasilTech = () => {
   // Configure page hints with category color
   usePageHints({
-    header: "Compartilhe e ganhe moedas!",
+    header: null, // Gerenciado internamente pelo AppDownloadIcon
     lupa: "Clique para ampliar as imagens",
-    footer: "Gostou? Envie para um amigo!",
+    favorites: "Salve seus favoritos!",
     borderColor: CATEGORY_COLORS.tech,
   });
 
