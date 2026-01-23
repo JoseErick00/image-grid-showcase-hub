@@ -17,23 +17,48 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
 
-    // Get date 7 days ago
-    const sevenDaysAgo = new Date();
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    // Parse request body for days filter
+    let requestBody: { days?: number | null } = {};
+    try {
+      requestBody = await req.json();
+    } catch {
+      // No body or invalid JSON - use default
+    }
 
-    // Fetch all clicks
-    const { data: allClicks, error: clicksError } = await supabase
+    // Calculate date filter
+    const days = requestBody?.days;
+    let dateFilter: string | null = null;
+    if (days && typeof days === 'number') {
+      const filterDate = new Date();
+      filterDate.setDate(filterDate.getDate() - days);
+      dateFilter = filterDate.toISOString();
+    }
+
+    // Fetch all clicks with optional date filter
+    let clicksQuery = supabase
       .from("affiliate_clicks")
       .select("*")
       .order("created_at", { ascending: false });
+    
+    if (dateFilter) {
+      clicksQuery = clicksQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: allClicks, error: clicksError } = await clicksQuery;
 
     if (clicksError) throw clicksError;
 
-    // Fetch all conversions
-    const { data: allConversions, error: conversionsError } = await supabase
+    // Fetch all conversions with optional date filter
+    let conversionsQuery = supabase
       .from("affiliate_conversions")
       .select("*")
       .order("created_at", { ascending: false });
+    
+    if (dateFilter) {
+      conversionsQuery = conversionsQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: allConversions, error: conversionsError } = await conversionsQuery;
 
     if (conversionsError) throw conversionsError;
 
@@ -51,9 +76,10 @@ serve(async (req) => {
       clicksByType[type] = (clicksByType[type] || 0) + 1;
     });
 
-    // Calculate clicks by day (last 7 days)
+    // Calculate clicks by day (based on selected period or last 7 days)
+    const chartDays = days && days <= 30 ? days : 7;
     const clicksByDay: Array<{ date: string; clicks: number }> = [];
-    for (let i = 6; i >= 0; i--) {
+    for (let i = chartDays - 1; i >= 0; i--) {
       const date = new Date();
       date.setDate(date.getDate() - i);
       const dateStr = date.toISOString().split("T")[0];

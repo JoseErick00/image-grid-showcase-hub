@@ -16,14 +16,15 @@ Deno.serve(async (req) => {
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Check if this is a push stats request
-    let requestBody = null;
+    // Parse request body
+    let requestBody: { action?: string; days?: number | null } = {};
     try {
       requestBody = await req.json();
     } catch {
       // No body or invalid JSON - continue with full metrics
     }
 
+    // Check if this is a push stats request
     if (requestBody?.action === "push-stats") {
       // Fetch push subscription stats
       const { data: allSubs, error: subsError } = await supabase
@@ -48,42 +49,81 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Calculate date filter if days is provided
+    const days = requestBody?.days;
+    let dateFilter: string | null = null;
+    if (days && typeof days === 'number') {
+      const filterDate = new Date();
+      filterDate.setDate(filterDate.getDate() - days);
+      dateFilter = filterDate.toISOString();
+    }
+
     // Fetch all user gamification data
-    const { data: users, error: usersError } = await supabase
+    let usersQuery = supabase
       .from("user_gamification")
       .select("*")
       .order("created_at", { ascending: false });
+    
+    if (dateFilter) {
+      usersQuery = usersQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: users, error: usersError } = await usersQuery;
 
     if (usersError) throw usersError;
 
     // Fetch all favorites
-    const { data: favorites, error: favoritesError } = await supabase
+    let favoritesQuery = supabase
       .from("user_favorites")
       .select("*");
+    
+    if (dateFilter) {
+      favoritesQuery = favoritesQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: favorites, error: favoritesError } = await favoritesQuery;
 
     if (favoritesError) throw favoritesError;
 
     // Fetch all coin transactions
-    const { data: transactions, error: transactionsError } = await supabase
+    let transactionsQuery = supabase
       .from("coin_transactions")
       .select("*")
       .order("created_at", { ascending: false });
+    
+    if (dateFilter) {
+      transactionsQuery = transactionsQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: transactions, error: transactionsError } = await transactionsQuery;
 
     if (transactionsError) throw transactionsError;
 
     // Fetch all referrals
-    const { data: referrals, error: referralsError } = await supabase
+    let referralsQuery = supabase
       .from("referrals")
       .select("*")
       .order("created_at", { ascending: false });
+    
+    if (dateFilter) {
+      referralsQuery = referralsQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: referrals, error: referralsError } = await referralsQuery;
 
     if (referralsError) throw referralsError;
 
     // Fetch all prize redemptions
-    const { data: redemptions, error: redemptionsError } = await supabase
+    let redemptionsQuery = supabase
       .from("prize_redemptions")
       .select("*")
       .order("created_at", { ascending: false });
+    
+    if (dateFilter) {
+      redemptionsQuery = redemptionsQuery.gte("created_at", dateFilter);
+    }
+    
+    const { data: redemptions, error: redemptionsError } = await redemptionsQuery;
 
     if (redemptionsError) throw redemptionsError;
 
