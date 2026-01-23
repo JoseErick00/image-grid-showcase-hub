@@ -7,20 +7,31 @@ import {
   ToastTitle,
   ToastViewport,
 } from "@/components/ui/toast"
+import premiacaoCoinIcon from "@/assets/premiacao-coin.png"
 
 export function Toaster() {
   const { toasts } = useToast()
 
   return (
     <ToastProvider>
-      {toasts.map(function ({ id, title, description, action, ...props }) {
+      {toasts.map(function ({ id, title, description, action, variant, ...props }) {
+        const isCoinVariant = variant === "coin"
         return (
-          <Toast key={id} {...props}>
-            <div className="grid gap-1">
-              {title && <ToastTitle>{title}</ToastTitle>}
-              {description && (
-                <ToastDescription>{description}</ToastDescription>
+          <Toast key={id} variant={variant} {...props}>
+            <div className="flex items-center gap-3">
+              {isCoinVariant && (
+                <img 
+                  src={premiacaoCoinIcon} 
+                  alt="Moeda" 
+                  className="w-8 h-8 flex-shrink-0" 
+                />
               )}
+              <div className="grid gap-1">
+                {title && <ToastTitle>{title}</ToastTitle>}
+                {description && (
+                  <ToastDescription>{description}</ToastDescription>
+                )}
+              </div>
             </div>
             {action}
             <ToastClose />

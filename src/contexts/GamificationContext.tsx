@@ -179,6 +179,7 @@ export function GamificationProvider({ children }: { children: ReactNode }) {
 
       if (data.success) {
         toast({
+          variant: "coin",
           title: "+1 Moeda!",
           description: `Você agora tem ${data.newTotal} moedas.`,
         });
