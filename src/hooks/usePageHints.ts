@@ -6,9 +6,9 @@ import { useHintBalloon, PageHints } from '@/contexts/HintBalloonContext';
  * 
  * @example
  * usePageHints({
- *   header: "Compartilhe o app e ganhe moedas!",
+ *   header: "Baixe o app aqui!",
  *   lupa: "Clique na lupa para aumentar as imagens",
- *   footer: "Gostou da seleção? Envie para um amigo!"
+ *   favorites: "Salve seus favoritos!"
  * });
  */
 export const usePageHints = (hints: PageHints) => {
@@ -18,9 +18,9 @@ export const usePageHints = (hints: PageHints) => {
   const memoizedHints = useMemo(() => ({
     header: hints.header,
     lupa: hints.lupa,
-    footer: hints.footer,
+    favorites: hints.favorites,
     borderColor: hints.borderColor,
-  }), [hints.header, hints.lupa, hints.footer, hints.borderColor]);
+  }), [hints.header, hints.lupa, hints.favorites, hints.borderColor]);
 
   useEffect(() => {
     setPageHints(memoizedHints);

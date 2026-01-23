@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useState, useCallback } from 'react';
 
 // Category color mapping for hint balloons
 export const CATEGORY_COLORS: Record<string, string> = {
@@ -19,15 +19,17 @@ export const getCategoryColor = (category?: string): string => {
 export interface PageHints {
   header?: string | null;
   lupa?: string | null;
-  footer?: string | null;
+  favorites?: string | null;
   borderColor?: string;
 }
+
+type HintId = 'header' | 'lupa' | 'favorites';
 
 interface HintBalloonContextType {
   pageHints: PageHints;
   setPageHints: (hints: PageHints) => void;
-  dismissHint: (hintId: 'header' | 'lupa' | 'footer') => void;
-  isHintDismissed: (hintId: 'header' | 'lupa' | 'footer') => boolean;
+  dismissHint: (hintId: HintId) => void;
+  isHintDismissed: (hintId: HintId) => boolean;
   resetHints: () => void;
 }
 
@@ -42,7 +44,7 @@ export const HintBalloonProvider: React.FC<{ children: React.ReactNode }> = ({ c
     setPageHintsState(hints);
   }, []);
 
-  const dismissHint = useCallback((hintId: 'header' | 'lupa' | 'footer') => {
+  const dismissHint = useCallback((hintId: HintId) => {
     setDismissedHints(prev => {
       const newSet = new Set(prev);
       newSet.add(hintId);
@@ -50,7 +52,7 @@ export const HintBalloonProvider: React.FC<{ children: React.ReactNode }> = ({ c
     });
   }, []);
 
-  const isHintDismissed = useCallback((hintId: 'header' | 'lupa' | 'footer') => {
+  const isHintDismissed = useCallback((hintId: HintId) => {
     return dismissedHints.has(hintId);
   }, [dismissedHints]);
 

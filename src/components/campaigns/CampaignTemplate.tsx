@@ -75,9 +75,9 @@ const CampaignTemplate = ({ config }: CampaignTemplateProps) => {
 
   // Configure page hints for campaign pages with category color
   usePageHints({
-    header: "Salve seus produtos favoritos!",
+    header: null, // Gerenciado internamente pelo AppDownloadIcon
     lupa: "Clique na lupa para aumentar as imagens",
-    footer: "Gostou da seleção? Envie para um amigo!",
+    favorites: "Salve seus favoritos!",
     borderColor: getCategoryColor(config.category),
   });
 
