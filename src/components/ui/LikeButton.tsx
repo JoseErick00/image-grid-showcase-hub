@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { cn } from '@/lib/utils';
 import { useGamification } from '@/contexts/GamificationContext';
+import { useToast } from '@/hooks/use-toast';
 
 export interface ProductData {
   image: string;
@@ -26,6 +27,7 @@ const LikeButton = ({ productId, productData, className, compact = false }: Like
   const [isAnimating, setIsAnimating] = useState(false);
   const isProcessing = useRef(false);
   const { user, isAuthenticated } = useGamification();
+  const { toast } = useToast();
 
   const storageKey = `liked_${productId}`;
 
@@ -133,6 +135,17 @@ const LikeButton = ({ productId, productData, className, compact = false }: Like
             product_id: productId,
             product_data: productData,
           }, { onConflict: 'user_id,product_id' });
+        
+        // Show favorite toast with heart icon
+        toast({
+          variant: "favorite",
+          description: (
+            <div className="flex items-center gap-2">
+              <Heart className="h-5 w-5 fill-red-500 text-red-500" />
+              <span>Favoritos: achado adicionado!</span>
+            </div>
+          ),
+        });
       }
     } catch (error) {
       console.error('Error updating likes:', error);
