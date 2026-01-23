@@ -85,6 +85,7 @@ const queryClient = new QueryClient();
 const App = () => {
   const onBrasilDomain = isBrasilDomain();
 
+  // Provider hierarchy: QueryClient > Tooltip > Gamification > GridLayout > Router > Layout
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
