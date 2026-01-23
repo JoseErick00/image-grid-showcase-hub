@@ -45,9 +45,27 @@ export function NotificationToggle({ variant = 'default', className }: Notificat
     }
   };
 
-  // Don't show if not supported
+  // Show disabled state if not supported (instead of hiding completely)
   if (!isSupported) {
-    return null;
+    if (variant === 'compact') {
+      return (
+        <Button
+          variant="ghost"
+          size="icon"
+          disabled
+          className={`${className} opacity-50 cursor-not-allowed`}
+          title="Notificações não suportadas neste navegador"
+        >
+          <Bell className="h-4 w-4 text-white/50" />
+        </Button>
+      );
+    }
+    return (
+      <Button variant="secondary" disabled className={`${className} opacity-50`}>
+        <BellOff className="h-4 w-4 mr-2" />
+        Não suportado
+      </Button>
+    );
   }
 
   const isProcessing = isLoading || bonusLoading;
