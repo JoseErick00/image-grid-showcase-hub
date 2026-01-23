@@ -9,9 +9,10 @@ import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePo
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 
-type PeriodOption = "7" | "30" | "90" | "365" | "all";
+type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
 
 const PERIOD_OPTIONS: { value: PeriodOption; label: string }[] = [
+  { value: "1", label: "Hoje" },
   { value: "7", label: "Últimos 7 dias" },
   { value: "30", label: "Últimos 30 dias" },
   { value: "90", label: "Últimos 90 dias" },
