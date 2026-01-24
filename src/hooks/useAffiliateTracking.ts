@@ -37,7 +37,7 @@ export const useUTMTracking = () => {
   }, [location.search]);
 };
 
-// Track conversion (return visit with UTM params)
+// Track conversion via Edge Function (with geolocation)
 export const trackConversion = async (utmParams: {
   utm_source: string | null;
   utm_medium?: string | null;
@@ -48,15 +48,18 @@ export const trackConversion = async (utmParams: {
   try {
     const sessionId = getSessionId();
     
-    await supabase.from('affiliate_conversions').insert({
-      utm_source: utmParams.utm_source,
-      utm_medium: utmParams.utm_medium,
-      utm_campaign: utmParams.utm_campaign,
-      utm_content: utmParams.utm_content,
-      utm_term: utmParams.utm_term,
-      page_url: window.location.href,
-      user_agent: navigator.userAgent,
-      session_id: sessionId,
+    await supabase.functions.invoke('track-affiliate', {
+      body: {
+        is_conversion: true,
+        utm_source: utmParams.utm_source,
+        utm_medium: utmParams.utm_medium,
+        utm_campaign: utmParams.utm_campaign,
+        utm_content: utmParams.utm_content,
+        utm_term: utmParams.utm_term,
+        page_url: window.location.href,
+        user_agent: navigator.userAgent,
+        session_id: sessionId,
+      }
     });
 
     console.log('Conversion tracked:', utmParams);
@@ -65,7 +68,7 @@ export const trackConversion = async (utmParams: {
   }
 };
 
-// Track affiliate click to Supabase
+// Track affiliate click via Edge Function (with geolocation)
 export const trackAffiliateClickToSupabase = async (data: {
   platform: string;
   affiliate_link: string;
@@ -76,19 +79,21 @@ export const trackAffiliateClickToSupabase = async (data: {
   try {
     const sessionId = getSessionId();
     
-    await supabase.from('affiliate_clicks').insert({
-      platform: data.platform,
-      affiliate_link: data.affiliate_link,
-      item_name: data.item_name,
-      banner_id: data.banner_id,
-      click_type: data.click_type,
-      user_agent: navigator.userAgent,
-      referrer: document.referrer,
-      page_url: window.location.href,
-      session_id: sessionId,
+    await supabase.functions.invoke('track-affiliate', {
+      body: {
+        platform: data.platform,
+        affiliate_link: data.affiliate_link,
+        item_name: data.item_name,
+        banner_id: data.banner_id,
+        click_type: data.click_type,
+        user_agent: navigator.userAgent,
+        referrer: document.referrer,
+        page_url: window.location.href,
+        session_id: sessionId,
+      }
     });
 
-    console.log('Affiliate click saved to Supabase:', data);
+    console.log('Affiliate click saved with geolocation:', data);
   } catch (error) {
     console.error('Error saving affiliate click:', error);
   }
