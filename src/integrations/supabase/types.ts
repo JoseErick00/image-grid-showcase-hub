@@ -18,39 +18,60 @@ export type Database = {
         Row: {
           affiliate_link: string
           banner_id: string | null
+          city: string | null
           click_type: string
+          country: string | null
+          country_code: string | null
           created_at: string
           id: string
+          ip_address: string | null
           item_name: string | null
+          latitude: number | null
+          longitude: number | null
           page_url: string | null
           platform: string
           referrer: string | null
+          region: string | null
           session_id: string | null
           user_agent: string | null
         }
         Insert: {
           affiliate_link: string
           banner_id?: string | null
+          city?: string | null
           click_type?: string
+          country?: string | null
+          country_code?: string | null
           created_at?: string
           id?: string
+          ip_address?: string | null
           item_name?: string | null
+          latitude?: number | null
+          longitude?: number | null
           page_url?: string | null
           platform: string
           referrer?: string | null
+          region?: string | null
           session_id?: string | null
           user_agent?: string | null
         }
         Update: {
           affiliate_link?: string
           banner_id?: string | null
+          city?: string | null
           click_type?: string
+          country?: string | null
+          country_code?: string | null
           created_at?: string
           id?: string
+          ip_address?: string | null
           item_name?: string | null
+          latitude?: number | null
+          longitude?: number | null
           page_url?: string | null
           platform?: string
           referrer?: string | null
+          region?: string | null
           session_id?: string | null
           user_agent?: string | null
         }
@@ -58,10 +79,17 @@ export type Database = {
       }
       affiliate_conversions: {
         Row: {
+          city: string | null
+          country: string | null
+          country_code: string | null
           created_at: string
           id: string
+          ip_address: string | null
+          latitude: number | null
+          longitude: number | null
           original_click_id: string | null
           page_url: string | null
+          region: string | null
           session_id: string | null
           user_agent: string | null
           utm_campaign: string | null
@@ -71,10 +99,17 @@ export type Database = {
           utm_term: string | null
         }
         Insert: {
+          city?: string | null
+          country?: string | null
+          country_code?: string | null
           created_at?: string
           id?: string
+          ip_address?: string | null
+          latitude?: number | null
+          longitude?: number | null
           original_click_id?: string | null
           page_url?: string | null
+          region?: string | null
           session_id?: string | null
           user_agent?: string | null
           utm_campaign?: string | null
@@ -84,10 +119,17 @@ export type Database = {
           utm_term?: string | null
         }
         Update: {
+          city?: string | null
+          country?: string | null
+          country_code?: string | null
           created_at?: string
           id?: string
+          ip_address?: string | null
+          latitude?: number | null
+          longitude?: number | null
           original_click_id?: string | null
           page_url?: string | null
+          region?: string | null
           session_id?: string | null
           user_agent?: string | null
           utm_campaign?: string | null

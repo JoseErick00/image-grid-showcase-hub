@@ -5,9 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar } from "lucide-react";
+import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar, MapPin } from "lucide-react";
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
+import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
 
 type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
 
@@ -322,10 +323,14 @@ const AdminMetrics = () => {
         </Card>
 
         <Tabs defaultValue="affiliates" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 h-auto">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-8 h-auto">
             <TabsTrigger value="affiliates" className="flex items-center gap-1">
               <MousePointerClick className="h-3 w-3" />
               Afiliados
+            </TabsTrigger>
+            <TabsTrigger value="geography" className="flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              Geografia
             </TabsTrigger>
             <TabsTrigger value="pwa" className="flex items-center gap-1">
               <Smartphone className="h-3 w-3" />
@@ -347,6 +352,14 @@ const AdminMetrics = () => {
               <div className="text-center py-8 text-gray-500">
                 Nenhum dado de afiliados disponível ainda.
               </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="geography">
+            {affiliateLoading ? (
+              <div className="text-center py-8">Carregando métricas geográficas...</div>
+            ) : (
+              <GeoMetricsSection metrics={affiliateMetrics?.geoMetrics || null} loading={affiliateLoading} />
             )}
           </TabsContent>
 

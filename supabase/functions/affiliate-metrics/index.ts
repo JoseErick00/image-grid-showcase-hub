@@ -6,6 +6,23 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// Map Brazilian state names to codes
+const BRAZIL_STATE_CODES: Record<string, string> = {
+  "Acre": "AC", "Alagoas": "AL", "Amapá": "AP", "Amazonas": "AM",
+  "Bahia": "BA", "Ceará": "CE", "Distrito Federal": "DF", "Espírito Santo": "ES",
+  "Goiás": "GO", "Maranhão": "MA", "Mato Grosso": "MT", "Mato Grosso do Sul": "MS",
+  "Minas Gerais": "MG", "Pará": "PA", "Paraíba": "PB", "Paraná": "PR",
+  "Pernambuco": "PE", "Piauí": "PI", "Rio de Janeiro": "RJ", "Rio Grande do Norte": "RN",
+  "Rio Grande do Sul": "RS", "Rondônia": "RO", "Roraima": "RR", "Santa Catarina": "SC",
+  "São Paulo": "SP", "Sergipe": "SE", "Tocantins": "TO",
+  // Also handle abbreviations
+  "AC": "AC", "AL": "AL", "AP": "AP", "AM": "AM", "BA": "BA", "CE": "CE",
+  "DF": "DF", "ES": "ES", "GO": "GO", "MA": "MA", "MT": "MT", "MS": "MS",
+  "MG": "MG", "PA": "PA", "PB": "PB", "PR": "PR", "PE": "PE", "PI": "PI",
+  "RJ": "RJ", "RN": "RN", "RS": "RS", "RO": "RO", "RR": "RR", "SC": "SC",
+  "SP": "SP", "SE": "SE", "TO": "TO",
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -117,6 +134,67 @@ serve(async (req) => {
       created_at: conversion.created_at,
     }));
 
+    // ============ GEOGRAPHIC METRICS ============
+    
+    // Count clicks with and without geo data
+    const clicksWithGeo = (allClicks || []).filter(c => c.country);
+    const clicksWithoutGeo = (allClicks || []).filter(c => !c.country);
+
+    // Clicks by country
+    const clicksByCountry: Record<string, number> = {};
+    clicksWithGeo.forEach((click) => {
+      const country = click.country || "Unknown";
+      clicksByCountry[country] = (clicksByCountry[country] || 0) + 1;
+    });
+
+    // Clicks by region (primarily for Brazil)
+    const clicksByRegion: Record<string, number> = {};
+    clicksWithGeo.forEach((click) => {
+      if (click.region) {
+        clicksByRegion[click.region] = (clicksByRegion[click.region] || 0) + 1;
+      }
+    });
+
+    // Brazil states map data
+    const brazilStates: Record<string, number> = {};
+    clicksWithGeo
+      .filter(c => c.country_code === "BR" && c.region)
+      .forEach((click) => {
+        const stateCode = BRAZIL_STATE_CODES[click.region] || click.region;
+        if (stateCode && stateCode.length === 2) {
+          brazilStates[stateCode] = (brazilStates[stateCode] || 0) + 1;
+        }
+      });
+
+    // Clicks by city (top cities)
+    const cityMap: Record<string, { city: string; region: string; country: string; count: number }> = {};
+    clicksWithGeo.forEach((click) => {
+      if (click.city) {
+        const key = `${click.city}-${click.region}-${click.country}`;
+        if (!cityMap[key]) {
+          cityMap[key] = {
+            city: click.city,
+            region: click.region || "",
+            country: click.country || "",
+            count: 0,
+          };
+        }
+        cityMap[key].count++;
+      }
+    });
+    const clicksByCity = Object.values(cityMap)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 50);
+
+    const geoMetrics = {
+      totalWithGeo: clicksWithGeo.length,
+      totalWithoutGeo: clicksWithoutGeo.length,
+      clicksByCountry,
+      clicksByRegion,
+      clicksByCity,
+      brazilStates,
+    };
+
     const response = {
       success: true,
       data: {
@@ -128,6 +206,7 @@ serve(async (req) => {
         conversionsBySource,
         recentClicks,
         recentConversions,
+        geoMetrics,
       },
     };
 

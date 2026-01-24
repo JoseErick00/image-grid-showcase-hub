@@ -32,3 +32,9 @@ verify_jwt = false
 
 [functions.pwa-metrics]
 verify_jwt = false
+
+[functions.track-affiliate]
+verify_jwt = false
+
+[functions.affiliate-metrics]
+verify_jwt = false
