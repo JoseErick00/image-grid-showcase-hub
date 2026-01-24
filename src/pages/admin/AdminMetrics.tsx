@@ -42,6 +42,7 @@ interface MetricsData {
   topFavoriteProducts: Array<{ count: number; product_id: string; product_data: any }>;
   topUsers: Array<{
     user_id: string;
+    email: string;
     current_level: string;
     total_coins_earned: number;
     total_referrals_ever: number;
@@ -51,6 +52,7 @@ interface MetricsData {
   }>;
   oldestUsers: Array<{
     user_id: string;
+    email: string;
     current_level: string;
     total_coins_earned: number;
     total_referrals_ever: number;
@@ -381,6 +383,7 @@ const AdminMetrics = () => {
                     <TableHeader>
                       <TableRow>
                         <TableHead>User ID</TableHead>
+                        <TableHead>Email</TableHead>
                         <TableHead>Código</TableHead>
                         <TableHead>Nível</TableHead>
                         <TableHead>Moedas</TableHead>
@@ -393,6 +396,7 @@ const AdminMetrics = () => {
                       {metrics.topUsers.map((user) => (
                         <TableRow key={user.user_id}>
                           <TableCell className="font-mono text-xs">{user.user_id.slice(0, 8)}...</TableCell>
+                          <TableCell className="text-xs">{user.email}</TableCell>
                           <TableCell className="font-mono">{user.referral_code}</TableCell>
                           <TableCell>
                             <Badge className={getLevelColor(user.current_level)}>
@@ -424,6 +428,7 @@ const AdminMetrics = () => {
                     <TableHeader>
                       <TableRow>
                         <TableHead>User ID</TableHead>
+                        <TableHead>Email</TableHead>
                         <TableHead>Código</TableHead>
                         <TableHead>Nível</TableHead>
                         <TableHead>Moedas</TableHead>
@@ -435,6 +440,7 @@ const AdminMetrics = () => {
                       {metrics.oldestUsers.map((user) => (
                         <TableRow key={user.user_id}>
                           <TableCell className="font-mono text-xs">{user.user_id.slice(0, 8)}...</TableCell>
+                          <TableCell className="text-xs">{user.email}</TableCell>
                           <TableCell className="font-mono">{user.referral_code}</TableCell>
                           <TableCell>
                             <Badge className={getLevelColor(user.current_level)}>

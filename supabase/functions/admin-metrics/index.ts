@@ -58,6 +58,13 @@ Deno.serve(async (req) => {
       dateFilter = filterDate.toISOString();
     }
 
+    // Fetch all auth users to get emails
+    const { data: authUsersData } = await supabase.auth.admin.listUsers();
+    const emailMap = new Map<string, string>();
+    authUsersData?.users?.forEach(u => {
+      emailMap.set(u.id, u.email || 'N/A');
+    });
+
     // Fetch all user gamification data
     let usersQuery = supabase
       .from("user_gamification")
@@ -195,6 +202,7 @@ Deno.serve(async (req) => {
     // Users with most points
     const topUsers = users?.slice(0, 20).map(u => ({
       user_id: u.user_id,
+      email: emailMap.get(u.user_id) || 'N/A',
       current_level: u.current_level,
       total_coins_earned: u.total_coins_earned,
       total_referrals_ever: u.total_referrals_ever,
@@ -209,6 +217,7 @@ Deno.serve(async (req) => {
       .slice(0, 20)
       .map(u => ({
         user_id: u.user_id,
+        email: emailMap.get(u.user_id) || 'N/A',
         current_level: u.current_level,
         total_coins_earned: u.total_coins_earned,
         total_referrals_ever: u.total_referrals_ever,
