@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { Loader2, CheckCircle, XCircle, Database, ArrowRight } from 'lucide-react';
+import AdminGuard from '@/components/admin/AdminGuard';
 
 // Importar dados das campanhas
 import { selCuidadoRostoData } from '@/pages/campaigns/data/selCuidadoRostoData';
@@ -54,7 +55,7 @@ interface MigrationStatus {
   message?: string;
 }
 
-const MigrateCampaigns = () => {
+const MigrateCampaignsContent = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [categoriesCreated, setCategoriesCreated] = useState(false);
   const [migrationStatuses, setMigrationStatuses] = useState<MigrationStatus[]>(
@@ -251,6 +252,14 @@ const MigrateCampaigns = () => {
         </Card>
       </div>
     </div>
+  );
+};
+
+const MigrateCampaigns = () => {
+  return (
+    <AdminGuard>
+      <MigrateCampaignsContent />
+    </AdminGuard>
   );
 };
 

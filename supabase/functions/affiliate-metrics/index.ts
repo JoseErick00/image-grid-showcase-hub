@@ -15,7 +15,6 @@ const BRAZIL_STATE_CODES: Record<string, string> = {
   "Pernambuco": "PE", "Piauí": "PI", "Rio de Janeiro": "RJ", "Rio Grande do Norte": "RN",
   "Rio Grande do Sul": "RS", "Rondônia": "RO", "Roraima": "RR", "Santa Catarina": "SC",
   "São Paulo": "SP", "Sergipe": "SE", "Tocantins": "TO",
-  // Also handle abbreviations
   "AC": "AC", "AL": "AL", "AP": "AP", "AM": "AM", "BA": "BA", "CE": "CE",
   "DF": "DF", "ES": "ES", "GO": "GO", "MA": "MA", "MT": "MT", "MS": "MS",
   "MG": "MG", "PA": "PA", "PB": "PB", "PR": "PR", "PE": "PE", "PI": "PI",
@@ -23,12 +22,60 @@ const BRAZIL_STATE_CODES: Record<string, string> = {
   "SP": "SP", "SE": "SE", "TO": "TO",
 };
 
+// Helper function to verify admin role
+async function verifyAdminRole(req: Request): Promise<{ isAdmin: boolean; userId: string | null; error?: string }> {
+  const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
+  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
+  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+
+  const authHeader = req.headers.get("Authorization");
+  if (!authHeader?.startsWith("Bearer ")) {
+    return { isAdmin: false, userId: null, error: "Unauthorized" };
+  }
+
+  const supabaseAuth = createClient(supabaseUrl, supabaseAnonKey, {
+    global: { headers: { Authorization: authHeader } },
+  });
+
+  const token = authHeader.replace("Bearer ", "");
+  const { data: claimsData, error: claimsError } = await supabaseAuth.auth.getClaims(token);
+  
+  if (claimsError || !claimsData?.claims?.sub) {
+    return { isAdmin: false, userId: null, error: "Invalid token" };
+  }
+
+  const userId = claimsData.claims.sub;
+  
+  const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
+  const { data: roleData } = await supabaseAdmin
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", userId)
+    .eq("role", "admin")
+    .maybeSingle();
+
+  return { isAdmin: !!roleData, userId };
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    // Verify admin role for all requests
+    const { isAdmin, error: authError } = await verifyAdminRole(req);
+    if (!isAdmin) {
+      console.log("Unauthorized access attempt to affiliate-metrics:", authError);
+      return new Response(
+        JSON.stringify({ success: false, error: authError || "Forbidden" }),
+        {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 403,
+        }
+      );
+    }
+
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""

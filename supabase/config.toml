@@ -38,3 +38,9 @@ verify_jwt = false
 
 [functions.affiliate-metrics]
 verify_jwt = false
+
+[functions.admin-metrics]
+verify_jwt = false
+
+[functions.check-admin-role]
+verify_jwt = false

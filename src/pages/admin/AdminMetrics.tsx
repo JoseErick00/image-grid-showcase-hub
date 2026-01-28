@@ -9,6 +9,7 @@ import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePo
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
+import AdminGuard from "@/components/admin/AdminGuard";
 
 type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
 
@@ -85,7 +86,7 @@ interface MetricsData {
   }>;
 }
 
-const AdminMetrics = () => {
+const AdminMetricsContent = () => {
   const [metrics, setMetrics] = useState<MetricsData | null>(null);
   const [affiliateMetrics, setAffiliateMetrics] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -665,6 +666,14 @@ const AdminMetrics = () => {
         </Tabs>
       </div>
     </div>
+  );
+};
+
+const AdminMetrics = () => {
+  return (
+    <AdminGuard>
+      <AdminMetricsContent />
+    </AdminGuard>
   );
 };
 
