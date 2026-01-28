@@ -7,6 +7,7 @@ export const useAdminRole = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [hasChecked, setHasChecked] = useState(false);
 
   useEffect(() => {
     const checkAdminRole = async () => {
@@ -19,6 +20,17 @@ export const useAdminRole = () => {
       if (!user) {
         setIsAdmin(false);
         setLoading(false);
+        setHasChecked(true);
+        return;
+      }
+
+      // Check if we have a valid session first
+      const { data: sessionData } = await supabase.auth.getSession();
+      if (!sessionData.session) {
+        console.log("No valid session found");
+        setIsAdmin(false);
+        setLoading(false);
+        setHasChecked(true);
         return;
       }
 
@@ -41,11 +53,12 @@ export const useAdminRole = () => {
         setIsAdmin(false);
       } finally {
         setLoading(false);
+        setHasChecked(true);
       }
     };
 
     checkAdminRole();
   }, [user, userLoading]);
 
-  return { isAdmin, loading: loading || userLoading, error };
+  return { isAdmin, loading: loading || userLoading, error, hasChecked };
 };
