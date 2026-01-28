@@ -10,6 +10,7 @@ import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection"
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
 import AdminGuard from "@/components/admin/AdminGuard";
+import { useAdminRole } from "@/hooks/useAdminRole";
 
 type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
 
