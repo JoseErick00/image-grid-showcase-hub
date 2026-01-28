@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Bell, Send, Users, Loader2, CheckCircle2, AlertCircle, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
+import AdminGuard from "@/components/admin/AdminGuard";
 
 interface SubscriptionStats {
   total: number;
@@ -22,7 +23,7 @@ interface NotificationForm {
   url: string;
 }
 
-const AdminNotifications = () => {
+const AdminNotificationsContent = () => {
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [stats, setStats] = useState<SubscriptionStats | null>(null);
@@ -377,6 +378,14 @@ const AdminNotifications = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const AdminNotifications = () => {
+  return (
+    <AdminGuard>
+      <AdminNotificationsContent />
+    </AdminGuard>
   );
 };
 

@@ -27,6 +27,7 @@ import DynamicCampaignPage from "./pages/campaigns/DynamicCampaignPage";
 import MigrateCampaigns from "./pages/admin/MigrateCampaigns";
 import AdminMetrics from "./pages/admin/AdminMetrics";
 import AdminNotifications from "./pages/admin/AdminNotifications";
+import AdminHub from "./pages/admin/AdminHub";
 import { GridLayoutProvider } from "./hooks/useGridLayout";
 import BrasilDomainRedirect from "./components/BrasilDomainRedirect";
 
@@ -173,11 +174,13 @@ const App = () => {
                 </Route>
                 
                 {/* Admin routes - outside main Layout */}
+                <Route path="admin" element={<AdminHub />} />
                 <Route path="admin/migrate" element={<MigrateCampaigns />} />
                 <Route path="admin/metricas" element={<AdminMetrics />} />
                 <Route path="admin/notificacoes" element={<AdminNotifications />} />
                 
                 {/* Admin routes with /brasil prefix for Brazilian domain users */}
+                <Route path="brasil/admin" element={<AdminHub />} />
                 <Route path="brasil/admin/migrate" element={<MigrateCampaigns />} />
                 <Route path="brasil/admin/metricas" element={<AdminMetrics />} />
                 <Route path="brasil/admin/notificacoes" element={<AdminNotifications />} />
