@@ -173,17 +173,21 @@ const App = () => {
                   )}
                 </Route>
                 
-                {/* Admin routes - outside main Layout */}
-                <Route path="admin" element={<AdminHub />} />
-                <Route path="admin/migrate" element={<MigrateCampaigns />} />
-                <Route path="admin/metricas" element={<AdminMetrics />} />
-                <Route path="admin/notificacoes" element={<AdminNotifications />} />
+                {/* Admin routes - inside Layout but without Layout wrapper for standalone pages */}
+                <Route path="admin">
+                  <Route index element={<AdminHub />} />
+                  <Route path="migrate" element={<MigrateCampaigns />} />
+                  <Route path="metricas" element={<AdminMetrics />} />
+                  <Route path="notificacoes" element={<AdminNotifications />} />
+                </Route>
                 
                 {/* Admin routes with /brasil prefix for Brazilian domain users */}
-                <Route path="brasil/admin" element={<AdminHub />} />
-                <Route path="brasil/admin/migrate" element={<MigrateCampaigns />} />
-                <Route path="brasil/admin/metricas" element={<AdminMetrics />} />
-                <Route path="brasil/admin/notificacoes" element={<AdminNotifications />} />
+                <Route path="brasil/admin">
+                  <Route index element={<AdminHub />} />
+                  <Route path="migrate" element={<MigrateCampaigns />} />
+                  <Route path="metricas" element={<AdminMetrics />} />
+                  <Route path="notificacoes" element={<AdminNotifications />} />
+                </Route>
                 
                 <Route path="*" element={<NotFound />} />
               </Routes>
