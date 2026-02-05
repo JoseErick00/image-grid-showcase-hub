@@ -72,9 +72,12 @@
         function gtag(){dataLayer.push(arguments);}
         window.gtag = gtag;
         
-        // Configure cross-domain tracking (linker)
+        // Configure cross-domain tracking (linker) - ONLY for own domains
+        // This prevents adding ?_gl= parameters to external affiliate links
         gtag('set', 'linker', {
-          'domains': ['ineedbrasil.com.br', 'www.ineedbrasil.com.br', 'ineedstores.com', 'www.ineedstores.com']
+          'domains': ['ineedbrasil.com.br', 'www.ineedbrasil.com.br', 'ineedstores.com', 'www.ineedstores.com'],
+          'decorate_forms': false,
+          'accept_incoming': true
         });
         
         gtag('js', new Date());
