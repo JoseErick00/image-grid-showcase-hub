@@ -1,130 +1,95 @@
 
-# Diagnóstico: Links de Afiliados Quebrados
 
-## Problema Identificado
+# Rastreamento de Visitantes e Page Views no Dashboard Admin
 
-Após análise detalhada, identifiquei **duas possíveis causas** para os links de afiliados não serem rastreados pelas plataformas (Shopee, Amazon, AliExpress):
+## O que sera feito
 
-### Causa 1: Google Analytics 4 Cross-Domain Linker (Confirmada no código)
+Adicionar um sistema completo de rastreamento de visitas ao site, com os totais de **Page Views** e **Visitantes Unicos** exibidos como cards no inicio da pagina de metricas (antes dos cards existentes de Usuarios, Moedas, etc.).
 
-No arquivo `index.html`, existe uma configuração de cross-domain tracking:
+## Etapas
 
-```javascript
-gtag('set', 'linker', {
-  'domains': ['ineedbrasil.com.br', 'www.ineedbrasil.com.br', 'ineedstores.com', 'www.ineedstores.com']
-});
+### 1. Criar tabela `page_views` no Supabase
+
+Nova tabela para registrar cada visita:
+- `visitor_id` (texto) - identificador anonimo persistente no localStorage
+- `session_id` (texto) - ID unico da sessao do navegador
+- `page_path` (texto) - rota visitada
+- `referrer`, `user_agent`, `platform` (desktop/mobile/tablet)
+- RLS: INSERT publico, SELECT apenas service_role
+
+### 2. Criar hook `usePageViewTracking`
+
+- Novo arquivo `src/hooks/usePageViewTracking.ts`
+- Gera `visitor_id` persistente no `localStorage` e `session_id` no `sessionStorage`
+- Detecta plataforma (mobile/desktop/tablet) via user agent
+- Insere na tabela `page_views` a cada mudanca de rota (com debounce para evitar duplicatas)
+- Integrado no `Layout.tsx`
+
+### 3. Atualizar Edge Function `admin-metrics`
+
+Adicionar ao retorno existente:
+- `totalPageViews` - contagem total no periodo
+- `uniqueVisitors` - contagem distinta de `visitor_id` no periodo
+- `topPages` - paginas mais visitadas (top 10)
+
+### 4. Atualizar dashboard `AdminMetrics.tsx`
+
+- Adicionar 2 novos cards **no inicio** do grid de resumo: "Visitas" (total page views) e "Visitantes Unicos"
+- Usar icones `Eye` e `UserCheck` do lucide-react
+- Atualizar a interface `MetricsData` para incluir os novos campos
+
+## Arquivos envolvidos
+
+| Arquivo | Acao |
+|---------|------|
+| `src/hooks/usePageViewTracking.ts` | Criar |
+| `src/components/Layout.tsx` | Adicionar hook |
+| `supabase/functions/admin-metrics/index.ts` | Adicionar queries de trafego |
+| `src/pages/admin/AdminMetrics.tsx` | Adicionar cards de visitas no topo |
+
+## Secao tecnica
+
+### SQL da tabela
+
+```sql
+CREATE TABLE page_views (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  visitor_id text NOT NULL,
+  session_id text,
+  page_path text NOT NULL,
+  referrer text,
+  user_agent text,
+  platform text DEFAULT 'unknown',
+  created_at timestamptz DEFAULT now()
+);
+
+CREATE INDEX idx_page_views_created_at ON page_views(created_at);
+CREATE INDEX idx_page_views_visitor_id ON page_views(visitor_id);
+
+ALTER TABLE page_views ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Anyone can insert page views"
+  ON page_views FOR INSERT WITH CHECK (true);
 ```
 
-**Impacto:** Quando o linker está ativo, o GA4 pode adicionar automaticamente um parâmetro `?_gl=1*abc123*...` a links que naveguem entre domínios. Se a configuração do GTM estiver com "auto-link" habilitado para TODOS os links externos, ele pode estar decorando os links de afiliados.
+### Queries na Edge Function
 
-### Causa 2: Google Tag Manager (GTM) Auto-Link Decoration (Provável)
+```typescript
+// Total page views no periodo
+const { count: totalPageViews } = await supabase
+  .from("page_views")
+  .select("*", { count: "exact", head: true })
+  .gte("created_at", dateFilter);
 
-O GTM (`GTM-5W7DFB2F`) carregado no site pode ter uma configuração de:
-- **Auto-link decorator** habilitado para todos os links
-- **Cross-domain tracking** configurado de forma ampla
-
-Quando isso acontece, um link como:
-```
-https://s.shopee.com.br/6Kx04yfP5X
-```
-
-Pode ser transformado em:
-```
-https://s.shopee.com.br/6Kx04yfP5X?_gl=1*1abc123*_ga*MTIzNDU2Nzg5...
-```
-
-**As plataformas de afiliados rejeitam links modificados** - elas esperam exatamente o link que foi gerado, sem nenhum parâmetro adicional.
-
----
-
-## Solução Proposta
-
-### Parte 1: Corrigir o GA4 no index.html
-
-Adicionar a opção `decorate_forms: false` e limitar o linker apenas aos domínios próprios:
-
-```javascript
-gtag('set', 'linker', {
-  'domains': ['ineedbrasil.com.br', 'www.ineedbrasil.com.br', 'ineedstores.com', 'www.ineedstores.com'],
-  'decorate_forms': false,
-  'accept_incoming': true
-});
+// Visitantes unicos (via query distinta)
+const { data: visitors } = await supabase
+  .from("page_views")
+  .select("visitor_id")
+  .gte("created_at", dateFilter);
+const uniqueVisitors = new Set(visitors?.map(v => v.visitor_id)).size;
 ```
 
-### Parte 2: Verificar e Corrigir o GTM (Ação Manual)
+### Layout dos novos cards (posicao no grid)
 
-Você precisa acessar o Google Tag Manager e verificar:
+Os 2 novos cards ("Visitas" e "Visitantes Unicos") serao inseridos como os 2 primeiros itens do grid existente de 8 cards, mantendo o layout responsivo `grid-cols-2 md:grid-cols-4`.
 
-1. Acesse https://tagmanager.google.com
-2. Abra o container `GTM-5W7DFB2F`
-3. Vá em **Tags** → Procure a tag do GA4
-4. Clique em **Configuration Tag** (ou "Google Tag")
-5. Em **Configure tag settings**, procure por **"Configure your domains"**
-6. **IMPORTANTE**: Remova qualquer domínio que não seja seu (Shopee, Amazon, AliExpress, etc.)
-7. Certifique-se que apenas estão listados:
-   - `ineedbrasil.com.br`
-   - `www.ineedbrasil.com.br`
-   - `ineedstores.com`
-   - `www.ineedstores.com`
-
-### Parte 3: Adicionar Exclusão Explícita de Links de Afiliados
-
-Como medida de segurança adicional, podemos adicionar atributos `data-gtm-exclude` nos links de afiliados para garantir que o GTM não os modifique.
-
----
-
-## Arquivos a Modificar
-
-| Arquivo | Alteração |
-|---------|-----------|
-| `index.html` | Atualizar configuração do linker GA4 para não decorar links externos |
-
----
-
-## Alteração Proposta: index.html
-
-```javascript
-// Configure cross-domain tracking (linker) - ONLY for own domains
-gtag('set', 'linker', {
-  'domains': ['ineedbrasil.com.br', 'www.ineedbrasil.com.br', 'ineedstores.com', 'www.ineedstores.com'],
-  'decorate_forms': false,
-  'accept_incoming': true,
-  // Exclude affiliate link patterns from decoration
-  'url_position': 'query'
-});
-```
-
----
-
-## Verificação Adicional Necessária (Manual)
-
-Para confirmar se o GTM está modificando os links, você pode:
-
-1. Abrir o site em produção (ineedbrasil.com.br)
-2. Abrir as DevTools (F12) → Network
-3. Passar o mouse sobre um link de produto
-4. Verificar se o `href` exibido no rodapé do navegador contém `?_gl=`
-5. Clicar e verificar a URL final na aba Network
-
-Se aparecer `_gl` nos links, o problema está confirmado.
-
----
-
-## Resumo das Ações
-
-1. **Eu faço**: Atualizo o `index.html` para limitar o linker
-2. **Você faz**: Verifica e corrige as configurações no GTM Console
-3. **Teste**: Clica em um produto afiliado e verifica se aparece na plataforma
-
----
-
-## Por que isso acontece?
-
-O Google Analytics 4 e o GTM têm um recurso de "cross-domain tracking" que adiciona parâmetros de identificação (`_gl`, `_ga`) a links para rastrear usuários entre domínios.
-
-Quando mal configurado, esse recurso pode:
-- Adicionar parâmetros a TODOS os links externos
-- Quebrar links de afiliados que não aceitam modificações
-- Invalidar códigos de rastreamento das plataformas parceiras
-
-A solução é configurar corretamente para que o linker APENAS decore links entre seus próprios domínios (`ineedbrasil.com.br` ↔ `ineedstores.com`), e nunca links externos.
