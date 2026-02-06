@@ -143,6 +143,10 @@ const App = () => {
                       
                       {/* USA Catalog accessible from Brasil domain */}
                       <Route path="usa" element={<USA />} />
+                      
+                      {/* Fallback: /brasil/* routes redirect to root on Brasil domain */}
+                      <Route path="brasil" element={<Brasil />} />
+                      <Route path="brasil/*" element={<BrasilDomainRedirect />} />
                     </>
                   ) : (
                     <>

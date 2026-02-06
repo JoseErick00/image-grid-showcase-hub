@@ -1,35 +1,35 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { isUSADomain } from '@/hooks/useCurrentDomain';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { isUSADomain, isBrasilDomain } from '@/hooks/useCurrentDomain';
 
 /**
- * Component that redirects /brasil/* routes on ineedstores.com to ineedbrasil.com.br
- * 
- * When accessed via www.ineedstores.com/brasil/..., redirects to www.ineedbrasil.com.br/...
+ * Component that redirects /brasil/* routes:
+ * - On ineedstores.com: redirects to ineedbrasil.com.br
+ * - On Brasil domain/preview: redirects internally (strips /brasil/ prefix)
  */
 const BrasilDomainRedirect = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   
   useEffect(() => {
-    // Only redirect if we're on the USA domain (ineedstores.com)
+    const pathAfterBrasil = location.pathname.replace(/^\/brasil\/?/, '/');
+
     if (isUSADomain()) {
-      // Get the path after /brasil
-      const pathAfterBrasil = location.pathname.replace(/^\/brasil\/?/, '/');
-      
-      // Construct the new URL on the Brazilian domain
+      // On USA domain, redirect to Brazilian domain
       const newUrl = `https://www.ineedbrasil.com.br${pathAfterBrasil}${location.search}${location.hash}`;
-      
-      // Perform the redirect
       window.location.replace(newUrl);
+    } else if (isBrasilDomain()) {
+      // On Brasil domain or preview, redirect internally (strip /brasil/ prefix)
+      navigate(pathAfterBrasil || '/', { replace: true });
     }
-  }, [location]);
+  }, [location, navigate]);
   
   // Show loading while redirecting
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-        <p className="text-muted-foreground">Redirecionando para ineedbrasil.com.br...</p>
+        <p className="text-muted-foreground">Redirecionando...</p>
       </div>
     </div>
   );
