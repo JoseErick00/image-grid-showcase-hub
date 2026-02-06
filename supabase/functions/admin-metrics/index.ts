@@ -106,6 +106,24 @@ Deno.serve(async (req) => {
       dateFilter = filterDate.toISOString();
     }
 
+    // Fetch page view metrics
+    let pageViewsCountQuery = supabase
+      .from("page_views")
+      .select("*", { count: "exact", head: true });
+    if (dateFilter) {
+      pageViewsCountQuery = pageViewsCountQuery.gte("created_at", dateFilter);
+    }
+    const { count: totalPageViews } = await pageViewsCountQuery;
+
+    let visitorsQuery = supabase
+      .from("page_views")
+      .select("visitor_id");
+    if (dateFilter) {
+      visitorsQuery = visitorsQuery.gte("created_at", dateFilter);
+    }
+    const { data: visitorsData } = await visitorsQuery;
+    const uniqueVisitors = new Set(visitorsData?.map(v => v.visitor_id)).size;
+
     // Fetch all auth users to get emails
     const { data: authUsersData } = await supabase.auth.admin.listUsers();
     const emailMap = new Map<string, string>();
@@ -284,6 +302,8 @@ Deno.serve(async (req) => {
         success: true,
         data: {
           summary: {
+            totalPageViews: totalPageViews || 0,
+            uniqueVisitors,
             totalUsers,
             usersByLevel,
             totalCoinsEarned,

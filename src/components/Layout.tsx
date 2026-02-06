@@ -8,6 +8,7 @@ import { useFirstLoginNotificationPrompt } from "@/hooks/useFirstLoginNotificati
 import { useNotificationBonus } from "@/hooks/useNotificationBonus";
 import { useGamification } from "@/contexts/GamificationContext";
 import { useUTMTracking } from "@/hooks/useAffiliateTracking";
+import { usePageViewTracking } from "@/hooks/usePageViewTracking";
 
 const Layout = () => {
   const location = useLocation();
@@ -17,6 +18,9 @@ const Layout = () => {
   
   // Track UTM parameters for conversion tracking
   useUTMTracking();
+  
+  // Track page views for analytics
+  usePageViewTracking();
 
   useEffect(() => {
     window.scrollTo(0, 0);
