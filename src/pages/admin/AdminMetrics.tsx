@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar, MapPin } from "lucide-react";
+import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar, MapPin, Eye, UserCheck } from "lucide-react";
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
@@ -24,6 +24,8 @@ const PERIOD_OPTIONS: { value: PeriodOption; label: string }[] = [
 
 interface MetricsData {
   summary: {
+    totalPageViews: number;
+    uniqueVisitors: number;
     totalUsers: number;
     usersByLevel: {
       colegas: number;
@@ -206,7 +208,27 @@ const AdminMetricsContent = () => {
         </div>
 
         {/* Summary Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium text-gray-600">Visitas</CardTitle>
+              <Eye className="h-4 w-4 text-indigo-500" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{(metrics.summary.totalPageViews || 0).toLocaleString()}</div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium text-gray-600">Visitantes Únicos</CardTitle>
+              <UserCheck className="h-4 w-4 text-teal-500" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{(metrics.summary.uniqueVisitors || 0).toLocaleString()}</div>
+            </CardContent>
+          </Card>
+
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium text-gray-600">Usuários</CardTitle>
