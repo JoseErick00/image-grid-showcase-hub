@@ -153,7 +153,7 @@ export function isBrasilDomain(): boolean {
   const hostname = window.location.hostname;
 
   // Treat Lovable preview + local dev as Brasil by default
-  if (hostname.endsWith(".lovable.app") || DEV_PREVIEW_HOSTS.includes(hostname)) {
+  if (hostname.endsWith(".lovable.app") || hostname.endsWith(".lovableproject.com") || DEV_PREVIEW_HOSTS.includes(hostname)) {
     return true;
   }
 
