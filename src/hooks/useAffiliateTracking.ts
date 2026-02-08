@@ -104,37 +104,32 @@ export const trackAffiliateClickToSupabase = (data: {
     click_type: data.click_type,
   });
 
-  // Try sendBeacon first for reliability (survives page navigation)
-  const beaconUrl = `https://uwzsmfoxjfexodgblzfk.supabase.co/functions/v1/track-affiliate`;
-  const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-  
-  if (navigator.sendBeacon) {
-    const beaconSent = navigator.sendBeacon(beaconUrl, blob);
-    if (beaconSent) {
-      console.log('[Affiliate Tracking] Beacon sent successfully');
-      return;
-    }
-    console.log('[Affiliate Tracking] Beacon failed, falling back to fetch');
-  }
+  // Use fetch with keepalive as primary method (supports auth headers, survives page navigation)
+  const trackUrl = `https://uwzsmfoxjfexodgblzfk.supabase.co/functions/v1/track-affiliate`;
+  const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3enNtZm94amZleG9kZ2JsemZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUyMzk2MDksImV4cCI6MjA3MDgxNTYwOX0.qvfliCVQ6iFPmc6w0fC5i8Je9omBpNwlyN23EyfyOgE';
 
-  // Fallback to regular fetch with keepalive
-  fetch(beaconUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3enNtZm94amZleG9kZ2JsemZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUyMzk2MDksImV4cCI6MjA3MDgxNTYwOX0.qvfliCVQ6iFPmc6w0fC5i8Je9omBpNwlyN23EyfyOgE',
-    },
-    body: JSON.stringify(payload),
-    keepalive: true, // Keep connection alive even if page navigates
-  }).then(response => {
-    if (response.ok) {
-      console.log('[Affiliate Tracking] Click saved successfully via fetch');
-    } else {
-      console.error('[Affiliate Tracking] Server error:', response.status);
-    }
-  }).catch(error => {
-    console.error('[Affiliate Tracking] Network error:', error);
-  });
+  try {
+    fetch(trackUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': apiKey,
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify(payload),
+      keepalive: true,
+    }).then(response => {
+      if (response.ok) {
+        console.log('[Affiliate Tracking] Click saved successfully');
+      } else {
+        console.error('[Affiliate Tracking] Server error:', response.status);
+      }
+    }).catch(error => {
+      console.error('[Affiliate Tracking] Network error:', error);
+    });
+  } catch (error) {
+    console.error('[Affiliate Tracking] Failed to send tracking:', error);
+  }
 };
 
 // Hook to use affiliate tracking
