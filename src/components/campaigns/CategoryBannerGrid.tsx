@@ -41,7 +41,7 @@ const CategoryBannerGrid = ({ category }: CategoryBannerGridProps) => {
   return (
     <div className="mt-12 mb-8">
       {/* Section Title */}
-      <h2 className="text-2xl md:text-3xl font-omne-medium text-center mb-8" style={{ color: '#171717' }}>
+      <h2 className="text-2xl md:text-3xl font-omne-medium text-center mb-8" style={{ color: '#6b7280' }}>
         Mais ofertas de {config.categoryName}
       </h2>
 
