@@ -12,6 +12,7 @@ import { z } from "zod";
 import loginStars from "@/assets/login-stars.png";
 import { getAuthRedirectUrl, isBrasilDomain } from "@/hooks/useCurrentDomain";
 import EmailConfirmationModal from "@/components/EmailConfirmationModal";
+import { trackQualifyLead } from "@/utils/analytics";
 
 const emailSchema = z.string().email("Email inválido");
 const referralCodeSchema = z.string().max(8, "Código deve ter no máximo 8 caracteres").optional();
@@ -139,6 +140,7 @@ export default function Auth() {
 
       // Redirect to the magic link URL for instant login (only for confirmed emails)
       if (response.data?.loginUrl) {
+        trackQualifyLead({ source: 'auth_signin' });
         window.location.href = response.data.loginUrl;
       }
     } catch (error) {
@@ -198,6 +200,7 @@ export default function Auth() {
           description: error.message,
         });
       } else {
+        trackQualifyLead({ source: 'auth_signup' });
         setShowEmailModal(true);
         toast({
           title: "Email enviado!",
