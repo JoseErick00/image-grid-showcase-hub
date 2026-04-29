@@ -85,7 +85,7 @@ export const useUpdateProductMetrics = () => {
       // Update with incremented value
       const { data, error } = await supabase
         .from("products")
-        .update({ [field]: currentValue + increment })
+        .update({ [field]: currentValue + increment } as any)
         .eq("id", productId)
         .select()
         .single();

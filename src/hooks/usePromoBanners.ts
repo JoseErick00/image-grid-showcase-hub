@@ -86,7 +86,7 @@ export const useUpdateBannerMetrics = () => {
       // Update with incremented value
       const { data, error } = await supabase
         .from("promo_banners")
-        .update({ [field]: currentValue + increment })
+        .update({ [field]: currentValue + increment } as any)
         .eq("id", bannerId)
         .select()
         .single();
