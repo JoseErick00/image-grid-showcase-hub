@@ -31,7 +31,7 @@ const detectPlatform = (): string => {
 export const usePageViewTracking = () => {
   const location = useLocation();
   const lastTrackedPath = useRef<string>('');
-  const debounceTimer = useRef<NodeJS.Timeout | null>(null);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const pagePath = location.pathname;
