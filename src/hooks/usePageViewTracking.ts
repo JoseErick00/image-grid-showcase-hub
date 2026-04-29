@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
+import { trackQualifyLead } from '@/utils/analytics';
 
 const getVisitorId = (): string => {
   let visitorId = localStorage.getItem('pv_visitor_id');
@@ -56,6 +57,9 @@ export const usePageViewTracking = () => {
       supabase.from('page_views').insert(payload as any).then(({ error }) => {
         if (error) console.error('[PageView] Insert error:', error);
       });
+
+      // qualify_lead (campanha) — uma vez por navegação SPA
+      trackQualifyLead({ source: 'page_view', page_url: window.location.href });
     }, 500);
 
     return () => {
