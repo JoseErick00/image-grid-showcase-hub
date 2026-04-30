@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
-import { trackQualifyLead } from '@/utils/analytics';
+import { trackQualifyLead, trackManualPageView } from '@/utils/analytics';
 
 const getVisitorId = (): string => {
   let visitorId = localStorage.getItem('pv_visitor_id');
@@ -60,6 +60,9 @@ export const usePageViewTracking = () => {
 
       // qualify_lead (campanha) — uma vez por navegação SPA
       trackQualifyLead({ source: 'page_view', page_url: window.location.href });
+
+      // Google Ads — manual_event_PAGE_VIEW + ads_conversion + conversion (na home)
+      trackManualPageView(pagePath);
     }, 500);
 
     return () => {
