@@ -1,95 +1,60 @@
 
+## Análise das instruções do Google Ads
 
-# Rastreamento de Visitantes e Page Views no Dashboard Admin
+O Google sugere colar 5 snippets `<script>` estáticos dentro de `<head>` de cada página. Isso **não funciona bem em SPAs** (React Router) como o nosso projeto, pois:
 
-## O que sera feito
+1. O `<head>` do `index.html` é carregado uma única vez — colar os 5 scripts ali dispararia todos os eventos uma só vez no boot, não em cada navegação/ação.
+2. Vários desses eventos (`qualify_lead`, `close_convert_lead`, `conversion`) representam ações específicas (clique em produto, clique em afiliado, page view SPA), não o load inicial.
+3. Já temos toda a infraestrutura de tracking pronta em `src/utils/analytics.ts` + `usePageViewTracking` + `gtag` global dinâmico por domínio em `index.html`.
 
-Adicionar um sistema completo de rastreamento de visitas ao site, com os totais de **Page Views** e **Visitantes Unicos** exibidos como cards no inicio da pagina de metricas (antes dos cards existentes de Usuarios, Moedas, etc.).
+A forma correta é **registrar o Conversion ID do Google Ads** no `gtag('config', ...)` do `index.html` e **disparar cada um dos 5 eventos via `gtag('event', ...)` programaticamente** nos pontos certos do app, reaproveitando os hooks que já existem.
 
-## Etapas
+## Mapeamento dos 5 eventos → ações no app
 
-### 1. Criar tabela `page_views` no Supabase
+| Evento Google Ads | Quando disparar | Onde no código |
+|---|---|---|
+| `qualify_lead` | Já implementado ✅ — page view, product click, banner click, affiliate click, auth | `src/utils/analytics.ts` (manter como está) |
+| `manual_event_PAGE_VIEW` | A cada navegação SPA (route change) | `usePageViewTracking.ts` |
+| `ads_conversion_Page_view_Page_load_www_1` | Mesmo gatilho de page view | `usePageViewTracking.ts` |
+| `conversion` (`send_to: AW-17558569295/lh0yCOS5xZsbEM-CyrRB`) | Conversão de "Page view - Home" — disparar **apenas na home** (`/` e `/brasil`) | `usePageViewTracking.ts` (condicional por path) |
+| `close_convert_lead` | Conversão "fechada" — clique em afiliado/produto (saída para parceiro = lead convertido) | `trackAffiliateClick` em `src/utils/analytics.ts` |
 
-Nova tabela para registrar cada visita:
-- `visitor_id` (texto) - identificador anonimo persistente no localStorage
-- `session_id` (texto) - ID unico da sessao do navegador
-- `page_path` (texto) - rota visitada
-- `referrer`, `user_agent`, `platform` (desktop/mobile/tablet)
-- RLS: INSERT publico, SELECT apenas service_role
+## Mudanças concretas
 
-### 2. Criar hook `usePageViewTracking`
-
-- Novo arquivo `src/hooks/usePageViewTracking.ts`
-- Gera `visitor_id` persistente no `localStorage` e `session_id` no `sessionStorage`
-- Detecta plataforma (mobile/desktop/tablet) via user agent
-- Insere na tabela `page_views` a cada mudanca de rota (com debounce para evitar duplicatas)
-- Integrado no `Layout.tsx`
-
-### 3. Atualizar Edge Function `admin-metrics`
-
-Adicionar ao retorno existente:
-- `totalPageViews` - contagem total no periodo
-- `uniqueVisitors` - contagem distinta de `visitor_id` no periodo
-- `topPages` - paginas mais visitadas (top 10)
-
-### 4. Atualizar dashboard `AdminMetrics.tsx`
-
-- Adicionar 2 novos cards **no inicio** do grid de resumo: "Visitas" (total page views) e "Visitantes Unicos"
-- Usar icones `Eye` e `UserCheck` do lucide-react
-- Atualizar a interface `MetricsData` para incluir os novos campos
-
-## Arquivos envolvidos
-
-| Arquivo | Acao |
-|---------|------|
-| `src/hooks/usePageViewTracking.ts` | Criar |
-| `src/components/Layout.tsx` | Adicionar hook |
-| `supabase/functions/admin-metrics/index.ts` | Adicionar queries de trafego |
-| `src/pages/admin/AdminMetrics.tsx` | Adicionar cards de visitas no topo |
-
-## Secao tecnica
-
-### SQL da tabela
-
-```sql
-CREATE TABLE page_views (
-  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  visitor_id text NOT NULL,
-  session_id text,
-  page_path text NOT NULL,
-  referrer text,
-  user_agent text,
-  platform text DEFAULT 'unknown',
-  created_at timestamptz DEFAULT now()
-);
-
-CREATE INDEX idx_page_views_created_at ON page_views(created_at);
-CREATE INDEX idx_page_views_visitor_id ON page_views(visitor_id);
-
-ALTER TABLE page_views ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Anyone can insert page views"
-  ON page_views FOR INSERT WITH CHECK (true);
+### 1. `index.html` — registrar Google Ads Conversion ID
+No bloco IIFE do gtag, **logo após** `gtag('config', GA_ID)`, adicionar:
+```js
+gtag('config', 'AW-17558569295');
 ```
+Manter as tags do GA4 (Brasil/USA) como estão. Conversion tracking do Google Ads é independente de domínio e pode coexistir.
 
-### Queries na Edge Function
+### 2. `src/utils/analytics.ts` — adicionar 2 helpers
+- `trackManualPageView(pagePath)` → dispara `manual_event_PAGE_VIEW` + `ads_conversion_Page_view_Page_load_www_1`. Se `pagePath === '/'` (ou rota da home Brasil), dispara também o `conversion` com `send_to: 'AW-17558569295/lh0yCOS5xZsbEM-CyrRB'`.
+- `trackCloseConvertLead({ source, link, platform, item_name })` → dispara `close_convert_lead`.
 
-```typescript
-// Total page views no periodo
-const { count: totalPageViews } = await supabase
-  .from("page_views")
-  .select("*", { count: "exact", head: true })
-  .gte("created_at", dateFilter);
+### 3. `src/utils/analytics.ts` — chamar `trackCloseConvertLead` dentro de `trackAffiliateClick`
+Sem duplicar nada: cliques em produto e banner já caem no `trackAffiliateClick`, então uma única chamada cobre todos os pontos de saída para afiliados.
 
-// Visitantes unicos (via query distinta)
-const { data: visitors } = await supabase
-  .from("page_views")
-  .select("visitor_id")
-  .gte("created_at", dateFilter);
-const uniqueVisitors = new Set(visitors?.map(v => v.visitor_id)).size;
-```
+### 4. `src/hooks/usePageViewTracking.ts` — chamar `trackManualPageView`
+Adicionar uma linha junto com o `trackQualifyLead` que já existe. Mesmo debounce (500ms), mesma proteção contra path repetido — sem alterar nada do tracking existente (page_views table, qualify_lead).
 
-### Layout dos novos cards (posicao no grid)
+## O que NÃO vamos mexer (preservar)
 
-Os 2 novos cards ("Visitas" e "Visitantes Unicos") serao inseridos como os 2 primeiros itens do grid existente de 8 cards, mantendo o layout responsivo `grid-cols-2 md:grid-cols-4`.
+- GA4 dinâmico Brasil/USA (`G-NMVPD8GQCP` / `G-1RTW2FS8RB`)
+- Linker config (cross-domain) — afiliados continuam sem `_gl`
+- GTM (`GTM-5W7DFB2F`)
+- Ahrefs Analytics dinâmico
+- Eventos GA4 já existentes: `product_click`, `affiliate_click`, `banner_click`, `share`, `qualify_lead`
+- Tracking PWA (`pwaAnalytics.ts`, `usePwaTracking.ts`)
+- Inserts em `page_views` no Supabase
+- Tracking de afiliados no Supabase (`trackAffiliateClickToSupabase`)
 
+## Arquivos a alterar
+
+- `index.html` — 1 linha (config Conversion ID)
+- `src/utils/analytics.ts` — 2 funções novas + 1 chamada em `trackAffiliateClick`
+- `src/hooks/usePageViewTracking.ts` — 1 chamada extra
+
+## Resultado
+
+Sem snippets estáticos espalhados pelo `<head>` (que não funcionariam em SPA). Os 5 eventos do Google Ads passam a ser disparados nos momentos corretos, integrados ao fluxo de tracking já existente, sem duplicidade e sem afetar o GA4/GTM/Ahrefs/Supabase.

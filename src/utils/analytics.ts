@@ -35,6 +35,60 @@ export const trackQualifyLead = (params: {
   }
 };
 
+// ============================================================
+// Google Ads — Page view events (manual + ads conversion)
+// Disparados a cada navegação SPA via usePageViewTracking.
+// Inclui o evento de conversão "Page view - Home" apenas
+// quando o usuário está na home (raiz) ou na home do Brasil.
+// ============================================================
+const HOME_PATHS = new Set<string>(['/', '/brasil', '/usa', '/uk', '/indonesia']);
+
+export const trackManualPageView = (pagePath: string) => {
+  if (typeof window === 'undefined' || !(window as any).gtag) return;
+  const gtag = (window as any).gtag;
+  try {
+    gtag('event', 'manual_event_PAGE_VIEW', {
+      page_path: pagePath,
+      page_url: window.location.href,
+    });
+    gtag('event', 'ads_conversion_Page_view_Page_load_www_1', {
+      page_path: pagePath,
+      page_url: window.location.href,
+    });
+    // Conversão Google Ads "Page view - Home" — só na home
+    if (HOME_PATHS.has(pagePath)) {
+      gtag('event', 'conversion', {
+        send_to: 'AW-17558569295/lh0yCOS5xZsbEM-CyrRB',
+      });
+    }
+  } catch (e) {
+    console.error('[manual_page_view] failed to dispatch:', e);
+  }
+};
+
+// ============================================================
+// Google Ads — close_convert_lead
+// Disparado quando o usuário sai para um link de afiliado
+// (= lead "fechado/convertido" para o parceiro).
+// ============================================================
+export const trackCloseConvertLead = (params: {
+  affiliate_platform?: string;
+  item_name?: string;
+  affiliate_link?: string;
+}) => {
+  if (typeof window === 'undefined' || !(window as any).gtag) return;
+  try {
+    (window as any).gtag('event', 'close_convert_lead', {
+      affiliate_platform: params.affiliate_platform,
+      item_name: params.item_name,
+      affiliate_link: params.affiliate_link,
+      page_url: window.location.href,
+    });
+  } catch (e) {
+    console.error('[close_convert_lead] failed to dispatch:', e);
+  }
+};
+
 // Analytics tracking utilities
 export const trackProductClick = (productData: {
   label: string;
@@ -112,6 +166,13 @@ export const trackAffiliateClick = (
       affiliate_link: link,
     });
   }
+
+  // close_convert_lead (Google Ads) — sempre dispara em saída p/ afiliado
+  trackCloseConvertLead({
+    affiliate_platform: detectedPlatform,
+    item_name: itemName,
+    affiliate_link: link,
+  });
 
   // Save to Supabase for internal tracking
   trackAffiliateClickToSupabase({
