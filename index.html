@@ -85,8 +85,23 @@
       })();
     </script>
 
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="3ArNk0flJ0FCS9Z+u8sIRg" async></script>
+    <!-- Ahrefs Analytics - Dynamic per domain -->
+    <script>
+      (function() {
+        var hostname = window.location.hostname;
+        var isBrasil = hostname.indexOf('ineedbrasil.com.br') !== -1 ||
+                       hostname.endsWith('.lovable.app') ||
+                       hostname.endsWith('.lovableproject.com') ||
+                       hostname === 'localhost' ||
+                       hostname === '127.0.0.1';
+        var ahrefsKey = isBrasil ? 'AXMKmEwKgc6xQvHOBLAcyQ' : '3ArNk0flJ0FCS9Z+u8sIRg';
+        var s = document.createElement('script');
+        s.src = 'https://analytics.ahrefs.com/analytics.js';
+        s.setAttribute('data-key', ahrefsKey);
+        s.async = true;
+        document.head.appendChild(s);
+      })();
+    </script>
 
     <meta property="og:title" content="iNeed - O aplicativo mais bacana do Brasil" />
     <meta property="og:description" content="Descubra ofertas incríveis e ganhe prêmios compartilhando com amigos!" />
