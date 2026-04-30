@@ -72,27 +72,15 @@ export const useUpdateBannerMetrics = () => {
       field: "like_count" | "share_count" | "click_count";
       increment?: number;
     }) => {
-      // First get current value
-      const { data: current, error: fetchError } = await supabase
-        .from("promo_banners")
-        .select(field)
-        .eq("id", bannerId)
-        .single();
-
-      if (fetchError) throw fetchError;
-
-      const currentValue = (current?.[field] as number) || 0;
-
-      // Update with incremented value
-      const { data, error } = await supabase
-        .from("promo_banners")
-        .update({ [field]: currentValue + increment } as any)
-        .eq("id", bannerId)
-        .select()
-        .single();
+      // Use secure RPC that only allows incrementing the metric columns
+      const { error } = await supabase.rpc("increment_banner_metric", {
+        _banner_id: bannerId,
+        _field: field,
+        _increment: increment,
+      });
 
       if (error) throw error;
-      return data;
+      return { id: bannerId, field, increment };
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["promo_banners"] });

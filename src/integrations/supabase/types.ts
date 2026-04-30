@@ -568,7 +568,7 @@ export type Database = {
           is_active: boolean
           p256dh: string
           updated_at: string
-          user_id: string | null
+          user_id: string
         }
         Insert: {
           auth: string
@@ -578,7 +578,7 @@ export type Database = {
           is_active?: boolean
           p256dh: string
           updated_at?: string
-          user_id?: string | null
+          user_id: string
         }
         Update: {
           auth?: string
@@ -588,7 +588,7 @@ export type Database = {
           is_active?: boolean
           p256dh?: string
           updated_at?: string
-          user_id?: string | null
+          user_id?: string
         }
         Relationships: []
       }
@@ -687,6 +687,7 @@ export type Database = {
           current_level_coins: number
           current_level_referrals: number
           id: string
+          notification_bonus_claimed: boolean
           prizes_redeemed_count: number
           referral_code: string
           referrals_consumed: number
@@ -703,6 +704,7 @@ export type Database = {
           current_level_coins?: number
           current_level_referrals?: number
           id?: string
+          notification_bonus_claimed?: boolean
           prizes_redeemed_count?: number
           referral_code: string
           referrals_consumed?: number
@@ -719,6 +721,7 @@ export type Database = {
           current_level_coins?: number
           current_level_referrals?: number
           id?: string
+          notification_bonus_claimed?: boolean
           prizes_redeemed_count?: number
           referral_code?: string
           referrals_consumed?: number
@@ -764,6 +767,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      claim_notification_bonus: { Args: never; Returns: Json }
       generate_referral_code: { Args: never; Returns: string }
       get_level_from_coins: {
         Args: { total_coins: number }
@@ -775,6 +779,14 @@ export type Database = {
           _user_id: string
         }
         Returns: boolean
+      }
+      increment_banner_metric: {
+        Args: { _banner_id: string; _field: string; _increment?: number }
+        Returns: undefined
+      }
+      increment_product_metric: {
+        Args: { _field: string; _increment?: number; _product_id: string }
+        Returns: undefined
       }
     }
     Enums: {
