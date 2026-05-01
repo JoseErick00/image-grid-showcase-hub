@@ -29,7 +29,8 @@ const ContatoBrasil = () => {
                 </div>
                 <div>
                   <h3 className="font-omne-medium text-lg text-foreground mb-2">E-mail</h3>
-                  <p className="font-omne-regular text-muted-foreground">team@ineedstores.com</p>
+                  <p className="font-omne-regular text-muted-foreground">jose@ineedstores.com</p>
+                  <p className="font-omne-regular text-muted-foreground">erick.ineed@gmail.com</p>
                   <p className="font-omne-regular text-sm text-muted-foreground mt-1">
                     Respondemos em até 24 horas
                   </p>
@@ -42,7 +43,7 @@ const ContatoBrasil = () => {
                 </div>
                 <div>
                   <h3 className="font-omne-medium text-lg text-foreground mb-2">Telefone</h3>
-                  <p className="font-omne-regular text-muted-foreground">+55 (11) 99999-9999</p>
+                  <p className="font-omne-regular text-muted-foreground">+55 (11) 913412-732</p>
                   <p className="font-omne-regular text-sm text-muted-foreground mt-1">
                     Segunda a Sexta, 9h às 18h (Horário de Brasília)
                   </p>
