@@ -1,60 +1,63 @@
+## Diagnóstico da anomalia
 
-## Análise das instruções do Google Ads
+Investiguei o banco e o código, e encontrei **dois bugs reais** que explicam por que as métricas internas e do Google Analytics divergem:
 
-O Google sugere colar 5 snippets `<script>` estáticos dentro de `<head>` de cada página. Isso **não funciona bem em SPAs** (React Router) como o nosso projeto, pois:
+### Bug 1 — Cliques inflados no Supabase (mais grave)
+No banco encontrei este caso:
+- **45 cliques** no produto *"Fashion, para quem é fashion!"*, **mesma sessão**, em **5 segundos** (02:02:50 → 02:02:55).
 
-1. O `<head>` do `index.html` é carregado uma única vez — colar os 5 scripts ali dispararia todos os eventos uma só vez no boot, não em cada navegação/ação.
-2. Vários desses eventos (`qualify_lead`, `close_convert_lead`, `conversion`) representam ações específicas (clique em produto, clique em afiliado, page view SPA), não o load inicial.
-3. Já temos toda a infraestrutura de tracking pronta em `src/utils/analytics.ts` + `usePageViewTracking` + `gtag` global dinâmico por domínio em `index.html`.
+A causa está em `CampaignProductCard.tsx`: o card tem **dois `<a>` aninhados** apontando para o mesmo link, ambos com `onClick={handleProductClick}`:
+- O `<a>` externo que envolve a imagem (linhas 54–83)
+- O `<a>` dentro do botão "Eu quero!" (linhas 103–111)
 
-A forma correta é **registrar o Conversion ID do Google Ads** no `gtag('config', ...)` do `index.html` e **disparar cada um dos 5 eventos via `gtag('event', ...)` programaticamente** nos pontos certos do app, reaproveitando os hooks que já existem.
+HTML não permite `<a>` dentro de `<a>` — o navegador quebra essa estrutura de formas imprevisíveis (em alguns navegadores o clique borbulha e dispara o handler do pai também, em outros o card inteiro é re-renderizado de forma estranha). Isso provavelmente combinado com re-renders gera múltiplos disparos.
 
-## Mapeamento dos 5 eventos → ações no app
+### Bug 2 — Double-counting no GA4 para cliques de produto
+Em `src/utils/analytics.ts`, `trackProductClick` dispara:
+1. evento `product_click` (GA4)
+2. `qualify_lead` 
+3. chama `trackAffiliateClick(...)` que dispara **outro** evento `affiliate_click` (GA4) + `close_convert_lead` + grava no Supabase
 
-| Evento Google Ads | Quando disparar | Onde no código |
-|---|---|---|
-| `qualify_lead` | Já implementado ✅ — page view, product click, banner click, affiliate click, auth | `src/utils/analytics.ts` (manter como está) |
-| `manual_event_PAGE_VIEW` | A cada navegação SPA (route change) | `usePageViewTracking.ts` |
-| `ads_conversion_Page_view_Page_load_www_1` | Mesmo gatilho de page view | `usePageViewTracking.ts` |
-| `conversion` (`send_to: AW-17558569295/lh0yCOS5xZsbEM-CyrRB`) | Conversão de "Page view - Home" — disparar **apenas na home** (`/` e `/brasil`) | `usePageViewTracking.ts` (condicional por path) |
-| `close_convert_lead` | Conversão "fechada" — clique em afiliado/produto (saída para parceiro = lead convertido) | `trackAffiliateClick` em `src/utils/analytics.ts` |
+Resultado: cada clique em produto vira **2 eventos no GA4** (`product_click` + `affiliate_click`), enquanto cliques em banner viram apenas 1. Isso desalinha qualquer comparação entre GA4 e métricas internas.
 
-## Mudanças concretas
+### Bug 3 — Banner clicks não disparam `close_convert_lead`
+`trackBannerClick` salva no Supabase e dispara `qualify_lead`, mas **não** dispara `close_convert_lead` nem o evento GA4 `affiliate_click`. Então banners aparecem subcontados no GA4 vs no painel interno.
 
-### 1. `index.html` — registrar Google Ads Conversion ID
-No bloco IIFE do gtag, **logo após** `gtag('config', GA_ID)`, adicionar:
-```js
-gtag('config', 'AW-17558569295');
-```
-Manter as tags do GA4 (Brasil/USA) como estão. Conversion tracking do Google Ads é independente de domínio e pode coexistir.
+---
 
-### 2. `src/utils/analytics.ts` — adicionar 2 helpers
-- `trackManualPageView(pagePath)` → dispara `manual_event_PAGE_VIEW` + `ads_conversion_Page_view_Page_load_www_1`. Se `pagePath === '/'` (ou rota da home Brasil), dispara também o `conversion` com `send_to: 'AW-17558569295/lh0yCOS5xZsbEM-CyrRB'`.
-- `trackCloseConvertLead({ source, link, platform, item_name })` → dispara `close_convert_lead`.
+## Plano de correção
 
-### 3. `src/utils/analytics.ts` — chamar `trackCloseConvertLead` dentro de `trackAffiliateClick`
-Sem duplicar nada: cliques em produto e banner já caem no `trackAffiliateClick`, então uma única chamada cobre todos os pontos de saída para afiliados.
+### 1. Corrigir o HTML inválido em `CampaignProductCard.tsx`
+Remover o `<a>` externo que envolve a imagem, ou remover o `<a>` interno do botão. A solução mais limpa: **manter apenas o `<a>` do botão** e tornar a imagem clicável via `onClick` (sem ser link), OU envolver o card todo em **um único** `<a>` e remover o `asChild` do Button. Vou usar a primeira abordagem para manter acessibilidade do botão.
 
-### 4. `src/hooks/usePageViewTracking.ts` — chamar `trackManualPageView`
-Adicionar uma linha junto com o `trackQualifyLead` que já existe. Mesmo debounce (500ms), mesma proteção contra path repetido — sem alterar nada do tracking existente (page_views table, qualify_lead).
+### 2. Eliminar o double-count no GA4
+Em `trackProductClick`, **não** chamar `trackAffiliateClick`. Em vez disso, chamar diretamente:
+- `trackAffiliateClickToSupabase(...)` (persistência)
+- `trackCloseConvertLead(...)` (Google Ads)
 
-## O que NÃO vamos mexer (preservar)
+Assim cada clique de produto = 1 evento `product_click` no GA4 + 1 linha no Supabase + 1 conversão Ads. Sem evento `affiliate_click` duplicado.
 
-- GA4 dinâmico Brasil/USA (`G-NMVPD8GQCP` / `G-1RTW2FS8RB`)
-- Linker config (cross-domain) — afiliados continuam sem `_gl`
-- GTM (`GTM-5W7DFB2F`)
-- Ahrefs Analytics dinâmico
-- Eventos GA4 já existentes: `product_click`, `affiliate_click`, `banner_click`, `share`, `qualify_lead`
-- Tracking PWA (`pwaAnalytics.ts`, `usePwaTracking.ts`)
-- Inserts em `page_views` no Supabase
-- Tracking de afiliados no Supabase (`trackAffiliateClickToSupabase`)
+### 3. Padronizar banners
+Em `trackBannerClick`, adicionar disparo de `close_convert_lead` (igual produtos), para que toda saída para afiliado seja contada de forma uniforme no Google Ads.
 
-## Arquivos a alterar
+### 4. Adicionar guarda anti-duplicação (defesa em profundidade)
+No `trackAffiliateClickToSupabase`, manter um `Set` em memória com chave `${session_id}:${affiliate_link}:${timestamp_arredondado_2s}` e ignorar disparos repetidos dentro de uma janela de 2 segundos. Isso protege contra qualquer regressão futura.
 
-- `index.html` — 1 linha (config Conversion ID)
-- `src/utils/analytics.ts` — 2 funções novas + 1 chamada em `trackAffiliateClick`
-- `src/hooks/usePageViewTracking.ts` — 1 chamada extra
+### 5. Limpeza opcional dos dados inflados
+Posso (se você autorizar separadamente) deletar os 44 cliques duplicados da sessão `1777687366116-qdwrivesu` para limpar a métrica histórica. Não incluído neste plano por padrão.
 
-## Resultado
+---
 
-Sem snippets estáticos espalhados pelo `<head>` (que não funcionariam em SPA). Os 5 eventos do Google Ads passam a ser disparados nos momentos corretos, integrados ao fluxo de tracking já existente, sem duplicidade e sem afetar o GA4/GTM/Ahrefs/Supabase.
+## Arquivos afetados
+
+- `src/components/campaigns/CampaignProductCard.tsx` — remover `<a>` aninhado
+- `src/utils/analytics.ts` — separar fluxos, adicionar guarda anti-duplicação, padronizar banners
+- `src/hooks/useAffiliateTracking.ts` — adicionar a janela anti-dedup no `trackAffiliateClickToSupabase`
+
+## Resultado esperado
+
+- Métrica interna (Supabase) e GA4 passam a contar **1 clique = 1 evento**, alinhados.
+- Bug do "45 cliques em 5 segundos" eliminado.
+- Banners e produtos contados de forma consistente no Google Ads.
+
+Posso aplicar as correções?

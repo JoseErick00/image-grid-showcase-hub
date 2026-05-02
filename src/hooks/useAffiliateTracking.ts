@@ -76,7 +76,12 @@ export const trackConversion = async (utmParams: {
 };
 
 // Track affiliate click via Edge Function (with geolocation)
-// Uses fire-and-forget pattern with beacon fallback for reliability
+// Uses fire-and-forget pattern with keepalive for reliability
+// Includes in-memory dedup window to prevent double-counting from
+// React re-renders, accidental double-bound handlers, or rapid double-clicks.
+const recentClicks = new Map<string, number>();
+const DEDUP_WINDOW_MS = 2000;
+
 export const trackAffiliateClickToSupabase = (data: {
   platform: string;
   affiliate_link: string;
@@ -85,7 +90,23 @@ export const trackAffiliateClickToSupabase = (data: {
   click_type: 'product' | 'banner_promo' | 'banner_small' | 'banner_hero';
 }) => {
   const sessionId = getSessionId();
-  
+
+  // Dedup guard: same session + same link + same click_type within 2s = ignore
+  const dedupKey = `${sessionId}:${data.click_type}:${data.affiliate_link}`;
+  const now = Date.now();
+  const lastSeen = recentClicks.get(dedupKey);
+  if (lastSeen && now - lastSeen < DEDUP_WINDOW_MS) {
+    console.log('[Affiliate Tracking] Duplicate click suppressed:', { item: data.item_name, link: data.affiliate_link });
+    return;
+  }
+  recentClicks.set(dedupKey, now);
+  // Best-effort cleanup to keep map small
+  if (recentClicks.size > 200) {
+    for (const [k, t] of recentClicks) {
+      if (now - t > DEDUP_WINDOW_MS) recentClicks.delete(k);
+    }
+  }
+
   const payload = {
     platform: data.platform,
     affiliate_link: data.affiliate_link,

@@ -96,7 +96,7 @@ export const trackProductClick = (productData: {
   link: string;
   position?: number;
 }) => {
-  // Google Analytics 4 event
+  // Google Analytics 4 event — único evento de produto (sem duplicar como affiliate_click)
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'product_click', {
       item_name: productData.label,
@@ -107,7 +107,7 @@ export const trackProductClick = (productData: {
     });
   }
 
-  // qualify_lead (campanha) — disparado uma vez aqui, suprimido no affiliate_click interno
+  // qualify_lead (campanha)
   trackQualifyLead({
     source: 'product_click',
     affiliate_platform: productData.platform,
@@ -115,8 +115,22 @@ export const trackProductClick = (productData: {
     affiliate_link: productData.link,
   });
 
-  // Also track as affiliate click (GA4 + Supabase) — sem qualify_lead duplicado
-  trackAffiliateClick(productData.link, productData.platform, productData.label, { skipQualifyLead: true });
+  // close_convert_lead (Google Ads) — saída para afiliado
+  trackCloseConvertLead({
+    affiliate_platform: productData.platform,
+    item_name: productData.label,
+    affiliate_link: productData.link,
+  });
+
+  // Persistência interna (Supabase) — uma única gravação por clique
+  trackAffiliateClickToSupabase({
+    platform: productData.platform,
+    affiliate_link: productData.link,
+    item_name: productData.label,
+    click_type: 'product',
+  });
+
+  console.log('Product click:', productData);
 };
 
 export const trackProductShare = (productData: {
@@ -208,6 +222,13 @@ export const trackBannerClick = (bannerData: {
   // qualify_lead (campanha)
   trackQualifyLead({
     source: 'banner_click',
+    affiliate_platform: platform,
+    item_name: `banner_${bannerData.bannerId}`,
+    affiliate_link: bannerData.link,
+  });
+
+  // close_convert_lead (Google Ads) — banners também são saída para afiliado
+  trackCloseConvertLead({
     affiliate_platform: platform,
     item_name: `banner_${bannerData.bannerId}`,
     affiliate_link: bannerData.link,

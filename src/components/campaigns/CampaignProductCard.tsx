@@ -51,12 +51,14 @@ const CampaignProductCard = ({
 
   return (
     <div className="flex flex-col bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block aspect-square overflow-hidden group relative"
-        onClick={handleProductClick}
+      <div
+        className="block aspect-square overflow-hidden group relative cursor-pointer"
+        onClick={(e) => {
+          // Ignore clicks coming from Like/Share overlay
+          if ((e.target as HTMLElement).closest('[data-no-affiliate-click]')) return;
+          handleProductClick();
+          window.open(link, '_blank', 'noopener,noreferrer');
+        }}
       >
         {stamp && (
           <div className="absolute top-3 left-3 bg-[#171717] text-white px-3 py-1.5 rounded-md font-omne-medium text-xs z-10 shadow-lg">
@@ -65,7 +67,7 @@ const CampaignProductCard = ({
         )}
         
         {/* Like/Share buttons overlay */}
-        <div className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
+        <div data-no-affiliate-click className="absolute bottom-2 right-2 z-10 flex flex-col gap-1">
           <LikeButton productId={productId} productData={productData} compact showHint={isFirstProduct} />
           <ShareButton
             productId={productId}
@@ -80,7 +82,7 @@ const CampaignProductCard = ({
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
-      </a>
+      </div>
       
       <div className="p-4 flex flex-col gap-3 items-center">
         <div className="flex flex-col gap-2 items-center">
