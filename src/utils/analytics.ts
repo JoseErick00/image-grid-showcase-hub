@@ -227,6 +227,13 @@ export const trackBannerClick = (bannerData: {
     affiliate_link: bannerData.link,
   });
 
+  // close_convert_lead (Google Ads) — banners também são saída para afiliado
+  trackCloseConvertLead({
+    affiliate_platform: platform,
+    item_name: `banner_${bannerData.bannerId}`,
+    affiliate_link: bannerData.link,
+  });
+
   // Save to Supabase for internal tracking
   trackAffiliateClickToSupabase({
     platform,
