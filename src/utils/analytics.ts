@@ -211,13 +211,15 @@ export const trackBannerClick = (bannerData: {
 }) => {
   const platform = detectPlatformFromLink(bannerData.link) || 'unknown';
   
-  // Google Analytics 4 event
+  // Google Analytics 4 / GTM — evento unificado affiliate_click (banner)
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'banner_click', {
+    (window as any).gtag('event', 'affiliate_click', {
       affiliate_platform: platform,
       affiliate_link: bannerData.link,
+      item_name: `banner_${bannerData.bannerId}`,
       banner_id: bannerData.bannerId,
       banner_type: bannerData.bannerType,
+      click_type: `banner_${bannerData.bannerType}`,
       event_category: 'affiliate',
       event_label: `${bannerData.bannerType}_${platform}`,
     });
