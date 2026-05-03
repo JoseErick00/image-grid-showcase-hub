@@ -96,14 +96,18 @@ export const trackProductClick = (productData: {
   link: string;
   position?: number;
 }) => {
-  // Google Analytics 4 event — único evento de produto (sem duplicar como affiliate_click)
+  // Google Analytics 4 / GTM — evento unificado affiliate_click (produto)
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'product_click', {
+    (window as any).gtag('event', 'affiliate_click', {
+      affiliate_platform: productData.platform,
+      affiliate_link: productData.link,
       item_name: productData.label,
       item_category: productData.platform,
       item_list_name: 'campaign_products',
+      click_type: 'product',
       index: productData.position,
-      value: productData.link,
+      event_category: 'affiliate',
+      event_label: productData.platform,
     });
   }
 
@@ -207,13 +211,15 @@ export const trackBannerClick = (bannerData: {
 }) => {
   const platform = detectPlatformFromLink(bannerData.link) || 'unknown';
   
-  // Google Analytics 4 event
+  // Google Analytics 4 / GTM — evento unificado affiliate_click (banner)
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'banner_click', {
+    (window as any).gtag('event', 'affiliate_click', {
       affiliate_platform: platform,
       affiliate_link: bannerData.link,
+      item_name: `banner_${bannerData.bannerId}`,
       banner_id: bannerData.bannerId,
       banner_type: bannerData.bannerType,
+      click_type: `banner_${bannerData.bannerType}`,
       event_category: 'affiliate',
       event_label: `${bannerData.bannerType}_${platform}`,
     });
