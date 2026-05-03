@@ -1,63 +1,59 @@
-## Diagnóstico da anomalia
+## Causa raiz
 
-Investiguei o banco e o código, e encontrei **dois bugs reais** que explicam por que as métricas internas e do Google Analytics divergem:
+Sua tag no GTM tem trigger no evento **`affiliate_click`**. Hoje:
 
-### Bug 1 — Cliques inflados no Supabase (mais grave)
-No banco encontrei este caso:
-- **45 cliques** no produto *"Fashion, para quem é fashion!"*, **mesma sessão**, em **5 segundos** (02:02:50 → 02:02:55).
+- **Banners** disparam `banner_click` (não `affiliate_click`) → mesmo assim sua tag acende? Provável que o trigger no GTM esteja em `close_convert_lead` ou capture qualquer um. De qualquer forma, **produto não dispara `affiliate_click`** desde a última correção (removi para evitar double-count com `product_click`).
+- **Produtos** disparam apenas `product_click` → sua tag (que escuta `affiliate_click`) nunca acende.
 
-A causa está em `CampaignProductCard.tsx`: o card tem **dois `<a>` aninhados** apontando para o mesmo link, ambos com `onClick={handleProductClick}`:
-- O `<a>` externo que envolve a imagem (linhas 54–83)
-- O `<a>` dentro do botão "Eu quero!" (linhas 103–111)
+Vou unificar tudo em **`affiliate_click`** como evento único de saída para afiliado.
 
-HTML não permite `<a>` dentro de `<a>` — o navegador quebra essa estrutura de formas imprevisíveis (em alguns navegadores o clique borbulha e dispara o handler do pai também, em outros o card inteiro é re-renderizado de forma estranha). Isso provavelmente combinado com re-renders gera múltiplos disparos.
+## Mudanças em `src/utils/analytics.ts`
 
-### Bug 2 — Double-counting no GA4 para cliques de produto
-Em `src/utils/analytics.ts`, `trackProductClick` dispara:
-1. evento `product_click` (GA4)
-2. `qualify_lead` 
-3. chama `trackAffiliateClick(...)` que dispara **outro** evento `affiliate_click` (GA4) + `close_convert_lead` + grava no Supabase
+### `trackProductClick`
+Substituir o evento GA4 `product_click` por `affiliate_click` com payload padronizado:
+```js
+gtag('event', 'affiliate_click', {
+  affiliate_platform: platform,
+  affiliate_link: link,
+  item_name: label,
+  click_type: 'product',
+  index: position,
+  event_category: 'affiliate',
+  event_label: platform,
+});
+```
+Manter `qualify_lead` e `close_convert_lead`. Manter persistência no Supabase.
 
-Resultado: cada clique em produto vira **2 eventos no GA4** (`product_click` + `affiliate_click`), enquanto cliques em banner viram apenas 1. Isso desalinha qualquer comparação entre GA4 e métricas internas.
+### `trackBannerClick`
+Substituir `banner_click` por `affiliate_click` com `click_type: 'banner_<tipo>'`:
+```js
+gtag('event', 'affiliate_click', {
+  affiliate_platform: platform,
+  affiliate_link: link,
+  item_name: `banner_${bannerId}`,
+  banner_id: bannerId,
+  click_type: `banner_${bannerType}`,
+  event_category: 'affiliate',
+  event_label: `${bannerType}_${platform}`,
+});
+```
+Manter `qualify_lead` e `close_convert_lead`.
 
-### Bug 3 — Banner clicks não disparam `close_convert_lead`
-`trackBannerClick` salva no Supabase e dispara `qualify_lead`, mas **não** dispara `close_convert_lead` nem o evento GA4 `affiliate_click`. Então banners aparecem subcontados no GA4 vs no painel interno.
+### `trackAffiliateClick` (função legada)
+Manter como está — já dispara `affiliate_click`. Continua útil para chamadas avulsas.
 
----
+## Resultado
 
-## Plano de correção
-
-### 1. Corrigir o HTML inválido em `CampaignProductCard.tsx`
-Remover o `<a>` externo que envolve a imagem, ou remover o `<a>` interno do botão. A solução mais limpa: **manter apenas o `<a>` do botão** e tornar a imagem clicável via `onClick` (sem ser link), OU envolver o card todo em **um único** `<a>` e remover o `asChild` do Button. Vou usar a primeira abordagem para manter acessibilidade do botão.
-
-### 2. Eliminar o double-count no GA4
-Em `trackProductClick`, **não** chamar `trackAffiliateClick`. Em vez disso, chamar diretamente:
-- `trackAffiliateClickToSupabase(...)` (persistência)
-- `trackCloseConvertLead(...)` (Google Ads)
-
-Assim cada clique de produto = 1 evento `product_click` no GA4 + 1 linha no Supabase + 1 conversão Ads. Sem evento `affiliate_click` duplicado.
-
-### 3. Padronizar banners
-Em `trackBannerClick`, adicionar disparo de `close_convert_lead` (igual produtos), para que toda saída para afiliado seja contada de forma uniforme no Google Ads.
-
-### 4. Adicionar guarda anti-duplicação (defesa em profundidade)
-No `trackAffiliateClickToSupabase`, manter um `Set` em memória com chave `${session_id}:${affiliate_link}:${timestamp_arredondado_2s}` e ignorar disparos repetidos dentro de uma janela de 2 segundos. Isso protege contra qualquer regressão futura.
-
-### 5. Limpeza opcional dos dados inflados
-Posso (se você autorizar separadamente) deletar os 44 cliques duplicados da sessão `1777687366116-qdwrivesu` para limpar a métrica histórica. Não incluído neste plano por padrão.
-
----
+- **1 clique = 1 evento `affiliate_click`** no GA4/GTM (produto OU banner).
+- Sua tag do GTM passa a acender em ambos os casos, com o parâmetro `click_type` permitindo segmentar produto vs banner se quiser.
+- Métrica interna (Supabase) e GA4 ficam alinhadas: 1 clique = 1 linha + 1 evento.
+- `close_convert_lead` (Google Ads) continua disparando em ambos.
+- Guarda anti-duplicação de 2s no Supabase permanece como defesa em profundidade.
 
 ## Arquivos afetados
 
-- `src/components/campaigns/CampaignProductCard.tsx` — remover `<a>` aninhado
-- `src/utils/analytics.ts` — separar fluxos, adicionar guarda anti-duplicação, padronizar banners
-- `src/hooks/useAffiliateTracking.ts` — adicionar a janela anti-dedup no `trackAffiliateClickToSupabase`
+- `src/utils/analytics.ts` — refatorar `trackProductClick` e `trackBannerClick` para emitir `affiliate_click` unificado.
 
-## Resultado esperado
+## Observação sobre o GTM
 
-- Métrica interna (Supabase) e GA4 passam a contar **1 clique = 1 evento**, alinhados.
-- Bug do "45 cliques em 5 segundos" eliminado.
-- Banners e produtos contados de forma consistente no Google Ads.
-
-Posso aplicar as correções?
+Depois do deploy, no GTM Debug você verá o evento `affiliate_click` em **todo** clique de saída para afiliado. Se você tinha tags separadas escutando `product_click` ou `banner_click`, elas pararão de disparar — pode pausá-las ou migrar o trigger para `affiliate_click` com filtro por `click_type`.

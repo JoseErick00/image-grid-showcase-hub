@@ -96,14 +96,18 @@ export const trackProductClick = (productData: {
   link: string;
   position?: number;
 }) => {
-  // Google Analytics 4 event — único evento de produto (sem duplicar como affiliate_click)
+  // Google Analytics 4 / GTM — evento unificado affiliate_click (produto)
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'product_click', {
+    (window as any).gtag('event', 'affiliate_click', {
+      affiliate_platform: productData.platform,
+      affiliate_link: productData.link,
       item_name: productData.label,
       item_category: productData.platform,
       item_list_name: 'campaign_products',
+      click_type: 'product',
       index: productData.position,
-      value: productData.link,
+      event_category: 'affiliate',
+      event_label: productData.platform,
     });
   }
 
