@@ -2,6 +2,23 @@ import { detectPlatformFromLink } from '@/config/storeBanners';
 import { trackAffiliateClickToSupabase } from '@/hooks/useAffiliateTracking';
 
 // ============================================================
+// Ahrefs Analytics — custom event dispatcher
+// O script do Ahrefs é carregado em index.html (chave dinâmica
+// por domínio). Em runtime expõe window.AhrefsAnalytics.
+// ============================================================
+const trackAhrefsEvent = (eventName: string) => {
+  if (typeof window === 'undefined') return;
+  try {
+    const ah = (window as any).AhrefsAnalytics;
+    if (ah && typeof ah.sendEvent === 'function') {
+      ah.sendEvent(eventName);
+    }
+  } catch (e) {
+    console.error('[Ahrefs] failed to dispatch:', eventName, e);
+  }
+};
+
+// ============================================================
 // Google Ads / GA4 — qualify_lead campaign event
 // Disparado em todas as ações relevantes do site (cliques em
 // produtos, banners, links patrocinados, page views e auth).
@@ -111,6 +128,9 @@ export const trackProductClick = (productData: {
     });
   }
 
+  // Ahrefs Analytics — evento custom affiliate_click
+  trackAhrefsEvent('affiliate_click');
+
   // qualify_lead (campanha)
   trackQualifyLead({
     source: 'product_click',
@@ -171,9 +191,11 @@ export const trackAffiliateClick = (
       affiliate_link: link,
       item_name: itemName || 'banner',
       event_category: 'affiliate',
-      event_label: detectedPlatform,
     });
   }
+
+  // Ahrefs Analytics — evento custom affiliate_click
+  trackAhrefsEvent('affiliate_click');
 
   // qualify_lead (campanha) — só dispara se não estiver sendo chamado por product/banner
   if (!options?.skipQualifyLead) {
@@ -224,6 +246,9 @@ export const trackBannerClick = (bannerData: {
       event_label: `${bannerData.bannerType}_${platform}`,
     });
   }
+
+  // Ahrefs Analytics — evento custom affiliate_click
+  trackAhrefsEvent('affiliate_click');
 
   // qualify_lead (campanha)
   trackQualifyLead({
