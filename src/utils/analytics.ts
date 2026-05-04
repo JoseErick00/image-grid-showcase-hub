@@ -2,6 +2,23 @@ import { detectPlatformFromLink } from '@/config/storeBanners';
 import { trackAffiliateClickToSupabase } from '@/hooks/useAffiliateTracking';
 
 // ============================================================
+// Ahrefs Analytics — custom event dispatcher
+// O script do Ahrefs é carregado em index.html (chave dinâmica
+// por domínio). Em runtime expõe window.AhrefsAnalytics.
+// ============================================================
+const trackAhrefsEvent = (eventName: string) => {
+  if (typeof window === 'undefined') return;
+  try {
+    const ah = (window as any).AhrefsAnalytics;
+    if (ah && typeof ah.sendEvent === 'function') {
+      ah.sendEvent(eventName);
+    }
+  } catch (e) {
+    console.error('[Ahrefs] failed to dispatch:', eventName, e);
+  }
+};
+
+// ============================================================
 // Google Ads / GA4 — qualify_lead campaign event
 // Disparado em todas as ações relevantes do site (cliques em
 // produtos, banners, links patrocinados, page views e auth).
