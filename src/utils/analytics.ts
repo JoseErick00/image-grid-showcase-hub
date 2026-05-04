@@ -247,6 +247,9 @@ export const trackBannerClick = (bannerData: {
     });
   }
 
+  // Ahrefs Analytics — evento custom affiliate_click
+  trackAhrefsEvent('affiliate_click');
+
   // qualify_lead (campanha)
   trackQualifyLead({
     source: 'banner_click',
