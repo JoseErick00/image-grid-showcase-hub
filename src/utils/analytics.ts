@@ -128,6 +128,9 @@ export const trackProductClick = (productData: {
     });
   }
 
+  // Ahrefs Analytics — evento custom affiliate_click
+  trackAhrefsEvent('affiliate_click');
+
   // qualify_lead (campanha)
   trackQualifyLead({
     source: 'product_click',
@@ -188,9 +191,11 @@ export const trackAffiliateClick = (
       affiliate_link: link,
       item_name: itemName || 'banner',
       event_category: 'affiliate',
-      event_label: detectedPlatform,
     });
   }
+
+  // Ahrefs Analytics — evento custom affiliate_click
+  trackAhrefsEvent('affiliate_click');
 
   // qualify_lead (campanha) — só dispara se não estiver sendo chamado por product/banner
   if (!options?.skipQualifyLead) {
