@@ -129,7 +129,7 @@ export const selCalcadosFemininosData: CampaignConfig = {
         {
           image: "/campaigns/incriveis/products/calcados-fem-10.jpg",
           label: "Malandrinha e baratinha!",
-          link: "https://s.shopee.com.br/1gBJjfxhkM",
+          link: "https://s.shopee.com.br/9pb1k7z8f9",
           platform: "shopee" as const
         },
         {
