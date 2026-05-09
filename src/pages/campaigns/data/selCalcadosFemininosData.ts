@@ -93,7 +93,7 @@ export const selCalcadosFemininosData: CampaignConfig = {
         {
           image: "/campaigns/incriveis/products/calcados-fem-06.jpg",
           label: "Olha o preço dessa na Amazon!",
-          link: "https://amzn.to/4py2DIM",
+          link: "https://s.shopee.com.br/9fHbVb26OH",
           platform: "amazon" as const
         }
       ]
