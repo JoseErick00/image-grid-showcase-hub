@@ -242,6 +242,66 @@ serve(async (req) => {
       brazilStates,
     };
 
+    // ============ EXTRA AGGREGATIONS (Lovable-style overview) ============
+
+    // Hourly series (last 24h) — used when period === 1 day
+    const clicksByHour: Array<{ hour: string; clicks: number }> = [];
+    const nowH = new Date();
+    for (let i = 23; i >= 0; i--) {
+      const d = new Date(nowH.getTime() - i * 60 * 60 * 1000);
+      const key = `${d.toISOString().slice(0, 13)}:00`;
+      const count = (allClicks || []).filter((c) => {
+        const ck = new Date(c.created_at).toISOString().slice(0, 13);
+        return ck === d.toISOString().slice(0, 13);
+      }).length;
+      clicksByHour.push({ hour: key, clicks: count });
+    }
+
+    // Top pages (by path, ignoring query string)
+    const pageMap: Record<string, number> = {};
+    (allClicks || []).forEach((c) => {
+      if (!c.page_url) return;
+      try {
+        const u = new URL(c.page_url);
+        const path = u.pathname || "/";
+        pageMap[path] = (pageMap[path] || 0) + 1;
+      } catch {
+        // ignore malformed urls
+      }
+    });
+    const clicksByPage = Object.entries(pageMap)
+      .map(([page, count]) => ({ page, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 20);
+
+    // Device breakdown (mobile / desktop / tablet)
+    const clicksByDevice: Record<string, number> = { mobile: 0, desktop: 0, tablet: 0 };
+    (allClicks || []).forEach((c) => {
+      const ua = (c.user_agent || "").toLowerCase();
+      if (/ipad|tablet/.test(ua)) clicksByDevice.tablet++;
+      else if (/mobi|android|iphone|ipod/.test(ua)) clicksByDevice.mobile++;
+      else clicksByDevice.desktop++;
+    });
+
+    // Top referrers (by host)
+    const refMap: Record<string, number> = {};
+    (allClicks || []).forEach((c) => {
+      if (!c.referrer) {
+        refMap["Direct"] = (refMap["Direct"] || 0) + 1;
+        return;
+      }
+      try {
+        const host = new URL(c.referrer).hostname.replace(/^www\./, "");
+        refMap[host] = (refMap[host] || 0) + 1;
+      } catch {
+        refMap["Direct"] = (refMap["Direct"] || 0) + 1;
+      }
+    });
+    const clicksByReferrer = Object.entries(refMap)
+      .map(([referrer, count]) => ({ referrer, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 10);
+
     const response = {
       success: true,
       data: {
@@ -250,6 +310,10 @@ serve(async (req) => {
         clicksByPlatform,
         clicksByType,
         clicksByDay,
+        clicksByHour,
+        clicksByPage,
+        clicksByDevice,
+        clicksByReferrer,
         conversionsBySource,
         recentClicks,
         recentConversions,

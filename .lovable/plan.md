@@ -1,53 +1,65 @@
 ## Objetivo
 
-Enviar o mesmo evento `affiliate_click` (produtos + banners + chamadas avulsas) para o Ahrefs Analytics, usando a API JS oficial:
+Criar uma visão no painel admin (`/admin/metricas`) que reproduza o "look & feel" das métricas do Lovable, mas com **cliques de afiliado** como métrica principal — algo que o Lovable não consegue rastrear.
 
-```js
-if (window.AhrefsAnalytics != null) {
-  window.AhrefsAnalytics.sendEvent('affiliate_click');
-}
+A página já tem dados (`affiliate_clicks` via edge function `affiliate-metrics`). Falta só uma visualização tipo Lovable: linha temporal + listas top (página, plataforma, tipo, país, cidade).
+
+## O que muda
+
+### 1. Edge function `affiliate-metrics` — adicionar agregações novas
+
+Hoje já retorna `clicksByDay` (diário). Adicionar:
+
+- `clicksByHour`: série horária (últimas 24h) — quando período = "Hoje"
+- `clicksByPage`: top páginas (`page_url` agrupado por path) — top 20
+- `clicksByDevice`: mobile/desktop/tablet (parse simples de `user_agent`)
+- `clicksByReferrer`: top referrers (parse de `referrer`, agrupado por host) — top 10
+
+Granularidade automática: se `days <= 1` → horário, senão → diário (já existe).
+
+### 2. Novo componente `LovableStyleMetricsSection.tsx`
+
+Layout idêntico ao screenshot do Lovable:
+
+```text
++---------------------------------------------+
+|  [Total Cliques]  [Plataforma top]  [País]  |  ← cards resumo
++---------------------------------------------+
+|                                             |
+|     Linha temporal (cliques no tempo)       |  ← AreaChart recharts
+|                                             |
++---------------------------------------------+
+|  Top Páginas  |  Top Plataformas  | Top País|  ← 3 listas lado a lado
++---------------+-------------------+---------+
+|  Top Tipo     |  Top Cidade       | Device  |
++---------------+-------------------+---------+
 ```
 
-O snippet do Ahrefs já está carregado em `index.html` (script `analytics.ahrefs.com/analytics.js`, com chave dinâmica por domínio Brasil/USA), então `window.AhrefsAnalytics` fica disponível em runtime.
+- Cards: total cliques, conversões, plataforma top, país top
+- Gráfico: `AreaChart` com fill gradient (visual Lovable)
+- Listas: barras de progresso horizontais com label + valor (estilo Lovable)
 
-## Mudanças
+### 3. Nova aba no `AdminMetrics.tsx`
 
-Arquivo único: **`src/utils/analytics.ts`**.
+Adicionar `<TabsTrigger value="overview-cliques">` antes de "Afiliados", apontando pro novo componente. Reaproveita o seletor de período já existente.
 
-### 1. Helper `trackAhrefsEvent`
+## Detalhes técnicos
 
-Criar uma função utilitária no topo do arquivo para centralizar o disparo, com guarda de SSR e try/catch:
+- Reutiliza `affiliateMetrics` já buscado — não dispara nova request
+- Componente puramente apresentacional, recebe `metrics` por props
+- Recharts (já no projeto): `AreaChart` com `linearGradient` para o efeito Lovable
+- Listas: componente interno `<TopList items count />` com barra `bg-primary/10` + fill proporcional
+- Tudo com tokens semânticos (`bg-card`, `text-muted-foreground`, `bg-primary`) — sem cores hardcoded
+- Sem mudanças de schema, sem nova RLS, sem novos secrets
 
-```ts
-const trackAhrefsEvent = (eventName: string) => {
-  if (typeof window === 'undefined') return;
-  try {
-    const ah = (window as any).AhrefsAnalytics;
-    if (ah && typeof ah.sendEvent === 'function') {
-      ah.sendEvent(eventName);
-    }
-  } catch (e) {
-    console.error('[Ahrefs] failed to dispatch:', eventName, e);
-  }
-};
-```
+## Arquivos afetados
 
-### 2. Integrar nas três funções de clique
+- `supabase/functions/affiliate-metrics/index.ts` — agregações novas + retorno
+- `src/components/admin/LovableStyleMetricsSection.tsx` — novo
+- `src/pages/admin/AdminMetrics.tsx` — nova aba + interface estendida
 
-Adicionar `trackAhrefsEvent('affiliate_click')` (logo após o `gtag` do `affiliate_click`) em:
+## Fora de escopo
 
-- `trackProductClick` — clique em card de produto
-- `trackBannerClick` — clique em banner (promo / small / hero)
-- `trackAffiliateClick` — função legada/avulsa para links de afiliado
-
-Resultado: 1 clique de saída para afiliado = 1 `affiliate_click` no GA4/GTM **e** 1 `affiliate_click` no Ahrefs.
-
-## Observações
-
-- O Ahrefs JS API só aceita o nome do evento como string — não envia parâmetros extras (`platform`, `link`, etc.). Para segmentar por plataforma no Ahrefs no futuro, seria preciso disparar nomes diferentes (ex: `affiliate_click_amazon`). Por enquanto, mantemos um único `affiliate_click` para alinhar com GA4/GTM.
-- A guarda `if (window.AhrefsAnalytics != null)` evita erros caso o script do Ahrefs ainda não tenha carregado ou esteja bloqueado por adblocker.
-- Não mexe em `index.html` nem no Supabase — o tracking interno e o GA4 continuam idênticos.
-
-## Arquivo afetado
-
-- `src/utils/analytics.ts`
+- Não mexe no tracking de cliques (já está completo)
+- Não cria novas tabelas
+- Não substitui as abas existentes — fica como visão complementar
