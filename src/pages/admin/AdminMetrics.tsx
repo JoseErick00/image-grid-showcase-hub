@@ -348,8 +348,12 @@ const AdminMetricsContent = () => {
           </CardContent>
         </Card>
 
-        <Tabs defaultValue="affiliates" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-8 h-auto">
+        <Tabs defaultValue="overview" className="space-y-4">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-9 h-auto">
+            <TabsTrigger value="overview" className="flex items-center gap-1">
+              <Eye className="h-3 w-3" />
+              Visão geral
+            </TabsTrigger>
             <TabsTrigger value="affiliates" className="flex items-center gap-1">
               <MousePointerClick className="h-3 w-3" />
               Afiliados
@@ -368,6 +372,18 @@ const AdminMetricsContent = () => {
             <TabsTrigger value="referrals">Indicações</TabsTrigger>
             <TabsTrigger value="redemptions">Resgates</TabsTrigger>
           </TabsList>
+
+          <TabsContent value="overview">
+            {affiliateLoading ? (
+              <div className="text-center py-8">Carregando visão geral...</div>
+            ) : affiliateMetrics ? (
+              <LovableStyleMetricsSection metrics={affiliateMetrics} period={selectedPeriod} />
+            ) : (
+              <div className="text-center py-8 text-muted-foreground">
+                Nenhum dado disponível ainda.
+              </div>
+            )}
+          </TabsContent>
 
           <TabsContent value="affiliates">
             {affiliateLoading ? (
