@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar, MapPin, Eye, UserCheck } from "lucide-react";
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
+import LovableStyleMetricsSection from "@/components/admin/LovableStyleMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
 import AdminGuard from "@/components/admin/AdminGuard";
@@ -347,8 +348,12 @@ const AdminMetricsContent = () => {
           </CardContent>
         </Card>
 
-        <Tabs defaultValue="affiliates" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-8 h-auto">
+        <Tabs defaultValue="overview" className="space-y-4">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-9 h-auto">
+            <TabsTrigger value="overview" className="flex items-center gap-1">
+              <Eye className="h-3 w-3" />
+              Visão geral
+            </TabsTrigger>
             <TabsTrigger value="affiliates" className="flex items-center gap-1">
               <MousePointerClick className="h-3 w-3" />
               Afiliados
@@ -367,6 +372,18 @@ const AdminMetricsContent = () => {
             <TabsTrigger value="referrals">Indicações</TabsTrigger>
             <TabsTrigger value="redemptions">Resgates</TabsTrigger>
           </TabsList>
+
+          <TabsContent value="overview">
+            {affiliateLoading ? (
+              <div className="text-center py-8">Carregando visão geral...</div>
+            ) : affiliateMetrics ? (
+              <LovableStyleMetricsSection metrics={affiliateMetrics} period={selectedPeriod} />
+            ) : (
+              <div className="text-center py-8 text-muted-foreground">
+                Nenhum dado disponível ainda.
+              </div>
+            )}
+          </TabsContent>
 
           <TabsContent value="affiliates">
             {affiliateLoading ? (
