@@ -607,7 +607,7 @@ const Header = () => {
               className="p-2 text-muted-foreground hover:text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
             </button>
           </div>
         </div>
