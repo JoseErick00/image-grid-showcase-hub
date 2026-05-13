@@ -144,7 +144,7 @@ const Header = () => {
               <img 
                 src={isBrasilPage ? "/lovable-uploads/Logo_png-2.png" : "/lovable-uploads/3b0c398c-ba0a-4b49-a835-d39ccaaf7d83.png"} 
                 alt="i.need" 
-                className={isBrasilPage ? "w-[190px] h-[79px] md:w-[240px] md:h-[100px] object-contain" : "w-[200px] h-[150px] object-contain"}
+                className={isBrasilPage ? "w-[140px] h-[58px] md:w-[240px] md:h-[100px] object-contain" : "w-[150px] h-[112px] md:w-[200px] md:h-[150px] object-contain"}
               />
             </Link>
             
@@ -607,7 +607,7 @@ const Header = () => {
               className="p-2 text-muted-foreground hover:text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
             </button>
           </div>
         </div>
