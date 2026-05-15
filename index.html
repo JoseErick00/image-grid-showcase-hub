@@ -109,11 +109,40 @@
     <meta property="og:title" content="iNeed Brasil - Os melhores achados da internet brasileira!" />
     <meta property="og:description" content="Descubra ofertas incríveis e ganhe prêmios compartilhando com amigos!" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta property="og:url" content="https://www.ineedbrasil.com.br/" />
+    <meta property="og:image" content="https://www.ineedbrasil.com.br/pwa-512x512.png" />
+    <meta property="og:site_name" content="iNeed Brasil" />
+    <meta property="og:locale" content="pt_BR" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ineedshowcase" />
-    <meta name="twitter:image" content="/pwa-512x512.png" />
+    <meta name="twitter:image" content="https://www.ineedbrasil.com.br/pwa-512x512.png" />
+
+    <!-- JSON-LD Organization + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "iNeed Brasil",
+          "url": "https://www.ineedbrasil.com.br",
+          "logo": "https://www.ineedbrasil.com.br/pwa-512x512.png",
+          "sameAs": ["https://www.ineedstores.com"]
+        },
+        {
+          "@type": "WebSite",
+          "name": "iNeed Brasil",
+          "url": "https://www.ineedbrasil.com.br",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.ineedbrasil.com.br/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

@@ -1,0 +1,23 @@
+# iNeed Brasil
+
+> Curadoria dos melhores achados da internet brasileira: ofertas selecionadas das maiores plataformas de e-commerce (Shopee, Amazon, AliExpress, Alibaba) com sistema de gamificação e prêmios.
+
+iNeed Brasil reúne produtos selecionados em categorias de casa, tech, esportes, saúde, kids e achados incríveis. Os usuários ganham moedas ao compartilhar achados e podem trocar por prêmios.
+
+## Pages
+
+- [Home](/): Página inicial com destaques e categorias.
+- [Casa](/casa): Achados para cozinha, sala, quarto e banheiro.
+- [Tech](/tech): Fones, tradutores e gadgets de tecnologia.
+- [Esportes](/esportes): Academia, corrida, esportes aquáticos e de campo.
+- [Saúde](/saude): Cuidado com rosto, corpo e cremes importados.
+- [Kids](/kids): Brinquedos e produtos infantis.
+- [Incríveis](/incriveis): Os achados mais surpreendentes.
+- [Prêmios](/premios): Sistema de gamificação e troca de moedas por prêmios.
+- [Sobre](/sobre): Conheça o iNeed Brasil.
+- [Contato](/contato): Fale com a equipe.
+
+## Optional
+
+- [Lojas](/sobre-lojas): Informações sobre as plataformas parceiras.
+- [USA Catalog](/usa): Catálogo internacional iNeed Stores.
