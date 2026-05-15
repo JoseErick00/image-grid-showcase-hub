@@ -153,7 +153,7 @@ const PwaInstallDialog = ({
     // For non-iOS, try share API
     try {
       await navigator.share({
-        title: 'iNeed - O aplicativo mais bacana do Brasil',
+        title: 'iNeed Brasil - Os melhores achados da internet brasileira!',
         text: 'Instale o app iNeed!',
         url: window.location.origin,
       });
