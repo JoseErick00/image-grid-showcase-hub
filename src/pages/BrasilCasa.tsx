@@ -1,3 +1,4 @@
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
@@ -157,6 +158,11 @@ const BrasilCasa = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Casa - Achados para sua casa | iNeed Brasil"
+        description="Os melhores achados para cozinha, sala, quarto e banheiro selecionados das maiores plataformas de e-commerce. Decore sua casa com inteligência."
+        path="/casa"
+      />
       <div 
         className="w-full h-[400px] flex items-center justify-center"
         style={{

@@ -1,3 +1,4 @@
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
@@ -175,6 +176,11 @@ const BrasilKids = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Kids - Achados infantis | iNeed Brasil"
+        description="Brinquedos, roupas e produtos para crianças. Os melhores achados infantis selecionados das maiores plataformas internacionais."
+        path="/kids"
+      />
       <div 
         className="w-full h-[400px] flex items-center justify-center"
         style={{
