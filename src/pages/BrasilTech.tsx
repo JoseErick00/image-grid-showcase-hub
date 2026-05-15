@@ -1,3 +1,4 @@
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
@@ -396,6 +397,11 @@ const BrasilTech = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Tech - Achados de tecnologia | iNeed Brasil"
+        description="Fones de ouvido, tradutores, gadgets e os melhores achados de tecnologia selecionados das maiores plataformas internacionais."
+        path="/tech"
+      />
       {/* Banner */}
       <div 
         className="w-full h-[400px] flex items-center justify-center relative"

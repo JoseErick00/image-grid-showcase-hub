@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import { useIsMobile } from "@/hooks/use-mobile";
 import TrustBadges from "@/components/TrustBadges";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
@@ -110,6 +111,22 @@ const Brasil = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="iNeed Brasil - Os melhores achados da internet brasileira!"
+        description="Descubra ofertas incríveis de Shopee, Amazon, AliExpress e Alibaba. Achados selecionados em casa, tech, esportes, saúde, kids e muito mais."
+        path="/"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'iNeed Brasil',
+          url: 'https://www.ineedbrasil.com.br',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: 'https://www.ineedbrasil.com.br/?q={search_term_string}',
+            'query-input': 'required name=search_term_string',
+          },
+        }}
+      />
       {/* Main Banner */}
       <div 
         className="w-full h-[400px] flex items-center justify-center"

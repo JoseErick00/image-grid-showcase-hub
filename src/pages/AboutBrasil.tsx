@@ -1,4 +1,5 @@
 import AppDownloadIcon from "@/components/AppDownloadIcon";
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 
 // Import platform logos
 import logoShopee from "@/assets/brasil/logo-shopee.png";
@@ -17,6 +18,11 @@ const AboutBrasil = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Sobre - Quem somos | iNeed Brasil"
+        description="Conheça o iNeed Brasil: a plataforma que reúne os melhores achados das maiores lojas internacionais para o consumidor brasileiro."
+        path="/sobre"
+      />
       {/* Banner Section */}
       <div className="w-full h-[235px] md:h-[200px] flex items-center justify-center relative">
         {/* Desktop Banner */}

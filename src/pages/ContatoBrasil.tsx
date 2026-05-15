@@ -1,9 +1,15 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import ContactFormBrasil from "@/components/ContactFormBrasil";
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 
 const ContatoBrasil = () => {
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Contato - Fale com a gente | iNeed Brasil"
+        description="Entre em contato com a equipe iNeed Brasil. Tire dúvidas, envie sugestões ou parcerias."
+        path="/contato"
+      />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">

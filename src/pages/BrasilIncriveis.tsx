@@ -1,3 +1,4 @@
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
@@ -175,6 +176,11 @@ const BrasilIncriveis = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Incríveis - Os achados mais surpreendentes | iNeed Brasil"
+        description="Acampamento, praia, calçados e os achados mais incríveis da internet brasileira. Selecionados das maiores plataformas internacionais."
+        path="/incriveis"
+      />
       <div 
         className="w-full h-[400px] flex items-center justify-center"
         style={{

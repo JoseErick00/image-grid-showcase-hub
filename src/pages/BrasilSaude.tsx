@@ -1,3 +1,4 @@
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
@@ -175,6 +176,11 @@ const BrasilSaude = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Saúde e Beleza - Achados de bem-estar | iNeed Brasil"
+        description="Cuidado com o rosto, corpo, cremes importados e produtos de bem-estar. Achados selecionados das melhores plataformas para sua saúde e beleza."
+        path="/saude"
+      />
       <div 
         className="w-full h-[400px] flex items-center justify-center"
         style={{

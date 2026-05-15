@@ -1,3 +1,4 @@
+import BrasilPageSEO from "@/components/BrasilPageSEO";
 import CategoryGrid from "@/components/CategoryGrid";
 import MailchimpSubscription from "@/components/MailchimpSubscription";
 import GamificationPromoBanner from "@/components/GamificationPromoBanner";
@@ -424,6 +425,11 @@ const BrasilEsportes = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <BrasilPageSEO
+        title="Esportes - Achados esportivos | iNeed Brasil"
+        description="Academia, corrida, esportes aquáticos e de campo. Os melhores achados esportivos selecionados das maiores plataformas internacionais."
+        path="/esportes"
+      />
       {/* Banner */}
       <div 
         className="w-full h-[400px] flex items-center justify-center"
