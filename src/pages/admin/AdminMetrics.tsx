@@ -350,7 +350,7 @@ const AdminMetricsContent = () => {
         </Card>
 
         <Tabs defaultValue="overview" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-9 h-auto">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-10 h-auto">
             <TabsTrigger value="overview" className="flex items-center gap-1">
               <Eye className="h-3 w-3" />
               Visão geral
@@ -366,6 +366,10 @@ const AdminMetricsContent = () => {
             <TabsTrigger value="pwa" className="flex items-center gap-1">
               <Smartphone className="h-3 w-3" />
               PWA
+            </TabsTrigger>
+            <TabsTrigger value="gsc" className="flex items-center gap-1">
+              <Search className="h-3 w-3" />
+              Google Search
             </TabsTrigger>
             <TabsTrigger value="users">Usuários</TabsTrigger>
             <TabsTrigger value="favorites">Favoritos</TabsTrigger>
