@@ -5,11 +5,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar, MapPin, Eye, UserCheck } from "lucide-react";
+import { Users, Coins, Share2, Heart, Gift, TrendingUp, Clock, UserPlus, MousePointerClick, Smartphone, Calendar, MapPin, Eye, UserCheck, Search } from "lucide-react";
 import AffiliateMetricsSection from "@/components/admin/AffiliateMetricsSection";
 import LovableStyleMetricsSection from "@/components/admin/LovableStyleMetricsSection";
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
+import GoogleSearchConsoleSection from "@/components/admin/GoogleSearchConsoleSection";
 import AdminGuard from "@/components/admin/AdminGuard";
 
 type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
