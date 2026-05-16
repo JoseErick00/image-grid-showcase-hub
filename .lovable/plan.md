@@ -1,65 +1,33 @@
-## Objetivo
+## Conectar iNeed Brasil ao Google Search Console
 
-Criar uma visão no painel admin (`/admin/metricas`) que reproduza o "look & feel" das métricas do Lovable, mas com **cliques de afiliado** como métrica principal — algo que o Lovable não consegue rastrear.
+Vou conectar seu site `https://www.ineedbrasil.com.br/` ao Google Search Console (GSC) usando o conector oficial da Lovable. Isso libera relatórios de indexação, performance de busca, cobertura, sitemap e Core Web Vitals direto da sua conta Google.
 
-A página já tem dados (`affiliate_clicks` via edge function `affiliate-metrics`). Falta só uma visualização tipo Lovable: linha temporal + listas top (página, plataforma, tipo, país, cidade).
+### Etapas
 
-## O que muda
+1. **Conectar a conta Google** (conector `google_search_console`)
+   - Você será solicitado a autorizar sua conta Google via OAuth.
+   - Nenhuma chave manual é necessária.
 
-### 1. Edge function `affiliate-metrics` — adicionar agregações novas
+2. **Verificar a propriedade do domínio (método META tag)**
+   - Solicito um token de verificação ao Google para `https://www.ineedbrasil.com.br/`.
+   - Insiro a `<meta name="google-site-verification" content="...">` no `<head>` do `index.html`.
+   - Após o deploy, peço ao Google para verificar — a meta tag precisa estar viva na URL raiz.
 
-Hoje já retorna `clicksByDay` (diário). Adicionar:
+3. **Adicionar a propriedade ao Search Console**
+   - Após verificação bem-sucedida, registro `https://www.ineedbrasil.com.br/` como propriedade na sua conta GSC.
 
-- `clicksByHour`: série horária (últimas 24h) — quando período = "Hoje"
-- `clicksByPage`: top páginas (`page_url` agrupado por path) — top 20
-- `clicksByDevice`: mobile/desktop/tablet (parse simples de `user_agent`)
-- `clicksByReferrer`: top referrers (parse de `referrer`, agrupado por host) — top 10
+4. **Submeter o sitemap**
+   - Envio `https://www.ineedbrasil.com.br/sitemap.xml` (já existente, 33 URLs) ao GSC para acelerar a descoberta de páginas.
 
-Granularidade automática: se `days <= 1` → horário, senão → diário (já existe).
+5. **Confirmar funcionamento**
+   - Listo as propriedades verificadas para confirmar que o site aparece.
+   - Te aviso que os primeiros dados de Search Performance aparecem em ~24-48h (é o GSC, não a Lovable).
 
-### 2. Novo componente `LovableStyleMetricsSection.tsx`
+### Pré-requisitos
 
-Layout idêntico ao screenshot do Lovable:
+- **Deploy publicado:** a meta tag precisa estar live em `https://www.ineedbrasil.com.br/` antes da verificação. Se o deploy atual estiver desatualizado, fazemos o publish antes do passo 3.
+- **Conta Google:** a mesma que você quer usar para gerenciar o GSC.
 
-```text
-+---------------------------------------------+
-|  [Total Cliques]  [Plataforma top]  [País]  |  ← cards resumo
-+---------------------------------------------+
-|                                             |
-|     Linha temporal (cliques no tempo)       |  ← AreaChart recharts
-|                                             |
-+---------------------------------------------+
-|  Top Páginas  |  Top Plataformas  | Top País|  ← 3 listas lado a lado
-+---------------+-------------------+---------+
-|  Top Tipo     |  Top Cidade       | Device  |
-+---------------+-------------------+---------+
-```
+### Observação sobre o domínio USA
 
-- Cards: total cliques, conversões, plataforma top, país top
-- Gráfico: `AreaChart` com fill gradient (visual Lovable)
-- Listas: barras de progresso horizontais com label + valor (estilo Lovable)
-
-### 3. Nova aba no `AdminMetrics.tsx`
-
-Adicionar `<TabsTrigger value="overview-cliques">` antes de "Afiliados", apontando pro novo componente. Reaproveita o seletor de período já existente.
-
-## Detalhes técnicos
-
-- Reutiliza `affiliateMetrics` já buscado — não dispara nova request
-- Componente puramente apresentacional, recebe `metrics` por props
-- Recharts (já no projeto): `AreaChart` com `linearGradient` para o efeito Lovable
-- Listas: componente interno `<TopList items count />` com barra `bg-primary/10` + fill proporcional
-- Tudo com tokens semânticos (`bg-card`, `text-muted-foreground`, `bg-primary`) — sem cores hardcoded
-- Sem mudanças de schema, sem nova RLS, sem novos secrets
-
-## Arquivos afetados
-
-- `supabase/functions/affiliate-metrics/index.ts` — agregações novas + retorno
-- `src/components/admin/LovableStyleMetricsSection.tsx` — novo
-- `src/pages/admin/AdminMetrics.tsx` — nova aba + interface estendida
-
-## Fora de escopo
-
-- Não mexe no tracking de cliques (já está completo)
-- Não cria novas tabelas
-- Não substitui as abas existentes — fica como visão complementar
+Este plano cobre apenas o domínio brasileiro. Se quiser, depois repetimos o fluxo para `https://www.ineedstores.com/` (é o mesmo processo, separadamente).
