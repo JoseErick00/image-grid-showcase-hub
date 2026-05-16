@@ -414,6 +414,10 @@ const AdminMetricsContent = () => {
             <PwaMetricsSection />
           </TabsContent>
 
+          <TabsContent value="gsc">
+            <GoogleSearchConsoleSection />
+          </TabsContent>
+
           <TabsContent value="users" className="space-y-4">
             <Card>
               <CardHeader>
