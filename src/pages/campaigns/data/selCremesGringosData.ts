@@ -97,7 +97,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_05.jpg",
           label: "Mais um conjunto com preço legal para homens.",
-          link: "https://s.click.aliexpress.com/e/_c3HCYtyh",
+          link: "https://s.click.aliexpress.com/e/_c2wRscJn",
           platform: "aliexpress"
         },
         {
