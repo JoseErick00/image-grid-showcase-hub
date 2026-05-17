@@ -72,7 +72,7 @@ export const selCorpoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corpo/pdt_01.jpg",
           label: "Para perder peso, cólicas e constipação.",
-          link: "https://s.click.aliexpress.com/e/_c4NygiQl",
+          link: "https://s.click.aliexpress.com/e/_c3XGiEMp",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
