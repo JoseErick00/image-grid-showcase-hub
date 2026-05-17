@@ -79,7 +79,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_02.jpg",
           label: "Tratamento de clareamento completo bem barato.",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000035415600",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601032337841",
           platform: "alibaba"
         },
         {
@@ -91,19 +91,19 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_04.jpg",
           label: "5 pçs/set BIOAQUA Colágeno de Caracol.",
-          link: "https://s.click.aliexpress.com/e/_c33ktq2h",
+          link: "https://s.click.aliexpress.com/e/_c3NyGfCd",
           platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_05.jpg",
           label: "Mais um conjunto com preço legal para homens.",
-          link: "https://s.click.aliexpress.com/e/_c3HCYtyh",
+          link: "https://s.click.aliexpress.com/e/_c2wRscJn",
           platform: "aliexpress"
         },
         {
           image: "/images/campaigns/sel-cremes/pdt_06.jpg",
           label: "Retinol + Colágeno natural bem em conta!",
-          link: "https://s.click.aliexpress.com/e/_c3s0ZfnB",
+          link: "https://s.click.aliexpress.com/e/_c3cmFs6l",
           platform: "aliexpress"
         }
       ]
@@ -114,13 +114,13 @@ export const selCremesGringosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cremes-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-cremes-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-cremes-promo2-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000035424468"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601010258234"
       },
       products: [
         {
           image: "/images/campaigns/sel-cremes/pdt_07.jpg",
           label: "Melhore a potência dos cremes com essa máscara.",
-          link: "https://s.shopee.com.br/qbwbn2VxY",
+          link: "https://s.shopee.com.br/6AhvbrX307",
           platform: "shopee"
         },
         {
@@ -192,7 +192,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_17.jpg",
           label: "Coreano Centella  para levar a todo lugar!",
-          link: "https://s.click.aliexpress.com/e/_c4N5XIKt",
+          link: "https://s.click.aliexpress.com/e/_c3VkcyMD",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         },

@@ -70,7 +70,7 @@ export const selCuidadoRostoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cuidado-rosto/pdt_02.jpg",
           label: "Uma opção na Shopee!",
-          link: "https://s.shopee.com.br/3LJ9jrUNo8",
+          link: "https://s.shopee.com.br/4ft7kpzaeK",
           platform: "shopee",
         },
         {
@@ -117,7 +117,7 @@ export const selCuidadoRostoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cuidado-rosto/pdt_08.jpg",
           label: "Um tratamento completo super barato!",
-          link: "https://s.click.aliexpress.com/e/_c4N1B9tf",
+          link: "https://s.click.aliexpress.com/e/_c3vTeS6z",
           platform: "aliexpress",
         },
         {

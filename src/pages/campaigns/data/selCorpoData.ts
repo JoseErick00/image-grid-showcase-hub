@@ -72,7 +72,7 @@ export const selCorpoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corpo/pdt_01.jpg",
           label: "Para perder peso, cólicas e constipação.",
-          link: "https://s.click.aliexpress.com/e/_c4NygiQl",
+          link: "https://s.click.aliexpress.com/e/_c3XGiEMp",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
@@ -103,7 +103,7 @@ export const selCorpoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corpo/pdt_06.jpg",
           label: "Conjunto de ventosas a vácuo.",
-          link: "https://s.click.aliexpress.com/e/_c4TnTRcN",
+          link: "https://s.click.aliexpress.com/e/_c4rIWz7T",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         }
@@ -115,7 +115,7 @@ export const selCorpoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corpo-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-corpo-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-corpo-promo2-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601004488017"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601236523856"
       },
       products: [
         {
@@ -188,7 +188,7 @@ export const selCorpoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corpo/pdt_16.jpg",
           label: "Não precisa de tratamentos muito caros.",
-          link: "https://s.click.aliexpress.com/e/_c3ub7ilR",
+          link: "https://s.click.aliexpress.com/e/_c3d4PxEh",
           platform: "aliexpress"
         },
         {
