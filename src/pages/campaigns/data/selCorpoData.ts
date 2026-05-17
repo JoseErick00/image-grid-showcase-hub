@@ -103,7 +103,7 @@ export const selCorpoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corpo/pdt_06.jpg",
           label: "Conjunto de ventosas a vácuo.",
-          link: "https://s.click.aliexpress.com/e/_c4TnTRcN",
+          link: "https://s.click.aliexpress.com/e/_c4rIWz7T",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         }
