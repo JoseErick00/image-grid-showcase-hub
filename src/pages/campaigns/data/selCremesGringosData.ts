@@ -192,7 +192,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_17.jpg",
           label: "Coreano Centella  para levar a todo lugar!",
-          link: "https://s.click.aliexpress.com/e/_c4N5XIKt",
+          link: "https://s.click.aliexpress.com/e/_c3VkcyMD",
           platform: "aliexpress",
           stamp: "Frete Grátis!"
         },
