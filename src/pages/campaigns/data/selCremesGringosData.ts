@@ -91,7 +91,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_04.jpg",
           label: "5 pçs/set BIOAQUA Colágeno de Caracol.",
-          link: "https://s.click.aliexpress.com/e/_c33ktq2h",
+          link: "https://s.click.aliexpress.com/e/_c3NyGfCd",
           platform: "aliexpress"
         },
         {
