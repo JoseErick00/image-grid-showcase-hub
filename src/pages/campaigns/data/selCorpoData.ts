@@ -188,7 +188,7 @@ export const selCorpoData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corpo/pdt_16.jpg",
           label: "Não precisa de tratamentos muito caros.",
-          link: "https://s.click.aliexpress.com/e/_c3ub7ilR",
+          link: "https://s.click.aliexpress.com/e/_c3d4PxEh",
           platform: "aliexpress"
         },
         {
