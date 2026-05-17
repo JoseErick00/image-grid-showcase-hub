@@ -114,7 +114,7 @@ export const selCremesGringosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-cremes-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-cremes-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-cremes-promo2-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000035424468"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601010258234"
       },
       products: [
         {
