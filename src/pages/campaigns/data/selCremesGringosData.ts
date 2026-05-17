@@ -79,7 +79,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_02.jpg",
           label: "Tratamento de clareamento completo bem barato.",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=10000035415600",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601032337841",
           platform: "alibaba"
         },
         {
