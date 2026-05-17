@@ -120,7 +120,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_07.jpg",
           label: "Melhore a potência dos cremes com essa máscara.",
-          link: "https://s.shopee.com.br/qbwbn2VxY",
+          link: "https://s.shopee.com.br/6AhvbrX307",
           platform: "shopee"
         },
         {
