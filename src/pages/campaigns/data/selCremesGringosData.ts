@@ -103,7 +103,7 @@ export const selCremesGringosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-cremes/pdt_06.jpg",
           label: "Retinol + Colágeno natural bem em conta!",
-          link: "https://s.click.aliexpress.com/e/_c3s0ZfnB",
+          link: "https://s.click.aliexpress.com/e/_c3cmFs6l",
           platform: "aliexpress"
         }
       ]
