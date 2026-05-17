@@ -115,7 +115,7 @@ export const selCorpoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corpo-promo2-desktop.jpg",
         tablet: "/images/campaigns/sel-corpo-promo2-tablet.jpg",
         mobile: "/images/campaigns/sel-corpo-promo2-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601004488017"
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601236523856"
       },
       products: [
         {
