@@ -603,7 +603,7 @@ const BrasilEsportes = () => {
               desktopImage={promoBanner}
               tabletImage={promoBannerTablet}
               mobileImage={promoBannerMobile}
-              link="https://s.click.aliexpress.com/e/_c4cwqPUj"
+              link="https://s.click.aliexpress.com/e/_c3pBDtfj"
               alt="Esportes promo banner"
               categorySlug="brasil-esportes"
               bannerId="promo-01"
