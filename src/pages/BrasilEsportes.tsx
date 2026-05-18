@@ -167,7 +167,7 @@ const BrasilEsportes = () => {
       id: "sports-8",
       title: "Bola de vôlei original fundidas (5 bolas) - Tamanho padrão.",
       image: esp08,
-      link: "https://s.click.aliexpress.com/e/_c45RYfhl",
+      link: "https://s.click.aliexpress.com/e/_c4eVmlfL",
     },
     {
       id: "sports-9",
@@ -233,7 +233,7 @@ const BrasilEsportes = () => {
       id: "sports-19",
       title: "Tênis Feminino Esportivo - Raibull",
       image: esp19,
-      link: "https://s.shopee.com.br/4fnqN6l3Yn",
+      link: "https://s.shopee.com.br/AKXUkP8R0C",
     },
     {
       id: "sports-20",
@@ -275,7 +275,7 @@ const BrasilEsportes = () => {
       id: "sports-26",
       title: "Bola de equilíbrio suíço anti-explosão com bomba rápida.",
       image: esp26,
-      link: "https://s.click.aliexpress.com/e/_c4EfLO3l",
+      link: "https://s.click.aliexpress.com/e/_c3Zs24tb",
     },
     {
       id: "sports-27",
@@ -287,7 +287,7 @@ const BrasilEsportes = () => {
       id: "sports-28",
       title: "FitVille Tênis de basquete masculino de cano alto.",
       image: esp28,
-      link: "https://s.click.aliexpress.com/e/_c3XbxStD",
+      link: "https://s.click.aliexpress.com/e/_c3NNnw8Z",
     },
     {
       id: "sports-29",
@@ -329,13 +329,13 @@ const BrasilEsportes = () => {
       id: "sports-35",
       title: "Lentes para Celular DSDZ-18XWYJ com Zoom Óptico Universal",
       image: esp35,
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600201202643",
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601440072823",
     },
     {
       id: "sports-36",
       title: "Anel Inteligente Monitor de Sono e Fitness",
       image: esp36,
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601407549582",
+      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601445287851",
     },
     {
       id: "sports-37",
@@ -413,7 +413,7 @@ const BrasilEsportes = () => {
       id: "sports-49",
       title: "Prancha Inflável de Stand-Up Paddle.",
       image: esp49,
-      link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601020067731",
+      link: "https://www.alibaba.com/product-detail/SUP-2025-New-Design-Custom-Foldable_1600490482097.html",
     },
     {
       id: "sports-50",
@@ -603,7 +603,7 @@ const BrasilEsportes = () => {
               desktopImage={promoBanner}
               tabletImage={promoBannerTablet}
               mobileImage={promoBannerMobile}
-              link="https://s.click.aliexpress.com/e/_c4cwqPUj"
+              link="https://s.click.aliexpress.com/e/_c3pBDtfj"
               alt="Esportes promo banner"
               categorySlug="brasil-esportes"
               bannerId="promo-01"
@@ -617,7 +617,7 @@ const BrasilEsportes = () => {
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <CategorySmallBanner
               image={smallBanner01}
-              link="https://s.click.aliexpress.com/e/_c3nLhzfZ"
+              link="https://s.click.aliexpress.com/e/_c2J2Cqp7"
               alt="Small banner 01"
               categorySlug="brasil-esportes"
               bannerId="small-01"
@@ -625,7 +625,7 @@ const BrasilEsportes = () => {
             />
             <CategorySmallBanner
               image={smallBanner02}
-              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600380422823"
               alt="Small banner 02"
               categorySlug="brasil-esportes"
               bannerId="small-02"
@@ -637,14 +637,14 @@ const BrasilEsportes = () => {
           <div className="md:hidden space-y-12">
             <CategorySmallBanner
               image={smallBanner01}
-              link="https://s.click.aliexpress.com/e/_c3nLhzfZ"
+              link="https://s.click.aliexpress.com/e/_c2J2Cqp7"
               alt="Small banner 01"
               categorySlug="brasil-esportes"
               bannerId="small-01-mobile"
             />
             <CategorySmallBanner
               image={smallBanner02}
-              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600380422823"
               alt="Small banner 02"
               categorySlug="brasil-esportes"
               bannerId="small-02-mobile"
