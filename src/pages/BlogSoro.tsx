@@ -6,8 +6,13 @@ const SORO_SCRIPT_SRC = "https://app.trysoro.com/api/embed/e1d039d0-38c0-4de3-95
 
 const BlogSoro = () => {
   useEffect(() => {
-    const existing = document.querySelector(`script[src="${SORO_SCRIPT_SRC}"]`);
-    if (existing) return;
+    // Remove any previous instance so the embed re-runs and re-populates #soro-blog
+    document
+      .querySelectorAll(`script[src="${SORO_SCRIPT_SRC}"]`)
+      .forEach((s) => s.remove());
+
+    const container = document.getElementById("soro-blog");
+    if (container) container.innerHTML = "";
 
     const script = document.createElement("script");
     script.src = SORO_SCRIPT_SRC;
@@ -15,8 +20,11 @@ const BlogSoro = () => {
     document.body.appendChild(script);
 
     return () => {
-      const container = document.getElementById("soro-blog");
-      if (container) container.innerHTML = "";
+      document
+        .querySelectorAll(`script[src="${SORO_SCRIPT_SRC}"]`)
+        .forEach((s) => s.remove());
+      const c = document.getElementById("soro-blog");
+      if (c) c.innerHTML = "";
     };
   }, []);
 
