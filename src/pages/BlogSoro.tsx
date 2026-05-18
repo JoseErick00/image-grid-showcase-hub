@@ -69,11 +69,11 @@ const BlogSoro = () => {
 
       <div className="max-w-[1200px] mx-auto px-4 py-8 md:py-12">
         <main>
-          <h2 className="font-omne-medium text-2xl md:text-3xl text-[#555555] mb-6">
+          <h2 className="font-omne-medium text-2xl md:text-5xl text-foreground text-center max-w-[80%] mx-auto mt-8 mb-16">
             Quer boas ideias de compras? Leia nossos artigos.
           </h2>
           <div id="soro-blog" />
-          <div className="flex justify-center mt-8 mb-4">
+          <div className="flex justify-center mt-16 mb-8">
             <Button asChild variant="brand" size="lg">
               <Link to="/">Encontrar produtos bacanas</Link>
             </Button>
