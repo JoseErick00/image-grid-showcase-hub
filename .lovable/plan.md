@@ -1,33 +1,27 @@
-# Plano: Adicionar Blog Soro AI ao Site
+## Plano de alteração na página Blog
 
-## Objetivo
-Integrar o embed do blog Soro AI (`<div id="soro-blog"></div>` + script) ao site iNeed Brasil, linkando-o no menu de navegação.
+### Contexto
+A página `BlogSoro` exibe o embed do Soro AI via script. É preciso adicionar:
+1. Um título acima do embed.
+2. Um botão CTA abaixo do embed com link para a home.
 
-## Local Escolhido: Dropdown "+ Lojas"
-A sua sugestão é excelente. O dropdown "+ Lojas" já agrupa conteúdo complementar (Premiação, Sobre as Lojas) e o blog se encaixa perfeitamente ali, logo após "Premiação iNeed". Isso mantém o menu principal limpo e organiza conteúdo editorial junto com as lojas e gamificação.
+### Alterações
 
-## O que será feito
+#### `src/pages/BlogSoro.tsx`
 
-### 1. Nova Página de Blog
-- Criar `src/pages/BlogSoro.tsx` — uma página dedicada que renderiza o embed do Soro AI.
-- O embed será carregado dinamicamente via `useEffect` para evitar carregar o script em todas as páginas.
-- SEO: título e meta descrição otimizados para indexação no Google.
+1. **Título antes do script**
+   - Inserir um `<h2>` logo acima do `<div id="soro-blog" />`.
+   - Texto: `Quer boas ideias de compras? Leia nossos artigos.`
+   - Estilo: alinhado à esquerda, tipografia `font-omne-medium`, cor `#555555`, espaçamento `mb-6`.
 
-### 2. Roteamento
-- Adicionar a rota `/blog` no App.tsx para o domínio Brasil.
-- Adicionar o alias `/brasil/blog` para compatibilidade com preview.
-- Adicionar a rota também em `BrasilRoutes.tsx` (componente auxiliar de rotas).
+2. **Botão após as notícias**
+   - Inserir um `<Link>` (do `react-router-dom`) logo abaixo do `<div id="soro-blog" />`.
+   - Texto do botão: `Encontrar produtos bacanas`
+   - Destino: página principal (`/`)
+   - Estilo: usar o componente `<Button>` com a variante `brand` já existente no projeto, centralizado, espaçamento `mt-8 mb-4`.
 
-### 3. Menu de Navegação
-- **Header.tsx — Desktop:** Adicionar link "Blog iNeed" no dropdown de "+ Lojas", posicionado logo após "Premiação iNeed".
-- **Header.tsx — Mobile:** Adicionar o mesmo link na seção expandida de "+ Lojas" no menu mobile.
-- Ajustar o array `lojasPages` e replicar a lógica de dropdown existente.
-
-### 4. Footer (opcional, se desejado)
-- Se quiser duplicar a descoberta, posso adicionar "Blog" nos links do footer também. Deixar isso a seu critério na hora da implementação.
-
-## Nota Técnica
-O script do Soro será injetado apenas quando o usuário acessar a página `/blog`. Isso evita qualquer impacto no carregamento das outras páginas do site.
-
-## Pós-Implementação
-Depois de publicado, o Googlebot descobrirá automaticamente a nova página `/blog` (já está no sitemap atualizado). Recomendo verificar no Search Console se a página foi indexada em 2–7 dias.
+### Critério de aceitação
+- O título aparece imediatamente antes do conteúdo do Soro AI.
+- O botão aparece imediatamente após o conteúdo do Soro AI.
+- O botão redireciona corretamente para a home do site.
+- Visual condizente com o restante da página (cores, fontes e espaçamentos já utilizados).
