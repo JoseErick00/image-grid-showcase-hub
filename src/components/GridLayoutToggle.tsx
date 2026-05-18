@@ -23,11 +23,13 @@ const GridLayoutToggle = () => {
         `${brasilPrefix}/premios`,    // Premiação
         `${brasilPrefix}/sobre`,      // Sobre
         `${brasilPrefix}/contato`,    // Contato
+        `${brasilPrefix}/blog`,       // Blog
       ]
     : [
         '/',                          // Main index
         '/about',                     // About
         '/contact',                   // Contact
+        '/blog',                      // Blog
       ];
 
   // Also check for exact match on root for Brasil domain
