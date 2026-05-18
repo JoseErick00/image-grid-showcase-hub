@@ -69,7 +69,15 @@ const BlogSoro = () => {
 
       <div className="max-w-[1200px] mx-auto px-4 py-8 md:py-12">
         <main>
+          <h2 className="font-omne-medium text-2xl md:text-3xl text-[#555555] mb-6">
+            Quer boas ideias de compras? Leia nossos artigos.
+          </h2>
           <div id="soro-blog" />
+          <div className="flex justify-center mt-8 mb-4">
+            <Button asChild variant="brand" size="lg">
+              <Link to="/">Encontrar produtos bacanas</Link>
+            </Button>
+          </div>
         </main>
 
         {/* Engagement Badges */}
