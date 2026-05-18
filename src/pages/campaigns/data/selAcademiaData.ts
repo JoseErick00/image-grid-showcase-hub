@@ -70,7 +70,7 @@ export const selAcademiaData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-academia/pdt_02.jpg",
           label: "Queremos! Muito linda, leiam os comments!",
-          link: "https://s.click.aliexpress.com/e/_c3fWfQMF",
+          link: "https://s.click.aliexpress.com/e/_c3S4WBaD",
           platform: "aliexpress",
           stamp: "Frete Grátis!",
         },
@@ -83,7 +83,7 @@ export const selAcademiaData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-academia/pdt_04.jpg",
           label: "Olha essa idéa de mochila!",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=11000027419598",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601201454143",
           platform: "alibaba",
         },
         {
@@ -131,7 +131,7 @@ export const selAcademiaData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-academia/pdt_10.jpg",
           label: "Achadinho da Alibaba, Bom, Bonito e Barato!",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601596569643",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601761583173",
           platform: "alibaba",
         },
         {
@@ -166,7 +166,7 @@ export const selAcademiaData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-academia/pdt_14.jpg",
           label: "Strap Monster LPO Musculação",
-          link: "https://s.shopee.com.br/5VNT45Lcy9",
+          link: "https://s.shopee.com.br/7fWjTMUWyP",
           platform: "shopee",
         },
         {

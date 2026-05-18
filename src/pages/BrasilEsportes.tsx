@@ -617,7 +617,7 @@ const BrasilEsportes = () => {
           <div className="hidden md:grid md:grid-cols-2 gap-6 justify-center">
             <CategorySmallBanner
               image={smallBanner01}
-              link="https://s.click.aliexpress.com/e/_c3nLhzfZ"
+              link="https://s.click.aliexpress.com/e/_c2J2Cqp7"
               alt="Small banner 01"
               categorySlug="brasil-esportes"
               bannerId="small-01"
@@ -625,7 +625,7 @@ const BrasilEsportes = () => {
             />
             <CategorySmallBanner
               image={smallBanner02}
-              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600380422823"
               alt="Small banner 02"
               categorySlug="brasil-esportes"
               bannerId="small-02"
@@ -637,14 +637,14 @@ const BrasilEsportes = () => {
           <div className="md:hidden space-y-12">
             <CategorySmallBanner
               image={smallBanner01}
-              link="https://s.click.aliexpress.com/e/_c3nLhzfZ"
+              link="https://s.click.aliexpress.com/e/_c2J2Cqp7"
               alt="Small banner 01"
               categorySlug="brasil-esportes"
               bannerId="small-01-mobile"
             />
             <CategorySmallBanner
               image={smallBanner02}
-              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601444062617"
+              link="https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600380422823"
               alt="Small banner 02"
               categorySlug="brasil-esportes"
               bannerId="small-02-mobile"
