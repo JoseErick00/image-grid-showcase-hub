@@ -58,7 +58,7 @@ export const selCorredoresData: CampaignConfig = {
         desktop: "/images/campaigns/sel-corredores/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-corredores/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-corredores/promo1-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601299219182",
+        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601679862249",
       },
       products: [
         {
@@ -70,7 +70,7 @@ export const selCorredoresData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corredores/pdt_02.jpg",
           label: "Kit 3 Shorts Masculino 2 Em 1 Academia & Corrida",
-          link: "https://s.shopee.com.br/10v5Dv4mBG",
+          link: "https://s.shopee.com.br/AKXUf64wTe",
           platform: "shopee",
         },
         {
@@ -186,14 +186,14 @@ export const selCorredoresData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-corredores/pdt_17.jpg",
           label: "BBB, Bom, Bonito e Barato!",
-          link: "https://s.click.aliexpress.com/e/_c4KC0NvR",
+          link: "https://s.click.aliexpress.com/e/_c3cCqE9j",
           platform: "aliexpress",
           stamp: "Frete Grátis!",
         },
         {
           image: "/images/campaigns/sel-corredores/pdt_18.jpg",
-          label: "Anel inteligente multi-esporte. Baratinho!",
-          link: "https://s.click.aliexpress.com/e/_c40latap",
+          label: "Anel inteligente multi-esporte! Baratinho!",
+          link: "https://s.click.aliexpress.com/e/_c4o9VdiZ",
           platform: "aliexpress",
           stamp: "Frete Grátis!",
         },

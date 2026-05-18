@@ -58,7 +58,7 @@ export const selTimeCampoData: CampaignConfig = {
         desktop: "/images/campaigns/sel-time-campo/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-time-campo/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-time-campo/promo1-mobile.jpg",
-        link: "https://s.click.aliexpress.com/e/_c4L2ZDJr",
+        link: "https://s.click.aliexpress.com/e/_c2IK3qK5",
       },
       products: [
         {

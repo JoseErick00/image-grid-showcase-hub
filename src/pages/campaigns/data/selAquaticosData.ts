@@ -58,7 +58,7 @@ export const selAquaticosData: CampaignConfig = {
         desktop: "/images/campaigns/sel-aquaticos/promo1-desktop.jpg",
         tablet: "/images/campaigns/sel-aquaticos/promo1-tablet.jpg",
         mobile: "/images/campaigns/sel-aquaticos/promo1-mobile.jpg",
-        link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601442798359",
+        link: "https://www.alibaba.com/product-detail/Stermay-M1-Two-Way-Electric-Underwater_1601492751134.html",
       },
       products: [
         {
@@ -89,7 +89,7 @@ export const selAquaticosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-aquaticos/pdt_05.jpg",
           label: "Bonito, barato e à prova d'água!",
-          link: "https://s.click.aliexpress.com/e/_c4leUqyz",
+          link: "https://s.click.aliexpress.com/e/_c2J6MqXJ",
           platform: "aliexpress",
           stamp: "Frete Grátis!",
         },
@@ -137,7 +137,7 @@ export const selAquaticosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-aquaticos/pdt_11.jpg",
           label: "Essas capas de prancha são muito bacanas!",
-          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600322791231",
+          link: "https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1601486260833",
           platform: "alibaba",
         },
         {
@@ -185,7 +185,7 @@ export const selAquaticosData: CampaignConfig = {
         {
           image: "/images/campaigns/sel-aquaticos/pdt_17.jpg",
           label: "ARENA Óculos de natação de alta definição.",
-          link: "https://s.click.aliexpress.com/e/_c4OCMiRj",
+          link: "https://s.click.aliexpress.com/e/_c2v5w9tR",
           platform: "aliexpress",
           stamp: "Frete Grátis!",
         },
