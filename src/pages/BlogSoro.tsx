@@ -56,7 +56,7 @@ const BlogSoro = () => {
       />
 
       {/* Hero Banner - Same style as store/campaign pages */}
-      <div className="w-full bg-gray-50">
+      <div className="w-full bg-[#101010]">
         <picture>
           <source media="(min-width: 1024px)" srcSet="/blog_hero_desk.jpg" />
           <source media="(min-width: 640px)" srcSet="/blog_hero_tablet.jpg" />
