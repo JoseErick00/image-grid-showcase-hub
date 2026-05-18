@@ -1,33 +1,33 @@
-## Conectar iNeed Brasil ao Google Search Console
+# Plano: Adicionar Blog Soro AI ao Site
 
-Vou conectar seu site `https://www.ineedbrasil.com.br/` ao Google Search Console (GSC) usando o conector oficial da Lovable. Isso libera relatórios de indexação, performance de busca, cobertura, sitemap e Core Web Vitals direto da sua conta Google.
+## Objetivo
+Integrar o embed do blog Soro AI (`<div id="soro-blog"></div>` + script) ao site iNeed Brasil, linkando-o no menu de navegação.
 
-### Etapas
+## Local Escolhido: Dropdown "+ Lojas"
+A sua sugestão é excelente. O dropdown "+ Lojas" já agrupa conteúdo complementar (Premiação, Sobre as Lojas) e o blog se encaixa perfeitamente ali, logo após "Premiação iNeed". Isso mantém o menu principal limpo e organiza conteúdo editorial junto com as lojas e gamificação.
 
-1. **Conectar a conta Google** (conector `google_search_console`)
-   - Você será solicitado a autorizar sua conta Google via OAuth.
-   - Nenhuma chave manual é necessária.
+## O que será feito
 
-2. **Verificar a propriedade do domínio (método META tag)**
-   - Solicito um token de verificação ao Google para `https://www.ineedbrasil.com.br/`.
-   - Insiro a `<meta name="google-site-verification" content="...">` no `<head>` do `index.html`.
-   - Após o deploy, peço ao Google para verificar — a meta tag precisa estar viva na URL raiz.
+### 1. Nova Página de Blog
+- Criar `src/pages/BlogSoro.tsx` — uma página dedicada que renderiza o embed do Soro AI.
+- O embed será carregado dinamicamente via `useEffect` para evitar carregar o script em todas as páginas.
+- SEO: título e meta descrição otimizados para indexação no Google.
 
-3. **Adicionar a propriedade ao Search Console**
-   - Após verificação bem-sucedida, registro `https://www.ineedbrasil.com.br/` como propriedade na sua conta GSC.
+### 2. Roteamento
+- Adicionar a rota `/blog` no App.tsx para o domínio Brasil.
+- Adicionar o alias `/brasil/blog` para compatibilidade com preview.
+- Adicionar a rota também em `BrasilRoutes.tsx` (componente auxiliar de rotas).
 
-4. **Submeter o sitemap**
-   - Envio `https://www.ineedbrasil.com.br/sitemap.xml` (já existente, 33 URLs) ao GSC para acelerar a descoberta de páginas.
+### 3. Menu de Navegação
+- **Header.tsx — Desktop:** Adicionar link "Blog iNeed" no dropdown de "+ Lojas", posicionado logo após "Premiação iNeed".
+- **Header.tsx — Mobile:** Adicionar o mesmo link na seção expandida de "+ Lojas" no menu mobile.
+- Ajustar o array `lojasPages` e replicar a lógica de dropdown existente.
 
-5. **Confirmar funcionamento**
-   - Listo as propriedades verificadas para confirmar que o site aparece.
-   - Te aviso que os primeiros dados de Search Performance aparecem em ~24-48h (é o GSC, não a Lovable).
+### 4. Footer (opcional, se desejado)
+- Se quiser duplicar a descoberta, posso adicionar "Blog" nos links do footer também. Deixar isso a seu critério na hora da implementação.
 
-### Pré-requisitos
+## Nota Técnica
+O script do Soro será injetado apenas quando o usuário acessar a página `/blog`. Isso evita qualquer impacto no carregamento das outras páginas do site.
 
-- **Deploy publicado:** a meta tag precisa estar live em `https://www.ineedbrasil.com.br/` antes da verificação. Se o deploy atual estiver desatualizado, fazemos o publish antes do passo 3.
-- **Conta Google:** a mesma que você quer usar para gerenciar o GSC.
-
-### Observação sobre o domínio USA
-
-Este plano cobre apenas o domínio brasileiro. Se quiser, depois repetimos o fluxo para `https://www.ineedstores.com/` (é o mesmo processo, separadamente).
+## Pós-Implementação
+Depois de publicado, o Googlebot descobrirá automaticamente a nova página `/blog` (já está no sitemap atualizado). Recomendo verificar no Search Console se a página foi indexada em 2–7 dias.

@@ -53,6 +53,7 @@ const Header = () => {
     { name: "Amazon", href: `${brasilPrefix}/lojas/amazon`, color: "#FF9900" },
     { name: "Alibaba", href: `${brasilPrefix}/lojas/alibaba`, color: "#FF6A00" },
     { name: "Premiação iNeed", href: `${brasilPrefix}/premios`, color: "" },
+    { name: "Blog iNeed", href: `${brasilPrefix}/blog`, color: "#444444" },
     { name: "Sobre as Lojas", href: `${brasilPrefix}/sobre-lojas`, color: "#666666" },
   ];
 
