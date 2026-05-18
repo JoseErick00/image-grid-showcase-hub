@@ -55,17 +55,20 @@ const BlogSoro = () => {
         keywords="blog iNeed, achados, tendências, compras online, Shopee, AliExpress, Amazon, Alibaba, dicas"
       />
 
-      {/* Responsive Hero Banner */}
-      <picture>
-        <source media="(min-width: 1024px)" srcSet="/blog_hero_desk.jpg" />
-        <source media="(min-width: 640px)" srcSet="/blog_hero_tablet.jpg" />
-        <img
-          src="/blog_hero_mobile.jpg"
-          alt="Blog iNeed - i.Blog ineed Brasil"
-          className="w-full h-auto block"
-          fetchPriority="high"
-        />
-      </picture>
+      {/* Hero Banner - Same style as store/campaign pages */}
+      <div className="w-full bg-gray-50">
+        <picture>
+          <source media="(min-width: 1024px)" srcSet="/blog_hero_desk.jpg" />
+          <source media="(min-width: 640px)" srcSet="/blog_hero_tablet.jpg" />
+          <img
+            src="/blog_hero_mobile.jpg"
+            alt="Blog iNeed - i.Blog ineed Brasil"
+            className="w-full h-auto max-w-[1200px] mx-auto object-cover"
+            style={{ maxHeight: '250px' }}
+            fetchPriority="high"
+          />
+        </picture>
+      </div>
 
       <div className="max-w-[1200px] mx-auto px-4 py-8 md:py-12">
         <main>
