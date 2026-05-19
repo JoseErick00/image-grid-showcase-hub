@@ -65,7 +65,11 @@ Deno.serve(async (req) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Parse request body
-    let requestBody: { action?: string; days?: number | null } = {};
+    let requestBody: {
+      action?: string;
+      days?: number | null;
+      range?: { start: string; end: string };
+    } = {};
     try {
       requestBody = await req.json();
     } catch {
@@ -97,32 +101,40 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Calculate date filter if days is provided
+    // Calculate date filter — explicit range takes precedence over "last N days"
     const days = requestBody?.days;
-    let dateFilter: string | null = null;
-    if (days && typeof days === 'number') {
+    const range = requestBody?.range;
+    let startFilter: string | null = null;
+    let endFilter: string | null = null;
+    if (range?.start && range?.end) {
+      startFilter = range.start;
+      endFilter = range.end;
+    } else if (days && typeof days === 'number') {
       const filterDate = new Date();
       filterDate.setDate(filterDate.getDate() - days);
-      dateFilter = filterDate.toISOString();
+      startFilter = filterDate.toISOString();
     }
+    const applyRange = <T extends { gte: Function; lt: Function }>(q: T): T => {
+      let out: any = q;
+      if (startFilter) out = out.gte("created_at", startFilter);
+      if (endFilter) out = out.lt("created_at", endFilter);
+      return out;
+    };
 
     // Fetch page view metrics
-    let pageViewsCountQuery = supabase
+    let pageViewsCountQuery: any = supabase
       .from("page_views")
       .select("*", { count: "exact", head: true });
-    if (dateFilter) {
-      pageViewsCountQuery = pageViewsCountQuery.gte("created_at", dateFilter);
-    }
+    pageViewsCountQuery = applyRange(pageViewsCountQuery);
     const { count: totalPageViews } = await pageViewsCountQuery;
 
-    let visitorsQuery = supabase
+    let visitorsQuery: any = supabase
       .from("page_views")
       .select("visitor_id");
-    if (dateFilter) {
-      visitorsQuery = visitorsQuery.gte("created_at", dateFilter);
-    }
+    visitorsQuery = applyRange(visitorsQuery);
     const { data: visitorsData } = await visitorsQuery;
-    const uniqueVisitors = new Set(visitorsData?.map(v => v.visitor_id)).size;
+    const uniqueVisitors = new Set(visitorsData?.map((v: any) => v.visitor_id)).size;
+
 
     // Fetch all auth users to get emails
     const { data: authUsersData } = await supabase.auth.admin.listUsers();
