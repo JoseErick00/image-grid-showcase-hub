@@ -116,21 +116,34 @@ const AdminMetricsContent = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<PeriodOption>("30");
 
   useEffect(() => {
+    // Compare mode handles its own fetch; we still load base metrics for the rest of the page
     fetchMetrics();
     fetchAffiliateMetrics();
   }, [selectedPeriod]);
 
+  const buildBody = () => {
+    if (selectedPeriod === "yesterday") {
+      return { range: spDayBounds(-1) };
+    }
+    if (selectedPeriod === "1") {
+      return { range: spDayBounds(0) };
+    }
+    if (selectedPeriod === "today_vs_yesterday") {
+      // Show "today" data underneath the comparison cards
+      return { range: spDayBounds(0) };
+    }
+    if (selectedPeriod === "all") return { days: null };
+    return { days: parseInt(selectedPeriod) };
+  };
+
   const fetchMetrics = async () => {
     try {
       setLoading(true);
-      const days = selectedPeriod === "all" ? null : parseInt(selectedPeriod);
       const { data, error } = await supabase.functions.invoke("admin-metrics", {
-        body: { days }
+        body: buildBody(),
       });
-      
       if (error) throw error;
       if (!data.success) throw new Error(data.error);
-      
       setMetrics(data.data);
     } catch (err: any) {
       console.error("Error fetching metrics:", err);
@@ -143,14 +156,11 @@ const AdminMetricsContent = () => {
   const fetchAffiliateMetrics = async () => {
     try {
       setAffiliateLoading(true);
-      const days = selectedPeriod === "all" ? null : parseInt(selectedPeriod);
       const { data, error } = await supabase.functions.invoke("affiliate-metrics", {
-        body: { days }
+        body: buildBody(),
       });
-      
       if (error) throw error;
       if (!data.success) throw new Error(data.error);
-      
       setAffiliateMetrics(data.data);
     } catch (err: any) {
       console.error("Error fetching affiliate metrics:", err);
@@ -158,6 +168,7 @@ const AdminMetricsContent = () => {
       setAffiliateLoading(false);
     }
   };
+
 
   const getPeriodLabel = () => {
     const option = PERIOD_OPTIONS.find(o => o.value === selectedPeriod);
