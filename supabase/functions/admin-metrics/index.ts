@@ -149,8 +149,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      usersQuery = usersQuery.gte("created_at", dateFilter);
+    if (startFilter) {
+      usersQuery = usersQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
     }
     
     const { data: users, error: usersError } = await usersQuery;
@@ -162,8 +162,8 @@ Deno.serve(async (req) => {
       .from("user_favorites")
       .select("*");
     
-    if (dateFilter) {
-      favoritesQuery = favoritesQuery.gte("created_at", dateFilter);
+    if (startFilter) {
+      favoritesQuery = favoritesQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
     }
     
     const { data: favorites, error: favoritesError } = await favoritesQuery;
@@ -176,8 +176,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      transactionsQuery = transactionsQuery.gte("created_at", dateFilter);
+    if (startFilter) {
+      transactionsQuery = transactionsQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
     }
     
     const { data: transactions, error: transactionsError } = await transactionsQuery;
@@ -190,8 +190,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      referralsQuery = referralsQuery.gte("created_at", dateFilter);
+    if (startFilter) {
+      referralsQuery = referralsQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
     }
     
     const { data: referrals, error: referralsError } = await referralsQuery;
@@ -204,8 +204,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      redemptionsQuery = redemptionsQuery.gte("created_at", dateFilter);
+    if (startFilter) {
+      redemptionsQuery = redemptionsQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
     }
     
     const { data: redemptions, error: redemptionsError } = await redemptionsQuery;
