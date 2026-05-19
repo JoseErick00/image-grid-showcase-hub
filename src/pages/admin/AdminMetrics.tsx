@@ -11,18 +11,35 @@ import LovableStyleMetricsSection from "@/components/admin/LovableStyleMetricsSe
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
 import GoogleSearchConsoleSection from "@/components/admin/GoogleSearchConsoleSection";
+import CompareTodayYesterdaySection from "@/components/admin/CompareTodayYesterdaySection";
+import AffiliateClicksDetailedSection from "@/components/admin/AffiliateClicksDetailedSection";
 import AdminGuard from "@/components/admin/AdminGuard";
+import { Badge as UIBadge } from "@/components/ui/badge";
 
-type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
+type PeriodOption = "1" | "yesterday" | "today_vs_yesterday" | "7" | "30" | "90" | "365" | "all";
 
 const PERIOD_OPTIONS: { value: PeriodOption; label: string }[] = [
   { value: "1", label: "Hoje" },
+  { value: "yesterday", label: "Ontem" },
+  { value: "today_vs_yesterday", label: "Hoje vs Ontem" },
   { value: "7", label: "Últimos 7 dias" },
   { value: "30", label: "Últimos 30 dias" },
   { value: "90", label: "Últimos 90 dias" },
   { value: "365", label: "Último ano" },
   { value: "all", label: "Todo o período" },
 ];
+
+// São Paulo (UTC-3) day boundaries
+function spDayBounds(offsetDays: number) {
+  const now = new Date();
+  const spNow = new Date(now.getTime() - 3 * 3600 * 1000);
+  spNow.setUTCHours(0, 0, 0, 0);
+  spNow.setUTCDate(spNow.getUTCDate() + offsetDays);
+  const start = new Date(spNow.getTime() + 3 * 3600 * 1000);
+  const end = new Date(start.getTime() + 24 * 3600 * 1000);
+  return { start: start.toISOString(), end: end.toISOString() };
+}
+
 
 interface MetricsData {
   summary: {
