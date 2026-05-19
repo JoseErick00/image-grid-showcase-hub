@@ -149,9 +149,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (startFilter) {
-      usersQuery = usersQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
-    }
+    if (startFilter) usersQuery = usersQuery.gte("created_at", startFilter);
+    if (endFilter) usersQuery = usersQuery.lt("created_at", endFilter);
     
     const { data: users, error: usersError } = await usersQuery;
 
@@ -162,9 +161,8 @@ Deno.serve(async (req) => {
       .from("user_favorites")
       .select("*");
     
-    if (startFilter) {
-      favoritesQuery = favoritesQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
-    }
+    if (startFilter) favoritesQuery = favoritesQuery.gte("created_at", startFilter);
+    if (endFilter) favoritesQuery = favoritesQuery.lt("created_at", endFilter);
     
     const { data: favorites, error: favoritesError } = await favoritesQuery;
 
@@ -176,9 +174,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (startFilter) {
-      transactionsQuery = transactionsQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
-    }
+    if (startFilter) transactionsQuery = transactionsQuery.gte("created_at", startFilter);
+    if (endFilter) transactionsQuery = transactionsQuery.lt("created_at", endFilter);
     
     const { data: transactions, error: transactionsError } = await transactionsQuery;
 
@@ -190,9 +187,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (startFilter) {
-      referralsQuery = referralsQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
-    }
+    if (startFilter) referralsQuery = referralsQuery.gte("created_at", startFilter);
+    if (endFilter) referralsQuery = referralsQuery.lt("created_at", endFilter);
     
     const { data: referrals, error: referralsError } = await referralsQuery;
 
@@ -204,9 +200,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (startFilter) {
-      redemptionsQuery = redemptionsQuery.gte("created_at", startFilter); if (endFilter) /*RANGE*/;
-    }
+    if (startFilter) redemptionsQuery = redemptionsQuery.gte("created_at", startFilter);
+    if (endFilter) redemptionsQuery = redemptionsQuery.lt("created_at", endFilter);
     
     const { data: redemptions, error: redemptionsError } = await redemptionsQuery;
 
