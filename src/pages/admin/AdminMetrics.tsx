@@ -11,18 +11,35 @@ import LovableStyleMetricsSection from "@/components/admin/LovableStyleMetricsSe
 import PwaMetricsSection from "@/components/admin/PwaMetricsSection";
 import GeoMetricsSection from "@/components/admin/GeoMetricsSection";
 import GoogleSearchConsoleSection from "@/components/admin/GoogleSearchConsoleSection";
+import CompareTodayYesterdaySection from "@/components/admin/CompareTodayYesterdaySection";
+import AffiliateClicksDetailedSection from "@/components/admin/AffiliateClicksDetailedSection";
 import AdminGuard from "@/components/admin/AdminGuard";
+import { Badge as UIBadge } from "@/components/ui/badge";
 
-type PeriodOption = "1" | "7" | "30" | "90" | "365" | "all";
+type PeriodOption = "1" | "yesterday" | "today_vs_yesterday" | "7" | "30" | "90" | "365" | "all";
 
 const PERIOD_OPTIONS: { value: PeriodOption; label: string }[] = [
   { value: "1", label: "Hoje" },
+  { value: "yesterday", label: "Ontem" },
+  { value: "today_vs_yesterday", label: "Hoje vs Ontem" },
   { value: "7", label: "Últimos 7 dias" },
   { value: "30", label: "Últimos 30 dias" },
   { value: "90", label: "Últimos 90 dias" },
   { value: "365", label: "Último ano" },
   { value: "all", label: "Todo o período" },
 ];
+
+// São Paulo (UTC-3) day boundaries
+function spDayBounds(offsetDays: number) {
+  const now = new Date();
+  const spNow = new Date(now.getTime() - 3 * 3600 * 1000);
+  spNow.setUTCHours(0, 0, 0, 0);
+  spNow.setUTCDate(spNow.getUTCDate() + offsetDays);
+  const start = new Date(spNow.getTime() + 3 * 3600 * 1000);
+  const end = new Date(start.getTime() + 24 * 3600 * 1000);
+  return { start: start.toISOString(), end: end.toISOString() };
+}
+
 
 interface MetricsData {
   summary: {
@@ -99,21 +116,34 @@ const AdminMetricsContent = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<PeriodOption>("30");
 
   useEffect(() => {
+    // Compare mode handles its own fetch; we still load base metrics for the rest of the page
     fetchMetrics();
     fetchAffiliateMetrics();
   }, [selectedPeriod]);
 
+  const buildBody = () => {
+    if (selectedPeriod === "yesterday") {
+      return { range: spDayBounds(-1) };
+    }
+    if (selectedPeriod === "1") {
+      return { range: spDayBounds(0) };
+    }
+    if (selectedPeriod === "today_vs_yesterday") {
+      // Show "today" data underneath the comparison cards
+      return { range: spDayBounds(0) };
+    }
+    if (selectedPeriod === "all") return { days: null };
+    return { days: parseInt(selectedPeriod) };
+  };
+
   const fetchMetrics = async () => {
     try {
       setLoading(true);
-      const days = selectedPeriod === "all" ? null : parseInt(selectedPeriod);
       const { data, error } = await supabase.functions.invoke("admin-metrics", {
-        body: { days }
+        body: buildBody(),
       });
-      
       if (error) throw error;
       if (!data.success) throw new Error(data.error);
-      
       setMetrics(data.data);
     } catch (err: any) {
       console.error("Error fetching metrics:", err);
@@ -126,14 +156,11 @@ const AdminMetricsContent = () => {
   const fetchAffiliateMetrics = async () => {
     try {
       setAffiliateLoading(true);
-      const days = selectedPeriod === "all" ? null : parseInt(selectedPeriod);
       const { data, error } = await supabase.functions.invoke("affiliate-metrics", {
-        body: { days }
+        body: buildBody(),
       });
-      
       if (error) throw error;
       if (!data.success) throw new Error(data.error);
-      
       setAffiliateMetrics(data.data);
     } catch (err: any) {
       console.error("Error fetching affiliate metrics:", err);
@@ -141,6 +168,7 @@ const AdminMetricsContent = () => {
       setAffiliateLoading(false);
     }
   };
+
 
   const getPeriodLabel = () => {
     const option = PERIOD_OPTIONS.find(o => o.value === selectedPeriod);
@@ -189,13 +217,19 @@ const AdminMetricsContent = () => {
     <div className="min-h-screen bg-gray-100 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header with period selector */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">📊 Métricas do Projeto</h1>
-          
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800">📊 Métricas do Projeto</h1>
+            <p className="text-xs text-gray-500 mt-1">
+              <UIBadge variant="secondary" className="mr-2">Tempo real (Supabase)</UIBadge>
+              Cliques, page views e visitantes vêm direto do nosso banco — independem do Google Analytics.
+              A aba <strong>Google Search</strong> usa a API do Google (latência de 24-48h).
+            </p>
+          </div>
           <div className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-gray-500" />
             <Select value={selectedPeriod} onValueChange={(value: PeriodOption) => setSelectedPeriod(value)}>
-              <SelectTrigger className="w-[180px] bg-white">
+              <SelectTrigger className="w-[200px] bg-white">
                 <SelectValue placeholder="Selecione o período" />
               </SelectTrigger>
               <SelectContent>
@@ -209,7 +243,15 @@ const AdminMetricsContent = () => {
           </div>
         </div>
 
+        {/* Comparison section — only when in compare mode */}
+        {selectedPeriod === "today_vs_yesterday" && (
+          <div className="mb-8">
+            <CompareTodayYesterdaySection />
+          </div>
+        )}
+
         {/* Summary Cards */}
+
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -390,17 +432,21 @@ const AdminMetricsContent = () => {
             )}
           </TabsContent>
 
-          <TabsContent value="affiliates">
+          <TabsContent value="affiliates" className="space-y-6">
             {affiliateLoading ? (
               <div className="text-center py-8">Carregando métricas de afiliados...</div>
             ) : affiliateMetrics ? (
-              <AffiliateMetricsSection metrics={affiliateMetrics} />
+              <>
+                <AffiliateMetricsSection metrics={affiliateMetrics} />
+                <AffiliateClicksDetailedSection metrics={affiliateMetrics} />
+              </>
             ) : (
               <div className="text-center py-8 text-gray-500">
                 Nenhum dado de afiliados disponível ainda.
               </div>
             )}
           </TabsContent>
+
 
           <TabsContent value="geography">
             {affiliateLoading ? (

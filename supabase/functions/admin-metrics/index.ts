@@ -65,7 +65,11 @@ Deno.serve(async (req) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Parse request body
-    let requestBody: { action?: string; days?: number | null } = {};
+    let requestBody: {
+      action?: string;
+      days?: number | null;
+      range?: { start: string; end: string };
+    } = {};
     try {
       requestBody = await req.json();
     } catch {
@@ -97,32 +101,40 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Calculate date filter if days is provided
+    // Calculate date filter — explicit range takes precedence over "last N days"
     const days = requestBody?.days;
-    let dateFilter: string | null = null;
-    if (days && typeof days === 'number') {
+    const range = requestBody?.range;
+    let startFilter: string | null = null;
+    let endFilter: string | null = null;
+    if (range?.start && range?.end) {
+      startFilter = range.start;
+      endFilter = range.end;
+    } else if (days && typeof days === 'number') {
       const filterDate = new Date();
       filterDate.setDate(filterDate.getDate() - days);
-      dateFilter = filterDate.toISOString();
+      startFilter = filterDate.toISOString();
     }
+    const applyRange = <T extends { gte: Function; lt: Function }>(q: T): T => {
+      let out: any = q;
+      if (startFilter) out = out.gte("created_at", startFilter);
+      if (endFilter) out = out.lt("created_at", endFilter);
+      return out;
+    };
 
     // Fetch page view metrics
-    let pageViewsCountQuery = supabase
+    let pageViewsCountQuery: any = supabase
       .from("page_views")
       .select("*", { count: "exact", head: true });
-    if (dateFilter) {
-      pageViewsCountQuery = pageViewsCountQuery.gte("created_at", dateFilter);
-    }
+    pageViewsCountQuery = applyRange(pageViewsCountQuery);
     const { count: totalPageViews } = await pageViewsCountQuery;
 
-    let visitorsQuery = supabase
+    let visitorsQuery: any = supabase
       .from("page_views")
       .select("visitor_id");
-    if (dateFilter) {
-      visitorsQuery = visitorsQuery.gte("created_at", dateFilter);
-    }
+    visitorsQuery = applyRange(visitorsQuery);
     const { data: visitorsData } = await visitorsQuery;
-    const uniqueVisitors = new Set(visitorsData?.map(v => v.visitor_id)).size;
+    const uniqueVisitors = new Set(visitorsData?.map((v: any) => v.visitor_id)).size;
+
 
     // Fetch all auth users to get emails
     const { data: authUsersData } = await supabase.auth.admin.listUsers();
@@ -137,9 +149,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      usersQuery = usersQuery.gte("created_at", dateFilter);
-    }
+    if (startFilter) usersQuery = usersQuery.gte("created_at", startFilter);
+    if (endFilter) usersQuery = usersQuery.lt("created_at", endFilter);
     
     const { data: users, error: usersError } = await usersQuery;
 
@@ -150,9 +161,8 @@ Deno.serve(async (req) => {
       .from("user_favorites")
       .select("*");
     
-    if (dateFilter) {
-      favoritesQuery = favoritesQuery.gte("created_at", dateFilter);
-    }
+    if (startFilter) favoritesQuery = favoritesQuery.gte("created_at", startFilter);
+    if (endFilter) favoritesQuery = favoritesQuery.lt("created_at", endFilter);
     
     const { data: favorites, error: favoritesError } = await favoritesQuery;
 
@@ -164,9 +174,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      transactionsQuery = transactionsQuery.gte("created_at", dateFilter);
-    }
+    if (startFilter) transactionsQuery = transactionsQuery.gte("created_at", startFilter);
+    if (endFilter) transactionsQuery = transactionsQuery.lt("created_at", endFilter);
     
     const { data: transactions, error: transactionsError } = await transactionsQuery;
 
@@ -178,9 +187,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      referralsQuery = referralsQuery.gte("created_at", dateFilter);
-    }
+    if (startFilter) referralsQuery = referralsQuery.gte("created_at", startFilter);
+    if (endFilter) referralsQuery = referralsQuery.lt("created_at", endFilter);
     
     const { data: referrals, error: referralsError } = await referralsQuery;
 
@@ -192,9 +200,8 @@ Deno.serve(async (req) => {
       .select("*")
       .order("created_at", { ascending: false });
     
-    if (dateFilter) {
-      redemptionsQuery = redemptionsQuery.gte("created_at", dateFilter);
-    }
+    if (startFilter) redemptionsQuery = redemptionsQuery.gte("created_at", startFilter);
+    if (endFilter) redemptionsQuery = redemptionsQuery.lt("created_at", endFilter);
     
     const { data: redemptions, error: redemptionsError } = await redemptionsQuery;
 
