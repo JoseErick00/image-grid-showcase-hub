@@ -88,15 +88,19 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card title="Visitantes que chegaram com utm_source na URL. Não representa conversão de venda.">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Conversões (UTM)</CardTitle>
+            <CardTitle className="text-sm font-medium text-gray-600">Visitas com UTM</CardTitle>
             <ArrowLeftRight className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.totalConversions.toLocaleString()}</div>
+            <div className="text-[10px] text-muted-foreground mt-1">
+              Visitantes com utm_source na URL
+            </div>
           </CardContent>
         </Card>
+
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
