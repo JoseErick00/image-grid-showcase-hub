@@ -124,17 +124,23 @@ const LovableStyleMetricsSection = ({ metrics, period }: Props) => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card title="Visitantes que chegaram com utm_source na URL. Não representa conversão de venda.">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Conversões</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">
+              Visitas com UTM
+            </CardTitle>
             <TrendingUp className="h-4 w-4 text-primary" />
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold tabular-nums">
               {metrics.totalConversions.toLocaleString()}
             </div>
+            <div className="text-[10px] text-muted-foreground mt-1">
+              Visitantes com utm_source na URL
+            </div>
           </CardContent>
         </Card>
+
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
