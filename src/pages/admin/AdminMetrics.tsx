@@ -432,17 +432,21 @@ const AdminMetricsContent = () => {
             )}
           </TabsContent>
 
-          <TabsContent value="affiliates">
+          <TabsContent value="affiliates" className="space-y-6">
             {affiliateLoading ? (
               <div className="text-center py-8">Carregando métricas de afiliados...</div>
             ) : affiliateMetrics ? (
-              <AffiliateMetricsSection metrics={affiliateMetrics} />
+              <>
+                <AffiliateMetricsSection metrics={affiliateMetrics} />
+                <AffiliateClicksDetailedSection metrics={affiliateMetrics} />
+              </>
             ) : (
               <div className="text-center py-8 text-gray-500">
                 Nenhum dado de afiliados disponível ainda.
               </div>
             )}
           </TabsContent>
+
 
           <TabsContent value="geography">
             {affiliateLoading ? (
