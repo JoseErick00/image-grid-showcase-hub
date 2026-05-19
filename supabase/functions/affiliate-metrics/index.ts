@@ -81,21 +81,26 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
 
-    // Parse request body for days filter
-    let requestBody: { days?: number | null } = {};
+    // Parse request body for days filter / explicit range
+    let requestBody: { days?: number | null; range?: { start: string; end: string } } = {};
     try {
       requestBody = await req.json();
     } catch {
       // No body or invalid JSON - use default
     }
 
-    // Calculate date filter
+    // Calculate date filter — either explicit range or last N days
     const days = requestBody?.days;
-    let dateFilter: string | null = null;
-    if (days && typeof days === 'number') {
+    const range = requestBody?.range;
+    let startFilter: string | null = null;
+    let endFilter: string | null = null;
+    if (range?.start && range?.end) {
+      startFilter = range.start;
+      endFilter = range.end;
+    } else if (days && typeof days === 'number') {
       const filterDate = new Date();
       filterDate.setDate(filterDate.getDate() - days);
-      dateFilter = filterDate.toISOString();
+      startFilter = filterDate.toISOString();
     }
 
     // Fetch all clicks with optional date filter
@@ -103,13 +108,10 @@ serve(async (req) => {
       .from("affiliate_clicks")
       .select("*")
       .order("created_at", { ascending: false });
-    
-    if (dateFilter) {
-      clicksQuery = clicksQuery.gte("created_at", dateFilter);
-    }
-    
-    const { data: allClicks, error: clicksError } = await clicksQuery;
+    if (startFilter) clicksQuery = clicksQuery.gte("created_at", startFilter);
+    if (endFilter) clicksQuery = clicksQuery.lt("created_at", endFilter);
 
+    const { data: allClicks, error: clicksError } = await clicksQuery;
     if (clicksError) throw clicksError;
 
     // Fetch all conversions with optional date filter
@@ -117,13 +119,10 @@ serve(async (req) => {
       .from("affiliate_conversions")
       .select("*")
       .order("created_at", { ascending: false });
-    
-    if (dateFilter) {
-      conversionsQuery = conversionsQuery.gte("created_at", dateFilter);
-    }
-    
-    const { data: allConversions, error: conversionsError } = await conversionsQuery;
+    if (startFilter) conversionsQuery = conversionsQuery.gte("created_at", startFilter);
+    if (endFilter) conversionsQuery = conversionsQuery.lt("created_at", endFilter);
 
+    const { data: allConversions, error: conversionsError } = await conversionsQuery;
     if (conversionsError) throw conversionsError;
 
     // Calculate clicks by platform
@@ -140,21 +139,68 @@ serve(async (req) => {
       clicksByType[type] = (clicksByType[type] || 0) + 1;
     });
 
-    // Calculate clicks by day (based on selected period or last 7 days)
-    const chartDays = days && days <= 30 ? days : 7;
-    const clicksByDay: Array<{ date: string; clicks: number }> = [];
-    for (let i = chartDays - 1; i >= 0; i--) {
-      const date = new Date();
-      date.setDate(date.getDate() - i);
-      const dateStr = date.toISOString().split("T")[0];
-      
-      const dayClicks = (allClicks || []).filter((click) => {
-        const clickDate = new Date(click.created_at).toISOString().split("T")[0];
-        return clickDate === dateStr;
-      }).length;
-      
-      clicksByDay.push({ date: dateStr, clicks: dayClicks });
+    // Determine span of the daily chart based on the actual selected period
+    let chartDays: number;
+    if (range?.start && range?.end) {
+      chartDays = Math.max(
+        1,
+        Math.ceil(
+          (new Date(range.end).getTime() - new Date(range.start).getTime()) / 86400000
+        )
+      );
+    } else if (days && typeof days === "number") {
+      chartDays = days;
+    } else {
+      // "all" — span from oldest click to today
+      const oldest = (allClicks || []).reduce<string | null>((min, c) => {
+        return !min || c.created_at < min ? c.created_at : min;
+      }, null);
+      chartDays = oldest
+        ? Math.max(
+            1,
+            Math.ceil((Date.now() - new Date(oldest).getTime()) / 86400000) + 1
+          )
+        : 7;
     }
+    chartDays = Math.min(chartDays, 365); // hard cap
+
+    // Build per-day buckets (and per-day per-platform)
+    const platformSet = new Set<string>();
+    (allClicks || []).forEach((c) => platformSet.add(c.platform || "unknown"));
+    const platforms = Array.from(platformSet);
+
+    const clicksByDay: Array<{ date: string; clicks: number }> = [];
+    const clicksByDayPlatform: Array<Record<string, number | string>> = [];
+    const baseDate = range?.end ? new Date(range.end) : new Date();
+    for (let i = chartDays - 1; i >= 0; i--) {
+      const date = new Date(baseDate);
+      date.setUTCDate(date.getUTCDate() - i - (range?.end ? 1 : 0));
+      const dateStr = date.toISOString().split("T")[0];
+
+      const dayList = (allClicks || []).filter(
+        (c) => new Date(c.created_at).toISOString().split("T")[0] === dateStr
+      );
+      clicksByDay.push({ date: dateStr, clicks: dayList.length });
+
+      const row: Record<string, number | string> = { date: dateStr };
+      platforms.forEach((p) => (row[p] = 0));
+      dayList.forEach((c) => {
+        const p = c.platform || "unknown";
+        row[p] = ((row[p] as number) || 0) + 1;
+      });
+      clicksByDayPlatform.push(row);
+    }
+
+    // Clicks by hour-of-day (0..23) aggregated across the whole period
+    const clicksByHourOfDay: Array<{ hour: number; clicks: number }> = Array.from(
+      { length: 24 },
+      (_, i) => ({ hour: i, clicks: 0 })
+    );
+    (allClicks || []).forEach((c) => {
+      // Convert UTC to São Paulo (UTC-3)
+      const d = new Date(new Date(c.created_at).getTime() - 3 * 3600 * 1000);
+      clicksByHourOfDay[d.getUTCHours()].clicks++;
+    });
 
     // Calculate conversions by source
     const conversionsBySource: Record<string, number> = {};
