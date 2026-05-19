@@ -290,11 +290,12 @@ serve(async (req) => {
 
     // ============ EXTRA AGGREGATIONS (Lovable-style overview) ============
 
-    // Hourly series (last 24h) — used when period === 1 day
+    // Hourly series — anchored to range.end when provided (used for day comparison),
+    // otherwise to "now" (last 24h, used when period === 1 day).
     const clicksByHour: Array<{ hour: string; clicks: number }> = [];
-    const nowH = new Date();
+    const hourAnchor = range?.end ? new Date(range.end) : new Date();
     for (let i = 23; i >= 0; i--) {
-      const d = new Date(nowH.getTime() - i * 60 * 60 * 1000);
+      const d = new Date(hourAnchor.getTime() - i * 60 * 60 * 1000);
       const key = `${d.toISOString().slice(0, 13)}:00`;
       const count = (allClicks || []).filter((c) => {
         const ck = new Date(c.created_at).toISOString().slice(0, 13);
@@ -303,22 +304,28 @@ serve(async (req) => {
       clicksByHour.push({ hour: key, clicks: count });
     }
 
-    // Top pages (by path, ignoring query string)
-    const pageMap: Record<string, number> = {};
+    // Top pages with unique-session count
+    const pageMap: Record<string, { count: number; sessions: Set<string> }> = {};
     (allClicks || []).forEach((c) => {
       if (!c.page_url) return;
       try {
         const u = new URL(c.page_url);
         const path = u.pathname || "/";
-        pageMap[path] = (pageMap[path] || 0) + 1;
+        if (!pageMap[path]) pageMap[path] = { count: 0, sessions: new Set() };
+        pageMap[path].count++;
+        if (c.session_id) pageMap[path].sessions.add(c.session_id);
       } catch {
         // ignore malformed urls
       }
     });
     const clicksByPage = Object.entries(pageMap)
-      .map(([page, count]) => ({ page, count }))
+      .map(([page, v]) => ({ page, count: v.count }))
       .sort((a, b) => b.count - a.count)
       .slice(0, 20);
+    const clicksByPageDetailed = Object.entries(pageMap)
+      .map(([page, v]) => ({ page, clicks: v.count, uniqueSessions: v.sessions.size }))
+      .sort((a, b) => b.clicks - a.clicks)
+      .slice(0, 30);
 
     // Device breakdown (mobile / desktop / tablet)
     const clicksByDevice: Record<string, number> = { mobile: 0, desktop: 0, tablet: 0 };
@@ -356,8 +363,12 @@ serve(async (req) => {
         clicksByPlatform,
         clicksByType,
         clicksByDay,
+        clicksByDayPlatform,
+        platforms,
         clicksByHour,
+        clicksByHourOfDay,
         clicksByPage,
+        clicksByPageDetailed,
         clicksByDevice,
         clicksByReferrer,
         conversionsBySource,
@@ -366,6 +377,7 @@ serve(async (req) => {
         geoMetrics,
       },
     };
+
 
     return new Response(JSON.stringify(response), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
