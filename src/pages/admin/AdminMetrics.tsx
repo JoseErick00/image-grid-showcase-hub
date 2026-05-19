@@ -229,8 +229,8 @@ const AdminMetricsContent = () => {
           <div className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-gray-500" />
             <Select value={selectedPeriod} onValueChange={(value: PeriodOption) => setSelectedPeriod(value)}>
-              <SelectTrigger className="w-[200px] bg-white">
-                <SelectValue placeholder="Selecione o período" />
+              <SelectTrigger className="w-[220px] bg-black text-white border-black hover:bg-black/90 focus:ring-2 focus:ring-white/30 [&>svg]:text-white [&>span]:text-white">
+                <SelectValue placeholder="Selecione o período" className="text-white" />
               </SelectTrigger>
               <SelectContent>
                 {PERIOD_OPTIONS.map((option) => (
