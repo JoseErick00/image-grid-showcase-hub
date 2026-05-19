@@ -217,13 +217,19 @@ const AdminMetricsContent = () => {
     <div className="min-h-screen bg-gray-100 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header with period selector */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">📊 Métricas do Projeto</h1>
-          
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800">📊 Métricas do Projeto</h1>
+            <p className="text-xs text-gray-500 mt-1">
+              <UIBadge variant="secondary" className="mr-2">Tempo real (Supabase)</UIBadge>
+              Cliques, page views e visitantes vêm direto do nosso banco — independem do Google Analytics.
+              A aba <strong>Google Search</strong> usa a API do Google (latência de 24-48h).
+            </p>
+          </div>
           <div className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-gray-500" />
             <Select value={selectedPeriod} onValueChange={(value: PeriodOption) => setSelectedPeriod(value)}>
-              <SelectTrigger className="w-[180px] bg-white">
+              <SelectTrigger className="w-[200px] bg-white">
                 <SelectValue placeholder="Selecione o período" />
               </SelectTrigger>
               <SelectContent>
@@ -237,7 +243,15 @@ const AdminMetricsContent = () => {
           </div>
         </div>
 
+        {/* Comparison section — only when in compare mode */}
+        {selectedPeriod === "today_vs_yesterday" && (
+          <div className="mb-8">
+            <CompareTodayYesterdaySection />
+          </div>
+        )}
+
         {/* Summary Cards */}
+
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
