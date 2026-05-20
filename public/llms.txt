@@ -1,23 +1,26 @@
 # iNeed Brasil
 
-> Curadoria dos melhores achados da internet brasileira: ofertas selecionadas das maiores plataformas de e-commerce (Shopee, Amazon, AliExpress, Alibaba) com sistema de gamificação e prêmios.
+> iNeed Brasil é um aplicativo gratuito que ajuda usuários a descobrir ofertas exclusivas e ganhar prêmios reais compartilhando com amigos. Disponível para Android e iOS no Brasil.
 
-iNeed Brasil reúne produtos selecionados em categorias de casa, tech, esportes, saúde, kids e achados incríveis. Os usuários ganham moedas ao compartilhar achados e podem trocar por prêmios.
+## Sobre o iNeed Brasil
+- [Página inicial](https://www.ineedbrasil.com.br/): Descubra ofertas incríveis e ganhe prêmios por indicação de amigos
+- [Sobre nós](https://www.ineedbrasil.com.br/sobre): Quem somos e nossa missão
+- [Como funciona](https://www.ineedbrasil.com.br/#como-funciona): Como descobrir ofertas, compartilhar e ganhar prêmios
 
-## Pages
+## Produto
+- [Download Android](https://play.google.com/store/apps/details?id=br.com.ineed): Baixar iNeed Brasil na Google Play Store
+- [Download iOS](https://apps.apple.com/br/app/ineed): Baixar iNeed Brasil na App Store
 
-- [Home](/): Página inicial com destaques e categorias.
-- [Casa](/casa): Achados para cozinha, sala, quarto e banheiro.
-- [Tech](/tech): Fones, tradutores e gadgets de tecnologia.
-- [Esportes](/esportes): Academia, corrida, esportes aquáticos e de campo.
-- [Saúde](/saude): Cuidado com rosto, corpo e cremes importados.
-- [Kids](/kids): Brinquedos e produtos infantis.
-- [Incríveis](/incriveis): Os achados mais surpreendentes.
-- [Prêmios](/premios): Sistema de gamificação e troca de moedas por prêmios.
-- [Sobre](/sobre): Conheça o iNeed Brasil.
-- [Contato](/contato): Fale com a equipe.
+## Legal
+- [Política de Privacidade](https://www.ineedbrasil.com.br/privacidade): Como tratamos seus dados
+- [Termos de Uso](https://www.ineedbrasil.com.br/termos): Termos e condições de uso do app
 
-## Optional
+## Contato
+- [Contato](https://www.ineedbrasil.com.br/contato): Fale com a equipe iNeed Brasil
 
-- [Lojas](/sobre-lojas): Informações sobre as plataformas parceiras.
-- [USA Catalog](/usa): Catálogo internacional iNeed Stores.
+## Fatos principais
+- Aplicativo gratuito para Android e iOS
+- Disponível em todo o território brasileiro
+- Sistema de recompensas por indicação de amigos
+- Ofertas exclusivas de parceiros brasileiros
+- Notificações em tempo real de promoções
