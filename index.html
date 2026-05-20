@@ -119,27 +119,70 @@
     <meta name="twitter:site" content="@ineedshowcase" />
     <meta name="twitter:image" content="https://www.ineedbrasil.com.br/pwa-512x512.png" />
 
-    <!-- JSON-LD Organization + WebSite -->
+    <!-- JSON-LD Organization + WebSite + MobileApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Organization",
+          "@id": "https://www.ineedbrasil.com.br/#organization",
           "name": "iNeed Brasil",
+          "alternateName": "iNeed",
           "url": "https://www.ineedbrasil.com.br",
-          "logo": "https://www.ineedbrasil.com.br/pwa-512x512.png",
-          "sameAs": ["https://www.ineedstores.com"]
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.ineedbrasil.com.br/pwa-512x512.png",
+            "width": 512,
+            "height": 512
+          },
+          "sameAs": [
+            "https://www.ineedstores.com",
+            "https://twitter.com/ineedbrasil"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "availableLanguage": "Portuguese",
+            "areaServed": "BR"
+          }
         },
         {
           "@type": "WebSite",
+          "@id": "https://www.ineedbrasil.com.br/#website",
           "name": "iNeed Brasil",
+          "description": "Descubra ofertas incríveis e ganhe prêmios compartilhando com amigos",
           "url": "https://www.ineedbrasil.com.br",
+          "inLanguage": "pt-BR",
+          "publisher": { "@id": "https://www.ineedbrasil.com.br/#organization" },
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://www.ineedbrasil.com.br/?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
+        },
+        {
+          "@type": "MobileApplication",
+          "@id": "https://www.ineedbrasil.com.br/#app",
+          "name": "iNeed Brasil",
+          "alternateName": "iNeed",
+          "description": "Descubra ofertas incríveis, ganhe prêmios e compartilhe com amigos.",
+          "url": "https://www.ineedbrasil.com.br",
+          "applicationCategory": "ShoppingApplication",
+          "operatingSystem": ["Android", "iOS", "Web"],
+          "inLanguage": "pt-BR",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+          },
+          "featureList": [
+            "Ofertas e cupons",
+            "Gamificação com moedas e prêmios",
+            "Compartilhamento com amigos",
+            "Notificações push"
+          ],
+          "publisher": { "@id": "https://www.ineedbrasil.com.br/#organization" }
         }
       ]
     }
