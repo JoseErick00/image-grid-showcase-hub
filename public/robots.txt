@@ -1,16 +1,61 @@
-User-agent: Googlebot
-Allow: /
+# robots.txt — iNeed Brasil
+# Updated: 2025
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Allow all standard crawlers
 User-agent: *
 Allow: /
 
+# -----------------------------------------------
+# AI search crawlers — ALLOW (for AI search visibility)
+# -----------------------------------------------
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Bing Copilot
+User-agent: Bingbot
+Allow: /
+
+# Google (AI Overviews uses Googlebot)
+User-agent: Googlebot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# -----------------------------------------------
+# Training-only crawlers — BLOCK (optional)
+# These crawlers are used for AI training datasets,
+# not for search visibility. Block if you prefer
+# your content not to be used for model training.
+# -----------------------------------------------
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# -----------------------------------------------
+# Sitemap
+# -----------------------------------------------
 Sitemap: https://www.ineedbrasil.com.br/sitemap.xml
