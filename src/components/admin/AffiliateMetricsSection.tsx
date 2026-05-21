@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { MousePointerClick, ArrowLeftRight, TrendingUp, Calendar } from "lucide-react";
+import { MousePointerClick, ArrowLeftRight, TrendingUp, Calendar, ImageIcon } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend, LineChart, Line } from "recharts";
+import { getProductImageByName } from "@/utils/productImageLookup";
 
 interface AffiliateMetrics {
   totalClicks: number;
@@ -216,32 +217,51 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
         </CardContent>
       </Card>
 
-      {/* Recent Activity Tables */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Recent Clicks */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <MousePointerClick className="h-5 w-5 text-blue-500" />
-              Cliques Recentes
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Plataforma</TableHead>
-                    <TableHead>Tipo</TableHead>
-                    <TableHead>Item</TableHead>
-                    <TableHead>Data</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {metrics.recentClicks.slice(0, 10).map((click) => (
+      {/* Recent Clicks — full width with product thumbnail */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <MousePointerClick className="h-5 w-5 text-blue-500" />
+            Cliques Recentes
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[64px]">Produto</TableHead>
+                  <TableHead>Item</TableHead>
+                  <TableHead>Plataforma</TableHead>
+                  <TableHead>Tipo</TableHead>
+                  <TableHead>Data</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {metrics.recentClicks.slice(0, 15).map((click) => {
+                  const thumb = getProductImageByName(click.item_name);
+                  return (
                     <TableRow key={click.id}>
                       <TableCell>
-                        <Badge 
+                        {thumb ? (
+                          <img
+                            src={thumb}
+                            alt={click.item_name || 'produto'}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-10 w-10 rounded-md object-cover bg-muted"
+                          />
+                        ) : (
+                          <div className="h-10 w-10 rounded-md bg-muted flex items-center justify-center">
+                            <ImageIcon className="h-4 w-4 text-muted-foreground" />
+                          </div>
+                        )}
+                      </TableCell>
+                      <TableCell className="max-w-[420px] truncate text-xs">
+                        {click.item_name || '-'}
+                      </TableCell>
+                      <TableCell>
+                        <Badge
                           style={{ backgroundColor: PLATFORM_COLORS[click.platform] || PLATFORM_COLORS.unknown }}
                           className="text-white"
                         >
@@ -251,56 +271,15 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                       <TableCell className="text-xs capitalize">
                         {click.click_type.replace('_', ' ')}
                       </TableCell>
-                      <TableCell className="max-w-[150px] truncate text-xs">
-                        {click.item_name || '-'}
-                      </TableCell>
-                      <TableCell className="text-xs">{formatDate(click.created_at)}</TableCell>
+                      <TableCell className="text-xs whitespace-nowrap">{formatDate(click.created_at)}</TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Recent Conversions */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <ArrowLeftRight className="h-5 w-5 text-green-500" />
-              Conversões Recentes (UTM)
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Source</TableHead>
-                    <TableHead>Campaign</TableHead>
-                    <TableHead>Data</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {metrics.recentConversions.slice(0, 10).map((conversion) => (
-                    <TableRow key={conversion.id}>
-                      <TableCell>
-                        <Badge variant="outline">
-                          {conversion.utm_source || '-'}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="text-xs">
-                        {conversion.utm_campaign || '-'}
-                      </TableCell>
-                      <TableCell className="text-xs">{formatDate(conversion.created_at)}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+                  );
+                })}
+              </TableBody>
+            </Table>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Platform Breakdown */}
       <Card>
@@ -321,6 +300,44 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                   <div className="text-sm opacity-90 capitalize">{platform}</div>
                 </div>
               ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Recent Conversions (UTM) — last row, full width */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <ArrowLeftRight className="h-5 w-5 text-green-500" />
+            Conversões Recentes (UTM)
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Source</TableHead>
+                  <TableHead>Campaign</TableHead>
+                  <TableHead>Data</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {metrics.recentConversions.slice(0, 10).map((conversion) => (
+                  <TableRow key={conversion.id}>
+                    <TableCell>
+                      <Badge variant="outline">
+                        {conversion.utm_source || '-'}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="text-xs">
+                      {conversion.utm_campaign || '-'}
+                    </TableCell>
+                    <TableCell className="text-xs">{formatDate(conversion.created_at)}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
           </div>
         </CardContent>
       </Card>
