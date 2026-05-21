@@ -230,11 +230,11 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[76px]">Produto</TableHead>
+                  <TableHead className="w-[76px] whitespace-nowrap">Produto</TableHead>
                   <TableHead>Item</TableHead>
-                  <TableHead>Plataforma</TableHead>
-                  <TableHead>Tipo</TableHead>
-                  <TableHead>Data</TableHead>
+                  <TableHead className="whitespace-nowrap">Plataforma</TableHead>
+                  <TableHead className="whitespace-nowrap">Tipo</TableHead>
+                  <TableHead className="whitespace-nowrap">Data</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
