@@ -245,7 +245,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* Onde Cuponomia perde */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-6">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-3">
-            👎 Onde o Cuponomia perde espaço
+            Onde o Cuponomia perde espaço
           </h2>
           <p className="font-omne-regular text-[#333333] leading-relaxed mb-4">
             O Cuponomia é um nome conhecido, mas há pontos que o iNeed Brasil resolve melhor:
