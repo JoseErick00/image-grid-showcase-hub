@@ -48,6 +48,8 @@ import StorePage from "./pages/lojas/StorePage";
 import SobreLojas from "./pages/SobreLojas";
 import BlogSoro from "./pages/BlogSoro";
 import AlternativasAoPelando from "./pages/blog/AlternativasAoPelando";
+import IneedBrasilVsMeliuz from "./pages/blog/IneedBrasilVsMeliuz";
+
 
 // Brasil campaign pages
 import BrasilCasaSelCozinha from "./pages/campaigns/BrasilCasaSelCozinha";
