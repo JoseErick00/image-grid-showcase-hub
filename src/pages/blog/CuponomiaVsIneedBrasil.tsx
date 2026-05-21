@@ -228,7 +228,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* Por que iNeed */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-6">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-3">
-            👍 Por que o iNeed Brasil é a escolha mais inteligente?
+            Por que o iNeed Brasil é a escolha mais inteligente?
           </h2>
           <p className="font-omne-regular text-[#333333] leading-relaxed mb-4">
             Se você valoriza segurança, ofertas relevantes e uma experiência de compra
