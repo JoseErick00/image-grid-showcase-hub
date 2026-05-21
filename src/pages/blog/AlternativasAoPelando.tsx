@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import AppDownloadIcon from "@/components/AppDownloadIcon";
+import pelandoLogo from "@/assets/pelando-logo.png";
+
 
 const POST_URL = "https://www.ineedbrasil.com.br/alternativas-ao-pelando";
 
