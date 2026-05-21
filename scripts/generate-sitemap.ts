@@ -24,7 +24,12 @@ const entries: SitemapEntry[] = [
   { path: "/contato", changefreq: "monthly", priority: "0.6" },
   { path: "/sobre-lojas", changefreq: "monthly", priority: "0.5" },
   { path: "/usa", changefreq: "weekly", priority: "0.7" },
+  // Blog posts
+  { path: "/blog", changefreq: "weekly", priority: "0.7" },
+  { path: "/alternativas-ao-pelando", changefreq: "monthly", priority: "0.8" },
+  { path: "/ineed-brasil-vs-meliuz", changefreq: "monthly", priority: "0.8" },
   // Campaign routes
+
   { path: "/casa/sel-cozinha", changefreq: "weekly", priority: "0.7" },
   { path: "/casa/sel-sala", changefreq: "weekly", priority: "0.7" },
   { path: "/casa/sel-quarto", changefreq: "weekly", priority: "0.7" },
