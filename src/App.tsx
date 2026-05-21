@@ -47,6 +47,7 @@ import Favoritos from "./pages/Favoritos";
 import StorePage from "./pages/lojas/StorePage";
 import SobreLojas from "./pages/SobreLojas";
 import BlogSoro from "./pages/BlogSoro";
+import AlternativasAoPelando from "./pages/blog/AlternativasAoPelando";
 
 // Brasil campaign pages
 import BrasilCasaSelCozinha from "./pages/campaigns/BrasilCasaSelCozinha";
@@ -116,6 +117,7 @@ const App = () => {
                       <Route path="lojas/:platform" element={<StorePage />} />
                       <Route path="sobre-lojas" element={<SobreLojas />} />
                       <Route path="blog" element={<BlogSoro />} />
+                      <Route path="alternativas-ao-pelando" element={<AlternativasAoPelando />} />
                       
                       {/* Campaign routes - Brasil domain */}
                       <Route path="casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
@@ -162,6 +164,7 @@ const App = () => {
                       <Route path="brasil/lojas/:platform" element={<StorePage />} />
                       <Route path="brasil/sobre-lojas" element={<SobreLojas />} />
                       <Route path="brasil/blog" element={<BlogSoro />} />
+                      <Route path="brasil/alternativas-ao-pelando" element={<AlternativasAoPelando />} />
                       <Route path="brasil/casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
                       <Route path="brasil/casa/sel-sala" element={<BrasilCasaSelSala />} />
                       <Route path="brasil/casa/sel-quarto" element={<BrasilCasaSelQuarto />} />
