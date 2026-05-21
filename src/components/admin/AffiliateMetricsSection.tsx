@@ -230,7 +230,7 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[64px]">Produto</TableHead>
+                  <TableHead className="w-[76px]">Produto</TableHead>
                   <TableHead>Item</TableHead>
                   <TableHead>Plataforma</TableHead>
                   <TableHead>Tipo</TableHead>
@@ -249,10 +249,10 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                             alt={click.item_name || 'produto'}
                             loading="lazy"
                             decoding="async"
-                            className="h-10 w-10 rounded-md object-cover bg-muted"
+                            className="h-[60px] w-[60px] rounded-md object-cover bg-muted"
                           />
                         ) : (
-                          <div className="h-10 w-10 rounded-md bg-muted flex items-center justify-center">
+                          <div className="h-[60px] w-[60px] rounded-md bg-muted flex items-center justify-center">
                             <ImageIcon className="h-4 w-4 text-muted-foreground" />
                           </div>
                         )}
