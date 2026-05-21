@@ -63,19 +63,16 @@ const IneedBrasilVsMeliuz = () => {
           <span>iNeed Brasil vs Méliuz</span>
         </nav>
 
-        {/* Versus header */}
-        <div className="flex items-center justify-center gap-6 md:gap-10 mb-8">
+        {/* Logo Méliuz */}
+        <div className="flex justify-center mb-8">
           <img
-            src="/app-icon.png"
-            alt="Logo iNeed Brasil"
-            className="h-20 md:h-24 w-auto rounded-2xl"
+            src={meliuzLogo}
+            alt="Logo Méliuz"
+            className="h-28 md:h-32 w-auto"
             loading="eager"
           />
-          <span className="font-omne-medium text-3xl md:text-4xl text-[#777777]">VS</span>
-          <div className="h-20 md:h-24 px-6 flex items-center justify-center rounded-2xl bg-white border border-[#e5e5e5]">
-            <span className="font-omne-medium text-2xl md:text-3xl text-slate-950">Méliuz</span>
-          </div>
         </div>
+
 
         <h1 className="font-omne-medium text-3xl md:text-5xl text-slate-950 mb-6">
           iNeed Brasil vs Méliuz: Comparativo Completo 2026
