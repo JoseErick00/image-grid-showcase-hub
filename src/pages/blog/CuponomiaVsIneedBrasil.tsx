@@ -279,7 +279,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* FAQ */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-12">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-4">
-            ❓ Perguntas frequentes
+            Perguntas frequentes
           </h2>
           <div className="space-y-5 font-omne-regular text-[#333333] leading-relaxed">
             <div>
