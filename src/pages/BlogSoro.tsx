@@ -76,6 +76,8 @@ const BlogSoro = () => {
             Quer boas ideias de compras? Leia nossos artigos.
           </h2>
           <div id="soro-blog" />
+          {/* TODO: lista de posts próprios — preencher após aprovação do primeiro post (estilo Soro) */}
+          <section id="ineed-blog-list" />
           <div className="flex justify-center mt-16 mb-8">
             <Link
               to="/"
