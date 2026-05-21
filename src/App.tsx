@@ -120,6 +120,8 @@ const App = () => {
                       <Route path="sobre-lojas" element={<SobreLojas />} />
                       <Route path="blog" element={<BlogSoro />} />
                       <Route path="alternativas-ao-pelando" element={<AlternativasAoPelando />} />
+                      <Route path="ineed-brasil-vs-meliuz" element={<IneedBrasilVsMeliuz />} />
+
                       
                       {/* Campaign routes - Brasil domain */}
                       <Route path="casa/sel-cozinha" element={<BrasilCasaSelCozinha />} />
