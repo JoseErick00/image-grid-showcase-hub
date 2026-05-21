@@ -1,60 +1,35 @@
-# Plano: primeiro post do blog próprio + área para listagem futura
+## Novo artigo: Cuponomia vs iNeed Brasil
 
-## Objetivo
+Vou replicar exatamente o padrão usado em `AlternativasAoPelando.tsx` e `IneedBrasilVsMeliuz.tsx`, adicionando o novo post ao blog.
 
-Criar uma página de blog independente em `/alternativas-ao-pelando` com o conteúdo fornecido, e deixar reservada uma área na `BlogSoro` (logo após o `<div id="soro-blog" />`) para futuramente listar os posts próprios em formato de tabela/cards seguindo o visual do Soro.
+### Arquivos a criar/editar
 
-## Escopo desta entrega (apenas o que pode ser revisado agora)
+1. **`src/assets/cuponomia-logo.png`** — gerar logo do Cuponomia (estilo similar ao Méliuz/Pelando) para usar no header VS e na capa do card.
 
-1. **Nova página `src/pages/blog/AlternativasAoPelando.tsx`**
-   - Layout consistente com o site: fundo `#f7f7f7`, container `max-w-[1200px]`, tipografia `font-omne-*`, padrões já usados em `BlogSoro`.
-   - Estrutura semântica:
-     - `<SEO>` com title `5 Melhores Alternativas ao Pelando em 2026 (com Prêmios por Indicação)`, description fornecida, `canonical` `https://www.ineedbrasil.com.br/alternativas-ao-pelando`, `og:type=article`.
-     - JSON-LD: `Article` + `FAQPage` (com as 3 perguntas) + `BreadcrumbList` (Home → Blog → post).
-     - `<h1>` único: "5 Melhores Alternativas ao Pelando em 2026".
-     - Intro de 60 palavras (answer-first).
-     - Bloco "Comparativo rápido" como `<table>` real, responsiva (scroll horizontal em mobile, usando o `Table` do shadcn ou tabela nativa com `overflow-x-auto`). Linhas: Ofertas da comunidade, Cashback, Prêmios por indicação, Gratuito, App Android/iOS, Notificações, Foco BR. Colunas: Pelando, Méliuz, Cuponomia, Promobit, iNeed Brasil. Destaque visual sutil na coluna iNeed Brasil.
-     - 5 seções `<h3>` com os textos dos apps (iNeed, Méliuz, Cuponomia, Promobit, Zoom) em cards simples.
-     - "Qual alternativa escolher?" em `<h2>`.
-     - CTA reutilizando `<AppDownloadIcon variant="desktop" />` + botão `Link to="/"` no estilo já usado em `BlogSoro` ("Encontrar produtos bacanas").
-     - FAQ em `<h2>` com 3 `<h3>` (renderizadas como `<details>`/`<summary>` para acordeão leve, sem dependência nova).
-     - Rodapé do post: badges de confiança e ícones sociais reutilizando exatamente os blocos já existentes em `BlogSoro` (para manter identidade).
+2. **`src/pages/blog/CuponomiaVsIneedBrasil.tsx`** (novo) — clonar a estrutura de `IneedBrasilVsMeliuz.tsx`:
+   - SEO via `BrasilPageSEO` com title, description e canonical `/cuponomia-vs-ineed-brasil`
+   - JSON-LD `@graph` com `Article` + `BreadcrumbList` + `FAQPage` (3 perguntas do conteúdo) + o mesmo `ItemList` "Melhores Alternativas ao Pelando" já usado nos outros 2 posts
+   - Breadcrumb com `mb-12`
+   - Header VS com `/app-icon.png` + "VS" + `cuponomiaLogo` (h-20 md:h-24, mb-16)
+   - H1, intro em destaque
+   - Tabela comparativa (rendering em `<Table>` shadcn ou tabela HTML estilizada com tailwind, responsiva)
+   - Seções "Por que o iNeed Brasil é a escolha mais inteligente", "Por que o Cuponomia perde espaço", "Conclusão", "FAQ"
+   - Remover marcadores `[reference:N]` do texto (são placeholders da DeepSeek sem fontes reais) e suavizar afirmações fortes sobre o concorrente para reduzir risco legal — manter o tom comparativo, mas evitar acusar de "malicioso" sem fonte. Confirmar com o usuário? Ver pergunta abaixo.
+   - Nota de rodapé/disclosure no mesmo padrão dos outros posts
 
-2. **Rota em `src/App.tsx`**
-   - Adicionar `<Route path="alternativas-ao-pelando" element={<AlternativasAoPelando />} />` dentro do mesmo grupo onde está `blog` (rota raiz e também espelhada em `brasil/alternativas-ao-pelando` para consistência com o padrão atual do `BlogSoro`).
+3. **`src/data/ineedBlogPosts.ts`** — importar `cuponomiaLogo` e adicionar o novo post no topo da lista (mais recente), com slug `cuponomia-vs-ineed-brasil`, categoria "Comparativos", data atual.
 
-3. **Área reservada para listagem própria em `BlogSoro.tsx`**
-   - Logo abaixo do `<div id="soro-blog" />`, inserir um marcador `<section id="ineed-blog-list" />` vazio (apenas comentário `{/* TODO: lista de posts próprios — preencher após aprovação do primeiro post */}`).
-   - Nada visual ainda — a tabela/grid no estilo Soro virá no próximo passo, após sua revisão do post.
+4. **`src/App.tsx`** — registrar 2 rotas (domínio Brasil e prefixo `/brasil/`) apontando para `CuponomiaVsIneedBrasil`.
 
-4. **SEO técnico**
-   - Acrescentar a URL ao `public/sitemap.xml` (`<loc>https://www.ineedbrasil.com.br/alternativas-ao-pelando</loc>`).
-   - Sem mudanças em `robots.txt` ou `llms.txt`.
+5. **`scripts/generate-sitemap.ts`** e **`public/sitemap.xml`** — adicionar `/cuponomia-vs-ineed-brasil`.
 
-## Fora do escopo (próxima rodada, após sua revisão)
+### Detalhes técnicos
 
-- Componente de listagem de posts próprios (tabela/cards estilo Soro) dentro de `BlogSoro`.
-- Estrutura genérica de posts (ex.: `src/data/blogPosts.ts` + página template) — só vale a pena criar depois que houver pelo menos 2 posts revisados.
-- Imagem de capa/`og:image` do post (perguntarei se você quer que eu gere uma).
+- Tabela: usar componentes `Table`, `TableHeader`, `TableRow`, `TableCell` de `@/components/ui/table` para manter o design system. Em mobile, wrapper `overflow-x-auto`.
+- Emojis nos H2 (⚖️ 👍 👎 🏆 ❓) — manter como no rascunho.
+- Cores: usar tokens semânticos (`text-foreground`, `text-muted-foreground`, `border-border`, `bg-muted/50` para a linha do iNeed destacada).
+- O artigo será exibido automaticamente em `/blog` via `ineedBlogPosts`.
 
-## Detalhes técnicos
+### Pontos a confirmar antes de implementar
 
-```text
-src/
-├── pages/
-│   ├── BlogSoro.tsx              (+ marcador <section id="ineed-blog-list" />)
-│   └── blog/
-│       └── AlternativasAoPelando.tsx   (novo)
-├── App.tsx                       (+ 2 rotas)
-public/
-└── sitemap.xml                   (+ 1 <url>)
-```
-
-- Sem dependências novas. Sem mudanças em backend, schema ou edge functions.
-- Tabela comparativa: `<div class="overflow-x-auto">` envolvendo `<table>` com classes Tailwind; coluna iNeed com `bg-primary/5` para destaque.
-- FAQ JSON-LD gerado a partir do mesmo array que renderiza o acordeão (uma fonte da verdade).
-- Sem cores hard-coded fora do padrão do projeto (`#f7f7f7`, `#101010`, `#555555` já em uso em `BlogSoro`).
-
-## Risco
-
-Baixo. Página nova e isolada; única mudança em arquivo existente é adicionar 2 rotas em `App.tsx`, um marcador inerte em `BlogSoro.tsx` e uma `<url>` no sitemap.
+Conteúdo do rascunho cita afirmações fortes contra o Cuponomia ("extensão potencialmente maliciosa", "RUIM no Reclame Aqui 5.4/10", "45% de resolução") com referências `[reference:N]` que são placeholders da DeepSeek (não há fontes reais anexadas). Publicar isso como está pode trazer risco de reputação/legal.
