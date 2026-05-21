@@ -258,7 +258,7 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                           </div>
                         )}
                       </TableCell>
-                      <TableCell className="max-w-[420px] truncate text-xs">
+                      <TableCell className="max-w-[260px] sm:max-w-[420px] truncate text-xs">
                         {click.item_name || '-'}
                       </TableCell>
                       <TableCell>
