@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import AppDownloadIcon from "@/components/AppDownloadIcon";
+import meliuzLogo from "@/assets/meliuz-logo.png";
+
 
 const POST_URL = "https://www.ineedbrasil.com.br/ineed-brasil-vs-meliuz";
 
