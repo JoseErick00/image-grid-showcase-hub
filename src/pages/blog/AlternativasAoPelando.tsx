@@ -94,6 +94,51 @@ const structuredData = {
         { "@type": "ListItem", position: 3, name: "Alternativas ao Pelando", item: POST_URL },
       ],
     },
+    {
+      "@type": "ItemList",
+      name: "Melhores Alternativas ao Pelando em 2026",
+      description:
+        "Apps brasileiros de ofertas, cashback e prêmios por indicação como alternativas ao Pelando",
+      numberOfItems: 5,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "iNeed Brasil",
+          url: "https://www.ineedbrasil.com.br",
+          description: "App de ofertas com sistema de prêmios por indicação de amigos",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Méliuz",
+          url: "https://www.meliuz.com.br",
+          description: "Plataforma de cashback com mais de 1.000 lojas parceiras",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Cuponomia",
+          url: "https://www.cuponomia.com.br",
+          description: "Portal de cupons de desconto e cashback com mais de 2.000 lojas",
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Promobit",
+          url: "https://www.promobit.com.br",
+          description: "Comunidade de ofertas votadas por usuários, similar ao Pelando",
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: "Zoom",
+          url: "https://www.zoom.com.br",
+          description: "Comparador de preços com alertas e cashback em 600+ lojas",
+        },
+      ],
+    },
   ],
 };
 
