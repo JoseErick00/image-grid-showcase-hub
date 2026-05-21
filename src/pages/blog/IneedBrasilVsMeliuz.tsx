@@ -55,7 +55,7 @@ const IneedBrasilVsMeliuz = () => {
 
       <article className="max-w-[860px] mx-auto px-4 py-8 md:py-12">
         {/* Breadcrumb */}
-        <nav className="text-sm text-[#555555] mb-6 font-omne-regular">
+        <nav className="text-sm text-[#555555] mb-12 font-omne-regular">
           <Link to="/" className="hover:underline">Home</Link>
           <span className="mx-2">/</span>
           <Link to="/blog" className="hover:underline">Blog</Link>
@@ -64,7 +64,8 @@ const IneedBrasilVsMeliuz = () => {
         </nav>
 
         {/* Versus header */}
-        <div className="flex items-center justify-center gap-6 md:gap-10 mb-8">
+        <div className="flex items-center justify-center gap-6 md:gap-10 mb-16">
+
           <img
             src="/app-icon.png"
             alt="Logo iNeed Brasil"
