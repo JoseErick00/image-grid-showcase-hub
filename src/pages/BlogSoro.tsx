@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import AppDownloadIcon from "@/components/AppDownloadIcon";
 import { Button } from "@/components/ui/button";
+import { ineedBlogPosts } from "@/data/ineedBlogPosts";
+
 
 const SORO_SCRIPT_SRC = "https://app.trysoro.com/api/embed/e1d039d0-38c0-4de3-95e5-f14b0cf50cee";
 
