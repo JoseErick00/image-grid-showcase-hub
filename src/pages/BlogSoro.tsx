@@ -87,11 +87,11 @@ const BlogSoro = () => {
                   to={post.url}
                   className="group bg-white rounded-lg overflow-hidden border border-[#e5e5e5] hover:shadow-elegant transition-shadow flex flex-col"
                 >
-                  <div className="aspect-[16/9] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden">
+                  <div className="aspect-[16/9] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden p-8">
                     <img
                       src={post.cover}
                       alt={post.title}
-                      className="max-h-[60%] w-auto object-contain group-hover:scale-105 transition-transform"
+                      className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform"
                       loading="lazy"
                     />
                   </div>
