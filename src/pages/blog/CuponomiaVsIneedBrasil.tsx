@@ -261,7 +261,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* Conclusão */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-12">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-3">
-            🏆 Conclusão: por que o iNeed Brasil é o melhor para você
+            Conclusão: por que o iNeed Brasil é o melhor para você
           </h2>
           <p className="font-omne-regular text-[#333333] leading-relaxed mb-4">
             A escolha entre Cuponomia e iNeed Brasil vai além de cupons e cashback. É uma escolha
