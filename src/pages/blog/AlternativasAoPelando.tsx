@@ -122,10 +122,11 @@ const AlternativasAoPelando = () => {
           <img
             src={pelandoLogo}
             alt="Logo Pelando"
-            className="h-14 md:h-16 w-auto"
+            className="h-28 md:h-32 w-auto"
             loading="eager"
           />
         </div>
+
 
         <h1 className="font-omne-medium text-3xl md:text-5xl text-slate-950 mb-6">
           5 Melhores Alternativas ao Pelando em 2026
