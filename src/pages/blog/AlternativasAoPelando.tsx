@@ -155,18 +155,19 @@ const AlternativasAoPelando = () => {
 
               </tr>
             </thead>
-            <tbody>
+            <tbody className="text-[#333333]">
               {comparativo.map((row, i) => (
                 <tr key={i} className="border-t border-[#e5e5e5]">
-                  <td className="text-left p-3 font-omne-regular">{row.feature}</td>
+                  <td className="text-left p-3 font-omne-regular text-slate-950">{row.feature}</td>
                   <td className="p-3 text-center">{row.pelando}</td>
                   <td className="p-3 text-center">{row.meliuz}</td>
                   <td className="p-3 text-center">{row.cuponomia}</td>
                   <td className="p-3 text-center">{row.promobit}</td>
-                  <td className="p-3 text-center bg-primary/5 font-omne-medium">{row.ineed}</td>
+                  <td className="p-3 text-center bg-primary/5 font-omne-medium text-slate-950">{row.ineed}</td>
                 </tr>
               ))}
             </tbody>
+
           </table>
         </div>
         <p className="text-xs text-[#777777] mb-10">
