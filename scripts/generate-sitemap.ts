@@ -28,6 +28,7 @@ const entries: SitemapEntry[] = [
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
   { path: "/alternativas-ao-pelando", changefreq: "monthly", priority: "0.8" },
   { path: "/ineed-brasil-vs-meliuz", changefreq: "monthly", priority: "0.8" },
+  { path: "/cuponomia-vs-ineed-brasil", changefreq: "monthly", priority: "0.8" },
   // Campaign routes
 
   { path: "/casa/sel-cozinha", changefreq: "weekly", priority: "0.7" },
