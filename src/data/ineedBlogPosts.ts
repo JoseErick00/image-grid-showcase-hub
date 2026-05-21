@@ -18,7 +18,7 @@ export const ineedBlogPosts: IneedBlogPost[] = [
     title: "iNeed Brasil vs Méliuz: Comparativo Completo 2026",
     excerpt:
       "Comparando iNeed Brasil e Méliuz: cashback, prêmios por indicação, lojas parceiras e facilidade de uso. Descubra qual app vale mais para o seu perfil.",
-    cover: "/app-icon.png",
+    cover: meliuzLogo,
     date: "2026-05-21",
     category: "Comparativos",
     url: "/ineed-brasil-vs-meliuz",
