@@ -201,23 +201,23 @@ const CuponomiaVsIneedBrasil = () => {
 
         {/* Tabela comparativa */}
         <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-4">
-          ⚖️ Tabela comparativa: iNeed Brasil vs Cuponomia
+          Tabela comparativa: iNeed Brasil vs Cuponomia
         </h2>
         <div className="overflow-x-auto bg-white rounded-lg border border-[#e5e5e5] mb-3">
           <table className="w-full text-sm">
             <thead className="bg-[#f0f0f0]">
               <tr>
                 <th className="text-left p-3 font-omne-medium whitespace-nowrap text-slate-950">Característica</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap bg-primary/10 text-slate-950">iNeed Brasil</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap text-slate-950">Cuponomia</th>
+                <th className="text-left p-3 font-omne-medium whitespace-nowrap bg-primary/10 text-slate-950">iNeed Brasil</th>
+                <th className="text-left p-3 font-omne-medium whitespace-nowrap text-slate-950">Cuponomia</th>
               </tr>
             </thead>
             <tbody className="text-[#333333]">
               {comparativo.map((row, i) => (
                 <tr key={i} className="border-t border-[#e5e5e5]">
                   <td className="text-left p-3 font-omne-regular text-slate-950">{row.feature}</td>
-                  <td className="p-3 text-center bg-primary/5 font-omne-medium text-slate-950">{row.ineed}</td>
-                  <td className="p-3 text-center">{row.cuponomia}</td>
+                  <td className="text-left p-3 bg-primary/5 font-omne-medium text-slate-950">{row.ineed}</td>
+                  <td className="text-left p-3">{row.cuponomia}</td>
                 </tr>
               ))}
             </tbody>
