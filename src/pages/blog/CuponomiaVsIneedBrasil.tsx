@@ -201,23 +201,23 @@ const CuponomiaVsIneedBrasil = () => {
 
         {/* Tabela comparativa */}
         <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-4">
-          ⚖️ Tabela comparativa: iNeed Brasil vs Cuponomia
+          Tabela comparativa: iNeed Brasil vs Cuponomia
         </h2>
         <div className="overflow-x-auto bg-white rounded-lg border border-[#e5e5e5] mb-3">
           <table className="w-full text-sm">
             <thead className="bg-[#f0f0f0]">
               <tr>
                 <th className="text-left p-3 font-omne-medium whitespace-nowrap text-slate-950">Característica</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap bg-primary/10 text-slate-950">iNeed Brasil</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap text-slate-950">Cuponomia</th>
+                <th className="text-left p-3 font-omne-medium whitespace-nowrap bg-primary/10 text-slate-950">iNeed Brasil</th>
+                <th className="text-left p-3 font-omne-medium whitespace-nowrap text-slate-950">Cuponomia</th>
               </tr>
             </thead>
             <tbody className="text-[#333333]">
               {comparativo.map((row, i) => (
                 <tr key={i} className="border-t border-[#e5e5e5]">
                   <td className="text-left p-3 font-omne-regular text-slate-950">{row.feature}</td>
-                  <td className="p-3 text-center bg-primary/5 font-omne-medium text-slate-950">{row.ineed}</td>
-                  <td className="p-3 text-center">{row.cuponomia}</td>
+                  <td className="text-left p-3 bg-primary/5 font-omne-medium text-slate-950">{row.ineed}</td>
+                  <td className="text-left p-3">{row.cuponomia}</td>
                 </tr>
               ))}
             </tbody>
@@ -228,7 +228,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* Por que iNeed */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-6">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-3">
-            👍 Por que o iNeed Brasil é a escolha mais inteligente?
+            Por que o iNeed Brasil é a escolha mais inteligente?
           </h2>
           <p className="font-omne-regular text-[#333333] leading-relaxed mb-4">
             Se você valoriza segurança, ofertas relevantes e uma experiência de compra
@@ -245,7 +245,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* Onde Cuponomia perde */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-6">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-3">
-            👎 Onde o Cuponomia perde espaço
+            Onde o Cuponomia perde espaço
           </h2>
           <p className="font-omne-regular text-[#333333] leading-relaxed mb-4">
             O Cuponomia é um nome conhecido, mas há pontos que o iNeed Brasil resolve melhor:
@@ -261,7 +261,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* Conclusão */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-12">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-3">
-            🏆 Conclusão: por que o iNeed Brasil é o melhor para você
+            Conclusão: por que o iNeed Brasil é o melhor para você
           </h2>
           <p className="font-omne-regular text-[#333333] leading-relaxed mb-4">
             A escolha entre Cuponomia e iNeed Brasil vai além de cupons e cashback. É uma escolha
@@ -279,7 +279,7 @@ const CuponomiaVsIneedBrasil = () => {
         {/* FAQ */}
         <section className="bg-white rounded-lg p-6 border border-[#e5e5e5] mb-12">
           <h2 className="font-omne-medium text-2xl md:text-3xl text-slate-950 mb-4">
-            ❓ Perguntas frequentes
+            Perguntas frequentes
           </h2>
           <div className="space-y-5 font-omne-regular text-[#333333] leading-relaxed">
             <div>
