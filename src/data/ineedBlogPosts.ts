@@ -1,4 +1,6 @@
 import pelandoLogo from "@/assets/pelando-logo.png";
+import meliuzLogo from "@/assets/meliuz-logo.png";
+
 
 export interface IneedBlogPost {
   slug: string;
