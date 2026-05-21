@@ -242,7 +242,8 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                   const thumb = getProductImageByName(click.item_name);
                   return (
                     <TableRow key={click.id}>
-                      <TableCell>
+                      <TableCell className="w-[76px]">
+
                         {thumb ? (
                           <img
                             src={thumb}
