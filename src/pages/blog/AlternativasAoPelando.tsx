@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import AppDownloadIcon from "@/components/AppDownloadIcon";
+import pelandoLogo from "@/assets/pelando-logo.png";
+
 
 const POST_URL = "https://www.ineedbrasil.com.br/alternativas-ao-pelando";
 
@@ -116,6 +118,15 @@ const AlternativasAoPelando = () => {
           <span>Alternativas ao Pelando</span>
         </nav>
 
+        <div className="flex justify-center mb-8">
+          <img
+            src={pelandoLogo}
+            alt="Logo Pelando"
+            className="h-14 md:h-16 w-auto"
+            loading="eager"
+          />
+        </div>
+
         <h1 className="font-omne-medium text-3xl md:text-5xl text-slate-950 mb-6">
           5 Melhores Alternativas ao Pelando em 2026
         </h1>
@@ -135,26 +146,28 @@ const AlternativasAoPelando = () => {
           <table className="w-full text-sm">
             <thead className="bg-[#f0f0f0]">
               <tr>
-                <th className="text-left p-3 font-omne-medium whitespace-nowrap">Funcionalidade</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap">Pelando</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap">Méliuz</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap">Cuponomia</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap">Promobit</th>
-                <th className="p-3 font-omne-medium whitespace-nowrap bg-primary/10">iNeed Brasil</th>
+                <th className="text-left p-3 font-omne-medium whitespace-nowrap text-slate-950">Funcionalidade</th>
+                <th className="p-3 font-omne-medium whitespace-nowrap text-slate-950">Pelando</th>
+                <th className="p-3 font-omne-medium whitespace-nowrap text-slate-950">Méliuz</th>
+                <th className="p-3 font-omne-medium whitespace-nowrap text-slate-950">Cuponomia</th>
+                <th className="p-3 font-omne-medium whitespace-nowrap text-slate-950">Promobit</th>
+                <th className="p-3 font-omne-medium whitespace-nowrap bg-primary/10 text-slate-950">iNeed Brasil</th>
+
               </tr>
             </thead>
-            <tbody>
+            <tbody className="text-[#333333]">
               {comparativo.map((row, i) => (
                 <tr key={i} className="border-t border-[#e5e5e5]">
-                  <td className="text-left p-3 font-omne-regular">{row.feature}</td>
+                  <td className="text-left p-3 font-omne-regular text-slate-950">{row.feature}</td>
                   <td className="p-3 text-center">{row.pelando}</td>
                   <td className="p-3 text-center">{row.meliuz}</td>
                   <td className="p-3 text-center">{row.cuponomia}</td>
                   <td className="p-3 text-center">{row.promobit}</td>
-                  <td className="p-3 text-center bg-primary/5 font-omne-medium">{row.ineed}</td>
+                  <td className="p-3 text-center bg-primary/5 font-omne-medium text-slate-950">{row.ineed}</td>
                 </tr>
               ))}
             </tbody>
+
           </table>
         </div>
         <p className="text-xs text-[#777777] mb-10">
