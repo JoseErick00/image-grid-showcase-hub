@@ -78,8 +78,51 @@ const BlogSoro = () => {
             Quer boas ideias de compras? Leia nossos artigos.
           </h2>
           <div id="soro-blog" />
-          {/* TODO: lista de posts próprios — preencher após aprovação do primeiro post (estilo Soro) */}
-          <section id="ineed-blog-list" />
+          {/* Lista de posts próprios — layout estilo Soro */}
+          <section id="ineed-blog-list" className="mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {ineedBlogPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  to={post.url}
+                  className="group bg-white rounded-lg overflow-hidden border border-[#e5e5e5] hover:shadow-elegant transition-shadow flex flex-col"
+                >
+                  <div className="aspect-[16/9] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden">
+                    <img
+                      src={post.cover}
+                      alt={post.title}
+                      className="max-h-[60%] w-auto object-contain group-hover:scale-105 transition-transform"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className="text-xs font-omne-medium text-primary uppercase tracking-wide mb-2">
+                      {post.category}
+                    </span>
+                    <h3 className="font-omne-medium text-lg text-slate-950 mb-2 leading-snug group-hover:underline">
+                      {post.title}
+                    </h3>
+                    <p className="font-omne-regular text-sm text-[#555555] leading-relaxed mb-4 flex-1">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between text-xs text-[#777777] font-omne-regular">
+                      <time dateTime={post.date}>
+                        {new Date(post.date).toLocaleDateString("pt-BR", {
+                          day: "2-digit",
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </time>
+                      <span className="font-omne-medium text-slate-950 group-hover:text-primary transition-colors">
+                        Ler mais →
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
           <div className="flex justify-center mt-16 mb-8">
             <Link
               to="/"
