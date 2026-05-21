@@ -1,5 +1,6 @@
 import pelandoLogo from "@/assets/pelando-logo.png";
 import meliuzLogo from "@/assets/meliuz-logo.png";
+import cuponomiaLogo from "@/assets/cuponomia-logo.png";
 
 
 export interface IneedBlogPost {
@@ -13,6 +14,16 @@ export interface IneedBlogPost {
 }
 
 export const ineedBlogPosts: IneedBlogPost[] = [
+  {
+    slug: "cuponomia-vs-ineed-brasil",
+    title: "Cuponomia vs iNeed Brasil: Comparativo 2026",
+    excerpt:
+      "Cuponomia ou iNeed Brasil? Comparativo completo de cashback, confiabilidade e curadoria de ofertas. Descubra por que o iNeed Brasil é a melhor escolha para 2026.",
+    cover: cuponomiaLogo,
+    date: "2026-05-21",
+    category: "Comparativos",
+    url: "/cuponomia-vs-ineed-brasil",
+  },
   {
     slug: "ineed-brasil-vs-meliuz",
     title: "iNeed Brasil vs Méliuz: Comparativo Completo 2026",
