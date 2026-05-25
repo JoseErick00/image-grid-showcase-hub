@@ -1,13 +1,9 @@
-# Atualizar email do formulário de contato
+# Trocar RESEND_API_KEY para a conta do ineed.erick
 
-## O que fazer
+## Passos
+1. Atualizar o secret `RESEND_API_KEY` com a nova chave da conta Resend de `ineed.erick@gmail.com` (via janela segura).
+2. Redeploy da função `send-contact-email`.
+3. Disparar um teste e verificar o inbox.
 
-1. Criar/atualizar o secret `CONTACT_EMAIL` no Lovable Cloud com o valor `ineed.erick@gmail.com` (via secure secrets tool — você digita o valor numa janela segura).
-2. A edge function `send-contact-email` já lê esse valor de `Deno.env.get("CONTACT_EMAIL")`, então nenhuma mudança de código é necessária.
-3. Redeploy da função `send-contact-email` para garantir que ela pegue o novo secret.
-4. Teste enviando uma mensagem pelo formulário de contato e confirmar a chegada no inbox de `ineed.erick@gmail.com`.
-
-## Observações
-
-- O `from` continua sendo `onboarding@resend.dev` (sandbox do Resend). Esse domínio só entrega para o email do dono da conta Resend — como você confirmou que `ineed.erick@gmail.com` está cadastrado lá, deve funcionar.
-- Se quiser futuramente enviar a partir de um domínio próprio (ex.: `notify@ineedbrasil.com.br`), é um passo separado que envolve verificar o domínio no Resend.
+## Observação
+Enquanto o `from` for `onboarding@resend.dev` (sandbox), só entrega pro dono da conta dessa key. Para liberar envio a qualquer destinatário, é necessário verificar um domínio próprio no Resend depois.
