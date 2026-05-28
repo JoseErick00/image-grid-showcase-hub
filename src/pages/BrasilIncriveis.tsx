@@ -404,7 +404,7 @@ const BrasilIncriveis = () => {
 
         {/* Push Phrase 01 */}
         <PushPhrase 
-          text=" Cansado(a) da mesmisse das lojas online? Então olha essa vitrine de coisas legais perdidas por ai."
+          text=" Cansado(a) da mesmice das lojas online? Então olha essa vitrine de coisas legais perdidas por ai."
           color="#5ebb47"
         />
 
