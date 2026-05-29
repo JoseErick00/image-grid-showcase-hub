@@ -209,8 +209,8 @@ serve(async (req) => {
       conversionsBySource[source] = (conversionsBySource[source] || 0) + 1;
     });
 
-    // Recent clicks (last 50)
-    const recentClicks = (allClicks || []).slice(0, 50).map((click) => ({
+    // Recent clicks (last 500 — paginated client-side)
+    const recentClicks = (allClicks || []).slice(0, 500).map((click) => ({
       id: click.id,
       platform: click.platform,
       item_name: click.item_name,

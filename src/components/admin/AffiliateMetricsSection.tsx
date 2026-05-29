@@ -1,9 +1,13 @@
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { MousePointerClick, ArrowLeftRight, TrendingUp, Calendar, ImageIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MousePointerClick, ArrowLeftRight, TrendingUp, Calendar, ImageIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend, LineChart, Line } from "recharts";
 import { getProductImageByName } from "@/utils/productImageLookup";
+
+const CLICKS_PER_PAGE = 15;
 
 interface AffiliateMetrics {
   totalClicks: number;
@@ -48,6 +52,14 @@ const TYPE_COLORS: Record<string, string> = {
 };
 
 const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
+  const [clicksPage, setClicksPage] = useState(1);
+  const totalClicksPages = Math.max(1, Math.ceil(metrics.recentClicks.length / CLICKS_PER_PAGE));
+  const currentPage = Math.min(clicksPage, totalClicksPages);
+  const paginatedClicks = useMemo(() => {
+    const start = (currentPage - 1) * CLICKS_PER_PAGE;
+    return metrics.recentClicks.slice(start, start + CLICKS_PER_PAGE);
+  }, [metrics.recentClicks, currentPage]);
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("pt-BR", {
       day: "2-digit",
@@ -238,7 +250,7 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {metrics.recentClicks.slice(0, 15).map((click) => {
+                {paginatedClicks.map((click) => {
                   const thumb = getProductImageByName(click.item_name);
                   return (
                     <TableRow key={click.id}>
@@ -279,8 +291,34 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
               </TableBody>
             </Table>
           </div>
+          {metrics.recentClicks.length > CLICKS_PER_PAGE && (
+            <div className="flex items-center justify-between mt-4 text-sm">
+              <div className="text-muted-foreground">
+                Página {currentPage} de {totalClicksPages} · {metrics.recentClicks.length.toLocaleString()} cliques
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setClicksPage((p) => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                >
+                  <ChevronLeft className="h-4 w-4 mr-1" /> Anterior
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setClicksPage((p) => Math.min(totalClicksPages, p + 1))}
+                  disabled={currentPage === totalClicksPages}
+                >
+                  Próxima <ChevronRight className="h-4 w-4 ml-1" />
+                </Button>
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
+
 
       {/* Platform Breakdown */}
       <Card>
