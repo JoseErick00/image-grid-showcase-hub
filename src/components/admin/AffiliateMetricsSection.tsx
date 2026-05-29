@@ -52,6 +52,14 @@ const TYPE_COLORS: Record<string, string> = {
 };
 
 const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
+  const [clicksPage, setClicksPage] = useState(1);
+  const totalClicksPages = Math.max(1, Math.ceil(metrics.recentClicks.length / CLICKS_PER_PAGE));
+  const currentPage = Math.min(clicksPage, totalClicksPages);
+  const paginatedClicks = useMemo(() => {
+    const start = (currentPage - 1) * CLICKS_PER_PAGE;
+    return metrics.recentClicks.slice(start, start + CLICKS_PER_PAGE);
+  }, [metrics.recentClicks, currentPage]);
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("pt-BR", {
       day: "2-digit",
