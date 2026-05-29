@@ -1,9 +1,13 @@
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { MousePointerClick, ArrowLeftRight, TrendingUp, Calendar, ImageIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MousePointerClick, ArrowLeftRight, TrendingUp, Calendar, ImageIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend, LineChart, Line } from "recharts";
 import { getProductImageByName } from "@/utils/productImageLookup";
+
+const CLICKS_PER_PAGE = 15;
 
 interface AffiliateMetrics {
   totalClicks: number;
