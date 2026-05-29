@@ -250,7 +250,7 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {metrics.recentClicks.slice(0, 15).map((click) => {
+                {paginatedClicks.map((click) => {
                   const thumb = getProductImageByName(click.item_name);
                   return (
                     <TableRow key={click.id}>
@@ -291,8 +291,34 @@ const AffiliateMetricsSection = ({ metrics }: AffiliateMetricsSectionProps) => {
               </TableBody>
             </Table>
           </div>
+          {metrics.recentClicks.length > CLICKS_PER_PAGE && (
+            <div className="flex items-center justify-between mt-4 text-sm">
+              <div className="text-muted-foreground">
+                Página {currentPage} de {totalClicksPages} · {metrics.recentClicks.length.toLocaleString()} cliques
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setClicksPage((p) => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                >
+                  <ChevronLeft className="h-4 w-4 mr-1" /> Anterior
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setClicksPage((p) => Math.min(totalClicksPages, p + 1))}
+                  disabled={currentPage === totalClicksPages}
+                >
+                  Próxima <ChevronRight className="h-4 w-4 ml-1" />
+                </Button>
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
+
 
       {/* Platform Breakdown */}
       <Card>
