@@ -7,11 +7,36 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+async function verifyAdmin(req: Request): Promise<boolean> {
+  const authHeader = req.headers.get('Authorization');
+  if (!authHeader?.startsWith('Bearer ')) return false;
+  const url = Deno.env.get('SUPABASE_URL')!;
+  const anon = Deno.env.get('SUPABASE_ANON_KEY')!;
+  const svc = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+  const authed = createClient(url, anon, { global: { headers: { Authorization: authHeader } } });
+  const { data: claims } = await authed.auth.getClaims(authHeader.replace('Bearer ', ''));
+  const uid = claims?.claims?.sub;
+  if (!uid) return false;
+  const admin = createClient(url, svc);
+  const { data } = await admin.from('user_roles').select('role').eq('user_id', uid).eq('role', 'admin').maybeSingle();
+  return !!data;
+}
+
 serve(async (req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
+
+  // Allow service-role (cron/trigger) calls without admin check; otherwise require admin
+  const authHeader = req.headers.get('Authorization') || '';
+  const isServiceRole = authHeader === `Bearer ${Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')}`;
+  if (!isServiceRole && !(await verifyAdmin(req))) {
+    return new Response(JSON.stringify({ error: 'Forbidden' }), {
+      status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+  }
+
 
   try {
     console.log('Starting send-push-notification function');
