@@ -190,10 +190,31 @@ const selectedProducts = [
   { campaign_slug: 'sel-incriveis-04', section_id: 'mais-achados', image_url: '/images/campaigns/sel-incriveis04/pdt_18.jpg', label: 'Garotas, esse dispositivo baratinho pode ajudar!', affiliate_link: 'https://offer.alibaba.com/cps/0f4752f4?bm=cps&src=saf&productId=1600676408246', platform: 'alibaba', stamp: null },
 ];
 
+async function verifyAdmin(req: Request): Promise<boolean> {
+  const authHeader = req.headers.get('Authorization');
+  if (!authHeader?.startsWith('Bearer ')) return false;
+  const url = Deno.env.get('SUPABASE_URL')!;
+  const anon = Deno.env.get('SUPABASE_ANON_KEY')!;
+  const svc = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+  const authed = createClient(url, anon, { global: { headers: { Authorization: authHeader } } });
+  const { data: claims } = await authed.auth.getClaims(authHeader.replace('Bearer ', ''));
+  const uid = claims?.claims?.sub;
+  if (!uid) return false;
+  const admin = createClient(url, svc);
+  const { data } = await admin.from('user_roles').select('role').eq('user_id', uid).eq('role', 'admin').maybeSingle();
+  return !!data;
+}
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  if (!(await verifyAdmin(req))) {
+    return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), {
+      status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   }
 
   try {
