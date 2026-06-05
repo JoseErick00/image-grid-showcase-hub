@@ -40,9 +40,30 @@ const campaignMappings = [
   { slug: 'sel-time-campo', name: 'Seleção Time de Campo', category_slug: 'esportes' },
 ];
 
+async function verifyAdmin(req: Request): Promise<boolean> {
+  const authHeader = req.headers.get('Authorization');
+  if (!authHeader?.startsWith('Bearer ')) return false;
+  const url = Deno.env.get('SUPABASE_URL')!;
+  const anon = Deno.env.get('SUPABASE_ANON_KEY')!;
+  const svc = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+  const authed = createClient(url, anon, { global: { headers: { Authorization: authHeader } } });
+  const { data: claims } = await authed.auth.getClaims(authHeader.replace('Bearer ', ''));
+  const uid = claims?.claims?.sub;
+  if (!uid) return false;
+  const admin = createClient(url, svc);
+  const { data } = await admin.from('user_roles').select('role').eq('user_id', uid).eq('role', 'admin').maybeSingle();
+  return !!data;
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  if (!(await verifyAdmin(req))) {
+    return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), {
+      status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   }
 
   try {
