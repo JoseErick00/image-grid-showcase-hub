@@ -38,15 +38,47 @@ serve(async (req) => {
 
     // Get request body
     const { productId } = await req.json();
-    
-    if (!productId) {
+
+    // Validate productId is a UUID
+    const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    if (!productId || typeof productId !== "string" || !UUID_REGEX.test(productId)) {
       return new Response(
-        JSON.stringify({ success: false, error: "ID do produto é obrigatório" }),
+        JSON.stringify({ success: false, error: "ID do produto inválido" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
     console.log(`Adding share coin for user ${user.id}, product ${productId}`);
+
+    // Verify product exists
+    const { data: product, error: productError } = await supabase
+      .from("products")
+      .select("id")
+      .eq("id", productId)
+      .maybeSingle();
+
+    if (productError || !product) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Produto não encontrado" }),
+        { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Reject if user already earned a share coin for this product
+    const { data: existingShare } = await supabase
+      .from("coin_transactions")
+      .select("id")
+      .eq("user_id", user.id)
+      .eq("product_id", productId)
+      .eq("transaction_type", "share")
+      .maybeSingle();
+
+    if (existingShare) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Você já ganhou moeda por compartilhar este produto", alreadyRewarded: true }),
+        { status: 409, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
 
     // Get user's gamification profile
     const { data: gamification, error: gamError } = await supabase
@@ -63,7 +95,7 @@ serve(async (req) => {
       );
     }
 
-    // Add coin transaction
+    // Add coin transaction (unique index prevents race-condition duplicates)
     const { error: txError } = await supabase
       .from("coin_transactions")
       .insert({
@@ -76,6 +108,12 @@ serve(async (req) => {
 
     if (txError) {
       console.error("Error inserting transaction:", txError);
+      if ((txError as any).code === "23505") {
+        return new Response(
+          JSON.stringify({ success: false, error: "Você já ganhou moeda por compartilhar este produto", alreadyRewarded: true }),
+          { status: 409, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
       return new Response(
         JSON.stringify({ success: false, error: "Erro ao registrar transação" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
