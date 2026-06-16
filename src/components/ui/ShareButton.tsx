@@ -41,29 +41,12 @@ const ShareButton = ({ productId, shareData, className = '', variant = 'default'
   };
 
   const incrementShareCount = async () => {
-    const { data: existingData } = await supabase
-      .from('product_likes')
-      .select('share_count')
-      .eq('product_id', productId)
-      .maybeSingle();
-
-    if (existingData) {
-      const { error } = await supabase
-        .from('product_likes')
-        .update({ share_count: existingData.share_count + 1 })
-        .eq('product_id', productId);
-
-      if (!error) {
-        setShareCount(existingData.share_count + 1);
-      }
-    } else {
-      const { error } = await supabase
-        .from('product_likes')
-        .insert({ product_id: productId, share_count: 1, like_count: 0 });
-
-      if (!error) {
-        setShareCount(1);
-      }
+    const { data, error } = await supabase.functions.invoke(
+      'increment-product-like',
+      { body: { productId, field: 'share_count' } }
+    );
+    if (!error && data && typeof (data as any).count === 'number') {
+      setShareCount((data as any).count);
     }
   };
 
