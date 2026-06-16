@@ -44,3 +44,9 @@ verify_jwt = false
 
 [functions.check-admin-role]
 verify_jwt = false
+
+[functions.increment-product-like]
+verify_jwt = false
+
+[functions.track-page-view]
+verify_jwt = false

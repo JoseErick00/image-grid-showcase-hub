@@ -53,9 +53,9 @@ export const usePageViewTracking = () => {
         platform: detectPlatform(),
       };
 
-      // Fire and forget - don't await
-      supabase.from('page_views').insert(payload as any).then(({ error }) => {
-        if (error) console.error('[PageView] Insert error:', error);
+      // Fire and forget - don't await. Server-side validation via edge function.
+      supabase.functions.invoke('track-page-view', { body: payload }).then(({ error }) => {
+        if (error) console.error('[PageView] Track error:', error);
       });
 
       // qualify_lead (campanha) — uma vez por navegação SPA

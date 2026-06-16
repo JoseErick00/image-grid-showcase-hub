@@ -107,27 +107,13 @@ const LikeButton = ({ productId, productData, className, compact = false, showHi
     setTimeout(() => setIsAnimating(false), 300);
 
     try {
-      // Update global like count
-      const { data: existingData } = await supabase
-        .from('product_likes')
-        .select('like_count')
-        .eq('product_id', productId)
-        .maybeSingle();
-
-      let newCount: number;
-      if (existingData) {
-        newCount = existingData.like_count + 1;
-        await supabase
-          .from('product_likes')
-          .update({ like_count: newCount })
-          .eq('product_id', productId);
-      } else {
-        newCount = 1;
-        await supabase
-          .from('product_likes')
-          .insert({ product_id: productId, like_count: 1 });
-      }
-      
+      // Update global like count via secured edge function
+      const { data: incData, error: incError } = await supabase.functions.invoke(
+        'increment-product-like',
+        { body: { productId, field: 'like_count' } }
+      );
+      if (incError) throw incError;
+      const newCount = (incData as any)?.count ?? 0;
       setLikeCount(newCount);
 
       // If authenticated and has product data, save to favorites
