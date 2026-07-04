@@ -337,10 +337,13 @@ const AboutBrasil = () => {
             </p>
             <div className="space-y-2">
               <p className="font-omne-regular text-muted-foreground">
-                Email: team@ineedstores.com
+                Email: jose@ineedstores.com
               </p>
               <p className="font-omne-regular text-muted-foreground">
-                Telefone: +55 (11) 1234-5678
+                Email: erick.ineed@gmail.com
+              </p>
+              <p className="font-omne-regular text-muted-foreground">
+                Telefone: +55 (11) 91341-2732
               </p>
             </div>
           </section>
