@@ -8,11 +8,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { toast } from "@/hooks/use-toast";
 import { CheckCircle2, AlertCircle, RefreshCw, Search, MousePointerClick, Eye, TrendingUp } from "lucide-react";
 
-type DaysOption = "7" | "28" | "90";
+type DaysOption = "7" | "28" | "90" | "365" | "490";
 const DAYS_OPTIONS: { value: DaysOption; label: string }[] = [
   { value: "7", label: "Últimos 7 dias" },
   { value: "28", label: "Últimos 28 dias" },
   { value: "90", label: "Últimos 90 dias" },
+  { value: "365", label: "Últimos 12 meses" },
+  { value: "490", label: "Todo o período (16 meses)" },
 ];
 
 interface StatusData {
