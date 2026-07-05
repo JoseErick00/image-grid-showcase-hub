@@ -192,7 +192,7 @@ const GoogleSearchConsoleSection = () => {
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-lg font-semibold">Performance na Busca</h3>
             <Select value={days} onValueChange={(v: DaysOption) => setDays(v)}>
-              <SelectTrigger className="w-[200px] bg-white"><SelectValue /></SelectTrigger>
+              <SelectTrigger className="w-[260px] bg-white"><SelectValue /></SelectTrigger>
               <SelectContent>
                 {DAYS_OPTIONS.map(o => <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>)}
               </SelectContent>
