@@ -8,11 +8,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { toast } from "@/hooks/use-toast";
 import { CheckCircle2, AlertCircle, RefreshCw, Search, MousePointerClick, Eye, TrendingUp } from "lucide-react";
 
-type DaysOption = "7" | "28" | "90";
+type DaysOption = "7" | "28" | "90" | "365" | "490";
 const DAYS_OPTIONS: { value: DaysOption; label: string }[] = [
   { value: "7", label: "Últimos 7 dias" },
   { value: "28", label: "Últimos 28 dias" },
   { value: "90", label: "Últimos 90 dias" },
+  { value: "365", label: "Últimos 12 meses" },
+  { value: "490", label: "Todo o período (16 meses)" },
 ];
 
 interface StatusData {
@@ -43,7 +45,7 @@ const GoogleSearchConsoleSection = () => {
   const [loading, setLoading] = useState(true);
   const [metricsLoading, setMetricsLoading] = useState(false);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
-  const [days, setDays] = useState<DaysOption>("28");
+  const [days, setDays] = useState<DaysOption>("490");
 
   const call = async (action: string, extra: Record<string, any> = {}) => {
     const { data, error } = await supabase.functions.invoke("gsc-console", {
@@ -190,7 +192,7 @@ const GoogleSearchConsoleSection = () => {
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-lg font-semibold">Performance na Busca</h3>
             <Select value={days} onValueChange={(v: DaysOption) => setDays(v)}>
-              <SelectTrigger className="w-[200px] bg-white"><SelectValue /></SelectTrigger>
+              <SelectTrigger className="w-[260px] bg-white"><SelectValue /></SelectTrigger>
               <SelectContent>
                 {DAYS_OPTIONS.map(o => <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>)}
               </SelectContent>
