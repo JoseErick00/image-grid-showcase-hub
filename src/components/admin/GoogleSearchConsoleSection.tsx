@@ -45,7 +45,7 @@ const GoogleSearchConsoleSection = () => {
   const [loading, setLoading] = useState(true);
   const [metricsLoading, setMetricsLoading] = useState(false);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
-  const [days, setDays] = useState<DaysOption>("28");
+  const [days, setDays] = useState<DaysOption>("490");
 
   const call = async (action: string, extra: Record<string, any> = {}) => {
     const { data, error } = await supabase.functions.invoke("gsc-console", {
