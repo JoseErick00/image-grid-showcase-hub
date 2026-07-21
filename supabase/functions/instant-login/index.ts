@@ -5,8 +5,16 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Generic response returned regardless of whether the email exists or
+// whether the account is confirmed. This prevents:
+//  - account enumeration via response shape
+//  - account takeover by returning a usable magic-link URL to the caller
+const GENERIC_RESPONSE = {
+  success: true,
+  message: 'Se existir uma conta para este email, um link de acesso foi enviado.',
+};
+
 Deno.serve(async (req) => {
-  // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
@@ -37,82 +45,39 @@ Deno.serve(async (req) => {
     }
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const anonKey = Deno.env.get('SUPABASE_ANON_KEY')!;
 
-    const supabase = createClient(supabaseUrl, serviceRoleKey, {
-      auth: {
-        autoRefreshToken: false,
-        persistSession: false,
-      },
+    // Use the anon client so signInWithOtp emails the magic link
+    // to the address on file — the link is never returned to the caller.
+    const supabase = createClient(supabaseUrl, anonKey, {
+      auth: { autoRefreshToken: false, persistSession: false },
     });
 
-    // Check if user exists
-    const { data: users, error: listError } = await supabase.auth.admin.listUsers();
-    
-    if (listError) {
-      console.error('Error listing users:', listError);
-      return new Response(
-        JSON.stringify({ error: 'Failed to check user' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
-
-    const user = users.users.find(
-      (u) => u.email?.toLowerCase() === email.toLowerCase()
-    );
-
-    if (!user) {
-      return new Response(
-        JSON.stringify({ exists: false, message: 'Email não cadastrado. Crie uma conta primeiro.' }),
-        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
-
-    // Check if email is confirmed - CRITICAL for preventing fake accounts
-    if (!user.email_confirmed_at) {
-      console.log('Email not confirmed for:', email);
-      return new Response(
-        JSON.stringify({ 
-          exists: true, 
-          confirmed: false, 
-          message: 'Por favor, confirme seu email primeiro. Verifique sua caixa de entrada.' 
-        }),
-        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
-
-    // Generate magic link for instant login (only for confirmed emails)
-    const { data: linkData, error: linkError } = await supabase.auth.admin.generateLink({
-      type: 'magiclink',
-      email: email,
+    // shouldCreateUser: false so unknown emails do NOT get auto-provisioned
+    // (signup has its own flow). Errors are logged server-side only; the
+    // response is always the same generic message to prevent enumeration.
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
       options: {
-        redirectTo: redirectTo || `${supabaseUrl}`,
+        emailRedirectTo: redirectTo || supabaseUrl,
+        shouldCreateUser: false,
       },
     });
 
-    if (linkError) {
-      console.error('Error generating link:', linkError);
-      return new Response(
-        JSON.stringify({ error: 'Failed to generate login link' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+    if (error) {
+      console.error('instant-login signInWithOtp error (masked from client):', error.message);
     }
-
-    console.log('Generated instant login link for:', email);
 
     return new Response(
-      JSON.stringify({ 
-        exists: true, 
-        loginUrl: linkData.properties.action_link 
-      }),
+      JSON.stringify(GENERIC_RESPONSE),
       { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
-
   } catch (error) {
-    console.error('Unexpected error:', error);
+    console.error('instant-login unexpected error:', error);
+    // Still return generic success to avoid leaking anything through error shape
     return new Response(
-      JSON.stringify({ error: 'Internal server error' }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      JSON.stringify(GENERIC_RESPONSE),
+      { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
 });
