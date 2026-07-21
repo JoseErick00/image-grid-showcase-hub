@@ -186,7 +186,7 @@ Deno.serve(async (req) => {
     });
   } catch (e: any) {
     console.error("gsc-console error:", e);
-    return new Response(JSON.stringify({ success: false, error: e?.message || "Internal error" }), {
+    return new Response(JSON.stringify({ success: false, error: "Internal server error" }), {
       status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }

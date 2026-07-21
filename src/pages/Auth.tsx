@@ -92,15 +92,17 @@ export default function Auth() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm(false)) return;
-    
+
     setLoading(true);
 
     try {
       const redirectTo = getAuthRedirectUrl();
-      
-      // Call instant-login edge function
+
+      // instant-login now always sends the magic link via email server-side
+      // and returns a generic response — it never reveals whether the account
+      // exists nor returns a usable login URL to the caller.
       const response = await supabase.functions.invoke("instant-login", {
         body: { email, redirectTo },
       });
@@ -109,74 +111,37 @@ export default function Auth() {
         toast({
           variant: "destructive",
           title: "Erro no login",
-          description: response.error.message || "Erro ao verificar email.",
+          description: "Não foi possível processar a solicitação. Tente novamente.",
         });
         setLoading(false);
         return;
       }
 
-      if (!response.data?.exists) {
-        toast({
-          variant: "destructive",
-          title: "Email não cadastrado",
-          description: "Este email ainda não possui uma conta. Crie uma conta na aba 'Criar conta'.",
-        });
-        setActiveTab("signup");
-        setLoading(false);
-        return;
-      }
-
-      // Check if email is confirmed - prevent login with unconfirmed emails
-      if (response.data?.exists && response.data?.confirmed === false) {
-        toast({
-          variant: "default",
-          title: "Email não confirmado",
-          description: "Por favor, confirme seu email primeiro. Verifique sua caixa de entrada.",
-        });
-        setShowEmailModal(true);
-        setLoading(false);
-        return;
-      }
-
-      // Redirect to the magic link URL for instant login (only for confirmed emails)
-      if (response.data?.loginUrl) {
-        trackQualifyLead({ source: 'auth_signin' });
-        window.location.href = response.data.loginUrl;
-      }
+      trackQualifyLead({ source: 'auth_signin' });
+      setShowEmailModal(true);
+      toast({
+        title: "Verifique seu email",
+        description: "Se existir uma conta para este email, um link de acesso foi enviado.",
+      });
     } catch (error) {
       toast({
         variant: "destructive",
         title: "Erro",
         description: "Ocorreu um erro inesperado. Tente novamente.",
       });
+    } finally {
       setLoading(false);
     }
   };
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm(true)) return;
-    
+
     setLoading(true);
 
     try {
-      // Check if email already exists using the instant-login function (it checks existence)
-      const checkResponse = await supabase.functions.invoke("check-email-exists", {
-        body: { email },
-      });
-      
-      if (checkResponse.data?.exists) {
-        toast({
-          variant: "destructive",
-          title: "E-mail já cadastrado",
-          description: "Este e-mail já possui uma conta. Use a aba 'Entrar' para acessar instantaneamente.",
-        });
-        setActiveTab("login");
-        setLoading(false);
-        return;
-      }
-
       // Store referral code for processing after login
       if (referralCode) {
         localStorage.setItem('pending_referral_code', referralCode);
@@ -184,7 +149,8 @@ export default function Auth() {
 
       const redirectUrl = getAuthRedirectUrl();
 
-      // Send confirmation email for new user
+      // signInWithOtp handles both new and existing accounts gracefully,
+      // so we no longer pre-check email existence (which enabled enumeration).
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
@@ -197,7 +163,7 @@ export default function Auth() {
         toast({
           variant: "destructive",
           title: "Erro no cadastro",
-          description: error.message,
+          description: "Não foi possível enviar o email. Tente novamente.",
         });
       } else {
         trackQualifyLead({ source: 'auth_signup' });
@@ -217,6 +183,7 @@ export default function Auth() {
       setLoading(false);
     }
   };
+
 
   const handleResendEmail = async () => {
     setLoading(true);
